@@ -1,0 +1,12 @@
+Source: openmediavault-omvextrasorg
+Section: misc
+Priority: optional
+Maintainer: Aaron Murray <aaron@omv-extras.org>
+Build-Depends: debhelper (>= 5 )
+Standards-Version: 3.7.3
+Homepage: http://omv-extras.org/
+
+Package: openmediavault-omvextrasorg
+Architecture: all
+Depends: ${misc:Depends}, openmediavault (>= 0.5)
+Description: OMV-Extras.org Package Repositories for OpenMediaVault
