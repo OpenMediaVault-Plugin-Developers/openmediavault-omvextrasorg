@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (0.5.6) stable; urgency=low
+
+  * Added virtualbox repo for installing virtualbox plugin
+
+ -- Aaron Murray <aaron@omv-extras.org>  Mon, 03 Oct 2013 7:38:38 -0500
+
 openmediavault-omvextrasorg (0.5.5) stable; urgency=low
 
   * Added locale file
