@@ -33,6 +33,10 @@ if [ "$(omv_config_get "//system/omvextrasorg/enable")" = "1" ]; then
 	echo 'deb http://packages.omv-extras.org/debian/ sardaukar main' > /etc/apt/sources.list.d/omv-extras-org-sardaukar.list
 fi
 
+if [ "$(omv_config_get "//system/omvextrasorg/testing")" = "1" ]; then
+	echo 'deb http://packages.omv-extras.org/debian/ sardaukar-testing main' > /etc/apt/sources.list.d/omv-extras-org-testing.list
+fi
+
 if [ "$(omv_config_get "//system/omvextrasorg/vbox")" = "1" ]; then
 	echo 'deb http://download.virtualbox.org/virtualbox/debian squeeze contrib non-free' > /etc/apt/sources.list.d/virtualbox.list
 fi

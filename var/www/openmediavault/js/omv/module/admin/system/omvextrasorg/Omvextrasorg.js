@@ -44,6 +44,12 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Info", {
 				checked: true
 			},{
 				xtype: "checkbox",
+				name: "testing",
+				fieldLabel: _("Testing"),
+				boxLabel: _("Enable OMV-Extras.org testing repository  (Use at your own risk!)"),
+				checked: false
+			},{
+				xtype: "checkbox",
 				name: "vbox",
 				fieldLabel: _("Virtualbox"),
 				boxLabel: _("Enable Sun's Virtualbox repository  (disable if using armel/armhf)"),

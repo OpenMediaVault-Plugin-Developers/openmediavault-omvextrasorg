@@ -36,6 +36,7 @@ case "$1" in
 		#		<system>
 		#			<omvextrasogr>
 		#				<enable>1</enable>
+		#				<testing>0</testing>		
 		#				<vbox>1</vbox>
 		#			</omvextrasorg>
 		#		</system>

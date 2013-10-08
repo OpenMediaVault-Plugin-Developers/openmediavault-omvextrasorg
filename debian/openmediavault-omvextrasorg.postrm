@@ -32,6 +32,7 @@ if [ "$1" = "purge" ] || [ "$1" = "remove" ]; then
 	omv_config_delete "/config/system/omvextrasorg"
 
 	[ -e /etc/apt/sources.list.d/omv-extras-org-sardaukar.list ] && /bin/rm -f /etc/apt/sources.list.d/omv-extras-org-sardaukar.list
+	[ -e /etc/apt/sources.list.d/omv-extras-org-testing.list ] && /bin/rm -f /etc/apt/sources.list.d/omv-extras-org-testing.list
 	[ -e /etc/apt/sources.list.d/virtualbox.list ] && /bin/rm -f /etc/apt/sources.list.d/virtualbox.list
 	
 fi

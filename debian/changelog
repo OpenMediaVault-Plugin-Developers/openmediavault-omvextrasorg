@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (0.5.8) stable; urgency=low
+
+  * Add testing repo
+
+ -- Aaron Murray <aaron@omv-extras.org>  Tue, 08 Oct 2013 11:30:38 -0500
+
 openmediavault-omvextrasorg (0.5.7) stable; urgency=low
 
   * Add repo enable checkboxes on web interface
