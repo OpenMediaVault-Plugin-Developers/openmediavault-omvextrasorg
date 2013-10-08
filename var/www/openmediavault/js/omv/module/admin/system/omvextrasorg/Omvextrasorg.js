@@ -19,21 +19,37 @@
  * along with OpenMediaVault. If not, see <http://www.gnu.org/licenses/>.
  */
 // require("js/omv/WorkspaceManager.js")
-// require("js/omv/workspace/panel/Panel.js")
+// require("js/omv/workspace/form/Panel.js")
 
 Ext.define("OMV.module.admin.system.omvextrasorg.Info", {
-	extend: "OMV.workspace.panel.Panel",
+	extend: "OMV.workspace.form.Panel",
 
-	initComponent: function() {
+	rpcService: "OmvExtrasOrg",
+	rpcGetMethod: "getSettings",
+	rpcSetMethod: "setSettings",
+	
+	getFormItems: function() {
 		var me = this;
-		me.html = "<form style='overflow: auto; height: 100%;'>";
-		me.html += me.createBox("The OMV-Extras.org plugin is installed.");
-		me.html += "</form>";
-		me.callParent(arguments);
-	},
-
-	createBox: function(msg) {
-		return [ '<div class="x-box-aboutbox">', msg, '</div>' ].join('');
+		return [{
+			xtype: "fieldset",
+			title: _("Repositories"),
+			fieldDefaults: {
+				labelSeparator: ""
+			},
+			items: [{
+				xtype: "checkbox",
+				name: "enable",
+				fieldLabel: _("OMV-Extras.org"),
+				boxLabel: _("Enable OMV-Extras.org repository"),
+				checked: true
+			},{
+				xtype: "checkbox",
+				name: "vbox",
+				fieldLabel: _("Virtualbox"),
+				boxLabel: _("Enable Sun's Virtualbox repository  (disable if using armel/armhf)"),
+				checked: true
+			}]
+		}];
 	}
 });
 

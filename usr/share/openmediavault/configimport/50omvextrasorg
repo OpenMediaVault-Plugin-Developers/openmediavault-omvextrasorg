@@ -1,12 +1,10 @@
 #!/bin/sh
 #
-# This file is part of OpenMediaVault-omvextrasorg.
+# This file is part of OpenMediaVault.
 #
 # @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
-# @author   Aaron Murray <aaron@omv-extras.org> 
-#			Marcel Beck <marcel.beck@mbeck.org>
-# @copyright Copyright (c) 	2013 Aaron Murray
-#							2011-2012 Marcel Beck
+# @author    Aaron Murray <aaron@omv-extras.org>
+# @copyright Copyright (c) 2013 Aaron Murray
 #
 # OpenMediaVault is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -26,16 +24,6 @@ set -e
 . /etc/default/openmediavault
 . /usr/share/openmediavault/scripts/helper-functions
 
-if [ "$1" = "purge" ] || [ "$1" = "remove" ]; then
-
-	# Remove the configuration data
-	omv_config_delete "/config/system/omvextrasorg"
-
-	[ -e /etc/apt/sources.list.d/omv-extras-org-sardaukar.list ] && /bin/rm -f /etc/apt/sources.list.d/omv-extras-org-sardaukar.list
-	[ -e /etc/apt/sources.list.d/virtualbox.list ] && /bin/rm -f /etc/apt/sources.list.d/virtualbox.list
-	
-fi
-
-#DEBHELPER#
+omv-mkconf omvextrasorg
 
 exit 0
