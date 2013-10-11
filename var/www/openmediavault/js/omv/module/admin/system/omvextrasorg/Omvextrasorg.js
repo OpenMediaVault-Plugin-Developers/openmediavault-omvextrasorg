@@ -52,7 +52,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Info", {
 				xtype: "checkbox",
 				name: "vbox",
 				fieldLabel: _("Virtualbox"),
-				boxLabel: _("Enable Sun's Virtualbox repository  (disable if using armel/armhf)"),
+				boxLabel: _("Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository  (disable if using armel/armhf)"),
 				checked: true
 			}]
 		}];

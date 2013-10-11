@@ -55,6 +55,7 @@ case "$1" in
 		/bin/rm -f /etc/apt/sources.list.d/virtualbox.list
 		
 		echo 'deb http://packages.omv-extras.org/debian/ sardaukar main' > /etc/apt/sources.list.d/omv-extras-org-sardaukar.list
+		echo 'deb http://packages.omv-extras.org/debian/ sardaukar-vb main' > /etc/apt/sources.list.d/omv-extras-org-sardaukar-vb.list
 		echo 'deb http://download.virtualbox.org/virtualbox/debian squeeze contrib non-free' > /etc/apt/sources.list.d/virtualbox.list
 		
 		if [ -x /usr/bin/apt-key ]; then
