@@ -26,6 +26,13 @@ set -e
 . /etc/default/openmediavault
 . /usr/share/openmediavault/scripts/helper-functions
 
+ARCH="`/bin/uname -m`"
+
+case "$ARCH" in
+	*"arm"* ) NOTARM=false;;
+	* ) NOTARM=true;;
+esac
+
 case "$1" in
 
     configure)
@@ -43,20 +50,29 @@ case "$1" in
 		#	</config>
 		########################################################################
 
-		if ! omv_config_exists "/config/system/omvextrasorg"; then
-			echo "Initialize configuration"
-			object="<enable>1</enable>"
-			object="${object}<vbox>1</vbox>"
+		echo "Initialize configuration"
+		omv_config_delete "/config/system/omvextrasorg"
 
-			omv_config_add_element "/config/system" "omvextrasorg" "${object}"
+		object="<enable>1</enable>"
+		object="${object}<testing>0</testing>"
+		
+		if $NOTARM ; then
+			object="${object}<vbox>1</vbox>"
+		else
+			object="${object}<vbox>0</vbox>"
 		fi
+		
+		omv_config_add_element "/config/system" "omvextrasorg" "${object}"
 		
 		/bin/rm -f /etc/apt/sources.list.d/omv-extras-org-*.list
 		/bin/rm -f /etc/apt/sources.list.d/virtualbox.list
 		
 		echo 'deb http://packages.omv-extras.org/debian/ sardaukar main' > /etc/apt/sources.list.d/omv-extras-org-sardaukar.list
-		echo 'deb http://packages.omv-extras.org/debian/ sardaukar-vb main' > /etc/apt/sources.list.d/omv-extras-org-sardaukar-vb.list
-		echo 'deb http://download.virtualbox.org/virtualbox/debian squeeze contrib non-free' > /etc/apt/sources.list.d/virtualbox.list
+		
+		if $NOTARM ; then
+			echo 'deb http://packages.omv-extras.org/debian/ sardaukar-vb main' > /etc/apt/sources.list.d/omv-extras-org-sardaukar-vb.list
+			echo 'deb http://download.virtualbox.org/virtualbox/debian squeeze contrib non-free' > /etc/apt/sources.list.d/virtualbox.list
+		fi
 		
 		if [ -x /usr/bin/apt-key ]; then
 			apt-key add /usr/share/keyrings/omvextrasorg-keyring.gpg

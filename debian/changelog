@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (0.5.11) stable; urgency=low
+
+  * Added code to detect arm processor and disable Virtualbox repo
+
+ -- Aaron Murray <aaron@omv-extras.org>  Fri, 11 Oct 2013 07:30:38 -0500
+
 openmediavault-omvextrasorg (0.5.10) stable; urgency=low
 
   * Moved virtualbox plugin to its own repo
