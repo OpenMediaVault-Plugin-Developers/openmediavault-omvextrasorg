@@ -67,6 +67,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
 		$object['enable'] = boolval($object['enable']);
 		$object['testing'] = boolval($object['testing']);
 		$object['vbox'] = boolval($object['vbox']);
+		$object['plex'] = boolval($object['plex']);
 		
 		return $object;
 	}
@@ -91,7 +92,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
 			  "properties":{
 				  "enable":{"type":"boolean"},
 				  "testing":{"type":"boolean"},
-				  "vbox":{"type":"boolean"}
+				  "vbox":{"type":"boolean"},
+				  "plex":{"type":"boolean"}
 			  }
 		  }');
 		// Get the existing configuration object.
@@ -105,7 +107,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
 		$object = array(
 			"enable" => array_boolval($params, 'enable'),
 			"testing" => array_boolval($params, 'testing'),
-			"vbox" => array_boolval($params, 'vbox')
+			"vbox" => array_boolval($params, 'vbox'),
+			"plex" => array_boolval($params, 'plex')
 		);
 		if(FALSE === $xmlConfig->replace("//system/omvextrasorg", $object)) {
 			throw new OMVException(OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED);

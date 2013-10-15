@@ -45,6 +45,7 @@ case "$1" in
 		#				<enable>1</enable>
 		#				<testing>0</testing>		
 		#				<vbox>1</vbox>
+		#				<plex>0</plex>
 		#			</omvextrasorg>
 		#		</system>
 		#	</config>
@@ -62,7 +63,9 @@ case "$1" in
 			object="${object}<vbox>0</vbox>"
 		fi
 		
-		omv_config_add_element "/config/system" "omvextrasorg" "${object}"
+		object="${object}<plex>0</plex>"
+		
+		omv_config_add_element "/config/system" "omvextrasorg" "${object}" true
 		
 		/bin/rm -f /etc/apt/sources.list.d/omv-extras-org-*.list
 		/bin/rm -f /etc/apt/sources.list.d/virtualbox.list
@@ -77,6 +80,7 @@ case "$1" in
 		if [ -x /usr/bin/apt-key ]; then
 			apt-key add /usr/share/keyrings/omvextrasorg-keyring.gpg
 			apt-key add /usr/share/keyrings/oracle_vbox.asc
+			apt-key add /usr/share/keyrings/shell-ninthgate-se-keyring.key
 		fi
     ;;
 

@@ -54,6 +54,12 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Info", {
 				fieldLabel: _("Virtualbox"),
 				boxLabel: _("Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository  (disable if using armel/armhf)"),
 				checked: true
+			},{
+				xtype: "checkbox",
+				name: "plex",
+				fieldLabel: _("Plex"),
+				boxLabel: _("Enable Plex Media Server repository  (disable if using armel/armhf)"),
+				checked: true
 			}]
 		}];
 	}
