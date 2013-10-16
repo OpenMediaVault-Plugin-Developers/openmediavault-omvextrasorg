@@ -44,5 +44,6 @@ if [ "$(omv_config_get "//system/omvextrasorg/vbox")" = "1" ]; then
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/plex")" = "1" ]; then
+	echo 'deb http://packages.omv-extras.org/debian/ sardaukar-plex main' > /etc/apt/sources.list.d/omv-extras-org-sardaukar-plex.list
 	echo 'deb http://shell.ninthgate.se/packages/debian squeeze main' > /etc/apt/sources.list.d/plexmediaserver.list
 fi
