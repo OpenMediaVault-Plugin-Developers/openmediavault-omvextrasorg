@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (0.5.14) stable; urgency=low
+
+  * move Plex to its own repo
+
+ -- Aaron Murray <aaron@omv-extras.org>  Wed, 16 Oct 2013 06:43:27 -0500
+
 openmediavault-omvextrasorg (0.5.13) stable; urgency=low
 
   * Changed repo list filenames
