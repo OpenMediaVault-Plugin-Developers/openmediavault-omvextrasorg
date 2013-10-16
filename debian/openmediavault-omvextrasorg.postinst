@@ -94,13 +94,13 @@ case "$1" in
 		fi
 		
 		if [ "$VBOX" = "1" ]; then
-			echo 'deb http://packages.omv-extras.org/debian/ sardaukar-vb main' > /etc/apt/sources.list.d/omv-extras-org-sardaukar-vb.list
-			echo 'deb http://download.virtualbox.org/virtualbox/debian squeeze contrib non-free' > /etc/apt/sources.list.d/virtualbox.list
+			echo 'deb http://packages.omv-extras.org/debian/ sardaukar-vb main' > /etc/apt/sources.list.d/virtualbox.list
+			echo 'deb http://download.virtualbox.org/virtualbox/debian squeeze contrib non-free' >> /etc/apt/sources.list.d/virtualbox.list
 		fi
 		
 		if [ "$PLEX" = "1" ]; then
-			echo 'deb http://packages.omv-extras.org/debian/ sardaukar-plex main' > /etc/apt/sources.list.d/omv-extras-org-sardaukar-plex.list
-			echo 'deb http://shell.ninthgate.se/packages/debian squeeze main' > /etc/apt/sources.list.d/plexmediaserver.list
+			echo 'deb http://packages.omv-extras.org/debian/ sardaukar-plex main' > /etc/apt/sources.list.d/plexmediaserver.list
+			echo 'deb http://shell.ninthgate.se/packages/debian squeeze main' >> /etc/apt/sources.list.d/plexmediaserver.list
 		fi
 		
 		if [ -x /usr/bin/apt-key ]; then
