@@ -1,0 +1,33 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: openmediavault-omvextrasorg\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-28 06:33-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Enable OMV-Extras.org repository"
+msgstr ""
+
+msgid "Enable OMV-Extras.org testing repository  (Use at your own risk!)"
+msgstr ""
+
+msgid "Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository  (disable if using armel/armhf)"
+msgstr ""
+
+msgid "Enable Plex Media Server repository  (disable if using armel/armhf)"
+msgstr ""
+
+msgid "Repositories"
+msgstr ""
