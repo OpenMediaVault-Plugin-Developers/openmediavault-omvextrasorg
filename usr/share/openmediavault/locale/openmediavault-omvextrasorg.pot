@@ -1,5 +1,5 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# openmediavault-omvextrasorg
+# Copyright (C) 2013
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-28 06:33-0500\n"
+"POT-Creation-Date: 2013-10-28 09:11-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,16 +18,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "Enable OMV-Extras.org repository"
-msgstr ""
+msgstr "Enable OMV-Extras.org repository"
 
 msgid "Enable OMV-Extras.org testing repository  (Use at your own risk!)"
-msgstr ""
+msgstr "Enable OMV-Extras.org testing repository  (Use at your own risk!)"
 
 msgid "Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository  (disable if using armel/armhf)"
-msgstr ""
+msgstr "Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository  (disable if using armel/armhf)"
 
 msgid "Enable Plex Media Server repository  (disable if using armel/armhf)"
-msgstr ""
+msgstr "Enable Plex Media Server repository  (disable if using armel/armhf)"
+
+msgid "OMV-Extras.org"
+msgstr "OMV-Extras.org"
+
+msgid "Plex"
+msgstr "Plex"
 
 msgid "Repositories"
-msgstr ""
+msgstr "Repositories"
+
+msgid "Testing"
+msgstr "Testing"
+
+msgid "Virtualbox"
+msgstr "Virtualbox"
+

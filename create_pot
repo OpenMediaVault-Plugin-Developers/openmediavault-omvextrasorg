@@ -1,0 +1,41 @@
+POT_DIR="usr/share/openmediavault/locale/"
+
+mkdir -p ${POT_DIR}
+
+pwd=${PWD##*/}
+edit_date=$(date +%Y-%m-%d\ %H:%M)
+
+grep -Poh '(?<=\_\(\").*?(?=\"\))' ./var/www/openmediavault/js/omv/module/admin/system/omvextrasorg/*.js | sort -u > strings
+
+cat strings* | sort -u > pot_strings
+
+cat <<EOF > ${POT_DIR}${pwd}.pot
+# ${pwd}
+# Copyright (C) 2013
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ${pwd}\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: ${edit_date}-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+EOF
+
+
+while read line
+do
+    echo -e "msgid \"${line}\"\nmsgstr \"${line}\"\n" >> ${POT_DIR}${pwd}.pot
+done < "pot_strings"
+
+rm strings*
+rm pot_strings
