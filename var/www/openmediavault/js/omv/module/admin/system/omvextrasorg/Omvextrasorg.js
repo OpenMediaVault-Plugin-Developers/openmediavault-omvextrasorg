@@ -70,7 +70,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Info", {
             items: [{
                 xtype: "checkbox",
                 name: "dotdeb",
-                fieldLabel: _("OMV-Extras.org"),
+                fieldLabel: _("Dotdeb"),
                 boxLabel: _("Enable Dotdeb repository - for developers only - very experimental!!"),
                 checked: false
             }]
