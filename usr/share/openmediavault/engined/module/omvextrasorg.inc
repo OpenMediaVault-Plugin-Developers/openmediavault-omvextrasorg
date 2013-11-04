@@ -23,35 +23,36 @@ require_once("openmediavault/module.inc");
 require_once("openmediavault/error.inc");
 
 class OMVModuleOmvExtrasOrg extends OMVModuleServiceAbstract
-  implements OMVINotifyListener {
-	/**
-	 * Get the module name.
-	 */
-	public function getName() {
-		return "omvextrasorg";
-	}
+    implements OMVINotifyListener {
+    
+    /**
+     * Get the module name.
+     */
+    public function getName() {
+        return "omvextrasorg";
+    }
 
-	/**
-	 * Generate the configuration.
-	 * @throw E_EXEC_FAILED
-	 */
-	public function applyConfig() {
-		global $xmlConfig;
+    /**
+     * Generate the configuration.
+     * @throw E_EXEC_FAILED
+     */
+    public function applyConfig() {
+        global $xmlConfig;
 
-		$cmd = "omv-mkconf omvextrasorg 2>&1";
-		if(0 !== $this->exec($cmd, $output)) {
-			throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
-		}
-	}
+        $cmd = "omv-mkconf omvextrasorg 2>&1";
+        if(0 !== $this->exec($cmd, $output)) {
+            throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
+        }
+    }
 
-	/**
-	 * Bind listeners.
-	 */
-	function bindListeners(OMVNotifyDispatcher $dispatcher) {
-		$dispatcher->addListener(
-		  OMV_NOTIFY_MODIFY,
-		  "org.openmediavault.system.omvextrasorg",
-		  array($this, "setDirty"));
+    /**
+     * Bind listeners.
+     */
+    function bindListeners(OMVNotifyDispatcher $dispatcher) {
+        $dispatcher->addListener(
+            OMV_NOTIFY_MODIFY,
+            "org.openmediavault.system.omvextrasorg",
+            array($this, "setDirty"));
     }
 }
 

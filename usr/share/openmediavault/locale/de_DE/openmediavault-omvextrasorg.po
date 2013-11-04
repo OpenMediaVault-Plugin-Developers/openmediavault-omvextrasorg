@@ -1,0 +1,36 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# davidh2k <davidh1990@gmx.de>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: openmediavault-omvextras.org\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-28 06:33-0500\n"
+"PO-Revision-Date: 2013-10-28 18:21+0000\n"
+"Last-Translator: davidh2k <davidh1990@gmx.de>\n"
+"Language-Team: German (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/de/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Enable OMV-Extras.org repository"
+msgstr "Aktivieren der OMV-Extras.org Paketquellen"
+
+msgid "Enable OMV-Extras.org testing repository  (Use at your own risk!)"
+msgstr "Aktivieren der OMV-Extras.org testing Paketquellen (Benutzung auf eigene Gefahr!)"
+
+msgid ""
+"Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository"
+"  (disable if using armel/armhf)"
+msgstr "Aktivieren der OMV-Extras.org VirtualBox Paketquellen sowie der Sun's VirtualBox Paketquellen (Sollte deaktiviert bleiben wenn armel/armhf Architektur verwendet wird)"
+
+msgid "Enable Plex Media Server repository  (disable if using armel/armhf)"
+msgstr "Aktivieren des Plex Media Server Paketquellen (Sollte deaktiviert bleiben wenn armel/armhf Architektur verwendet wird)"
+
+msgid "Repositories"
+msgstr "Repositories"

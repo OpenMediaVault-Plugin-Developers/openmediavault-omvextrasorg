@@ -27,99 +27,104 @@ require_once("openmediavault/rpcservice.inc");
 require_once("openmediavault/notify.inc");
 
 class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
-	/**
-	 * Get the RPC service name.
-	 */
-	public function getName() {
-		return "OmvExtrasOrg";
-	}
+    /**
+     * Get the RPC service name.
+     */
+    public function getName() {
+        return "OmvExtrasOrg";
+    }
 
-	/**
-	 * Initialize the RPC service.
-	 */
-	public function initialize() {
-		$this->registerMethod("getSettings");
-		$this->registerMethod("setSettings");
-	}
+    /**
+     * Initialize the RPC service.
+     */
+    public function initialize() {
+        $this->registerMethod("getSettings");
+        $this->registerMethod("setSettings");
+    }
 
-	/**
-	 * Get the settings configuration object.
-	 * @param params The method parameters.
-	 * @param context The context of the caller.
-	 * @return The requested configuration object.
-	 * @throw E_CONFIG_GET_OBJECT_FAILED
-	 */
-	public function getSettings($params, $context) {
-		global $xmlConfig;
-		// Validate the RPC caller context.
-		$this->validateMethodContext($context, array(
-			  "role" => OMV_ROLE_ADMINISTRATOR
-		  ));
-		// Get the configuration object.
-		$xpath = "//system/omvextrasorg";
-		$object = $xmlConfig->get($xpath);
-		if(is_null($object)) {
-			throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
-			  $xpath);
-		}
+    /**
+     * Get the settings configuration object.
+     * @param params The method parameters.
+     * @param context The context of the caller.
+     * @return The requested configuration object.
+     * @throw E_CONFIG_GET_OBJECT_FAILED
+     */
+    public function getSettings($params, $context) {
+        global $xmlConfig;
 
-		// Modify the result object.
-		$object['enable'] = boolval($object['enable']);
-		$object['testing'] = boolval($object['testing']);
-		$object['vbox'] = boolval($object['vbox']);
-		$object['plex'] = boolval($object['plex']);
-		
-		return $object;
-	}
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
 
-	/**
-	 * Set the settings configuration object.
-	 * @param params The method parameters.
-	 * @param context The context of the caller.
-	 * @return The stored configuration object.
-	 * @throw E_CONFIG_GET_OBJECT_FAILED
-	 * @throw E_CONFIG_SET_OBJECT_FAILED
-	 */
-	public function setSettings($params, $context) {
-		global $xmlConfig;
-		// Validate the RPC caller context.
-		$this->validateMethodContext($context, array(
-			  "role" => OMV_ROLE_ADMINISTRATOR
-		  ));
-		// Validate the parameters of the RPC service method.
-		$this->validateMethodParams($params, '{
-			  "type":"object",
-			  "properties":{
-				  "enable":{"type":"boolean"},
-				  "testing":{"type":"boolean"},
-				  "vbox":{"type":"boolean"},
-				  "plex":{"type":"boolean"}
-			  }
-		  }');
-		// Get the existing configuration object.
-		$xpath = "//system/omvextrasorg";
-		$oldObject = $xmlConfig->get($xpath);
-		if(is_null($oldObject)) {
-			throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
-			  $xpath);
-		}
-		// Update the configuration object.
-		$object = array(
-			"enable" => array_boolval($params, 'enable'),
-			"testing" => array_boolval($params, 'testing'),
-			"vbox" => array_boolval($params, 'vbox'),
-			"plex" => array_boolval($params, 'plex')
-		);
-		if(FALSE === $xmlConfig->replace("//system/omvextrasorg", $object)) {
-			throw new OMVException(OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED);
-		}
-		// Notify configuration changes.
-		$dispatcher = &OMVNotifyDispatcher::getInstance();
-		$dispatcher->notify(OMV_NOTIFY_MODIFY,
-		  "org.openmediavault.system.omvextrasorg", $object);
-		// Return the configuration object.
-		return $object;
-	}
+        // Get the configuration object.
+        $xpath = "//system/omvextrasorg";
+        $object = $xmlConfig->get($xpath);
+        if(is_null($object)) {
+            throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
+        }
+
+        // Modify the result object.
+        $object['enable'] = boolval($object['enable']);
+        $object['testing'] = boolval($object['testing']);
+        $object['vbox'] = boolval($object['vbox']);
+        $object['plex'] = boolval($object['plex']);
+        $object['dotdeb'] = boolval($object['dotdeb']);
+
+        return $object;
+    }
+
+    /**
+     * Set the settings configuration object.
+     * @param params The method parameters.
+     * @param context The context of the caller.
+     * @return The stored configuration object.
+     * @throw E_CONFIG_GET_OBJECT_FAILED
+     * @throw E_CONFIG_SET_OBJECT_FAILED
+     */
+    public function setSettings($params, $context) {
+        global $xmlConfig;
+
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+
+        // Validate the parameters of the RPC service method.
+        $this->validateMethodParams($params, '{
+            "type":"object",
+            "properties":{
+                "enable":{"type":"boolean"},
+                "testing":{"type":"boolean"},
+                "vbox":{"type":"boolean"},
+                "plex":{"type":"boolean"},
+                "dotdeb":{"type":"boolean"}
+            }
+        }');
+
+        // Get the existing configuration object.
+        $xpath = "//system/omvextrasorg";
+        $oldObject = $xmlConfig->get($xpath);
+        if(is_null($oldObject)) {
+            throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
+        }
+
+        // Update the configuration object.
+        $object = array(
+            "enable" => array_boolval($params, 'enable'),
+            "testing" => array_boolval($params, 'testing'),
+            "vbox" => array_boolval($params, 'vbox'),
+            "plex" => array_boolval($params, 'plex'),
+            "dotdeb" => array_boolval($params, 'dotdeb')
+        );
+        if(FALSE === $xmlConfig->replace("//system/omvextrasorg", $object)) {
+            throw new OMVException(OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED);
+        }
+
+        // Notify configuration changes.
+        $dispatcher = &OMVNotifyDispatcher::getInstance();
+        $dispatcher->notify(OMV_NOTIFY_MODIFY,
+            "org.openmediavault.system.omvextrasorg", $object);
+
+        // Return the configuration object.
+        return $object;
+    }
 }
 
 // Register the RPC service.

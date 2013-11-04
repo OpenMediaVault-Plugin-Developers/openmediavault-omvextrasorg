@@ -22,62 +22,75 @@
 // require("js/omv/workspace/form/Panel.js")
 
 Ext.define("OMV.module.admin.system.omvextrasorg.Info", {
-	extend: "OMV.workspace.form.Panel",
+    extend: "OMV.workspace.form.Panel",
 
-	rpcService: "OmvExtrasOrg",
-	rpcGetMethod: "getSettings",
-	rpcSetMethod: "setSettings",
-	
-	getFormItems: function() {
-		var me = this;
-		return [{
-			xtype: "fieldset",
-			title: _("Repositories"),
-			fieldDefaults: {
-				labelSeparator: ""
-			},
-			items: [{
-				xtype: "checkbox",
-				name: "enable",
-				fieldLabel: _("OMV-Extras.org"),
-				boxLabel: _("Enable OMV-Extras.org repository"),
-				checked: true
-			},{
-				xtype: "checkbox",
-				name: "testing",
-				fieldLabel: _("Testing"),
-				boxLabel: _("Enable OMV-Extras.org testing repository  (Use at your own risk!)"),
-				checked: false
-			},{
-				xtype: "checkbox",
-				name: "vbox",
-				fieldLabel: _("Virtualbox"),
-				boxLabel: _("Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository  (disable if using armel/armhf)"),
-				checked: true
-			},{
-				xtype: "checkbox",
-				name: "plex",
-				fieldLabel: _("Plex"),
-				boxLabel: _("Enable Plex Media Server repository  (disable if using armel/armhf)"),
-				checked: true
-			}]
-		}];
-	}
+    rpcService: "OmvExtrasOrg",
+    rpcGetMethod: "getSettings",
+    rpcSetMethod: "setSettings",
+
+    getFormItems: function() {
+        var me = this;
+        return [{
+            xtype: "fieldset",
+            title: _("Repositories"),
+            fieldDefaults: {
+                labelSeparator: ""
+            },
+            items: [{
+                xtype: "checkbox",
+                name: "enable",
+                fieldLabel: _("OMV-Extras.org"),
+                boxLabel: _("Enable OMV-Extras.org repository"),
+                checked: true
+            },{
+                xtype: "checkbox",
+                name: "testing",
+                fieldLabel: _("Testing"),
+                boxLabel: _("Enable OMV-Extras.org testing repository  (Use at your own risk!)"),
+                checked: false
+            },{
+                xtype: "checkbox",
+                name: "vbox",
+                fieldLabel: _("Virtualbox"),
+                boxLabel: _("Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository  (disable if using armel/armhf)"),
+                checked: true
+            },{
+                xtype: "checkbox",
+                name: "plex",
+                fieldLabel: _("Plex"),
+                boxLabel: _("Enable Plex Media Server repository  (disable if using armel/armhf)"),
+                checked: false
+            }]
+        },{
+            xtype: "fieldset",
+            title: _("Developer Repositories"),
+            fieldDefaults: {
+                labelSeparator: ""
+            },
+            items: [{
+                xtype: "checkbox",
+                name: "dotdeb",
+                fieldLabel: _("OMV-Extras.org"),
+                boxLabel: _("Enable Dotdeb repository - for developers only - very experimental!!"),
+                checked: false
+            }]
+        }];
+    }
 });
 
 OMV.WorkspaceManager.registerNode({
-	id: "omvextrasorg",
-	path: "/system",
-	text: _("OMV-Extras.org"),
-	icon16: "images/plug.png",
-	iconSvg: "images/plug.svg",
-	position: 95
+    id: "omvextrasorg",
+    path: "/system",
+    text: _("OMV-Extras.org"),
+    icon16: "images/plug.png",
+    iconSvg: "images/plug.svg",
+    position: 95
 });
 
 OMV.WorkspaceManager.registerPanel({
-	id: "omvextrasorg",
-	path: "/system/omvextrasorg",
-	text: _("OMV-Extras.org"),
-	position: 10,
-	className: "OMV.module.admin.system.omvextrasorg.Info"
+    id: "omvextrasorg",
+    path: "/system/omvextrasorg",
+    text: _("OMV-Extras.org"),
+    position: 10,
+    className: "OMV.module.admin.system.omvextrasorg.Info"
 });
