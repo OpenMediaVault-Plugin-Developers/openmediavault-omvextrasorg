@@ -1,0 +1,17 @@
+#!/bin/sh
+
+BACKPORTS_REPO="/etc/apt/sources.list.d/backports.list"
+
+if [ ! -f "$BACKPORTS_REPO" ]
+then
+    echo "Add backports repository."
+    echo "deb http://backports.debian.org/debian-backports squeeze-backports main non-free" >> $BACKPORTS_REPO
+fi
+
+echo "Updating..."
+apt-get --quiet update > /dev/null 2>&1
+
+echo "Install backports 3.2 kernel"
+apt-get -t squeeze-backports --yes --force-yes --fix-missing install linux-image-3.2.0-0.bpo.4-amd64 firmware-linux firmware-linux-free
+
+echo "Please reboot to use new kernel"
