@@ -63,7 +63,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Info", {
             }]
         },{
             xtype: "fieldset",
-            title: _("Developer Repositories"),
+            title: _("Developer Features"),
             fieldDefaults: {
                 labelSeparator: ""
             },
@@ -71,10 +71,38 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Info", {
                 xtype: "checkbox",
                 name: "dotdeb",
                 fieldLabel: _("Dotdeb"),
-                boxLabel: _("Enable Dotdeb repository - for developers only - very experimental!!"),
+                boxLabel: _("Enable Dotdeb repository - very experimental!!"),
                 checked: false
+            },{
+                border : false,
+                html   : _("<br />")
+            },{
+                xtype   : "button",
+                name    : "backports",
+                text    : _("Install Backports 3.2 Kernel"),
+                scope   : this,
+                handler : Ext.Function.bind(me.onBackportsButton, me, [ me ])
+            },{
+                border : false,
+                html   : _("<ul><li>Do not install the Backports Kernel if you use iSCSI!</li><li>This will not uninstall the 2.6 kernel.</li><li>If the system does not boot using the 3.2 kernel, the boot menu will still have the option to boot the 2.6 kernel.</li><li>If you are currently using Virtualbox, you will need to run the following command as root:  /etc/init.d/vboxdrv setup</li></ul>")
             }]
         }];
+    },
+
+    onBackportsButton: function() {
+        var me = this;
+        Ext.create("OMV.window.Execute", {
+            title: _("Install Backports 3.2 kernel ..."),
+            rpcService: "OmvExtrasOrg",
+            rpcMethod: "installBackports",
+            hideStopButton: true,
+            listeners: {
+                scope: me,
+                exception: function(wnd, error) {
+                    OMV.MessageBox.error(null, error);
+                }
+            }
+        }).show();
     }
 });
 

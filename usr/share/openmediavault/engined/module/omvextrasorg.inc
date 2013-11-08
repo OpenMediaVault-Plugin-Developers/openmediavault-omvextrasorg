@@ -24,7 +24,7 @@ require_once("openmediavault/error.inc");
 
 class OMVModuleOmvExtrasOrg extends OMVModuleServiceAbstract
     implements OMVINotifyListener {
-    
+
     /**
      * Get the module name.
      */

@@ -40,6 +40,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
     public function initialize() {
         $this->registerMethod("getSettings");
         $this->registerMethod("setSettings");
+        $this->registerMethod("installBackports");
     }
 
     /**
@@ -124,6 +125,34 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
 
         // Return the configuration object.
         return $object;
+    }
+
+    function installBackports($params, $context) {
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+
+        // Create a background process.
+        $bgStatusFilename = $this->createBgProcStatus();
+        $pid = $this->fork();
+        if($pid > 0) { // Parent process.
+            $this->initializeBgProcStatus($bgStatusFilename, $pid);
+            return $bgStatusFilename;
+        }
+
+        // Child process.
+        try {
+            $bgOutputFilename = $this->createBgProcOutput();
+            $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
+
+            $cmd = "/bin/su";
+            $cmdArgs = array("-c", "/usr/local/bin/installbackports", "root");
+            if(FALSE === $this->execve($cmd, $cmdArgs, $bgOutputFilename)) {
+                throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd." ".implode(" ", $cmdArgs), "");
+            }
+        } catch(Exception $e) {
+            $this->finalizeBgProcStatus($bgStatusFilename, "", $e);
+            exit(1);
+        }
     }
 }
 

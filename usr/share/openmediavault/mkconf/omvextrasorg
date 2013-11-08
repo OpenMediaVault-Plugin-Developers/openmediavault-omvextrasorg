@@ -54,5 +54,5 @@ if [ "$(omv_config_get "//system/omvextrasorg/dotdeb")" = "1" ]; then
     echo 'deb http://packages.dotdeb.org squeeze all' >> /etc/apt/sources.list.d/dotdeb.list
     echo 'deb-src http://packages.dotdeb.org squeeze all' >> /etc/apt/sources.list.d/dotdeb.list
     echo 'deb http://packages.dotdeb.org squeeze-php54 all' >> /etc/apt/sources.list.d/dotdeb.list
-    echo 'deb-src http://packages.dotdeb.org squeeze-php54 all' >> /etc/apt/sources.list.d/dotdeb.list    
+    echo 'deb-src http://packages.dotdeb.org squeeze-php54 all' >> /etc/apt/sources.list.d/dotdeb.list
 fi

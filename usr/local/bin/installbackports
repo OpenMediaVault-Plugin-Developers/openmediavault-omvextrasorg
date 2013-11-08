@@ -11,7 +11,31 @@ fi
 echo "Updating..."
 apt-get --quiet update > /dev/null 2>&1
 
-echo "Install backports 3.2 kernel"
-apt-get -t squeeze-backports --yes --force-yes --fix-missing install linux-image-3.2.0-0.bpo.4-amd64 firmware-linux firmware-linux-free
+SKIP=false
+AMD64=false
+ARCH="`/bin/uname -m`"
 
-echo "Please reboot to use new kernel"
+case "$ARCH" in
+    *x86_64*)
+        AMD64=true
+    *486*)
+        AMD64=false
+    *686*)
+        AMD64=false
+    *)
+        SKIP=true
+    ;;
+esac
+
+if $SKIP; then
+    echo "Unsupported kernel and/or processor"
+else
+    echo "Install backports 3.2 kernel"
+    if $AMD64; then
+        apt-get -t squeeze-backports --yes --force-yes --fix-missing install linux-image-3.2.0-0.bpo.4-amd64 firmware-linux firmware-linux-free
+    else
+        apt-get -t squeeze-backports --yes --force-yes --fix-missing install linux-image-3.2.0-0.bpo.4-486 firmware-linux firmware-linux-free
+    fi
+    echo "..."
+    echo "Please reboot to use new kernel"
+fi
