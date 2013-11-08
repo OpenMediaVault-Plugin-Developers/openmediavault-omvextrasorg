@@ -18,13 +18,16 @@ ARCH="`/bin/uname -m`"
 case "$ARCH" in
     *x86_64*)
         AMD64=true
+        ;;
     *486*)
         AMD64=false
+        ;;
     *686*)
         AMD64=false
+        ;;
     *)
         SKIP=true
-    ;;
+        ;;
 esac
 
 if $SKIP; then
