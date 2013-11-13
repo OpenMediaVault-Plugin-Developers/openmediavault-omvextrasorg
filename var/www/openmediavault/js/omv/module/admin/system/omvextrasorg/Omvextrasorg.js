@@ -84,7 +84,12 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Info", {
                 handler : Ext.Function.bind(me.onBackportsButton, me, [ me ])
             },{
                 border : false,
-                html   : _("<ul><li>Do not install the Backports Kernel if you use iSCSI!</li><li>This will not uninstall the 2.6 kernel.</li><li>If the system does not boot using the 3.2 kernel, the boot menu will still have the option to boot the 2.6 kernel.</li><li>If you are currently using Virtualbox, you will need to run the following command as root:  /etc/init.d/vboxdrv setup</li></ul>")
+                html   : "<ul>" +
+                           "<li>" + _("Do not install the Backports Kernel if you use iSCSI!") + "</li>" +
+                           "<li>" + _("This will not uninstall the 2.6 kernel.") + "</li>" +
+                           "<li>" + _("If the system does not boot using the 3.2 kernel, the boot menu will still have the option to boot the 2.6 kernel.") + "</li>" +
+                           "<li>" + _("If you are currently using Virtualbox, you will need to run the following command as root:  /etc/init.d/vboxdrv setup") + "</li>" +
+                         "</ul>"
             }]
         }];
     },

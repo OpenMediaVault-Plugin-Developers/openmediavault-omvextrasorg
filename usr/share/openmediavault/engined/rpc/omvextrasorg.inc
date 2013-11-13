@@ -144,11 +144,10 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             $bgOutputFilename = $this->createBgProcOutput();
             $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
 
-            $cmd = "/bin/su";
-            $cmdArgs = array("-c", "/usr/local/bin/installbackports", "root");
-            if(FALSE === $this->execve($cmd, $cmdArgs, $bgOutputFilename)) {
-                throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd." ".implode(" ", $cmdArgs), "");
-            }
+            $cmd = "/usr/local/bin/installbackports";
+            $this->exec($cmd, $output, $bgOutputFilename);
+            $this->finalizeBgProcStatus($bgStatusFilename, $output);
+            
         } catch(Exception $e) {
             $this->finalizeBgProcStatus($bgStatusFilename, "", $e);
             exit(1);

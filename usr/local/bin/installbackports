@@ -33,11 +33,11 @@ esac
 if $SKIP; then
     echo "Unsupported kernel and/or processor"
 else
-    echo "Install backports 3.2 kernel"
+    echo "Install backports 3.2 kernel and headers"
     if $AMD64; then
-        apt-get -t squeeze-backports --yes --force-yes --fix-missing install linux-image-3.2.0-0.bpo.4-amd64 firmware-linux firmware-linux-free
+        apt-get -t squeeze-backports --yes --force-yes --fix-missing install linux-image-3.2.0-0.bpo.4-amd64 linux-headers-3.2.0-0.bpo.4-amd64 firmware-linux firmware-linux-free
     else
-        apt-get -t squeeze-backports --yes --force-yes --fix-missing install linux-image-3.2.0-0.bpo.4-486 firmware-linux firmware-linux-free
+        apt-get -t squeeze-backports --yes --force-yes --fix-missing install linux-image-3.2.0-0.bpo.4-486  linux-headers-3.2.0-0.bpo.4-486 firmware-linux firmware-linux-free
     fi
     echo "..."
     echo "Please reboot to use new kernel"

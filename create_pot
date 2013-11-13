@@ -1,3 +1,5 @@
+#!/bin/sh
+
 POT_DIR="usr/share/openmediavault/locale/"
 
 mkdir -p ${POT_DIR}
@@ -34,7 +36,7 @@ EOF
 
 while read line
 do
-    echo -e "msgid \"${line}\"\nmsgstr \"${line}\"\n" >> ${POT_DIR}${pwd}.pot
+    echo "msgid \"${line}\"\nmsgstr \"${line}\"\n" >> ${POT_DIR}${pwd}.pot
 done < "pot_strings"
 
 rm strings*
