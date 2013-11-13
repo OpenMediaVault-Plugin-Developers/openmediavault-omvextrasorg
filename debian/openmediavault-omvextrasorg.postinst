@@ -48,6 +48,8 @@ case "$1" in
         #               <vbox>1</vbox>
         #               <plex>0</plex>
         #               <dotdeb>0</dotdeb>
+        #               <debmm>0</debmm>
+        #               <debmmbp>0</debmmbp>        
         #           </omvextrasorg>
         #       </system>
         #   </config>
@@ -61,6 +63,8 @@ case "$1" in
             VBOX="1"
             PLEX="0"
             DOTDEB="0"
+            DEBMM="0"
+            DEBMMBP="0"
         else
             echo "Importing previous configuration"
             ENABLE="$(omv_config_get "/config/system/omvextrasorg/enable")"
@@ -68,6 +72,8 @@ case "$1" in
             VBOX="$(omv_config_get "/config/system/omvextrasorg/vbox")"
             PLEX="$(omv_config_get "/config/system/omvextrasorg/plex")"
             DOTDEB="$(omv_config_get "/config/system/omvextrasorg/dotdeb")"
+            DEBMM="$(omv_config_get "/config/system/omvextrasorg/debmm")"
+            DEBMMBP="$(omv_config_get "/config/system/omvextrasorg/debmmbp")"
         fi
 
         if $ARM; then
@@ -82,6 +88,8 @@ case "$1" in
         object="${object}<vbox>${VBOX}</vbox>"
         object="${object}<plex>${PLEX}</plex>"
         object="${object}<dotdeb>${DOTDEB}</dotdeb>"
+        object="${object}<debmm>${DEBMM}</debmm>"
+        object="${object}<debmmbp>${DEBMMBP}</debmmbp>"
 
         omv_config_add_element "/config/system" "omvextrasorg" "${object}" true
 
@@ -89,7 +97,9 @@ case "$1" in
         /bin/rm -f /etc/apt/sources.list.d/virtualbox.list
         /bin/rm -f /etc/apt/sources.list.d/plexmediaserver.list
         /bin/rm -f /etc/apt/sources.list.d/dotdeb.list
-
+        /bin/rm -f /etc/apt/sources.list.d/deb-multimedia.list
+        /bin/rm -f /etc/apt/sources.list.d/deb-multimedia-backports.list
+        
         if [ "$ENABLE" = "1" ]; then
             echo 'deb http://packages.omv-extras.org/debian/ sardaukar main' > /etc/apt/sources.list.d/omv-extras-org-sardaukar.list
         fi
@@ -116,11 +126,22 @@ case "$1" in
             echo 'deb-src http://packages.dotdeb.org squeeze-php54 all' >> /etc/apt/sources.list.d/dotdeb.list
         fi
 
+        if [ "$DEBMM" = "1" ]; then
+            echo 'deb http://www.deb-multimedia.org squeeze main' > /etc/apt/sources.list.d/deb-multimedia.list
+        fi
+
+        if [ "$DEBMMBP" = "1" ]; then
+            /bin/rm -f /etc/apt/sources.list.d/deb-multimedia.list
+            echo 'deb http://www.deb-multimedia.org squeeze main non-free' > /etc/apt/sources.list.d/deb-multimedia-backports.list
+            echo 'deb http://www.deb-multimedia.org squeeze-backports main' >> /etc/apt/sources.list.d/deb-multimedia-backports.list
+        fi
+        
         if [ -x /usr/bin/apt-key ]; then
             apt-key add /usr/share/keyrings/omvextrasorg-keyring.gpg
             apt-key add /usr/share/keyrings/oracle_vbox.asc
             apt-key add /usr/share/keyrings/shell-ninthgate-se-keyring.key
             apt-key add /usr/share/keyrings/dotdeb.gpg
+            apt-key add /usr/share/keyrings/deb-multimedia-keyring.gpg
         fi
     ;;
 

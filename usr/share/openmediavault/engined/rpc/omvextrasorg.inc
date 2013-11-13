@@ -69,7 +69,9 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $object['vbox'] = boolval($object['vbox']);
         $object['plex'] = boolval($object['plex']);
         $object['dotdeb'] = boolval($object['dotdeb']);
-
+        $object['debmm'] = boolval($object['debmm']);
+        $object['debmmbp'] = boolval($object['debmmbp']);
+        
         return $object;
     }
 
@@ -95,7 +97,9 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
                 "testing":{"type":"boolean"},
                 "vbox":{"type":"boolean"},
                 "plex":{"type":"boolean"},
-                "dotdeb":{"type":"boolean"}
+                "dotdeb":{"type":"boolean"},
+                "debmm":{"type":"boolean"},
+                "debmmbp":{"type":"boolean"}
             }
         }');
 
@@ -112,7 +116,9 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "testing" => array_boolval($params, 'testing'),
             "vbox" => array_boolval($params, 'vbox'),
             "plex" => array_boolval($params, 'plex'),
-            "dotdeb" => array_boolval($params, 'dotdeb')
+            "dotdeb" => array_boolval($params, 'dotdeb'),
+            "debmm" => array_boolval($params, 'debmm'),
+            "debmmbp" => array_boolval($params, 'debmmbp')
         );
         if(FALSE === $xmlConfig->replace("//system/omvextrasorg", $object)) {
             throw new OMVException(OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED);

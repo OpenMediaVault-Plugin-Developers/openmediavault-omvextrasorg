@@ -63,7 +63,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Info", {
             }]
         },{
             xtype: "fieldset",
-            title: _("Developer Features"),
+            title: _("Developer Features (Experimental)"),
             fieldDefaults: {
                 labelSeparator: ""
             },
@@ -71,11 +71,23 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Info", {
                 xtype: "checkbox",
                 name: "dotdeb",
                 fieldLabel: _("Dotdeb"),
-                boxLabel: _("Enable Dotdeb repository - very experimental!!"),
+                boxLabel: _("Enable Dotdeb repository"),
+                checked: false
+            },{
+                xtype: "checkbox",
+                name: "debmm",
+                fieldLabel: _("deb-multimedia"),
+                boxLabel: _("Enable deb-multimedia repository"),
+                checked: false
+            },{
+                xtype: "checkbox",
+                name: "debmmbp",
+                fieldLabel: _("deb-mm backports"),
+                boxLabel: _("Enable deb-multimedia backports repository"),
                 checked: false
             },{
                 border : false,
-                html   : _("<br />")
+                html   : "<br />"
             },{
                 xtype   : "button",
                 name    : "backports",

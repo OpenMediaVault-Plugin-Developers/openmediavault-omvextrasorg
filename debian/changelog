@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (0.5.22) stable; urgency=low
+
+  * add deb-multimedia repo
+
+ -- Aaron Murray <aaron@omv-extras.org>  Wed, 13 Nov 2013 15:28:27 -0500
+
 openmediavault-omvextrasorg (0.5.21) stable; urgency=low
 
   * install headers with backports kernel

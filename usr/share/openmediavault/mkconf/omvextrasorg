@@ -30,6 +30,8 @@ OMV_MKCONF_SCRIPTS_DIR=${OMV_MKCONF_SCRIPTS_DIR:-"/usr/share/openmediavault/mkco
 /bin/rm -f /etc/apt/sources.list.d/virtualbox.list
 /bin/rm -f /etc/apt/sources.list.d/plexmediaserver.list
 /bin/rm -f /etc/apt/sources.list.d/dotdeb.list
+/bin/rm -f /etc/apt/sources.list.d/deb-multimedia.list
+/bin/rm -f /etc/apt/sources.list.d/deb-multimedia-backports.list
 
 if [ "$(omv_config_get "//system/omvextrasorg/enable")" = "1" ]; then
     echo 'deb http://packages.omv-extras.org/debian/ sardaukar main' > /etc/apt/sources.list.d/omv-extras-org-sardaukar.list
@@ -55,4 +57,14 @@ if [ "$(omv_config_get "//system/omvextrasorg/dotdeb")" = "1" ]; then
     echo 'deb-src http://packages.dotdeb.org squeeze all' >> /etc/apt/sources.list.d/dotdeb.list
     echo 'deb http://packages.dotdeb.org squeeze-php54 all' >> /etc/apt/sources.list.d/dotdeb.list
     echo 'deb-src http://packages.dotdeb.org squeeze-php54 all' >> /etc/apt/sources.list.d/dotdeb.list
+fi
+
+if [ "$(omv_config_get "//system/omvextrasorg/debmm")" = "1" ]; then
+    echo 'deb http://www.deb-multimedia.org squeeze main' > /etc/apt/sources.list.d/deb-multimedia.list
+fi
+
+if [ "$(omv_config_get "//system/omvextrasorg/debmmbp")" = "1" ]; then
+    /bin/rm -f /etc/apt/sources.list.d/deb-multimedia.list
+    echo 'deb http://www.deb-multimedia.org squeeze main non-free' > /etc/apt/sources.list.d/deb-multimedia-backports.list
+    echo 'deb http://www.deb-multimedia.org squeeze-backports main' >> /etc/apt/sources.list.d/deb-multimedia-backports.list
 fi
