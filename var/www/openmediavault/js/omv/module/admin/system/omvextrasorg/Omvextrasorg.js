@@ -82,7 +82,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Info", {
             },{
                 xtype: "checkbox",
                 name: "debmmbp",
-                fieldLabel: _("deb-mm backports"),
+                fieldLabel: _("deb-multimedia backports"),
                 boxLabel: _("Enable deb-multimedia backports repository"),
                 checked: false
             },{
