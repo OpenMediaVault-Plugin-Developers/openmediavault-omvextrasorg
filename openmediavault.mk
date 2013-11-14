@@ -4,9 +4,7 @@
 #
 # @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
 # @author    Volker Theile <volker.theile@openmediavault.org>
-# @author    Marcel Beck <marcel.beck@mbeck.org>
-# @copyright Copyright (c) 2009-2012 Volker Theile
-# @copyright Copyright (c) 2012 Marcel Beck
+# @copyright Copyright (c) 2009-2013 Volker Theile
 #
 # OpenMediaVault is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -24,15 +22,15 @@
 OMV_PACKAGE := $(shell pwd | sed 's|.*/||')
 OMV_POT_DIR := $(CURDIR)/usr/share/openmediavault/locale
 OMV_POT_FILE := $(OMV_PACKAGE).pot
-OMV_TRANSIFEX_PROJECT_SLUG := OMVPlugins
+OMV_TRANSIFEX_SLUG := $(OMV_PACKAGE)pot
 
 omv_pull_po:
 	tx --root="$(CURDIR)/../" pull --all \
-	  --resource=$(OMV_TRANSIFEX_PROJECT_SLUG).$(OMV_PACKAGE)
+	  --resource=$(OMV_PACKAGE).$(OMV_TRANSIFEX_SLUG)
 
 omv_push_pot:
 	tx --root="$(CURDIR)/../" push --source \
-	  --resource=$(OMV_TRANSIFEX_PROJECT_SLUG).$(OMV_PACKAGE)
+	  --resource=$(OMV_PACKAGE).$(OMV_TRANSIFEX_SLUG)
 
 omv_build_pot:
 	dh_testdir
@@ -40,15 +38,26 @@ omv_build_pot:
 	echo "Building PO template file ..." >&2
 	mkdir -p $(OMV_POT_DIR)
 	find $(CURDIR) \( -iname *.js -o -iname *.php -o -iname *.inc \) \
-	  -type f -print0 | xargs -0 xgettext --keyword=_ \
+	  -type f -print0 | xargs -0r xgettext --keyword=_ \
 	  --output-dir=$(OMV_POT_DIR) --output=$(OMV_POT_FILE) \
 	  --force-po --no-location --no-wrap --sort-output \
 	  --package-name=$(OMV_PACKAGE) -
+	# Remove '#, c-format' comments, otherwise manuall upload of translation
+	# files confuses Transifex.
+	sed --in-place '/^#, c-format/d' $(OMV_POT_DIR)/$(OMV_POT_FILE)
 
 omv_clean_scm:
 	dh_testdir
 	echo "Removing SCM files ..." >&2
 	find $(CURDIR)/debian/$(OMV_PACKAGE) \( -name .svn -o -name .git \) \
-	  -type d -print0 -prune | xargs -0 rm -rf
+	  -type d -print0 -prune | xargs -0r rm -rf
 
-.PHONY: omv_build_pot omv_clean_scm
+omv_build_doc: debian/doxygen.conf
+	mkdir -p debian/doxygen
+	doxygen $<
+
+source: clean
+	dpkg-buildpackage -S -us -uc
+
+.PHONY: omv_pull_po omv_push_pot omv_build_pot omv_clean_scm omv_build_doc
+.PHONY: source

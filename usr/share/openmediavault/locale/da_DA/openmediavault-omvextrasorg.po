@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Alexander Savchenko <>, 2013
+# Stefan Thrane Overby <stoverby@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
@@ -11,12 +11,12 @@ msgstr ""
 "POT-Creation-Date: 2013-11-14 11:28-0600\n"
 "PO-Revision-Date: 2013-11-14 12:41+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
-"Language-Team: Russian (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ru/)\n"
+"Language-Team: Danish (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: da\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Developer Features (Experimental)"
 msgstr ""
@@ -33,16 +33,16 @@ msgstr ""
 msgid ""
 "Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository"
 "  (disable if using armel/armhf)"
-msgstr "Включить OMV-Extras.org Virtualbox репозиторий и Sun's Virtualbox репозиторий  (отключите если используете armel/armhf)"
+msgstr "Aktiver OMV-Extras.org Virtuelbox arkiv og Sun's Virtuelbox arkiv (deaktiver hvis armel/armhf bliver brugt)"
 
 msgid "Enable OMV-Extras.org repository"
-msgstr "Включить OMV-Extras.org репозиторий"
+msgstr "Aktiver OMV-Extras.org arkiv"
 
 msgid "Enable OMV-Extras.org testing repository  (Use at your own risk!)"
-msgstr "Включить тестовый OMV-Extras.org репозиторий  (Используйте его на свой страх и риск!)"
+msgstr "Aktiver OMV-Extras.org test arkiv (Brug er på egen risiko!)"
 
 msgid "Enable Plex Media Server repository  (disable if using armel/armhf)"
-msgstr "Включить Plex Media Server репозиторий  (отключите если используете armel/armhf)"
+msgstr "Aktiver Plex Media Server arkiv (deaktiver hvis armel/armhf bliver brugt)"
 
 msgid "Enable deb-multimedia backports repository"
 msgstr ""
@@ -73,7 +73,7 @@ msgid "Plex"
 msgstr ""
 
 msgid "Repositories"
-msgstr "Репозитории"
+msgstr "Arkiver"
 
 msgid "Testing"
 msgstr ""

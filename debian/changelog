@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (0.5.23) stable; urgency=low
+
+  * added locales
+
+ -- Aaron Murray <aaron@omv-extras.org>  Thu, 14 Nov 2013 11:28:27 -0500
+
 openmediavault-omvextrasorg (0.5.22) stable; urgency=low
 
   * add deb-multimedia repo
