@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Alexander Savchenko <>, 2013
+# артур Мудрых <arturmon82@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-11-14 11:28-0600\n"
-"PO-Revision-Date: 2013-11-14 12:41+0000\n"
-"Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
+"PO-Revision-Date: 2013-11-20 10:02+0000\n"
+"Last-Translator: артур Мудрых <arturmon82@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,16 +20,16 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 msgid "Developer Features (Experimental)"
-msgstr ""
+msgstr "Особенности Разработчика (экспериментальный)"
 
 msgid "Do not install the Backports Kernel if you use iSCSI!"
-msgstr ""
+msgstr "Не устанавливайте Backports ядро, если вы используете Iscsi!"
 
 msgid "Dotdeb"
-msgstr ""
+msgstr "Dotdeb"
 
 msgid "Enable Dotdeb repository"
-msgstr ""
+msgstr "Включить Dotdeb репозиторий"
 
 msgid ""
 "Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository"
@@ -45,47 +46,47 @@ msgid "Enable Plex Media Server repository  (disable if using armel/armhf)"
 msgstr "Включить Plex Media Server репозиторий  (отключите если используете armel/armhf)"
 
 msgid "Enable deb-multimedia backports repository"
-msgstr ""
+msgstr "Включить deb-multimedia backports репозиторий"
 
 msgid "Enable deb-multimedia repository"
-msgstr ""
+msgstr "Включить deb-multimedia репозиторий"
 
 msgid ""
 "If the system does not boot using the 3.2 kernel, the boot menu will still "
 "have the option to boot the 2.6 kernel."
-msgstr ""
+msgstr "Если система не загружается с ядром 3,2 в меню загрузки будет по-прежнему будет возможность загрузки ядра 2.6."
 
 msgid ""
 "If you are currently using Virtualbox, you will need to run the following "
 "command as root:  /etc/init.d/vboxdrv setup"
-msgstr ""
+msgstr "Если вы в настоящее время используете Virtualbox, вам нужно выполнить следующую команду от имени суперпользователя: /etc/init.d/vboxdrv setup"
 
 msgid "Install Backports 3.2 Kernel"
-msgstr ""
+msgstr "Установить Backports Kernel 3.2"
 
 msgid "Install Backports 3.2 kernel ..."
-msgstr ""
+msgstr "Установка Backports 3.2 ядра ..."
 
 msgid "OMV-Extras.org"
-msgstr ""
+msgstr "OMV-Extras.org"
 
 msgid "Plex"
-msgstr ""
+msgstr "Plex"
 
 msgid "Repositories"
 msgstr "Репозитории"
 
 msgid "Testing"
-msgstr ""
+msgstr "Тестирование"
 
 msgid "This will not uninstall the 2.6 kernel."
-msgstr ""
+msgstr "Это не приведет к удалению ядра 2.6."
 
 msgid "Virtualbox"
-msgstr ""
+msgstr "Virtualbox"
 
 msgid "deb-multimedia"
-msgstr ""
+msgstr "deb-multimedia"
 
 msgid "deb-multimedia backports"
-msgstr ""
+msgstr "deb-multimedia backports"
