@@ -5,7 +5,8 @@ BACKPORTS_REPO="/etc/apt/sources.list.d/backports.list"
 if [ ! -f "$BACKPORTS_REPO" ]
 then
     echo "Add backports repository."
-    echo "deb http://backports.debian.org/debian-backports squeeze-backports main non-free" >> $BACKPORTS_REPO
+    echo "deb http://backports.debian.org/debian-backports squeeze-backports main non-free" > $BACKPORTS_REPO
+    echo "deb http://packages.omv-extras.org/debian/ sardaukar-backports main" >> $BACKPORTS_REPO
 fi
 
 echo "Updating..."
