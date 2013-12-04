@@ -29,6 +29,7 @@ OMV_MKCONF_SCRIPTS_DIR=${OMV_MKCONF_SCRIPTS_DIR:-"/usr/share/openmediavault/mkco
 /bin/rm -f /etc/apt/sources.list.d/omv-extras-org-*.list
 /bin/rm -f /etc/apt/sources.list.d/virtualbox.list
 /bin/rm -f /etc/apt/sources.list.d/plexmediaserver.list
+/bin/rm -f /etc/apt/sources.list.d/greyhole.list
 /bin/rm -f /etc/apt/sources.list.d/dotdeb.list
 /bin/rm -f /etc/apt/sources.list.d/deb-multimedia.list
 /bin/rm -f /etc/apt/sources.list.d/deb-multimedia-backports.list
@@ -49,6 +50,11 @@ fi
 if [ "$(omv_config_get "//system/omvextrasorg/plex")" = "1" ]; then
     echo 'deb http://packages.omv-extras.org/debian/ sardaukar-plex main' > /etc/apt/sources.list.d/plexmediaserver.list
     echo 'deb http://shell.ninthgate.se/packages/debian squeeze main' >> /etc/apt/sources.list.d/plexmediaserver.list
+fi
+
+if [ "$(omv_config_get "//system/omvextrasorg/greyhole")" = "1" ]; then
+    echo 'deb http://packages.omv-extras.org/debian/ sardaukar-greyhole main' > /etc/apt/sources.list.d/greyhole.list
+    echo 'deb http://www.greyhole.net/releases/deb stable main' >> /etc/apt/sources.list.d/greyhole.list
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/dotdeb")" = "1" ]; then

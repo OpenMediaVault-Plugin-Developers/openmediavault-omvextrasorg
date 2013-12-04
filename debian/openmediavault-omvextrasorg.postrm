@@ -35,6 +35,7 @@ if [ "$1" = "purge" ] || [ "$1" = "remove" ]; then
     /bin/rm -f /etc/apt/sources.list.d/virtualbox.list
     /bin/rm -f /etc/apt/sources.list.d/plexmediaserver.list
     /bin/rm -f /etc/apt/sources.list.d/dotdeb.list
+    /bin/rm -f /etc/apt/sources.list.d/greyhole.list
 fi
 
 exit 0

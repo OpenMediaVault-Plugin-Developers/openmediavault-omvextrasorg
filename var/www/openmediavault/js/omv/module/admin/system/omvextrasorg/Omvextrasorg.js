@@ -60,6 +60,12 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Info", {
                 fieldLabel: _("Plex"),
                 boxLabel: _("Enable Plex Media Server repository  (disable if using armel/armhf)"),
                 checked: false
+            },{
+                xtype: "checkbox",
+                name: "greyhole",
+                fieldLabel: _("Greyhole"),
+                boxLabel: _("Enable Greyhole repository  (disable if using armel/armhf)"),
+                checked: false
             }]
         },{
             xtype: "fieldset",
