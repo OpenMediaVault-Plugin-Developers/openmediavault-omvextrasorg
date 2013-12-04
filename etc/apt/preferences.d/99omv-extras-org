@@ -1,3 +1,27 @@
 Package: *
 Pin: release n=sardaukar, origin packages.omv-extras.org
 Pin-Priority: 995
+
+Package: *
+Pin: release n=sardaukar-dotdeb, origin packages.omv-extras.org
+Pin-Priority: 996
+
+Package: *
+Pin: release n=sardaukar-greyhole, origin packages.omv-extras.org
+Pin-Priority: 995
+
+Package: *
+Pin: release n=sardaukar-plex, origin packages.omv-extras.org
+Pin-Priority: 995
+
+Package: *
+Pin: release n=sardaukar-testing, origin packages.omv-extras.org
+Pin-Priority: 996
+
+Package: *
+Pin: release n=sardaukar-vb, origin packages.omv-extras.org
+Pin-Priority: 995
+
+Package: *
+Pin: release n=e-tobi.net
+Pin-Priority: 995

@@ -25,7 +25,9 @@ set -e
 . /usr/share/openmediavault/scripts/helper-functions
 
 OMV_MKCONF_SCRIPTS_DIR=${OMV_MKCONF_SCRIPTS_DIR:-"/usr/share/openmediavault/mkconf"}
+OMVEXTRASREPOFILE="/etc/apt/sources.list.d/omv-extras-org-sardaukar.list"
 
+/bin/rm -f ${OMVEXTRASREPOFILE}
 /bin/rm -f /etc/apt/sources.list.d/omv-extras-org-*.list
 /bin/rm -f /etc/apt/sources.list.d/virtualbox.list
 /bin/rm -f /etc/apt/sources.list.d/plexmediaserver.list
@@ -35,42 +37,54 @@ OMV_MKCONF_SCRIPTS_DIR=${OMV_MKCONF_SCRIPTS_DIR:-"/usr/share/openmediavault/mkco
 /bin/rm -f /etc/apt/sources.list.d/deb-multimedia-backports.list
 
 if [ "$(omv_config_get "//system/omvextrasorg/enable")" = "1" ]; then
-    echo 'deb http://packages.omv-extras.org/debian/ sardaukar main' > /etc/apt/sources.list.d/omv-extras-org-sardaukar.list
+    echo '# Regular omv-extras.org repo' >> ${OMVEXTRASREPOFILE}
+    echo 'deb http://packages.omv-extras.org/debian/ sardaukar main' > ${OMVEXTRASREPOFILE}
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/testing")" = "1" ]; then
-    echo 'deb http://packages.omv-extras.org/debian/ sardaukar-testing main' > /etc/apt/sources.list.d/omv-extras-org-testing.list
+    echo '# Testing omv-extras.org repo' >> ${OMVEXTRASREPOFILE}
+    echo 'deb http://packages.omv-extras.org/debian/ sardaukar-testing main' >> ${OMVEXTRASREPOFILE}
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/vbox")" = "1" ]; then
-    echo 'deb http://packages.omv-extras.org/debian/ sardaukar-vb main' > /etc/apt/sources.list.d/virtualbox.list
-    echo 'deb http://download.virtualbox.org/virtualbox/debian squeeze contrib non-free' >> /etc/apt/sources.list.d/virtualbox.list
+    echo '# Virtualbox repo' >> ${OMVEXTRASREPOFILE}
+    echo 'deb http://packages.omv-extras.org/debian/ sardaukar-vb main' >> ${OMVEXTRASREPOFILE}
+    echo 'deb http://download.virtualbox.org/virtualbox/debian squeeze contrib non-free' >> ${OMVEXTRASREPOFILE}
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/plex")" = "1" ]; then
-    echo 'deb http://packages.omv-extras.org/debian/ sardaukar-plex main' > /etc/apt/sources.list.d/plexmediaserver.list
-    echo 'deb http://shell.ninthgate.se/packages/debian squeeze main' >> /etc/apt/sources.list.d/plexmediaserver.list
+    echo '# Plexmediaserver repo' >> ${OMVEXTRASREPOFILE}
+    echo 'deb http://packages.omv-extras.org/debian/ sardaukar-plex main' >> ${OMVEXTRASREPOFILE}
+    echo 'deb http://shell.ninthgate.se/packages/debian squeeze main' >> ${OMVEXTRASREPOFILE}
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/greyhole")" = "1" ]; then
-    echo 'deb http://packages.omv-extras.org/debian/ sardaukar-greyhole main' > /etc/apt/sources.list.d/greyhole.list
-    echo 'deb http://www.greyhole.net/releases/deb stable main' >> /etc/apt/sources.list.d/greyhole.list
+    echo '# Greyhole repo' >> ${OMVEXTRASREPOFILE}
+    echo 'deb http://packages.omv-extras.org/debian/ sardaukar-greyhole main' >> ${OMVEXTRASREPOFILE}
+    echo 'deb http://www.greyhole.net/releases/deb stable main' >> ${OMVEXTRASREPOFILE}
+fi
+
+if [ "$(omv_config_get "//system/omvextrasorg/vdr")" = "1" ]; then
+    echo '# VDR repo' >> ${OMVEXTRASREPOFILE}
+    echo 'deb http://e-tobi.net/vdr-experimental/ squeeze addons vdr-multipatch' >> ${OMVEXTRASREPOFILE}
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/dotdeb")" = "1" ]; then
-    echo 'deb http://packages.omv-extras.org/debian/ sardaukar-dotdeb main' > /etc/apt/sources.list.d/dotdeb.list
-    echo 'deb http://packages.dotdeb.org squeeze all' >> /etc/apt/sources.list.d/dotdeb.list
-    echo 'deb-src http://packages.dotdeb.org squeeze all' >> /etc/apt/sources.list.d/dotdeb.list
-    echo 'deb http://packages.dotdeb.org squeeze-php54 all' >> /etc/apt/sources.list.d/dotdeb.list
-    echo 'deb-src http://packages.dotdeb.org squeeze-php54 all' >> /etc/apt/sources.list.d/dotdeb.list
-fi
-
-if [ "$(omv_config_get "//system/omvextrasorg/debmm")" = "1" ]; then
-    echo 'deb http://www.deb-multimedia.org squeeze main' > /etc/apt/sources.list.d/deb-multimedia.list
+    echo '# Dotdeb experimental repo' >> ${OMVEXTRASREPOFILE}
+    echo 'deb http://packages.omv-extras.org/debian/ sardaukar-dotdeb main' >> ${OMVEXTRASREPOFILE}
+    echo 'deb http://packages.dotdeb.org squeeze all' >> ${OMVEXTRASREPOFILE}
+    echo 'deb-src http://packages.dotdeb.org squeeze all' >> ${OMVEXTRASREPOFILE}
+    echo 'deb http://packages.dotdeb.org squeeze-php54 all' >> ${OMVEXTRASREPOFILE}
+    echo 'deb-src http://packages.dotdeb.org squeeze-php54 all' >> ${OMVEXTRASREPOFILE}
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/debmmbp")" = "1" ]; then
-    /bin/rm -f /etc/apt/sources.list.d/deb-multimedia.list
-    echo 'deb http://www.deb-multimedia.org squeeze main non-free' > /etc/apt/sources.list.d/deb-multimedia-backports.list
-    echo 'deb http://www.deb-multimedia.org squeeze-backports main' >> /etc/apt/sources.list.d/deb-multimedia-backports.list
+    echo '# Deb-multimedia backports repo' >> ${OMVEXTRASREPOFILE}
+    echo 'deb http://www.deb-multimedia.org squeeze main non-free' > ${OMVEXTRASREPOFILE}
+    echo 'deb http://www.deb-multimedia.org squeeze-backports main' >> ${OMVEXTRASREPOFILE}
+else
+    if [ "$(omv_config_get "//system/omvextrasorg/debmm")" = "1" ]; then
+        echo '# Deb-multimedia repo' >> ${OMVEXTRASREPOFILE}
+        echo 'deb http://www.deb-multimedia.org squeeze main' > ${OMVEXTRASREPOFILE}
+    fi
 fi

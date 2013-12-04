@@ -92,6 +92,12 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Info", {
                 boxLabel: _("Enable deb-multimedia backports repository"),
                 checked: false
             },{
+                xtype: "checkbox",
+                name: "vdr",
+                fieldLabel: _("VDR"),
+                boxLabel: _("Enable e-tobi.net repository  (disable if using armel/armhf)"),
+                checked: false
+            },{
                 border : false,
                 html   : "<br />"
             },{

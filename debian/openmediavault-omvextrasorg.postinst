@@ -26,6 +26,8 @@ set -e
 . /etc/default/openmediavault
 . /usr/share/openmediavault/scripts/helper-functions
 
+OMVEXTRASREPOFILE="/etc/apt/sources.list.d/omv-extras-org-sardaukar.list"
+
 ARM=false
 ARCH="`/bin/uname -m`"
 
@@ -48,6 +50,7 @@ case "$1" in
         #               <vbox>1</vbox>
         #               <plex>0</plex>
         #               <greyhole>0</greyhole>
+        #               <vdr>0</vdr>
         #               <dotdeb>0</dotdeb>
         #               <debmm>0</debmm>
         #               <debmmbp>0</debmmbp>
@@ -64,6 +67,7 @@ case "$1" in
             VBOX="1"
             PLEX="0"
             GREYHOLE="0"
+            VDR="0"
             DOTDEB="0"
             DEBMM="0"
             DEBMMBP="0"
@@ -74,6 +78,7 @@ case "$1" in
             VBOX="$(omv_config_get "/config/system/omvextrasorg/vbox")"
             PLEX="$(omv_config_get "/config/system/omvextrasorg/plex")"
             GREYHOLE="$(omv_config_get "/config/system/omvextrasorg/greyhole")"
+            VDR="$(omv_config_get "/config/system/omvextrasorg/vdr")"
             DOTDEB="$(omv_config_get "/config/system/omvextrasorg/dotdeb")"
             DEBMM="$(omv_config_get "/config/system/omvextrasorg/debmm")"
             DEBMMBP="$(omv_config_get "/config/system/omvextrasorg/debmmbp")"
@@ -83,6 +88,7 @@ case "$1" in
             VBOX="0"
             PLEX="0"
             GREYHOLE="0"
+            VDR="0"
         fi
 
         omv_config_delete "/config/system/omvextrasorg"
@@ -92,12 +98,14 @@ case "$1" in
         object="${object}<vbox>${VBOX}</vbox>"
         object="${object}<plex>${PLEX}</plex>"
         object="${object}<greyhole>${GREYHOLE}</greyhole>"
+        object="${object}<vdr>${PLEX}</vdr>"
         object="${object}<dotdeb>${DOTDEB}</dotdeb>"
         object="${object}<debmm>${DEBMM}</debmm>"
         object="${object}<debmmbp>${DEBMMBP}</debmmbp>"
 
         omv_config_add_element "/config/system" "omvextrasorg" "${object}" true
 
+        /bin/rm -f ${OMVEXTRASREPOFILE}
         /bin/rm -f /etc/apt/sources.list.d/omv-extras-org-*.list
         /bin/rm -f /etc/apt/sources.list.d/virtualbox.list
         /bin/rm -f /etc/apt/sources.list.d/plexmediaserver.list
@@ -107,44 +115,56 @@ case "$1" in
         /bin/rm -f /etc/apt/sources.list.d/deb-multimedia-backports.list
 
         if [ "$ENABLE" = "1" ]; then
-            echo 'deb http://packages.omv-extras.org/debian/ sardaukar main' > /etc/apt/sources.list.d/omv-extras-org-sardaukar.list
+            echo '# Regular omv-extras.org repo' >> ${OMVEXTRASREPOFILE}
+            echo 'deb http://packages.omv-extras.org/debian/ sardaukar main' > ${OMVEXTRASREPOFILE}
         fi
 
         if [ "$TESTING" = "1" ]; then
-            echo 'deb http://packages.omv-extras.org/debian/ sardaukar-testing main' > /etc/apt/sources.list.d/omv-extras-org-testing.list
+            echo '# Testing omv-extras.org repo' >> ${OMVEXTRASREPOFILE}
+            echo 'deb http://packages.omv-extras.org/debian/ sardaukar-testing main' >> ${OMVEXTRASREPOFILE}
         fi
 
         if [ "$VBOX" = "1" ]; then
-            echo 'deb http://packages.omv-extras.org/debian/ sardaukar-vb main' > /etc/apt/sources.list.d/virtualbox.list
-            echo 'deb http://download.virtualbox.org/virtualbox/debian squeeze contrib non-free' >> /etc/apt/sources.list.d/virtualbox.list
+            echo '# Virtualbox repo' >> ${OMVEXTRASREPOFILE}
+            echo 'deb http://packages.omv-extras.org/debian/ sardaukar-vb main' >> ${OMVEXTRASREPOFILE}
+            echo 'deb http://download.virtualbox.org/virtualbox/debian squeeze contrib non-free' >> ${OMVEXTRASREPOFILE}
         fi
 
         if [ "$PLEX" = "1" ]; then
-            echo 'deb http://packages.omv-extras.org/debian/ sardaukar-plex main' > /etc/apt/sources.list.d/plexmediaserver.list
-            echo 'deb http://shell.ninthgate.se/packages/debian squeeze main' >> /etc/apt/sources.list.d/plexmediaserver.list
+            echo '# Plexmediaserver repo' >> ${OMVEXTRASREPOFILE}
+            echo 'deb http://packages.omv-extras.org/debian/ sardaukar-plex main' >> ${OMVEXTRASREPOFILE}
+            echo 'deb http://shell.ninthgate.se/packages/debian squeeze main' >> ${OMVEXTRASREPOFILE}
         fi
 
         if [ "$GREYHOLE" = "1" ]; then
-            echo 'deb http://packages.omv-extras.org/debian/ sardaukar-greyhole main' > /etc/apt/sources.list.d/greyhole.list
-            echo 'deb http://www.greyhole.net/releases/deb stable main' >> /etc/apt/sources.list.d/greyhole.list
+            echo '# Greyhole repo' >> ${OMVEXTRASREPOFILE}
+            echo 'deb http://packages.omv-extras.org/debian/ sardaukar-greyhole main' >> ${OMVEXTRASREPOFILE}
+            echo 'deb http://www.greyhole.net/releases/deb stable main' >> ${OMVEXTRASREPOFILE}
+        fi
+
+        if [ "$VDR" = "1" ]; then
+            echo '# VDR repo' >> ${OMVEXTRASREPOFILE}
+            echo 'deb http://e-tobi.net/vdr-experimental/ squeeze addons vdr-multipatch' >> ${OMVEXTRASREPOFILE}
         fi
 
         if [ "$DOTDEB" = "1" ]; then
-            echo 'deb http://packages.omv-extras.org/debian/ sardaukar-dotdeb main' > /etc/apt/sources.list.d/dotdeb.list
-            echo 'deb http://packages.dotdeb.org squeeze all' >> /etc/apt/sources.list.d/dotdeb.list
-            echo 'deb-src http://packages.dotdeb.org squeeze all' >> /etc/apt/sources.list.d/dotdeb.list
-            echo 'deb http://packages.dotdeb.org squeeze-php54 all' >> /etc/apt/sources.list.d/dotdeb.list
-            echo 'deb-src http://packages.dotdeb.org squeeze-php54 all' >> /etc/apt/sources.list.d/dotdeb.list
-        fi
-
-        if [ "$DEBMM" = "1" ]; then
-            echo 'deb http://www.deb-multimedia.org squeeze main' > /etc/apt/sources.list.d/deb-multimedia.list
+            echo '# Dotdeb experimental repo' >> ${OMVEXTRASREPOFILE}
+            echo 'deb http://packages.omv-extras.org/debian/ sardaukar-dotdeb main' >> ${OMVEXTRASREPOFILE}
+            echo 'deb http://packages.dotdeb.org squeeze all' >> ${OMVEXTRASREPOFILE}
+            echo 'deb-src http://packages.dotdeb.org squeeze all' >> ${OMVEXTRASREPOFILE}
+            echo 'deb http://packages.dotdeb.org squeeze-php54 all' >> ${OMVEXTRASREPOFILE}
+            echo 'deb-src http://packages.dotdeb.org squeeze-php54 all' >> ${OMVEXTRASREPOFILE}
         fi
 
         if [ "$DEBMMBP" = "1" ]; then
-            /bin/rm -f /etc/apt/sources.list.d/deb-multimedia.list
-            echo 'deb http://www.deb-multimedia.org squeeze main non-free' > /etc/apt/sources.list.d/deb-multimedia-backports.list
-            echo 'deb http://www.deb-multimedia.org squeeze-backports main' >> /etc/apt/sources.list.d/deb-multimedia-backports.list
+            echo '# Deb-multimedia backports repo' >> ${OMVEXTRASREPOFILE}
+            echo 'deb http://www.deb-multimedia.org squeeze main non-free' > ${OMVEXTRASREPOFILE}
+            echo 'deb http://www.deb-multimedia.org squeeze-backports main' >> ${OMVEXTRASREPOFILE}
+        else
+            if [ "$DEBMM" = "1" ]; then
+                echo '# Deb-multimedia repo' >> ${OMVEXTRASREPOFILE}
+                echo 'deb http://www.deb-multimedia.org squeeze main' > ${OMVEXTRASREPOFILE}
+            fi
         fi
 
         if [ -x /usr/bin/apt-key ]; then
@@ -154,6 +174,7 @@ case "$1" in
             apt-key add /usr/share/keyrings/dotdeb.gpg
             apt-key add /usr/share/keyrings/deb-multimedia-keyring.gpg
             apt-key add /usr/share/keyrings/greyhole-debsig.asc
+            apt-key add /usr/share/keyrings/e-tobi-keyring.gpg
         fi
     ;;
 

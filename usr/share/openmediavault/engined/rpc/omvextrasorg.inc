@@ -69,6 +69,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $object['vbox'] = boolval($object['vbox']);
         $object['plex'] = boolval($object['plex']);
         $object['greyhole'] = boolval($object['greyhole']);
+        $object['vdr'] = boolval($object['vdr']);
         $object['dotdeb'] = boolval($object['dotdeb']);
         $object['debmm'] = boolval($object['debmm']);
         $object['debmmbp'] = boolval($object['debmmbp']);
@@ -99,6 +100,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
                 "vbox":{"type":"boolean"},
                 "plex":{"type":"boolean"},
                 "greyhole":{"type":"boolean"},
+                "vdr":{"type":"boolean"},
                 "dotdeb":{"type":"boolean"},
                 "debmm":{"type":"boolean"},
                 "debmmbp":{"type":"boolean"}
@@ -119,6 +121,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "vbox" => array_boolval($params, 'vbox'),
             "plex" => array_boolval($params, 'plex'),
             "greyhole" => array_boolval($params, 'greyhole'),
+            "vdr" => array_boolval($params, 'vdr'),
             "dotdeb" => array_boolval($params, 'dotdeb'),
             "debmm" => array_boolval($params, 'debmm'),
             "debmmbp" => array_boolval($params, 'debmmbp')
