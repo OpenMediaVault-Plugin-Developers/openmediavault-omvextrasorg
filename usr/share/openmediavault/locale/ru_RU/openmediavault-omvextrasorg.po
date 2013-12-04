@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-14 11:28-0600\n"
-"PO-Revision-Date: 2013-11-20 10:02+0000\n"
-"Last-Translator: артур Мудрых <arturmon82@gmail.com>\n"
+"POT-Creation-Date: 2013-12-04 08:07-0600\n"
+"PO-Revision-Date: 2013-12-04 14:08+0000\n"
+"Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,6 +30,9 @@ msgstr "Dotdeb"
 
 msgid "Enable Dotdeb repository"
 msgstr "Включить Dotdeb репозиторий"
+
+msgid "Enable Greyhole repository  (disable if using armel/armhf)"
+msgstr ""
 
 msgid ""
 "Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository"
@@ -50,6 +53,9 @@ msgstr "Включить deb-multimedia backports репозиторий"
 
 msgid "Enable deb-multimedia repository"
 msgstr "Включить deb-multimedia репозиторий"
+
+msgid "Greyhole"
+msgstr ""
 
 msgid ""
 "If the system does not boot using the 3.2 kernel, the boot menu will still "

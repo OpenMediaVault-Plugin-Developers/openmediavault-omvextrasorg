@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-14 11:28-0600\n"
-"PO-Revision-Date: 2013-11-20 10:02+0000\n"
+"POT-Creation-Date: 2013-12-04 08:07-0600\n"
+"PO-Revision-Date: 2013-12-04 14:08+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -19,15 +19,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Developer Features (Experimental)"
-msgstr ""
+msgstr "Undervikler Funktioner (Eksperimentel)"
 
 msgid "Do not install the Backports Kernel if you use iSCSI!"
 msgstr ""
 
 msgid "Dotdeb"
-msgstr ""
+msgstr "Dotdeb"
 
 msgid "Enable Dotdeb repository"
+msgstr "Aktiver Dotdeb arkiv"
+
+msgid "Enable Greyhole repository  (disable if using armel/armhf)"
 msgstr ""
 
 msgid ""
@@ -45,9 +48,12 @@ msgid "Enable Plex Media Server repository  (disable if using armel/armhf)"
 msgstr "Aktiver Plex Media Server arkiv (deaktiver hvis armel/armhf bliver brugt)"
 
 msgid "Enable deb-multimedia backports repository"
-msgstr ""
+msgstr "Aktiver deb-multimedia backports arkiv"
 
 msgid "Enable deb-multimedia repository"
+msgstr "Aktiver deb-multimedia arkiv"
+
+msgid "Greyhole"
 msgstr ""
 
 msgid ""
@@ -61,31 +67,31 @@ msgid ""
 msgstr ""
 
 msgid "Install Backports 3.2 Kernel"
-msgstr ""
+msgstr "Installer Backports 3.2 Kerne"
 
 msgid "Install Backports 3.2 kernel ..."
-msgstr ""
+msgstr "Installer Backports 3.2 kerne ..."
 
 msgid "OMV-Extras.org"
-msgstr ""
+msgstr "OMV-Extras.org"
 
 msgid "Plex"
-msgstr ""
+msgstr "Plex"
 
 msgid "Repositories"
 msgstr "Arkiver"
 
 msgid "Testing"
-msgstr ""
+msgstr "Test"
 
 msgid "This will not uninstall the 2.6 kernel."
-msgstr ""
+msgstr "Dette vil ikke afinstallere 2.6 kernen."
 
 msgid "Virtualbox"
-msgstr ""
+msgstr "Virtualbox"
 
 msgid "deb-multimedia"
-msgstr ""
+msgstr "deb-multimedia"
 
 msgid "deb-multimedia backports"
-msgstr ""
+msgstr "deb-multimedia backports"

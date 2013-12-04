@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-14 11:28-0600\n"
-"PO-Revision-Date: 2013-11-20 10:02+0000\n"
+"POT-Creation-Date: 2013-12-04 08:07-0600\n"
+"PO-Revision-Date: 2013-12-04 14:08+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -25,9 +25,12 @@ msgid "Do not install the Backports Kernel if you use iSCSI!"
 msgstr ""
 
 msgid "Dotdeb"
-msgstr ""
+msgstr "Dotdeb"
 
 msgid "Enable Dotdeb repository"
+msgstr "Activer le répo Dotdeb"
+
+msgid "Enable Greyhole repository  (disable if using armel/armhf)"
 msgstr ""
 
 msgid ""
@@ -48,6 +51,9 @@ msgid "Enable deb-multimedia backports repository"
 msgstr ""
 
 msgid "Enable deb-multimedia repository"
+msgstr "Activer le répo deb-multimedia"
+
+msgid "Greyhole"
 msgstr ""
 
 msgid ""
@@ -67,10 +73,10 @@ msgid "Install Backports 3.2 kernel ..."
 msgstr ""
 
 msgid "OMV-Extras.org"
-msgstr ""
+msgstr "OMV-Extras.org"
 
 msgid "Plex"
-msgstr ""
+msgstr "Plex"
 
 msgid "Repositories"
 msgstr "Dépôts "
@@ -82,10 +88,10 @@ msgid "This will not uninstall the 2.6 kernel."
 msgstr ""
 
 msgid "Virtualbox"
-msgstr ""
+msgstr "Virtualbox"
 
 msgid "deb-multimedia"
-msgstr ""
+msgstr "deb-multimedia"
 
 msgid "deb-multimedia backports"
 msgstr ""
