@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (0.5.24) stable; urgency=low
+
+  * add Greyhole repository
+  * update locales
+
+ -- Aaron Murray <aaron@omv-extras.org>  Wed, 04 Dec 2013 08:09:27 -0500
+
 openmediavault-omvextrasorg (0.5.23) stable; urgency=low
 
   * added locales
