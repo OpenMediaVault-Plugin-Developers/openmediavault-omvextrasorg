@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-04 08:07-0600\n"
-"PO-Revision-Date: 2013-12-04 14:08+0000\n"
+"POT-Creation-Date: 2013-12-04 15:48-0600\n"
+"PO-Revision-Date: 2013-12-04 21:49+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -53,6 +53,9 @@ msgstr ""
 msgid "Enable deb-multimedia repository"
 msgstr "Увімкнути мультимедійне сховище deb"
 
+msgid "Enable e-tobi.net repository  (disable if using armel/armhf)"
+msgstr ""
+
 msgid "Greyhole"
 msgstr ""
 
@@ -86,6 +89,9 @@ msgstr "Тестування"
 
 msgid "This will not uninstall the 2.6 kernel."
 msgstr "Це не призведе до видалення ядра 2.6."
+
+msgid "VDR"
+msgstr ""
 
 msgid "Virtualbox"
 msgstr "Virtualbox"

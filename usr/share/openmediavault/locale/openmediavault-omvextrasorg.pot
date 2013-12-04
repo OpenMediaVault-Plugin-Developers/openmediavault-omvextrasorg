@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-04 08:07-0600\n"
+"POT-Creation-Date: 2013-12-04 15:48-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,6 +50,9 @@ msgstr ""
 msgid "Enable deb-multimedia repository"
 msgstr ""
 
+msgid "Enable e-tobi.net repository  (disable if using armel/armhf)"
+msgstr ""
+
 msgid "Greyhole"
 msgstr ""
 
@@ -78,6 +81,9 @@ msgid "Testing"
 msgstr ""
 
 msgid "This will not uninstall the 2.6 kernel."
+msgstr ""
+
+msgid "VDR"
 msgstr ""
 
 msgid "Virtualbox"
