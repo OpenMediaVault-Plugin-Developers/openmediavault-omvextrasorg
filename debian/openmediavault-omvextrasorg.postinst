@@ -144,6 +144,7 @@ case "$1" in
 
         if [ "$VDR" = "1" ]; then
             echo '# VDR repo' >> ${OMVEXTRASREPOFILE}
+            echo 'deb http://packages.omv-extras.org/debian/ sardaukar-vdr main' >> ${OMVEXTRASREPOFILE}
             echo 'deb http://e-tobi.net/vdr-experimental/ squeeze addons vdr-multipatch' >> ${OMVEXTRASREPOFILE}
         fi
 
