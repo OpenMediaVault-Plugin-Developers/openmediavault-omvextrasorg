@@ -23,5 +23,5 @@ Pin: release n=sardaukar-vb, origin packages.omv-extras.org
 Pin-Priority: 995
 
 Package: *
-Pin: release n=e-tobi.net
+Pin: release o=e-tobi.net
 Pin-Priority: 995

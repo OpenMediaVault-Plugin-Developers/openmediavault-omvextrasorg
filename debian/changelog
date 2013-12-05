@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (0.5.27) stable; urgency=low
+
+  * fix pin priority
+
+ -- Aaron Murray <aaron@omv-extras.org>  Thu, 05 Dec 2013 12:44:27 -0500
+
 openmediavault-omvextrasorg (0.5.26) stable; urgency=low
 
   * add omvextras vdr repository
