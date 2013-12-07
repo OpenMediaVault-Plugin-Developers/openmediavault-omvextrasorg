@@ -177,6 +177,8 @@ case "$1" in
             apt-key add /usr/share/keyrings/greyhole-debsig.asc
             apt-key add /usr/share/keyrings/e-tobi-keyring.gpg
         fi
+
+        /bin/rm -f /etc/apt/preferences.d/99omv-extras-org-*
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

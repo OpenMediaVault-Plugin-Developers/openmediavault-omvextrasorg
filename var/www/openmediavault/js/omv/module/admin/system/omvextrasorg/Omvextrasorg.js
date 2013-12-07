@@ -112,7 +112,11 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Info", {
                            "<li>" + _("Do not install the Backports Kernel if you use iSCSI!") + "</li>" +
                            "<li>" + _("This will not uninstall the 2.6 kernel.") + "</li>" +
                            "<li>" + _("If the system does not boot using the 3.2 kernel, the boot menu will still have the option to boot the 2.6 kernel.") + "</li>" +
-                           "<li>" + _("If you are currently using Virtualbox, you will need to run the following command as root:  /etc/init.d/vboxdrv setup") + "</li>" +
+                           "<li>" + _("If you are currently using Virtualbox, you will need to execute the following commands after booting the new 3.2 kernel (as root):") +
+                             "<ul>" +
+                             "<li>" + _("Install the build-essential package :  ") + "apt-get install build-essential" + "</li>" +
+                             "<li>" + _("Recompile kernel module:  ") + "/etc/init.d/vboxdrv setup" + "</li>" +
+                             "</ul>"
                          "</ul>"
             }]
         }];
