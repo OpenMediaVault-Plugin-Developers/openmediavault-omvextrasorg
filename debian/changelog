@@ -1,4 +1,4 @@
-openmediavault-omvextrasorg (0.5.27) stable; urgency=low
+openmediavault-omvextrasorg (0.5.28) stable; urgency=low
 
   * add additional instructions for backport kernel installation
   * update locales
