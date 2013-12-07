@@ -116,7 +116,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Info", {
                              "<ul>" +
                              "<li>" + _("Install the build-essential package :  ") + "apt-get install build-essential" + "</li>" +
                              "<li>" + _("Recompile kernel module:  ") + "/etc/init.d/vboxdrv setup" + "</li>" +
-                             "</ul>"
+                             "</ul>" +
                          "</ul>"
             }]
         }];
