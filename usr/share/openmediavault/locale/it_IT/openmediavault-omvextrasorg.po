@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-07 11:18-0600\n"
-"PO-Revision-Date: 2013-12-07 17:18+0000\n"
+"POT-Creation-Date: 2013-12-09 11:51-0600\n"
+"PO-Revision-Date: 2013-12-09 17:51+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -69,6 +69,9 @@ msgid ""
 "following commands after booting the new 3.2 kernel (as root):"
 msgstr ""
 
+msgid "Information"
+msgstr ""
+
 msgid "Install Backports 3.2 Kernel"
 msgstr ""
 
@@ -76,6 +79,9 @@ msgid "Install Backports 3.2 kernel ..."
 msgstr ""
 
 msgid "Install the build-essential package :  "
+msgstr ""
+
+msgid "Kernel"
 msgstr ""
 
 msgid "OMV-Extras.org"
@@ -97,6 +103,9 @@ msgid "This will not uninstall the 2.6 kernel."
 msgstr ""
 
 msgid "VDR"
+msgstr ""
+
+msgid "Version"
 msgstr ""
 
 msgid "Virtualbox"

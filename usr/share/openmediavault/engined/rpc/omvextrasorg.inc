@@ -1,6 +1,5 @@
 <?php
 /**
- * This file is part of OpenMediaVault.
  *
  * @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
  * @author    Aaron Murray <aaron@omv-extras.org>
@@ -17,7 +16,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with OpenMediaVault. If not, see <http://www.gnu.org/licenses/>.
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 require_once("openmediavault/object.inc");
 require_once("openmediavault/config.inc");
@@ -59,20 +58,31 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         // Get the configuration object.
         $xpath = "//system/omvextrasorg";
         $object = $xmlConfig->get($xpath);
-        if(is_null($object)) {
+        if(is_null($object))
             throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
-        }
 
         // Modify the result object.
-        $object['enable'] = boolval($object['enable']);
-        $object['testing'] = boolval($object['testing']);
-        $object['vbox'] = boolval($object['vbox']);
-        $object['plex'] = boolval($object['plex']);
+        $object['enable']   = boolval($object['enable']);
+        $object['testing']  = boolval($object['testing']);
+        $object['vbox']     = boolval($object['vbox']);
+        $object['plex']     = boolval($object['plex']);
         $object['greyhole'] = boolval($object['greyhole']);
-        $object['vdr'] = boolval($object['vdr']);
-        $object['dotdeb'] = boolval($object['dotdeb']);
-        $object['debmm'] = boolval($object['debmm']);
-        $object['debmmbp'] = boolval($object['debmmbp']);
+        $object['vdr']      = boolval($object['vdr']);
+        $object['dotdeb']   = boolval($object['dotdeb']);
+        $object['debmm']    = boolval($object['debmm']);
+        $object['debmmbp']  = boolval($object['debmmbp']);
+
+        $cmd = sprintf("dpkg-query -W -f='\${Version}' %s", "openmediavault-omvextrasorg");
+        OMVUtil::exec($cmd, $output, $result);
+
+        $object['version'] = $output[0];
+
+        $output = array();
+
+        $cmd = "uname -r";
+        OMVUtil::exec($cmd, $output, $result);
+
+        $object['kernel'] = $output[0];
 
         return $object;
     }
@@ -93,42 +103,42 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
 
         // Validate the parameters of the RPC service method.
         $this->validateMethodParams($params, '{
-            "type":"object",
-            "properties":{
-                "enable":{"type":"boolean"},
-                "testing":{"type":"boolean"},
-                "vbox":{"type":"boolean"},
-                "plex":{"type":"boolean"},
-                "greyhole":{"type":"boolean"},
-                "vdr":{"type":"boolean"},
-                "dotdeb":{"type":"boolean"},
-                "debmm":{"type":"boolean"},
-                "debmmbp":{"type":"boolean"}
+            "type"       : "object",
+            "properties" : {
+                "enable"   : { "type" : "boolean" },
+                "testing"  : { "type" : "boolean" },
+                "vbox"     : { "type" : "boolean" },
+                "plex"     : { "type" : "boolean" },
+                "greyhole" : { "type" : "boolean" },
+                "vdr"      : { "type" : "boolean" },
+                "dotdeb"   : { "type" : "boolean" },
+                "debmm"    : { "type" : "boolean" },
+                "debmmbp"  : { "type" : "boolean" },
+                "version"  : { "type" : "string", "optional" : true },
+                "kernel"   : { "type" : "string", "optional" : true }
             }
         }');
 
         // Get the existing configuration object.
         $xpath = "//system/omvextrasorg";
         $oldObject = $xmlConfig->get($xpath);
-        if(is_null($oldObject)) {
+        if(is_null($oldObject))
             throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
-        }
 
         // Update the configuration object.
         $object = array(
-            "enable" => array_boolval($params, 'enable'),
-            "testing" => array_boolval($params, 'testing'),
-            "vbox" => array_boolval($params, 'vbox'),
-            "plex" => array_boolval($params, 'plex'),
-            "greyhole" => array_boolval($params, 'greyhole'),
-            "vdr" => array_boolval($params, 'vdr'),
-            "dotdeb" => array_boolval($params, 'dotdeb'),
-            "debmm" => array_boolval($params, 'debmm'),
-            "debmmbp" => array_boolval($params, 'debmmbp')
+            "enable"    => array_boolval($params, 'enable'),
+            "testing"   => array_boolval($params, 'testing'),
+            "vbox"      => array_boolval($params, 'vbox'),
+            "plex"      => array_boolval($params, 'plex'),
+            "greyhole"  => array_boolval($params, 'greyhole'),
+            "vdr"       => array_boolval($params, 'vdr'),
+            "dotdeb"    => array_boolval($params, 'dotdeb'),
+            "debmm"     => array_boolval($params, 'debmm'),
+            "debmmbp"   => array_boolval($params, 'debmmbp')
         );
-        if(FALSE === $xmlConfig->replace("//system/omvextrasorg", $object)) {
+        if(FALSE === $xmlConfig->replace("//system/omvextrasorg", $object))
             throw new OMVException(OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED);
-        }
 
         // Notify configuration changes.
         $dispatcher = &OMVNotifyDispatcher::getInstance();

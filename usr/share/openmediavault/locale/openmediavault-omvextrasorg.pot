@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-07 11:18-0600\n"
+"POT-Creation-Date: 2013-12-09 11:51-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,6 +62,9 @@ msgstr ""
 msgid "If you are currently using Virtualbox, you will need to execute the following commands after booting the new 3.2 kernel (as root):"
 msgstr ""
 
+msgid "Information"
+msgstr ""
+
 msgid "Install Backports 3.2 Kernel"
 msgstr ""
 
@@ -69,6 +72,9 @@ msgid "Install Backports 3.2 kernel ..."
 msgstr ""
 
 msgid "Install the build-essential package :  "
+msgstr ""
+
+msgid "Kernel"
 msgstr ""
 
 msgid "OMV-Extras.org"
@@ -90,6 +96,9 @@ msgid "This will not uninstall the 2.6 kernel."
 msgstr ""
 
 msgid "VDR"
+msgstr ""
+
+msgid "Version"
 msgstr ""
 
 msgid "Virtualbox"

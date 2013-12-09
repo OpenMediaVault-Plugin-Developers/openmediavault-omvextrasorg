@@ -1,6 +1,5 @@
 <?php
 /**
- * This file is part of OpenMediaVault.
  *
  * @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
  * @author    Aaron Murray <aaron@omv-extras.org>
@@ -17,7 +16,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with OpenMediaVault. If not, see <http://www.gnu.org/licenses/>.
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 require_once("openmediavault/module.inc");
 require_once("openmediavault/error.inc");

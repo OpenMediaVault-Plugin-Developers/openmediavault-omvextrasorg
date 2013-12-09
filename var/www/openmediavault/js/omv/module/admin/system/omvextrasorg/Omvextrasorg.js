@@ -1,5 +1,4 @@
 /**
- * This file is part of OpenMediaVault.
  *
  * @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
  * @author    Volker Theile <volker.theile@openmediavault.org>
@@ -16,7 +15,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with OpenMediaVault. If not, see <http://www.gnu.org/licenses/>.
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 // require("js/omv/WorkspaceManager.js")
 // require("js/omv/workspace/form/Panel.js")
@@ -118,6 +117,25 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Info", {
                              "<li>" + _("Recompile kernel module:  ") + "/etc/init.d/vboxdrv setup" + "</li>" +
                              "</ul>" +
                          "</ul>"
+            }]
+        },{
+            xtype: "fieldset",
+            title: _("Information"),
+            fieldDefaults: {
+                labelSeparator: ""
+            },
+            items: [{
+                xtype      : "textfield",
+                name       : "version",
+                fieldLabel : _("Version"),
+                allowBlank : true,
+                readOnly   : true
+            },{
+                xtype      : "textfield",
+                name       : "kernel",
+                fieldLabel : _("Kernel"),
+                allowBlank : true,
+                readOnly   : true
             }]
         }];
     },
