@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-09 11:51-0600\n"
-"PO-Revision-Date: 2013-12-09 17:51+0000\n"
+"POT-Creation-Date: 2013-12-10 15:05-0600\n"
+"PO-Revision-Date: 2013-12-10 21:05+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -18,34 +18,48 @@ msgstr ""
 "Language: pl_PL\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-msgid "Developer Features (Experimental)"
-msgstr "Developer Features (Experimental)"
+msgid "Additional Repositories"
+msgstr ""
 
-msgid "Do not install the Backports Kernel if you use iSCSI!"
-msgstr "Nie instaluj kernela z Backports jeśli używasz iSCSI!"
+msgid "Backports 3.2 Kernel"
+msgstr ""
+
+msgid "Beta"
+msgstr ""
+
+msgid "Developer"
+msgstr ""
+
+msgid "Developer Repositories"
+msgstr ""
 
 msgid "Dotdeb"
 msgstr "Dotdeb"
 
+msgid "Enable Beta repository"
+msgstr ""
+
 msgid "Enable Dotdeb repository"
 msgstr "Włącz repozytoria Dotdeb"
 
-msgid "Enable Greyhole repository  (disable if using armel/armhf)"
+msgid "Enable Greyhole repository"
+msgstr ""
+
+msgid "Enable Miller repository"
 msgstr ""
 
 msgid ""
 "Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository"
-"  (disable if using armel/armhf)"
-msgstr "Włącz repozytoria Virtualbox (Wyłącz jeśli używasz armel/armhf)"
+msgstr ""
 
 msgid "Enable OMV-Extras.org repository"
 msgstr "Włącz repozytoria OMV-Extras.org"
 
-msgid "Enable OMV-Extras.org testing repository  (Use at your own risk!)"
-msgstr "Włącz testowe repozytoria OMV-Extras.org (Używasz na własne ryzyko!)"
+msgid "Enable OMV-Extras.org testing repository (release candidates)"
+msgstr ""
 
-msgid "Enable Plex Media Server repository  (disable if using armel/armhf)"
-msgstr "Włącz repozytoria Plex Media Server  (Wyłącz jeśli używasz armel/armhf)"
+msgid "Enable Plex Media Server repository"
+msgstr ""
 
 msgid "Enable deb-multimedia backports repository"
 msgstr "Włącz repozytoria deb-multimedia backports "
@@ -53,7 +67,7 @@ msgstr "Włącz repozytoria deb-multimedia backports "
 msgid "Enable deb-multimedia repository"
 msgstr "Włącz repozytoria deb-multimedia"
 
-msgid "Enable e-tobi.net repository  (disable if using armel/armhf)"
+msgid "Enable e-tobi.net repository"
 msgstr ""
 
 msgid "Greyhole"
@@ -64,24 +78,19 @@ msgid ""
 "have the option to boot the 2.6 kernel."
 msgstr "Jeśli system nie uruchami się za pomocą  jądra 3.2, z menu uruchamiania będzie jeszcze możliwość uruchomienia jądra 2.6."
 
-msgid ""
-"If you are currently using Virtualbox, you will need to execute the "
-"following commands after booting the new 3.2 kernel (as root):"
-msgstr ""
-
 msgid "Information"
 msgstr ""
 
-msgid "Install Backports 3.2 Kernel"
-msgstr "Instaluj jądro 3.2 z Backports"
+msgid "Install"
+msgstr ""
 
 msgid "Install Backports 3.2 kernel ..."
 msgstr "Instaluję jądro 3.2 z Backports ..."
 
-msgid "Install the build-essential package :  "
+msgid "Kernel"
 msgstr ""
 
-msgid "Kernel"
+msgid "Miller"
 msgstr ""
 
 msgid "OMV-Extras.org"
@@ -90,14 +99,20 @@ msgstr "OMV-Extras.org"
 msgid "Plex"
 msgstr "Plex"
 
-msgid "Recompile kernel module:  "
+msgid "Primary"
 msgstr ""
 
 msgid "Repositories"
 msgstr "Repozytoria"
 
+msgid "Secondary"
+msgstr ""
+
 msgid "Testing"
 msgstr "Testowe"
+
+msgid "These repositories may break your system.  Use caution!!"
+msgstr ""
 
 msgid "This will not uninstall the 2.6 kernel."
 msgstr "To nie usunie jądra 2.6."

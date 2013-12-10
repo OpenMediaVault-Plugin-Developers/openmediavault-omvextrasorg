@@ -69,6 +69,16 @@ if [ "$(omv_config_get "//system/omvextrasorg/vdr")" = "1" ]; then
     echo 'deb http://e-tobi.net/vdr-experimental/ squeeze addons vdr-multipatch' >> ${OMVEXTRASREPOFILE}
 fi
 
+if [ "$(omv_config_get "//system/omvextrasorg/miller")" = "1" ]; then
+    echo '# miller repo' >> ${OMVEXTRASREPOFILE}
+    echo 'deb http://88.198.26.218/debian/ sardaukar-miller main' >> ${OMVEXTRASREPOFILE}
+fi
+
+if [ "$(omv_config_get "//system/omvextrasorg/beta")" = "1" ]; then
+    echo '# Beta repo' >> ${OMVEXTRASREPOFILE}
+    echo 'deb http://packages.omv-extras.org/debian/ sardaukar-beta main' >> ${OMVEXTRASREPOFILE}
+fi
+
 if [ "$(omv_config_get "//system/omvextrasorg/dotdeb")" = "1" ]; then
     echo '# Dotdeb experimental repo' >> ${OMVEXTRASREPOFILE}
     echo 'deb http://packages.omv-extras.org/debian/ sardaukar-dotdeb main' >> ${OMVEXTRASREPOFILE}
@@ -80,11 +90,11 @@ fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/debmmbp")" = "1" ]; then
     echo '# Deb-multimedia backports repo' >> ${OMVEXTRASREPOFILE}
-    echo 'deb http://www.deb-multimedia.org squeeze main non-free' > ${OMVEXTRASREPOFILE}
+    echo 'deb http://www.deb-multimedia.org squeeze main non-free' >> ${OMVEXTRASREPOFILE}
     echo 'deb http://www.deb-multimedia.org squeeze-backports main' >> ${OMVEXTRASREPOFILE}
 else
     if [ "$(omv_config_get "//system/omvextrasorg/debmm")" = "1" ]; then
         echo '# Deb-multimedia repo' >> ${OMVEXTRASREPOFILE}
-        echo 'deb http://www.deb-multimedia.org squeeze main' > ${OMVEXTRASREPOFILE}
+        echo 'deb http://www.deb-multimedia.org squeeze main' >> ${OMVEXTRASREPOFILE}
     fi
 fi

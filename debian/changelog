@@ -1,3 +1,12 @@
+openmediavault-omvextrasorg (0.5.31) stable; urgency=low
+
+  * separate repos by tabs
+  * disable non-arm repos automatically if using arm processor
+  * automatically recompile virtualbox module when installing backports
+    kernel if virtualbox is installed.
+
+ -- Aaron Murray <aaron@omv-extras.org>  Tue, 10 Dec 2013 15:04:27 -0500
+
 openmediavault-omvextrasorg (0.5.30) stable; urgency=low
 
   * add omvextras version and kernel version to information

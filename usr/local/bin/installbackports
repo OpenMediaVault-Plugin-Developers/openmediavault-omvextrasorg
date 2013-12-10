@@ -39,3 +39,31 @@ else
     echo "..."
     echo "Please reboot to use new kernel"
 fi
+
+if ! dpkg-query -l | grep virtualbox- | grep ii; then
+    SKIP=false
+    ARCH="`/bin/uname -r`"
+
+    case "$ARCH" in
+        *2.6.32*)
+            SKIP=true
+            ;;
+        *3.2*)
+            SKIP=false
+            ;;
+        *)
+            SKIP=false
+            ;;
+    esac
+
+    if ! $SKIP; then
+        echo "Install build-essential"
+        apt-get --yes --force-yes --fix-missing install build-essential
+
+        echo "Recompile kernel module"
+        /etc/init.d/vboxdrv setup
+
+        echo "Load module"
+        modprobe vboxdrv
+    fi
+fi
