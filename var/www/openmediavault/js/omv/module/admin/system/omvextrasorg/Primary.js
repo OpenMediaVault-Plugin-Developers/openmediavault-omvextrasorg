@@ -19,6 +19,9 @@
  */
 // require("js/omv/WorkspaceManager.js")
 // require("js/omv/workspace/form/Panel.js")
+// require("js/omv/data/Store.js")
+// require("js/omv/data/Model.js")
+// require("js/omv/window/MessageBox.js")
 
 Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
     extend: "OMV.workspace.form.Panel",
@@ -149,15 +152,19 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
     },
 
     onAptCleanButton: function() {
+        var me = this;
+
+        OMV.MessageBox.wait(null, _("Cleaning Apt Files and Lists..."));
         OMV.Rpc.request({
-            scope       : this,
-            callback    : function(id, success, response) {
-                this.doReload();
-            },
+            scope       : me,
             relayErrors : false,
             rpcData     : {
                 service  : "OmvExtrasOrg",
                 method   : "doAptClean"
+            },
+            success : function(id, success, response) {
+                me.doReload();
+                OMV.MessageBox.hide();
             }
         });
     }
