@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-10 21:54-0600\n"
+"POT-Creation-Date: 2013-12-10 22:31-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,6 +30,9 @@ msgid "Beta"
 msgstr ""
 
 msgid "Can be helpful in fixing plugin problems."
+msgstr ""
+
+msgid "Cleaning Apt Files and Lists..."
 msgstr ""
 
 msgid "Cleans apt repositories and removes lists."
