@@ -74,6 +74,12 @@ if [ "$(omv_config_get "//system/omvextrasorg/miller")" = "1" ]; then
     echo 'deb http://88.198.26.218/debian/ sardaukar-miller main' >> ${OMVEXTRASREPOFILE}
 fi
 
+if [ "$(omv_config_get "//system/omvextrasorg/btsync")" = "1" ]; then
+    echo '# btsync repo' >> ${OMVEXTRASREPOFILE}
+    echo 'deb http://packages.omv-extras.org/debian/ sardaukar-btsync main' >> ${OMVEXTRASREPOFILE}
+    echo 'deb http://debian.yeasoft.net/btsync squeeze main' >> ${OMVEXTRASREPOFILE}
+fi
+
 if [ "$(omv_config_get "//system/omvextrasorg/beta")" = "1" ]; then
     echo '# Beta repo' >> ${OMVEXTRASREPOFILE}
     echo 'deb http://packages.omv-extras.org/debian/ sardaukar-beta main' >> ${OMVEXTRASREPOFILE}

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-10 15:05-0600\n"
-"PO-Revision-Date: 2013-12-10 21:05+0000\n"
+"POT-Creation-Date: 2013-12-10 21:54-0600\n"
+"PO-Revision-Date: 2013-12-11 03:55+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -20,11 +20,20 @@ msgstr ""
 msgid "Additional Repositories"
 msgstr "Additional Repositories"
 
-msgid "Backports 3.2 Kernel"
-msgstr "Backports 3.2 Kernel"
+msgid "Apt Clean"
+msgstr "Apt Clean"
+
+msgid "BTSync"
+msgstr "BTSync"
 
 msgid "Beta"
 msgstr "Beta"
+
+msgid "Can be helpful in fixing plugin problems."
+msgstr "Can be helpful in fixing plugin problems."
+
+msgid "Cleans apt repositories and removes lists."
+msgstr "Cleans apt repositories and removes lists."
 
 msgid "Developer"
 msgstr "Developer"
@@ -34,6 +43,9 @@ msgstr "Developer Repositories"
 
 msgid "Dotdeb"
 msgstr "Dotdeb"
+
+msgid "Enable BTSync repository"
+msgstr "Enable BTSync repository"
 
 msgid "Enable Beta repository"
 msgstr "Enable Beta repository"
@@ -80,8 +92,8 @@ msgstr "If the system does not boot using the 3.2 kernel, the boot menu will sti
 msgid "Information"
 msgstr "Information"
 
-msgid "Install"
-msgstr "Install"
+msgid "Install Backports 3.2 kernel"
+msgstr "Install Backports 3.2 kernel"
 
 msgid "Install Backports 3.2 kernel ..."
 msgstr "Install Backports 3.2 kernel ..."
@@ -115,6 +127,9 @@ msgstr "These repositories may break your system.  Use caution!!"
 
 msgid "This will not uninstall the 2.6 kernel."
 msgstr "This will not uninstall the 2.6 kernel."
+
+msgid "Utilities"
+msgstr "Utilities"
 
 msgid "VDR"
 msgstr "VDR"

@@ -64,6 +64,12 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Secondary", {
                 fieldLabel: _("Miller"),
                 boxLabel: _("Enable Miller repository"),
                 checked: false
+            },{
+                xtype: "checkbox",
+                name: "btsync",
+                fieldLabel: _("BTSync"),
+                boxLabel: _("Enable BTSync repository"),
+                checked: false
             }]
         }];
     }

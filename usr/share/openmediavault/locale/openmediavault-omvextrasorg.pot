@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-10 15:05-0600\n"
+"POT-Creation-Date: 2013-12-10 21:54-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,10 +20,19 @@ msgstr ""
 msgid "Additional Repositories"
 msgstr ""
 
-msgid "Backports 3.2 Kernel"
+msgid "Apt Clean"
+msgstr ""
+
+msgid "BTSync"
 msgstr ""
 
 msgid "Beta"
+msgstr ""
+
+msgid "Can be helpful in fixing plugin problems."
+msgstr ""
+
+msgid "Cleans apt repositories and removes lists."
 msgstr ""
 
 msgid "Developer"
@@ -33,6 +42,9 @@ msgid "Developer Repositories"
 msgstr ""
 
 msgid "Dotdeb"
+msgstr ""
+
+msgid "Enable BTSync repository"
 msgstr ""
 
 msgid "Enable Beta repository"
@@ -77,7 +89,7 @@ msgstr ""
 msgid "Information"
 msgstr ""
 
-msgid "Install"
+msgid "Install Backports 3.2 kernel"
 msgstr ""
 
 msgid "Install Backports 3.2 kernel ..."
@@ -111,6 +123,9 @@ msgid "These repositories may break your system.  Use caution!!"
 msgstr ""
 
 msgid "This will not uninstall the 2.6 kernel."
+msgstr ""
+
+msgid "Utilities"
 msgstr ""
 
 msgid "VDR"

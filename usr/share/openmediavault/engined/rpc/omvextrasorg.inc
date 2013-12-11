@@ -43,7 +43,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $this->registerMethod("setSecondary");
         $this->registerMethod("getDeveloper");
         $this->registerMethod("setDeveloper");
-        $this->registerMethod("installBackports");
+        $this->registerMethod("doInstallBackports");
+        $this->registerMethod("doAptClean");
     }
 
     public function getPrimary($params, $context) {
@@ -111,6 +112,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "greyhole"  => array_boolval($object, 'greyhole'),
             "vdr"       => array_boolval($object, 'vdr'),
             "miller"    => array_boolval($object, 'miller'),
+            "btsync"    => array_boolval($object, 'btsync'),
             "beta"      => array_boolval($object, 'beta'),
             "dotdeb"    => array_boolval($object, 'dotdeb'),
             "debmm"     => array_boolval($object, 'debmm'),
@@ -146,6 +148,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $object['greyhole'] = boolval($object['greyhole']);
         $object['vdr']      = boolval($object['vdr']);
         $object['miller']   = boolval($object['miller']);
+        $object['btsync']   = boolval($object['btsync']);
 
         return $object;
     }
@@ -164,7 +167,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
                 "plex"     : { "type" : "boolean" },
                 "greyhole" : { "type" : "boolean" },
                 "vdr"      : { "type" : "boolean" },
-                "miller"   : { "type" : "boolean" }
+                "miller"   : { "type" : "boolean" },
+                "btsync"   : { "type" : "boolean" }
             }
         }');
 
@@ -193,6 +197,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "greyhole"  => array_boolval($params, 'greyhole'),
             "vdr"       => array_boolval($params, 'vdr'),
             "miller"    => array_boolval($params, 'miller'),
+            "btsync"    => array_boolval($params, 'btsync'),
             "beta"      => array_boolval($object, 'beta'),
             "dotdeb"    => array_boolval($object, 'dotdeb'),
             "debmm"     => array_boolval($object, 'debmm'),
@@ -265,6 +270,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "greyhole"  => array_boolval($object, 'greyhole'),
             "vdr"       => array_boolval($object, 'vdr'),
             "miller"    => array_boolval($object, 'miller'),
+            "btsync"    => array_boolval($object, 'btsync'),
             "beta"      => array_boolval($params, 'beta'),
             "dotdeb"    => array_boolval($params, 'dotdeb'),
             "debmm"     => array_boolval($params, 'debmm'),
@@ -282,7 +288,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         return $object;
     }
 
-    function installBackports($params, $context) {
+    function doInstallBackports($params, $context) {
         // Validate the RPC caller context.
         $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
 
@@ -307,6 +313,29 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             $this->finalizeBgProcStatus($bgStatusFilename, "", $e);
             exit(1);
         }
+    }
+
+    function doAptClean($params, $context) {
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+
+        $cmd = "/usr/bin/apt-get clean";
+        if(0 !== $this->exec($cmd, $output))
+            throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
+
+        $cmd = "rm -rf /var/lib/apt/lists/*";
+        if(0 !== $this->exec($cmd, $output))
+            throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
+
+        $cmd = "rm -f /var/cache/openmediavault/archives/*";
+        if(0 !== $this->exec($cmd, $output))
+            throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
+
+        touch("/var/cache/openmediavault/archives/Packages");
+
+        $cmd = "/usr/bin/apt-get update";
+        if(0 !== $this->exec($cmd, $output))
+            throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
     }
 }
 

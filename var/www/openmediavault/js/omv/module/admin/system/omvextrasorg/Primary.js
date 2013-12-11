@@ -73,7 +73,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
             }]
         },{
             xtype: "fieldset",
-            title: _("Backports 3.2 Kernel"),
+            title: _("Utilities"),
             fieldDefaults: {
                 labelSeparator: ""
             },
@@ -82,8 +82,20 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
                 html   : "<br />"
             },{
                 xtype   : "button",
+                name    : "aptclean",
+                text    : _("Apt Clean"),
+                scope   : this,
+                handler : Ext.Function.bind(me.onAptCleanButton, me, [ me ])
+            },{
+                border : false,
+                html   : "<ul>" + 
+                           "<li>" + _("Cleans apt repositories and removes lists.") + "</li>" +
+                           "<li>" + _("Can be helpful in fixing plugin problems.") + "</li>" +
+                         "</ul>"
+            },{
+                xtype   : "button",
                 name    : "backports",
-                text    : _("Install"),
+                text    : _("Install Backports 3.2 kernel"),
                 scope   : this,
                 handler : Ext.Function.bind(me.onBackportsButton, me, [ me ])
             },{
@@ -125,7 +137,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
         Ext.create("OMV.window.Execute", {
             title: _("Install Backports 3.2 kernel ..."),
             rpcService: "OmvExtrasOrg",
-            rpcMethod: "installBackports",
+            rpcMethod: "doInstallBackports",
             hideStopButton: true,
             listeners: {
                 scope: me,
@@ -134,6 +146,20 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
                 }
             }
         }).show();
+    },
+
+    onAptCleanButton: function() {
+        OMV.Rpc.request({
+            scope       : this,
+            callback    : function(id, success, response) {
+                this.doReload();
+            },
+            relayErrors : false,
+            rpcData     : {
+                service  : "OmvExtrasOrg",
+                method   : "doAptClean"
+            }
+        });
     }
 });
 

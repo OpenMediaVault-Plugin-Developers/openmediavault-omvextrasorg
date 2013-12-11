@@ -52,6 +52,7 @@ case "$1" in
         #               <greyhole>0</greyhole>
         #               <vdr>0</vdr>
         #               <miller>0</miller>
+        #               <btsync>0</btsync>
         #               <beta>0</beta>
         #               <dotdeb>0</dotdeb>
         #               <debmm>0</debmm>
@@ -70,8 +71,9 @@ case "$1" in
             PLEX="0"
             GREYHOLE="0"
             VDR="0"
-            BETA="0"
             MILLER="0"
+            BTSYNC="0"
+            BETA="0"
             DOTDEB="0"
             DEBMM="0"
             DEBMMBP="0"
@@ -84,6 +86,7 @@ case "$1" in
             GREYHOLE="$(omv_config_get "/config/system/omvextrasorg/greyhole")"
             VDR="$(omv_config_get "/config/system/omvextrasorg/vdr")"
             MILLER="$(omv_config_get "/config/system/omvextrasorg/miller")"
+            BTSYNC="$(omv_config_get "/config/system/omvextrasorg/btsync")"
             BETA="$(omv_config_get "/config/system/omvextrasorg/beta")"
             DOTDEB="$(omv_config_get "/config/system/omvextrasorg/dotdeb")"
             DEBMM="$(omv_config_get "/config/system/omvextrasorg/debmm")"
@@ -107,6 +110,7 @@ case "$1" in
         object="${object}<greyhole>${GREYHOLE}</greyhole>"
         object="${object}<vdr>${VDR}</vdr>"
         object="${object}<miller>${MILLER}</miller>"
+        object="${object}<btsync>${BTSYNC}</btsync>"
         object="${object}<beta>${BETA}</beta>"
         object="${object}<dotdeb>${DOTDEB}</dotdeb>"
         object="${object}<debmm>${DEBMM}</debmm>"
@@ -124,6 +128,9 @@ case "$1" in
             apt-key add /usr/share/keyrings/deb-multimedia-keyring.gpg
             apt-key add /usr/share/keyrings/greyhole-debsig.asc
             apt-key add /usr/share/keyrings/e-tobi-keyring.gpg
+
+            #btsync key
+            apt-key adv --keyserver keys.gnupg.net --recv-keys 6BF18B15
         fi
 
         /bin/rm -f /etc/apt/preferences.d/99omv-extras-org-*
