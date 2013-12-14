@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (0.5.33) stable; urgency=low
+
+  * add repos to apt preferences
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 13 Dec 2013 18:05:27 -0500
+
 openmediavault-omvextrasorg (0.5.32) stable; urgency=low
 
   * add btsync repo

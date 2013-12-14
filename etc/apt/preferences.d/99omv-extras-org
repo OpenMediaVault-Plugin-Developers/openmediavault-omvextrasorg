@@ -23,5 +23,25 @@ Pin: release n=sardaukar-vb, origin packages.omv-extras.org
 Pin-Priority: 995
 
 Package: *
+Pin: release n=sardaukar-miller, origin 88.198.26.218
+Pin-Priority: 995
+
+Package: *
+Pin: release n=sardaukar-beta, origin packages.omv-extras.org
+Pin-Priority: 995
+
+Package: *
+Pin: release n=sardaukar-btsync, origin packages.omv-extras.org
+Pin-Priority: 995
+
+Package: *
+Pin: release n=sardaukar-vdr, origin packages.omv-extras.org
+Pin-Priority: 995
+
+Package: *
+Pin: release n=squeeze, origin debian.yeasoft.net
+Pin-Priority: 995
+
+Package: *
 Pin: release o=e-tobi.net
 Pin-Priority: 995
