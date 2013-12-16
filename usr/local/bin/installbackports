@@ -31,6 +31,7 @@ if $SKIP; then
     echo "Unsupported kernel and/or processor"
 else
     echo "Install backports 3.2 kernel and headers"
+    apt-get --yes --force-yes --fix-missing install linux-base initramfs-utils
     if $AMD64; then
         apt-get -t squeeze-backports --yes --force-yes --fix-missing install linux-image-3.2.0-0.bpo.4-amd64 linux-headers-3.2.0-0.bpo.4-all firmware-linux firmware-linux-free
     else

@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (0.5.34) stable; urgency=low
+
+  * add backports kernel installation
+  * update locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 15 Dec 2013 18:46:27 -0500
+
 openmediavault-omvextrasorg (0.5.33) stable; urgency=low
 
   * add repos to apt preferences
