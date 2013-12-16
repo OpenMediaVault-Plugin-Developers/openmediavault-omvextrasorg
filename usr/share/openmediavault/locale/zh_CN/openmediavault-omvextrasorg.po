@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# dezi121 <by@songming.me>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: openmediavault-omvextras.org\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-10 22:31-0600\n"
+"PO-Revision-Date: 2013-12-14 06:40+0000\n"
+"Last-Translator: dezi121 <by@songming.me>\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Additional Repositories"
+msgstr "额外源"
+
+msgid "Apt Clean"
+msgstr "清除APT缓存"
+
+msgid "BTSync"
+msgstr "BTSync"
+
+msgid "Beta"
+msgstr "Beta"
+
+msgid "Can be helpful in fixing plugin problems."
+msgstr "尝试修复插件更新安装问题"
+
+msgid "Cleaning Apt Files and Lists..."
+msgstr "清除Apt文件及列表"
+
+msgid "Cleans apt repositories and removes lists."
+msgstr "清除apt源并移除源列表。"
+
+msgid "Developer"
+msgstr "开发者"
+
+msgid "Developer Repositories"
+msgstr "开发者源"
+
+msgid "Dotdeb"
+msgstr ""
+
+msgid "Enable BTSync repository"
+msgstr "启用BTSync源"
+
+msgid "Enable Beta repository"
+msgstr "开启Beta源"
+
+msgid "Enable Dotdeb repository"
+msgstr ""
+
+msgid "Enable Greyhole repository"
+msgstr "开启 Greyhole源"
+
+msgid "Enable Miller repository"
+msgstr "开启Miller源"
+
+msgid ""
+"Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository"
+msgstr "开启Virtualbox的OMV-Extras.org源和Sun's源"
+
+msgid "Enable OMV-Extras.org repository"
+msgstr "启用OMV-Extras.org插件源"
+
+msgid "Enable OMV-Extras.org testing repository (release candidates)"
+msgstr "开启OMV-Extras.org测试源(候选发布版)"
+
+msgid "Enable Plex Media Server repository"
+msgstr "开启 Plex多媒体服务源"
+
+msgid "Enable deb-multimedia backports repository"
+msgstr ""
+
+msgid "Enable deb-multimedia repository"
+msgstr ""
+
+msgid "Enable e-tobi.net repository"
+msgstr "开启e-tobi.net源"
+
+msgid "Greyhole"
+msgstr "Greyhole"
+
+msgid ""
+"If the system does not boot using the 3.2 kernel, the boot menu will still "
+"have the option to boot the 2.6 kernel."
+msgstr "如果3.2内核不能启动系统，可以在启动菜单选择2.6的内核启动。"
+
+msgid "Information"
+msgstr "信息"
+
+msgid "Install Backports 3.2 kernel"
+msgstr "安装Backports 3.2内核"
+
+msgid "Install Backports 3.2 kernel ..."
+msgstr "安装Backports 3.2内核..."
+
+msgid "Kernel"
+msgstr "内核"
+
+msgid "Miller"
+msgstr "Miller"
+
+msgid "OMV-Extras.org"
+msgstr "OMV-Extras.org"
+
+msgid "Plex"
+msgstr "Plex"
+
+msgid "Primary"
+msgstr "主要选项"
+
+msgid "Repositories"
+msgstr "源"
+
+msgid "Secondary"
+msgstr "附加选项"
+
+msgid "Testing"
+msgstr "测试版"
+
+msgid "These repositories may break your system.  Use caution!!"
+msgstr "注意，这些源可能会使系统崩溃！"
+
+msgid "This will not uninstall the 2.6 kernel."
+msgstr "会保留2.6内核。"
+
+msgid "Utilities"
+msgstr ""
+
+msgid "VDR"
+msgstr "VDR"
+
+msgid "Version"
+msgstr "版本"
+
+msgid "Virtualbox"
+msgstr "Virtualbox"
+
+msgid "deb-multimedia"
+msgstr ""
+
+msgid "deb-multimedia backports"
+msgstr ""

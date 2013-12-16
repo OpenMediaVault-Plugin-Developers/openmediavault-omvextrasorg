@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: openmediavault-omvextras.org\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-10 22:31-0600\n"
+"PO-Revision-Date: 2013-12-14 04:24+0000\n"
+"Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
+"Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/cs_CZ/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: cs_CZ\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+msgid "Additional Repositories"
+msgstr ""
+
+msgid "Apt Clean"
+msgstr ""
+
+msgid "BTSync"
+msgstr ""
+
+msgid "Beta"
+msgstr ""
+
+msgid "Can be helpful in fixing plugin problems."
+msgstr ""
+
+msgid "Cleaning Apt Files and Lists..."
+msgstr ""
+
+msgid "Cleans apt repositories and removes lists."
+msgstr ""
+
+msgid "Developer"
+msgstr ""
+
+msgid "Developer Repositories"
+msgstr ""
+
+msgid "Dotdeb"
+msgstr ""
+
+msgid "Enable BTSync repository"
+msgstr ""
+
+msgid "Enable Beta repository"
+msgstr ""
+
+msgid "Enable Dotdeb repository"
+msgstr ""
+
+msgid "Enable Greyhole repository"
+msgstr ""
+
+msgid "Enable Miller repository"
+msgstr ""
+
+msgid ""
+"Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository"
+msgstr ""
+
+msgid "Enable OMV-Extras.org repository"
+msgstr ""
+
+msgid "Enable OMV-Extras.org testing repository (release candidates)"
+msgstr ""
+
+msgid "Enable Plex Media Server repository"
+msgstr ""
+
+msgid "Enable deb-multimedia backports repository"
+msgstr ""
+
+msgid "Enable deb-multimedia repository"
+msgstr ""
+
+msgid "Enable e-tobi.net repository"
+msgstr ""
+
+msgid "Greyhole"
+msgstr ""
+
+msgid ""
+"If the system does not boot using the 3.2 kernel, the boot menu will still "
+"have the option to boot the 2.6 kernel."
+msgstr ""
+
+msgid "Information"
+msgstr ""
+
+msgid "Install Backports 3.2 kernel"
+msgstr ""
+
+msgid "Install Backports 3.2 kernel ..."
+msgstr ""
+
+msgid "Kernel"
+msgstr ""
+
+msgid "Miller"
+msgstr ""
+
+msgid "OMV-Extras.org"
+msgstr ""
+
+msgid "Plex"
+msgstr ""
+
+msgid "Primary"
+msgstr ""
+
+msgid "Repositories"
+msgstr ""
+
+msgid "Secondary"
+msgstr ""
+
+msgid "Testing"
+msgstr ""
+
+msgid "These repositories may break your system.  Use caution!!"
+msgstr ""
+
+msgid "This will not uninstall the 2.6 kernel."
+msgstr ""
+
+msgid "Utilities"
+msgstr ""
+
+msgid "VDR"
+msgstr ""
+
+msgid "Version"
+msgstr ""
+
+msgid "Virtualbox"
+msgstr ""
+
+msgid "deb-multimedia"
+msgstr ""
+
+msgid "deb-multimedia backports"
+msgstr ""
