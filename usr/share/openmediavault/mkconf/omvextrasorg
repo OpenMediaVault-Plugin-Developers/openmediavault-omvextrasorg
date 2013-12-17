@@ -71,7 +71,7 @@ fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/miller")" = "1" ]; then
     echo '# miller repo' >> ${OMVEXTRASREPOFILE}
-    echo 'deb http://88.198.26.218/debian/ sardaukar-miller main' >> ${OMVEXTRASREPOFILE}
+    echo 'deb http://dh2k.omv-extras.org/debian/ sardaukar-miller main' >> ${OMVEXTRASREPOFILE}
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/btsync")" = "1" ]; then

@@ -27,7 +27,7 @@ Pin: release n=sardaukar-vb, origin packages.omv-extras.org
 Pin-Priority: 995
 
 Package: *
-Pin: release n=sardaukar-miller, origin 88.198.26.218
+Pin: release n=sardaukar-miller, origin dh2k.omv-extras.org
 Pin-Priority: 995
 
 Package: *
