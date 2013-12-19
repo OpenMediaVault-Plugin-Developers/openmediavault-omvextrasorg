@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-10 22:31-0600\n"
-"PO-Revision-Date: 2013-12-14 04:24+0000\n"
+"POT-Creation-Date: 2013-12-19 07:00-0600\n"
+"PO-Revision-Date: 2013-12-19 13:00+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -38,6 +38,12 @@ msgstr ""
 msgid "Cleans apt repositories and removes lists."
 msgstr ""
 
+msgid "Close"
+msgstr ""
+
+msgid "Confirmation"
+msgstr ""
+
 msgid "Developer"
 msgstr ""
 
@@ -45,6 +51,9 @@ msgid "Developer Repositories"
 msgstr ""
 
 msgid "Dotdeb"
+msgstr ""
+
+msgid "Downloading package information"
 msgstr ""
 
 msgid "Enable BTSync repository"
@@ -116,6 +125,9 @@ msgstr ""
 msgid "Primary"
 msgstr ""
 
+msgid "Reload"
+msgstr ""
+
 msgid "Repositories"
 msgstr ""
 
@@ -123,6 +135,16 @@ msgid "Secondary"
 msgstr ""
 
 msgid "Testing"
+msgstr ""
+
+msgid ""
+"The information about available software is out-of-date. You need to reload "
+"the information about available software."
+msgstr ""
+
+msgid ""
+"The repository will be checked for new, removed or upgraded software "
+"packages."
 msgstr ""
 
 msgid "These repositories may break your system.  Use caution!!"

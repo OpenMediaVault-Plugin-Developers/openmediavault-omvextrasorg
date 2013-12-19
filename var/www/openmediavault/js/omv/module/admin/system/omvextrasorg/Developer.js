@@ -21,55 +21,85 @@
 // require("js/omv/workspace/form/Panel.js")
 
 Ext.define("OMV.module.admin.system.omvextrasorg.Developer", {
-    extend: "OMV.workspace.form.Panel",
+    extend : "OMV.workspace.form.Panel",
 
-    rpcService: "OmvExtrasOrg",
-    rpcGetMethod: "getDeveloper",
-    rpcSetMethod: "setDeveloper",
+    rpcService   : "OmvExtrasOrg",
+    rpcGetMethod : "getDeveloper",
+    rpcSetMethod : "setDeveloper",
 
-    getFormItems: function() {
+    initComponent : function() {
+        var me = this;
+        me.callParent(arguments);
+        me.on("submit", function() {
+            OMV.MessageBox.show({
+                title      : _("Confirmation"),
+                msg        : _("The information about available software is out-of-date. You need to reload the information about available software."),
+                buttons    : Ext.MessageBox.OKCANCEL,
+                buttonText : {
+                    ok      : _("Reload"),
+                    cancel  : _("Close")
+                },
+                fn         : function(answer) {
+                    if("cancel" === answer)
+                        return;
+                    OMV.RpcObserver.request({
+                        title   : _("Downloading package information"),
+                        msg     : _("The repository will be checked for new, removed or upgraded software packages."),
+                        rpcData : {
+                            service : "Apt",
+                            method  : "update"
+                        }
+                    });
+                },
+                scope : me,
+                icon  : Ext.Msg.QUESTION
+            });
+        }, me);
+    },
+
+    getFormItems : function() {
         return [{
-            xtype: "fieldset",
-            title: _("Developer Repositories"),
-            fieldDefaults: {
-                labelSeparator: ""
+            xtype         : "fieldset",
+            title         : _("Developer Repositories"),
+            fieldDefaults : {
+                labelSeparator : ""
             },
             items: [{
                 border : false,
                 html   : "<br />" + _("These repositories may break your system.  Use caution!!") + "<br /><br />"
             },{
-                xtype: "checkbox",
-                name: "beta",
-                fieldLabel: _("Beta"),
-                boxLabel: _("Enable Beta repository"),
-                checked: false
+                xtype      : "checkbox",
+                name       : "beta",
+                fieldLabel : _("Beta"),
+                boxLabel   : _("Enable Beta repository"),
+                checked    : false
             },{
-                xtype: "checkbox",
-                name: "dotdeb",
-                fieldLabel: _("Dotdeb"),
-                boxLabel: _("Enable Dotdeb repository"),
-                checked: false
+                xtype      : "checkbox",
+                name       : "dotdeb",
+                fieldLabel : _("Dotdeb"),
+                boxLabel   : _("Enable Dotdeb repository"),
+                checked    : false
             },{
-                xtype: "checkbox",
-                name: "debmm",
-                fieldLabel: _("deb-multimedia"),
-                boxLabel: _("Enable deb-multimedia repository"),
-                checked: false
+                xtype      : "checkbox",
+                name       : "debmm",
+                fieldLabel : _("deb-multimedia"),
+                boxLabel   : _("Enable deb-multimedia repository"),
+                checked    : false
             },{
-                xtype: "checkbox",
-                name: "debmmbp",
-                fieldLabel: _("deb-multimedia backports"),
-                boxLabel: _("Enable deb-multimedia backports repository"),
-                checked: false
+                xtype      : "checkbox",
+                name       : "debmmbp",
+                fieldLabel : _("deb-multimedia backports"),
+                boxLabel   : _("Enable deb-multimedia backports repository"),
+                checked    : false
             }]
         }];
     }
 });
 
 OMV.WorkspaceManager.registerPanel({
-    id: "developer",
-    path: "/system/omvextrasorg",
-    text: _("Developer"),
-    position: 30,
-    className: "OMV.module.admin.system.omvextrasorg.Developer"
+    id        : "developer",
+    path      : "/system/omvextrasorg",
+    text      : _("Developer"),
+    position  : 30,
+    className : "OMV.module.admin.system.omvextrasorg.Developer"
 });

@@ -126,6 +126,12 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $dispatcher->notify(OMV_NOTIFY_MODIFY,
             "org.openmediavault.system.omvextrasorg", $object);
 
+        // Apply the changes immediately (no user interaction is wanted).
+        OMVRpc::exec("Config", "applyChanges", array(
+            "modules" => array("omvextrasorg"),
+            "force" => TRUE
+        ), $context);
+
         // Return the configuration object.
         return $object;
     }
@@ -212,6 +218,12 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $dispatcher->notify(OMV_NOTIFY_MODIFY,
             "org.openmediavault.system.omvextrasorg", $object);
 
+        // Apply the changes immediately (no user interaction is wanted).
+        OMVRpc::exec("Config", "applyChanges", array(
+            "modules" => array("omvextrasorg"),
+            "force" => TRUE
+        ), $context);
+
         // Return the configuration object.
         return $object;
     }
@@ -283,6 +295,12 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $dispatcher = &OMVNotifyDispatcher::getInstance();
         $dispatcher->notify(OMV_NOTIFY_MODIFY,
             "org.openmediavault.system.omvextrasorg", $object);
+
+        // Apply the changes immediately (no user interaction is wanted).
+        OMVRpc::exec("Config", "applyChanges", array(
+            "modules" => array("omvextrasorg"),
+            "force" => TRUE
+        ), $context);
 
         // Return the configuration object.
         return $object;

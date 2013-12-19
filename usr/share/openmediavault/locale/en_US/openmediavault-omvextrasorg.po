@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-10 22:31-0600\n"
-"PO-Revision-Date: 2013-12-11 04:31+0000\n"
+"POT-Creation-Date: 2013-12-19 07:00-0600\n"
+"PO-Revision-Date: 2013-12-19 13:00+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -38,6 +38,12 @@ msgstr "Cleaning Apt Files and Lists..."
 msgid "Cleans apt repositories and removes lists."
 msgstr "Cleans apt repositories and removes lists."
 
+msgid "Close"
+msgstr "Close"
+
+msgid "Confirmation"
+msgstr "Confirmation"
+
 msgid "Developer"
 msgstr "Developer"
 
@@ -46,6 +52,9 @@ msgstr "Developer Repositories"
 
 msgid "Dotdeb"
 msgstr "Dotdeb"
+
+msgid "Downloading package information"
+msgstr "Downloading package information"
 
 msgid "Enable BTSync repository"
 msgstr "Enable BTSync repository"
@@ -116,6 +125,9 @@ msgstr "Plex"
 msgid "Primary"
 msgstr "Primary"
 
+msgid "Reload"
+msgstr "Reload"
+
 msgid "Repositories"
 msgstr "Repositories"
 
@@ -124,6 +136,16 @@ msgstr "Secondary"
 
 msgid "Testing"
 msgstr "Testing"
+
+msgid ""
+"The information about available software is out-of-date. You need to reload "
+"the information about available software."
+msgstr "The information about available software is out-of-date. You need to reload the information about available software."
+
+msgid ""
+"The repository will be checked for new, removed or upgraded software "
+"packages."
+msgstr "The repository will be checked for new, removed or upgraded software packages."
 
 msgid "These repositories may break your system.  Use caution!!"
 msgstr "These repositories may break your system.  Use caution!!"
