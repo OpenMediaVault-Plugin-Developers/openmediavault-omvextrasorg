@@ -110,8 +110,8 @@ case "$1" in
         object="${object}<plex>${PLEX}</plex>"
         object="${object}<greyhole>${GREYHOLE}</greyhole>"
         object="${object}<vdr>${VDR}</vdr>"
-        object="${object}<miller>${MILLER}</miller>
-        object="${object}<millertesting>${MILLER}</millertesting>
+        object="${object}<miller>${MILLER}</miller>"
+        object="${object}<millertesting>${MILLER}</millertesting>"
         object="${object}<btsync>${BTSYNC}</btsync>"
         object="${object}<beta>${BETA}</beta>"
         object="${object}<dotdeb>${DOTDEB}</dotdeb>"
