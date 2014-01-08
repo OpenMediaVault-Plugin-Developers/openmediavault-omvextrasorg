@@ -1,8 +1,10 @@
 #!/bin/sh
 #
-# @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
-# @author    Aaron Murray <aaron@omv-extras.org>
+# @license  http://www.gnu.org/licenses/gpl.html GPL Version 3
+# @author   Aaron Murray <aaron@omv-extras.org>
+# @author   Volker Theile <volker.theile@openmediavault.org>
 # @copyright Copyright (c) 2013-2014 Aaron Murray
+# @copyright Copyright (c) 2009-2013 Volker Theile
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -19,9 +21,10 @@
 
 set -e
 
-. /etc/default/openmediavault
-. /usr/share/openmediavault/scripts/helper-functions
-
-omv-mkconf omvextrasorg
+if [ "$1" = "purge" ]; then
+    if [ -x /usr/bin/apt-key ]; then
+        apt-key del 30B2308A
+    fi
+fi
 
 exit 0

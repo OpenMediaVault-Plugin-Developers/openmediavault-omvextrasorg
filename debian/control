@@ -10,3 +10,8 @@ Package: openmediavault-omvextrasorg
 Architecture: all
 Depends: ${misc:Depends}, openmediavault (>= 0.5)
 Description: OMV-Extras.org Package Repositories for OpenMediaVault
+ Plugin the allows enabling of multiple repositories hosted by
+ omv-extras.org. The plugin allows installation of the backports
+ 3.2 kernel for increased compatibility with newer hardware. An
+ apt cleaning function is also available for fixing repository
+ cache problems and saving hard drive space in some instances.

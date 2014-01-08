@@ -1,15 +1,16 @@
 /**
- *
  * @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
  * @author    Volker Theile <volker.theile@openmediavault.org>
+ * @author    Aaron Murray <aaron@omv-extras.org>
  * @copyright Copyright (c) 2009-2013 Volker Theile
+ * @copyright Copyright (c) 2013-2014 Aaron Murray 
  *
- * OpenMediaVault is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * any later version.
  *
- * OpenMediaVault is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -24,11 +25,11 @@
 // require("js/omv/window/MessageBox.js")
 
 Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
-    extend: "OMV.workspace.form.Panel",
+    extend : "OMV.workspace.form.Panel",
 
-    rpcService: "OmvExtrasOrg",
-    rpcGetMethod: "getPrimary",
-    rpcSetMethod: "setPrimary",
+    rpcService   : "OmvExtrasOrg",
+    rpcGetMethod : "getPrimary",
+    rpcSetMethod : "setPrimary",
 
     initComponent : function () {
         var me = this;
@@ -79,34 +80,34 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
         }, me);
     },
 
-    getFormItems: function() {
+    getFormItems : function() {
         var me = this;
         return [{
-            xtype: "fieldset",
-            title: _("Repositories"),
-            fieldDefaults: {
-                labelSeparator: ""
+            xtype         : "fieldset",
+            title         : _("Repositories"),
+            fieldDefaults : {
+                labelSeparator : ""
             },
-            items: [{
-                xtype: "checkbox",
-                name: "enable",
-                fieldLabel: _("OMV-Extras.org"),
-                boxLabel: _("Enable OMV-Extras.org repository"),
-                checked: true
+            items         : [{
+                xtype      : "checkbox",
+                name       : "enable",
+                fieldLabel : _("OMV-Extras.org"),
+                boxLabel   : _("Enable OMV-Extras.org repository"),
+                checked    : true
             },{
-                xtype: "checkbox",
-                name: "testing",
-                fieldLabel: _("Testing"),
-                boxLabel: _("Enable OMV-Extras.org testing repository (release candidates)"),
-                checked: false
+                xtype      : "checkbox",
+                name       : "testing",
+                fieldLabel : _("Testing"),
+                boxLabel   : _("Enable OMV-Extras.org testing repository (release candidates)"),
+                checked    : false
             }]
         },{
-            xtype: "fieldset",
-            title: _("Utilities"),
-            fieldDefaults: {
-                labelSeparator: ""
+            xtype         : "fieldset",
+            title         : _("Utilities"),
+            fieldDefaults : {
+                labelSeparator : ""
             },
-            items: [{
+            items         : [{
                 border : false,
                 html   : "<br />"
             },{
@@ -135,12 +136,12 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
                          "</ul>"
             }]
         },{
-            xtype: "fieldset",
-            title: _("Information"),
-            fieldDefaults: {
-                labelSeparator: ""
+            xtype         : "fieldset",
+            title         : _("Information"),
+            fieldDefaults : {
+                labelSeparator : ""
             },
-            items: [{
+            items         : [{
                 xtype      : "textfield",
                 name       : "version",
                 fieldLabel : _("Version"),
@@ -161,23 +162,23 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
         }];
     },
 
-    onBackportsButton: function() {
+    onBackportsButton : function() {
         var me = this;
         Ext.create("OMV.window.Execute", {
-            title: _("Install Backports 3.2 kernel ..."),
-            rpcService: "OmvExtrasOrg",
-            rpcMethod: "doInstallBackports",
-            hideStopButton: true,
-            listeners: {
-                scope: me,
-                exception: function(wnd, error) {
+            title          : _("Install Backports 3.2 kernel ..."),
+            rpcService     : "OmvExtrasOrg",
+            rpcMethod      : "doInstallBackports",
+            hideStopButton : true,
+            listeners      : {
+                scope     : me,
+                exception : function(wnd, error) {
                     OMV.MessageBox.error(null, error);
                 }
             }
         }).show();
     },
 
-    onAptCleanButton: function() {
+    onAptCleanButton : function() {
         var me = this;
 
         OMV.MessageBox.wait(null, _("Cleaning Apt Files and Lists..."));
@@ -197,9 +198,9 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
 });
 
 OMV.WorkspaceManager.registerPanel({
-    id: "primary",
-    path: "/system/omvextrasorg",
-    text: _("Primary"),
-    position: 10,
-    className: "OMV.module.admin.system.omvextrasorg.Primary"
+    id        : "primary",
+    path      : "/system/omvextrasorg",
+    text      : _("Primary"),
+    position  : 10,
+    className : "OMV.module.admin.system.omvextrasorg.Primary"
 });

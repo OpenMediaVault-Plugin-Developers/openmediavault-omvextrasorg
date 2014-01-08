@@ -1,16 +1,15 @@
 <?php
 /**
- *
  * @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
  * @author    Aaron Murray <aaron@omv-extras.org>
- * @copyright Copyright (c) 2013 Aaron Murray
+ * @copyright Copyright (c) 2013-2014 Aaron Murray
  *
- * OpenMediaVault is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * any later version.
  *
- * OpenMediaVault is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -104,19 +103,20 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
 
         // Update the configuration object.
         $object = array(
-            "enable"    => array_boolval($params, 'enable'),
-            "testing"   => array_boolval($params, 'testing'),
-            "developer" => $params['developer'],
-            "vbox"      => array_boolval($object, 'vbox'),
-            "plex"      => array_boolval($object, 'plex'),
-            "greyhole"  => array_boolval($object, 'greyhole'),
-            "vdr"       => array_boolval($object, 'vdr'),
-            "miller"    => array_boolval($object, 'miller'),
-            "btsync"    => array_boolval($object, 'btsync'),
-            "beta"      => array_boolval($object, 'beta'),
-            "dotdeb"    => array_boolval($object, 'dotdeb'),
-            "debmm"     => array_boolval($object, 'debmm'),
-            "debmmbp"   => array_boolval($object, 'debmmbp')
+            "enable"        => array_boolval($params, 'enable'),
+            "testing"       => array_boolval($params, 'testing'),
+            "developer"     => $params['developer'],
+            "vbox"          => array_boolval($object, 'vbox'),
+            "plex"          => array_boolval($object, 'plex'),
+            "greyhole"      => array_boolval($object, 'greyhole'),
+            "vdr"           => array_boolval($object, 'vdr'),
+            "miller"        => array_boolval($object, 'miller'),
+            "millertesting" => array_boolval($object, 'millertesting'),
+            "btsync"        => array_boolval($object, 'btsync'),
+            "beta"          => array_boolval($object, 'beta'),
+            "dotdeb"        => array_boolval($object, 'dotdeb'),
+            "debmm"         => array_boolval($object, 'debmm'),
+            "debmmbp"       => array_boolval($object, 'debmmbp')
         );
         if(FALSE === $xmlConfig->replace("//system/omvextrasorg", $object))
             throw new OMVException(OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED);
@@ -129,7 +129,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         // Apply the changes immediately (no user interaction is wanted).
         OMVRpc::exec("Config", "applyChanges", array(
             "modules" => array("omvextrasorg"),
-            "force" => TRUE
+            "force"   => TRUE
         ), $context);
 
         // Return the configuration object.
@@ -149,12 +149,13 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
 
         // Modify the result object.
-        $object['vbox']     = boolval($object['vbox']);
-        $object['plex']     = boolval($object['plex']);
-        $object['greyhole'] = boolval($object['greyhole']);
-        $object['vdr']      = boolval($object['vdr']);
-        $object['miller']   = boolval($object['miller']);
-        $object['btsync']   = boolval($object['btsync']);
+        $object['vbox']          = boolval($object['vbox']);
+        $object['plex']          = boolval($object['plex']);
+        $object['greyhole']      = boolval($object['greyhole']);
+        $object['vdr']           = boolval($object['vdr']);
+        $object['miller']        = boolval($object['miller']);
+        $object['millertesting'] = boolval($object['millertesting']);
+        $object['btsync']        = boolval($object['btsync']);
 
         return $object;
     }
@@ -169,12 +170,13 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $this->validateMethodParams($params, '{
             "type"       : "object",
             "properties" : {
-                "vbox"     : { "type" : "boolean" },
-                "plex"     : { "type" : "boolean" },
-                "greyhole" : { "type" : "boolean" },
-                "vdr"      : { "type" : "boolean" },
-                "miller"   : { "type" : "boolean" },
-                "btsync"   : { "type" : "boolean" }
+                "vbox"          : { "type" : "boolean" },
+                "plex"          : { "type" : "boolean" },
+                "greyhole"      : { "type" : "boolean" },
+                "vdr"           : { "type" : "boolean" },
+                "miller"        : { "type" : "boolean" },
+                "millertesting" : { "type" : "boolean" },
+                "btsync"        : { "type" : "boolean" }
             }
         }');
 
@@ -195,19 +197,20 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
 
         // Update the configuration object.
         $object = array(
-            "enable"    => array_boolval($object, 'enable'),
-            "testing"   => array_boolval($object, 'testing'),
-            "developer" => $object['developer'],
-            "vbox"      => array_boolval($params, 'vbox'),
-            "plex"      => array_boolval($params, 'plex'),
-            "greyhole"  => array_boolval($params, 'greyhole'),
-            "vdr"       => array_boolval($params, 'vdr'),
-            "miller"    => array_boolval($params, 'miller'),
-            "btsync"    => array_boolval($params, 'btsync'),
-            "beta"      => array_boolval($object, 'beta'),
-            "dotdeb"    => array_boolval($object, 'dotdeb'),
-            "debmm"     => array_boolval($object, 'debmm'),
-            "debmmbp"   => array_boolval($object, 'debmmbp')
+            "enable"        => array_boolval($object, 'enable'),
+            "testing"       => array_boolval($object, 'testing'),
+            "developer"     => $object['developer'],
+            "vbox"          => array_boolval($params, 'vbox'),
+            "plex"          => array_boolval($params, 'plex'),
+            "greyhole"      => array_boolval($params, 'greyhole'),
+            "vdr"           => array_boolval($params, 'vdr'),
+            "miller"        => array_boolval($params, 'miller'),
+            "millertesting" => array_boolval($params, 'millertesting'),
+            "btsync"        => array_boolval($params, 'btsync'),
+            "beta"          => array_boolval($object, 'beta'),
+            "dotdeb"        => array_boolval($object, 'dotdeb'),
+            "debmm"         => array_boolval($object, 'debmm'),
+            "debmmbp"       => array_boolval($object, 'debmmbp')
         );
 
         if(FALSE === $xmlConfig->replace("//system/omvextrasorg", $object))
@@ -221,7 +224,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         // Apply the changes immediately (no user interaction is wanted).
         OMVRpc::exec("Config", "applyChanges", array(
             "modules" => array("omvextrasorg"),
-            "force" => TRUE
+            "force"   => TRUE
         ), $context);
 
         // Return the configuration object.
@@ -241,10 +244,10 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
 
         // Modify the result object.
-        $object['beta']     = boolval($object['beta']);
-        $object['dotdeb']   = boolval($object['dotdeb']);
-        $object['debmm']    = boolval($object['debmm']);
-        $object['debmmbp']  = boolval($object['debmmbp']);
+        $object['beta']    = boolval($object['beta']);
+        $object['dotdeb']  = boolval($object['dotdeb']);
+        $object['debmm']   = boolval($object['debmm']);
+        $object['debmmbp'] = boolval($object['debmmbp']);
 
         return $object;
     }
@@ -259,10 +262,10 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $this->validateMethodParams($params, '{
             "type"       : "object",
             "properties" : {
-                "beta"     : { "type" : "boolean" },
-                "dotdeb"   : { "type" : "boolean" },
-                "debmm"    : { "type" : "boolean" },
-                "debmmbp"  : { "type" : "boolean" }
+                "beta"    : { "type" : "boolean" },
+                "dotdeb"  : { "type" : "boolean" },
+                "debmm"   : { "type" : "boolean" },
+                "debmmbp" : { "type" : "boolean" }
             }
         }');
 
@@ -274,19 +277,20 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
 
         // Update the configuration object.
         $object = array(
-            "enable"    => array_boolval($object, 'enable'),
-            "testing"   => array_boolval($object, 'testing'),
-            "developer" => $object['developer'],
-            "vbox"      => array_boolval($object, 'vbox'),
-            "plex"      => array_boolval($object, 'plex'),
-            "greyhole"  => array_boolval($object, 'greyhole'),
-            "vdr"       => array_boolval($object, 'vdr'),
-            "miller"    => array_boolval($object, 'miller'),
-            "btsync"    => array_boolval($object, 'btsync'),
-            "beta"      => array_boolval($params, 'beta'),
-            "dotdeb"    => array_boolval($params, 'dotdeb'),
-            "debmm"     => array_boolval($params, 'debmm'),
-            "debmmbp"   => array_boolval($params, 'debmmbp')
+            "enable"        => array_boolval($object, 'enable'),
+            "testing"       => array_boolval($object, 'testing'),
+            "developer"     => $object['developer'],
+            "vbox"          => array_boolval($object, 'vbox'),
+            "plex"          => array_boolval($object, 'plex'),
+            "greyhole"      => array_boolval($object, 'greyhole'),
+            "vdr"           => array_boolval($object, 'vdr'),
+            "miller"        => array_boolval($object, 'miller'),
+            "millertesting" => array_boolval($object, 'millertesting'),
+            "btsync"        => array_boolval($object, 'btsync'),
+            "beta"          => array_boolval($params, 'beta'),
+            "dotdeb"        => array_boolval($params, 'dotdeb'),
+            "debmm"         => array_boolval($params, 'debmm'),
+            "debmmbp"       => array_boolval($params, 'debmmbp')
         );
         if(FALSE === $xmlConfig->replace("//system/omvextrasorg", $object))
             throw new OMVException(OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED);
@@ -299,7 +303,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         // Apply the changes immediately (no user interaction is wanted).
         OMVRpc::exec("Config", "applyChanges", array(
             "modules" => array("omvextrasorg"),
-            "force" => TRUE
+            "force"   => TRUE
         ), $context);
 
         // Return the configuration object.

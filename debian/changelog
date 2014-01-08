@@ -1,3 +1,12 @@
+openmediavault-omvextrasorg (0.5.37) stable; urgency=low
+
+  * force http on apt-key - github issue #2
+  * update copyrights
+  * update locales
+  * add miller testing repo
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 08 Jan 2014 14:20:27 -0500
+
 openmediavault-omvextrasorg (0.5.36) stable; urgency=low
 
   * Add reload option when updating repo selections
@@ -219,16 +228,16 @@ openmediavault-omvextrasorg (0.5.2) stable; urgency=low
   * Changed icon
 
  -- Aaron Murray <aaron@omv-extras.org>  Thu, 29 Aug 2013 7:53:38 -0500
- 
+
 openmediavault-omvextrasorg (0.5.1) stable; urgency=low
 
   * Bug fix
 
  -- Aaron Murray <aaron@omv-extras.org>  Wed, 28 Aug 2013 9:20:38 -0500
- 
+
 openmediavault-omvextrasorg (0.5.0) stable; urgency=low
 
   * Initial release
 
  -- Aaron Murray <aaron@omv-extras.org>  Wed, 28 Aug 2013 7:43:38 -0500
- 
+

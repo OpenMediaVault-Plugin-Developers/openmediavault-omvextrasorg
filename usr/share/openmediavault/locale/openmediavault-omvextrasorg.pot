@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-19 07:00-0600\n"
+"POT-Creation-Date: 2014-01-08 14:20-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,6 +71,9 @@ msgstr ""
 msgid "Enable Miller repository"
 msgstr ""
 
+msgid "Enable Miller testing repository"
+msgstr ""
+
 msgid "Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository"
 msgstr ""
 
@@ -111,6 +114,9 @@ msgid "Kernel"
 msgstr ""
 
 msgid "Miller"
+msgstr ""
+
+msgid "Miller Testing"
 msgstr ""
 
 msgid "OMV-Extras.org"

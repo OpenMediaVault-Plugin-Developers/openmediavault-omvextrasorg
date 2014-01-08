@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-19 07:00-0600\n"
-"PO-Revision-Date: 2013-12-19 13:00+0000\n"
+"POT-Creation-Date: 2014-01-08 14:20-0600\n"
+"PO-Revision-Date: 2014-01-08 20:20+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgid "Additional Repositories"
 msgstr "Дополнительные репозитории"
 
 msgid "Apt Clean"
-msgstr "Apt Clean"
+msgstr "Очистить кеш пакетов APT"
 
 msgid "BTSync"
 msgstr "BTSync"
@@ -41,10 +41,10 @@ msgid "Cleans apt repositories and removes lists."
 msgstr "Очищает apt репозиториии и чистит списки."
 
 msgid "Close"
-msgstr ""
+msgstr "Закрыто"
 
 msgid "Confirmation"
-msgstr ""
+msgstr "Подтверждение"
 
 msgid "Developer"
 msgstr "Разработчик"
@@ -56,7 +56,7 @@ msgid "Dotdeb"
 msgstr "Dotdeb"
 
 msgid "Downloading package information"
-msgstr ""
+msgstr "Загрузка информации о пакетах"
 
 msgid "Enable BTSync repository"
 msgstr "Enable BTSync repository"
@@ -72,6 +72,9 @@ msgstr "Включить Greyhole репозиторий"
 
 msgid "Enable Miller repository"
 msgstr "Включить Miller репозиторий"
+
+msgid "Enable Miller testing repository"
+msgstr ""
 
 msgid ""
 "Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository"
@@ -107,16 +110,19 @@ msgid "Information"
 msgstr "Информация"
 
 msgid "Install Backports 3.2 kernel"
-msgstr "Установить Backports 3.2 ядро"
+msgstr "Установить Backports ядро 3.2"
 
 msgid "Install Backports 3.2 kernel ..."
-msgstr "Установка Backports 3.2 ядра ..."
+msgstr "Установка Backports ядра 3.2  ..."
 
 msgid "Kernel"
 msgstr "Ядро"
 
 msgid "Miller"
 msgstr "Miller"
+
+msgid "Miller Testing"
+msgstr ""
 
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
@@ -128,7 +134,7 @@ msgid "Primary"
 msgstr "Основной"
 
 msgid "Reload"
-msgstr ""
+msgstr "Перезагрузка"
 
 msgid "Repositories"
 msgstr "Репозитории"
@@ -142,12 +148,12 @@ msgstr "Тестирование"
 msgid ""
 "The information about available software is out-of-date. You need to reload "
 "the information about available software."
-msgstr ""
+msgstr "Информация о доступном программном обеспечении просрочено. Вы должны перезагрузить информацию о доступном программного обеспечении."
 
 msgid ""
 "The repository will be checked for new, removed or upgraded software "
 "packages."
-msgstr ""
+msgstr "Хранилище будет проверенно на новые, удаленные или обновленные пакеты программного обеспечения."
 
 msgid "These repositories may break your system.  Use caution!!"
 msgstr "Эти хранилища могут повредить вашу систему. Будьте осторожны!"

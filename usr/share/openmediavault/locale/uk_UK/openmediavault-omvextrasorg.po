@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-19 07:00-0600\n"
-"PO-Revision-Date: 2013-12-19 13:00+0000\n"
+"POT-Creation-Date: 2014-01-08 14:20-0600\n"
+"PO-Revision-Date: 2014-01-08 20:20+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 msgid "Additional Repositories"
-msgstr ""
+msgstr "Додаткові сховища"
 
 msgid "Apt Clean"
 msgstr ""
@@ -28,7 +28,7 @@ msgid "BTSync"
 msgstr ""
 
 msgid "Beta"
-msgstr ""
+msgstr "Бета"
 
 msgid "Can be helpful in fixing plugin problems."
 msgstr ""
@@ -46,10 +46,10 @@ msgid "Confirmation"
 msgstr ""
 
 msgid "Developer"
-msgstr ""
+msgstr "Розробник"
 
 msgid "Developer Repositories"
-msgstr ""
+msgstr "Сховища для розробників"
 
 msgid "Dotdeb"
 msgstr "Dotdeb"
@@ -61,7 +61,7 @@ msgid "Enable BTSync repository"
 msgstr ""
 
 msgid "Enable Beta repository"
-msgstr ""
+msgstr "Увімкнути бета сховище"
 
 msgid "Enable Dotdeb repository"
 msgstr "Увімкнути сховище Dotdeb"
@@ -70,6 +70,9 @@ msgid "Enable Greyhole repository"
 msgstr ""
 
 msgid "Enable Miller repository"
+msgstr ""
+
+msgid "Enable Miller testing repository"
 msgstr ""
 
 msgid ""
@@ -103,7 +106,7 @@ msgid ""
 msgstr "Якщо система не завантажується за допомогою ядра 3.2, меню завантаження буде як і раніше мати можливість завантаження ядра 2.6."
 
 msgid "Information"
-msgstr ""
+msgstr "Інформація"
 
 msgid "Install Backports 3.2 kernel"
 msgstr ""
@@ -112,9 +115,12 @@ msgid "Install Backports 3.2 kernel ..."
 msgstr "Встановлення Backports ядро 3.2 ..."
 
 msgid "Kernel"
-msgstr ""
+msgstr "Ядро"
 
 msgid "Miller"
+msgstr ""
+
+msgid "Miller Testing"
 msgstr ""
 
 msgid "OMV-Extras.org"
@@ -127,7 +133,7 @@ msgid "Primary"
 msgstr ""
 
 msgid "Reload"
-msgstr ""
+msgstr "Перезавантаження"
 
 msgid "Repositories"
 msgstr "Сховища"
@@ -146,7 +152,7 @@ msgstr ""
 msgid ""
 "The repository will be checked for new, removed or upgraded software "
 "packages."
-msgstr ""
+msgstr "Сховище буде перевірятися на нові, віддалені або оновлені пакети програмного забезпечення."
 
 msgid "These repositories may break your system.  Use caution!!"
 msgstr ""
@@ -158,10 +164,10 @@ msgid "Utilities"
 msgstr ""
 
 msgid "VDR"
-msgstr ""
+msgstr "VDR"
 
 msgid "Version"
-msgstr ""
+msgstr "Версія"
 
 msgid "Virtualbox"
 msgstr "Virtualbox"

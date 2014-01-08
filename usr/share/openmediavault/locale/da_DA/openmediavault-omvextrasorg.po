@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-19 07:00-0600\n"
-"PO-Revision-Date: 2013-12-19 13:00+0000\n"
+"POT-Creation-Date: 2014-01-08 14:20-0600\n"
+"PO-Revision-Date: 2014-01-08 20:20+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -19,71 +19,74 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Additional Repositories"
-msgstr ""
+msgstr "Øvrige Arkiver"
 
 msgid "Apt Clean"
-msgstr ""
+msgstr "Apt Oprydning"
 
 msgid "BTSync"
-msgstr ""
+msgstr "BTSynk"
 
 msgid "Beta"
-msgstr ""
+msgstr "Beta"
 
 msgid "Can be helpful in fixing plugin problems."
-msgstr ""
+msgstr "Kan være brugbar i rettelse af plugin problemer."
 
 msgid "Cleaning Apt Files and Lists..."
-msgstr ""
+msgstr "Rydder op i Apt Filer og Lister.."
 
 msgid "Cleans apt repositories and removes lists."
-msgstr ""
+msgstr "Rydder op i apt arkiver og fjerner lister."
 
 msgid "Close"
-msgstr ""
+msgstr "Luk"
 
 msgid "Confirmation"
-msgstr ""
+msgstr "Bekræftelse"
 
 msgid "Developer"
-msgstr ""
+msgstr "Udvikler"
 
 msgid "Developer Repositories"
-msgstr ""
+msgstr "Udvikler Arkiver"
 
 msgid "Dotdeb"
 msgstr "Dotdeb"
 
 msgid "Downloading package information"
-msgstr ""
+msgstr "Henter pakke oplysninger"
 
 msgid "Enable BTSync repository"
-msgstr ""
+msgstr "Aktiver BTSynk arkiv"
 
 msgid "Enable Beta repository"
-msgstr ""
+msgstr "Aktiver Beta arkiv"
 
 msgid "Enable Dotdeb repository"
 msgstr "Aktiver Dotdeb arkiv"
 
 msgid "Enable Greyhole repository"
-msgstr ""
+msgstr "Aktiver Greyhole arkiv"
 
 msgid "Enable Miller repository"
+msgstr "Aktiver Miller arkiv"
+
+msgid "Enable Miller testing repository"
 msgstr ""
 
 msgid ""
 "Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository"
-msgstr ""
+msgstr "Aktiver OMV-Extras.org Virtuelbox arkiv og Sun's Virtuelbox arkiv"
 
 msgid "Enable OMV-Extras.org repository"
 msgstr "Aktiver OMV-Extras.org arkiv"
 
 msgid "Enable OMV-Extras.org testing repository (release candidates)"
-msgstr ""
+msgstr "Aktiver OMV-Extras.org test arkiv (udgivelseskandidater)"
 
 msgid "Enable Plex Media Server repository"
-msgstr ""
+msgstr "Aktiver Plex Media Server arkiv"
 
 msgid "Enable deb-multimedia backports repository"
 msgstr "Aktiver deb-multimedia backports arkiv"
@@ -92,29 +95,32 @@ msgid "Enable deb-multimedia repository"
 msgstr "Aktiver deb-multimedia arkiv"
 
 msgid "Enable e-tobi.net repository"
-msgstr ""
+msgstr "Aktiver e-tobi.net arkiv"
 
 msgid "Greyhole"
-msgstr ""
+msgstr "Greyhole"
 
 msgid ""
 "If the system does not boot using the 3.2 kernel, the boot menu will still "
 "have the option to boot the 2.6 kernel."
-msgstr ""
+msgstr "Hvis systemet ikke kan boote ved brug af 3.2 kernen, vil boot menuen stadig have muligheden for at boote 2.6 kernen."
 
 msgid "Information"
-msgstr ""
+msgstr "Oplysninger"
 
 msgid "Install Backports 3.2 kernel"
-msgstr ""
+msgstr "Installer Backports 3.2 Kerne"
 
 msgid "Install Backports 3.2 kernel ..."
 msgstr "Installer Backports 3.2 kerne ..."
 
 msgid "Kernel"
-msgstr ""
+msgstr "Kerne"
 
 msgid "Miller"
+msgstr "Miller"
+
+msgid "Miller Testing"
 msgstr ""
 
 msgid "OMV-Extras.org"
@@ -124,16 +130,16 @@ msgid "Plex"
 msgstr "Plex"
 
 msgid "Primary"
-msgstr ""
+msgstr "Primær"
 
 msgid "Reload"
-msgstr ""
+msgstr "Genindlæs"
 
 msgid "Repositories"
 msgstr "Arkiver"
 
 msgid "Secondary"
-msgstr ""
+msgstr "Sekundær"
 
 msgid "Testing"
 msgstr "Test"
@@ -141,27 +147,27 @@ msgstr "Test"
 msgid ""
 "The information about available software is out-of-date. You need to reload "
 "the information about available software."
-msgstr ""
+msgstr "Oplysningerne om tilgængelig software er ikke opdateret. Du skal genindlæse oplysningerne om tilgængelig software."
 
 msgid ""
 "The repository will be checked for new, removed or upgraded software "
 "packages."
-msgstr ""
+msgstr "Arkivet vil blive kontrolleret for ny, fjernet eller opgraderet software pakker."
 
 msgid "These repositories may break your system.  Use caution!!"
-msgstr ""
+msgstr "Disse arkiver kan ødelægge dit system. Brug med forsigtighed!!"
 
 msgid "This will not uninstall the 2.6 kernel."
 msgstr "Dette vil ikke afinstallere 2.6 kernen."
 
 msgid "Utilities"
-msgstr ""
+msgstr "Værktøjer"
 
 msgid "VDR"
-msgstr ""
+msgstr "VDR"
 
 msgid "Version"
-msgstr ""
+msgstr "Version"
 
 msgid "Virtualbox"
 msgstr "Virtualbox"
