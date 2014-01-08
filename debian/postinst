@@ -50,6 +50,7 @@ case "$1" in
         #               <greyhole>0</greyhole>
         #               <vdr>0</vdr>
         #               <miller>0</miller>
+        #               <millertesting>0</millertesting>
         #               <btsync>0</btsync>
         #               <beta>0</beta>
         #               <dotdeb>0</dotdeb>
@@ -70,6 +71,7 @@ case "$1" in
             GREYHOLE="0"
             VDR="0"
             MILLER="0"
+            MILLERTESTING="0"
             BTSYNC="0"
             BETA="0"
             DOTDEB="0"
@@ -84,6 +86,7 @@ case "$1" in
             GREYHOLE="$(omv_config_get "/config/system/omvextrasorg/greyhole")"
             VDR="$(omv_config_get "/config/system/omvextrasorg/vdr")"
             MILLER="$(omv_config_get "/config/system/omvextrasorg/miller")"
+            MILLERTESTING="$(omv_config_get "/config/system/omvextrasorg/millertesting")"
             BTSYNC="$(omv_config_get "/config/system/omvextrasorg/btsync")"
             BETA="$(omv_config_get "/config/system/omvextrasorg/beta")"
             DOTDEB="$(omv_config_get "/config/system/omvextrasorg/dotdeb")"
@@ -107,7 +110,8 @@ case "$1" in
         object="${object}<plex>${PLEX}</plex>"
         object="${object}<greyhole>${GREYHOLE}</greyhole>"
         object="${object}<vdr>${VDR}</vdr>"
-        object="${object}<miller>${MILLER}</miller>"
+        object="${object}<miller>${MILLER}</miller>
+        object="${object}<millertesting>${MILLER}</millertesting>
         object="${object}<btsync>${BTSYNC}</btsync>"
         object="${object}<beta>${BETA}</beta>"
         object="${object}<dotdeb>${DOTDEB}</dotdeb>"
