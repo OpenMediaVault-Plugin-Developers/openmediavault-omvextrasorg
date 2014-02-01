@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Stefan Thrane Overby <stoverby@gmail.com>, 2013
+# Stefan Thrane Overby <stoverby@gmail.com>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-08 14:20-0600\n"
-"PO-Revision-Date: 2014-01-08 20:20+0000\n"
-"Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
+"PO-Revision-Date: 2014-01-09 08:35+0000\n"
+"Last-Translator: Stefan Thrane Overby <stoverby@gmail.com>\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -73,7 +73,7 @@ msgid "Enable Miller repository"
 msgstr "Aktiver Miller arkiv"
 
 msgid "Enable Miller testing repository"
-msgstr ""
+msgstr "Aktiver Miller test arkiv"
 
 msgid ""
 "Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository"
@@ -121,7 +121,7 @@ msgid "Miller"
 msgstr "Miller"
 
 msgid "Miller Testing"
-msgstr ""
+msgstr "Miller Test"
 
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"

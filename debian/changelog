@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (0.5.39) stable; urgency=low
+
+  * update locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 01 Feb 2014 13:52:27 -0500
+
 openmediavault-omvextrasorg (0.5.38) stable; urgency=low
 
   * move key to file - github issue #2

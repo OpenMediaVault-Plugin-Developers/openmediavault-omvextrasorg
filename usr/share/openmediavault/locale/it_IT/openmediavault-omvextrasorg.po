@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Damtux <sun_lion@live.com>, 2013
+# polxmod <paolo.velati@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-08 14:20-0600\n"
-"PO-Revision-Date: 2014-01-08 20:20+0000\n"
-"Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
+"PO-Revision-Date: 2014-01-21 19:55+0000\n"
+"Last-Translator: polxmod <paolo.velati@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,161 +20,161 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Additional Repositories"
-msgstr ""
+msgstr "Repository aggiuntivi"
 
 msgid "Apt Clean"
-msgstr ""
+msgstr "Apt Clean"
 
 msgid "BTSync"
-msgstr ""
+msgstr "BTSync"
 
 msgid "Beta"
-msgstr ""
+msgstr "Beta"
 
 msgid "Can be helpful in fixing plugin problems."
-msgstr ""
+msgstr "Può essere utile per sistemare problemi di plugin."
 
 msgid "Cleaning Apt Files and Lists..."
-msgstr ""
+msgstr "Pulizia Apt File e Liste..."
 
 msgid "Cleans apt repositories and removes lists."
-msgstr ""
+msgstr "Pulisce le repository apt e rimuove le liste."
 
 msgid "Close"
-msgstr ""
+msgstr "Chiudi"
 
 msgid "Confirmation"
-msgstr ""
+msgstr "Conferma"
 
 msgid "Developer"
-msgstr ""
+msgstr "Sviluppo"
 
 msgid "Developer Repositories"
-msgstr ""
+msgstr "Repository sviluppatori"
 
 msgid "Dotdeb"
-msgstr ""
+msgstr "Dotdeb"
 
 msgid "Downloading package information"
-msgstr ""
+msgstr "Download informazioni pacchetto"
 
 msgid "Enable BTSync repository"
-msgstr ""
+msgstr "Abilita repository BTSync"
 
 msgid "Enable Beta repository"
-msgstr ""
+msgstr "Abilita repository Beta"
 
 msgid "Enable Dotdeb repository"
-msgstr ""
+msgstr "Abilita repository Dotdeb"
 
 msgid "Enable Greyhole repository"
-msgstr ""
+msgstr "Abilita repository Greyhole"
 
 msgid "Enable Miller repository"
-msgstr ""
+msgstr "Abilita repository Miller"
 
 msgid "Enable Miller testing repository"
-msgstr ""
+msgstr "Abilita repository sperimentale Miller"
 
 msgid ""
 "Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository"
-msgstr ""
+msgstr "Abilita repository OMV-Extras.org Virtualbox repository e Sun Virtualbox"
 
 msgid "Enable OMV-Extras.org repository"
 msgstr "Abilita repository OMV-Extras.org"
 
 msgid "Enable OMV-Extras.org testing repository (release candidates)"
-msgstr ""
+msgstr "Abilita repository sperimenale (release candidates) OMV-Extras.org"
 
 msgid "Enable Plex Media Server repository"
-msgstr ""
+msgstr "Abilita repository Plex Media Server"
 
 msgid "Enable deb-multimedia backports repository"
-msgstr ""
+msgstr "Abilita repository deb-multimedia backports"
 
 msgid "Enable deb-multimedia repository"
-msgstr ""
+msgstr "Abilita repository deb-multimedia"
 
 msgid "Enable e-tobi.net repository"
-msgstr ""
+msgstr "Abilita repository e-tobi.net"
 
 msgid "Greyhole"
-msgstr ""
+msgstr "Greyhole"
 
 msgid ""
 "If the system does not boot using the 3.2 kernel, the boot menu will still "
 "have the option to boot the 2.6 kernel."
-msgstr ""
+msgstr "Se il sistema non parte usando il kernel 3.2, il menu di boot avrà comunque l'opzione di avviare il kernel 2.6."
 
 msgid "Information"
-msgstr ""
+msgstr "Informazioni"
 
 msgid "Install Backports 3.2 kernel"
-msgstr ""
+msgstr "Installa kernel 3.2 backport"
 
 msgid "Install Backports 3.2 kernel ..."
-msgstr ""
+msgstr "Installa il kernel 3.2 backport ..."
 
 msgid "Kernel"
-msgstr ""
+msgstr "Kernel"
 
 msgid "Miller"
-msgstr ""
+msgstr "Miller"
 
 msgid "Miller Testing"
-msgstr ""
+msgstr "Miller Sperimentale"
 
 msgid "OMV-Extras.org"
-msgstr ""
+msgstr "OMV-Extras.org"
 
 msgid "Plex"
-msgstr ""
+msgstr "Plex"
 
 msgid "Primary"
-msgstr ""
+msgstr "Primario"
 
 msgid "Reload"
-msgstr ""
+msgstr "Ricarica"
 
 msgid "Repositories"
-msgstr ""
+msgstr "Repository"
 
 msgid "Secondary"
-msgstr ""
+msgstr "Secondario"
 
 msgid "Testing"
-msgstr ""
+msgstr "Sperimentale"
 
 msgid ""
 "The information about available software is out-of-date. You need to reload "
 "the information about available software."
-msgstr ""
+msgstr "Le informazioni sul software disponibile sono troppo vecchie. Devi ricaricare le informazioni sul software disponibile."
 
 msgid ""
 "The repository will be checked for new, removed or upgraded software "
 "packages."
-msgstr ""
+msgstr "Il repository sarà controllato per pacchetti nuovi, rimossi o aggiornati."
 
 msgid "These repositories may break your system.  Use caution!!"
-msgstr ""
+msgstr "Questi repository possono danneggiare il sistema. Fate attenzione!!"
 
 msgid "This will not uninstall the 2.6 kernel."
-msgstr ""
+msgstr "Questo non disinstallerà il kernel 2.6."
 
 msgid "Utilities"
-msgstr ""
+msgstr "Utility"
 
 msgid "VDR"
-msgstr ""
+msgstr "VDR"
 
 msgid "Version"
-msgstr ""
+msgstr "Versione"
 
 msgid "Virtualbox"
-msgstr ""
+msgstr "Virtualbox"
 
 msgid "deb-multimedia"
-msgstr ""
+msgstr "deb-multimedia"
 
 msgid "deb-multimedia backports"
-msgstr ""
+msgstr "deb-multimedia backports"

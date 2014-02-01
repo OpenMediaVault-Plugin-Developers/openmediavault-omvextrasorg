@@ -3,26 +3,26 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# dezi121 <by@songming.me>, 2013-2014
+# Raul Fernandez Garcia <raulfg3@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-08 14:20-0600\n"
-"PO-Revision-Date: 2014-01-09 14:26+0000\n"
-"Last-Translator: dezi121 <by@songming.me>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/zh_CN/)\n"
+"PO-Revision-Date: 2014-01-19 19:31+0000\n"
+"Last-Translator: Raul Fernandez Garcia <raulfg3@gmail.com>\n"
+"Language-Team: Spanish (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_CN\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Additional Repositories"
-msgstr "额外源"
+msgstr "Repositorios adicionales"
 
 msgid "Apt Clean"
-msgstr "清除APT缓存"
+msgstr "Apt Clean"
 
 msgid "BTSync"
 msgstr "BTSync"
@@ -31,71 +31,71 @@ msgid "Beta"
 msgstr "Beta"
 
 msgid "Can be helpful in fixing plugin problems."
-msgstr "尝试修复插件更新安装问题"
+msgstr "Puede ser útil para reparar problemas de los plugin"
 
 msgid "Cleaning Apt Files and Lists..."
-msgstr "清除Apt文件及列表"
+msgstr "Limpiando archivos Apt y listas ..."
 
 msgid "Cleans apt repositories and removes lists."
-msgstr "清除apt源并移除源列表。"
+msgstr "Limpiando archivos Apt y listas ..."
 
 msgid "Close"
-msgstr "关闭"
+msgstr "Cerrar"
 
 msgid "Confirmation"
-msgstr "确认"
+msgstr "Confirmación"
 
 msgid "Developer"
-msgstr "开发者"
+msgstr "Desarrollo"
 
 msgid "Developer Repositories"
-msgstr "开发者源"
+msgstr "Repositorios de desarrollo"
 
 msgid "Dotdeb"
 msgstr "Dotdeb"
 
 msgid "Downloading package information"
-msgstr "下载软件包信息"
+msgstr "Descargando información del paquete"
 
 msgid "Enable BTSync repository"
-msgstr "启用BTSync源"
+msgstr "Habilitar repositorio BTSync"
 
 msgid "Enable Beta repository"
-msgstr "开启Beta源"
+msgstr "Habilitar repositorio Beta"
 
 msgid "Enable Dotdeb repository"
-msgstr "启用 Dotdeb 源"
+msgstr "Habilitar repositorio Dotdeb"
 
 msgid "Enable Greyhole repository"
-msgstr "开启 Greyhole源"
+msgstr "Habilitar repositorio Greyhole"
 
 msgid "Enable Miller repository"
-msgstr "开启Miller源"
+msgstr "Habilitar repositorio Miller"
 
 msgid "Enable Miller testing repository"
-msgstr "开启 Miller 测试源"
+msgstr "Habilitar repositorio Miller testing"
 
 msgid ""
 "Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository"
-msgstr "开启Virtualbox的OMV-Extras.org源和Sun's源"
+msgstr "Abilitar repositorio OMV-Extras.org Virtualbox y Sun's Virtualbox "
 
 msgid "Enable OMV-Extras.org repository"
-msgstr "启用OMV-Extras.org插件源"
+msgstr "Habilitar repositorio OMV-Extras.org"
 
 msgid "Enable OMV-Extras.org testing repository (release candidates)"
-msgstr "开启OMV-Extras.org测试源(候选发布版)"
+msgstr "Habilitar repositorio OMV-Extras.org testing  (release candidates)"
 
 msgid "Enable Plex Media Server repository"
-msgstr "开启 Plex多媒体服务源"
+msgstr "Habilitar repositorio Plex Media Server"
 
 msgid "Enable deb-multimedia backports repository"
-msgstr "启用 deb-multimedia backports 源"
+msgstr "Habilitar repositorio deb-multimedia backports"
 
 msgid "Enable deb-multimedia repository"
-msgstr "启用 deb-multimedia 源"
+msgstr "Habilitar repositorio deb-multimedia"
 
 msgid "Enable e-tobi.net repository"
-msgstr "开启e-tobi.net源"
+msgstr "Habilitar repositorio e-tobi.net"
 
 msgid "Greyhole"
 msgstr "Greyhole"
@@ -103,19 +103,19 @@ msgstr "Greyhole"
 msgid ""
 "If the system does not boot using the 3.2 kernel, the boot menu will still "
 "have the option to boot the 2.6 kernel."
-msgstr "如果3.2内核不能启动系统，可以在启动菜单选择2.6的内核启动。"
+msgstr "Si el sistema no arranca usando el kernel 3.2, el menu de arranque mantendrá una opción de arrancar el kernel 2.6"
 
 msgid "Information"
-msgstr "信息"
+msgstr "Información"
 
 msgid "Install Backports 3.2 kernel"
-msgstr "安装Backports 3.2内核"
+msgstr "Instalar kernel 3.2 Backports"
 
 msgid "Install Backports 3.2 kernel ..."
-msgstr "安装Backports 3.2内核..."
+msgstr "Instalar kernel 3.2 Backports"
 
 msgid "Kernel"
-msgstr "内核"
+msgstr "Kernel"
 
 msgid "Miller"
 msgstr "Miller"
@@ -130,44 +130,44 @@ msgid "Plex"
 msgstr "Plex"
 
 msgid "Primary"
-msgstr "主要选项"
+msgstr "Primario"
 
 msgid "Reload"
-msgstr "重新载入"
+msgstr "Recargar"
 
 msgid "Repositories"
-msgstr "源"
+msgstr "Repositorios"
 
 msgid "Secondary"
-msgstr "附加选项"
+msgstr "Secundario"
 
 msgid "Testing"
-msgstr "测试版"
+msgstr "Testing"
 
 msgid ""
 "The information about available software is out-of-date. You need to reload "
 "the information about available software."
-msgstr "软件信息已过期，你需要重载以获取最新软件信息。"
+msgstr "La información acerca del software disponible esta anticuada. Necesita recargar la información del software disponible."
 
 msgid ""
 "The repository will be checked for new, removed or upgraded software "
 "packages."
-msgstr "将检查更新源是否有删除和升级的软件包。"
+msgstr "Se revisará el repositorio en busca de paquetes nuevos, borrados, o actualizados."
 
 msgid "These repositories may break your system.  Use caution!!"
-msgstr "注意，这些源可能会使系统崩溃！"
+msgstr "Estos repositorios puede dañar el sistema. Utilícelos con precaución!!!"
 
 msgid "This will not uninstall the 2.6 kernel."
-msgstr "会保留2.6内核。"
+msgstr "Esto NO desistalará el kernel 2.6"
 
 msgid "Utilities"
-msgstr "实用工具"
+msgstr "Utilidades"
 
 msgid "VDR"
 msgstr "VDR"
 
 msgid "Version"
-msgstr "版本"
+msgstr "Version"
 
 msgid "Virtualbox"
 msgstr "Virtualbox"
