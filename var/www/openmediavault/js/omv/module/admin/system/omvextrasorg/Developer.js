@@ -66,8 +66,9 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Developer", {
                 labelSeparator : ""
             },
             items: [{
-                border : false,
-                html   : "<br />" + _("These repositories may break your system.  Use caution!!") + "<br /><br />"
+                xtype  : "text",
+                text   : _("These repositories may break your system.  Use caution!!"),   
+                margin : "5 0 5 0"
             },{
                 xtype      : "checkbox",
                 name       : "beta",
