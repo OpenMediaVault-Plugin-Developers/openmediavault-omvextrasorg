@@ -345,6 +345,10 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         if(0 !== $this->exec($cmd, $output))
             throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
 
+        $cmd = "dpkg --clear-avail";
+        if(0 !== $this->exec($cmd, $output))
+            throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
+
         $cmd = "rm -rf /var/lib/apt/lists/*";
         if(0 !== $this->exec($cmd, $output))
             throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
