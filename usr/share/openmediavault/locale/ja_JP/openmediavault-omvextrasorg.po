@@ -1,0 +1,179 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# kansuke <kansuke4649@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: openmediavault-omvextras.org\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-08 14:20-0600\n"
+"PO-Revision-Date: 2014-02-04 01:01+0000\n"
+"Last-Translator: kansuke <kansuke4649@gmail.com>\n"
+"Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ja_JP/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja_JP\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Additional Repositories"
+msgstr "追加のリポジトリ"
+
+msgid "Apt Clean"
+msgstr "Aptクリーン"
+
+msgid "BTSync"
+msgstr "BTSync"
+
+msgid "Beta"
+msgstr "ベータ"
+
+msgid "Can be helpful in fixing plugin problems."
+msgstr "プラグインの問題を修正する際に役立ちます。"
+
+msgid "Cleaning Apt Files and Lists..."
+msgstr "Aptファイルとリストをクリーニングしています..."
+
+msgid "Cleans apt repositories and removes lists."
+msgstr "APTリポジトリをきれいにし、リストを削除します。"
+
+msgid "Close"
+msgstr "閉じる"
+
+msgid "Confirmation"
+msgstr "確認"
+
+msgid "Developer"
+msgstr "開発者"
+
+msgid "Developer Repositories"
+msgstr "開発者のリポジトリ"
+
+msgid "Dotdeb"
+msgstr "Dotdeb"
+
+msgid "Downloading package information"
+msgstr "パッケージの情報をダウンロードしています"
+
+msgid "Enable BTSync repository"
+msgstr "BTSyncのリポジトリを有効にする"
+
+msgid "Enable Beta repository"
+msgstr "ベータ版のリポジトリを有効にする"
+
+msgid "Enable Dotdeb repository"
+msgstr "Dotdebのリポジトリを有効にする"
+
+msgid "Enable Greyhole repository"
+msgstr "Greyholeのリポジトリを有効にする"
+
+msgid "Enable Miller repository"
+msgstr "Millerのリポジトリを有効にする"
+
+msgid "Enable Miller testing repository"
+msgstr "Millerのテスト版リポジトリを有効にする"
+
+msgid ""
+"Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository"
+msgstr "OMV-Extras.orgのVirtualboxリポジトリとSunのVirtualboxリポジトリを有効にする"
+
+msgid "Enable OMV-Extras.org repository"
+msgstr "OMV-Extras.orgリポジトリを有効にする"
+
+msgid "Enable OMV-Extras.org testing repository (release candidates)"
+msgstr "OMV-Extras.orgのテスト版リポジトリを有効にする（リリース候補版）"
+
+msgid "Enable Plex Media Server repository"
+msgstr "Plex Media Serverのリポジトリを有効にする"
+
+msgid "Enable deb-multimedia backports repository"
+msgstr "deb-multimediaバックポートのリポジトリを有効にする"
+
+msgid "Enable deb-multimedia repository"
+msgstr "deb-multimediaのリポジトリを有効にする"
+
+msgid "Enable e-tobi.net repository"
+msgstr "e-tobi.netのリポジトリを有効にする"
+
+msgid "Greyhole"
+msgstr "Greyhole"
+
+msgid ""
+"If the system does not boot using the 3.2 kernel, the boot menu will still "
+"have the option to boot the 2.6 kernel."
+msgstr "システムが3.2カーネルを使用してブートしない場合は、ブートメニューでまだ2.6カーネルを使用して起動する設定になっています。"
+
+msgid "Information"
+msgstr "情報"
+
+msgid "Install Backports 3.2 kernel"
+msgstr "バックポート版3.2カーネルのインストール"
+
+msgid "Install Backports 3.2 kernel ..."
+msgstr "バックポート版3.2カーネルのインストール ..."
+
+msgid "Kernel"
+msgstr "カーネル"
+
+msgid "Miller"
+msgstr "Miller"
+
+msgid "Miller Testing"
+msgstr "Millerテスト版"
+
+msgid "OMV-Extras.org"
+msgstr "OMV-Extras.org"
+
+msgid "Plex"
+msgstr "Plex"
+
+msgid "Primary"
+msgstr "プライマリ"
+
+msgid "Reload"
+msgstr "再読み込み"
+
+msgid "Repositories"
+msgstr "リポジトリ"
+
+msgid "Secondary"
+msgstr "セカンダリ"
+
+msgid "Testing"
+msgstr "テスト版"
+
+msgid ""
+"The information about available software is out-of-date. You need to reload "
+"the information about available software."
+msgstr "利用可能なソフトウェアについての情報は古くなっています。利用可能なソフトウェアについての情報を再読み込みする必要があります。"
+
+msgid ""
+"The repository will be checked for new, removed or upgraded software "
+"packages."
+msgstr "新規追加、削除またはアップグレードされたソフトウェアパッケージがないかリポジトリをチェックします。"
+
+msgid "These repositories may break your system.  Use caution!!"
+msgstr "これらのリポジトリは、システムを破壊することがあります。十分に注意してください！"
+
+msgid "This will not uninstall the 2.6 kernel."
+msgstr "これは、2.6カーネルをアンインストールしません。"
+
+msgid "Utilities"
+msgstr "ユーティリティ"
+
+msgid "VDR"
+msgstr "VDR"
+
+msgid "Version"
+msgstr "バージョン"
+
+msgid "Virtualbox"
+msgstr "Virtualbox"
+
+msgid "deb-multimedia"
+msgstr "deb-multimedia"
+
+msgid "deb-multimedia backports"
+msgstr "deb-multimediaバックポート"

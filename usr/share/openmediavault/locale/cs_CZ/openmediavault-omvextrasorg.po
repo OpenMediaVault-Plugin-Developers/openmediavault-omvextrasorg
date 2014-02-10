@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# mejatysek <mejatysek@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-08 14:20-0600\n"
-"PO-Revision-Date: 2014-01-08 20:20+0000\n"
-"Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
+"PO-Revision-Date: 2014-02-02 14:10+0000\n"
+"Last-Translator: mejatysek <mejatysek@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,161 +19,161 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 msgid "Additional Repositories"
-msgstr ""
+msgstr "Doplňkové repositáře"
 
 msgid "Apt Clean"
-msgstr ""
+msgstr "Apt Clean"
 
 msgid "BTSync"
-msgstr ""
+msgstr "BTSync"
 
 msgid "Beta"
-msgstr ""
+msgstr "Beta"
 
 msgid "Can be helpful in fixing plugin problems."
-msgstr ""
+msgstr "Může pomoci pří řešení problémů s pluginy"
 
 msgid "Cleaning Apt Files and Lists..."
-msgstr ""
+msgstr "Čistím Apt soubory a seznamy..."
 
 msgid "Cleans apt repositories and removes lists."
-msgstr ""
+msgstr "Vyčistí apt repositáře a odstraní seznamy."
 
 msgid "Close"
-msgstr ""
+msgstr "Zavřít"
 
 msgid "Confirmation"
-msgstr ""
+msgstr "Potvrzení"
 
 msgid "Developer"
-msgstr ""
+msgstr "Vývojář"
 
 msgid "Developer Repositories"
-msgstr ""
+msgstr "Vývojářský repositář"
 
 msgid "Dotdeb"
-msgstr ""
+msgstr "Dotdeb"
 
 msgid "Downloading package information"
-msgstr ""
+msgstr "Stahuji informace o balíčcích"
 
 msgid "Enable BTSync repository"
-msgstr ""
+msgstr "Povolit repozitář BTSync"
 
 msgid "Enable Beta repository"
-msgstr ""
+msgstr "Povolit beta repozitář"
 
 msgid "Enable Dotdeb repository"
-msgstr ""
+msgstr "Povolit repozitář Dotdeb"
 
 msgid "Enable Greyhole repository"
-msgstr ""
+msgstr "Povolit repozitář Greyhole"
 
 msgid "Enable Miller repository"
-msgstr ""
+msgstr "Povolit repozitář Miller"
 
 msgid "Enable Miller testing repository"
-msgstr ""
+msgstr "Povolit repozitář Miller testing"
 
 msgid ""
 "Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository"
-msgstr ""
+msgstr "Povolit repozitář OMV-Extras.org Virtualbox a  Sun's Virtualbox"
 
 msgid "Enable OMV-Extras.org repository"
-msgstr ""
+msgstr "Povolit OMV-Extras.org repozitář"
 
 msgid "Enable OMV-Extras.org testing repository (release candidates)"
-msgstr ""
+msgstr "Povolit repozitář OMV-Extras.org testing (RC kanditát na vydání)"
 
 msgid "Enable Plex Media Server repository"
-msgstr ""
+msgstr "Povolit repozitář Plex Media Server"
 
 msgid "Enable deb-multimedia backports repository"
-msgstr ""
+msgstr "Povolit repozitář deb-multimedia backports"
 
 msgid "Enable deb-multimedia repository"
-msgstr ""
+msgstr "Povolit repozitář deb-multimedia"
 
 msgid "Enable e-tobi.net repository"
-msgstr ""
+msgstr "Povolit repozitář e-tobi.net"
 
 msgid "Greyhole"
-msgstr ""
+msgstr "Greyhole"
 
 msgid ""
 "If the system does not boot using the 3.2 kernel, the boot menu will still "
 "have the option to boot the 2.6 kernel."
-msgstr ""
+msgstr "Pokud systém s  kernelem 3.2 nenabootuje, můžete v boot menu zvolit bootování s kernelem 2.6."
 
 msgid "Information"
-msgstr ""
+msgstr "Informace"
 
 msgid "Install Backports 3.2 kernel"
-msgstr ""
+msgstr "Instalovat backportovaný kernel 3.2"
 
 msgid "Install Backports 3.2 kernel ..."
-msgstr ""
+msgstr "Instalovat backportovaný kernel 3.2 ...."
 
 msgid "Kernel"
-msgstr ""
+msgstr "Kernel"
 
 msgid "Miller"
-msgstr ""
+msgstr "Miller"
 
 msgid "Miller Testing"
-msgstr ""
+msgstr "Miller Testing"
 
 msgid "OMV-Extras.org"
-msgstr ""
+msgstr "OMV-Extras.org"
 
 msgid "Plex"
-msgstr ""
+msgstr "Plex"
 
 msgid "Primary"
-msgstr ""
+msgstr "Hlavní"
 
 msgid "Reload"
-msgstr ""
+msgstr "Obnovit"
 
 msgid "Repositories"
-msgstr ""
+msgstr "Repositáře"
 
 msgid "Secondary"
-msgstr ""
+msgstr "Doplňkové"
 
 msgid "Testing"
-msgstr ""
+msgstr "Testovací"
 
 msgid ""
 "The information about available software is out-of-date. You need to reload "
 "the information about available software."
-msgstr ""
+msgstr "Informace o dostupném softwaru jsou zastaralé. Obnovte informace o dostupném softwaru."
 
 msgid ""
 "The repository will be checked for new, removed or upgraded software "
 "packages."
-msgstr ""
+msgstr "Bude zkontrolován repozitář, zda byly nějaké balíčky přidány, změněny nebo odebrány."
 
 msgid "These repositories may break your system.  Use caution!!"
-msgstr ""
+msgstr "Tyto repositáře mohou poškodit váš systém. Užívejte je s rozvahou."
 
 msgid "This will not uninstall the 2.6 kernel."
-msgstr ""
+msgstr "Neodinstaluje kernel 2.6."
 
 msgid "Utilities"
-msgstr ""
+msgstr "Nástroje"
 
 msgid "VDR"
-msgstr ""
+msgstr "VRD"
 
 msgid "Version"
-msgstr ""
+msgstr "Verze"
 
 msgid "Virtualbox"
-msgstr ""
+msgstr "Virtualbox"
 
 msgid "deb-multimedia"
-msgstr ""
+msgstr "deb-multimedia"
 
 msgid "deb-multimedia backports"
-msgstr ""
+msgstr "deb-multimedia backports"
