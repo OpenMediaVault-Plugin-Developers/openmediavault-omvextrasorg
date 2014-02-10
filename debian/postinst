@@ -130,8 +130,6 @@ case "$1" in
             apt-key add /usr/share/keyrings/e-tobi-keyring.gpg
             apt-key add /usr/share/keyrings/btsync.gpg
         fi
-
-        /bin/rm -f /etc/apt/preferences.d/99omv-extras-org-*
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

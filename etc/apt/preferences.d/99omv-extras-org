@@ -1,53 +1,53 @@
 Package: *
-Pin: release n=sardaukar, origin packages.omv-extras.org
+Pin: release n=kralizec, origin packages.omv-extras.org
 Pin-Priority: 995
 
 Package: *
-Pin: release n=sardaukar-dotdeb, origin packages.omv-extras.org
+Pin: release n=kralizec-dotdeb, origin packages.omv-extras.org
 Pin-Priority: 996
 
 Package: *
-Pin: release n=sardaukar-greyhole, origin packages.omv-extras.org
+Pin: release n=kralizec-greyhole, origin packages.omv-extras.org
 Pin-Priority: 995
 
 Package: *
-Pin: release n=sardaukar-plex, origin packages.omv-extras.org
+Pin: release n=kralizec-plex, origin packages.omv-extras.org
 Pin-Priority: 995
 
 Package: *
-Pin: release n=sardaukar-testing, origin packages.omv-extras.org
+Pin: release n=kralizec-testing, origin packages.omv-extras.org
 Pin-Priority: 996
 
 Package: *
-Pin: release n=sardaukar-backports, origin packages.omv-extras.org
+Pin: release n=kralizec-backports, origin packages.omv-extras.org
 Pin-Priority: 995
 
 Package: *
-Pin: release n=sardaukar-vb, origin packages.omv-extras.org
+Pin: release n=kralizec-vb, origin packages.omv-extras.org
 Pin-Priority: 995
 
 Package: *
-Pin: release n=sardaukar-miller, origin dh2k.omv-extras.org
+Pin: release n=kralizec-miller, origin dh2k.omv-extras.org
 Pin-Priority: 995
 
 Package: *
-Pin: release n=sardaukar-miller-testing, origin dh2k.omv-extras.org
+Pin: release n=kralizec-miller-testing, origin dh2k.omv-extras.org
 Pin-Priority: 995
 
 Package: *
-Pin: release n=sardaukar-beta, origin packages.omv-extras.org
+Pin: release n=kralizec-beta, origin packages.omv-extras.org
 Pin-Priority: 995
 
 Package: *
-Pin: release n=sardaukar-btsync, origin packages.omv-extras.org
+Pin: release n=kralizec-btsync, origin packages.omv-extras.org
 Pin-Priority: 995
 
 Package: *
-Pin: release n=sardaukar-vdr, origin packages.omv-extras.org
+Pin: release n=kralizec-vdr, origin packages.omv-extras.org
 Pin-Priority: 995
 
 Package: *
-Pin: release n=squeeze, origin debian.yeasoft.net
+Pin: release n=wheezy, origin debian.yeasoft.net
 Pin-Priority: 995
 
 Package: *
