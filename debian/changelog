@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (0.6.0) stable; urgency=low
+
+  * initial port to Kralizec
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 10 Feb 2014 09:18:27 -0500
+
 openmediavault-omvextrasorg (0.5.39) stable; urgency=low
 
   * update locales

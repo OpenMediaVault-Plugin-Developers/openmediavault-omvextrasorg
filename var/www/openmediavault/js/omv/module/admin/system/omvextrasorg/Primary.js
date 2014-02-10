@@ -3,7 +3,7 @@
  * @author    Volker Theile <volker.theile@openmediavault.org>
  * @author    Aaron Murray <aaron@omv-extras.org>
  * @copyright Copyright (c) 2009-2013 Volker Theile
- * @copyright Copyright (c) 2013-2014 Aaron Murray 
+ * @copyright Copyright (c) 2013-2014 Aaron Murray
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -123,15 +123,15 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
             },{
                 xtype   : "button",
                 name    : "backports",
-                text    : _("Install Backports 3.2 kernel"),
+                text    : _("Install Backports 3.12 kernel"),
                 scope   : this,
                 handler : Ext.Function.bind(me.onBackportsButton, me, [ me ]),
                 margin  : "0 0 5 0"
             },{
                 border : false,
                 html   : "<ul>" +
-                           "<li>" + _("This will not uninstall the 2.6 kernel.") + "</li>" +
-                           "<li>" + _("If the system does not boot using the 3.2 kernel, the boot menu will still have the option to boot the 2.6 kernel.") + "</li>" +
+                           "<li>" + _("This will not uninstall the 3.2 kernel.") + "</li>" +
+                           "<li>" + _("If the system does not boot using the 3.12 kernel, the boot menu will still have the option to boot the 3.2 kernel.") + "</li>" +
                          "</ul>"
             }]
         },{
@@ -164,7 +164,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
     onBackportsButton : function() {
         var me = this;
         Ext.create("OMV.window.Execute", {
-            title          : _("Install Backports 3.2 kernel ..."),
+            title          : _("Install Backports 3.12 kernel ..."),
             rpcService     : "OmvExtrasOrg",
             rpcMethod      : "doInstallBackports",
             hideStopButton : true,

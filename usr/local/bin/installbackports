@@ -2,8 +2,8 @@
 
 BACKPORTS_REPO="/etc/apt/sources.list.d/backports.list"
 
-echo "deb http://backports.debian.org/debian-backports squeeze-backports main non-free" > $BACKPORTS_REPO
-echo "deb http://packages.omv-extras.org/debian/ sardaukar-backports main" >> $BACKPORTS_REPO
+echo "deb http://backports.debian.org/debian-backports wheezy-backports main non-free" > $BACKPORTS_REPO
+echo "deb http://packages.omv-extras.org/debian/ kralizec-backports main" >> $BACKPORTS_REPO
 
 echo "Updating..."
 apt-get --quiet update > /dev/null 2>&1
@@ -30,12 +30,12 @@ esac
 if $SKIP; then
     echo "Unsupported kernel and/or processor"
 else
-    echo "Install backports 3.2 kernel and headers"
+    echo "Install backports 3.12 kernel and headers"
     apt-get --yes --force-yes --fix-missing install linux-base initramfs-utils
     if $AMD64; then
-        apt-get -t squeeze-backports --yes --force-yes --fix-missing install linux-image-3.2.0-0.bpo.4-amd64 linux-headers-3.2.0-0.bpo.4-all firmware-linux firmware-linux-free
+        apt-get -t squeeze-backports --yes --force-yes --fix-missing install linux-image-3.12-0.bpo.1-amd64 linux-headers-3.12-0.bpo.1-all firmware-linux firmware-linux-free
     else
-        apt-get -t squeeze-backports --yes --force-yes --fix-missing install linux-image-3.2.0-0.bpo.4-486 linux-headers-3.2.0-0.bpo.4-all firmware-linux firmware-linux-free
+        apt-get -t squeeze-backports --yes --force-yes --fix-missing install linux-image-3.12-0.bpo.1-486 linux-headers-3.12-0.bpo.1-all firmware-linux firmware-linux-free
     fi
     echo "..."
     echo "Please reboot to use new kernel"

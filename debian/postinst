@@ -24,8 +24,6 @@ set -e
 . /etc/default/openmediavault
 . /usr/share/openmediavault/scripts/helper-functions
 
-OMVEXTRASREPOFILE="/etc/apt/sources.list.d/omv-extras-org-sardaukar.list"
-
 ARM=false
 ARCH="`/bin/uname -m`"
 
@@ -42,7 +40,7 @@ case "$1" in
         #  Update the configuration.
         #   <config>
         #       <system>
-        #           <omvextrasogr>
+        #           <omvextrasorg>
         #               <enable>1</enable>
         #               <testing>0</testing>
         #               <vbox>0</vbox>
@@ -120,7 +118,7 @@ case "$1" in
 
         omv_config_add_element "/config/system" "omvextrasorg" "${object}" true
 
-        /bin/sh /usr/share/openmediavault/mkconf/omvextrasorg
+        omv-mkconf omvextrasorg
 
         if [ -x /usr/bin/apt-key ]; then
             apt-key add /usr/share/keyrings/omvextrasorg-keyring.gpg
@@ -131,13 +129,9 @@ case "$1" in
             apt-key add /usr/share/keyrings/greyhole-debsig.asc
             apt-key add /usr/share/keyrings/e-tobi-keyring.gpg
             apt-key add /usr/share/keyrings/btsync.gpg
-
-            #btsync key
-            #apt-key adv --keyserver hkp://keys.gnupg.net:80 --recv-keys 6BF18B15
         fi
 
         /bin/rm -f /etc/apt/preferences.d/99omv-extras-org-*
-        chattr +i /etc/apt/sources.list
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
