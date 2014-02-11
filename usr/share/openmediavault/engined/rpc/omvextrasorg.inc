@@ -43,6 +43,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $this->registerMethod("getDeveloper");
         $this->registerMethod("setDeveloper");
         $this->registerMethod("doInstallBackports");
+        $this->registerMethod("doInstallSystemd");
         $this->registerMethod("doAptClean");
     }
 
@@ -328,6 +329,33 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
 
             $cmd = "/usr/local/bin/installbackports";
+            $this->exec($cmd, $output, $bgOutputFilename);
+            $this->finalizeBgProcStatus($bgStatusFilename, $output);
+
+        } catch(Exception $e) {
+            $this->finalizeBgProcStatus($bgStatusFilename, "", $e);
+            exit(1);
+        }
+    }
+
+    function doInstallSystemd($params, $context) {
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+
+        // Create a background process.
+        $bgStatusFilename = $this->createBgProcStatus();
+        $pid = $this->fork();
+        if($pid > 0) { // Parent process.
+            $this->initializeBgProcStatus($bgStatusFilename, $pid);
+            return $bgStatusFilename;
+        }
+
+        // Child process.
+        try {
+            $bgOutputFilename = $this->createBgProcOutput();
+            $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
+
+            $cmd = "/usr/local/bin/installsystemd";
             $this->exec($cmd, $output, $bgOutputFilename);
             $this->finalizeBgProcStatus($bgStatusFilename, $output);
 

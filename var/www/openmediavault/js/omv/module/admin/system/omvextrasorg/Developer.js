@@ -3,7 +3,7 @@
  * @author    Volker Theile <volker.theile@openmediavault.org>
  * @author    Aaron Murray <aaron@omv-extras.org>
  * @copyright Copyright (c) 2009-2013 Volker Theile
- * @copyright Copyright (c) 2013-2014 Aaron Murray 
+ * @copyright Copyright (c) 2013-2014 Aaron Murray
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -67,7 +67,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Developer", {
             },
             items: [{
                 xtype  : "text",
-                text   : _("These repositories may break your system.  Use caution!!"),   
+                text   : _("These repositories may break your system.  Use caution!!"),
                 margin : "5 0 5 0"
             },{
                 xtype      : "checkbox",
@@ -94,7 +94,37 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Developer", {
                 boxLabel   : _("Enable deb-multimedia backports repository"),
                 checked    : false
             }]
+        },{
+            xtype         : "fieldset",
+            title         : _("Utilities"),
+            fieldDefaults : {
+                labelSeparator : ""
+            },
+            items         : [{
+                xtype   : "button",
+                name    : "systemd",
+                text    : _("Install systemd"),
+                scope   : this,
+                handler : Ext.Function.bind(me.onInstallSystemdButton, me, [ me ]),
+                margin  : "3 0 5 0"
+            }]
         }];
+    },
+
+    onInstallSystemdButton : function() {
+        var me = this;
+        Ext.create("OMV.window.Execute", {
+            title          : _("Install systemd..."),
+            rpcService     : "OmvExtrasOrg",
+            rpcMethod      : "doInstallSystemd",
+            hideStopButton : true,
+            listeners      : {
+                scope     : me,
+                exception : function(wnd, error) {
+                    OMV.MessageBox.error(null, error);
+                }
+            }
+        }).show();
     }
 });
 

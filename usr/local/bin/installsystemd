@@ -1,0 +1,19 @@
+#!/bin/sh
+
+DEFAULTGRUB="/etc/default/grub"
+TMPDEFAULTGRUB="/tmp/systemd_grub_default"
+BACKUPDEFAULTGRUB="/root/default_grub"
+
+echo "Installing systemd..."
+apt-get install systemd
+
+echo "Change grub default..."
+cp ${DEFAULTGRUB} ${BACKUPDEFAULTGRUB}
+sed 's/GRUB_CMDLINE_LINUX_DEFAULT=\"quiet\"/GRUB_CMDLINE_LINUX_DEFAULT=\"quiet init=/bin/systemd\"/g' ${DEFAULTGRUB} > ${TMPDEFAULTGRUB}
+cp -f ${TMPDEFAULTGRUB} ${DEFAULTGRUB}
+
+echo "Updating grub..."
+update-grub
+
+echo "..."
+echo "Please reboot to use systemd"
