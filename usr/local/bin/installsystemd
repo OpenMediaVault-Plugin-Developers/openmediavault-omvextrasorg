@@ -8,7 +8,7 @@ apt-get --yes --force-yes --fix-missing install systemd
 
 echo "Change grub default..."
 cp ${DEFAULTGRUB} ${BACKUPDEFAULTGRUB}
-sed -i 's/quiet/quiet init=\/bin\/systemd/g' ${DEFAULTGRUB}
+sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT=\"quiet\"/GRUB_CMDLINE_LINUX_DEFAULT=\"quiet init=\/bin\/systemd\"/g' ${DEFAULTGRUB}
 
 echo "Updating grub..."
 update-grub
