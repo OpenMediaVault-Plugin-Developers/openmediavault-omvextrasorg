@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (0.6.5) stable; urgency=low
+
+  * Bug fixes
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 11 Feb 2014 09:08:27 -0500
+
 openmediavault-omvextrasorg (0.6.4) stable; urgency=low
 
   * Bug fixes

@@ -4,7 +4,7 @@ DEFAULTGRUB="/etc/default/grub"
 BACKUPDEFAULTGRUB="/root/default_grub"
 
 echo "Installing systemd..."
-apt-get install systemd
+apt-get --yes --force-yes --fix-missing install systemd
 
 echo "Change grub default..."
 cp ${DEFAULTGRUB} ${BACKUPDEFAULTGRUB}
