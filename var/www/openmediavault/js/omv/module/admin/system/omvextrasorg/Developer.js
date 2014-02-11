@@ -59,6 +59,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Developer", {
     },
 
     getFormItems : function() {
+        var me = this;
         return [{
             xtype         : "fieldset",
             title         : _("Developer Repositories"),
