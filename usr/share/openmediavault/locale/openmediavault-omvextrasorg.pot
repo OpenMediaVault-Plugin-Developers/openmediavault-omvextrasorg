@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-10 09:57-0600\n"
+"POT-Creation-Date: 2014-02-11 06:59-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -108,6 +108,12 @@ msgid "Install Backports 3.12 kernel"
 msgstr ""
 
 msgid "Install Backports 3.12 kernel ..."
+msgstr ""
+
+msgid "Install systemd"
+msgstr ""
+
+msgid "Install systemd..."
 msgstr ""
 
 msgid "Kernel"

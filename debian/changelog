@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (0.6.3) stable; urgency=low
+
+  * Update locales
+  * Add install systemd button
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 11 Feb 2014 06:59:27 -0500
+
 openmediavault-omvextrasorg (0.6.2) stable; urgency=low
 
   * bug fixes

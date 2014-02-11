@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-10 09:57-0600\n"
-"PO-Revision-Date: 2014-02-10 15:57+0000\n"
+"POT-Creation-Date: 2014-02-11 06:59-0600\n"
+"PO-Revision-Date: 2014-02-11 12:59+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -103,15 +103,21 @@ msgstr "Greyhole"
 msgid ""
 "If the system does not boot using the 3.12 kernel, the boot menu will still "
 "have the option to boot the 3.2 kernel."
-msgstr ""
+msgstr "如果系统不能用3.12的内核启动，可以在启动菜单选择3.2的内核启动。"
 
 msgid "Information"
 msgstr "信息"
 
 msgid "Install Backports 3.12 kernel"
-msgstr ""
+msgstr "安装Backports 3.12内核"
 
 msgid "Install Backports 3.12 kernel ..."
+msgstr "安装Backports 3.12内核中 ..."
+
+msgid "Install systemd"
+msgstr ""
+
+msgid "Install systemd..."
 msgstr ""
 
 msgid "Kernel"
@@ -158,7 +164,7 @@ msgid "These repositories may break your system.  Use caution!!"
 msgstr "注意，这些源可能会使系统崩溃！"
 
 msgid "This will not uninstall the 3.2 kernel."
-msgstr ""
+msgstr "这不会卸载3.2的内核。"
 
 msgid "Utilities"
 msgstr "实用工具"
