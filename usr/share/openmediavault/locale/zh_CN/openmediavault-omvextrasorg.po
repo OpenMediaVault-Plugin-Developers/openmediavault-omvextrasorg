@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-11 06:59-0600\n"
-"PO-Revision-Date: 2014-02-11 12:59+0000\n"
+"POT-Creation-Date: 2014-02-27 08:57-0600\n"
+"PO-Revision-Date: 2014-02-27 14:57+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Add repo"
+msgstr ""
 
 msgid "Additional Repositories"
 msgstr "额外源"
@@ -42,8 +45,14 @@ msgstr "清除apt源并移除源列表。"
 msgid "Close"
 msgstr "关闭"
 
+msgid "Comment"
+msgstr ""
+
 msgid "Confirmation"
 msgstr "确认"
+
+msgid "Custom"
+msgstr ""
 
 msgid "Developer"
 msgstr "开发者"
@@ -56,6 +65,9 @@ msgstr "Dotdeb"
 
 msgid "Downloading package information"
 msgstr "下载软件包信息"
+
+msgid "Edit repo"
+msgstr ""
 
 msgid "Enable BTSync repository"
 msgstr "启用BTSync源"
@@ -115,10 +127,10 @@ msgid "Install Backports 3.12 kernel ..."
 msgstr "安装Backports 3.12内核中 ..."
 
 msgid "Install systemd"
-msgstr ""
+msgstr "安装 systemd"
 
 msgid "Install systemd..."
-msgstr ""
+msgstr "安装systemd中 ..."
 
 msgid "Kernel"
 msgstr "内核"
@@ -128,6 +140,9 @@ msgstr "Miller"
 
 msgid "Miller Testing"
 msgstr "Miller Testing"
+
+msgid "Name"
+msgstr ""
 
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
@@ -140,6 +155,9 @@ msgstr "主要选项"
 
 msgid "Reload"
 msgstr "重新载入"
+
+msgid "Repo"
+msgstr ""
 
 msgid "Repositories"
 msgstr "源"

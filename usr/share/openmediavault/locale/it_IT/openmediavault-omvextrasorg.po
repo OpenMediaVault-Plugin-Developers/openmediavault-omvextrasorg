@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Damtux <sun_lion@live.com>, 2013
-# polxmod <paolo.velati@gmail.com>, 2014
+# Paolo Velati <paolo.velati@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-11 06:59-0600\n"
-"PO-Revision-Date: 2014-02-11 12:59+0000\n"
+"POT-Creation-Date: 2014-02-27 08:57-0600\n"
+"PO-Revision-Date: 2014-02-27 14:57+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Add repo"
+msgstr ""
 
 msgid "Additional Repositories"
 msgstr "Repository aggiuntivi"
@@ -43,8 +46,14 @@ msgstr "Pulisce le repository apt e rimuove le liste."
 msgid "Close"
 msgstr "Chiudi"
 
+msgid "Comment"
+msgstr ""
+
 msgid "Confirmation"
 msgstr "Conferma"
+
+msgid "Custom"
+msgstr ""
 
 msgid "Developer"
 msgstr "Sviluppo"
@@ -57,6 +66,9 @@ msgstr "Dotdeb"
 
 msgid "Downloading package information"
 msgstr "Download informazioni pacchetto"
+
+msgid "Edit repo"
+msgstr ""
 
 msgid "Enable BTSync repository"
 msgstr "Abilita repository BTSync"
@@ -104,22 +116,22 @@ msgstr "Greyhole"
 msgid ""
 "If the system does not boot using the 3.12 kernel, the boot menu will still "
 "have the option to boot the 3.2 kernel."
-msgstr ""
+msgstr "Se il sistema non parte usando il kernel 3.12, il menu di boot avrà comunque l'opzione di avviare il kernel 3.2."
 
 msgid "Information"
 msgstr "Informazioni"
 
 msgid "Install Backports 3.12 kernel"
-msgstr ""
+msgstr "Installa kernel 3.12 backport"
 
 msgid "Install Backports 3.12 kernel ..."
-msgstr ""
+msgstr "Installa kernel 3.12 backport ..."
 
 msgid "Install systemd"
-msgstr ""
+msgstr "Installa systemd"
 
 msgid "Install systemd..."
-msgstr ""
+msgstr "Installa systemd..."
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -129,6 +141,9 @@ msgstr "Miller"
 
 msgid "Miller Testing"
 msgstr "Miller Sperimentale"
+
+msgid "Name"
+msgstr ""
 
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
@@ -141,6 +156,9 @@ msgstr "Primario"
 
 msgid "Reload"
 msgstr "Ricarica"
+
+msgid "Repo"
+msgstr ""
 
 msgid "Repositories"
 msgstr "Repository"
@@ -165,7 +183,7 @@ msgid "These repositories may break your system.  Use caution!!"
 msgstr "Questi repository possono danneggiare il sistema. Fate attenzione!!"
 
 msgid "This will not uninstall the 3.2 kernel."
-msgstr ""
+msgstr "Questo non disinstallerà il kernel 3.2."
 
 msgid "Utilities"
 msgstr "Utility"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-11 06:59-0600\n"
-"PO-Revision-Date: 2014-02-11 12:59+0000\n"
+"POT-Creation-Date: 2014-02-27 08:57-0600\n"
+"PO-Revision-Date: 2014-02-27 14:57+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,6 +16,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: en_US\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Add repo"
+msgstr "Add repo"
 
 msgid "Additional Repositories"
 msgstr "Additional Repositories"
@@ -41,8 +44,14 @@ msgstr "Cleans apt repositories and removes lists."
 msgid "Close"
 msgstr "Close"
 
+msgid "Comment"
+msgstr "Comment"
+
 msgid "Confirmation"
 msgstr "Confirmation"
+
+msgid "Custom"
+msgstr "Custom"
 
 msgid "Developer"
 msgstr "Developer"
@@ -55,6 +64,9 @@ msgstr "Dotdeb"
 
 msgid "Downloading package information"
 msgstr "Downloading package information"
+
+msgid "Edit repo"
+msgstr "Edit repo"
 
 msgid "Enable BTSync repository"
 msgstr "Enable BTSync repository"
@@ -128,6 +140,9 @@ msgstr "Miller"
 msgid "Miller Testing"
 msgstr "Miller Testing"
 
+msgid "Name"
+msgstr "Name"
+
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
 
@@ -139,6 +154,9 @@ msgstr "Primary"
 
 msgid "Reload"
 msgstr "Reload"
+
+msgid "Repo"
+msgstr "Repo"
 
 msgid "Repositories"
 msgstr "Repositories"
