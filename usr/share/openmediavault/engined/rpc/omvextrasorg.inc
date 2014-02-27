@@ -38,10 +38,18 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
     public function initialize() {
         $this->registerMethod("getPrimary");
         $this->registerMethod("setPrimary");
+
         $this->registerMethod("getSecondary");
         $this->registerMethod("setSecondary");
+
+        $this->registerMethod("getRepos");
+        $this->registerMethod("getRepo");
+        $this->registerMethod("setRepo");
+        $this->registerMethod("deleteRepo");
+
         $this->registerMethod("getDeveloper");
         $this->registerMethod("setDeveloper");
+
         $this->registerMethod("doInstallBackports");
         $this->registerMethod("doInstallSystemd");
         $this->registerMethod("doAptClean");
@@ -63,6 +71,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $object['enable']   = boolval($object['enable']);
         $object['testing']  = boolval($object['testing']);
 
+        // Get omv-extras version
         $cmd = sprintf("dpkg-query -W -f='\${Version}' %s", "openmediavault-omvextrasorg");
         OMVUtil::exec($cmd, $output, $result);
 
@@ -70,10 +79,14 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
 
         $output = array();
 
+        // Get kernel version
         $cmd = "uname -r";
         OMVUtil::exec($cmd, $output, $result);
 
         $object['kernel'] = $output[0];
+
+        // Remove useless fields from the result object.
+        unset($object['repo']);
 
         return $object;
     }
@@ -117,7 +130,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "beta"          => array_boolval($object, 'beta'),
             "dotdeb"        => array_boolval($object, 'dotdeb'),
             "debmm"         => array_boolval($object, 'debmm'),
-            "debmmbp"       => array_boolval($object, 'debmmbp')
+            "debmmbp"       => array_boolval($object, 'debmmbp'),
+            "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array()
         );
         if(FALSE === $xmlConfig->replace("//system/omvextrasorg", $object))
             throw new OMVException(OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED);
@@ -157,6 +171,9 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $object['miller']        = boolval($object['miller']);
         $object['millertesting'] = boolval($object['millertesting']);
         $object['btsync']        = boolval($object['btsync']);
+
+        // Remove useless fields from the result object.
+        unset($object['repos']);
 
         return $object;
     }
@@ -211,7 +228,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "beta"          => array_boolval($object, 'beta'),
             "dotdeb"        => array_boolval($object, 'dotdeb'),
             "debmm"         => array_boolval($object, 'debmm'),
-            "debmmbp"       => array_boolval($object, 'debmmbp')
+            "debmmbp"       => array_boolval($object, 'debmmbp'),
+            "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array()
         );
 
         if(FALSE === $xmlConfig->replace("//system/omvextrasorg", $object))
@@ -232,6 +250,126 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         return $object;
     }
 
+    public function getRepos($params, $context) {
+        global $xmlConfig;
+
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+
+        // Validate the parameters of the RPC service method.
+        $this->validateMethodParams($params, '{
+            "type"       : "object",
+            "properties" : {
+                "start"     : { "type" : "integer" },
+                "limit"     : { '.$GLOBALS['OMV_JSONSCHEMA_COUNTFIELD'].' },
+                "sortfield" : { '.$GLOBALS['OMV_JSONSCHEMA_SORTFIELD'].' },
+                "sortdir"   : { '.$GLOBALS['OMV_JSONSCHEMA_SORTDIR'].' }
+            }
+        }');
+
+        // Get configuration data.
+        $xpath = "//system/omvextrasorg/repos/repo";
+        $objects = $xmlConfig->getList($xpath);
+        if(is_null($objects))
+            throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
+
+        // Filter the result.
+        return $this->applyFilter($objects, $params['start'], $params['limit'],
+            $params['sortfield'], $params['sortdir']);
+    }
+
+    public function getRepo($params, $context) {
+        global $xmlConfig;
+
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, array("role" => OMV_ROLE_ADMINISTRATOR));
+
+        // Validate the parameters of the RPC service method.
+        $this->validateMethodParams($params, '{
+            "type"       : "object",
+            "properties" : {
+                "uuid" : { '.$GLOBALS['OMV_JSONSCHEMA_UUID'].' }
+            }
+        }');
+
+        // Get the configuration object.
+        $xpath = sprintf("//system/omvextrasorg/repos/repo[uuid='%s']", $params['uuid']);
+        $object = $xmlConfig->get($xpath);
+        if(is_null($object))
+            throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
+
+        return $object;
+    }
+
+    public function setRepo($params, $context) {
+        global $xmlConfig;
+
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+
+        // Validate the parameters of the RPC service method.
+        $this->validateMethodParams($params, '{
+            "type"       : "object",
+            "properties" : {
+                "uuid"    : { '.$GLOBALS['OMV_JSONSCHEMA_UUID_UNDEFINED'].' },
+                "name"    : { "type" : "string" },
+                "repo"    : { "type" : "string" },
+                "comment" : { "type" : "string" }
+            }
+        }');
+
+        // Prepare configuration data.
+        $object = array(
+            "uuid"    => ($params['uuid'] == $GLOBALS['OMV_UUID_UNDEFINED']) ? OMVUtil::uuid() : $params['uuid'],
+            "name"    => $params['name'],
+            "repo"    => $params['repo'],
+            "comment" => $params['comment']
+        );
+
+        // Set the configuration data.
+        $success = FALSE;
+        if($params['uuid'] == $GLOBALS['OMV_UUID_UNDEFINED']) {
+            // Append object to configuration.
+            $success = $xmlConfig->set("//system/omvextrasorg/repos", array("repo" => $object));
+        } else {
+            // Update existing configuration object.
+            $success = $xmlConfig->replace("//system/omvextrasorg/repos/repo[uuid='{$params['uuid']}']", $object);
+        }
+
+        if(FALSE === $success)
+            throw new OMVException(OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED);
+
+        // Notify configuration changes.
+        $dispatcher = &OMVNotifyDispatcher::getInstance();
+        $dispatcher->notify(($params['uuid'] == $GLOBALS['OMV_UUID_UNDEFINED']) ?
+            OMV_NOTIFY_CREATE : OMV_NOTIFY_MODIFY,
+            "org.openmediavault.system.omvextrasorg.repos.repo", $object);
+
+        // Return the configuration object.
+        return $object;
+    }
+
+
+    public function deleteRepo($params, $context) {
+        global $xmlConfig;
+
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+
+        // Validate the parameters of the RPC service method.
+        $this->validateMethodParams($params, '{
+            "type"       : "object",
+            "properties" : {
+                "uuid" : { '.$GLOBALS['OMV_JSONSCHEMA_UUID'].' }
+            }
+        }');
+
+        // Delete the configuration object.
+        $xpath = sprintf("//system/omvextrasorg/repos/repo[uuid='%s']", $params['uuid']);
+        return $this->deleteConfigObjectByPath($xpath,
+            "org.openmediavault.system.omvextrasorg.repos.repo");
+    }
+
     public function getDeveloper($params, $context) {
         global $xmlConfig;
 
@@ -249,6 +387,9 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $object['dotdeb']  = boolval($object['dotdeb']);
         $object['debmm']   = boolval($object['debmm']);
         $object['debmmbp'] = boolval($object['debmmbp']);
+
+        // Remove useless fields from the result object.
+        unset($object['repos']);
 
         return $object;
     }
@@ -291,7 +432,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "beta"          => array_boolval($params, 'beta'),
             "dotdeb"        => array_boolval($params, 'dotdeb'),
             "debmm"         => array_boolval($params, 'debmm'),
-            "debmmbp"       => array_boolval($params, 'debmmbp')
+            "debmmbp"       => array_boolval($params, 'debmmbp'),
+            "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array()
         );
         if(FALSE === $xmlConfig->replace("//system/omvextrasorg", $object))
             throw new OMVException(OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED);

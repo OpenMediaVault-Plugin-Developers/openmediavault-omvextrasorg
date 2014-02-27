@@ -24,99 +24,31 @@ set -e
 . /etc/default/openmediavault
 . /usr/share/openmediavault/scripts/helper-functions
 
-ARM=false
-ARCH="`/bin/uname -m`"
-
-case "$ARCH" in
-    *arm*)
-        ARM=true
-    ;;
-esac
-
 case "$1" in
     configure)
 
-        ########################################################################
-        #  Update the configuration.
-        #   <config>
-        #       <system>
-        #           <omvextrasorg>
-        #               <enable>1</enable>
-        #               <testing>0</testing>
-        #               <vbox>0</vbox>
-        #               <plex>0</plex>
-        #               <greyhole>0</greyhole>
-        #               <vdr>0</vdr>
-        #               <miller>0</miller>
-        #               <millertesting>0</millertesting>
-        #               <btsync>0</btsync>
-        #               <beta>0</beta>
-        #               <dotdeb>0</dotdeb>
-        #               <debmm>0</debmm>
-        #               <debmmbp>0</debmmbp>
-        #           </omvextrasorg>
-        #       </system>
-        #   </config>
-        ########################################################################
-
-        echo "Initialize configuration"
-
         if ! omv_config_exists "/config/system/omvextrasorg"; then
-            ENABLE="1"
-            TESTING="0"
-            VBOX="0"
-            PLEX="0"
-            GREYHOLE="0"
-            VDR="0"
-            MILLER="0"
-            MILLERTESTING="0"
-            BTSYNC="0"
-            BETA="0"
-            DOTDEB="0"
-            DEBMM="0"
-            DEBMMBP="0"
-        else
-            echo "Importing previous configuration"
-            ENABLE="$(omv_config_get "/config/system/omvextrasorg/enable")"
-            TESTING="$(omv_config_get "/config/system/omvextrasorg/testing")"
-            VBOX="$(omv_config_get "/config/system/omvextrasorg/vbox")"
-            PLEX="$(omv_config_get "/config/system/omvextrasorg/plex")"
-            GREYHOLE="$(omv_config_get "/config/system/omvextrasorg/greyhole")"
-            VDR="$(omv_config_get "/config/system/omvextrasorg/vdr")"
-            MILLER="$(omv_config_get "/config/system/omvextrasorg/miller")"
-            MILLERTESTING="$(omv_config_get "/config/system/omvextrasorg/millertesting")"
-            BTSYNC="$(omv_config_get "/config/system/omvextrasorg/btsync")"
-            BETA="$(omv_config_get "/config/system/omvextrasorg/beta")"
-            DOTDEB="$(omv_config_get "/config/system/omvextrasorg/dotdeb")"
-            DEBMM="$(omv_config_get "/config/system/omvextrasorg/debmm")"
-            DEBMMBP="$(omv_config_get "/config/system/omvextrasorg/debmmbp")"
+            echo "Initialize configuration"
+            object="<enable>1</enable>"
+            object="${object}<testing>0</testing>"
+            object="${object}<developer>n/a</developer>"
+            object="${object}<vbox>0</vbox>"
+            object="${object}<plex>0</plex>"
+            object="${object}<greyhole>0</greyhole>"
+            object="${object}<vdr>0</vdr>"
+            object="${object}<miller>0</miller>"
+            object="${object}<millertesting>0</millertesting>"
+            object="${object}<btsync>0</btsync>"
+            object="${object}<beta>0</beta>"
+            object="${object}<dotdeb>0</dotdeb>"
+            object="${object}<debmm>0</debmm>"
+            object="${object}<debmmbp>0</debmmbp>"
+            omv_config_add_element "/config/system" "omvextrasorg" "${object}" true
         fi
 
-        if $ARM; then
-            VBOX="0"
-            PLEX="0"
-            GREYHOLE="0"
-            VDR="0"
+        if ! omv_config_exists "/config/system/omvextrasorg/repos"; then
+            omv_config_add_element "/config/system/omvextrasorg" "repos" true
         fi
-
-        omv_config_delete "/config/system/omvextrasorg"
-
-        object="<enable>${ENABLE}</enable>"
-        object="${object}<testing>${TESTING}</testing>"
-        object="${object}<developer>n/a</developer>"
-        object="${object}<vbox>${VBOX}</vbox>"
-        object="${object}<plex>${PLEX}</plex>"
-        object="${object}<greyhole>${GREYHOLE}</greyhole>"
-        object="${object}<vdr>${VDR}</vdr>"
-        object="${object}<miller>${MILLER}</miller>"
-        object="${object}<millertesting>${MILLER}</millertesting>"
-        object="${object}<btsync>${BTSYNC}</btsync>"
-        object="${object}<beta>${BETA}</beta>"
-        object="${object}<dotdeb>${DOTDEB}</dotdeb>"
-        object="${object}<debmm>${DEBMM}</debmm>"
-        object="${object}<debmmbp>${DEBMMBP}</debmmbp>"
-
-        omv_config_add_element "/config/system" "omvextrasorg" "${object}" true
 
         omv-mkconf omvextrasorg
 

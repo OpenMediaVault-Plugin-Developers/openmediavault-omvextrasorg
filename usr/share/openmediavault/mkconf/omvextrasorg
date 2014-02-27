@@ -24,6 +24,7 @@ set -e
 
 OMVVERSION="kralizec"
 OMVEXTRASREPOFILE="/etc/apt/sources.list.d/omv-extras-org-${OMVVERSION}.list"
+OMVEXTRASCUSTOMREPOFILE="/etc/apt/sources.list.d/omv-extras-org-custom.list"
 RELEASE=$(lsb_release -cs)
 
 /bin/rm -f ${OMVEXTRASREPOFILE}
@@ -103,3 +104,20 @@ else
         echo "deb http://www.deb-multimedia.org ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
     fi
 fi
+
+# Process repos
+echo "# Custom repos" > ${OMVEXTRASCUSTOMREPOFILE}
+count=$(omv_config_get_count "//system/omvextrasorg/repos/repo")
+index=0
+while [ ${index} -le ${count} ]; do
+
+    name=$(omv_config_get "//system/omvextrasorg/repos/repo[position()=${index}]/name")
+    repo=$(omv_config_get "//system/omvextrasorg/repos/repo[position()=${index}]/repo")
+
+    if [ "${repo}" != "" ]; then
+        echo "# ${name}" >> ${OMVEXTRASCUSTOMREPOFILE}
+        echo "${repo}" >> ${OMVEXTRASCUSTOMREPOFILE}
+    fi
+
+    index=$(( ${index} + 1 ))
+done
