@@ -115,6 +115,13 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
                 handler : Ext.Function.bind(me.onAptCleanButton, me, [ me ]),
                 margin  : "3 0 5 0"
             },{
+                xtype   : "button",
+                name    : "aptcleansilent",
+                text    : _("Apt Clean - Silent"),
+                scope   : this,
+                handler : Ext.Function.bind(me.onAptCleanSilentButton, me, [ me ]),
+                margin  : "3 0 5 0"
+            },{
                 border : false,
                 html   : "<ul>" +
                            "<li>" + _("Cleans apt repositories and removes lists.") + "</li>" +
@@ -177,7 +184,33 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
         }).show();
     },
 
-    onAptCleanButton : function() {
+    onAptCleanButton: function() {
+        var me = this;
+        var wnd = Ext.create("OMV.window.Execute", {
+            title           : _("Cleaning Apt Files and Lists..."),
+            rpcService      : "OmvExtrasOrg",
+            rpcMethod       : "doAptClean",
+            rpcIgnoreErrors : true,
+            hideStartButton : true,
+            hideStopButton  : true,
+            listeners       : {
+                scope     : me,
+                finish    : function(wnd, response) {
+                    wnd.appendValue(_("Done..."));
+                    wnd.setButtonDisabled("close", false);
+                },
+                exception : function(wnd, error) {
+                    OMV.MessageBox.error(null, error);
+                    wnd.setButtonDisabled("close", false);
+                }
+            }
+        });
+        wnd.setButtonDisabled("close", true);
+        wnd.show();
+        wnd.start();
+    },
+
+    onAptCleanSilentButton : function() {
         var me = this;
 
         OMV.MessageBox.wait(null, _("Cleaning Apt Files and Lists..."));
@@ -186,7 +219,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
             relayErrors : false,
             rpcData     : {
                 service  : "OmvExtrasOrg",
-                method   : "doAptClean"
+                method   : "doAptCleanSilent"
             },
             success : function(id, success, response) {
                 me.doReload();
