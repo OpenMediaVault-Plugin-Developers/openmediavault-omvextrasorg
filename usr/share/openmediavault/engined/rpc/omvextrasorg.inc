@@ -53,6 +53,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $this->registerMethod("doInstallBackports");
         $this->registerMethod("doInstallSystemd");
         $this->registerMethod("doAptClean");
+        $this->registerMethod("doAptCleanSilent");
     }
 
     public function getPrimary($params, $context) {
@@ -507,7 +508,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         }
     }
 
-    function doAptClean($params, $context) {
+    function doAptCleanSilent($params, $context) {
         // Validate the RPC caller context.
         $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
 
@@ -532,6 +533,55 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $cmd = "/usr/bin/apt-get update";
         if(0 !== $this->exec($cmd, $output))
             throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
+    }
+
+    function doAptClean($params, $context) {
+        global $xmlConfig;
+
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+
+        // Create a background process.
+        $bgStatusFilename = $this->createBgProcStatus();
+        $pid = $this->fork();
+        if($pid > 0) { // Parent process.
+            $this->initializeBgProcStatus($bgStatusFilename, $pid);
+            return $bgStatusFilename;
+        }
+
+        // Child process.
+        try {
+            $bgOutputFilename = $this->createBgProcOutput();
+            $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
+
+            $cmd = "/usr/bin/apt-get clean";
+            if(0 !== $this->exec($cmd, $output))
+                throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
+
+            $cmd = "dpkg --clear-avail";
+            if(0 !== $this->exec($cmd, $output))
+                throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
+
+            $cmd = "rm -rfv /var/lib/apt/lists/*";
+            if(0 !== $this->exec($cmd, $output))
+                throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
+
+            $cmd = "rm -fv /var/cache/openmediavault/archives/*";
+            if(0 !== $this->exec($cmd, $output))
+                throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
+
+            touch("/var/cache/openmediavault/archives/Packages");
+
+            $cmd = "/usr/bin/apt-get update";
+            if(0 !== $this->exec($cmd, $output))
+                throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
+
+            $this->finalizeBgProcStatus($bgStatusFilename, $output);
+            exit(0);
+        } catch(Exception $e) {
+            $this->finalizeBgProcStatus($bgStatusFilename, "", $e);
+            exit(1);
+        }
     }
 }
 
