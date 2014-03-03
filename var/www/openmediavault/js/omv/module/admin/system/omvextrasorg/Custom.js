@@ -120,6 +120,29 @@ Ext.define("OMV.module.admin.service.omvextrasorg.Custom", {
         me.callParent(arguments);
     },
 
+    getTopToolbarItems: function() {
+        var me = this;
+        var items = me.callParent(arguments);
+        Ext.Array.push(items, {
+            id: me.getId() + "-check",
+            xtype: "button",
+            text: _("Check"),
+            icon: "images/refresh.png",
+            iconCls: Ext.baseCSSPrefix + "btn-icon-16x16",
+            handler: Ext.Function.bind(me.onCheckButton, me, [ me ]),
+            scope: me
+        },{
+            id: me.getId() + "-silent",
+            xtype: "button",
+            text: _("Silent"),
+            icon: "images/refresh.png",
+            iconCls: Ext.baseCSSPrefix + "btn-icon-16x16",
+            handler: Ext.Function.bind(me.onSilentButton, me, [ me ]),
+            scope: me
+        });
+        return items;
+    },
+
     onAddButton : function() {
         var me = this;
         Ext.create("OMV.module.admin.service.omvextrasorg.Repo", {
@@ -162,8 +185,48 @@ Ext.define("OMV.module.admin.service.omvextrasorg.Custom", {
                 }
             }
         });
-    }
+    },
 
+    onCheckButton : function() {
+        var me = this;
+        var wnd = Ext.create("OMV.window.Execute", {
+            title           : _("Checking for new updates ..."),
+            rpcService      : "Apt",
+            rpcMethod       : "update",
+            rpcIgnoreErrors : true,
+            hideStartButton : true,
+            hideStopButton  : true,
+            listeners       : {
+                scope     : me,
+                finish    : function(wnd, response) {
+                    wnd.appendValue(_("Done..."));
+                    wnd.setButtonDisabled("close", false);
+                },
+                exception : function(wnd, error) {
+                    OMV.MessageBox.error(null, error);
+                    wnd.setButtonDisabled("close", false);
+                }
+            }
+        });
+        wnd.setButtonDisabled("close", true);
+        wnd.show();
+        wnd.start();
+    },
+
+    onSilentButton : function() {
+        var me = this;
+        OMV.RpcObserver.request({
+            msg     : _("Checking for new updates ..."),
+            rpcData : {
+                service : "Apt",
+                method  : "update"
+            },
+            scope   : me,
+            finish  : function() {
+                this.doReload();
+            }
+        });
+    }
 });
 
 OMV.WorkspaceManager.registerPanel({
