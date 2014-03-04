@@ -32,8 +32,8 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Developer", {
         ptype        : "linkedfields",
         correlations : [{
             conditions : [{
-                name  : "versionname",
-                value : "kralizec"
+                name  : "kralizec",
+                value : true
             }],
             name       : [
                 "utilities"
@@ -113,6 +113,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Developer", {
             xtype         : "fieldset",
             title         : _("Utilities"),
             name          : "utilities",
+            hidden        : true,
             fieldDefaults : {
                 labelSeparator : ""
             },

@@ -77,6 +77,20 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $prd = new OMVProduct();
         $object['versionname'] = strtolower( $prd->getVersionName() );
 
+        switch ( $object['versionname'] ) {
+            case "sardaukar":
+                $object['sardaukar'] = true;
+                $object['kralizec']  = false;
+                break;
+            case "kralizec":
+                $object['sardaukar'] = false;
+                $object['kralizec']  = true;
+                break;
+            default:
+                $object['sardaukar'] = false;
+                $object['kralizec']  = false;
+        }
+
         // Get omv-extras version
         $cmd = sprintf("dpkg-query -W -f='\${Version}' %s", "openmediavault-omvextrasorg");
         OMVUtil::exec($cmd, $output, $result);
@@ -391,7 +405,12 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         // Get OMV version name
         $prd = new OMVProduct();
         $object['versionname'] = strtolower( $prd->getVersionName() );
-        
+
+        if( $object['versionname'] == "kralizec" )
+            $object['kralizec'] = true;
+        else
+            $object['kralizec'] = false;
+
         // Remove useless fields from the result object.
         unset($object['repos']);
 
@@ -458,7 +477,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         return $object;
     }
 
-    function doInstallBackports32($params, $context) {
+    function doInstallBackports($params, $context) {
         // Validate the RPC caller context.
         $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
 
