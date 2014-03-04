@@ -512,25 +512,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         // Validate the RPC caller context.
         $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
 
-        $cmd = "/usr/bin/apt-get clean";
-        if(0 !== $this->exec($cmd, $output))
-            throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
-
-        $cmd = "dpkg --clear-avail";
-        if(0 !== $this->exec($cmd, $output))
-            throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
-
-        $cmd = "rm -rf /var/lib/apt/lists/*";
-        if(0 !== $this->exec($cmd, $output))
-            throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
-
-        $cmd = "rm -f /var/cache/openmediavault/archives/*";
-        if(0 !== $this->exec($cmd, $output))
-            throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
-
-        touch("/var/cache/openmediavault/archives/Packages");
-
-        $cmd = "/usr/bin/apt-get update";
+        $cmd = "/usr/local/bin/aptclean";
         if(0 !== $this->exec($cmd, $output))
             throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
     }
@@ -554,25 +536,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             $bgOutputFilename = $this->createBgProcOutput();
             $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
 
-            $cmd = "/usr/bin/apt-get clean";
-            if(0 !== $this->exec($cmd, $output))
-                throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
-
-            $cmd = "dpkg --clear-avail";
-            if(0 !== $this->exec($cmd, $output))
-                throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
-
-            $cmd = "rm -rfv /var/lib/apt/lists/*";
-            if(0 !== $this->exec($cmd, $output))
-                throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
-
-            $cmd = "rm -fv /var/cache/openmediavault/archives/*";
-            if(0 !== $this->exec($cmd, $output))
-                throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
-
-            touch("/var/cache/openmediavault/archives/Packages");
-
-            $cmd = "/usr/bin/apt-get update";
+            $cmd = "/usr/local/bin/aptclean";
             if(0 !== $this->exec($cmd, $output))
                 throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
 
