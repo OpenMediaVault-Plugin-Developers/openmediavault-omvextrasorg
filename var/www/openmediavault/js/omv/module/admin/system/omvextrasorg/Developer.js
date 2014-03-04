@@ -32,13 +32,13 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Developer", {
         ptype        : "linkedfields",
         correlations : [{
             conditions : [{
-                name  : "kralizec",
-                value : true
+                name  : "versionname",
+                value : "kralizec"
             }],
             name       : [
                 "utilities"
             ],
-            properties : "!hidden"
+            properties : "show"
         }]
     }],
 

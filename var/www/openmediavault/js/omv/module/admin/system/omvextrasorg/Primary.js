@@ -35,22 +35,22 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
         ptype        : "linkedfields",
         correlations : [{
             conditions : [{
-                name  : "sardaukar",
-                value : true
+                name  : "versionname",
+                value : "sardaukar"
             }],
             name       : [
                 "backport32"
             ],
-            properties : "!hidden"
+            properties : "show"
         },{
             conditions : [{
-                name  : "kralizec",
-                value : true
+                name  : "versionname",
+                value : "kralizec"
             }],
             name       : [
                 "backports312"
             ],
-            properties : "!hidden"
+            properties : "show"
         }]
     }],
 
