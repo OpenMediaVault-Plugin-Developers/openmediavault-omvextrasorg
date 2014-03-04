@@ -129,6 +129,9 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Developer", {
                 handler : Ext.Function.bind(me.onInstallSystemdButton, me, [ me ]),
                 margin  : "5 0 10 0"
             }]
+        },{
+            xtype : "hidden",
+            name  : "versionname"
         }];
     },
 
