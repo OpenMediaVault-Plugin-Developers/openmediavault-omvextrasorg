@@ -113,14 +113,14 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
                 text    : _("Apt Clean"),
                 scope   : this,
                 handler : Ext.Function.bind(me.onAptCleanButton, me, [ me ]),
-                margin  : "3 0 5 0"
+                margin  : "5 10 0 0"
             },{
                 xtype   : "button",
                 name    : "aptcleansilent",
                 text    : _("Apt Clean - Silent"),
                 scope   : this,
                 handler : Ext.Function.bind(me.onAptCleanSilentButton, me, [ me ]),
-                margin  : "3 0 5 0"
+                margin  : "5 0 0 0"
             },{
                 border : false,
                 html   : "<ul>" +
@@ -133,7 +133,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
                 text    : _("Install Backports 3.12 kernel"),
                 scope   : this,
                 handler : Ext.Function.bind(me.onBackportsButton, me, [ me ]),
-                margin  : "0 0 5 0"
+                margin  : "0 0 0 0"
             },{
                 border : false,
                 html   : "<ul>" +

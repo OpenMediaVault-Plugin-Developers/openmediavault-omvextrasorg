@@ -28,7 +28,7 @@
 // require("js/omv/data/Model.js")
 // require("js/omv/data/proxy/Rpc.js")
 
-Ext.define("OMV.module.admin.service.omvextrasorg.Repo", {
+Ext.define("OMV.module.admin.system.omvextrasorg.Repo", {
     extend   : "OMV.workspace.window.Form",
     requires : [
         "OMV.workspace.window.plugin.ConfigObject"
@@ -61,7 +61,7 @@ Ext.define("OMV.module.admin.service.omvextrasorg.Repo", {
     }
 });
 
-Ext.define("OMV.module.admin.service.omvextrasorg.Custom", {
+Ext.define("OMV.module.admin.system.omvextrasorg.Custom", {
     extend   : "OMV.workspace.grid.Panel",
     requires : [
         "OMV.Rpc",
@@ -71,7 +71,7 @@ Ext.define("OMV.module.admin.service.omvextrasorg.Custom", {
         "OMV.util.Format"
     ],
     uses     : [
-        "OMV.module.admin.service.omvextrasorg.Repo"
+        "OMV.module.admin.system.omvextrasorg.Repo"
     ],
 
     hidePagingToolbar : false,
@@ -145,7 +145,7 @@ Ext.define("OMV.module.admin.service.omvextrasorg.Custom", {
 
     onAddButton : function() {
         var me = this;
-        Ext.create("OMV.module.admin.service.omvextrasorg.Repo", {
+        Ext.create("OMV.module.admin.system.omvextrasorg.Repo", {
             title     : _("Add repo"),
             uuid      : OMV.UUID_UNDEFINED,
             listeners : {
@@ -160,7 +160,7 @@ Ext.define("OMV.module.admin.service.omvextrasorg.Custom", {
     onEditButton : function() {
         var me = this;
         var record = me.getSelected();
-        Ext.create("OMV.module.admin.service.omvextrasorg.Repo", {
+        Ext.create("OMV.module.admin.system.omvextrasorg.Repo", {
             title     : _("Edit repo"),
             uuid      : record.get("uuid"),
             listeners : {
@@ -231,8 +231,8 @@ Ext.define("OMV.module.admin.service.omvextrasorg.Custom", {
 
 OMV.WorkspaceManager.registerPanel({
     id        : "scheduledjobs",
-    path      : "/service/omvextrasorg",
+    path      : "/system/omvextrasorg",
     text      : _("Custom"),
     position  : 30,
-    className : "OMV.module.admin.service.omvextrasorg.Custom"
+    className : "OMV.module.admin.system.omvextrasorg.Custom"
 });
