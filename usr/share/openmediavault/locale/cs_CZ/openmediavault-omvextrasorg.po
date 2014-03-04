@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-27 08:57-0600\n"
-"PO-Revision-Date: 2014-02-27 14:57+0000\n"
+"POT-Creation-Date: 2014-03-03 21:25-0600\n"
+"PO-Revision-Date: 2014-03-04 03:25+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -27,6 +27,9 @@ msgstr "Doplňkové repositáře"
 msgid "Apt Clean"
 msgstr "Apt Clean"
 
+msgid "Apt Clean - Silent"
+msgstr ""
+
 msgid "BTSync"
 msgstr "BTSync"
 
@@ -35,6 +38,12 @@ msgstr "Beta"
 
 msgid "Can be helpful in fixing plugin problems."
 msgstr "Může pomoci pří řešení problémů s pluginy"
+
+msgid "Check"
+msgstr ""
+
+msgid "Checking for new updates ..."
+msgstr ""
 
 msgid "Cleaning Apt Files and Lists..."
 msgstr "Čistím Apt soubory a seznamy..."
@@ -59,6 +68,9 @@ msgstr "Vývojář"
 
 msgid "Developer Repositories"
 msgstr "Vývojářský repositář"
+
+msgid "Done..."
+msgstr ""
 
 msgid "Dotdeb"
 msgstr "Dotdeb"
@@ -164,6 +176,9 @@ msgstr "Repositáře"
 
 msgid "Secondary"
 msgstr "Doplňkové"
+
+msgid "Silent"
+msgstr ""
 
 msgid "Testing"
 msgstr "Testovací"

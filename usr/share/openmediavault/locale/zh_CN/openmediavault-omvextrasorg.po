@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-27 08:57-0600\n"
-"PO-Revision-Date: 2014-02-27 14:57+0000\n"
+"POT-Creation-Date: 2014-03-03 21:25-0600\n"
+"PO-Revision-Date: 2014-03-04 03:25+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -19,13 +19,16 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "Add repo"
-msgstr ""
+msgstr "添加源"
 
 msgid "Additional Repositories"
 msgstr "额外源"
 
 msgid "Apt Clean"
 msgstr "清除APT缓存"
+
+msgid "Apt Clean - Silent"
+msgstr ""
 
 msgid "BTSync"
 msgstr "BTSync"
@@ -35,6 +38,12 @@ msgstr "Beta"
 
 msgid "Can be helpful in fixing plugin problems."
 msgstr "尝试修复插件更新安装问题"
+
+msgid "Check"
+msgstr ""
+
+msgid "Checking for new updates ..."
+msgstr ""
 
 msgid "Cleaning Apt Files and Lists..."
 msgstr "清除Apt文件及列表"
@@ -46,19 +55,22 @@ msgid "Close"
 msgstr "关闭"
 
 msgid "Comment"
-msgstr ""
+msgstr "注释"
 
 msgid "Confirmation"
 msgstr "确认"
 
 msgid "Custom"
-msgstr ""
+msgstr "定制"
 
 msgid "Developer"
 msgstr "开发者"
 
 msgid "Developer Repositories"
 msgstr "开发者源"
+
+msgid "Done..."
+msgstr ""
 
 msgid "Dotdeb"
 msgstr "Dotdeb"
@@ -67,7 +79,7 @@ msgid "Downloading package information"
 msgstr "下载软件包信息"
 
 msgid "Edit repo"
-msgstr ""
+msgstr "编辑源"
 
 msgid "Enable BTSync repository"
 msgstr "启用BTSync源"
@@ -142,7 +154,7 @@ msgid "Miller Testing"
 msgstr "Miller Testing"
 
 msgid "Name"
-msgstr ""
+msgstr "名称"
 
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
@@ -157,13 +169,16 @@ msgid "Reload"
 msgstr "重新载入"
 
 msgid "Repo"
-msgstr ""
+msgstr "源"
 
 msgid "Repositories"
 msgstr "源"
 
 msgid "Secondary"
 msgstr "附加选项"
+
+msgid "Silent"
+msgstr ""
 
 msgid "Testing"
 msgstr "测试版"

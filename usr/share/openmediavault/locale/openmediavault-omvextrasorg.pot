@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-27 08:57-0600\n"
+"POT-Creation-Date: 2014-03-03 21:25-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,6 +26,9 @@ msgstr ""
 msgid "Apt Clean"
 msgstr ""
 
+msgid "Apt Clean - Silent"
+msgstr ""
+
 msgid "BTSync"
 msgstr ""
 
@@ -33,6 +36,12 @@ msgid "Beta"
 msgstr ""
 
 msgid "Can be helpful in fixing plugin problems."
+msgstr ""
+
+msgid "Check"
+msgstr ""
+
+msgid "Checking for new updates ..."
 msgstr ""
 
 msgid "Cleaning Apt Files and Lists..."
@@ -57,6 +66,9 @@ msgid "Developer"
 msgstr ""
 
 msgid "Developer Repositories"
+msgstr ""
+
+msgid "Done..."
 msgstr ""
 
 msgid "Dotdeb"
@@ -159,6 +171,9 @@ msgid "Repositories"
 msgstr ""
 
 msgid "Secondary"
+msgstr ""
+
+msgid "Silent"
 msgstr ""
 
 msgid "Testing"
