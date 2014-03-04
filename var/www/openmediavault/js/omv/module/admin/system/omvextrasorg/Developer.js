@@ -28,6 +28,20 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Developer", {
     rpcGetMethod : "getDeveloper",
     rpcSetMethod : "setDeveloper",
 
+    plugins : [{
+        ptype        : "linkedfields",
+        correlations : [{
+            conditions : [{
+                name  : "versionname",
+                value : "kralizec"
+            }],
+            name       : [
+                "utilities"
+            ],
+            properties : "!hidden"
+        }]
+    }],
+
     initComponent : function() {
         var me = this;
         me.callParent(arguments);
@@ -98,6 +112,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Developer", {
         },{
             xtype         : "fieldset",
             title         : _("Utilities"),
+            name          : "utilities",
             fieldDefaults : {
                 labelSeparator : ""
             },

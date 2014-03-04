@@ -31,11 +31,34 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
     rpcGetMethod : "getPrimary",
     rpcSetMethod : "setPrimary",
 
+    plugins : [{
+        ptype        : "linkedfields",
+        correlations : [{
+            conditions : [{
+                name  : "versionname",
+                value : "sardaukar"
+            }],
+            name       : [
+                "backport32"
+            ],
+            properties : "!hidden"
+        },{
+            conditions : [{
+                name  : "versionname",
+                value : "kralizec"
+            }],
+            name       : [
+                "backports312"
+            ],
+            properties : "!hidden"
+        }]
+    }],
+
     initComponent : function () {
         var me = this;
 
         me.on('load', function () {
-            var code = me.findField('developer').getValue();
+            var code   = me.findField('developer').getValue();
             var parent = me.up('tabpanel');
 
             if (!parent)
@@ -129,16 +152,25 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
                          "</ul>"
             },{
                 xtype   : "button",
-                name    : "backports",
+                name    : "backports32",
+                text    : _("Install Backports 3.2 kernel"),
+                scope   : this,
+                handler : Ext.Function.bind(me.onBackports32Button, me, [ me ]),
+                margin  : "0 0 0 0",
+                hidden  : true
+            },{
+                xtype   : "button",
+                name    : "backports312",
                 text    : _("Install Backports 3.12 kernel"),
                 scope   : this,
-                handler : Ext.Function.bind(me.onBackportsButton, me, [ me ]),
-                margin  : "0 0 0 0"
+                handler : Ext.Function.bind(me.onBackports312Button, me, [ me ]),
+                margin  : "0 0 0 0",
+                hidden  : true
             },{
                 border : false,
                 html   : "<ul>" +
-                           "<li>" + _("This will not uninstall the 3.2 kernel.") + "</li>" +
-                           "<li>" + _("If the system does not boot using the 3.12 kernel, the boot menu will still have the option to boot the 3.2 kernel.") + "</li>" +
+                           "<li>" + _("This will not uninstall the standard kernel.") + "</li>" +
+                           "<li>" + _("If the system does not boot using the backports kernel, the boot menu will still have the option to boot the standard kernel.") + "</li>" +
                          "</ul>"
             }]
         },{
@@ -151,6 +183,12 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
                 xtype      : "textfield",
                 name       : "version",
                 fieldLabel : _("Version"),
+                allowBlank : true,
+                readOnly   : true
+            },{
+                xtype      : "textfield",
+                name       : "versionname",
+                fieldLabel : _("Distribution"),
                 allowBlank : true,
                 readOnly   : true
             },{
@@ -168,7 +206,23 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
         }];
     },
 
-    onBackportsButton : function() {
+    onBackports32Button : function() {
+        var me = this;
+        Ext.create("OMV.window.Execute", {
+            title          : _("Install Backports 3.2 kernel ..."),
+            rpcService     : "OmvExtrasOrg",
+            rpcMethod      : "doInstallBackports",
+            hideStopButton : true,
+            listeners      : {
+                scope     : me,
+                exception : function(wnd, error) {
+                    OMV.MessageBox.error(null, error);
+                }
+            }
+        }).show();
+    },
+
+    onBackports312Button : function() {
         var me = this;
         Ext.create("OMV.window.Execute", {
             title          : _("Install Backports 3.12 kernel ..."),

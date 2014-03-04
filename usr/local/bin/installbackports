@@ -1,9 +1,11 @@
 #!/bin/sh
 
+OMVVERSION=$(xmlstarlet sel -t -v "//distribution" ${OMV_PRODUCTINFO_FILE} | xmlstarlet unesc)
+RELEASE=$(lsb_release -cs)
 BACKPORTS_REPO="/etc/apt/sources.list.d/backports.list"
 
-echo "deb http://ftp.debian.org/debian wheezy-backports main contrib non-free" > $BACKPORTS_REPO
-echo "deb http://packages.omv-extras.org/debian/ kralizec-backports main" >> $BACKPORTS_REPO
+echo "deb http://ftp.debian.org/debian ${RELEASE}-backports main contrib non-free" > $BACKPORTS_REPO
+echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-backports main" >> $BACKPORTS_REPO
 
 echo "Updating..."
 apt-get --quiet update > /dev/null 2>&1
@@ -30,13 +32,26 @@ esac
 if $SKIP; then
     echo "Unsupported kernel and/or processor"
 else
-    echo "Install backports 3.12 kernel and headers"
-    apt-get -t wheezy-backports --yes --force-yes --fix-missing install linux-base initramfs-tools=0.115~bpo70+1
-    if $AMD64; then
-        apt-get -t wheezy-backports --yes --force-yes --fix-missing install linux-image-3.12-0.bpo.1-amd64 linux-headers-3.12-0.bpo.1-all firmware-linux firmware-linux-free
-    else
-        apt-get -t wheezy-backports --yes --force-yes --fix-missing install linux-image-3.12-0.bpo.1-486 linux-headers-3.12-0.bpo.1-all firmware-linux firmware-linux-free
-    fi
+    case "${RELEASE}" in
+        squeeze)
+            echo "Install backports 3.2 kernel and headers"
+            apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-base initramfs-tools
+            if $AMD64; then
+                apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.2.0-0.bpo.4-amd64 linux-headers-3.2.0-0.bpo.4-all firmware-linux firmware-linux-free
+            else
+                apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.2.0-0.bpo.4-486 linux-headers-3.2.0-0.bpo.4-all firmware-linux firmware-linux-free
+            fi
+            ;;
+        wheezy)
+            echo "Install backports 3.12 kernel and headers"
+            apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-base initramfs-tools=0.115~bpo70+1
+            if $AMD64; then
+                apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.12-0.bpo.1-amd64 linux-headers-3.12-0.bpo.1-all firmware-linux firmware-linux-free
+            else
+                apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.12-0.bpo.1-486 linux-headers-3.12-0.bpo.1-all firmware-linux firmware-linux-free
+            fi
+            ;;
+    esac
     echo "..."
     echo "Please reboot to use new kernel"
 fi

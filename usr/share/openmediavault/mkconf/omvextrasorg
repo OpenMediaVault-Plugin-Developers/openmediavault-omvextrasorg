@@ -22,7 +22,7 @@ set -e
 . /etc/default/openmediavault
 . /usr/share/openmediavault/scripts/helper-functions
 
-OMVVERSION="kralizec"
+OMVVERSION=$(xmlstarlet sel -t -v "//distribution" ${OMV_PRODUCTINFO_FILE} | xmlstarlet unesc)
 OMVEXTRASREPOFILE="/etc/apt/sources.list.d/omv-extras-org-${OMVVERSION}.list"
 OMVEXTRASCUSTOMREPOFILE="/etc/apt/sources.list.d/omv-extras-org-custom.list"
 RELEASE=$(lsb_release -cs)
@@ -90,8 +90,14 @@ if [ "$(omv_config_get "//system/omvextrasorg/dotdeb")" = "1" ]; then
     echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-dotdeb main" >> ${OMVEXTRASREPOFILE}
     echo "deb http://packages.dotdeb.org ${RELEASE} all" >> ${OMVEXTRASREPOFILE}
     echo "deb-src http://packages.dotdeb.org ${RELEASE} all" >> ${OMVEXTRASREPOFILE}
-    echo "deb http://packages.dotdeb.org ${RELEASE}-php55 all" >> ${OMVEXTRASREPOFILE}
-    echo "deb-src http://packages.dotdeb.org ${RELEASE}-php55 all" >> ${OMVEXTRASREPOFILE}
+
+    if [ "${OMVVERSION}" = "sardaukar" ]; then
+        echo "deb http://packages.dotdeb.org ${RELEASE}-php54 all" >> ${OMVEXTRASREPOFILE}
+        echo "deb-src http://packages.dotdeb.org ${RELEASE}-php54 all" >> ${OMVEXTRASREPOFILE}
+    else
+        echo "deb http://packages.dotdeb.org ${RELEASE}-php55 all" >> ${OMVEXTRASREPOFILE}
+        echo "deb-src http://packages.dotdeb.org ${RELEASE}-php55 all" >> ${OMVEXTRASREPOFILE}
+    fi
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/debmmbp")" = "1" ]; then

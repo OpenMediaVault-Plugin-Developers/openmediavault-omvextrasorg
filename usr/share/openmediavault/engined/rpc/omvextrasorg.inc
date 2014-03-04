@@ -23,6 +23,7 @@ require_once("openmediavault/error.inc");
 require_once("openmediavault/util.inc");
 require_once("openmediavault/rpcservice.inc");
 require_once("openmediavault/notify.inc");
+require_once("openmediavault/product.inc");
 
 class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
     /**
@@ -69,22 +70,20 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
 
         // Modify the result object.
-        $object['enable']   = boolval($object['enable']);
-        $object['testing']  = boolval($object['testing']);
+        $object['enable']  = boolval($object['enable']);
+        $object['testing'] = boolval($object['testing']);
+
+        // Get OMV version name
+        $prd = new OMVProduct();
+        $object['versionname'] = strtolower( $prd->getVersionName() );
 
         // Get omv-extras version
         $cmd = sprintf("dpkg-query -W -f='\${Version}' %s", "openmediavault-omvextrasorg");
         OMVUtil::exec($cmd, $output, $result);
-
         $object['version'] = $output[0];
 
-        $output = array();
-
         // Get kernel version
-        $cmd = "uname -r";
-        OMVUtil::exec($cmd, $output, $result);
-
-        $object['kernel'] = $output[0];
+        $object['kernel'] = php_uname('r');
 
         // Remove useless fields from the result object.
         unset($object['repo']);
@@ -102,11 +101,12 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $this->validateMethodParams($params, '{
             "type"       : "object",
             "properties" : {
-                "enable"    : { "type" : "boolean" },
-                "testing"   : { "type" : "boolean" },
-                "version"   : { "type" : "string", "optional" : true },
-                "kernel"    : { "type" : "string", "optional" : true },
-                "developer" : { "type" : "string", "optional" : true }
+                "enable"      : { "type" : "boolean" },
+                "testing"     : { "type" : "boolean" },
+                "versionname" : { "type" : "string", "optional" : true },
+                "version"     : { "type" : "string", "optional" : true },
+                "kernel"      : { "type" : "string", "optional" : true },
+                "developer"   : { "type" : "string", "optional" : true }
             }
         }');
 
@@ -204,7 +204,6 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         if ( strpos($uname, "x86") === false && strpos($uname, "486") === false && strpos($uname, "686") === false ) {
             $params['vbox']     = false;
             $params['plex']     = false;
-            $params['greyhole'] = false;
             $params['vdr']      = false;
         }
 
@@ -389,6 +388,10 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $object['debmm']   = boolval($object['debmm']);
         $object['debmmbp'] = boolval($object['debmmbp']);
 
+        // Get OMV version name
+        $prd = new OMVProduct();
+        $object['versionname'] = strtolower( $prd->getVersionName() );
+        
         // Remove useless fields from the result object.
         unset($object['repos']);
 
@@ -405,10 +408,11 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $this->validateMethodParams($params, '{
             "type"       : "object",
             "properties" : {
-                "beta"    : { "type" : "boolean" },
-                "dotdeb"  : { "type" : "boolean" },
-                "debmm"   : { "type" : "boolean" },
-                "debmmbp" : { "type" : "boolean" }
+                "beta"        : { "type" : "boolean" },
+                "dotdeb"      : { "type" : "boolean" },
+                "debmm"       : { "type" : "boolean" },
+                "debmmbp"     : { "type" : "boolean" },
+                "versionname" : { "type" : "string", "optional" : true }
             }
         }');
 
@@ -454,7 +458,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         return $object;
     }
 
-    function doInstallBackports($params, $context) {
+    function doInstallBackports32($params, $context) {
         // Validate the RPC caller context.
         $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
 
