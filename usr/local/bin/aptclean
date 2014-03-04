@@ -1,19 +1,19 @@
 #!/bin/sh
 
-echo "Clean apt cache files"
+echo "1. Cleaning apt cache files..."
 /usr/bin/apt-get clean
 
-echo "\nClear available dpkg packages"
+echo "\n2. Clearing available dpkg packages..."
 dpkg --clear-avail
 
-echo "\nRemove apt lists"
+echo "\n3. Removing apt lists..."
 rm -rfv /var/lib/apt/lists/*
 
-echo "\nRemove OpenMediaVault cache packages"
+echo "\n4. Removing OpenMediaVault cache packages..."
 rm -fv /var/cache/openmediavault/archives/*
 
-echo "\nCreate new OpenMediaVault packages file"
+echo "\n5. Creating new OpenMediaVault packages file..."
 touch /var/cache/openmediavault/archives/Packages
 
-echo "\nUpdate apt"
+echo "\n6. Updating apt..."
 /usr/bin/apt-get update
