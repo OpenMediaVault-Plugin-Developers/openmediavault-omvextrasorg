@@ -27,6 +27,10 @@
 Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
     extend : "OMV.workspace.form.Panel",
 
+    requires : [
+        "OMV.form.plugin.LinkedFields"
+    ],
+
     rpcService   : "OmvExtrasOrg",
     rpcGetMethod : "getPrimary",
     rpcSetMethod : "setPrimary",
@@ -39,7 +43,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
                 value : "sardaukar"
             }],
             name       : [
-                "backport32"
+                "backports32"
             ],
             properties : "show"
         },{

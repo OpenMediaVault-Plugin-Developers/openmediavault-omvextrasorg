@@ -24,6 +24,10 @@
 Ext.define("OMV.module.admin.system.omvextrasorg.Developer", {
     extend : "OMV.workspace.form.Panel",
 
+    requires : [
+        "OMV.form.plugin.LinkedFields"
+    ],
+
     rpcService   : "OmvExtrasOrg",
     rpcGetMethod : "getDeveloper",
     rpcSetMethod : "setDeveloper",
