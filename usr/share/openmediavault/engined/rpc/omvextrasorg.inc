@@ -518,8 +518,6 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
     }
 
     function doAptClean($params, $context) {
-        global $xmlConfig;
-
         // Validate the RPC caller context.
         $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
 
@@ -537,11 +535,9 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
 
             $cmd = "/usr/local/bin/aptclean";
-            if(0 !== $this->exec($cmd, $output))
-                throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
-
+            $this->exec($cmd, $output, $bgOutputFilename);
             $this->finalizeBgProcStatus($bgStatusFilename, $output);
-            exit(0);
+
         } catch(Exception $e) {
             $this->finalizeBgProcStatus($bgStatusFilename, "", $e);
             exit(1);
