@@ -47,7 +47,7 @@ case "$1" in
         fi
 
         if ! omv_config_exists "/config/system/omvextrasorg/repos"; then
-            omv_config_add_element "/config/system/omvextrasorg" "repos" true
+            omv_config_add_element "/config/system/omvextrasorg" "repos" ""
         fi
 
         omv-mkconf omvextrasorg
@@ -62,6 +62,8 @@ case "$1" in
             apt-key add /usr/share/keyrings/e-tobi-keyring.gpg
             apt-key add /usr/share/keyrings/btsync.gpg
         fi
+
+        chattr +i /etc/apt/sources.list
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

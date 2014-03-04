@@ -51,6 +51,11 @@ class OMVModuleOmvExtrasOrg extends OMVModuleServiceAbstract
             OMV_NOTIFY_MODIFY,
             "org.openmediavault.system.omvextrasorg",
             array($this, "setDirty"));
+
+        $dispatcher->addListener(
+            OMV_NOTIFY_CREATE | OMV_NOTIFY_MODIFY | OMV_NOTIFY_DELETE,
+            "org.openmediavault.system.omvextrasorg.repos.repo",
+            array($this, "setDirty"));
     }
 }
 
