@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-03 21:25-0600\n"
-"PO-Revision-Date: 2014-03-04 03:25+0000\n"
+"POT-Creation-Date: 2014-03-04 15:05-0600\n"
+"PO-Revision-Date: 2014-03-04 21:06+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -69,6 +69,9 @@ msgstr "Udvikler"
 msgid "Developer Repositories"
 msgstr "Udvikler Arkiver"
 
+msgid "Distribution"
+msgstr ""
+
 msgid "Done..."
 msgstr ""
 
@@ -125,8 +128,8 @@ msgid "Greyhole"
 msgstr "Greyhole"
 
 msgid ""
-"If the system does not boot using the 3.12 kernel, the boot menu will still "
-"have the option to boot the 3.2 kernel."
+"If the system does not boot using the backports kernel, the boot menu will "
+"still have the option to boot the standard kernel."
 msgstr ""
 
 msgid "Information"
@@ -136,6 +139,12 @@ msgid "Install Backports 3.12 kernel"
 msgstr ""
 
 msgid "Install Backports 3.12 kernel ..."
+msgstr ""
+
+msgid "Install Backports 3.2 kernel"
+msgstr ""
+
+msgid "Install Backports 3.2 kernel ..."
 msgstr ""
 
 msgid "Install systemd"
@@ -196,7 +205,7 @@ msgstr "Arkivet vil blive kontrolleret for ny, fjernet eller opgraderet software
 msgid "These repositories may break your system.  Use caution!!"
 msgstr "Disse arkiver kan ødelægge dit system. Brug med forsigtighed!!"
 
-msgid "This will not uninstall the 3.2 kernel."
+msgid "This will not uninstall the standard kernel."
 msgstr ""
 
 msgid "Utilities"

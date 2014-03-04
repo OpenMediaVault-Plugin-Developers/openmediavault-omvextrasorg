@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-03 21:25-0600\n"
-"PO-Revision-Date: 2014-03-04 03:25+0000\n"
+"POT-Creation-Date: 2014-03-04 15:05-0600\n"
+"PO-Revision-Date: 2014-03-04 21:06+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -68,6 +68,9 @@ msgstr "Developer"
 msgid "Developer Repositories"
 msgstr "Developer Repositories"
 
+msgid "Distribution"
+msgstr "Distribution"
+
 msgid "Done..."
 msgstr "Done..."
 
@@ -124,9 +127,9 @@ msgid "Greyhole"
 msgstr "Greyhole"
 
 msgid ""
-"If the system does not boot using the 3.12 kernel, the boot menu will still "
-"have the option to boot the 3.2 kernel."
-msgstr "If the system does not boot using the 3.12 kernel, the boot menu will still have the option to boot the 3.2 kernel."
+"If the system does not boot using the backports kernel, the boot menu will "
+"still have the option to boot the standard kernel."
+msgstr "If the system does not boot using the backports kernel, the boot menu will still have the option to boot the standard kernel."
 
 msgid "Information"
 msgstr "Information"
@@ -136,6 +139,12 @@ msgstr "Install Backports 3.12 kernel"
 
 msgid "Install Backports 3.12 kernel ..."
 msgstr "Install Backports 3.12 kernel ..."
+
+msgid "Install Backports 3.2 kernel"
+msgstr "Install Backports 3.2 kernel"
+
+msgid "Install Backports 3.2 kernel ..."
+msgstr "Install Backports 3.2 kernel ..."
 
 msgid "Install systemd"
 msgstr "Install systemd"
@@ -195,8 +204,8 @@ msgstr "The repository will be checked for new, removed or upgraded software pac
 msgid "These repositories may break your system.  Use caution!!"
 msgstr "These repositories may break your system.  Use caution!!"
 
-msgid "This will not uninstall the 3.2 kernel."
-msgstr "This will not uninstall the 3.2 kernel."
+msgid "This will not uninstall the standard kernel."
+msgstr "This will not uninstall the standard kernel."
 
 msgid "Utilities"
 msgstr "Utilities"

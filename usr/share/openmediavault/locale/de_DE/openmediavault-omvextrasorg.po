@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-03 21:25-0600\n"
-"PO-Revision-Date: 2014-03-04 03:25+0000\n"
+"POT-Creation-Date: 2014-03-04 15:05-0600\n"
+"PO-Revision-Date: 2014-03-04 21:06+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -70,6 +70,9 @@ msgstr "Entwickler"
 msgid "Developer Repositories"
 msgstr "Entwickler Paketquellen"
 
+msgid "Distribution"
+msgstr ""
+
 msgid "Done..."
 msgstr ""
 
@@ -126,8 +129,8 @@ msgid "Greyhole"
 msgstr "Greyhole"
 
 msgid ""
-"If the system does not boot using the 3.12 kernel, the boot menu will still "
-"have the option to boot the 3.2 kernel."
+"If the system does not boot using the backports kernel, the boot menu will "
+"still have the option to boot the standard kernel."
 msgstr ""
 
 msgid "Information"
@@ -137,6 +140,12 @@ msgid "Install Backports 3.12 kernel"
 msgstr ""
 
 msgid "Install Backports 3.12 kernel ..."
+msgstr ""
+
+msgid "Install Backports 3.2 kernel"
+msgstr ""
+
+msgid "Install Backports 3.2 kernel ..."
 msgstr ""
 
 msgid "Install systemd"
@@ -197,7 +206,7 @@ msgstr "Die Paketquelle wird auf neue, entfernte und aktualisierte Softwarepaket
 msgid "These repositories may break your system.  Use caution!!"
 msgstr "Diese Paketquellen können Ihr System beeinträchtigen. Benutzen Sie diese mit Vorsicht!"
 
-msgid "This will not uninstall the 3.2 kernel."
+msgid "This will not uninstall the standard kernel."
 msgstr ""
 
 msgid "Utilities"

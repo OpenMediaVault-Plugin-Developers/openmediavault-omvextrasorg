@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-03 21:25-0600\n"
-"PO-Revision-Date: 2014-03-04 03:25+0000\n"
+"POT-Creation-Date: 2014-03-04 15:05-0600\n"
+"PO-Revision-Date: 2014-03-04 21:06+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -70,6 +70,9 @@ msgstr "Sviluppo"
 msgid "Developer Repositories"
 msgstr "Repository sviluppatori"
 
+msgid "Distribution"
+msgstr ""
+
 msgid "Done..."
 msgstr ""
 
@@ -126,9 +129,9 @@ msgid "Greyhole"
 msgstr "Greyhole"
 
 msgid ""
-"If the system does not boot using the 3.12 kernel, the boot menu will still "
-"have the option to boot the 3.2 kernel."
-msgstr "Se il sistema non parte usando il kernel 3.12, il menu di boot avrà comunque l'opzione di avviare il kernel 3.2."
+"If the system does not boot using the backports kernel, the boot menu will "
+"still have the option to boot the standard kernel."
+msgstr ""
 
 msgid "Information"
 msgstr "Informazioni"
@@ -138,6 +141,12 @@ msgstr "Installa kernel 3.12 backport"
 
 msgid "Install Backports 3.12 kernel ..."
 msgstr "Installa kernel 3.12 backport ..."
+
+msgid "Install Backports 3.2 kernel"
+msgstr ""
+
+msgid "Install Backports 3.2 kernel ..."
+msgstr ""
 
 msgid "Install systemd"
 msgstr "Installa systemd"
@@ -197,8 +206,8 @@ msgstr "Il repository sarà controllato per pacchetti nuovi, rimossi o aggiornat
 msgid "These repositories may break your system.  Use caution!!"
 msgstr "Questi repository possono danneggiare il sistema. Fate attenzione!!"
 
-msgid "This will not uninstall the 3.2 kernel."
-msgstr "Questo non disinstallerà il kernel 3.2."
+msgid "This will not uninstall the standard kernel."
+msgstr ""
 
 msgid "Utilities"
 msgstr "Utility"

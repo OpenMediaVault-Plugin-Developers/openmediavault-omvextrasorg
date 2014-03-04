@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-03 21:25-0600\n"
+"POT-Creation-Date: 2014-03-04 15:05-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,6 +68,9 @@ msgstr ""
 msgid "Developer Repositories"
 msgstr ""
 
+msgid "Distribution"
+msgstr ""
+
 msgid "Done..."
 msgstr ""
 
@@ -122,7 +125,7 @@ msgstr ""
 msgid "Greyhole"
 msgstr ""
 
-msgid "If the system does not boot using the 3.12 kernel, the boot menu will still have the option to boot the 3.2 kernel."
+msgid "If the system does not boot using the backports kernel, the boot menu will still have the option to boot the standard kernel."
 msgstr ""
 
 msgid "Information"
@@ -132,6 +135,12 @@ msgid "Install Backports 3.12 kernel"
 msgstr ""
 
 msgid "Install Backports 3.12 kernel ..."
+msgstr ""
+
+msgid "Install Backports 3.2 kernel"
+msgstr ""
+
+msgid "Install Backports 3.2 kernel ..."
 msgstr ""
 
 msgid "Install systemd"
@@ -188,7 +197,7 @@ msgstr ""
 msgid "These repositories may break your system.  Use caution!!"
 msgstr ""
 
-msgid "This will not uninstall the 3.2 kernel."
+msgid "This will not uninstall the standard kernel."
 msgstr ""
 
 msgid "Utilities"

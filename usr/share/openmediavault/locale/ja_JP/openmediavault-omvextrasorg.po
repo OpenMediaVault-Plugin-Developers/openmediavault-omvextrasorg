@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-03 21:25-0600\n"
-"PO-Revision-Date: 2014-03-04 03:25+0000\n"
+"POT-Creation-Date: 2014-03-04 15:05-0600\n"
+"PO-Revision-Date: 2014-03-04 21:06+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgid "Apt Clean"
 msgstr "Aptクリーン"
 
 msgid "Apt Clean - Silent"
-msgstr ""
+msgstr "APTクリーン - サイレント"
 
 msgid "BTSync"
 msgstr "BTSync"
@@ -40,10 +40,10 @@ msgid "Can be helpful in fixing plugin problems."
 msgstr "プラグインの問題を修正する際に役立ちます。"
 
 msgid "Check"
-msgstr ""
+msgstr "確認"
 
 msgid "Checking for new updates ..."
-msgstr ""
+msgstr "新しいアップデートを確認しています ..."
 
 msgid "Cleaning Apt Files and Lists..."
 msgstr "Aptファイルとリストをクリーニングしています..."
@@ -69,8 +69,11 @@ msgstr "開発者"
 msgid "Developer Repositories"
 msgstr "開発者のリポジトリ"
 
-msgid "Done..."
+msgid "Distribution"
 msgstr ""
+
+msgid "Done..."
+msgstr "完了"
 
 msgid "Dotdeb"
 msgstr "Dotdeb"
@@ -125,9 +128,9 @@ msgid "Greyhole"
 msgstr "Greyhole"
 
 msgid ""
-"If the system does not boot using the 3.12 kernel, the boot menu will still "
-"have the option to boot the 3.2 kernel."
-msgstr "システムが3.12カーネルを使用してブートしない場合は、ブートメニューでまだ3.2カーネルを使用して起動する設定になっています。"
+"If the system does not boot using the backports kernel, the boot menu will "
+"still have the option to boot the standard kernel."
+msgstr ""
 
 msgid "Information"
 msgstr "情報"
@@ -137,6 +140,12 @@ msgstr "バックポート3.12カーネルのインストール"
 
 msgid "Install Backports 3.12 kernel ..."
 msgstr "バックポート3.12カーネルをインストールしています ..."
+
+msgid "Install Backports 3.2 kernel"
+msgstr ""
+
+msgid "Install Backports 3.2 kernel ..."
+msgstr ""
 
 msgid "Install systemd"
 msgstr "systemdのインストール"
@@ -178,7 +187,7 @@ msgid "Secondary"
 msgstr "セカンダリ"
 
 msgid "Silent"
-msgstr ""
+msgstr "サイレント"
 
 msgid "Testing"
 msgstr "テスト版"
@@ -196,8 +205,8 @@ msgstr "新規追加、削除またはアップグレードされたソフトウ
 msgid "These repositories may break your system.  Use caution!!"
 msgstr "これらのリポジトリは、システムを破壊することがあります。十分に注意してください！"
 
-msgid "This will not uninstall the 3.2 kernel."
-msgstr "これは3.2カーネルをアンインストールしません。"
+msgid "This will not uninstall the standard kernel."
+msgstr ""
 
 msgid "Utilities"
 msgstr "ユーティリティ"
