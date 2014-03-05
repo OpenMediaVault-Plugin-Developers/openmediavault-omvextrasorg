@@ -1,5 +1,8 @@
 #!/bin/sh
 
+. /etc/default/openmediavault
+. /usr/share/openmediavault/scripts/helper-functions
+
 OMVVERSION=$(xmlstarlet sel -t -v "//distribution" ${OMV_PRODUCTINFO_FILE} | xmlstarlet unesc)
 RELEASE=$(lsb_release -cs)
 BACKPORTS_REPO="/etc/apt/sources.list.d/backports.list"

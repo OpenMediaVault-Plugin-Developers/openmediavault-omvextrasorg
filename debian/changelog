@@ -1,3 +1,11 @@
+openmediavault-omvextrasorg (0.6.9) stable; urgency=low
+
+  * Change Check to Update
+  * Update locales
+  * Fix bug in InstallBackports script
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 05 Mar 2014 07:20:27 -0500
+
 openmediavault-omvextrasorg (0.6.8) stable; urgency=low
 
   * Allow use on sardaukar or kralizec
