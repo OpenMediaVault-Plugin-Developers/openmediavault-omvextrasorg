@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-04 15:05-0600\n"
-"PO-Revision-Date: 2014-03-04 21:06+0000\n"
+"POT-Creation-Date: 2014-03-04 19:05-0600\n"
+"PO-Revision-Date: 2014-03-05 01:05+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -38,9 +38,6 @@ msgstr "Beta"
 
 msgid "Can be helpful in fixing plugin problems."
 msgstr "Může pomoci pří řešení problémů s pluginy"
-
-msgid "Check"
-msgstr ""
 
 msgid "Checking for new updates ..."
 msgstr ""
@@ -206,6 +203,9 @@ msgid "These repositories may break your system.  Use caution!!"
 msgstr "Tyto repositáře mohou poškodit váš systém. Užívejte je s rozvahou."
 
 msgid "This will not uninstall the standard kernel."
+msgstr ""
+
+msgid "Update"
 msgstr ""
 
 msgid "Utilities"

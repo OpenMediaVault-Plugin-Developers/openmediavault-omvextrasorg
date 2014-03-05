@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-04 15:05-0600\n"
-"PO-Revision-Date: 2014-03-04 21:06+0000\n"
+"POT-Creation-Date: 2014-03-04 19:05-0600\n"
+"PO-Revision-Date: 2014-03-05 01:05+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
@@ -38,9 +38,6 @@ msgstr "ベータ"
 
 msgid "Can be helpful in fixing plugin problems."
 msgstr "プラグインの問題を修正する際に役立ちます。"
-
-msgid "Check"
-msgstr "確認"
 
 msgid "Checking for new updates ..."
 msgstr "新しいアップデートを確認しています ..."
@@ -206,6 +203,9 @@ msgid "These repositories may break your system.  Use caution!!"
 msgstr "これらのリポジトリは、システムを破壊することがあります。十分に注意してください！"
 
 msgid "This will not uninstall the standard kernel."
+msgstr ""
+
+msgid "Update"
 msgstr ""
 
 msgid "Utilities"

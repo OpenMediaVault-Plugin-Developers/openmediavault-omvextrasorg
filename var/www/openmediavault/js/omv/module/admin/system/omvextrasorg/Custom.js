@@ -126,7 +126,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Custom", {
         Ext.Array.push(items, {
             id: me.getId() + "-check",
             xtype: "button",
-            text: _("Check"),
+            text: _("Update"),
             icon: "images/refresh.png",
             iconCls: Ext.baseCSSPrefix + "btn-icon-16x16",
             handler: Ext.Function.bind(me.onCheckButton, me, [ me ]),

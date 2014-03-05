@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-04 15:05-0600\n"
+"POT-Creation-Date: 2014-03-04 19:05-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,9 +36,6 @@ msgid "Beta"
 msgstr ""
 
 msgid "Can be helpful in fixing plugin problems."
-msgstr ""
-
-msgid "Check"
 msgstr ""
 
 msgid "Checking for new updates ..."
@@ -198,6 +195,9 @@ msgid "These repositories may break your system.  Use caution!!"
 msgstr ""
 
 msgid "This will not uninstall the standard kernel."
+msgstr ""
+
+msgid "Update"
 msgstr ""
 
 msgid "Utilities"
