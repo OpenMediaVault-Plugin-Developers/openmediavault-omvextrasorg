@@ -8,7 +8,7 @@ RELEASE=$(lsb_release -cs)
 BACKPORTS_REPO="/etc/apt/sources.list.d/backports.list"
 
 if [ "${RELEASE}" = "squeeze" ]; then
-    deb http://backports.debian.org/debian-backports squeeze-backports main non-free
+    echo "deb http://backports.debian.org/debian-backports squeeze-backports main non-free" > $BACKPORTS_REPO
 else
     echo "deb http://ftp.debian.org/debian ${RELEASE}-backports main contrib non-free" > $BACKPORTS_REPO
 fi
