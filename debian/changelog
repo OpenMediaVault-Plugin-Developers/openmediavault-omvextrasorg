@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (0.6.10) stable; urgency=low
+
+  * Update locales
+  * Fix squeeze backports url
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 07 Mar 2014 14:51:27 -0500
+
 openmediavault-omvextrasorg (0.6.9) stable; urgency=low
 
   * Change Check to Update
