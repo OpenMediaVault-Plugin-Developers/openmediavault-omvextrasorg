@@ -25,64 +25,128 @@ set -e
 OMVVERSION=$(xmlstarlet sel -t -v "//distribution" ${OMV_PRODUCTINFO_FILE} | xmlstarlet unesc)
 OMVEXTRASREPOFILE="/etc/apt/sources.list.d/omv-extras-org-${OMVVERSION}.list"
 OMVEXTRASCUSTOMREPOFILE="/etc/apt/sources.list.d/omv-extras-org-custom.list"
+OMVEXTRASAPTPREFS="/etc/apt/preferences.d/99omv-extras-org"
 RELEASE=$(lsb_release -cs)
 
 /bin/rm -f ${OMVEXTRASREPOFILE}
+/bin/rm -f ${OMVEXTRASCUSTOMREPOFILE}
+/bin/rm -f ${OMVEXTRASAPTPREFS}
 /bin/rm -f /etc/apt/sources.list.d/omv-extras-org-*.list
 
+echo "# This is file is generated." > ${OMVEXTRASCUSTOMREPOFILE}
+touch ${OMVEXTRASAPTPREFS}
+
 if [ "$(omv_config_get "//system/omvextrasorg/enable")" = "1" ]; then
-    echo "# Regular omv-extras.org repo" > ${OMVEXTRASREPOFILE}
+    echo "# Regular omv-extras.org repo" >> ${OMVEXTRASREPOFILE}
     echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION} main" >> ${OMVEXTRASREPOFILE}
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}, origin packages.omv-extras.org
+Pin-Priority: 995
+EOF
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/testing")" = "1" ]; then
     echo "# Testing omv-extras.org repo" >> ${OMVEXTRASREPOFILE}
     echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-testing main" >> ${OMVEXTRASREPOFILE}
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-testing, origin packages.omv-extras.org
+Pin-Priority: 996
+EOF
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/vbox")" = "1" ]; then
     echo "# Virtualbox repo" >> ${OMVEXTRASREPOFILE}
     echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-vb main" >> ${OMVEXTRASREPOFILE}
     echo "deb http://download.virtualbox.org/virtualbox/debian ${RELEASE} contrib non-free" >> ${OMVEXTRASREPOFILE}
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-vb, origin packages.omv-extras.org
+Pin-Priority: 995
+EOF
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/plex")" = "1" ]; then
     echo "# Plexmediaserver repo" >> ${OMVEXTRASREPOFILE}
     echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-plex main" >> ${OMVEXTRASREPOFILE}
     echo "deb http://shell.ninthgate.se/packages/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-plex, origin packages.omv-extras.org
+Pin-Priority: 995
+EOF
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/greyhole")" = "1" ]; then
     echo "# Greyhole repo" >> ${OMVEXTRASREPOFILE}
     echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-greyhole main" >> ${OMVEXTRASREPOFILE}
     echo "deb http://www.greyhole.net/releases/deb stable main" >> ${OMVEXTRASREPOFILE}
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-greyhole, origin packages.omv-extras.org
+Pin-Priority: 995
+EOF
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/vdr")" = "1" ]; then
     echo "# VDR repo" >> ${OMVEXTRASREPOFILE}
     echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-vdr main" >> ${OMVEXTRASREPOFILE}
     echo "deb http://e-tobi.net/vdr-experimental/ ${RELEASE} addons vdr-multipatch" >> ${OMVEXTRASREPOFILE}
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-vdr, origin packages.omv-extras.org
+Pin-Priority: 995
+
+Package: *
+Pin: release o=e-tobi.net
+Pin-Priority: 995
+EOF
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/miller")" = "1" ]; then
     echo "# miller repo" >> ${OMVEXTRASREPOFILE}
     echo "deb http://dh2k.omv-extras.org/debian/ ${OMVVERSION}-miller main" >> ${OMVEXTRASREPOFILE}
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-miller, origin dh2k.omv-extras.org
+Pin-Priority: 995
+EOF
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/millertesting")" = "1" ]; then
     echo "# miller testing repo" >> ${OMVEXTRASREPOFILE}
     echo "deb http://dh2k.omv-extras.org/debian/ ${OMVVERSION}-miller-testing main" >> ${OMVEXTRASREPOFILE}
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-miller-testing, origin dh2k.omv-extras.org
+Pin-Priority: 995
+EOF
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/btsync")" = "1" ]; then
     echo "# btsync repo" >> ${OMVEXTRASREPOFILE}
     echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-btsync main" >> ${OMVEXTRASREPOFILE}
     echo "deb http://debian.yeasoft.net/btsync ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-btsync, origin packages.omv-extras.org
+Pin-Priority: 995
+
+Package: *
+Pin: release n=${RELEASE}, origin debian.yeasoft.net
+Pin-Priority: 995
+EOF
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/beta")" = "1" ]; then
     echo "# Beta repo" >> ${OMVEXTRASREPOFILE}
     echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-beta main" >> ${OMVEXTRASREPOFILE}
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-beta, origin packages.omv-extras.org
+Pin-Priority: 995
+EOF
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/dotdeb")" = "1" ]; then
@@ -98,6 +162,11 @@ if [ "$(omv_config_get "//system/omvextrasorg/dotdeb")" = "1" ]; then
         echo "deb http://packages.dotdeb.org ${RELEASE}-php55 all" >> ${OMVEXTRASREPOFILE}
         echo "deb-src http://packages.dotdeb.org ${RELEASE}-php55 all" >> ${OMVEXTRASREPOFILE}
     fi
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-dotdeb, origin packages.omv-extras.org
+Pin-Priority: 996
+EOF
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/debmmbp")" = "1" ]; then
@@ -110,6 +179,12 @@ else
         echo "deb http://www.deb-multimedia.org ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
     fi
 fi
+
+cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-backports, origin packages.omv-extras.org
+Pin-Priority: 995
+EOF
 
 # Process repos
 echo "# Custom repos" > ${OMVEXTRASCUSTOMREPOFILE}

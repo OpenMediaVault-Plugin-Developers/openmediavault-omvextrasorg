@@ -1,5 +1,4 @@
 var/www/openmediavault/*    var/www/openmediavault
-etc/apt/preferences.d/*     etc/apt/preferences.d
 usr/share/keyrings/*        usr/share/keyrings/
 usr/share/openmediavault/*  usr/share/openmediavault
 usr/local/bin/*             usr/local/bin
