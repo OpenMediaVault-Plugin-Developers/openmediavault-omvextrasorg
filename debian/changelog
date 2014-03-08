@@ -1,6 +1,5 @@
 openmediavault-omvextrasorg (0.6.11) stable; urgency=low
 
-  * Update locales
   * Dynamically create preferences file
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 08 Mar 2014 14:00:27 -0500
