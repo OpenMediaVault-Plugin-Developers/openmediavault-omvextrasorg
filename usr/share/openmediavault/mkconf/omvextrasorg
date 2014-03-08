@@ -43,6 +43,7 @@ if [ "$(omv_config_get "//system/omvextrasorg/enable")" = "1" ]; then
 Package: *
 Pin: release n=${OMVVERSION}, origin packages.omv-extras.org
 Pin-Priority: 995
+
 EOF
 fi
 
@@ -53,6 +54,7 @@ if [ "$(omv_config_get "//system/omvextrasorg/testing")" = "1" ]; then
 Package: *
 Pin: release n=${OMVVERSION}-testing, origin packages.omv-extras.org
 Pin-Priority: 996
+
 EOF
 fi
 
@@ -64,6 +66,7 @@ if [ "$(omv_config_get "//system/omvextrasorg/vbox")" = "1" ]; then
 Package: *
 Pin: release n=${OMVVERSION}-vb, origin packages.omv-extras.org
 Pin-Priority: 995
+
 EOF
 fi
 
@@ -75,6 +78,7 @@ if [ "$(omv_config_get "//system/omvextrasorg/plex")" = "1" ]; then
 Package: *
 Pin: release n=${OMVVERSION}-plex, origin packages.omv-extras.org
 Pin-Priority: 995
+
 EOF
 fi
 
@@ -86,6 +90,7 @@ if [ "$(omv_config_get "//system/omvextrasorg/greyhole")" = "1" ]; then
 Package: *
 Pin: release n=${OMVVERSION}-greyhole, origin packages.omv-extras.org
 Pin-Priority: 995
+
 EOF
 fi
 
@@ -101,6 +106,7 @@ Pin-Priority: 995
 Package: *
 Pin: release o=e-tobi.net
 Pin-Priority: 995
+
 EOF
 fi
 
@@ -111,6 +117,7 @@ if [ "$(omv_config_get "//system/omvextrasorg/miller")" = "1" ]; then
 Package: *
 Pin: release n=${OMVVERSION}-miller, origin dh2k.omv-extras.org
 Pin-Priority: 995
+
 EOF
 fi
 
@@ -121,6 +128,7 @@ if [ "$(omv_config_get "//system/omvextrasorg/millertesting")" = "1" ]; then
 Package: *
 Pin: release n=${OMVVERSION}-miller-testing, origin dh2k.omv-extras.org
 Pin-Priority: 995
+
 EOF
 fi
 
@@ -136,6 +144,7 @@ Pin-Priority: 995
 Package: *
 Pin: release n=${RELEASE}, origin debian.yeasoft.net
 Pin-Priority: 995
+
 EOF
 fi
 
@@ -146,6 +155,7 @@ if [ "$(omv_config_get "//system/omvextrasorg/beta")" = "1" ]; then
 Package: *
 Pin: release n=${OMVVERSION}-beta, origin packages.omv-extras.org
 Pin-Priority: 995
+
 EOF
 fi
 
@@ -166,6 +176,7 @@ if [ "$(omv_config_get "//system/omvextrasorg/dotdeb")" = "1" ]; then
 Package: *
 Pin: release n=${OMVVERSION}-dotdeb, origin packages.omv-extras.org
 Pin-Priority: 996
+
 EOF
 fi
 
@@ -184,6 +195,7 @@ cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-backports, origin packages.omv-extras.org
 Pin-Priority: 995
+
 EOF
 
 # Process repos
