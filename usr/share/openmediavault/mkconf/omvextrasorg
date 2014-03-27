@@ -97,7 +97,7 @@ fi
 if [ "$(omv_config_get "//system/omvextrasorg/vdr")" = "1" ]; then
     echo "# VDR repo" >> ${OMVEXTRASREPOFILE}
     echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-vdr main" >> ${OMVEXTRASREPOFILE}
-    echo "deb http://e-tobi.net/vdr-experimental/ ${RELEASE} addons vdr-multipatch" >> ${OMVEXTRASREPOFILE}
+    echo "deb http://e-tobi.net/vdr-experimental/ ${RELEASE} addons base vdr-multipatch" >> ${OMVEXTRASREPOFILE}
     cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-vdr, origin packages.omv-extras.org
