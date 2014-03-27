@@ -3,225 +3,224 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# dezi121 <by@songming.me>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-03-04 19:05-0600\n"
-"PO-Revision-Date: 2014-03-09 01:49+0000\n"
-"Last-Translator: dezi121 <by@songming.me>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/zh_CN/)\n"
+"PO-Revision-Date: 2014-03-14 15:04+0000\n"
+"Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
+"Language-Team: Hungarian (Hungary) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_CN\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: hu_HU\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Add repo"
-msgstr "添加源"
+msgstr ""
 
 msgid "Additional Repositories"
-msgstr "额外源"
+msgstr ""
 
 msgid "Apt Clean"
-msgstr "清除APT缓存"
+msgstr ""
 
 msgid "Apt Clean - Silent"
-msgstr "后台清除APT缓存"
+msgstr ""
 
 msgid "BTSync"
-msgstr "BTSync"
+msgstr ""
 
 msgid "Beta"
-msgstr "Beta"
+msgstr ""
 
 msgid "Can be helpful in fixing plugin problems."
-msgstr "尝试修复插件更新安装问题"
+msgstr ""
 
 msgid "Checking for new updates ..."
-msgstr "检查更新中..."
+msgstr ""
 
 msgid "Cleaning Apt Files and Lists..."
-msgstr "清除Apt文件及列表"
+msgstr ""
 
 msgid "Cleans apt repositories and removes lists."
-msgstr "清除apt源并移除源列表。"
+msgstr ""
 
 msgid "Close"
-msgstr "关闭"
+msgstr ""
 
 msgid "Comment"
-msgstr "注释"
+msgstr ""
 
 msgid "Confirmation"
-msgstr "确认"
+msgstr ""
 
 msgid "Custom"
-msgstr "自定义"
+msgstr ""
 
 msgid "Developer"
-msgstr "开发者"
+msgstr ""
 
 msgid "Developer Repositories"
-msgstr "开发者源"
+msgstr ""
 
 msgid "Distribution"
-msgstr "发行版"
+msgstr ""
 
 msgid "Done..."
-msgstr "完成..."
+msgstr ""
 
 msgid "Dotdeb"
-msgstr "Dotdeb"
+msgstr ""
 
 msgid "Downloading package information"
-msgstr "下载软件包信息"
+msgstr ""
 
 msgid "Edit repo"
-msgstr "编辑源"
+msgstr ""
 
 msgid "Enable BTSync repository"
-msgstr "启用BTSync源"
+msgstr ""
 
 msgid "Enable Beta repository"
-msgstr "开启Beta源"
+msgstr ""
 
 msgid "Enable Dotdeb repository"
-msgstr "启用 Dotdeb 源"
+msgstr ""
 
 msgid "Enable Greyhole repository"
-msgstr "开启 Greyhole源"
+msgstr ""
 
 msgid "Enable Miller repository"
-msgstr "开启Miller源"
+msgstr ""
 
 msgid "Enable Miller testing repository"
-msgstr "开启 Miller 测试源"
+msgstr ""
 
 msgid ""
 "Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository"
-msgstr "开启Virtualbox的OMV-Extras.org源和Sun's源"
+msgstr ""
 
 msgid "Enable OMV-Extras.org repository"
-msgstr "启用OMV-Extras.org插件源"
+msgstr ""
 
 msgid "Enable OMV-Extras.org testing repository (release candidates)"
-msgstr "开启OMV-Extras.org测试源(候选发布版)"
+msgstr ""
 
 msgid "Enable Plex Media Server repository"
-msgstr "开启 Plex多媒体服务源"
+msgstr ""
 
 msgid "Enable deb-multimedia backports repository"
-msgstr "启用 deb-multimedia backports 源"
+msgstr ""
 
 msgid "Enable deb-multimedia repository"
-msgstr "启用 deb-multimedia 源"
+msgstr ""
 
 msgid "Enable e-tobi.net repository"
-msgstr "开启e-tobi.net源"
+msgstr ""
 
 msgid "Greyhole"
-msgstr "Greyhole"
+msgstr ""
 
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
 "still have the option to boot the standard kernel."
-msgstr "如果backports内核不能启动系统，可以在启动菜单选择标准内核来启动系统。"
+msgstr ""
 
 msgid "Information"
-msgstr "信息"
+msgstr ""
 
 msgid "Install Backports 3.12 kernel"
-msgstr "安装Backports 3.12内核"
+msgstr ""
 
 msgid "Install Backports 3.12 kernel ..."
-msgstr "安装Backports 3.12内核中 ..."
+msgstr ""
 
 msgid "Install Backports 3.2 kernel"
-msgstr "安装Backports 3.2内核"
+msgstr ""
 
 msgid "Install Backports 3.2 kernel ..."
-msgstr "安装Backports 3.2内核 ..."
+msgstr ""
 
 msgid "Install systemd"
-msgstr "安装 systemd"
+msgstr ""
 
 msgid "Install systemd..."
-msgstr "安装systemd中 ..."
+msgstr ""
 
 msgid "Kernel"
-msgstr "内核"
+msgstr ""
 
 msgid "Miller"
-msgstr "Miller"
+msgstr ""
 
 msgid "Miller Testing"
-msgstr "Miller Testing"
+msgstr ""
 
 msgid "Name"
-msgstr "名称"
+msgstr ""
 
 msgid "OMV-Extras.org"
-msgstr "OMV-Extras.org"
+msgstr ""
 
 msgid "Plex"
-msgstr "Plex"
+msgstr ""
 
 msgid "Primary"
-msgstr "主要选项"
+msgstr ""
 
 msgid "Reload"
-msgstr "重新载入"
+msgstr ""
 
 msgid "Repo"
-msgstr "源"
+msgstr ""
 
 msgid "Repositories"
-msgstr "源"
+msgstr ""
 
 msgid "Secondary"
-msgstr "附加选项"
+msgstr ""
 
 msgid "Silent"
-msgstr "后台"
+msgstr ""
 
 msgid "Testing"
-msgstr "测试版"
+msgstr ""
 
 msgid ""
 "The information about available software is out-of-date. You need to reload "
 "the information about available software."
-msgstr "软件信息已过期，你需要重载以获取最新软件信息。"
+msgstr ""
 
 msgid ""
 "The repository will be checked for new, removed or upgraded software "
 "packages."
-msgstr "将检查更新源是否有删除和升级的软件包。"
+msgstr ""
 
 msgid "These repositories may break your system.  Use caution!!"
-msgstr "注意，这些源可能会使系统崩溃！"
+msgstr ""
 
 msgid "This will not uninstall the standard kernel."
-msgstr "这不会卸载标准内核。"
+msgstr ""
 
 msgid "Update"
-msgstr "更新"
+msgstr ""
 
 msgid "Utilities"
-msgstr "实用工具"
+msgstr ""
 
 msgid "VDR"
-msgstr "VDR"
+msgstr ""
 
 msgid "Version"
-msgstr "版本"
+msgstr ""
 
 msgid "Virtualbox"
-msgstr "Virtualbox"
+msgstr ""
 
 msgid "deb-multimedia"
-msgstr "deb-multimedia"
+msgstr ""
 
 msgid "deb-multimedia backports"
-msgstr "deb-multimedia backports"
+msgstr ""

@@ -1,6 +1,7 @@
 openmediavault-omvextrasorg (0.6.12) stable; urgency=low
 
   * VDR / E-tobi.net repository folders updated to enable downloading of w-scan from E-tobi.net
+  * Update locales
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 27 Mar 2014 22:15:27 +0200
 
