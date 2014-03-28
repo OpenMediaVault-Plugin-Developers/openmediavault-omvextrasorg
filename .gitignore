@@ -1,56 +1,42 @@
-﻿#################
-## IDEA
-#################
-.idea/
-
-
-#################
-## Eclipse
-#################
-
-*.pydevproject
-.project
-.metadata
-bin/**
-tmp/**
-tmp/**/*
+# General
 *.tmp
 *.bak
 *.swp
-*~.nib
-local.properties
-.classpath
+*~
+
+# Eclipse
+.project
+.metadata
 .settings/
-.loadpath
-
-# External tool builders
-.externalToolBuilders/
-
-# Locally stored "Eclipse launch configurations"
 *.launch
-
-# CDT-specific
-.cproject
-
-# PDT-specific
 .buildpath
 
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
 
-############
-## Windows
-############
+# Vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
 
-# Windows image file caches
+# SVN
+.svn/
+
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
 Thumbs.db
-
-# Folder config file
+ehthumbs.db
 Desktop.ini
 
-# Mac crap
-.DS_Store
-
-# Files created by building the deb package
-debian/openmediavault-omvextrasorg
+# OpenMediaVault / Debian
+debian/openmediavault-*
 debian/files
 debian/*.debhelper.log
 debian/*.debhelper
