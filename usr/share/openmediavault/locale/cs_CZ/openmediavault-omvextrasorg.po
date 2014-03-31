@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-04 19:05-0600\n"
-"PO-Revision-Date: 2014-03-05 01:05+0000\n"
+"POT-Creation-Date: 2014-03-31 15:43-0500\n"
+"PO-Revision-Date: 2014-03-31 20:43+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -93,6 +93,9 @@ msgstr "Povolit repozitář Dotdeb"
 msgid "Enable Greyhole repository"
 msgstr "Povolit repozitář Greyhole"
 
+msgid "Enable MariaDB 10.0 repository"
+msgstr ""
+
 msgid "Enable Miller repository"
 msgstr "Povolit repozitář Miller"
 
@@ -152,6 +155,9 @@ msgstr ""
 
 msgid "Kernel"
 msgstr "Kernel"
+
+msgid "MariaDB"
+msgstr ""
 
 msgid "Miller"
 msgstr "Miller"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-04 19:05-0600\n"
-"PO-Revision-Date: 2014-03-05 01:05+0000\n"
+"POT-Creation-Date: 2014-03-31 15:43-0500\n"
+"PO-Revision-Date: 2014-03-31 20:43+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -92,6 +92,9 @@ msgstr "Enable Dotdeb repository"
 msgid "Enable Greyhole repository"
 msgstr "Enable Greyhole repository"
 
+msgid "Enable MariaDB 10.0 repository"
+msgstr "Enable MariaDB 10.0 repository"
+
 msgid "Enable Miller repository"
 msgstr "Enable Miller repository"
 
@@ -151,6 +154,9 @@ msgstr "Install systemd..."
 
 msgid "Kernel"
 msgstr "Kernel"
+
+msgid "MariaDB"
+msgstr "MariaDB"
 
 msgid "Miller"
 msgstr "Miller"
