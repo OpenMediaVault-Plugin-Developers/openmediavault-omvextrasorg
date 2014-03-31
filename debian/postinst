@@ -25,7 +25,7 @@ set -e
 . /usr/share/openmediavault/scripts/helper-functions
 
 SERVICE_XPATH_NAME="omvextrasorg"
-SERVICE_XPATH="/config/services/${SERVICE_XPATH_NAME}"
+SERVICE_XPATH="/config/system/${SERVICE_XPATH_NAME}"
 KEYRING_LOCATION="/usr/share/keyrings/"
 
 case "$1" in
