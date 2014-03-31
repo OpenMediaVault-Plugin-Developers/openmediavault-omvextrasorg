@@ -1,8 +1,10 @@
 <?php
 /**
  * @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
- * @author    Aaron Murray <aaron@omv-extras.org>
- * @copyright Copyright (c) 2013-2014 Aaron Murray
+ * @author    Volker Theile <volker.theile@openmediavault.org>
+ * @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
+ * @copyright Copyright (c) 2009-2013 Volker Theile
+ * @copyright Copyright (c) 2013-2014 OpenMediaVault Plugin Developers
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -132,6 +134,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "dotdeb"        => array_boolval($object, 'dotdeb'),
             "debmm"         => array_boolval($object, 'debmm'),
             "debmmbp"       => array_boolval($object, 'debmmbp'),
+            "mariadb"       => array_boolval($object, 'mariadb'),
             "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array()
         );
         if(FALSE === $xmlConfig->replace("//system/omvextrasorg", $object))
@@ -229,6 +232,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "dotdeb"        => array_boolval($object, 'dotdeb'),
             "debmm"         => array_boolval($object, 'debmm'),
             "debmmbp"       => array_boolval($object, 'debmmbp'),
+            "mariadb"       => array_boolval($object, 'mariadb'),
             "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array()
         );
 
@@ -387,6 +391,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $object['dotdeb']  = boolval($object['dotdeb']);
         $object['debmm']   = boolval($object['debmm']);
         $object['debmmbp'] = boolval($object['debmmbp']);
+        $object['mariadb'] = boolval($object['mariadb']);
 
         // Get OMV version name
         $prd = new OMVProduct();
@@ -412,6 +417,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
                 "dotdeb"      : { "type" : "boolean" },
                 "debmm"       : { "type" : "boolean" },
                 "debmmbp"     : { "type" : "boolean" },
+                "mariadb"     : { "type" : "boolean" },
                 "versionname" : { "type" : "string", "optional" : true }
             }
         }');
@@ -438,6 +444,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "dotdeb"        => array_boolval($params, 'dotdeb'),
             "debmm"         => array_boolval($params, 'debmm'),
             "debmmbp"       => array_boolval($params, 'debmmbp'),
+            "mariadb"       => array_boolval($params, 'mariadb'),
             "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array()
         );
         if(FALSE === $xmlConfig->replace("//system/omvextrasorg", $object))

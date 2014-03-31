@@ -1,9 +1,9 @@
 #!/bin/sh
 #
 # @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
-# @author   Aaron Murray <aaron@omv-extras.org>
-#           Marcel Beck <marcel.beck@mbeck.org>
-# @copyright Copyright (c)  2013-2014 Aaron Murray
+# @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
+#            Marcel Beck <marcel.beck@mbeck.org>
+# @copyright Copyright (c)  2013-2014 OpenMediaVault Plugin Developers
 #                           2011-2012 Marcel Beck
 #
 # This program is free software: you can redistribute it and/or modify
@@ -24,10 +24,14 @@ set -e
 . /etc/default/openmediavault
 . /usr/share/openmediavault/scripts/helper-functions
 
+SERVICE_XPATH_NAME="omvextrasorg"
+SERVICE_XPATH="/config/services/${SERVICE_XPATH_NAME}"
+KEYRING_LOCATION="/usr/share/keyrings/"
+
 case "$1" in
     configure)
 
-        if ! omv_config_exists "/config/system/omvextrasorg"; then
+        if ! omv_config_exists "${SERVICE_XPATH}"; then
             echo "Initialize configuration"
             object="<enable>1</enable>"
             object="${object}<testing>0</testing>"
@@ -43,24 +47,29 @@ case "$1" in
             object="${object}<dotdeb>0</dotdeb>"
             object="${object}<debmm>0</debmm>"
             object="${object}<debmmbp>0</debmmbp>"
-            omv_config_add_element "/config/system" "omvextrasorg" "${object}" true
+            omv_config_add_element "/config/system" "${SERVICE_XPATH_NAME}" "${object}" true
         fi
 
-        if ! omv_config_exists "/config/system/omvextrasorg/repos"; then
-            omv_config_add_element "/config/system/omvextrasorg" "repos" ""
+        if ! omv_config_exists "${SERVICE_XPATH}/repos"; then
+            omv_config_add_element "${SERVICE_XPATH}" "repos" ""
+        fi
+
+        if ! omv_config_exists "${SERVICE_XPATH}/mariadb"; then
+            omv_config_add_element "${SERVICE_XPATH}" "mariadb" "0"
         fi
 
         omv-mkconf omvextrasorg
 
         if [ -x /usr/bin/apt-key ]; then
-            apt-key add /usr/share/keyrings/omvextrasorg-keyring.gpg
-            apt-key add /usr/share/keyrings/oracle_vbox.asc
-            apt-key add /usr/share/keyrings/shell-ninthgate-se-keyring.key
-            apt-key add /usr/share/keyrings/dotdeb.gpg
-            apt-key add /usr/share/keyrings/deb-multimedia-keyring.gpg
-            apt-key add /usr/share/keyrings/greyhole-debsig.asc
-            apt-key add /usr/share/keyrings/e-tobi-keyring.gpg
-            apt-key add /usr/share/keyrings/btsync.gpg
+            apt-key add ${KEYRING_LOCATION}omvextrasorg-keyring.gpg
+            apt-key add ${KEYRING_LOCATION}oracle_vbox.asc
+            apt-key add ${KEYRING_LOCATION}shell-ninthgate-se-keyring.key
+            apt-key add ${KEYRING_LOCATION}dotdeb.gpg
+            apt-key add ${KEYRING_LOCATION}deb-multimedia-keyring.gpg
+            apt-key add ${KEYRING_LOCATION}greyhole-debsig.asc
+            apt-key add ${KEYRING_LOCATION}e-tobi-keyring.gpg
+            apt-key add ${KEYRING_LOCATION}btsync.gpg
+            apt-key add ${KEYRING_LOCATION}mariadb.key
         fi
 
         chattr +i /etc/apt/sources.list

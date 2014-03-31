@@ -1,8 +1,10 @@
 #!/bin/sh
 #
 # @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
-# @author    Aaron Murray <aaron@omv-extras.org>
-# @copyright Copyright (c) 2013-2014 Aaron Murray
+# @author    Volker Theile <volker.theile@openmediavault.org>
+# @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
+# @copyright Copyright (c) 2009-2013 Volker Theile
+# @copyright Copyright (c) 2013-2014 OpenMediaVault Plugin Developers
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -37,9 +39,9 @@ echo "# This is file is generated." > ${OMVEXTRASCUSTOMREPOFILE}
 touch ${OMVEXTRASAPTPREFS}
 
 if [ "$(omv_config_get "//system/omvextrasorg/enable")" = "1" ]; then
-    echo "# Regular omv-extras.org repo" >> ${OMVEXTRASREPOFILE}
-    echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION} main" >> ${OMVEXTRASREPOFILE}
-    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+echo "# Regular omv-extras.org repo" >> ${OMVEXTRASREPOFILE}
+echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION} main" >> ${OMVEXTRASREPOFILE}
+cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}, origin packages.omv-extras.org
 Pin-Priority: 995
@@ -48,9 +50,9 @@ EOF
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/testing")" = "1" ]; then
-    echo "# Testing omv-extras.org repo" >> ${OMVEXTRASREPOFILE}
-    echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-testing main" >> ${OMVEXTRASREPOFILE}
-    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+echo "# Testing omv-extras.org repo" >> ${OMVEXTRASREPOFILE}
+echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-testing main" >> ${OMVEXTRASREPOFILE}
+cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-testing, origin packages.omv-extras.org
 Pin-Priority: 996
@@ -59,10 +61,10 @@ EOF
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/vbox")" = "1" ]; then
-    echo "# Virtualbox repo" >> ${OMVEXTRASREPOFILE}
-    echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-vb main" >> ${OMVEXTRASREPOFILE}
-    echo "deb http://download.virtualbox.org/virtualbox/debian ${RELEASE} contrib non-free" >> ${OMVEXTRASREPOFILE}
-    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+echo "# Virtualbox repo" >> ${OMVEXTRASREPOFILE}
+echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-vb main" >> ${OMVEXTRASREPOFILE}
+echo "deb http://download.virtualbox.org/virtualbox/debian ${RELEASE} contrib non-free" >> ${OMVEXTRASREPOFILE}
+cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-vb, origin packages.omv-extras.org
 Pin-Priority: 995
@@ -71,10 +73,10 @@ EOF
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/plex")" = "1" ]; then
-    echo "# Plexmediaserver repo" >> ${OMVEXTRASREPOFILE}
-    echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-plex main" >> ${OMVEXTRASREPOFILE}
-    echo "deb http://shell.ninthgate.se/packages/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+echo "# Plexmediaserver repo" >> ${OMVEXTRASREPOFILE}
+echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-plex main" >> ${OMVEXTRASREPOFILE}
+echo "deb http://shell.ninthgate.se/packages/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-plex, origin packages.omv-extras.org
 Pin-Priority: 995
@@ -83,10 +85,10 @@ EOF
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/greyhole")" = "1" ]; then
-    echo "# Greyhole repo" >> ${OMVEXTRASREPOFILE}
-    echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-greyhole main" >> ${OMVEXTRASREPOFILE}
-    echo "deb http://www.greyhole.net/releases/deb stable main" >> ${OMVEXTRASREPOFILE}
-    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+echo "# Greyhole repo" >> ${OMVEXTRASREPOFILE}
+echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-greyhole main" >> ${OMVEXTRASREPOFILE}
+echo "deb http://www.greyhole.net/releases/deb stable main" >> ${OMVEXTRASREPOFILE}
+cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-greyhole, origin packages.omv-extras.org
 Pin-Priority: 995
@@ -95,10 +97,10 @@ EOF
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/vdr")" = "1" ]; then
-    echo "# VDR repo" >> ${OMVEXTRASREPOFILE}
-    echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-vdr main" >> ${OMVEXTRASREPOFILE}
-    echo "deb http://e-tobi.net/vdr-experimental/ ${RELEASE} addons base vdr-multipatch" >> ${OMVEXTRASREPOFILE}
-    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+echo "# VDR repo" >> ${OMVEXTRASREPOFILE}
+echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-vdr main" >> ${OMVEXTRASREPOFILE}
+echo "deb http://e-tobi.net/vdr-experimental/ ${RELEASE} addons base vdr-multipatch" >> ${OMVEXTRASREPOFILE}
+cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-vdr, origin packages.omv-extras.org
 Pin-Priority: 995
@@ -111,9 +113,9 @@ EOF
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/miller")" = "1" ]; then
-    echo "# miller repo" >> ${OMVEXTRASREPOFILE}
-    echo "deb http://dh2k.omv-extras.org/debian/ ${OMVVERSION}-miller main" >> ${OMVEXTRASREPOFILE}
-    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+echo "# miller repo" >> ${OMVEXTRASREPOFILE}
+echo "deb http://dh2k.omv-extras.org/debian/ ${OMVVERSION}-miller main" >> ${OMVEXTRASREPOFILE}
+cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-miller, origin dh2k.omv-extras.org
 Pin-Priority: 995
@@ -122,9 +124,9 @@ EOF
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/millertesting")" = "1" ]; then
-    echo "# miller testing repo" >> ${OMVEXTRASREPOFILE}
-    echo "deb http://dh2k.omv-extras.org/debian/ ${OMVVERSION}-miller-testing main" >> ${OMVEXTRASREPOFILE}
-    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+echo "# miller testing repo" >> ${OMVEXTRASREPOFILE}
+echo "deb http://dh2k.omv-extras.org/debian/ ${OMVVERSION}-miller-testing main" >> ${OMVEXTRASREPOFILE}
+cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-miller-testing, origin dh2k.omv-extras.org
 Pin-Priority: 995
@@ -133,10 +135,10 @@ EOF
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/btsync")" = "1" ]; then
-    echo "# btsync repo" >> ${OMVEXTRASREPOFILE}
-    echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-btsync main" >> ${OMVEXTRASREPOFILE}
-    echo "deb http://debian.yeasoft.net/btsync ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+echo "# btsync repo" >> ${OMVEXTRASREPOFILE}
+echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-btsync main" >> ${OMVEXTRASREPOFILE}
+echo "deb http://debian.yeasoft.net/btsync ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-btsync, origin packages.omv-extras.org
 Pin-Priority: 995
@@ -149,9 +151,9 @@ EOF
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/beta")" = "1" ]; then
-    echo "# Beta repo" >> ${OMVEXTRASREPOFILE}
-    echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-beta main" >> ${OMVEXTRASREPOFILE}
-    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+echo "# Beta repo" >> ${OMVEXTRASREPOFILE}
+echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-beta main" >> ${OMVEXTRASREPOFILE}
+cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-beta, origin packages.omv-extras.org
 Pin-Priority: 995
@@ -160,19 +162,19 @@ EOF
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/dotdeb")" = "1" ]; then
-    echo "# Dotdeb experimental repo" >> ${OMVEXTRASREPOFILE}
-    echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-dotdeb main" >> ${OMVEXTRASREPOFILE}
-    echo "deb http://packages.dotdeb.org ${RELEASE} all" >> ${OMVEXTRASREPOFILE}
-    echo "deb-src http://packages.dotdeb.org ${RELEASE} all" >> ${OMVEXTRASREPOFILE}
+echo "# Dotdeb experimental repo" >> ${OMVEXTRASREPOFILE}
+echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-dotdeb main" >> ${OMVEXTRASREPOFILE}
+echo "deb http://packages.dotdeb.org ${RELEASE} all" >> ${OMVEXTRASREPOFILE}
+echo "deb-src http://packages.dotdeb.org ${RELEASE} all" >> ${OMVEXTRASREPOFILE}
 
-    if [ "${OMVVERSION}" = "sardaukar" ]; then
-        echo "deb http://packages.dotdeb.org ${RELEASE}-php54 all" >> ${OMVEXTRASREPOFILE}
-        echo "deb-src http://packages.dotdeb.org ${RELEASE}-php54 all" >> ${OMVEXTRASREPOFILE}
-    else
-        echo "deb http://packages.dotdeb.org ${RELEASE}-php55 all" >> ${OMVEXTRASREPOFILE}
-        echo "deb-src http://packages.dotdeb.org ${RELEASE}-php55 all" >> ${OMVEXTRASREPOFILE}
-    fi
-    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+if [ "${OMVVERSION}" = "sardaukar" ]; then
+echo "deb http://packages.dotdeb.org ${RELEASE}-php54 all" >> ${OMVEXTRASREPOFILE}
+echo "deb-src http://packages.dotdeb.org ${RELEASE}-php54 all" >> ${OMVEXTRASREPOFILE}
+else
+echo "deb http://packages.dotdeb.org ${RELEASE}-php55 all" >> ${OMVEXTRASREPOFILE}
+echo "deb-src http://packages.dotdeb.org ${RELEASE}-php55 all" >> ${OMVEXTRASREPOFILE}
+fi
+cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-dotdeb, origin packages.omv-extras.org
 Pin-Priority: 996
@@ -181,14 +183,20 @@ EOF
 fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/debmmbp")" = "1" ]; then
-    echo "# Deb-multimedia backports repo" >> ${OMVEXTRASREPOFILE}
-    echo "deb http://www.deb-multimedia.org ${RELEASE} main non-free" >> ${OMVEXTRASREPOFILE}
-    echo "deb http://www.deb-multimedia.org ${RELEASE}-backports main" >> ${OMVEXTRASREPOFILE}
+echo "# Deb-multimedia backports repo" >> ${OMVEXTRASREPOFILE}
+echo "deb http://www.deb-multimedia.org ${RELEASE} main non-free" >> ${OMVEXTRASREPOFILE}
+echo "deb http://www.deb-multimedia.org ${RELEASE}-backports main" >> ${OMVEXTRASREPOFILE}
 else
-    if [ "$(omv_config_get "//system/omvextrasorg/debmm")" = "1" ]; then
-        echo "# Deb-multimedia repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb http://www.deb-multimedia.org ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-    fi
+if [ "$(omv_config_get "//system/omvextrasorg/debmm")" = "1" ]; then
+echo "# Deb-multimedia repo" >> ${OMVEXTRASREPOFILE}
+echo "deb http://www.deb-multimedia.org ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+fi
+fi
+
+if [ "$(omv_config_get "//system/omvextrasorg/mariadb")" = "1" ]; then
+echo "# MariaDB repo" >> ${OMVEXTRASREPOFILE}
+echo "deb http://ftp.osuosl.org/pub/mariadb/repo/10.0/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+echo "deb-src http://ftp.osuosl.org/pub/mariadb/repo/10.0/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
 fi
 
 cat <<EOF >> ${OMVEXTRASAPTPREFS}
@@ -204,13 +212,13 @@ count=$(omv_config_get_count "//system/omvextrasorg/repos/repo")
 index=0
 while [ ${index} -le ${count} ]; do
 
-    name=$(omv_config_get "//system/omvextrasorg/repos/repo[position()=${index}]/name")
-    repo=$(omv_config_get "//system/omvextrasorg/repos/repo[position()=${index}]/repo")
+name=$(omv_config_get "//system/omvextrasorg/repos/repo[position()=${index}]/name")
+repo=$(omv_config_get "//system/omvextrasorg/repos/repo[position()=${index}]/repo")
 
-    if [ "${repo}" != "" ]; then
-        echo "# ${name}" >> ${OMVEXTRASCUSTOMREPOFILE}
-        echo "${repo}" >> ${OMVEXTRASCUSTOMREPOFILE}
-    fi
+if [ "${repo}" != "" ]; then
+echo "# ${name}" >> ${OMVEXTRASCUSTOMREPOFILE}
+echo "${repo}" >> ${OMVEXTRASCUSTOMREPOFILE}
+fi
 
-    index=$(( ${index} + 1 ))
+index=$(( ${index} + 1 ))
 done

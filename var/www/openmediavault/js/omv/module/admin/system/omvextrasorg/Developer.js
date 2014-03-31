@@ -1,9 +1,9 @@
 /**
  * @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
  * @author    Volker Theile <volker.theile@openmediavault.org>
- * @author    Aaron Murray <aaron@omv-extras.org>
+ * @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
  * @copyright Copyright (c) 2009-2013 Volker Theile
- * @copyright Copyright (c) 2013-2014 Aaron Murray
+ * @copyright Copyright (c) 2013-2014 OpenMediaVault Plugin Developers
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -111,6 +111,12 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Developer", {
                 name       : "debmmbp",
                 fieldLabel : _("deb-multimedia backports"),
                 boxLabel   : _("Enable deb-multimedia backports repository"),
+                checked    : false
+            },{
+                xtype      : "checkbox",
+                name       : "mariadb",
+                fieldLabel : _("MariaDB"),
+                boxLabel   : _("Enable MariaDB 10.0 repository"),
                 checked    : false
             }]
         },{

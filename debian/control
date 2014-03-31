@@ -1,14 +1,14 @@
 Source: openmediavault-omvextrasorg
 Section: misc
 Priority: optional
-Maintainer: Aaron Murray <aaron@omv-extras.org>
+Maintainer: OpenMediaVault Plugin Developers <plugins@omv-extras.org>
 Build-Depends: debhelper (>= 9.0.0 )
 Standards-Version: 3.9.3
 Homepage: http://omv-extras.org/simple/index.php?id=how-to-install-omv-extras-plugin
 
 Package: openmediavault-omvextrasorg
 Architecture: all
-Depends: ${misc:Depends}, openmediavault (>= 0.5.38), lsb-release
+Depends: ${misc:Depends}, openmediavault (>= 0.5.43), lsb-release
 Description: OMV-Extras.org Package Repositories for OpenMediaVault
  Plugin the allows enabling of multiple repositories hosted by
  omv-extras.org. The plugin allows installation of the backports
