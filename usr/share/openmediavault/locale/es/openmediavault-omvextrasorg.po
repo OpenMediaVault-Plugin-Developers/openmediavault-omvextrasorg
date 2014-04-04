@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-31 15:43-0500\n"
-"PO-Revision-Date: 2014-03-31 20:43+0000\n"
+"POT-Creation-Date: 2014-04-04 06:48-0500\n"
+"PO-Revision-Date: 2014-04-04 11:48+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -94,7 +94,7 @@ msgid "Enable Greyhole repository"
 msgstr "Habilitar repositorio Greyhole"
 
 msgid "Enable MariaDB 10.0 repository"
-msgstr ""
+msgstr "Habilitar el repositorio MariaDB 10.0"
 
 msgid "Enable Miller repository"
 msgstr "Habilitar repositorio Miller"
@@ -114,6 +114,9 @@ msgstr "Habilitar repositorio OMV-Extras.org testing  (release candidates)"
 
 msgid "Enable Plex Media Server repository"
 msgstr "Habilitar repositorio Plex Media Server"
+
+msgid "Enable VPN repository"
+msgstr ""
 
 msgid "Enable deb-multimedia backports repository"
 msgstr "Habilitar repositorio deb-multimedia backports"
@@ -157,7 +160,7 @@ msgid "Kernel"
 msgstr "Kernel"
 
 msgid "MariaDB"
-msgstr ""
+msgstr "MariaDB"
 
 msgid "Miller"
 msgstr "Miller"
@@ -219,6 +222,9 @@ msgstr "Utilidades"
 
 msgid "VDR"
 msgstr "VDR"
+
+msgid "VPN"
+msgstr ""
 
 msgid "Version"
 msgstr "Version"

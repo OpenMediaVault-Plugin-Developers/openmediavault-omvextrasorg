@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-31 15:43-0500\n"
-"PO-Revision-Date: 2014-03-31 20:43+0000\n"
+"POT-Creation-Date: 2014-04-04 06:48-0500\n"
+"PO-Revision-Date: 2014-04-04 11:48+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -116,6 +116,9 @@ msgstr "ВключитьOMV-Extras.org тестировый репозитори
 msgid "Enable Plex Media Server repository"
 msgstr "Включить Plex Media Server репозиторий"
 
+msgid "Enable VPN repository"
+msgstr ""
+
 msgid "Enable deb-multimedia backports repository"
 msgstr "Включить deb-multimedia backports репозиторий"
 
@@ -220,6 +223,9 @@ msgstr "Utilities"
 
 msgid "VDR"
 msgstr "VDR"
+
+msgid "VPN"
+msgstr ""
 
 msgid "Version"
 msgstr "Версия"

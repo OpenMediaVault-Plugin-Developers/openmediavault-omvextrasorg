@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-31 15:43-0500\n"
-"PO-Revision-Date: 2014-03-31 20:43+0000\n"
+"POT-Creation-Date: 2014-04-04 06:48-0500\n"
+"PO-Revision-Date: 2014-04-04 11:48+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Add repo"
-msgstr ""
+msgstr "Tilføj arkiv"
 
 msgid "Additional Repositories"
 msgstr "Øvrige Arkiver"
@@ -28,7 +28,7 @@ msgid "Apt Clean"
 msgstr "Apt Oprydning"
 
 msgid "Apt Clean - Silent"
-msgstr ""
+msgstr "Apt Oprydning - Stille"
 
 msgid "BTSync"
 msgstr "BTSynk"
@@ -40,7 +40,7 @@ msgid "Can be helpful in fixing plugin problems."
 msgstr "Kan være brugbar i rettelse af plugin problemer."
 
 msgid "Checking for new updates ..."
-msgstr ""
+msgstr "Kontroller efter nye opdateringer ..."
 
 msgid "Cleaning Apt Files and Lists..."
 msgstr "Rydder op i Apt Filer og Lister.."
@@ -52,13 +52,13 @@ msgid "Close"
 msgstr "Luk"
 
 msgid "Comment"
-msgstr ""
+msgstr "Kommentar"
 
 msgid "Confirmation"
 msgstr "Bekræftelse"
 
 msgid "Custom"
-msgstr ""
+msgstr "Brugerdefineret"
 
 msgid "Developer"
 msgstr "Udvikler"
@@ -67,10 +67,10 @@ msgid "Developer Repositories"
 msgstr "Udvikler Arkiver"
 
 msgid "Distribution"
-msgstr ""
+msgstr "Distribution"
 
 msgid "Done..."
-msgstr ""
+msgstr "Færdig..."
 
 msgid "Dotdeb"
 msgstr "Dotdeb"
@@ -79,7 +79,7 @@ msgid "Downloading package information"
 msgstr "Henter pakke oplysninger"
 
 msgid "Edit repo"
-msgstr ""
+msgstr "Rediger arkiv"
 
 msgid "Enable BTSync repository"
 msgstr "Aktiver BTSynk arkiv"
@@ -94,7 +94,7 @@ msgid "Enable Greyhole repository"
 msgstr "Aktiver Greyhole arkiv"
 
 msgid "Enable MariaDB 10.0 repository"
-msgstr ""
+msgstr "Aktiver MariaDB 10.0 arkiv"
 
 msgid "Enable Miller repository"
 msgstr "Aktiver Miller arkiv"
@@ -115,6 +115,9 @@ msgstr "Aktiver OMV-Extras.org test arkiv (udgivelseskandidater)"
 msgid "Enable Plex Media Server repository"
 msgstr "Aktiver Plex Media Server arkiv"
 
+msgid "Enable VPN repository"
+msgstr ""
+
 msgid "Enable deb-multimedia backports repository"
 msgstr "Aktiver deb-multimedia backports arkiv"
 
@@ -130,34 +133,34 @@ msgstr "Greyhole"
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
 "still have the option to boot the standard kernel."
-msgstr ""
+msgstr "Hvis systemet ikke kan boote ved brug af backports kernen, vil boot menuen stadig have mulighed for at boote standard kernen."
 
 msgid "Information"
 msgstr "Oplysninger"
 
 msgid "Install Backports 3.12 kernel"
-msgstr ""
+msgstr "Installer Backports 3.12 Kerne"
 
 msgid "Install Backports 3.12 kernel ..."
-msgstr ""
+msgstr "Installer Backports 3.12 kerne ..."
 
 msgid "Install Backports 3.2 kernel"
-msgstr ""
+msgstr "Installer Backports 3.2 Kerne"
 
 msgid "Install Backports 3.2 kernel ..."
-msgstr ""
+msgstr "Installer Backports 3.2 kerne ..."
 
 msgid "Install systemd"
-msgstr ""
+msgstr "Installer systemd"
 
 msgid "Install systemd..."
-msgstr ""
+msgstr "Installer systemd..."
 
 msgid "Kernel"
 msgstr "Kerne"
 
 msgid "MariaDB"
-msgstr ""
+msgstr "MariaDB"
 
 msgid "Miller"
 msgstr "Miller"
@@ -166,7 +169,7 @@ msgid "Miller Testing"
 msgstr "Miller Test"
 
 msgid "Name"
-msgstr ""
+msgstr "Navn"
 
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
@@ -181,7 +184,7 @@ msgid "Reload"
 msgstr "Genindlæs"
 
 msgid "Repo"
-msgstr ""
+msgstr "Arkiv"
 
 msgid "Repositories"
 msgstr "Arkiver"
@@ -190,7 +193,7 @@ msgid "Secondary"
 msgstr "Sekundær"
 
 msgid "Silent"
-msgstr ""
+msgstr "Stille"
 
 msgid "Testing"
 msgstr "Test"
@@ -209,16 +212,19 @@ msgid "These repositories may break your system.  Use caution!!"
 msgstr "Disse arkiver kan ødelægge dit system. Brug med forsigtighed!!"
 
 msgid "This will not uninstall the standard kernel."
-msgstr ""
+msgstr "Dette vil ikke afinstallere standard kernen."
 
 msgid "Update"
-msgstr ""
+msgstr "Opdater"
 
 msgid "Utilities"
 msgstr "Værktøjer"
 
 msgid "VDR"
 msgstr "VDR"
+
+msgid "VPN"
+msgstr ""
 
 msgid "Version"
 msgstr "Version"
