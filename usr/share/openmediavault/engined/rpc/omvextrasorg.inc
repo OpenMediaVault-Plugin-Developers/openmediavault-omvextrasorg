@@ -130,6 +130,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "miller"        => array_boolval($object, 'miller'),
             "millertesting" => array_boolval($object, 'millertesting'),
             "btsync"        => array_boolval($object, 'btsync'),
+            "vpn"           => array_boolval($object, 'vpn'),
             "beta"          => array_boolval($object, 'beta'),
             "dotdeb"        => array_boolval($object, 'dotdeb'),
             "debmm"         => array_boolval($object, 'debmm'),
@@ -175,6 +176,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $object['miller']        = boolval($object['miller']);
         $object['millertesting'] = boolval($object['millertesting']);
         $object['btsync']        = boolval($object['btsync']);
+        $object['vpn']           = boolval($object['vpn']);
 
         // Remove useless fields from the result object.
         unset($object['repos']);
@@ -198,7 +200,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
                 "vdr"           : { "type" : "boolean" },
                 "miller"        : { "type" : "boolean" },
                 "millertesting" : { "type" : "boolean" },
-                "btsync"        : { "type" : "boolean" }
+                "btsync"        : { "type" : "boolean" },
+                "vpn"           : { "type" : "boolean" }
             }
         }');
 
@@ -228,6 +231,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "miller"        => array_boolval($params, 'miller'),
             "millertesting" => array_boolval($params, 'millertesting'),
             "btsync"        => array_boolval($params, 'btsync'),
+            "vpn"           => array_boolval($params, 'vpn'),
             "beta"          => array_boolval($object, 'beta'),
             "dotdeb"        => array_boolval($object, 'dotdeb'),
             "debmm"         => array_boolval($object, 'debmm'),
@@ -440,6 +444,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "miller"        => array_boolval($object, 'miller'),
             "millertesting" => array_boolval($object, 'millertesting'),
             "btsync"        => array_boolval($object, 'btsync'),
+            "vpn"           => array_boolval($object, 'vpn'),
             "beta"          => array_boolval($params, 'beta'),
             "dotdeb"        => array_boolval($params, 'dotdeb'),
             "debmm"         => array_boolval($params, 'debmm'),

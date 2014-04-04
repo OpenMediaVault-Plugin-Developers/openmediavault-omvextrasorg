@@ -58,6 +58,10 @@ case "$1" in
             omv_config_add_element "${SERVICE_XPATH}" "mariadb" "0"
         fi
 
+        if ! omv_config_exists "${SERVICE_XPATH}/vpn"; then
+            omv_config_add_element "${SERVICE_XPATH}" "vpn" "0"
+        fi
+
         omv-mkconf omvextrasorg
 
         if [ -x /usr/bin/apt-key ]; then

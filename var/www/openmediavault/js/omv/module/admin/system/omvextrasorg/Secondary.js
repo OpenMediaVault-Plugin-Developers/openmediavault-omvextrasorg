@@ -107,6 +107,12 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Secondary", {
                 fieldLabel : _("BTSync"),
                 boxLabel   : _("Enable BTSync repository"),
                 checked    : false
+            },{
+                xtype      : "checkbox",
+                name       : "vpn",
+                fieldLabel : _("VPN"),
+                boxLabel   : _("Enable VPN repository"),
+                checked    : false
             }]
         }];
     }
