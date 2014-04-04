@@ -152,7 +152,7 @@ fi
 
 if [ "$(omv_config_get "//system/omvextrasorg/vpn")" = "1" ]; then
 echo "# VPN repo" >> ${OMVEXTRASREPOFILE}
-echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-vpn main" >> ${OMVEXTRASREPOFILE}
+echo "deb http://dh2k.omv-extras.org/debian/ ${OMVVERSION}-vpn main" >> ${OMVEXTRASREPOFILE}
 cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-vpn, origin dh2k.omv-extras.org
