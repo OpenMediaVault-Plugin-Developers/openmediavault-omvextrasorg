@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (0.6.16) stable; urgency=low
+
+  * Fix dotdeb apt preferences
+  * Update locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 10 Apr 2014 17:55:27 -0500
+
 openmediavault-omvextrasorg (0.6.15) stable; urgency=low
 
   * Add vpn repo
