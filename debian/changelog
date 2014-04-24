@@ -1,15 +1,10 @@
 openmediavault-omvextrasorg (0.6.17) stable; urgency=low
 
   * Modify package trigger handling
-
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 14 Apr 2014 07:17:27 -0500
-
- openmediavault-omvextrasorg (0.6.16) stable; urgency=low
-
-  * Fix dotdeb apt preferences
+  * Hide backports button on arm architectures
   * Update locales
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 10 Apr 2014 17:55:27 -0500
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 24 Apr 2014 08:00:40 -0500
 
 openmediavault-omvextrasorg (0.6.15) stable; urgency=low
 

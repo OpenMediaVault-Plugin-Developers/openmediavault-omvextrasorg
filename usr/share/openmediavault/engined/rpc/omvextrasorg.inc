@@ -87,6 +87,17 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         // Get kernel version
         $object['kernel'] = php_uname('r');
 
+        // Get architecture
+        $cmd = "dpkg --print-architecture";
+        OMVUtil::exec($cmd, $output, $result);
+        $object['arch'] = strtolower( $output[0] );
+
+        // Determine if backports kernel button should be shown
+        if( strpos( $object['arch'], "arm" ) > 0 )
+            $object['showbackports'] = "0";
+        else
+            $object['showbackports'] = "1";
+
         // Remove useless fields from the result object.
         unset($object['repo']);
 
@@ -103,12 +114,9 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $this->validateMethodParams($params, '{
             "type"       : "object",
             "properties" : {
-                "enable"      : { "type" : "boolean" },
-                "testing"     : { "type" : "boolean" },
-                "versionname" : { "type" : "string", "optional" : true },
-                "version"     : { "type" : "string", "optional" : true },
-                "kernel"      : { "type" : "string", "optional" : true },
-                "developer"   : { "type" : "string", "optional" : true }
+                "enable"    : { "type" : "boolean" },
+                "testing"   : { "type" : "boolean" },
+                "developer" : { "type" : "string", "optional" : true }
             }
         }');
 
@@ -208,9 +216,9 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $uname = php_uname();
 
         if ( strpos($uname, "x86") === false && strpos($uname, "486") === false && strpos($uname, "686") === false ) {
-            $params['vbox']     = false;
-            $params['plex']     = false;
-            $params['vdr']      = false;
+            $params['vbox'] = false;
+            $params['plex'] = false;
+            $params['vdr']  = false;
         }
 
         // Get the existing configuration object.
@@ -421,8 +429,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
                 "dotdeb"      : { "type" : "boolean" },
                 "debmm"       : { "type" : "boolean" },
                 "debmmbp"     : { "type" : "boolean" },
-                "mariadb"     : { "type" : "boolean" },
-                "versionname" : { "type" : "string", "optional" : true }
+                "mariadb"     : { "type" : "boolean" }
             }
         }');
 

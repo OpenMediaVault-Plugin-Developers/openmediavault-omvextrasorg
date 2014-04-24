@@ -55,6 +55,15 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
                 "backports312"
             ],
             properties : "show"
+        },{
+            conditions : [{
+                name  : "showbackports",
+                value : "0"
+            }],
+            name       : [
+                "kernel"
+            ],
+            properties : "show"
         }]
     }],
 
@@ -154,7 +163,16 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
                            "<li>" + _("Cleans apt repositories and removes lists.") + "</li>" +
                            "<li>" + _("Can be helpful in fixing plugin problems.") + "</li>" +
                          "</ul>"
-            },{
+            }]
+        },{
+            xtype         : "fieldset",
+            title         : _("Kernel"),
+            name          : "kernel",
+            hidden        : true,
+            fieldDefaults : {
+                labelSeparator : ""
+            },
+            items         : [{
                 xtype   : "button",
                 name    : "backports32",
                 text    : _("Install Backports 3.2 kernel"),
@@ -184,23 +202,29 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
                 labelSeparator : ""
             },
             items         : [{
-                xtype      : "textfield",
-                name       : "version",
-                fieldLabel : _("Version"),
-                allowBlank : true,
-                readOnly   : true
+                xtype       : "textfield",
+                name        : "version",
+                fieldLabel  : _("Version"),
+                submitValue : false,
+                readOnly    : true
             },{
-                xtype      : "textfield",
-                name       : "versionname",
-                fieldLabel : _("Distribution"),
-                allowBlank : true,
-                readOnly   : true
+                xtype       : "textfield",
+                name        : "versionname",
+                fieldLabel  : _("Distribution"),
+                submitValue : false,
+                readOnly    : true
             },{
-                xtype      : "textfield",
-                name       : "kernel",
-                fieldLabel : _("Kernel"),
-                allowBlank : true,
-                readOnly   : true
+                xtype       : "textfield",
+                name        : "kernel",
+                fieldLabel  : _("Kernel"),
+                submitValue : false,
+                readOnly    : true
+            },{
+                xtype       : "textfield",
+                name        : "arch",
+                fieldLabel  : _("Architecture"),
+                submitValue : false,
+                readOnly    : true
             },{
                 xtype      : "textfield",
                 name       : "developer",

@@ -136,8 +136,9 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Developer", {
                 margin  : "5 0 10 0"
             }]
         },{
-            xtype : "hidden",
-            name  : "versionname"
+            xtype       : "hidden",
+            name        : "versionname",
+            submitValue : false
         }];
     },
 
