@@ -58,7 +58,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
         },{
             conditions : [{
                 name  : "showbackports",
-                value : "0"
+                value : "1"
             }],
             name       : [
                 "kernel"

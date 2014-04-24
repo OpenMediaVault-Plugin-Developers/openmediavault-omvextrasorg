@@ -95,10 +95,11 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $object['arch'] = strtolower( $output[0] );
 
         // Determine if backports kernel button should be shown
-        if( strpos( $object['arch'], "arm" ) > 0 )
-            $object['showbackports'] = "0";
-        else
+        $pos = strpos( $object['arch'], "arm" );
+        if( $pos === false )
             $object['showbackports'] = "1";
+        else
+            $object['showbackports'] = "0";
 
         // Remove useless fields from the result object.
         unset($object['repo']);
