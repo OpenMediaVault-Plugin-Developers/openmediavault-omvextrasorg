@@ -80,6 +80,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $object['versionname'] = strtolower( $prd->getVersionName() );
 
         // Get omv-extras version
+        $output = array();
         $cmd = sprintf("dpkg-query -W -f='\${Version}' %s", "openmediavault-omvextrasorg");
         OMVUtil::exec($cmd, $output, $result);
         $object['version'] = $output[0];
@@ -88,6 +89,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $object['kernel'] = php_uname('r');
 
         // Get architecture
+        $output = array();
         $cmd = "dpkg --print-architecture";
         OMVUtil::exec($cmd, $output, $result);
         $object['arch'] = strtolower( $output[0] );

@@ -178,7 +178,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
                 text    : _("Install Backports 3.2 kernel"),
                 scope   : this,
                 handler : Ext.Function.bind(me.onBackports32Button, me, [ me ]),
-                margin  : "0 0 0 0",
+                margin  : "5 0 0 0",
                 hidden  : true
             },{
                 xtype   : "button",
@@ -186,7 +186,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
                 text    : _("Install Backports 3.12 kernel"),
                 scope   : this,
                 handler : Ext.Function.bind(me.onBackports312Button, me, [ me ]),
-                margin  : "0 0 0 0",
+                margin  : "5 0 0 0",
                 hidden  : true
             },{
                 border : false,
