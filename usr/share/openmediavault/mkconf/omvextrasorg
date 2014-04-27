@@ -24,11 +24,17 @@ set -e
 . /etc/default/openmediavault
 . /usr/share/openmediavault/scripts/helper-functions
 
-OMVVERSION=$(xmlstarlet sel -t -v "//distribution" ${OMV_PRODUCTINFO_FILE} | xmlstarlet unesc)
+if [ "$2" = "upgrade" ]
+  OMVVERSION="kralizec"
+  RELEASE="wheezy"
+else
+  OMVVERSION=$(xmlstarlet sel -t -v "//distribution" ${OMV_PRODUCTINFO_FILE} | xmlstarlet unesc)
+  RELEASE=$(lsb_release -cs)
+fi
+
 OMVEXTRASREPOFILE="/etc/apt/sources.list.d/omv-extras-org-${OMVVERSION}.list"
 OMVEXTRASCUSTOMREPOFILE="/etc/apt/sources.list.d/omv-extras-org-custom.list"
 OMVEXTRASAPTPREFS="/etc/apt/preferences.d/99omv-extras-org"
-RELEASE=$(lsb_release -cs)
 
 /bin/rm -f ${OMVEXTRASREPOFILE}
 /bin/rm -f ${OMVEXTRASCUSTOMREPOFILE}
@@ -245,14 +251,13 @@ echo "# Custom repos" > ${OMVEXTRASCUSTOMREPOFILE}
 count=$(omv_config_get_count "//system/omvextrasorg/repos/repo")
 index=0
 while [ ${index} -le ${count} ]; do
+  name=$(omv_config_get "//system/omvextrasorg/repos/repo[position()=${index}]/name")
+  repo=$(omv_config_get "//system/omvextrasorg/repos/repo[position()=${index}]/repo")
 
-name=$(omv_config_get "//system/omvextrasorg/repos/repo[position()=${index}]/name")
-repo=$(omv_config_get "//system/omvextrasorg/repos/repo[position()=${index}]/repo")
+  if [ "${repo}" != "" ]; then
+    echo "# ${name}" >> ${OMVEXTRASCUSTOMREPOFILE}
+    echo "${repo}" >> ${OMVEXTRASCUSTOMREPOFILE}
+  fi
 
-if [ "${repo}" != "" ]; then
-echo "# ${name}" >> ${OMVEXTRASCUSTOMREPOFILE}
-echo "${repo}" >> ${OMVEXTRASCUSTOMREPOFILE}
-fi
-
-index=$(( ${index} + 1 ))
+  index=$(( ${index} + 1 ))
 done

@@ -27,6 +27,9 @@ set -e
 SERVICE_XPATH_NAME="omvextrasorg"
 SERVICE_XPATH="/config/system/${SERVICE_XPATH_NAME}"
 KEYRING_LOCATION="/usr/share/keyrings/"
+OMV_UPGRADE_SCRIPTS_DIR=${OMV_UPGRADE_SCRIPTS_DIR:-"/usr/share/openmediavault/releaseupgrade"}
+OMVEXTRAS_PRE_UPGRADE_SCRIPT=${OMV_UPGRADE_SCRIPTS_DIR}/pre.d/21-update-omvextrasorg
+OMVVERSION=$(xmlstarlet sel -t -v "//distribution" ${OMV_PRODUCTINFO_FILE} | xmlstarlet unesc)
 
 case "$1" in
     configure)
@@ -80,6 +83,21 @@ case "$1" in
 
         dpkg-trigger update-fixperms
         dpkg-trigger update-locale
+
+        # Create pre-upgrade script if installing on sardaukar
+        if [ "${OMVVERSION}" = "sardaukar" ]
+            echo <<EOF > ${OMVEXTRAS_PRE_UPGRADE_SCRIPT}
+#!/bin/sh
+set -e
+
+. /etc/default/openmediavault
+
+omv-mkconf omvextrasorg upgrade
+
+exit 0
+EOF
+        fi
+
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
