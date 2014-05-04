@@ -85,7 +85,7 @@ case "$1" in
         dpkg-trigger update-locale
 
         # Create pre-upgrade script if installing on sardaukar
-        if [ "${OMVVERSION}" = "sardaukar" ]
+        if [ "${OMVVERSION}" = "sardaukar" ]; then
             echo <<EOF > ${OMVEXTRAS_PRE_UPGRADE_SCRIPT}
 #!/bin/sh
 set -e
