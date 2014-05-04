@@ -96,8 +96,9 @@ omv-mkconf omvextrasorg upgrade
 
 exit 0
 EOF
-        fi
 
+            chmod +x ${OMVEXTRAS_PRE_UPGRADE_SCRIPT}
+        fi
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
