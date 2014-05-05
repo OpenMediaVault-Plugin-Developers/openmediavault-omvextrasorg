@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (0.6.19) UNRELEASED; urgency=low
+
+  * Fix upgrade script
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 05 May 2014 06:37:17 -0500
+
 openmediavault-omvextrasorg (0.6.18) stable; urgency=low
 
   * Add upgrade script
