@@ -28,16 +28,40 @@ require_once("openmediavault/notify.inc");
 require_once("openmediavault/product.inc");
 
 class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
-    /**
-     * Get the RPC service name.
-     */
+
     public function getName() {
         return "OmvExtrasOrg";
     }
 
-    /**
-     * Initialize the RPC service.
-     */
+    private function getPluginName() {
+        return lcase( $this->getName() );
+    }
+
+    private function getXPath() {
+        $path = sprintf( "//system/%s", $this->getPluginName() );
+        return $path;
+    }
+
+    private function getXPathRepos() {
+        $path = sprintf( "%s/repos", $this->getXPath() );
+        return $path;
+    }
+
+    private function getXPathRepo() {
+        $path = sprintf( "%s/repo", $this->getXPathRepos() );
+        return $path;
+    }
+
+    private function getEventMessagePath() {
+        $path = sprintf( "org.openmediavault.system.%s", $this->getPluginName() );
+        return $path;
+    }
+
+    private function getEventMessagePathRepo() {
+        $path = sprintf( "%s.repos.repo", $this->getEventMessagePath() );
+        return $path;
+    }
+
     public function initialize() {
         $this->registerMethod("getPrimary");
         $this->registerMethod("setPrimary");
@@ -66,8 +90,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
 
         // Get the configuration object.
-        $xpath = "//system/omvextrasorg";
-        $object = $xmlConfig->get($xpath);
+        $object = $xmlConfig->get( $this->getXPath() );
         if(is_null($object))
             throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
 
@@ -81,7 +104,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
 
         // Get omv-extras version
         $output = array();
-        $cmd = sprintf("dpkg-query -W -f='\${Version}' %s", "openmediavault-omvextrasorg");
+        $cmd = sprintf( "dpkg-query -W -f='\${Version}' openmediavault-%s", $this->getPluginName() );
         OMVUtil::exec($cmd, $output, $result);
         $object['version'] = $output[0];
 
@@ -102,7 +125,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             $object['showbackports'] = "0";
 
         // Remove useless fields from the result object.
-        unset($object['repo']);
+        unset($object['repos']);
 
         return $object;
     }
@@ -124,9 +147,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         }');
 
         // Get the existing configuration object.
-        $xpath = "//system/omvextrasorg";
-        $object = $xmlConfig->get($xpath);
-        if(is_null($object))
+        $oldObject = $xmlConfig->get( $this->getXPath() );
+        if(is_null($oldObject))
             throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
 
         // Update the configuration object.
@@ -134,32 +156,31 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "enable"        => array_boolval($params, 'enable'),
             "testing"       => array_boolval($params, 'testing'),
             "developer"     => $params['developer'],
-            "vbox"          => array_boolval($object, 'vbox'),
-            "plex"          => array_boolval($object, 'plex'),
-            "greyhole"      => array_boolval($object, 'greyhole'),
-            "vdr"           => array_boolval($object, 'vdr'),
-            "miller"        => array_boolval($object, 'miller'),
-            "millertesting" => array_boolval($object, 'millertesting'),
-            "btsync"        => array_boolval($object, 'btsync'),
-            "vpn"           => array_boolval($object, 'vpn'),
-            "beta"          => array_boolval($object, 'beta'),
-            "dotdeb"        => array_boolval($object, 'dotdeb'),
-            "debmm"         => array_boolval($object, 'debmm'),
-            "debmmbp"       => array_boolval($object, 'debmmbp'),
-            "mariadb"       => array_boolval($object, 'mariadb'),
+            "vbox"          => array_boolval($oldObject, 'vbox'),
+            "plex"          => array_boolval($oldObject, 'plex'),
+            "greyhole"      => array_boolval($oldObject, 'greyhole'),
+            "vdr"           => array_boolval($oldObject, 'vdr'),
+            "miller"        => array_boolval($oldObject, 'miller'),
+            "millertesting" => array_boolval($oldObject, 'millertesting'),
+            "btsync"        => array_boolval($oldObject, 'btsync'),
+            "vpn"           => array_boolval($oldObject, 'vpn'),
+            "beta"          => array_boolval($oldObject, 'beta'),
+            "dotdeb"        => array_boolval($oldObject, 'dotdeb'),
+            "debmm"         => array_boolval($oldObject, 'debmm'),
+            "debmmbp"       => array_boolval($oldObject, 'debmmbp'),
+            "mariadb"       => array_boolval($oldObject, 'mariadb'),
             "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array()
         );
-        if(FALSE === $xmlConfig->replace("//system/omvextrasorg", $object))
+        if(FALSE === $xmlConfig->replace($this->getXPath(), $object))
             throw new OMVException(OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED);
 
         // Notify configuration changes.
         $dispatcher = &OMVNotifyDispatcher::getInstance();
-        $dispatcher->notify(OMV_NOTIFY_MODIFY,
-            "org.openmediavault.system.omvextrasorg", $object);
+        $dispatcher->notify(OMV_NOTIFY_MODIFY, $this->getEventMessagePath(), $object);
 
         // Apply the changes immediately (no user interaction is wanted).
         OMVRpc::exec("Config", "applyChanges", array(
-            "modules" => array("omvextrasorg"),
+            "modules" => array( $this->getPluginName() ),
             "force"   => TRUE
         ), $context);
 
@@ -174,8 +195,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
 
         // Get the configuration object.
-        $xpath = "//system/omvextrasorg";
-        $object = $xmlConfig->get($xpath);
+        $object = $xmlConfig->get( $this->getXPath() );
         if(is_null($object))
             throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
 
@@ -218,23 +238,25 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
 
         $uname = php_uname();
 
-        if ( strpos($uname, "x86") === false && strpos($uname, "486") === false && strpos($uname, "686") === false ) {
+        if ( strpos($uname, "x86") === false &&
+             strpos($uname, "486") === false &&
+             strpos($uname, "686") === false )
+        {
             $params['vbox'] = false;
             $params['plex'] = false;
             $params['vdr']  = false;
         }
 
         // Get the existing configuration object.
-        $xpath = "//system/omvextrasorg";
-        $object = $xmlConfig->get($xpath);
-        if(is_null($object))
+        $oldObject = $xmlConfig->get( $this->getXPath() );
+        if(is_null($oldObject))
             throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
 
         // Update the configuration object.
         $object = array(
-            "enable"        => array_boolval($object, 'enable'),
-            "testing"       => array_boolval($object, 'testing'),
-            "developer"     => $object['developer'],
+            "enable"        => array_boolval($oldObject, 'enable'),
+            "testing"       => array_boolval($oldObject, 'testing'),
+            "developer"     => $oldObject['developer'],
             "vbox"          => array_boolval($params, 'vbox'),
             "plex"          => array_boolval($params, 'plex'),
             "greyhole"      => array_boolval($params, 'greyhole'),
@@ -243,25 +265,24 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "millertesting" => array_boolval($params, 'millertesting'),
             "btsync"        => array_boolval($params, 'btsync'),
             "vpn"           => array_boolval($params, 'vpn'),
-            "beta"          => array_boolval($object, 'beta'),
-            "dotdeb"        => array_boolval($object, 'dotdeb'),
-            "debmm"         => array_boolval($object, 'debmm'),
-            "debmmbp"       => array_boolval($object, 'debmmbp'),
-            "mariadb"       => array_boolval($object, 'mariadb'),
+            "beta"          => array_boolval($oldObject, 'beta'),
+            "dotdeb"        => array_boolval($oldObject, 'dotdeb'),
+            "debmm"         => array_boolval($oldObject, 'debmm'),
+            "debmmbp"       => array_boolval($oldObject, 'debmmbp'),
+            "mariadb"       => array_boolval($oldObject, 'mariadb'),
             "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array()
         );
 
-        if(FALSE === $xmlConfig->replace("//system/omvextrasorg", $object))
+        if(FALSE === $xmlConfig->replace($this->getXPath(), $object))
             throw new OMVException(OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED);
 
         // Notify configuration changes.
         $dispatcher = &OMVNotifyDispatcher::getInstance();
-        $dispatcher->notify(OMV_NOTIFY_MODIFY,
-            "org.openmediavault.system.omvextrasorg", $object);
+        $dispatcher->notify(OMV_NOTIFY_MODIFY, $this->getEventMessagePath(), $object);
 
         // Apply the changes immediately (no user interaction is wanted).
         OMVRpc::exec("Config", "applyChanges", array(
-            "modules" => array("omvextrasorg"),
+            "modules" => array( $this->getPluginName() ),
             "force"   => TRUE
         ), $context);
 
@@ -287,8 +308,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         }');
 
         // Get configuration data.
-        $xpath = "//system/omvextrasorg/repos/repo";
-        $objects = $xmlConfig->getList($xpath);
+        $objects = $xmlConfig->getList( $this->getXPathRepo() );
         if(is_null($objects))
             throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
 
@@ -312,7 +332,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         }');
 
         // Get the configuration object.
-        $xpath = sprintf("//system/omvextrasorg/repos/repo[uuid='%s']", $params['uuid']);
+        $xpath = sprintf("%s[uuid='%s']", $this->getXPathRepo(), $params['uuid']);
         $object = $xmlConfig->get($xpath);
         if(is_null($object))
             throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
@@ -349,10 +369,11 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $success = FALSE;
         if($params['uuid'] == $GLOBALS['OMV_UUID_UNDEFINED']) {
             // Append object to configuration.
-            $success = $xmlConfig->set("//system/omvextrasorg/repos", array("repo" => $object));
+            $success = $xmlConfig->set($this->getXPathRepos(), array("repo" => $object));
         } else {
             // Update existing configuration object.
-            $success = $xmlConfig->replace("//system/omvextrasorg/repos/repo[uuid='{$params['uuid']}']", $object);
+            $xpath = sprintf("%s[uuid='%s']", $this->getXPathRepo(), $params['uuid']);
+            $success = $xmlConfig->replace($xpath, $object);
         }
 
         if(FALSE === $success)
@@ -362,7 +383,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $dispatcher = &OMVNotifyDispatcher::getInstance();
         $dispatcher->notify(($params['uuid'] == $GLOBALS['OMV_UUID_UNDEFINED']) ?
             OMV_NOTIFY_CREATE : OMV_NOTIFY_MODIFY,
-            "org.openmediavault.system.omvextrasorg.repos.repo", $object);
+            $this->getEventMessagePathRepo(), $object);
 
         // Return the configuration object.
         return $object;
@@ -384,9 +405,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         }');
 
         // Delete the configuration object.
-        $xpath = sprintf("//system/omvextrasorg/repos/repo[uuid='%s']", $params['uuid']);
-        return $this->deleteConfigObjectByPath($xpath,
-            "org.openmediavault.system.omvextrasorg.repos.repo");
+        $xpath = sprintf("%s[uuid='%s']", $this->getXPathRepo(), $params['uuid']);
+        return $this->deleteConfigObjectByPath($xpath, $this->getEventMessagePathRepo());
     }
 
     public function getDeveloper($params, $context) {
@@ -396,8 +416,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
 
         // Get the configuration object.
-        $xpath = "//system/omvextrasorg";
-        $object = $xmlConfig->get($xpath);
+        $object = $xmlConfig->get( $this->getXPath() );
         if(is_null($object))
             throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
 
@@ -437,24 +456,23 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         }');
 
         // Get the existing configuration object.
-        $xpath = "//system/omvextrasorg";
-        $object = $xmlConfig->get($xpath);
-        if(is_null($object))
+        $oldObject = $xmlConfig->get( $this->getXPath() );
+        if(is_null($oldObject))
             throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
 
         // Update the configuration object.
         $object = array(
-            "enable"        => array_boolval($object, 'enable'),
-            "testing"       => array_boolval($object, 'testing'),
-            "developer"     => $object['developer'],
-            "vbox"          => array_boolval($object, 'vbox'),
-            "plex"          => array_boolval($object, 'plex'),
-            "greyhole"      => array_boolval($object, 'greyhole'),
-            "vdr"           => array_boolval($object, 'vdr'),
-            "miller"        => array_boolval($object, 'miller'),
-            "millertesting" => array_boolval($object, 'millertesting'),
-            "btsync"        => array_boolval($object, 'btsync'),
-            "vpn"           => array_boolval($object, 'vpn'),
+            "enable"        => array_boolval($oldObject, 'enable'),
+            "testing"       => array_boolval($oldObject, 'testing'),
+            "developer"     => $oldObject['developer'],
+            "vbox"          => array_boolval($oldObject, 'vbox'),
+            "plex"          => array_boolval($oldObject, 'plex'),
+            "greyhole"      => array_boolval($oldObject, 'greyhole'),
+            "vdr"           => array_boolval($oldObject, 'vdr'),
+            "miller"        => array_boolval($oldObject, 'miller'),
+            "millertesting" => array_boolval($oldObject, 'millertesting'),
+            "btsync"        => array_boolval($oldObject, 'btsync'),
+            "vpn"           => array_boolval($oldObject, 'vpn'),
             "beta"          => array_boolval($params, 'beta'),
             "dotdeb"        => array_boolval($params, 'dotdeb'),
             "debmm"         => array_boolval($params, 'debmm'),
@@ -462,17 +480,16 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "mariadb"       => array_boolval($params, 'mariadb'),
             "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array()
         );
-        if(FALSE === $xmlConfig->replace("//system/omvextrasorg", $object))
+        if(FALSE === $xmlConfig->replace($this->getXPath(), $object))
             throw new OMVException(OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED);
 
         // Notify configuration changes.
         $dispatcher = &OMVNotifyDispatcher::getInstance();
-        $dispatcher->notify(OMV_NOTIFY_MODIFY,
-            "org.openmediavault.system.omvextrasorg", $object);
+        $dispatcher->notify(OMV_NOTIFY_MODIFY, $this->getEventMessagePath(), $object);
 
         // Apply the changes immediately (no user interaction is wanted).
         OMVRpc::exec("Config", "applyChanges", array(
-            "modules" => array("omvextrasorg"),
+            "modules" => array( $this->getPluginName() ),
             "force"   => TRUE
         ), $context);
 

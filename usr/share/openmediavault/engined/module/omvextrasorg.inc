@@ -25,38 +25,41 @@ require_once("openmediavault/error.inc");
 class OMVModuleOmvExtrasOrg extends OMVModuleServiceAbstract
     implements OMVINotifyListener {
 
-    /**
-     * Get the module name.
-     */
     public function getName() {
         return "omvextrasorg";
     }
 
-    /**
-     * Generate the configuration.
-     * @throw E_EXEC_FAILED
-     */
+    private function getPluginName() {
+        return lcase( $this->getName() );
+    }
+
+    private function getEventMessagePath() {
+        $path = sprintf( "org.openmediavault.system.%s", $this->getPluginName() );
+        return $path;
+    }
+
+    private function getEventMessagePathRepo() {
+        $path = sprintf( "%s.repos.repo", $this->getEventMessagePath() );
+        return $path;
+    }
+
     public function applyConfig() {
         global $xmlConfig;
 
-        $cmd = "omv-mkconf omvextrasorg 2>&1";
-        if(0 !== $this->exec($cmd, $output)) {
+        $cmd = sprintf("omv-mkconf %s 2>&1", $this->getPluginName() );
+        if(0 !== $this->exec($cmd, $output))
             throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
-        }
     }
 
-    /**
-     * Bind listeners.
-     */
     function bindListeners(OMVNotifyDispatcher $dispatcher) {
         $dispatcher->addListener(
             OMV_NOTIFY_MODIFY,
-            "org.openmediavault.system.omvextrasorg",
+            $this->getEventMessagePath(),
             array($this, "setDirty"));
 
         $dispatcher->addListener(
             OMV_NOTIFY_CREATE | OMV_NOTIFY_MODIFY | OMV_NOTIFY_DELETE,
-            "org.openmediavault.system.omvextrasorg.repos.repo",
+            $this->getEventMessagePathRepo(),
             array($this, "setDirty"));
     }
 }
@@ -64,5 +67,4 @@ class OMVModuleOmvExtrasOrg extends OMVModuleServiceAbstract
 // Register module.
 $moduleMgr = &OMVModuleMgr::getInstance();
 $moduleMgr->registerModule(new OMVModuleOmvExtrasOrg());
-
 ?>
