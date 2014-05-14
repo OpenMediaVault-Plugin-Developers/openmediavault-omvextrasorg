@@ -34,7 +34,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
     }
 
     private function getPluginName() {
-        return lcase( $this->getName() );
+        return strtolower( $this->getName() );
     }
 
     private function getXPath() {

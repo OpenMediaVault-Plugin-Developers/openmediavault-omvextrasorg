@@ -30,7 +30,7 @@ class OMVModuleOmvExtrasOrg extends OMVModuleServiceAbstract
     }
 
     private function getPluginName() {
-        return lcase( $this->getName() );
+        return strtolower( $this->getName() );
     }
 
     private function getEventMessagePath() {
