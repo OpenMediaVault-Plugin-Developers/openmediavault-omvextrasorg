@@ -1,9 +1,9 @@
-openmediavault-omvextrasorg (0.6.20) UNRELEASED; urgency=low
+openmediavault-omvextrasorg (0.6.20) stable; urgency=low
 
   * Fix typo in custom repo code
   * Update locales
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 14 May 2014 07:26:29 -0500
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 14 May 2014 07:38:40 -0500
 
 openmediavault-omvextrasorg (0.6.19) stable; urgency=low
 
