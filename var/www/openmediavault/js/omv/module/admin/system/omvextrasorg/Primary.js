@@ -52,7 +52,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
                 value : "kralizec"
             }],
             name       : [
-                "backports312"
+                "backports314"
             ],
             properties : "show"
         },{
@@ -182,10 +182,10 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
                 hidden  : true
             },{
                 xtype   : "button",
-                name    : "backports312",
-                text    : _("Install Backports 3.12 kernel"),
+                name    : "backports314",
+                text    : _("Install Backports 3.14 kernel"),
                 scope   : this,
-                handler : Ext.Function.bind(me.onBackports312Button, me, [ me ]),
+                handler : Ext.Function.bind(me.onBackports314Button, me, [ me ]),
                 margin  : "5 0 0 0",
                 hidden  : true
             },{
@@ -250,10 +250,10 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
         }).show();
     },
 
-    onBackports312Button : function() {
+    onBackports314Button : function() {
         var me = this;
         Ext.create("OMV.window.Execute", {
-            title          : _("Install Backports 3.12 kernel ..."),
+            title          : _("Install Backports 3.14 kernel ..."),
             rpcService     : "OmvExtrasOrg",
             rpcMethod      : "doInstallBackports",
             hideStopButton : true,

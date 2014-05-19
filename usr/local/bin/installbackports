@@ -50,12 +50,12 @@ else
             fi
             ;;
         wheezy)
-            echo "Install backports 3.12 kernel and headers"
+            echo "Install backports 3.14 kernel and headers"
             apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-base initramfs-tools=0.115~bpo70+1
             if $AMD64; then
-                apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.12-0.bpo.1-amd64 linux-headers-3.12-0.bpo.1-all firmware-linux firmware-linux-free
+                apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.14-0.bpo.1-amd64 linux-headers-3.14-0.bpo.1-all firmware-linux firmware-linux-free
             else
-                apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.12-0.bpo.1-486 linux-headers-3.12-0.bpo.1-all firmware-linux firmware-linux-free
+                apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.14-0.bpo.1-486 linux-headers-3.14-0.bpo.1-all firmware-linux firmware-linux-free
             fi
             ;;
     esac
