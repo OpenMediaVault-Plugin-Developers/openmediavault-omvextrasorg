@@ -1,9 +1,9 @@
-openmediavault-omvextrasorg (0.6.21) UNRELEASED; urgency=low
+openmediavault-omvextrasorg (0.6.21) stable; urgency=low
 
   * Use backports 3.14 kernel on kralizec
   * Update locales
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 19 May 2014 10:14:34 -0500
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 19 May 2014 11:22:14 -0500
 
 openmediavault-omvextrasorg (0.6.20) stable; urgency=low
 
