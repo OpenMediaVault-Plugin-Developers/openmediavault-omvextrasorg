@@ -239,6 +239,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             }
         }');
 
+        // Check architecture and disable appropriate repos
         $uname = php_uname();
 
         if ( strpos($uname, "x86") === false &&
@@ -250,9 +251,17 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             $params['vdr']  = false;
         }
 
-        if ( strpos($uname, "amd64") === false ) {
+        if ( strpos($uname, "amd64") === false )
             $params['zfs'] = false;
-        }
+
+        // Get release and disable zfs if squeeze
+        $output = array();
+        $cmd = "lsb_release -cs";
+        OMVUtil::exec($cmd, $output, $result);
+        $release = strtolower($output[0]);
+
+        if ( $release == "squeeze" )
+            $params['zfs'] = false;
 
         // Get the existing configuration object.
         $oldObject = $xmlConfig->get( $this->getXPath() );

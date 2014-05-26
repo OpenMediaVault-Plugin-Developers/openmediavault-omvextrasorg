@@ -1,9 +1,9 @@
-openmediavault-omvextrasorg (0.6.22) UNRELEASED; urgency=low
+openmediavault-omvextrasorg (0.6.22) stable; urgency=low
 
   * Add zfsonlinux repo
   * Update locales
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 26 May 2014 12:20:47 -0500
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 26 May 2014 13:14:38 -0500
 
 openmediavault-omvextrasorg (0.6.21) stable; urgency=low
 
