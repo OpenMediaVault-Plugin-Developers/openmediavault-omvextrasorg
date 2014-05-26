@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (0.6.22) UNRELEASED; urgency=low
+
+  * Add zfsonlinux repo
+  * Update locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 26 May 2014 12:20:47 -0500
+
 openmediavault-omvextrasorg (0.6.21) stable; urgency=low
 
   * Use backports 3.14 kernel on kralizec

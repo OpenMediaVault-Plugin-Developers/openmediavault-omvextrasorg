@@ -248,6 +248,19 @@ echo "deb http://ftp.osuosl.org/pub/mariadb/repo/10.0/debian ${RELEASE} main" >>
 echo "deb-src http://ftp.osuosl.org/pub/mariadb/repo/10.0/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
 fi
 
+# omv-extras zfs
+if [ "$(omv_config_get "${XPATH}zfs")" = "1" ]; then
+echo "# ZFS repo" >> ${OMVEXTRASREPOFILE}
+echo "deb ${REPO_URL} ${OMVVERSION}-zfs main" >> ${OMVEXTRASREPOFILE}
+echo "deb http://archive.zfsonlinux.org/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release o=archive.zfsonlinux.org
+Pin-Priority: 1001
+
+EOF
+fi
+
 cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-backports, origin ${REPO_LOCATION}

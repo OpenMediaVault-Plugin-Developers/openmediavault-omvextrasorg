@@ -113,6 +113,12 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Secondary", {
                 fieldLabel : _("VPN"),
                 boxLabel   : _("Enable VPN repository"),
                 checked    : false
+            },{
+                xtype      : "checkbox",
+                name       : "zfs",
+                fieldLabel : _("ZFS"),
+                boxLabel   : _("Enable ZFS repository"),
+                checked    : false
             }]
         }];
     }

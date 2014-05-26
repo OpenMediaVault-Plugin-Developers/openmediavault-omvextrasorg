@@ -66,6 +66,10 @@ case "$1" in
             omv_config_add_element "${SERVICE_XPATH}" "vpn" "0"
         fi
 
+        if ! omv_config_exists "${SERVICE_XPATH}/zfs"; then
+            omv_config_add_element "${SERVICE_XPATH}" "zfs" "0"
+        fi
+
         omv-mkconf omvextrasorg
 
         if [ -x /usr/bin/apt-key ]; then
@@ -78,6 +82,7 @@ case "$1" in
             apt-key add ${KEYRING_LOCATION}e-tobi-keyring.gpg
             apt-key add ${KEYRING_LOCATION}btsync.gpg
             apt-key add ${KEYRING_LOCATION}mariadb.key
+            apt-key add ${KEYRING_LOCATION}zfsonlinux.gpg
         fi
 
         chattr +i /etc/apt/sources.list

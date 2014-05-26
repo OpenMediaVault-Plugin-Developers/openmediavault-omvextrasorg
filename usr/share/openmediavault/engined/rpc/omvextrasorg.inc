@@ -164,6 +164,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "millertesting" => array_boolval($oldObject, 'millertesting'),
             "btsync"        => array_boolval($oldObject, 'btsync'),
             "vpn"           => array_boolval($oldObject, 'vpn'),
+            "zfs"           => array_boolval($oldObject, 'zfs'),
             "beta"          => array_boolval($oldObject, 'beta'),
             "dotdeb"        => array_boolval($oldObject, 'dotdeb'),
             "debmm"         => array_boolval($oldObject, 'debmm'),
@@ -208,6 +209,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $object['millertesting'] = boolval($object['millertesting']);
         $object['btsync']        = boolval($object['btsync']);
         $object['vpn']           = boolval($object['vpn']);
+        $object['zfs']           = boolval($object['zfs']);
 
         // Remove useless fields from the result object.
         unset($object['repos']);
@@ -232,7 +234,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
                 "miller"        : { "type" : "boolean" },
                 "millertesting" : { "type" : "boolean" },
                 "btsync"        : { "type" : "boolean" },
-                "vpn"           : { "type" : "boolean" }
+                "vpn"           : { "type" : "boolean" },
+                "zfs"           : { "type" : "boolean" }
             }
         }');
 
@@ -245,6 +248,10 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             $params['vbox'] = false;
             $params['plex'] = false;
             $params['vdr']  = false;
+        }
+
+        if ( strpos($uname, "amd64") === false ) {
+            $params['zfs'] = false;
         }
 
         // Get the existing configuration object.
@@ -265,6 +272,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "millertesting" => array_boolval($params, 'millertesting'),
             "btsync"        => array_boolval($params, 'btsync'),
             "vpn"           => array_boolval($params, 'vpn'),
+            "zfs"           => array_boolval($params, 'zfs'),
             "beta"          => array_boolval($oldObject, 'beta'),
             "dotdeb"        => array_boolval($oldObject, 'dotdeb'),
             "debmm"         => array_boolval($oldObject, 'debmm'),
@@ -473,6 +481,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "millertesting" => array_boolval($oldObject, 'millertesting'),
             "btsync"        => array_boolval($oldObject, 'btsync'),
             "vpn"           => array_boolval($oldObject, 'vpn'),
+            "zfs"           => array_boolval($oldObject, 'zfs'),
             "beta"          => array_boolval($params, 'beta'),
             "dotdeb"        => array_boolval($params, 'dotdeb'),
             "debmm"         => array_boolval($params, 'debmm'),
