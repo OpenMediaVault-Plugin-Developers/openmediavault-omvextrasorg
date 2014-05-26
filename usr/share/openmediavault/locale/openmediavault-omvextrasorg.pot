@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-19 10:16-0500\n"
+"POT-Creation-Date: 2014-05-26 12:22-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -119,6 +119,9 @@ msgstr ""
 msgid "Enable VPN repository"
 msgstr ""
 
+msgid "Enable ZFS repository"
+msgstr ""
+
 msgid "Enable deb-multimedia backports repository"
 msgstr ""
 
@@ -225,6 +228,9 @@ msgid "Version"
 msgstr ""
 
 msgid "Virtualbox"
+msgstr ""
+
+msgid "ZFS"
 msgstr ""
 
 msgid "deb-multimedia"

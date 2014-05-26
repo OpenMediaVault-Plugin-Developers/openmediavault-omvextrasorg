@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-19 10:16-0500\n"
-"PO-Revision-Date: 2014-05-19 15:16+0000\n"
+"POT-Creation-Date: 2014-05-26 12:22-0500\n"
+"PO-Revision-Date: 2014-05-26 17:23+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -121,6 +121,9 @@ msgstr "Habilitar repositorio Plex Media Server"
 msgid "Enable VPN repository"
 msgstr "Habilitar repositorio VPN"
 
+msgid "Enable ZFS repository"
+msgstr ""
+
 msgid "Enable deb-multimedia backports repository"
 msgstr "Habilitar repositorio deb-multimedia backports"
 
@@ -142,10 +145,10 @@ msgid "Information"
 msgstr "Información"
 
 msgid "Install Backports 3.14 kernel"
-msgstr ""
+msgstr "Instalar kernel 3.14 Backports"
 
 msgid "Install Backports 3.14 kernel ..."
-msgstr ""
+msgstr "Instalar kernel 3.14 Backports ..."
 
 msgid "Install Backports 3.2 kernel"
 msgstr "Instalar kernel 3.2 Backports"
@@ -234,6 +237,9 @@ msgstr "Version"
 
 msgid "Virtualbox"
 msgstr "Virtualbox"
+
+msgid "ZFS"
+msgstr ""
 
 msgid "deb-multimedia"
 msgstr "deb-multimedia"

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-19 10:16-0500\n"
-"PO-Revision-Date: 2014-05-19 15:16+0000\n"
+"POT-Creation-Date: 2014-05-26 12:22-0500\n"
+"PO-Revision-Date: 2014-05-26 17:23+0000\n"
 "Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -119,6 +119,9 @@ msgid "Enable Plex Media Server repository"
 msgstr ""
 
 msgid "Enable VPN repository"
+msgstr ""
+
+msgid "Enable ZFS repository"
 msgstr ""
 
 msgid "Enable deb-multimedia backports repository"
@@ -234,6 +237,9 @@ msgstr "Версія"
 
 msgid "Virtualbox"
 msgstr "Virtualbox"
+
+msgid "ZFS"
+msgstr ""
 
 msgid "deb-multimedia"
 msgstr "deb-мультимедіа"
