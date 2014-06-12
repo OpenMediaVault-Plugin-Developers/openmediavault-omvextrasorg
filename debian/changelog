@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (0.6.22.1) stable; urgency=low
+
+  * Create ftp directory if doesn't exist when upgrading
+  * Update locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 12 Jun 2014 10:57:13 -0500
+
 openmediavault-omvextrasorg (0.6.22) stable; urgency=low
 
   * Add zfsonlinux repo

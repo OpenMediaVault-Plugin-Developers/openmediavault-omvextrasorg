@@ -99,6 +99,7 @@ set -e
 . /etc/default/openmediavault
 
 chattr -i /etc/apt/sources.list
+mkdir -p /srv/ftp
 
 exit 0
 EOF

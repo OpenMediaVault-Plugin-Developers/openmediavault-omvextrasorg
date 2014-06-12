@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# kochin <kochinc@outlook.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-26 12:22-0500\n"
-"PO-Revision-Date: 2014-05-26 17:23+0000\n"
-"Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
+"PO-Revision-Date: 2014-06-02 18:39+0000\n"
+"Last-Translator: kochin <kochinc@outlook.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,230 +19,230 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "Add repo"
-msgstr ""
+msgstr "新增套件庫"
 
 msgid "Additional Repositories"
-msgstr ""
+msgstr "額外的套件庫"
 
 msgid "Apt Clean"
-msgstr ""
+msgstr "Apt 清理"
 
 msgid "Apt Clean - Silent"
-msgstr ""
+msgstr "Apt 清理 - 沉默"
 
 msgid "Architecture"
-msgstr ""
+msgstr "架構"
 
 msgid "BTSync"
-msgstr ""
+msgstr "BTSync"
 
 msgid "Beta"
-msgstr ""
+msgstr "Beta"
 
 msgid "Can be helpful in fixing plugin problems."
-msgstr ""
+msgstr "可能對修復插件遭遇的問題有用。"
 
 msgid "Checking for new updates ..."
-msgstr ""
+msgstr "檢查新的更新 ..."
 
 msgid "Cleaning Apt Files and Lists..."
-msgstr ""
+msgstr "清理 Apt 檔案和列表 ..."
 
 msgid "Cleans apt repositories and removes lists."
-msgstr ""
+msgstr "清理 apt 套件庫並移除列表。"
 
 msgid "Close"
-msgstr ""
+msgstr "關閉"
 
 msgid "Comment"
-msgstr ""
+msgstr "註釋"
 
 msgid "Confirmation"
-msgstr ""
+msgstr "確認"
 
 msgid "Custom"
-msgstr ""
+msgstr "客製"
 
 msgid "Developer"
-msgstr ""
+msgstr "開發者"
 
 msgid "Developer Repositories"
-msgstr ""
+msgstr "開發人員套件庫"
 
 msgid "Distribution"
-msgstr ""
+msgstr "發行版"
 
 msgid "Done..."
-msgstr ""
+msgstr "完成 ..."
 
 msgid "Dotdeb"
-msgstr ""
+msgstr "Dotdeb"
 
 msgid "Downloading package information"
-msgstr ""
+msgstr "下載套件資訊"
 
 msgid "Edit repo"
-msgstr ""
+msgstr "編輯套件庫"
 
 msgid "Enable BTSync repository"
-msgstr ""
+msgstr "啟用 BTSync 套件庫"
 
 msgid "Enable Beta repository"
-msgstr ""
+msgstr "啟用 Beta 套件庫"
 
 msgid "Enable Dotdeb repository"
-msgstr ""
+msgstr "啟用 Dotdeb 套件庫"
 
 msgid "Enable Greyhole repository"
-msgstr ""
+msgstr "啟用 Greyhole 套件庫"
 
 msgid "Enable MariaDB 10.0 repository"
-msgstr ""
+msgstr "啟用 MariaDB 10.0 套件庫"
 
 msgid "Enable Miller repository"
-msgstr ""
+msgstr "啟用 Miller 套件庫"
 
 msgid "Enable Miller testing repository"
-msgstr ""
+msgstr "啟用 Miller 測試套件庫"
 
 msgid ""
 "Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository"
-msgstr ""
+msgstr "啟用 OMV-Extras.org Virtualbox 套件庫及 Sun 的 Virtualbox 套件庫"
 
 msgid "Enable OMV-Extras.org repository"
-msgstr ""
+msgstr "啟用 OMV-Extras.org 套件庫"
 
 msgid "Enable OMV-Extras.org testing repository (release candidates)"
-msgstr ""
+msgstr "啟用 OMV-Extras.org 測試套件庫 (候選發佈版)"
 
 msgid "Enable Plex Media Server repository"
-msgstr ""
+msgstr "啟用 Plex 媒體伺服器套件庫"
 
 msgid "Enable VPN repository"
-msgstr ""
+msgstr "啟用 VPN 套件庫"
 
 msgid "Enable ZFS repository"
-msgstr ""
+msgstr "啟用 ZFS 套件庫"
 
 msgid "Enable deb-multimedia backports repository"
-msgstr ""
+msgstr "啟用 deb-multimedia backports 套件庫"
 
 msgid "Enable deb-multimedia repository"
-msgstr ""
+msgstr "啟用 deb-multimedia 套件庫"
 
 msgid "Enable e-tobi.net repository"
-msgstr ""
+msgstr "啟用 e-tobi.net 套件庫"
 
 msgid "Greyhole"
-msgstr ""
+msgstr "Greyhole"
 
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
 "still have the option to boot the standard kernel."
-msgstr ""
+msgstr "如果系統無法使用 backports 核心啟動，啟動選單仍會有選項可啟動標準核心。"
 
 msgid "Information"
-msgstr ""
+msgstr "資訊"
 
 msgid "Install Backports 3.14 kernel"
-msgstr ""
+msgstr "安裝 Backports 3.14 核心"
 
 msgid "Install Backports 3.14 kernel ..."
-msgstr ""
+msgstr "安裝 Backports 3.14 核心 ..."
 
 msgid "Install Backports 3.2 kernel"
-msgstr ""
+msgstr "安裝 Backports 3.2 核心"
 
 msgid "Install Backports 3.2 kernel ..."
-msgstr ""
+msgstr "安裝 Backports 3.2 核心 ..."
 
 msgid "Install systemd"
-msgstr ""
+msgstr "安裝 systemd"
 
 msgid "Install systemd..."
-msgstr ""
+msgstr "安裝 systemd ..."
 
 msgid "Kernel"
-msgstr ""
+msgstr "系統核心"
 
 msgid "MariaDB"
-msgstr ""
+msgstr "MariaDB"
 
 msgid "Miller"
-msgstr ""
+msgstr "Miller"
 
 msgid "Miller Testing"
-msgstr ""
+msgstr "Miller 測試"
 
 msgid "Name"
-msgstr ""
+msgstr "名稱"
 
 msgid "OMV-Extras.org"
-msgstr ""
+msgstr "OMV-Extras.org"
 
 msgid "Plex"
-msgstr ""
+msgstr "Plex"
 
 msgid "Primary"
-msgstr ""
+msgstr "主要"
 
 msgid "Reload"
-msgstr ""
+msgstr "重新載入"
 
 msgid "Repo"
-msgstr ""
+msgstr "套件庫"
 
 msgid "Repositories"
-msgstr ""
+msgstr "套件庫"
 
 msgid "Secondary"
-msgstr ""
+msgstr "次要"
 
 msgid "Silent"
-msgstr ""
+msgstr "沉默"
 
 msgid "Testing"
-msgstr ""
+msgstr "測試"
 
 msgid ""
 "The information about available software is out-of-date. You need to reload "
 "the information about available software."
-msgstr ""
+msgstr "有關可用套件的資訊已經過時。您需要重新載入有關可用套件的資訊。"
 
 msgid ""
 "The repository will be checked for new, removed or upgraded software "
 "packages."
-msgstr ""
+msgstr "此套件庫將被檢查有無新增、移除或更新的軟體套件。"
 
 msgid "These repositories may break your system.  Use caution!!"
-msgstr ""
+msgstr "這些套件庫可能損壞您的系統。請小心使用！"
 
 msgid "This will not uninstall the standard kernel."
-msgstr ""
+msgstr "這將不會移除比標準核心。"
 
 msgid "Update"
-msgstr ""
+msgstr "更新"
 
 msgid "Utilities"
-msgstr ""
+msgstr "工具"
 
 msgid "VDR"
-msgstr ""
+msgstr "VDR"
 
 msgid "VPN"
-msgstr ""
+msgstr "VPN"
 
 msgid "Version"
-msgstr ""
+msgstr "版本"
 
 msgid "Virtualbox"
-msgstr ""
+msgstr "Virtualbox"
 
 msgid "ZFS"
-msgstr ""
+msgstr "ZFS"
 
 msgid "deb-multimedia"
-msgstr ""
+msgstr "deb-multimedia"
 
 msgid "deb-multimedia backports"
-msgstr ""
+msgstr "deb-multimedia backports"

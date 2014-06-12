@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# dezi121 <by@songming.me>, 2013-2014
+# songming <by@songming.me>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-26 12:22-0500\n"
-"PO-Revision-Date: 2014-05-26 17:23+0000\n"
-"Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
+"PO-Revision-Date: 2014-05-28 14:43+0000\n"
+"Last-Translator: songming <by@songming.me>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -122,7 +122,7 @@ msgid "Enable VPN repository"
 msgstr "启用VPN源"
 
 msgid "Enable ZFS repository"
-msgstr ""
+msgstr "启用ZFS源"
 
 msgid "Enable deb-multimedia backports repository"
 msgstr "启用deb-multimedia backports源"
@@ -239,7 +239,7 @@ msgid "Virtualbox"
 msgstr "Virtualbox"
 
 msgid "ZFS"
-msgstr ""
+msgstr "ZFS"
 
 msgid "deb-multimedia"
 msgstr "deb-multimedia"
