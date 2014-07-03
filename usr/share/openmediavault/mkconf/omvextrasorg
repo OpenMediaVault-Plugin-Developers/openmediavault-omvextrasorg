@@ -383,6 +383,15 @@ backports()
     fi
 }
 
+support()
+{
+    # create support file
+    # remove passwords
+    # zip file
+    # create batch file
+    # sftp file to server
+}
+
 case $2 in
     update)
         OMVVERSION="kralizec"
@@ -401,6 +410,10 @@ case $2 in
 
     installbackports)
         backports
+    ;;
+
+    sendsupport)
+        support
     ;;
 
     *)

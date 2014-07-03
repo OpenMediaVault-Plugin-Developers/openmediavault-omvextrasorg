@@ -669,7 +669,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             $bgOutputFilename = $this->createBgProcOutput();
             $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
 
-            $cmd = "sudo /usr/sbin/omv-sysinfo";
+            $cmd = sprintf("sudo omv-mkconf %s sendsupport 2>&1", $this->getPluginName() );
             $this->exec($cmd, $output, $bgOutputFilename);
             $this->finalizeBgProcStatus($bgStatusFilename, $output);
 
