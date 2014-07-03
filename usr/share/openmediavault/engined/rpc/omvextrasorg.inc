@@ -81,6 +81,9 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $this->registerMethod("doInstallSystemd");
         $this->registerMethod("doAptClean");
         $this->registerMethod("doAptCleanSilent");
+
+        $this->registerMethod("getSupportInfo");
+        $this->registerMethod("getProcessList");
     }
 
     public function getPrimary($params, $context) {
@@ -515,7 +518,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         return $object;
     }
 
-    function doInstallBackports($params, $context) {
+    public function doInstallBackports($params, $context) {
         // Validate the RPC caller context.
         $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
 
@@ -542,7 +545,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         }
     }
 
-    function doInstallSystemd($params, $context) {
+    public function doInstallSystemd($params, $context) {
         // Validate the RPC caller context.
         $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
 
@@ -569,7 +572,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         }
     }
 
-    function doAptCleanSilent($params, $context) {
+    public function doAptCleanSilent($params, $context) {
         // Validate the RPC caller context.
         $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
 
@@ -578,7 +581,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
     }
 
-    function doAptClean($params, $context) {
+    public function doAptClean($params, $context) {
         // Validate the RPC caller context.
         $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
 
@@ -604,9 +607,51 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             exit(1);
         }
     }
+
+    public function getSupportInfo($params, $context) {
+        $output = "";
+        $result = "";
+
+        OMVUtil::exec("sudo /usr/sbin/omv-sysinfo", $result);
+        $output = implode("\n", $result) . "\n";
+
+        return $output;
+    }
+
+    public function getProcessList($params, $context) {
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+
+        // Get ps output
+        $cmd = 'sudo ps axww -o pid,user,%cpu,%mem,stat,args 2>&1';
+        OMVUtil::exec($cmd, $output, $result);
+
+        if ($result !== 0)
+            throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
+
+        // Get column names
+        $cols = array_map(function($a)
+        {
+            return preg_replace("/[^A-Z]+/", '', $a);
+        }, preg_split('/\s+/', trim(array_shift($output))));
+
+        $split_limit = count($cols);
+
+        $objects = array();
+        foreach ($output as $line) {
+            if (trim($line) == '')
+                continue;
+
+            $objects[] = array_combine($cols, preg_split('/\s+/', trim($line), $split_limit));
+        }
+
+        return array(
+            "total" => count($objects),
+            "data"  => $objects
+        );
+    }
 }
 
 // Register the RPC service.
 $rpcServiceMgr = &OMVRpcServiceMgr::getInstance();
 $rpcServiceMgr->registerService(new OMVRpcServiceOmvExtrasOrg());
-?>

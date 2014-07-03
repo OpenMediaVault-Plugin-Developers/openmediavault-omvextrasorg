@@ -8,10 +8,16 @@ Homepage: http://omv-extras.org/simple/index.php?id=how-to-install-omv-extras-pl
 
 Package: openmediavault-omvextrasorg
 Architecture: all
-Depends: ${misc:Depends}, openmediavault (>= 0.5.46), lsb-release
+Depends: ${misc:Depends}, openmediavault (>= 0.5.51), lsb-release
 Description: OMV-Extras.org Package Repositories for OpenMediaVault
- Plugin the allows enabling of multiple repositories hosted by
- omv-extras.org. The plugin allows installation of the backports
- kernel for increased compatibility with newer hardware. An apt
- cleaning function is also available for fixing repository cache
+ Allows enabling of multiple repositories hosted by omv-extras.org.
+ .
+ The plugin allows installation of the backports kernel for increased
+ compatibility with newer hardware.
+ .
+ An apt cleaning function is also available for fixing repository cache
  problems and saving hard drive space in some instances.
+ .
+ Allows viewing and sending support information.
+ .
+ Allows viewing of the process list.

@@ -32,7 +32,7 @@ Ext.define("OMV.module.admin.diagnostic.system.SupportInfo", {
         "OMV.window.MessageBox"
     ],
 
-    rpcService : "SupportInfo",
+    rpcService : "OmvExtrasOrg",
     rpcMethod  : "getSupportInfo"
 });
 

