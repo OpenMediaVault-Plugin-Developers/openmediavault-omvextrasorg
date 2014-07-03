@@ -2,6 +2,7 @@ openmediavault-omvextrasorg (0.6.23) stable; urgency=low
 
   * Add support information viewing and sending
   * Add process list
+  * Move separate scripts to mkconf file
   * Update locales
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 03 Jul 2014 10:27:02 -0500

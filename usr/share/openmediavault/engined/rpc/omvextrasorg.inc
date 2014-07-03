@@ -84,6 +84,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
 
         $this->registerMethod("getSupportInfo");
         $this->registerMethod("getProcessList");
+        $this->registerMethod("doSend");
     }
 
     public function getPrimary($params, $context) {
@@ -535,7 +536,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             $bgOutputFilename = $this->createBgProcOutput();
             $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
 
-            $cmd = "/usr/local/bin/installbackports";
+            $cmd = sprintf("sudo omv-mkconf %s installbackports 2>&1", $this->getPluginName() );
             $this->exec($cmd, $output, $bgOutputFilename);
             $this->finalizeBgProcStatus($bgStatusFilename, $output);
 
@@ -562,7 +563,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             $bgOutputFilename = $this->createBgProcOutput();
             $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
 
-            $cmd = "/usr/local/bin/installsystemd";
+            $cmd = sprintf("sudo omv-mkconf %s installsystemd 2>&1", $this->getPluginName() );
             $this->exec($cmd, $output, $bgOutputFilename);
             $this->finalizeBgProcStatus($bgStatusFilename, $output);
 
@@ -576,7 +577,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         // Validate the RPC caller context.
         $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
 
-        $cmd = "/usr/local/bin/aptclean";
+        $cmd = sprintf("sudo omv-mkconf %s aptclean 2>&1", $this->getPluginName() );
         if(0 !== $this->exec($cmd, $output))
             throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
     }
@@ -598,7 +599,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             $bgOutputFilename = $this->createBgProcOutput();
             $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
 
-            $cmd = "/usr/local/bin/aptclean";
+            $cmd = sprintf("sudo omv-mkconf %s aptclean 2>&1", $this->getPluginName() );
             $this->exec($cmd, $output, $bgOutputFilename);
             $this->finalizeBgProcStatus($bgStatusFilename, $output);
 
@@ -649,6 +650,33 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "total" => count($objects),
             "data"  => $objects
         );
+    }
+
+    public function doSend($params, $context) {
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+
+        // Create a background process.
+        $bgStatusFilename = $this->createBgProcStatus();
+        $pid = $this->fork();
+        if($pid > 0) { // Parent process.
+            $this->initializeBgProcStatus($bgStatusFilename, $pid);
+            return $bgStatusFilename;
+        }
+
+        // Child process.
+        try {
+            $bgOutputFilename = $this->createBgProcOutput();
+            $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
+
+            $cmd = "sudo /usr/sbin/omv-sysinfo";
+            $this->exec($cmd, $output, $bgOutputFilename);
+            $this->finalizeBgProcStatus($bgStatusFilename, $output);
+
+        } catch(Exception $e) {
+            $this->finalizeBgProcStatus($bgStatusFilename, "", $e);
+            exit(1);
+        }
     }
 }
 

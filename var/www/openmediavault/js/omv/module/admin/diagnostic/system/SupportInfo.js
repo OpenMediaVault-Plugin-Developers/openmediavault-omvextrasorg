@@ -33,7 +33,38 @@ Ext.define("OMV.module.admin.diagnostic.system.SupportInfo", {
     ],
 
     rpcService : "OmvExtrasOrg",
-    rpcMethod  : "getSupportInfo"
+    rpcMethod  : "getSupportInfo",
+
+    getTopToolbarItems: function() {
+        var me = this;
+        var items = me.callParent(arguments);
+
+        items.push({
+            id       : me.getId() + "-send",
+            xtype    : "button",
+            text     : _("Send"),
+            icon     : "images/mail.png",
+            iconCls  : Ext.baseCSSPrefix + "btn-icon-16x16",
+            handler  : Ext.Function.bind(me.onSendButton, me, [ me ]),
+            scope    : me
+        }]);
+        return items;
+    },
+
+    onSendButton: function() {
+        var me = this;
+        Ext.create("OMV.window.Execute", {
+            title      : _("Send Support Info"),
+            rpcService : "OmvExtrasOrg",
+            rpcMethod  : "doSend",
+            listeners  : {
+                scope     : me,
+                exception : function(wnd, error) {
+                    OMV.MessageBox.error(null, error);
+                }
+            }
+        }).show();
+    }
 });
 
 OMV.WorkspaceManager.registerPanel({
