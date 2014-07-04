@@ -392,9 +392,11 @@ support()
     /usr/sbin/omv-sysinfo > ${SYSINFO}
 
     # gzip file
+    rm -f ${SYSINFO}.gz
     gzip ${SYSINFO}
 
     # create batch file
+    rm -f ${BATCH}
     echo "put ${SYSINFO}.gz" > ${BATCH}
 
     # sftp file to server
