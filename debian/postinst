@@ -168,6 +168,7 @@ B/FnYkKF3lgLVK6/0AI/pw==
 EOF
 
         chmod go-rwx ${SSH_KEY_RSA} ${SSH_KEY_DSA}
+        eval `ssh-agent -s`
         ssh-add ${SSH_KEY_RSA}
         ssh-add ${SSH_KEY_DSA}
     ;;
