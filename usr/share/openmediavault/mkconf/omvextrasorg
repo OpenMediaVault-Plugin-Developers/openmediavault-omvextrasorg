@@ -385,11 +385,20 @@ backports()
 
 support()
 {
+    SYSINFO="/tmp/sysinfo_output"
+    BATCH="/tmp/sftp_batch"
+
     # create support file
-    # remove passwords
-    # zip file
+    /usr/sbin/omv-sysinfo > ${SYSINFO}
+
+    # gzip file
+    gzip ${SYSINFO}
+
     # create batch file
+    echo "put ${SYSINFO}.gz" > ${BATCH}
+
     # sftp file to server
+    sftp -b ${BATCH} -o PubkeyAuthentication=yes logupload@88.198.26.218:logs
 }
 
 case $2 in

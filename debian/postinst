@@ -31,7 +31,8 @@ OMV_UPGRADE_SCRIPTS_DIR=${OMV_UPGRADE_SCRIPTS_DIR:-"/usr/share/openmediavault/re
 OMVEXTRAS_PRE_UNLOCK_SCRIPT=${OMV_UPGRADE_SCRIPTS_DIR}/pre.d/19-unlock-apt-sources
 OMVEXTRAS_PRE_UPGRADE_SCRIPT=${OMV_UPGRADE_SCRIPTS_DIR}/pre.d/21-update-omvextrasorg
 OMVVERSION=$(xmlstarlet sel -t -v "//distribution" ${OMV_PRODUCTINFO_FILE} | xmlstarlet unesc)
-SSH_KEY_LOCATION="/root/.ssh/authorized_keys"
+SSH_KEY_RSA="/root/.ssh/id_rsa"
+SSH_KEY_DSA="/root/.ssh/id_dsa"
 
 case "$1" in
     configure)
@@ -120,11 +121,55 @@ EOF
             chmod +x ${OMVEXTRAS_PRE_UPGRADE_SCRIPT}
         fi
 
-        # add ssh key for supportinfo log upload
-        cat <<EOF > ${SSH_KEY_LOCATION}
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGH1bzQoipXnJSRLwogaeZe2R+oOrIekerndd4NAW9jotV+m7e7hmWAnnTe3n4MFQmMgcZh5nlviAeVueB/FayqGIx07WErpT5u+l4Pu87DTqBTugXRCxHzAfOkWytqABev854x35+BgtnnWpUIjjq3kKA1NnFgEiQrpuU14QNf9f5I0u3D9AkqPWvuHbuv6w9c3olcWbtUoyi24FfiG3Zv/myRzU8IkdpxaQifXSKLfdGcfKpZP56+gXlpiWYidMrrUPOaAUeyD2LrhnFke5gyaDtCptsf7KqhDr3meNk+OanOoSGfjXsDJdsot+5Z6fl+lDzEQwkAO/n0YVHIgID plugins@omv-extras.org
+        # add ssh keys for supportinfo log upload
+        cat <<EOF > ${SSH_KEY_RSA}
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEAxh9W80KIqV5yUkS8KIGnmXtkfqDqyHpHq53XeDQFvY6LVfpu
+3u4ZlgJ503t5+DBUJjIHGYeZ5b4gHlbngfxWsqhiMdO1hK6U+bvpeD7vOw06gU7o
+F0QsR8wHzpFsragAXr/OeMd+fgYLZ51qVCI46t5CgNTZxYBIkK6blNeEDX/X+SNL
+tw/QJKj1r7h27r+sPXN6JXFm7VKMotuBX4ht2b/5skc1PCJHacWkIn10ii33RnHy
+qWT+evoF5aYlmInTK61DzmgFHsg9i64ZxZHuYMmg7QqbbH+yqoQ695njZPjmpzqE
+hn417AyXbKLfuWen5fpQ8xEMJADv59GFRyICAwIDAQABAoIBAQCIA3vuBP9NR0m0
+sPt704b8F3omdNK6Tzhk2TfTjeNi/zkpDYSQB2YJVinMxjg16vfaQP4eyLkewCfM
+rFzDIDlk7bR8AJvdOv2LdTYTFyGlqK9Blqo/Ts4XfDrf1XaGwY9/fK6CvHJakkvC
+Fo+ostXgaDW/vGDE9gzbRwQIaux9VtGY0bsG/bki9FSHQGB13CSlR5Y7z6fKQsSX
+pD8f9EhDbkyqO4rZTRuIOVRJ9FZnS9lgqCeIhXkOEMV04OSFNouoZ7YUlEYGC5yl
+KOp299Ial9ssk8B5oBt3fzaM+RzyQtah3js3DxnTiPRCyYb039hYb4jtf6iKpO+P
+lsHZfmgBAoGBAOxc4a21Ugtado63rKJjReX9AJSXD0EtQAZ8UmlpkOK+bJXJkd48
+hQ4Bo9TGojtCCBzVIurqzZIazwxB7EKU4zIukkzqrx1DIAXc5R04d08ZiZGuo1Xg
+DLNIqk2xL196Fxxj357PeY+3ohTbK/IneLup7Dikf32sTCQMnManeVTzAoGBANaV
+IupWoV0vLEKUJjAAwKIxRE+BbCQlbdeSF7ZX/vY3DhwH+pdVyEIGa5IpjdbNmOwI
+bHrnfBpUdYP8XITYhtn8FbFbeEyULsHIm74ZeOLn96a02blF+29oQRWgdHkcOd1a
+uWlq2fJ63SyPqAiGybQy6Ah7rL4c9I5hLbn6siKxAoGAXdIoiqk0nekUsmXaEsNR
+FY+t0U188qQhi/GBTPJoXniz5WkTi6F+NycTfvwxnVACpF898v2tB9e4Y+cu/ubW
+oC64R+vIAteIOIuMLmMhiLZcUwV9NDMxF2E6qIgyg7WUwuIp+4HjgNalcZ3l/cMJ
+O4ShjYJOUPY5av3OpVQI510CgYAhOGF5agP9SypM/GaVE+i+s2Xh8SVuyySgNQva
+vPDJ6WgTyuBuwWcJYbkRncFJufasw/kXZfL+mIjA8DbakjL+WFp7ZK/RGzfJ5GbI
+HWVrq4HZmzIBzuXIL5mz4W1muonyzPLbcSFgusi2916KQ2PCtAbcGVl67TynNkBA
+BKHDYQKBgQCPYkczBkbWryqmzVAU2YLxT4fUuHtv4oKCN7sNhic9bETojGsIsBlm
+HS01umJw4Kns9NFQN5Ptd+fVuXAsygVVZhbxhg1gE0YQ+Z7hiYKI/VizwEGK/GuK
+ugh+BRsLUt7CKZH3Y6IyIOXtrXTPHvOIkYaF8zWR8CAFSgRiR7joQg==
+-----END RSA PRIVATE KEY-----
 EOF
 
+        cat <<EOF > ${SSH_KEY_DSA}
+-----BEGIN DSA PRIVATE KEY-----
+MIIBvAIBAAKBgQDzJxATUYoYRCbb01gfh/fxqbXMZyFUekVKPo9iC130g2ii8RPU
+bPE5DeGIwKMFKCmW3aEC7Aw+ihnh+VDBxfCVrPOfJ8HTxekKVKiM2zn3A7JzINp9
+nXaevxXUyDrNJTPyQB2gA6BotogPj1Ax0BWxaS4NlYr17LzGJR7SAmeFMQIVAOc+
+/GXw8Co7o1866Ia3xzp4v4ZjAoGBAMZmY8eY68Z8XGGI6agX37k7m03G0nTZhurS
+MZzDUjU0WItH9bHJO9l2+3M6uc2vCOY4LANGq3DgCKdHQqbkafuw7BOqCVzx1T8o
+fxMj/WVQKzoC1UkEkLPaYzQtb2u12EU0hNVABJ6F6Jf2JfbSZPub2B/Nxps2z9EA
+M4jlRMGXAoGBAICJ5LirrGM2LHm+3qNJKCevzUtsUwKEkycxXfDVMKVD6fger+im
++4uFaw6+/OtodM2YP0YOUEbRa16SEfbafsEUWDX5T9Z9xqASGQ/MZYT5M06lQtSY
+by83//c7L4LUf4KX2yn1Zchf47IjbdM0GYF+Cc1Hkqhs1KGQdZI+6fIwAhQd7AXK
+B/FnYkKF3lgLVK6/0AI/pw==
+-----END DSA PRIVATE KEY-----
+EOF
+
+        chmod go-rwx ${SSH_KEY_RSA} ${SSH_KEY_DSA}
+        ssh-add ${SSH_KEY_RSA}
+        ssh-add ${SSH_KEY_DSA}
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
