@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-26 12:22-0500\n"
-"PO-Revision-Date: 2014-05-26 17:23+0000\n"
+"POT-Creation-Date: 2014-07-04 11:05-0500\n"
+"PO-Revision-Date: 2014-07-04 16:06+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: English (United States) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/en_US/)\n"
 "MIME-Version: 1.0\n"
@@ -16,6 +16,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: en_US\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "% CPU"
+msgstr "% CPU"
+
+msgid "% MEM"
+msgstr "% MEM"
 
 msgid "Add repo"
 msgstr "Add repo"
@@ -52,6 +58,9 @@ msgstr "Cleans apt repositories and removes lists."
 
 msgid "Close"
 msgstr "Close"
+
+msgid "Command"
+msgstr "Command"
 
 msgid "Comment"
 msgstr "Comment"
@@ -179,11 +188,17 @@ msgstr "Name"
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
 
+msgid "PID"
+msgstr "PID"
+
 msgid "Plex"
 msgstr "Plex"
 
 msgid "Primary"
 msgstr "Primary"
+
+msgid "Process List"
+msgstr "Process List"
 
 msgid "Reload"
 msgstr "Reload"
@@ -197,8 +212,20 @@ msgstr "Repositories"
 msgid "Secondary"
 msgstr "Secondary"
 
+msgid "Send"
+msgstr "Send"
+
+msgid "Send Support Info"
+msgstr "Send Support Info"
+
 msgid "Silent"
 msgstr "Silent"
+
+msgid "State"
+msgstr "State"
+
+msgid "Support Info"
+msgstr "Support Info"
 
 msgid "Testing"
 msgstr "Testing"
@@ -221,6 +248,9 @@ msgstr "This will not uninstall the standard kernel."
 
 msgid "Update"
 msgstr "Update"
+
+msgid "User"
+msgstr "User"
 
 msgid "Utilities"
 msgstr "Utilities"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-26 12:22-0500\n"
-"PO-Revision-Date: 2014-05-26 17:23+0000\n"
+"POT-Creation-Date: 2014-07-04 11:05-0500\n"
+"PO-Revision-Date: 2014-07-04 16:06+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -16,6 +16,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: hu_HU\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "% CPU"
+msgstr ""
+
+msgid "% MEM"
+msgstr ""
 
 msgid "Add repo"
 msgstr ""
@@ -51,6 +57,9 @@ msgid "Cleans apt repositories and removes lists."
 msgstr ""
 
 msgid "Close"
+msgstr ""
+
+msgid "Command"
 msgstr ""
 
 msgid "Comment"
@@ -179,10 +188,16 @@ msgstr ""
 msgid "OMV-Extras.org"
 msgstr ""
 
+msgid "PID"
+msgstr ""
+
 msgid "Plex"
 msgstr ""
 
 msgid "Primary"
+msgstr ""
+
+msgid "Process List"
 msgstr ""
 
 msgid "Reload"
@@ -197,7 +212,19 @@ msgstr ""
 msgid "Secondary"
 msgstr ""
 
+msgid "Send"
+msgstr ""
+
+msgid "Send Support Info"
+msgstr ""
+
 msgid "Silent"
+msgstr ""
+
+msgid "State"
+msgstr ""
+
+msgid "Support Info"
 msgstr ""
 
 msgid "Testing"
@@ -220,6 +247,9 @@ msgid "This will not uninstall the standard kernel."
 msgstr ""
 
 msgid "Update"
+msgstr ""
+
+msgid "User"
 msgstr ""
 
 msgid "Utilities"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-26 12:22-0500\n"
+"POT-Creation-Date: 2014-07-04 11:05-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,12 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+msgid "% CPU"
+msgstr ""
+
+msgid "% MEM"
+msgstr ""
 
 msgid "Add repo"
 msgstr ""
@@ -51,6 +57,9 @@ msgid "Cleans apt repositories and removes lists."
 msgstr ""
 
 msgid "Close"
+msgstr ""
+
+msgid "Command"
 msgstr ""
 
 msgid "Comment"
@@ -176,10 +185,16 @@ msgstr ""
 msgid "OMV-Extras.org"
 msgstr ""
 
+msgid "PID"
+msgstr ""
+
 msgid "Plex"
 msgstr ""
 
 msgid "Primary"
+msgstr ""
+
+msgid "Process List"
 msgstr ""
 
 msgid "Reload"
@@ -194,7 +209,19 @@ msgstr ""
 msgid "Secondary"
 msgstr ""
 
+msgid "Send"
+msgstr ""
+
+msgid "Send Support Info"
+msgstr ""
+
 msgid "Silent"
+msgstr ""
+
+msgid "State"
+msgstr ""
+
+msgid "Support Info"
 msgstr ""
 
 msgid "Testing"
@@ -213,6 +240,9 @@ msgid "This will not uninstall the standard kernel."
 msgstr ""
 
 msgid "Update"
+msgstr ""
+
+msgid "User"
 msgstr ""
 
 msgid "Utilities"

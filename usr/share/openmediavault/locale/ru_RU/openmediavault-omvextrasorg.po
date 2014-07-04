@@ -3,22 +3,28 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Alexander Savchenko <a.v.savchenko@mail.ru>, 2013
-# Alexander Savchenko <a.v.savchenko@mail.ru>, 2014
+# Alexander Savchenko, 2013
+# Alexander Savchenko, 2014
 # артур Мудрых <arturmon82@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-26 12:22-0500\n"
-"PO-Revision-Date: 2014-06-05 11:53+0000\n"
-"Last-Translator: Alexander Savchenko <a.v.savchenko@mail.ru>\n"
+"POT-Creation-Date: 2014-07-04 11:05-0500\n"
+"PO-Revision-Date: 2014-07-04 16:06+0000\n"
+"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ru\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "% CPU"
+msgstr ""
+
+msgid "% MEM"
+msgstr ""
 
 msgid "Add repo"
 msgstr ""
@@ -33,7 +39,7 @@ msgid "Apt Clean - Silent"
 msgstr ""
 
 msgid "Architecture"
-msgstr ""
+msgstr "Архитектура"
 
 msgid "BTSync"
 msgstr "BTSync"
@@ -56,8 +62,11 @@ msgstr "Очищает apt репозиториии и чистит списки
 msgid "Close"
 msgstr "Закрыто"
 
-msgid "Comment"
+msgid "Command"
 msgstr ""
+
+msgid "Comment"
+msgstr "Комментарий"
 
 msgid "Confirmation"
 msgstr "Подтверждение"
@@ -177,16 +186,22 @@ msgid "Miller Testing"
 msgstr ""
 
 msgid "Name"
-msgstr ""
+msgstr "Имя"
 
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
+
+msgid "PID"
+msgstr ""
 
 msgid "Plex"
 msgstr "Plex"
 
 msgid "Primary"
 msgstr "Основной"
+
+msgid "Process List"
+msgstr ""
 
 msgid "Reload"
 msgstr "Перезагрузка"
@@ -200,7 +215,19 @@ msgstr "Репозитории"
 msgid "Secondary"
 msgstr "Вторичный"
 
+msgid "Send"
+msgstr ""
+
+msgid "Send Support Info"
+msgstr ""
+
 msgid "Silent"
+msgstr ""
+
+msgid "State"
+msgstr ""
+
+msgid "Support Info"
 msgstr ""
 
 msgid "Testing"
@@ -225,6 +252,9 @@ msgstr ""
 msgid "Update"
 msgstr "Обновить"
 
+msgid "User"
+msgstr ""
+
 msgid "Utilities"
 msgstr "Utilities"
 
@@ -232,7 +262,7 @@ msgid "VDR"
 msgstr "VDR"
 
 msgid "VPN"
-msgstr ""
+msgstr "VPN"
 
 msgid "Version"
 msgstr "Версия"
