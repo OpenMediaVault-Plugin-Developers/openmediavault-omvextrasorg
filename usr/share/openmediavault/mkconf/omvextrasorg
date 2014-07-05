@@ -396,7 +396,7 @@ support()
     gzip ${SYSINFO}
 
     # create batch file
-    rm -f ${BATCH} ${AUTHKEY}
+    rm -f ${BATCH}
     echo "put ${SYSINFO}.gz" > ${BATCH}
 
     # sftp file to server
