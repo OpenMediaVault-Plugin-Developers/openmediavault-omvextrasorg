@@ -385,8 +385,9 @@ backports()
 
 support()
 {
-    SYSINFO="/tmp/sysinfo_output"
+    SYSINFO=/tmp/$(</dev/urandom tr -dc "A-Za-z0-9" | head -c8)
     BATCH="/tmp/sftp_batch"
+    AUTHKEY="/tmp/addauthkey"
 
     # create support file
     /usr/sbin/omv-sysinfo > ${SYSINFO}
@@ -396,11 +397,13 @@ support()
     gzip ${SYSINFO}
 
     # create batch file
-    rm -f ${BATCH}
-    echo "put ${SYSINFO}.gz" > ${BATCH}
+    rm -f ${BATCH} ${AUTHKEY}
+    touch ${AUTHKEY}
+    echo "put ${AUTHKEY}" > ${BATCH}
+    echo "put ${SYSINFO}.gz" >> ${BATCH}
 
     # sftp file to server
-    sftp -b ${BATCH} -o PubkeyAuthentication=yes logupload@88.198.26.218:logs
+    sftp -b ${BATCH} -o PubkeyAuthentication=yes -o StrictHostKeyChecking=no logupload@88.198.26.218:logs
 }
 
 case $2 in
