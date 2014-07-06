@@ -385,16 +385,18 @@ backports()
 
 support()
 {
-    SYSINFO=/tmp/$(</dev/urandom tr -dc "A-Za-z0-9" | head -c8)
+    SYSINFO=$(</dev/urandom tr -dc "A-Za-z0-9" | head -c8)
     SENDFILE=${SYSINFO}.tar.gz
-    BATCH="/tmp/sftp_batch"
+    BATCH="sftp_batch"
+
+    cd /tmp
 
     # create support files
     /usr/sbin/omv-sysinfo > ${SYSINFO}.txt
     grep -v password /etc/openmediavault/config.xml > ${SYSINFO}.xml
 
     # gzip file
-    rm -f ${SENDFILE}
+    rm -f ${SENDFILE}.*
     tar czf ${SENDFILE} ${SYSINFO}.*
 
     # create batch file
@@ -403,6 +405,8 @@ support()
 
     # sftp file to server
     sftp -b ${BATCH} -o PubkeyAuthentication=yes logupload@88.198.26.218:logs
+
+    rm -f ${SENDFILE}.*
 }
 
 case $2 in
