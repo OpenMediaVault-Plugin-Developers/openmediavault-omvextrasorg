@@ -406,7 +406,7 @@ support()
     # sftp file to server
     sftp -b ${BATCH} -o PubkeyAuthentication=yes logupload@88.198.26.218:logs
 
-    rm -f ${SENDFILE}.*
+    rm -f ${SENDFILE}.* ${SYSINFO}.*
 }
 
 case $2 in
