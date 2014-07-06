@@ -47,7 +47,7 @@ Ext.define("OMV.module.admin.diagnostic.system.SupportInfo", {
             iconCls  : Ext.baseCSSPrefix + "btn-icon-16x16",
             handler  : Ext.Function.bind(me.onSendButton, me, [ me ]),
             scope    : me
-        }]);
+        });
         return items;
     },
 
