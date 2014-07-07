@@ -388,9 +388,10 @@ support()
     SYSINFO=$(</dev/urandom tr -dc "A-Za-z0-9" | head -c8)
     BATCH="sftp_batch"
 
+    # remove support files
     cd /tmp
     rm -f ${SYSINFO}.*
-    
+
     # create support files
     /usr/sbin/omv-sysinfo > ${SYSINFO}.txt
     grep -v password /etc/openmediavault/config.xml > ${SYSINFO}.xml
@@ -403,7 +404,10 @@ support()
     # sftp file to server
     sftp -b ${BATCH} -o PubkeyAuthentication=yes logupload@88.198.26.218:logs
 
+    # remove support files
     rm -f ${SYSINFO}.*
+
+    echo "Done."
 }
 
 case $2 in
