@@ -388,12 +388,19 @@ support()
     SYSINFO=$(</dev/urandom tr -dc "A-Za-z0-9" | head -c8)
     BATCH="sftp_batch"
 
+    # show message
+    echo "ATTENTION - Your system info will be provided to the OpenMediaVault forum moderators - forums.openmediavault.org."
+    echo ""
+
     # remove support files
     cd /tmp
     rm -f ${SYSINFO}.*
 
     # create support files
+    echo "Creating sysinfo file..."
     /usr/sbin/omv-sysinfo > ${SYSINFO}.txt
+
+    echo "Creating config.xml file with passwords removed..."
     grep -v password /etc/openmediavault/config.xml > ${SYSINFO}.xml
 
     # create batch file
