@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (1.0.2) stable; urgency=low
+
+  * Remove rt headers from backports install
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 17 Jul 2014 06:24:42 -0500
+
 openmediavault-omvextrasorg (1.0.1) stable; urgency=low
 
   * Add conflicts

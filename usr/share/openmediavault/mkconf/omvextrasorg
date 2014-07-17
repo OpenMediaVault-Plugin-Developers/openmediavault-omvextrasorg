@@ -363,18 +363,18 @@ backports()
                 echo "Install backports 3.2 kernel and headers"
                 apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-base initramfs-tools
                 if $AMD64; then
-                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.2.0-0.bpo.4-amd64 linux-headers-3.2.0-0.bpo.4-all firmware-linux firmware-linux-free
+                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.2.0-0.bpo.4-amd64 linux-headers-3.2.0-0.bpo.4-amd64 firmware-linux firmware-linux-free
                 else
-                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.2.0-0.bpo.4-486 linux-headers-3.2.0-0.bpo.4-all firmware-linux firmware-linux-free
+                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.2.0-0.bpo.4-486 linux-headers-3.2.0-0.bpo.4-486 firmware-linux firmware-linux-free
                 fi
                 ;;
             wheezy)
                 echo "Install backports 3.14 kernel and headers"
                 apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-base initramfs-tools=0.115~bpo70+1
                 if $AMD64; then
-                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.14-0.bpo.1-amd64 linux-headers-3.14-0.bpo.1-all firmware-linux firmware-linux-free
+                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.14-0.bpo.1-amd64 linux-headers-3.14-0.bpo.1-amd64 firmware-linux firmware-linux-free
                 else
-                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.14-0.bpo.1-486 linux-headers-3.14-0.bpo.1-all firmware-linux firmware-linux-free
+                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.14-0.bpo.1-486 linux-headers-3.14-0.bpo.1-486 firmware-linux firmware-linux-free
                 fi
                 ;;
         esac
