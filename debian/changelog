@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (1.0.3) stable; urgency=low
+
+  * Add info to send log message
+  * Update locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 14 Aug 2014 17:52:16 -0500
+
 openmediavault-omvextrasorg (1.0.2) stable; urgency=low
 
   * Remove rt headers from backports install

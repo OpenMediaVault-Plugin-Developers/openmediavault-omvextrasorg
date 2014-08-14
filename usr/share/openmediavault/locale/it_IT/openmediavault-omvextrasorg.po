@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Damiano, 2013
+# Damtux, 2013
 # Paolo Velati <paolo.velati@gmail.com>, 2014
 msgid ""
 msgstr ""

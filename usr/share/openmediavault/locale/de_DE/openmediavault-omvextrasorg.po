@@ -5,13 +5,14 @@
 # Translators:
 # David Hönel <davidh1990@gmx.de>, 2013
 # René P. <phortexx@gmx.net>, 2014
+# Stephan Steiner, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-07-04 11:05-0500\n"
-"PO-Revision-Date: 2014-07-04 16:06+0000\n"
-"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
+"PO-Revision-Date: 2014-08-14 11:54+0000\n"
+"Last-Translator: Stephan Steiner\n"
 "Language-Team: German (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,13 +21,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "% CPU"
-msgstr ""
+msgstr "% CPU"
 
 msgid "% MEM"
-msgstr ""
+msgstr "% MEM"
 
 msgid "Add repo"
-msgstr ""
+msgstr "Quelle hinzufügen"
 
 msgid "Additional Repositories"
 msgstr "Zusätzliche Paketquellen"
@@ -35,10 +36,10 @@ msgid "Apt Clean"
 msgstr "Apt Clean"
 
 msgid "Apt Clean - Silent"
-msgstr ""
+msgstr "Apt Clean - Silent"
 
 msgid "Architecture"
-msgstr ""
+msgstr "Architektur"
 
 msgid "BTSync"
 msgstr "BTSync"
@@ -50,7 +51,7 @@ msgid "Can be helpful in fixing plugin problems."
 msgstr "Kann hilfreich beim Beheben von Problemen sein. "
 
 msgid "Checking for new updates ..."
-msgstr ""
+msgstr "Nach neuen Updates suchen ..."
 
 msgid "Cleaning Apt Files and Lists..."
 msgstr "Bereinige Apt Dateien und Listen"
@@ -62,16 +63,16 @@ msgid "Close"
 msgstr "Schließen"
 
 msgid "Command"
-msgstr ""
+msgstr "Kommando"
 
 msgid "Comment"
-msgstr ""
+msgstr "Kommentar"
 
 msgid "Confirmation"
 msgstr "Bestätigung"
 
 msgid "Custom"
-msgstr ""
+msgstr "Benutzerdefiniert"
 
 msgid "Developer"
 msgstr "Entwickler"
@@ -80,10 +81,10 @@ msgid "Developer Repositories"
 msgstr "Entwickler Paketquellen"
 
 msgid "Distribution"
-msgstr ""
+msgstr "Distribution"
 
 msgid "Done..."
-msgstr ""
+msgstr "Fertig..."
 
 msgid "Dotdeb"
 msgstr "Dotdeb"
@@ -92,7 +93,7 @@ msgid "Downloading package information"
 msgstr "Downloade Paketinformationen"
 
 msgid "Edit repo"
-msgstr ""
+msgstr "Quelle bearbeiten"
 
 msgid "Enable BTSync repository"
 msgstr "Aktiviere die BTSync Paketquelle"
@@ -107,7 +108,7 @@ msgid "Enable Greyhole repository"
 msgstr "Aktiviere die Greyhole Paketquelle"
 
 msgid "Enable MariaDB 10.0 repository"
-msgstr ""
+msgstr "MariaDB 10.0 Quelle aktivieren"
 
 msgid "Enable Miller repository"
 msgstr "Aktiviere die Miller Paketquelle"
@@ -129,10 +130,10 @@ msgid "Enable Plex Media Server repository"
 msgstr "Aktiviere die Plex Media Server Paketquelle"
 
 msgid "Enable VPN repository"
-msgstr ""
+msgstr "VPN Quelle aktivieren"
 
 msgid "Enable ZFS repository"
-msgstr ""
+msgstr "ZFS Quelle aktivieren"
 
 msgid "Enable deb-multimedia backports repository"
 msgstr "Aktiviere die deb-multimedia backports Paketquelle"
@@ -149,34 +150,34 @@ msgstr "Greyhole"
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
 "still have the option to boot the standard kernel."
-msgstr ""
+msgstr "Wenn das System unter Verwendung des Backport Kernel nicht startet, wird im Boot Menü die Option zum starten des Standard Kernel zur Verfügung stehen."
 
 msgid "Information"
 msgstr "Information"
 
 msgid "Install Backports 3.14 kernel"
-msgstr ""
+msgstr "Installiere Backports 3.14 Kernel"
 
 msgid "Install Backports 3.14 kernel ..."
-msgstr ""
+msgstr "Installiere Backports 3.14 Kernel ..."
 
 msgid "Install Backports 3.2 kernel"
-msgstr ""
+msgstr "Installiere Backports 3.2 Kernel"
 
 msgid "Install Backports 3.2 kernel ..."
-msgstr ""
+msgstr "Installiere Backports 3.2 Kernel ..."
 
 msgid "Install systemd"
-msgstr ""
+msgstr "Installiere systemd"
 
 msgid "Install systemd..."
-msgstr ""
+msgstr "Installiere systemd..."
 
 msgid "Kernel"
 msgstr "Kernel"
 
 msgid "MariaDB"
-msgstr ""
+msgstr "MariaDB"
 
 msgid "Miller"
 msgstr "Miller"
@@ -185,13 +186,13 @@ msgid "Miller Testing"
 msgstr "Miller Test"
 
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
 
 msgid "PID"
-msgstr ""
+msgstr "PID"
 
 msgid "Plex"
 msgstr "Plex"
@@ -200,13 +201,13 @@ msgid "Primary"
 msgstr "Primär"
 
 msgid "Process List"
-msgstr ""
+msgstr "Pozess Liste"
 
 msgid "Reload"
 msgstr "neu laden"
 
 msgid "Repo"
-msgstr ""
+msgstr "Quelle"
 
 msgid "Repositories"
 msgstr "Paketquellen"
@@ -215,19 +216,19 @@ msgid "Secondary"
 msgstr "Sekundär"
 
 msgid "Send"
-msgstr ""
+msgstr "Senden"
 
 msgid "Send Support Info"
-msgstr ""
+msgstr "Support Informationen senden"
 
 msgid "Silent"
-msgstr ""
+msgstr "Still"
 
 msgid "State"
-msgstr ""
+msgstr "Status"
 
 msgid "Support Info"
-msgstr ""
+msgstr "Support Informationen"
 
 msgid "Testing"
 msgstr "Testen"
@@ -246,13 +247,13 @@ msgid "These repositories may break your system.  Use caution!!"
 msgstr "Diese Paketquellen können Ihr System beeinträchtigen. Benutzen Sie diese mit Vorsicht!"
 
 msgid "This will not uninstall the standard kernel."
-msgstr ""
+msgstr "Dies wird den Standard Kernel nicht deinstallieren."
 
 msgid "Update"
-msgstr ""
+msgstr "Update"
 
 msgid "User"
-msgstr ""
+msgstr "Benutzer"
 
 msgid "Utilities"
 msgstr "Dienstprogramme"
@@ -261,7 +262,7 @@ msgid "VDR"
 msgstr "VDR"
 
 msgid "VPN"
-msgstr ""
+msgstr "VPN"
 
 msgid "Version"
 msgstr "Version"
@@ -270,7 +271,7 @@ msgid "Virtualbox"
 msgstr "Virtualbox"
 
 msgid "ZFS"
-msgstr ""
+msgstr "ZFS"
 
 msgid "deb-multimedia"
 msgstr "deb-multimedia"

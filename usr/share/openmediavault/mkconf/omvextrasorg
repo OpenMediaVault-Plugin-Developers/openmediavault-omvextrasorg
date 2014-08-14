@@ -390,6 +390,7 @@ support()
 
     # show message
     echo "ATTENTION - Your system info will be provided to the OpenMediaVault forum moderators - forums.openmediavault.org."
+    echo "your log ID is: ${SYSINFO}, please refer to this log ID in your posts."
     echo ""
 
     # remove support files
