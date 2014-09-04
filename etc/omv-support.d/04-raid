@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# import the needed Libs
+. /usr/local/bin/omv-support-libs
+
+# Describe your Info-AddIn here
+DESCRIPTION="RAID Info"
+
+# Reads the filename
+FILENAME="$1"
+
+# Define the tmp-file on the filesystem
+TMPFILE="$TMPFOLDER/$FILENAME"
+
+f_log "##########################"
+f_log "$FILENAME:"
+f_log
+
+# Begin of the script
+f_log "cat /proc/mdstat"
+f_log "--------------------------"
+cat /proc/mdstat 2>&1 | tee -a $TMPFILE
+f_log
+f_log "cat /etc/mdadm/mdadm.conf"
+f_log "--------------------------"
+cat /etc/mdadm/mdadm.conf 2>&1 | tee -a $TMPFILE
+f_log
+f_log "mdadm --examine --scan"
+f_log "--------------------------"
+mdadm --examine --scan 2>&1 | tee -a $TMPFILE
+f_log

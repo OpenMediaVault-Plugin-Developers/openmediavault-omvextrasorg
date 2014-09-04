@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# import the needed Libs
+. /usr/local/bin/omv-support-libs
+
+# Describe your Info-AddIn here
+DESCRIPTION="Installed Packages:"
+
+# Reads the filename
+FILENAME="$1"
+
+# Define the tmp-file on the filesystem
+TMPFILE="$TMPFOLDER/$FILENAME"
+
+f_log "##########################"
+f_log "$FILENAME:"
+f_log
+
+# Begin of the script
+f_log "dpkg -l | grep openmediavault"
+f_log "--------------------------"
+dpkg -l | grep openmediavault 2>&1 | tee -a $TMPFILE

@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# import the needed Libs
+. /usr/local/bin/omv-support-libs
+
+# Describe your Info-AddIn here
+DESCRIPTION="Sources - Info about used sources"
+
+# Reads the filename
+FILENAME="$1"
+
+# Define the tmp-file on the filesystem
+TMPFILE="$TMPFOLDER/$FILENAME"
+
+f_log "##########################"
+f_log "$FILENAME:"
+f_log
+
+# Begin of the script
+f_log "cat /etc/apt/sources.list"
+f_log "--------------------------"
+cat /etc/apt/sources.list 2>&1 | tee -a $TMPFILE
+f_log "--------------------------"
+f_log
+f_log "ls -la /etc/apt/sources.list.d/"
+f_log "--------------------------"
+ls -la /etc/apt/sources.list.d/ 2>&1 | tee -a $TMPFILE
+f_log "--------------------------"
+f_log
+f_log "cat /etc/apt/sources.list.d/openmediavault.list"
+f_log "--------------------------"
+cat /etc/apt/sources.list.d/openmediavault.list 2>&1 | tee -a $TMPFILE
+f_log "--------------------------" 

@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# import the needed Libs
+. /usr/local/bin/omv-support-libs
+
+# Describe your Info-AddIn here
+DESCRIPTION="Other - Info about groups and apache-port"
+
+# Reads the filename
+FILENAME="$1"
+
+# Define the tmp-file on the filesystem
+TMPFILE="$TMPFOLDER/$FILENAME"
+
+f_log "##########################"
+f_log "$FILENAME:"
+f_log
+
+# Begin of the script
+f_log "cat /etc/apache2/ports.conf"
+f_log "--------------------------"
+cat /etc/apache2/ports.conf 2>&1 | tee -a $TMPFILE
+f_log
+
+f_log "groups openmediavault"
+f_log "--------------------------"
+groups openmediavault 2>&1 | tee -a $TMPFILE
+f_log
+
+f_log "ownership of /var/www/openmediavault"
+f_log "--------------------------"
+ls -la /var/www/openmediavault  2>&1 | tee -a $TMPFILE
+
+f_log
+f_log "cat /etc/passwd"
+f_log "--------------------------"
+cat /etc/passwd  2>&1 | tee -a $TMPFILE

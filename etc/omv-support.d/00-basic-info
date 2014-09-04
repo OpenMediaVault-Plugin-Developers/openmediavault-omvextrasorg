@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# import the needed Libs
+. /usr/local/bin/omv-support-libs
+
+# Describe your Info-AddIn here
+DESCRIPTION="Basic Info"
+
+# Reads the filename
+FILENAME="$1"
+
+## basic info - collected in every run
+f_log "##########################"
+f_log "Basic Info:"
+f_log
+f_log "Script started: $SCRIPTDATE"
+f_log
+f_log "Script Version: $VERSION"
+f_log "Debian-Version: $(cat /etc/debian_version)"
+f_log "OMV-Version: $(dpkg -l | egrep "openmediavault[^-]" | awk '{print $3}')"
+f_log
+f_log "System Drive: (can vary at every boot)"
+f_log "/dev/$SYSDRIVE"
+f_log
+f_log "smartctl -i /dev/$SYSDRIVE"
+smartctl -i /dev/$SYSDRIVE 2>&1 | tee -a $TMPFILE
+f_log
+f_log "cat /etc/default/locale"
+cat /etc/default/locale 2>&1 | tee -a $TMPFILE

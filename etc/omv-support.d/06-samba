@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Describe your Info-AddIn here
+DESCRIPTION="SMB - Samba Info"
+
+# don't change this ------------------------------------------
+# import the needed Libs
+. /usr/local/bin/omv-support-libs
+
+# Reads the filename
+FILENAME="$1"
+
+# Define the tmp-file on the filesystem
+TMPFILE="$TMPFOLDER/$FILENAME"
+
+f_log "##########################"
+f_log "$FILENAME:"
+f_log
+# ^^^^don't change this ------------------------------------------
+
+# Your script begins here:
+f_log "testparm -s -> checks smb.conf" 					# command, that is executed
+f_log "--------------------------" 					# separator
+testparm -s 2>&1 | tee -a $TMPFILE 	# command to get info from
+f_log "--------------------------" 					# separator
+f_log 												# an empty line makes it better to read
+f_log "smbstatus" 			# more commands ...
+f_log "--------------------------"
+smbstatus 2>&1 | tee -a $TMPFILE
+f_log "--------------------------"
+f_log
+# eventually list all mounted smb-shares
+
+f_log
+f_log "pdbedit -L"
+f_log "--------------------------"
+pdbedit -L 2>&1 | tee -a $TMPFILE

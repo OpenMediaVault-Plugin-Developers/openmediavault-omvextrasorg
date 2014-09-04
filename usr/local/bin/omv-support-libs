@@ -1,0 +1,8 @@
+#!/bin/bash
+# Libs for the OpenMediaVault Support-script
+
+# simple log-output
+f_log() {
+	echo "$1" >> $TMPFILE
+	echo "$1"
+}

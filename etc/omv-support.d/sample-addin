@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# Info-AddIn for the OpenMediaVault Support-script
+
+# Edit the description for you Info-AddIn and add your
+# command below the "# Your script begins here:"-line
+
+# make sure you add
+# 2>&1 | tee -a $TMPFILE
+# to the end of every command. That'll write every output
+# to stdout and the logfile
+# e.g. cat /etc/apt/sources.list 2>&1 | tee -a $TMPFILE
+# below there's a sample
+
+# f_log "write something here"
+# echoes 'write something here' to stdout and the logfile
+
+# save the script to /usr/local/bin/:digit:digit:-yourname
+# e.g. /usr/local/bin/56-mysql-info
+
+# you can also have a look at other AddIns in /usr/local/bin
+
+# the OpenMediaVault Support-script imports your Info-AddIn
+# automatically
+
+# Describe your Info-AddIn here
+DESCRIPTION="Sample - Sample Info AddIn"
+
+# don't change this ------------------------------------------
+# import the needed Libs
+. /usr/local/bin/omv-support-libs
+
+# Reads the filename
+FILENAME="$1"
+
+# Define the tmp-file on the filesystem
+TMPFILE="$TMPFOLDER/$FILENAME"
+
+f_log "##########################"
+f_log "$FILENAME:"
+f_log
+# ^^^^don't change this ------------------------------------------
+
+##################################################################
+# Your script begins here:
+f_log "cat /etc/apt/sources.list" 					# command, that is executed
+f_log "--------------------------" 					# separator
+cat /etc/apt/sources.list 2>&1 | tee -a $TMPFILE 	# command to get info from
+f_log "--------------------------" 					# separator
+f_log 												# an empty line makes it better to read
+f_log "ls -la /etc/apt/sources.list.d/" 			# more commands ...
+f_log "--------------------------"
+ls -la /etc/apt/sources.list.d/ 2>&1 | tee -a $TMPFILE
+f_log "--------------------------"
+f_log
+f_log "cat /etc/apt/sources.list.d/openmediavault.list"
+f_log "--------------------------"
+cat /etc/apt/sources.list.d/openmediavault.list 2>&1 | tee -a $TMPFILE
+f_log "--------------------------" 

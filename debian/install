@@ -1,3 +1,5 @@
 var/www/openmediavault/*    var/www/openmediavault
-usr/share/keyrings/*        usr/share/keyrings/
+usr/share/keyrings/*        usr/share/keyrings
 usr/share/openmediavault/*  usr/share/openmediavault
+usr/local/bin/*             usr/local/bin
+etc/omv-support.d/*         etc/omv-support.d
