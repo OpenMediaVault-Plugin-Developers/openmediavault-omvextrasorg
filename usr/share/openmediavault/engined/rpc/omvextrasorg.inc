@@ -27,42 +27,45 @@ require_once("openmediavault/rpcservice.inc");
 require_once("openmediavault/notify.inc");
 require_once("openmediavault/product.inc");
 
-class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
-
-    public function getName() {
+class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
+{
+    public function getName()
+    {
         return "OmvExtrasOrg";
     }
 
-    private function getPluginName() {
+    private function getPluginName()
+    {
         return strtolower( $this->getName() );
     }
 
-    private function getXPath() {
-        $path = sprintf( "//system/%s", $this->getPluginName() );
-        return $path;
+    private function getXPath()
+    {
+        return sprintf( "//system/%s", $this->getPluginName() );
     }
 
-    private function getXPathRepos() {
-        $path = sprintf( "%s/repos", $this->getXPath() );
-        return $path;
+    private function getXPathRepos()
+    {
+        return sprintf( "%s/repos", $this->getXPath() );
     }
 
-    private function getXPathRepo() {
-        $path = sprintf( "%s/repo", $this->getXPathRepos() );
-        return $path;
+    private function getXPathRepo()
+    {
+        return sprintf( "%s/repo", $this->getXPathRepos() );
     }
 
-    private function getEventMessagePath() {
-        $path = sprintf( "org.openmediavault.system.%s", $this->getPluginName() );
-        return $path;
+    private function getEventMessagePath()
+    {
+        return sprintf( "org.openmediavault.system.%s", $this->getPluginName() );
     }
 
-    private function getEventMessagePathRepo() {
-        $path = sprintf( "%s.repos.repo", $this->getEventMessagePath() );
-        return $path;
+    private function getEventMessagePathRepo()
+    {
+        return sprintf( "%s.repos.repo", $this->getEventMessagePath() );
     }
 
-    public function initialize() {
+    public function initialize()
+    {
         $this->registerMethod("getPrimary");
         $this->registerMethod("setPrimary");
 
@@ -87,16 +90,25 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $this->registerMethod("doSend");
     }
 
-    public function getPrimary($params, $context) {
+    public function getPrimary($params, $context)
+    {
         global $xmlConfig;
 
         // Validate the RPC caller context.
-        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
 
         // Get the configuration object.
         $object = $xmlConfig->get( $this->getXPath() );
-        if(is_null($object))
-            throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
+        if (is_null($object))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
+                $this->getXPath()
+            );
+        }
 
         // Modify the result object.
         $object['enable']  = boolval($object['enable']);
@@ -123,7 +135,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
 
         // Determine if backports kernel button should be shown
         $pos = strpos( $object['arch'], "arm" );
-        if( $pos === false )
+        if ( $pos === false )
             $object['showbackports'] = "1";
         else
             $object['showbackports'] = "0";
@@ -134,11 +146,15 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         return $object;
     }
 
-    public function setPrimary($params, $context) {
+    public function setPrimary($params, $context)
+    {
         global $xmlConfig;
 
         // Validate the RPC caller context.
-        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
 
         // Validate the parameters of the RPC service method.
         $this->validateMethodParams($params, '{
@@ -152,8 +168,13 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
 
         // Get the existing configuration object.
         $oldObject = $xmlConfig->get( $this->getXPath() );
-        if(is_null($oldObject))
-            throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
+        if (is_null($oldObject))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
+                $this->getXPath()
+            );
+        }
 
         // Update the configuration object.
         $object = array(
@@ -176,33 +197,51 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "mariadb"       => array_boolval($oldObject, 'mariadb'),
             "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array()
         );
-        if(FALSE === $xmlConfig->replace($this->getXPath(), $object))
-            throw new OMVException(OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED);
+        if (FALSE === $xmlConfig->replace($this->getXPath(), $object))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED
+            );
+        }
 
         // Notify configuration changes.
         $dispatcher = &OMVNotifyDispatcher::getInstance();
         $dispatcher->notify(OMV_NOTIFY_MODIFY, $this->getEventMessagePath(), $object);
 
         // Apply the changes immediately (no user interaction is wanted).
-        OMVRpc::exec("Config", "applyChanges", array(
-            "modules" => array( $this->getPluginName() ),
-            "force"   => TRUE
-        ), $context);
+        OMVRpc::exec(
+            "Config",
+            "applyChanges",
+            array(
+                "modules" => array( $this->getPluginName() ),
+                "force"   => TRUE
+            ),
+            $context
+        );
 
         // Return the configuration object.
         return $object;
     }
 
-    public function getSecondary($params, $context) {
+    public function getSecondary($params, $context)
+    {
         global $xmlConfig;
 
         // Validate the RPC caller context.
-        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
 
         // Get the configuration object.
         $object = $xmlConfig->get( $this->getXPath() );
-        if(is_null($object))
-            throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
+        if (is_null($object))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
+                $this->getXPath()
+            );
+        }
 
         // Modify the result object.
         $object['vbox']          = boolval($object['vbox']);
@@ -221,11 +260,15 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         return $object;
     }
 
-    public function setSecondary($params, $context) {
+    public function setSecondary($params, $context)
+    {
         global $xmlConfig;
 
         // Validate the RPC caller context.
-        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
 
         // Validate the parameters of the RPC service method.
         $this->validateMethodParams($params, '{
@@ -256,7 +299,9 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         }
 
         if ( strpos($uname, "amd64") === false )
+        {
             $params['zfs'] = false;
+        }
 
         // Get release and disable zfs if squeeze
         $output = array();
@@ -265,12 +310,19 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $release = strtolower($output[0]);
 
         if ( $release == "squeeze" )
+        {
             $params['zfs'] = false;
+        }
 
         // Get the existing configuration object.
         $oldObject = $xmlConfig->get( $this->getXPath() );
-        if(is_null($oldObject))
-            throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
+        if (is_null($oldObject))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
+                $this->getXPath()
+            );
+        }
 
         // Update the configuration object.
         $object = array(
@@ -294,28 +346,41 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array()
         );
 
-        if(FALSE === $xmlConfig->replace($this->getXPath(), $object))
-            throw new OMVException(OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED);
+        if (FALSE === $xmlConfig->replace($this->getXPath(), $object))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED
+            );
+        }
 
         // Notify configuration changes.
         $dispatcher = &OMVNotifyDispatcher::getInstance();
         $dispatcher->notify(OMV_NOTIFY_MODIFY, $this->getEventMessagePath(), $object);
 
         // Apply the changes immediately (no user interaction is wanted).
-        OMVRpc::exec("Config", "applyChanges", array(
-            "modules" => array( $this->getPluginName() ),
-            "force"   => TRUE
-        ), $context);
+        OMVRpc::exec(
+            "Config",
+            "applyChanges",
+            array(
+                "modules" => array( $this->getPluginName() ),
+                "force"   => TRUE
+            ),
+            $context
+        );
 
         // Return the configuration object.
         return $object;
     }
 
-    public function getRepos($params, $context) {
+    public function getRepos($params, $context)
+    {
         global $xmlConfig;
 
         // Validate the RPC caller context.
-        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
 
         // Validate the parameters of the RPC service method.
         $this->validateMethodParams($params, '{
@@ -330,19 +395,28 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
 
         // Get configuration data.
         $objects = $xmlConfig->getList( $this->getXPathRepo() );
-        if(is_null($objects))
-            throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
+        if (is_null($objects))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
+                $this->getXPathRepo()
+            );
+        }
 
         // Filter the result.
         return $this->applyFilter($objects, $params['start'], $params['limit'],
             $params['sortfield'], $params['sortdir']);
     }
 
-    public function getRepo($params, $context) {
+    public function getRepo($params, $context)
+    {
         global $xmlConfig;
 
         // Validate the RPC caller context.
-        $this->validateMethodContext($context, array("role" => OMV_ROLE_ADMINISTRATOR));
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
 
         // Validate the parameters of the RPC service method.
         $this->validateMethodParams($params, '{
@@ -353,19 +427,28 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         }');
 
         // Get the configuration object.
-        $xpath = sprintf("%s[uuid='%s']", $this->getXPathRepo(), $params['uuid']);
-        $object = $xmlConfig->get($xpath);
-        if(is_null($object))
-            throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
+        $xPath = sprintf("%s[uuid='%s']", $this->getXPathRepo(), $params['uuid']);
+        $object = $xmlConfig->get($xPath);
+        if (is_null($object))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
+                $xPath
+            );
+        }
 
         return $object;
     }
 
-    public function setRepo($params, $context) {
+    public function setRepo($params, $context)
+    {
         global $xmlConfig;
 
         // Validate the RPC caller context.
-        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
 
         // Validate the parameters of the RPC service method.
         $this->validateMethodParams($params, '{
@@ -388,17 +471,24 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
 
         // Set the configuration data.
         $success = FALSE;
-        if($params['uuid'] == $GLOBALS['OMV_UUID_UNDEFINED']) {
+        if ($params['uuid'] == $GLOBALS['OMV_UUID_UNDEFINED'])
+        {
             // Append object to configuration.
             $success = $xmlConfig->set($this->getXPathRepos(), array("repo" => $object));
-        } else {
+        }
+        else
+        {
             // Update existing configuration object.
             $xpath = sprintf("%s[uuid='%s']", $this->getXPathRepo(), $params['uuid']);
             $success = $xmlConfig->replace($xpath, $object);
         }
 
-        if(FALSE === $success)
-            throw new OMVException(OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED);
+        if (FALSE === $success)
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED
+            );
+        }
 
         // Notify configuration changes.
         $dispatcher = &OMVNotifyDispatcher::getInstance();
@@ -411,11 +501,15 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
     }
 
 
-    public function deleteRepo($params, $context) {
+    public function deleteRepo($params, $context)
+    {
         global $xmlConfig;
 
         // Validate the RPC caller context.
-        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
 
         // Validate the parameters of the RPC service method.
         $this->validateMethodParams($params, '{
@@ -430,16 +524,25 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         return $this->deleteConfigObjectByPath($xpath, $this->getEventMessagePathRepo());
     }
 
-    public function getDeveloper($params, $context) {
+    public function getDeveloper($params, $context)
+    {
         global $xmlConfig;
 
         // Validate the RPC caller context.
-        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
 
         // Get the configuration object.
         $object = $xmlConfig->get( $this->getXPath() );
-        if(is_null($object))
-            throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
+        if (is_null($object))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
+                $this->getXPath()
+            );
+        }
 
         // Modify the result object.
         $object['beta']    = boolval($object['beta']);
@@ -458,11 +561,15 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         return $object;
     }
 
-    public function setDeveloper($params, $context) {
+    public function setDeveloper($params, $context)
+    {
         global $xmlConfig;
 
         // Validate the RPC caller context.
-        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
 
         // Validate the parameters of the RPC service method.
         $this->validateMethodParams($params, '{
@@ -478,8 +585,13 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
 
         // Get the existing configuration object.
         $oldObject = $xmlConfig->get( $this->getXPath() );
-        if(is_null($oldObject))
-            throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
+        if (is_null($oldObject))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
+                $this->getXPath()
+            );
+        }
 
         // Update the configuration object.
         $object = array(
@@ -502,31 +614,46 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             "mariadb"       => array_boolval($params, 'mariadb'),
             "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array()
         );
-        if(FALSE === $xmlConfig->replace($this->getXPath(), $object))
-            throw new OMVException(OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED);
+
+        if (FALSE === $xmlConfig->replace($this->getXPath(), $object))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED
+            );
+        }
 
         // Notify configuration changes.
         $dispatcher = &OMVNotifyDispatcher::getInstance();
         $dispatcher->notify(OMV_NOTIFY_MODIFY, $this->getEventMessagePath(), $object);
 
         // Apply the changes immediately (no user interaction is wanted).
-        OMVRpc::exec("Config", "applyChanges", array(
-            "modules" => array( $this->getPluginName() ),
-            "force"   => TRUE
-        ), $context);
+        OMVRpc::exec(
+            "Config",
+            "applyChanges",
+            array(
+                "modules" => array( $this->getPluginName() ),
+                "force"   => TRUE
+            ),
+            $context
+        );
 
         // Return the configuration object.
         return $object;
     }
 
-    public function doInstallBackports($params, $context) {
+    public function doInstallBackports($params, $context)
+    {
         // Validate the RPC caller context.
-        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
 
         // Create a background process.
         $bgStatusFilename = $this->createBgProcStatus();
         $pid = $this->fork();
-        if($pid > 0) { // Parent process.
+        if ($pid > 0)   // Parent process.
+        {
             $this->initializeBgProcStatus($bgStatusFilename, $pid);
             return $bgStatusFilename;
         }
@@ -536,7 +663,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             $bgOutputFilename = $this->createBgProcOutput();
             $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
 
-            $cmd = sprintf("sudo omv-mkconf %s installbackports 2>&1", $this->getPluginName() );
+            $cmd = sprintf("omv-mkconf %s installbackports 2>&1", $this->getPluginName() );
             $this->exec($cmd, $output, $bgOutputFilename);
             $this->finalizeBgProcStatus($bgStatusFilename, $output);
 
@@ -546,14 +673,19 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         }
     }
 
-    public function doInstallSystemd($params, $context) {
+    public function doInstallSystemd($params, $context)
+    {
         // Validate the RPC caller context.
-        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
 
         // Create a background process.
         $bgStatusFilename = $this->createBgProcStatus();
         $pid = $this->fork();
-        if($pid > 0) { // Parent process.
+        if ($pid > 0)   // Parent process.
+        {
             $this->initializeBgProcStatus($bgStatusFilename, $pid);
             return $bgStatusFilename;
         }
@@ -563,7 +695,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             $bgOutputFilename = $this->createBgProcOutput();
             $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
 
-            $cmd = sprintf("sudo omv-mkconf %s installsystemd 2>&1", $this->getPluginName() );
+            $cmd = sprintf("omv-mkconf %s installsystemd 2>&1", $this->getPluginName() );
             $this->exec($cmd, $output, $bgOutputFilename);
             $this->finalizeBgProcStatus($bgStatusFilename, $output);
 
@@ -573,23 +705,38 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         }
     }
 
-    public function doAptCleanSilent($params, $context) {
+    public function doAptCleanSilent($params, $context)
+    {
         // Validate the RPC caller context.
-        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
 
-        $cmd = sprintf("sudo omv-mkconf %s aptclean 2>&1", $this->getPluginName() );
-        if(0 !== $this->exec($cmd, $output))
-            throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
+        $cmd = sprintf("omv-mkconf %s aptclean 2>&1", $this->getPluginName() );
+        if (0 !== $this->exec($cmd, $output))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_EXEC_FAILED,
+                $cmd,
+                implode("\n", $output)
+            );
+        }
     }
 
-    public function doAptClean($params, $context) {
+    public function doAptClean($params, $context)
+    {
         // Validate the RPC caller context.
-        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
 
         // Create a background process.
         $bgStatusFilename = $this->createBgProcStatus();
         $pid = $this->fork();
-        if($pid > 0) { // Parent process.
+        if ($pid > 0)   // Parent process.
+        {
             $this->initializeBgProcStatus($bgStatusFilename, $pid);
             return $bgStatusFilename;
         }
@@ -599,7 +746,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             $bgOutputFilename = $this->createBgProcOutput();
             $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
 
-            $cmd = sprintf("sudo omv-mkconf %s aptclean 2>&1", $this->getPluginName() );
+            $cmd = sprintf("omv-mkconf %s aptclean 2>&1", $this->getPluginName() );
             $this->exec($cmd, $output, $bgOutputFilename);
             $this->finalizeBgProcStatus($bgStatusFilename, $output);
 
@@ -609,26 +756,58 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         }
     }
 
-    public function getSupportInfo($params, $context) {
+    public function getSupportInfo($params, $context)
+    {
+        // Validate the RPC caller context.
+		$this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
+
+        // Validate the parameters of the RPC service method.
+        $this->validateMethodParams($params, '{
+            "type"       : "object",
+            "properties" : {
+                "info" : { "type" : "string" }
+            }
+        }');
+
         $output = "";
         $result = "";
 
-        OMVUtil::exec("sudo /usr/sbin/omv-sysinfo", $result);
+        if ( $params['info'] == "style1" )
+        {
+            OMVUtil::exec("/usr/local/bin/omv-support.sh webgui", $result);
+        }
+        else
+        {
+            OMVUtil::exec("/usr/sbin/omv-sysinfo", $result);
+        }
         $output = implode("\n", $result) . "\n";
 
         return $output;
     }
 
-    public function getProcessList($params, $context) {
+    public function getProcessList($params, $context)
+    {
         // Validate the RPC caller context.
-        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
 
         // Get ps output
-        $cmd = 'sudo ps axww -o pid,user,%cpu,%mem,stat,args 2>&1';
+        $cmd = 'ps axww -o pid,user,%cpu,%mem,stat,args 2>&1';
         OMVUtil::exec($cmd, $output, $result);
 
         if ($result !== 0)
-            throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_EXEC_FAILED,
+                $cmd,
+                implode("\n", $output)
+            );
+        }
 
         // Get column names
         $cols = array_map(function($a)
@@ -639,7 +818,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         $split_limit = count($cols);
 
         $objects = array();
-        foreach ($output as $line) {
+        foreach ($output as $line)
+        {
             if (trim($line) == '')
                 continue;
 
@@ -652,14 +832,19 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
         );
     }
 
-    public function doSend($params, $context) {
+    public function doSend($params, $context)
+    {
         // Validate the RPC caller context.
-        $this->validateMethodContext($context, array( "role" => OMV_ROLE_ADMINISTRATOR ));
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
 
         // Create a background process.
         $bgStatusFilename = $this->createBgProcStatus();
         $pid = $this->fork();
-        if($pid > 0) { // Parent process.
+        if ($pid > 0)   // Parent process.
+        {
             $this->initializeBgProcStatus($bgStatusFilename, $pid);
             return $bgStatusFilename;
         }
@@ -669,7 +854,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract {
             $bgOutputFilename = $this->createBgProcOutput();
             $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
 
-            $cmd = sprintf("sudo omv-mkconf %s sendsupport 2>&1", $this->getPluginName() );
+            $cmd = sprintf("omv-mkconf %s sendsupport 2>&1", $this->getPluginName() );
             $this->exec($cmd, $output, $bgOutputFilename);
             $this->finalizeBgProcStatus($bgStatusFilename, $output);
 

@@ -66,10 +66,13 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Secondary", {
                 labelSeparator : ""
             },
             items         : [{
+                border : false,
+                html   : "<p>" + _("Only enable repositories you need.  Enabling unnecessary repositories can slow down your system.") + "</p>"
+            },{
                 xtype      : "checkbox",
                 name       : "vbox",
                 fieldLabel : _("Virtualbox"),
-                boxLabel   : _("Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository"),
+                boxLabel   : _("Enable Virtualbox repository."),
                 checked    : true
             },{
                 xtype      : "checkbox",
@@ -92,14 +95,18 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Secondary", {
             },{
                 xtype      : "checkbox",
                 name       : "miller",
-                fieldLabel : _("Miller"),
-                boxLabel   : _("Enable Miller repository"),
-                checked    : false
+                fieldLabel : _("Download Managers"),
+                boxLabel   : _("Enable download managers repository"),
+                checked    : false,
+                plugins    : [{
+                    ptype : "fieldinfo",
+                    text  : _("Contains various download managers for newsgroups, torrents, usenet, and streaming")
+                }]
             },{
                 xtype      : "checkbox",
                 name       : "millertesting",
-                fieldLabel : _("Miller Testing"),
-                boxLabel   : _("Enable Miller testing repository"),
+                fieldLabel : _("Managers Testing"),
+                boxLabel   : _("Enable download managers testing repository (release candidates)"),
                 checked    : false
             },{
                 xtype      : "checkbox",
@@ -112,13 +119,21 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Secondary", {
                 name       : "vpn",
                 fieldLabel : _("VPN"),
                 boxLabel   : _("Enable VPN repository"),
-                checked    : false
+                checked    : false,
+                plugins    : [{
+                    ptype : "fieldinfo",
+                    text  : _("Contains plugins for setting up virtual private networks")
+                }]
             },{
                 xtype      : "checkbox",
                 name       : "zfs",
                 fieldLabel : _("ZFS"),
                 boxLabel   : _("Enable ZFS repository"),
-                checked    : false
+                checked    : false,
+                plugins    : [{
+                    ptype : "fieldinfo",
+                    text  : _("Do not enable this repository unless you are using the ZFS filesystem (uncommon)")
+                }]
             }]
         }];
     }

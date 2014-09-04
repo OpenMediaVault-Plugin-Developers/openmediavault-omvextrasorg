@@ -32,8 +32,15 @@ Ext.define("OMV.module.admin.diagnostic.system.SupportInfo", {
         "OMV.window.MessageBox"
     ],
 
+    info : "style1",
+
+    hideDownloadButton : false,
+
     rpcService : "OmvExtrasOrg",
     rpcMethod  : "getSupportInfo",
+    rpcParams  : {
+        info : "style1"
+    },
 
     getTopToolbarItems: function() {
         var me = this;
@@ -47,6 +54,25 @@ Ext.define("OMV.module.admin.diagnostic.system.SupportInfo", {
             iconCls  : Ext.baseCSSPrefix + "btn-icon-16x16",
             handler  : Ext.Function.bind(me.onSendButton, me, [ me ]),
             scope    : me
+        },{
+            id            : me.getId() + "-info",
+            xtype         : "combo",
+            queryMode     : "local",
+            store         : [
+                [ "style1", "Style #1" ],
+                [ "style2", "Style #2" ]
+            ],
+            allowBlank    : false,
+            editable      : false,
+            triggerAction : "all",
+            value         : me.info,
+            listeners     : {
+                scope  : me,
+                change : function(combo, value) {
+                    this.info = value;
+                    this.doLoad();
+                }
+            }
         });
         return items;
     },
