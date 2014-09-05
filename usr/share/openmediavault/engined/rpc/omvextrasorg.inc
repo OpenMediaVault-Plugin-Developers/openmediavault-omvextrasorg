@@ -768,7 +768,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $this->validateMethodParams($params, '{
             "type"       : "object",
             "properties" : {
-                "info" : { "type" : "string" }
+                "info" : { "type" : "string", "optional" : true }
             }
         }');
 

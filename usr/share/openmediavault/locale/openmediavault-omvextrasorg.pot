@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-04 11:05-0500\n"
+"POT-Creation-Date: 2014-09-05 06:02-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,6 +68,12 @@ msgstr ""
 msgid "Confirmation"
 msgstr ""
 
+msgid "Contains plugins for setting up virtual private networks"
+msgstr ""
+
+msgid "Contains various download managers for newsgroups, torrents, usenet, and streaming"
+msgstr ""
+
 msgid "Custom"
 msgstr ""
 
@@ -80,10 +86,16 @@ msgstr ""
 msgid "Distribution"
 msgstr ""
 
+msgid "Do not enable this repository unless you are using the ZFS filesystem (uncommon)"
+msgstr ""
+
 msgid "Done..."
 msgstr ""
 
 msgid "Dotdeb"
+msgstr ""
+
+msgid "Download Managers"
 msgstr ""
 
 msgid "Downloading package information"
@@ -107,15 +119,6 @@ msgstr ""
 msgid "Enable MariaDB 10.0 repository"
 msgstr ""
 
-msgid "Enable Miller repository"
-msgstr ""
-
-msgid "Enable Miller testing repository"
-msgstr ""
-
-msgid "Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository"
-msgstr ""
-
 msgid "Enable OMV-Extras.org repository"
 msgstr ""
 
@@ -128,6 +131,9 @@ msgstr ""
 msgid "Enable VPN repository"
 msgstr ""
 
+msgid "Enable Virtualbox repository."
+msgstr ""
+
 msgid "Enable ZFS repository"
 msgstr ""
 
@@ -135,6 +141,12 @@ msgid "Enable deb-multimedia backports repository"
 msgstr ""
 
 msgid "Enable deb-multimedia repository"
+msgstr ""
+
+msgid "Enable download managers repository"
+msgstr ""
+
+msgid "Enable download managers testing repository (release candidates)"
 msgstr ""
 
 msgid "Enable e-tobi.net repository"
@@ -170,19 +182,19 @@ msgstr ""
 msgid "Kernel"
 msgstr ""
 
+msgid "Managers Testing"
+msgstr ""
+
 msgid "MariaDB"
-msgstr ""
-
-msgid "Miller"
-msgstr ""
-
-msgid "Miller Testing"
 msgstr ""
 
 msgid "Name"
 msgstr ""
 
 msgid "OMV-Extras.org"
+msgstr ""
+
+msgid "Only enable repositories you need.  Enabling unnecessary repositories can slow down your system."
 msgstr ""
 
 msgid "PID"
