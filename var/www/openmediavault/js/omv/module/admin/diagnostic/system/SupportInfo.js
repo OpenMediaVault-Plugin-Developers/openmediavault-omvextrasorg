@@ -38,6 +38,9 @@ Ext.define("OMV.module.admin.diagnostic.system.SupportInfo", {
 
     rpcService : "OmvExtrasOrg",
     rpcMethod  : "getSupportInfo",
+    rpcParams  : {
+        info : "style1"
+    },
 
     getTopToolbarItems: function() {
         var me = this;
@@ -66,8 +69,7 @@ Ext.define("OMV.module.admin.diagnostic.system.SupportInfo", {
             listeners     : {
                 scope  : me,
                 change : function(combo, value) {
-                    this.info = value;
-                    this.rpcParams.info = value;
+                    me.info = value;
                     me.showSupportInfo();
                 }
             }
@@ -75,8 +77,16 @@ Ext.define("OMV.module.admin.diagnostic.system.SupportInfo", {
         return items;
     },
 
+    initComponent: function() {
+        var me = this;
+        me.rpcParams.info = this.info;
+
+        me.callParent(arguments);
+    },
+
     showSupportInfo : function() {
         var me = this;
+        me.rpcParams.info = me.info;
         OMV.Rpc.request({
             scope    : this,
             callback : function(id, success, response) {

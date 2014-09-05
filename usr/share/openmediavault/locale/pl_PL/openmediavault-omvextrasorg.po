@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-04 11:05-0500\n"
-"PO-Revision-Date: 2014-08-15 21:22+0000\n"
-"Last-Translator: Cyryl Sochacki <cyrylsochacki@gmail.com>\n"
+"POT-Creation-Date: 2014-09-05 06:02-0500\n"
+"PO-Revision-Date: 2014-09-05 11:03+0000\n"
+"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -70,6 +70,14 @@ msgstr "Komentarz"
 msgid "Confirmation"
 msgstr "Potwierdzenie"
 
+msgid "Contains plugins for setting up virtual private networks"
+msgstr ""
+
+msgid ""
+"Contains various download managers for newsgroups, torrents, usenet, and "
+"streaming"
+msgstr ""
+
 msgid "Custom"
 msgstr "Niestandardowe"
 
@@ -82,11 +90,19 @@ msgstr "Repozytoria deweloperskie"
 msgid "Distribution"
 msgstr "Dystrybucja"
 
+msgid ""
+"Do not enable this repository unless you are using the ZFS filesystem "
+"(uncommon)"
+msgstr ""
+
 msgid "Done..."
 msgstr "Skończone..."
 
 msgid "Dotdeb"
 msgstr "Dotdeb"
+
+msgid "Download Managers"
+msgstr ""
 
 msgid "Downloading package information"
 msgstr "Pobieranie pakietu informacji"
@@ -109,16 +125,6 @@ msgstr "Włącz repozytoria Greyhole"
 msgid "Enable MariaDB 10.0 repository"
 msgstr "Włącz repozytorium MariaDB 10.0"
 
-msgid "Enable Miller repository"
-msgstr "Włącz repozytoria Miller"
-
-msgid "Enable Miller testing repository"
-msgstr "Włącz testowe repozytorium Miller"
-
-msgid ""
-"Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository"
-msgstr "Włącz repozytoria OMV-Extras.org Virtualbox i Sun's Virtualbox"
-
 msgid "Enable OMV-Extras.org repository"
 msgstr "Włącz repozytoria OMV-Extras.org"
 
@@ -131,6 +137,9 @@ msgstr "Włącz repozytoria Plex Media Server"
 msgid "Enable VPN repository"
 msgstr "Włącz repozytorium VPN"
 
+msgid "Enable Virtualbox repository."
+msgstr ""
+
 msgid "Enable ZFS repository"
 msgstr "Włącz repozytoria ZFS"
 
@@ -139,6 +148,12 @@ msgstr "Włącz repozytoria deb-multimedia backports "
 
 msgid "Enable deb-multimedia repository"
 msgstr "Włącz repozytoria deb-multimedia"
+
+msgid "Enable download managers repository"
+msgstr ""
+
+msgid "Enable download managers testing repository (release candidates)"
+msgstr ""
 
 msgid "Enable e-tobi.net repository"
 msgstr "Włącz repozytoria e-tobi.net"
@@ -175,20 +190,22 @@ msgstr "Instaluje systemd..."
 msgid "Kernel"
 msgstr "Kernel"
 
+msgid "Managers Testing"
+msgstr ""
+
 msgid "MariaDB"
 msgstr "MariaDB"
-
-msgid "Miller"
-msgstr "Miller"
-
-msgid "Miller Testing"
-msgstr "Miller Testowe"
 
 msgid "Name"
 msgstr "Nazwa"
 
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
+
+msgid ""
+"Only enable repositories you need.  Enabling unnecessary repositories can "
+"slow down your system."
+msgstr ""
 
 msgid "PID"
 msgstr "PID"

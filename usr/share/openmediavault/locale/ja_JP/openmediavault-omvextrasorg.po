@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-04 11:05-0500\n"
-"PO-Revision-Date: 2014-07-24 05:21+0000\n"
-"Last-Translator: Toshihiro Kan <kansuke4649@gmail.com>\n"
+"POT-Creation-Date: 2014-09-05 06:02-0500\n"
+"PO-Revision-Date: 2014-09-05 11:03+0000\n"
+"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -69,6 +69,14 @@ msgstr "コメント"
 msgid "Confirmation"
 msgstr "確認"
 
+msgid "Contains plugins for setting up virtual private networks"
+msgstr ""
+
+msgid ""
+"Contains various download managers for newsgroups, torrents, usenet, and "
+"streaming"
+msgstr ""
+
 msgid "Custom"
 msgstr "カスタム"
 
@@ -81,11 +89,19 @@ msgstr "開発者のリポジトリ"
 msgid "Distribution"
 msgstr "ディストリビューション"
 
+msgid ""
+"Do not enable this repository unless you are using the ZFS filesystem "
+"(uncommon)"
+msgstr ""
+
 msgid "Done..."
 msgstr "完了"
 
 msgid "Dotdeb"
 msgstr "Dotdeb"
+
+msgid "Download Managers"
+msgstr ""
 
 msgid "Downloading package information"
 msgstr "パッケージの情報をダウンロードしています"
@@ -108,16 +124,6 @@ msgstr "Greyholeのリポジトリを有効にする"
 msgid "Enable MariaDB 10.0 repository"
 msgstr "MariaDB 10.0 のリポジトリを有効にする"
 
-msgid "Enable Miller repository"
-msgstr "Millerのリポジトリを有効にする"
-
-msgid "Enable Miller testing repository"
-msgstr "Millerのテスト版リポジトリを有効にする"
-
-msgid ""
-"Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository"
-msgstr "OMV-Extras.orgのVirtualboxリポジトリとSunのVirtualboxリポジトリを有効にする"
-
 msgid "Enable OMV-Extras.org repository"
 msgstr "OMV-Extras.orgリポジトリを有効にする"
 
@@ -130,6 +136,9 @@ msgstr "Plex Media Serverのリポジトリを有効にする"
 msgid "Enable VPN repository"
 msgstr "VPNのリポジトリを有効にする"
 
+msgid "Enable Virtualbox repository."
+msgstr ""
+
 msgid "Enable ZFS repository"
 msgstr "ZFSのリポジトリを有効にする"
 
@@ -138,6 +147,12 @@ msgstr "deb-multimediaバックポートのリポジトリを有効にする"
 
 msgid "Enable deb-multimedia repository"
 msgstr "deb-multimediaのリポジトリを有効にする"
+
+msgid "Enable download managers repository"
+msgstr ""
+
+msgid "Enable download managers testing repository (release candidates)"
+msgstr ""
 
 msgid "Enable e-tobi.net repository"
 msgstr "e-tobi.netのリポジトリを有効にする"
@@ -174,20 +189,22 @@ msgstr "systemdをインストールしています..."
 msgid "Kernel"
 msgstr "カーネル"
 
+msgid "Managers Testing"
+msgstr ""
+
 msgid "MariaDB"
 msgstr "MariaDB"
-
-msgid "Miller"
-msgstr "Miller"
-
-msgid "Miller Testing"
-msgstr "Millerテスト版"
 
 msgid "Name"
 msgstr "名前"
 
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
+
+msgid ""
+"Only enable repositories you need.  Enabling unnecessary repositories can "
+"slow down your system."
+msgstr ""
 
 msgid "PID"
 msgstr "PID"

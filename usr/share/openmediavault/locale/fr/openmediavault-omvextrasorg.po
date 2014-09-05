@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-04 11:05-0500\n"
-"PO-Revision-Date: 2014-07-04 16:06+0000\n"
+"POT-Creation-Date: 2014-09-05 06:02-0500\n"
+"PO-Revision-Date: 2014-09-05 11:03+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -69,6 +69,14 @@ msgstr ""
 msgid "Confirmation"
 msgstr ""
 
+msgid "Contains plugins for setting up virtual private networks"
+msgstr ""
+
+msgid ""
+"Contains various download managers for newsgroups, torrents, usenet, and "
+"streaming"
+msgstr ""
+
 msgid "Custom"
 msgstr ""
 
@@ -81,11 +89,19 @@ msgstr ""
 msgid "Distribution"
 msgstr ""
 
+msgid ""
+"Do not enable this repository unless you are using the ZFS filesystem "
+"(uncommon)"
+msgstr ""
+
 msgid "Done..."
 msgstr ""
 
 msgid "Dotdeb"
 msgstr "Dotdeb"
+
+msgid "Download Managers"
+msgstr ""
 
 msgid "Downloading package information"
 msgstr ""
@@ -108,16 +124,6 @@ msgstr ""
 msgid "Enable MariaDB 10.0 repository"
 msgstr ""
 
-msgid "Enable Miller repository"
-msgstr ""
-
-msgid "Enable Miller testing repository"
-msgstr ""
-
-msgid ""
-"Enable OMV-Extras.org Virtualbox repository and Sun's Virtualbox repository"
-msgstr ""
-
 msgid "Enable OMV-Extras.org repository"
 msgstr "Activer le dépôt OMV-Extras.org"
 
@@ -130,6 +136,9 @@ msgstr ""
 msgid "Enable VPN repository"
 msgstr ""
 
+msgid "Enable Virtualbox repository."
+msgstr ""
+
 msgid "Enable ZFS repository"
 msgstr ""
 
@@ -138,6 +147,12 @@ msgstr ""
 
 msgid "Enable deb-multimedia repository"
 msgstr "Activer le répo deb-multimedia"
+
+msgid "Enable download managers repository"
+msgstr ""
+
+msgid "Enable download managers testing repository (release candidates)"
+msgstr ""
 
 msgid "Enable e-tobi.net repository"
 msgstr ""
@@ -174,13 +189,10 @@ msgstr ""
 msgid "Kernel"
 msgstr ""
 
+msgid "Managers Testing"
+msgstr ""
+
 msgid "MariaDB"
-msgstr ""
-
-msgid "Miller"
-msgstr ""
-
-msgid "Miller Testing"
 msgstr ""
 
 msgid "Name"
@@ -188,6 +200,11 @@ msgstr ""
 
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
+
+msgid ""
+"Only enable repositories you need.  Enabling unnecessary repositories can "
+"slow down your system."
+msgstr ""
 
 msgid "PID"
 msgstr ""
