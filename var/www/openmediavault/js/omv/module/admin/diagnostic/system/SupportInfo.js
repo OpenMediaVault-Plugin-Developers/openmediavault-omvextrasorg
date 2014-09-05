@@ -70,11 +70,29 @@ Ext.define("OMV.module.admin.diagnostic.system.SupportInfo", {
                 scope  : me,
                 change : function(combo, value) {
                     this.info = value;
-                    this.doLoad();
+                    me.showSupportInfo();
                 }
             }
         });
         return items;
+    },
+
+    showSupportInfo : function() {
+        var me = this;
+        OMV.Rpc.request({
+            scope    : this,
+            callback : function(id, success, response) {
+                this.setValue(response);
+            },
+            relayErrors : false,
+            rpcData     : {
+                service  : "OmvExtrasOrg",
+                method   : "getSupportInfo",
+                params   : {
+                    info  : me.info
+                }
+            }
+        });
     },
 
     onSendButton: function() {
