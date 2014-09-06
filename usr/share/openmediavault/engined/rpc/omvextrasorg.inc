@@ -775,7 +775,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $output = "";
         $result = "";
 
-        if ( $params['info'] == "style1" )
+        if ( $params['info'] == "style2" )
         {
             OMVUtil::exec("/usr/local/bin/omv-support.sh webgui", $result);
         }
