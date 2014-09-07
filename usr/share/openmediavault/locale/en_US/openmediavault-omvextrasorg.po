@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-05 06:02-0500\n"
-"PO-Revision-Date: 2014-09-05 11:03+0000\n"
+"POT-Creation-Date: 2014-09-07 14:38-0500\n"
+"PO-Revision-Date: 2014-09-07 19:38+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: English (United States) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/en_US/)\n"
 "MIME-Version: 1.0\n"
@@ -22,6 +22,63 @@ msgstr "% CPU"
 
 msgid "% MEM"
 msgstr "% MEM"
+
+msgid "00 Debian Version"
+msgstr "00 Debian Version"
+
+msgid "00 OMV Version"
+msgstr "00 OMV Version"
+
+msgid "10 Date"
+msgstr "10 Date"
+
+msgid "10 Hostname"
+msgstr "10 Hostname"
+
+msgid "10 Locale"
+msgstr "10 Locale"
+
+msgid "10 Uptime"
+msgstr "10 Uptime"
+
+msgid "10 uname"
+msgstr "10 uname"
+
+msgid "20 Interfaces"
+msgstr "20 Interfaces"
+
+msgid "20 Route"
+msgstr "20 Route"
+
+msgid "20 iptables"
+msgstr "20 iptables"
+
+msgid "30 mdadm"
+msgstr "30 mdadm"
+
+msgid "40 Mount Info"
+msgstr "40 Mount Info"
+
+msgid "40 Partitions"
+msgstr "40 Partitions"
+
+msgid "40 blkid"
+msgstr "40 blkid"
+
+msgid "40 df"
+msgstr "40 df"
+
+msgid "40 fstab"
+msgstr "40 fstab"
+
+msgid "50 OMV Plugins"
+msgstr "50 OMV Plugins"
+
+msgid "50 apt sources"
+msgstr "50 apt sources"
+
+msgid "50 dpkg"
+msgstr "50 dpkg"
 
 msgid "Add repo"
 msgstr "Add repo"
@@ -194,6 +251,9 @@ msgstr "Managers Testing"
 msgid "MariaDB"
 msgstr "MariaDB"
 
+msgid "Modules"
+msgstr "Modules"
+
 msgid "Name"
 msgstr "Name"
 
@@ -243,6 +303,9 @@ msgstr "State"
 
 msgid "Support Info"
 msgstr "Support Info"
+
+msgid "Support Info Module Selection"
+msgstr "Support Info Module Selection"
 
 msgid "Testing"
 msgstr "Testing"

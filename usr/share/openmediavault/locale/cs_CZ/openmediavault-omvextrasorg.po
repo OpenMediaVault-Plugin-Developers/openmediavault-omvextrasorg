@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-05 06:02-0500\n"
-"PO-Revision-Date: 2014-09-05 11:03+0000\n"
+"POT-Creation-Date: 2014-09-07 14:38-0500\n"
+"PO-Revision-Date: 2014-09-07 19:38+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -22,6 +22,63 @@ msgid "% CPU"
 msgstr ""
 
 msgid "% MEM"
+msgstr ""
+
+msgid "00 Debian Version"
+msgstr ""
+
+msgid "00 OMV Version"
+msgstr ""
+
+msgid "10 Date"
+msgstr ""
+
+msgid "10 Hostname"
+msgstr ""
+
+msgid "10 Locale"
+msgstr ""
+
+msgid "10 Uptime"
+msgstr ""
+
+msgid "10 uname"
+msgstr ""
+
+msgid "20 Interfaces"
+msgstr ""
+
+msgid "20 Route"
+msgstr ""
+
+msgid "20 iptables"
+msgstr ""
+
+msgid "30 mdadm"
+msgstr ""
+
+msgid "40 Mount Info"
+msgstr ""
+
+msgid "40 Partitions"
+msgstr ""
+
+msgid "40 blkid"
+msgstr ""
+
+msgid "40 df"
+msgstr ""
+
+msgid "40 fstab"
+msgstr ""
+
+msgid "50 OMV Plugins"
+msgstr ""
+
+msgid "50 apt sources"
+msgstr ""
+
+msgid "50 dpkg"
 msgstr ""
 
 msgid "Add repo"
@@ -195,6 +252,9 @@ msgstr ""
 msgid "MariaDB"
 msgstr ""
 
+msgid "Modules"
+msgstr ""
+
 msgid "Name"
 msgstr ""
 
@@ -243,6 +303,9 @@ msgid "State"
 msgstr ""
 
 msgid "Support Info"
+msgstr ""
+
+msgid "Support Info Module Selection"
 msgstr ""
 
 msgid "Testing"
