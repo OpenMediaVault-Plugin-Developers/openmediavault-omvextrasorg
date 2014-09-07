@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (1.0.6) stable; urgency=low
+
+  * Add support info module selection
+  * Update locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 07 Sep 2014 12:11:32 -0500
+
 openmediavault-omvextrasorg (1.0.5.1) stable; urgency=low
 
   * Reverse styles

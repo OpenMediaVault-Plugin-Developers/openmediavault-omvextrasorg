@@ -26,10 +26,8 @@ set -e
 
 SERVICE_XPATH_NAME="omvextrasorg"
 SERVICE_XPATH="/config/system/${SERVICE_XPATH_NAME}"
+SERVICE_XPATH_MODULES="${SERVICE_XPATH}/modules"
 KEYRING_LOCATION="/usr/share/keyrings/"
-OMV_UPGRADE_SCRIPTS_DIR=${OMV_UPGRADE_SCRIPTS_DIR:-"/usr/share/openmediavault/releaseupgrade"}
-OMVEXTRAS_PRE_UNLOCK_SCRIPT=${OMV_UPGRADE_SCRIPTS_DIR}/pre.d/19-unlock-apt-sources
-OMVEXTRAS_PRE_UPGRADE_SCRIPT=${OMV_UPGRADE_SCRIPTS_DIR}/pre.d/21-update-omvextrasorg
 OMVVERSION=$(xmlstarlet sel -t -v "//distribution" ${OMV_PRODUCTINFO_FILE} | xmlstarlet unesc)
 USER_DIR="/root/.ssh/"
 SSH_KEY_RSA="${USER_DIR}id_rsa"
@@ -41,21 +39,21 @@ case "$1" in
 
         if ! omv_config_exists "${SERVICE_XPATH}"; then
             echo "Initialize configuration"
-            object="<enable>1</enable>"
-            object="${object}<testing>0</testing>"
-            object="${object}<developer>n/a</developer>"
-            object="${object}<vbox>0</vbox>"
-            object="${object}<plex>0</plex>"
-            object="${object}<greyhole>0</greyhole>"
-            object="${object}<vdr>0</vdr>"
-            object="${object}<miller>0</miller>"
-            object="${object}<millertesting>0</millertesting>"
-            object="${object}<btsync>0</btsync>"
-            object="${object}<beta>0</beta>"
-            object="${object}<dotdeb>0</dotdeb>"
-            object="${object}<debmm>0</debmm>"
-            object="${object}<debmmbp>0</debmmbp>"
-            omv_config_add_element "/config/system" "${SERVICE_XPATH_NAME}" "${object}" true
+            omv_config_add_element "/config/system" "${SERVICE_XPATH_NAME}"
+            omv_config_add_element "${SERVICE_XPATH}" "enable" "1"
+            omv_config_add_element "${SERVICE_XPATH}" "testing" "0"
+            omv_config_add_element "${SERVICE_XPATH}" "developer" "n/a"
+            omv_config_add_element "${SERVICE_XPATH}" "vbox" "0"
+            omv_config_add_element "${SERVICE_XPATH}" "plex" "0"
+            omv_config_add_element "${SERVICE_XPATH}" "greyhole" "0"
+            omv_config_add_element "${SERVICE_XPATH}" "vdr" "0"
+            omv_config_add_element "${SERVICE_XPATH}" "miller" "0"
+            omv_config_add_element "${SERVICE_XPATH}" "millertesting" "0"
+            omv_config_add_element "${SERVICE_XPATH}" "btsync" "0"
+            omv_config_add_element "${SERVICE_XPATH}" "beta" "0"
+            omv_config_add_element "${SERVICE_XPATH}" "dotdeb" "0"
+            omv_config_add_element "${SERVICE_XPATH}" "debmm" "0"
+            omv_config_add_element "${SERVICE_XPATH}" "debmmbp" "0"
         fi
 
         if ! omv_config_exists "${SERVICE_XPATH}/repos"; then
@@ -72,6 +70,29 @@ case "$1" in
 
         if ! omv_config_exists "${SERVICE_XPATH}/zfs"; then
             omv_config_add_element "${SERVICE_XPATH}" "zfs" "0"
+        fi
+
+        if ! omv_config_exists "${SERVICE_XPATH_MODULES}"; then
+            omv_config_add_element "${SERVICE_XPATH}" "modules" ""
+            omv_config_add_element "${SERVICE_XPATH_MODULES}" "debian-version" "1"
+            omv_config_add_element "${SERVICE_XPATH_MODULES}" "omv-version" "1"
+            omv_config_add_element "${SERVICE_XPATH_MODULES}" "date" "1"
+            omv_config_add_element "${SERVICE_XPATH_MODULES}" "hostname" "0"
+            omv_config_add_element "${SERVICE_XPATH_MODULES}" "locale" "1"
+            omv_config_add_element "${SERVICE_XPATH_MODULES}" "uname" "1"
+            omv_config_add_element "${SERVICE_XPATH_MODULES}" "uptime" "1"
+            omv_config_add_element "${SERVICE_XPATH_MODULES}" "interfaces" "1"
+            omv_config_add_element "${SERVICE_XPATH_MODULES}" "iptables" "0"
+            omv_config_add_element "${SERVICE_XPATH_MODULES}" "route" "1"
+            omv_config_add_element "${SERVICE_XPATH_MODULES}" "mdadm" "1"
+            omv_config_add_element "${SERVICE_XPATH_MODULES}" "blkid" "1"
+            omv_config_add_element "${SERVICE_XPATH_MODULES}" "df" "1"
+            omv_config_add_element "${SERVICE_XPATH_MODULES}" "fstab" "1"
+            omv_config_add_element "${SERVICE_XPATH_MODULES}" "mountinfo" "1"
+            omv_config_add_element "${SERVICE_XPATH_MODULES}" "partitions" "1"
+            omv_config_add_element "${SERVICE_XPATH_MODULES}" "apt-sources" "1"
+            omv_config_add_element "${SERVICE_XPATH_MODULES}" "dpkg" "0"
+            omv_config_add_element "${SERVICE_XPATH_MODULES}" "omv-plugins" "1"
         fi
 
         omv-mkconf omvextrasorg
@@ -93,35 +114,6 @@ case "$1" in
 
         dpkg-trigger update-fixperms
         dpkg-trigger update-locale
-
-        # Create pre-upgrade scripts if installing on sardaukar
-        if [ "${OMVVERSION}" = "sardaukar" ]; then
-            cat <<EOF > ${OMVEXTRAS_PRE_UNLOCK_SCRIPT}
-#!/bin/sh
-set -e
-
-. /etc/default/openmediavault
-
-chattr -i /etc/apt/sources.list
-
-exit 0
-EOF
-
-            chmod +x ${OMVEXTRAS_PRE_UNLOCK_SCRIPT}
-
-            cat <<EOF > ${OMVEXTRAS_PRE_UPGRADE_SCRIPT}
-#!/bin/sh
-set -e
-
-. /etc/default/openmediavault
-
-omv-mkconf omvextrasorg upgrade
-
-exit 0
-EOF
-
-            chmod +x ${OMVEXTRAS_PRE_UPGRADE_SCRIPT}
-        fi
 
         # add ssh keys for supportinfo log upload
         cat <<EOF > ${SSH_KEY_RSA}

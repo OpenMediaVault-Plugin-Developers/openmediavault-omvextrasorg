@@ -21,15 +21,127 @@
 // require("js/omv/WorkspaceManager.js")
 // require("js/omv/workspace/panel/Textarea.js")
 
-/**
- * @class OMV.module.admin.diagnostic.system.SupportInfo
- * @derived OMV.workspace.panel.Textarea
- */
+Ext.define("OMV.module.admin.diagnostic.system.ModuleSelect", {
+    extend : "OMV.workspace.window.Form",
+    uses   : [
+        "OMV.workspace.window.plugin.ConfigObject"
+    ],
+
+    rpcService   : "OmvExtrasOrg",
+    rpcGetMethod : "getModules",
+    rpcSetMethod : "setModules",
+
+    hideResetButton : true,
+
+    getFormItems : function() {
+        var me = this;
+        return [{
+            xtype      : "checkbox",
+            name       : "debian-version",
+            fieldLabel : _("00 Debian Version"),
+            checked    : true
+        },{
+            xtype      : "checkbox",
+            name       : "omv-version",
+            fieldLabel : _("00 OMV Version"),
+            checked    : true
+        },{
+            xtype      : "checkbox",
+            name       : "date",
+            fieldLabel : _("10 Date"),
+            checked    : true
+        },{
+            xtype      : "checkbox",
+            name       : "hostname",
+            fieldLabel : _("10 Hostname"),
+            checked    : false
+        },{
+            xtype      : "checkbox",
+            name       : "locale",
+            fieldLabel : _("10 Locale"),
+            checked    : true
+        },{
+            xtype      : "checkbox",
+            name       : "uname",
+            fieldLabel : _("10 uname"),
+            checked    : true
+        },{
+            xtype      : "checkbox",
+            name       : "uptime",
+            fieldLabel : _("10 Uptime"),
+            checked    : true
+        },{
+            xtype      : "checkbox",
+            name       : "interfaces",
+            fieldLabel : _("20 Interfaces"),
+            checked    : true
+        },{
+            xtype      : "checkbox",
+            name       : "iptables",
+            fieldLabel : _("20 iptables"),
+            checked    : false
+        },{
+            xtype      : "checkbox",
+            name       : "route",
+            fieldLabel : _("20 Route"),
+            checked    : true
+        },{
+            xtype      : "checkbox",
+            name       : "mdadm",
+            fieldLabel : _("30 mdadm"),
+            checked    : true
+        },{
+            xtype      : "checkbox",
+            name       : "blkid",
+            fieldLabel : _("40 blkid"),
+            checked    : true
+        },{
+            xtype      : "checkbox",
+            name       : "df",
+            fieldLabel : _("40 df"),
+            checked    : true
+        },{
+            xtype      : "checkbox",
+            name       : "fstab",
+            fieldLabel : _("40 fstab"),
+            checked    : true
+        },{
+            xtype      : "checkbox",
+            name       : "mountinfo",
+            fieldLabel : _("40 Mount Info"),
+            checked    : true
+        },{
+            xtype      : "checkbox",
+            name       : "partitions",
+            fieldLabel : _("40 Partitions"),
+            checked    : true
+        },{
+            xtype      : "checkbox",
+            name       : "apt-sources",
+            fieldLabel : _("50 apt sources"),
+            checked    : true
+        },{
+            xtype      : "checkbox",
+            name       : "dpkg",
+            fieldLabel : _("50 dpkg"),
+            checked    : false
+        },{
+            xtype      : "checkbox",
+            name       : "omv-plugins",
+            fieldLabel : _("50 OMV Plugins"),
+            checked    : true
+        }];
+    }
+});
+
 Ext.define("OMV.module.admin.diagnostic.system.SupportInfo", {
     extend   : "OMV.workspace.panel.Textarea",
     requires : [
         "OMV.Rpc",
         "OMV.window.MessageBox"
+    ],
+    uses     : [
+        "OMV.module.admin.diagnostic.system.ModuleSelect"
     ],
 
     info : "style1",
@@ -73,6 +185,14 @@ Ext.define("OMV.module.admin.diagnostic.system.SupportInfo", {
                     me.showSupportInfo();
                 }
             }
+        },{
+            id       : me.getId() + "-modules",
+            xtype    : "button",
+            text     : _("Modules"),
+            icon     : "images/grid.png",
+            iconCls  : Ext.baseCSSPrefix + "btn-icon-16x16",
+            handler  : Ext.Function.bind(me.onModulesButton, me, [ me ]),
+            scope    : me
         });
         return items;
     },
@@ -101,6 +221,19 @@ Ext.define("OMV.module.admin.diagnostic.system.SupportInfo", {
                 }
             }
         });
+    },
+
+    onModulesButton: function() {
+        var me = this;
+        Ext.create("OMV.module.admin.diagnostic.system.ModuleSelect", {
+            title     : _("Support Info Module Selection"),
+            listeners : {
+                scope  : me,
+                submit : function() {
+                    me.showSupportInfo();
+                }
+            }
+        }).show();
     },
 
     onSendButton: function() {

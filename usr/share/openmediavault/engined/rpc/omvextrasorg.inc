@@ -54,6 +54,11 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         return sprintf( "%s/repo", $this->getXPathRepos() );
     }
 
+    private function getXPathModules()
+    {
+        return sprintf( "%s/modules", $this->getXPath() );
+    }
+
     private function getEventMessagePath()
     {
         return sprintf( "org.openmediavault.system.%s", $this->getPluginName() );
@@ -62,6 +67,16 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
     private function getEventMessagePathRepo()
     {
         return sprintf( "%s.repos.repo", $this->getEventMessagePath() );
+    }
+
+    private function getEventMessagePathModules()
+    {
+        return sprintf( "%s.modules", $this->getEventMessagePath() );
+    }
+
+    private function getSysinfoModuleDir()
+    {
+        return "/usr/share/openmediavault/sysinfo/modules.d/";
     }
 
     public function initialize()
@@ -79,6 +94,9 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         $this->registerMethod("getDeveloper");
         $this->registerMethod("setDeveloper");
+
+        $this->registerMethod("getModules");
+        $this->registerMethod("setModules");
 
         $this->registerMethod("doInstallBackports");
         $this->registerMethod("doInstallSystemd");
@@ -142,6 +160,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         // Remove useless fields from the result object.
         unset($object['repos']);
+        unset($object['modules']);
 
         return $object;
     }
@@ -195,7 +214,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "debmm"         => array_boolval($oldObject, 'debmm'),
             "debmmbp"       => array_boolval($oldObject, 'debmmbp'),
             "mariadb"       => array_boolval($oldObject, 'mariadb'),
-            "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array()
+            "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array(),
+            "modules"       => isset($oldObject['modules']) ? $oldObject['modules'] : array()
         );
         if (FALSE === $xmlConfig->replace($this->getXPath(), $object))
         {
@@ -206,7 +226,11 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         // Notify configuration changes.
         $dispatcher = &OMVNotifyDispatcher::getInstance();
-        $dispatcher->notify(OMV_NOTIFY_MODIFY, $this->getEventMessagePath(), $object);
+        $dispatcher->notify(
+            OMV_NOTIFY_MODIFY,
+            $this->getEventMessagePath(),
+            $object
+        );
 
         // Apply the changes immediately (no user interaction is wanted).
         OMVRpc::exec(
@@ -256,6 +280,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         // Remove useless fields from the result object.
         unset($object['repos']);
+        unset($object['modules']);
 
         return $object;
     }
@@ -343,7 +368,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "debmm"         => array_boolval($oldObject, 'debmm'),
             "debmmbp"       => array_boolval($oldObject, 'debmmbp'),
             "mariadb"       => array_boolval($oldObject, 'mariadb'),
-            "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array()
+            "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array(),
+            "modules"       => isset($oldObject['modules']) ? $oldObject['modules'] : array()
         );
 
         if (FALSE === $xmlConfig->replace($this->getXPath(), $object))
@@ -355,7 +381,11 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         // Notify configuration changes.
         $dispatcher = &OMVNotifyDispatcher::getInstance();
-        $dispatcher->notify(OMV_NOTIFY_MODIFY, $this->getEventMessagePath(), $object);
+        $dispatcher->notify(
+            OMV_NOTIFY_MODIFY,
+            $this->getEventMessagePath(),
+            $object
+        );
 
         // Apply the changes immediately (no user interaction is wanted).
         OMVRpc::exec(
@@ -479,8 +509,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         else
         {
             // Update existing configuration object.
-            $xpath = sprintf("%s[uuid='%s']", $this->getXPathRepo(), $params['uuid']);
-            $success = $xmlConfig->replace($xpath, $object);
+            $xPath = sprintf("%s[uuid='%s']", $this->getXPathRepo(), $params['uuid']);
+            $success = $xmlConfig->replace($xPath, $object);
         }
 
         if (FALSE === $success)
@@ -492,14 +522,15 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         // Notify configuration changes.
         $dispatcher = &OMVNotifyDispatcher::getInstance();
-        $dispatcher->notify(($params['uuid'] == $GLOBALS['OMV_UUID_UNDEFINED']) ?
-            OMV_NOTIFY_CREATE : OMV_NOTIFY_MODIFY,
-            $this->getEventMessagePathRepo(), $object);
+        $dispatcher->notify(
+            ($params['uuid'] == $GLOBALS['OMV_UUID_UNDEFINED']) ? OMV_NOTIFY_CREATE : OMV_NOTIFY_MODIFY,
+            $this->getEventMessagePathRepo(),
+            $object
+        );
 
         // Return the configuration object.
         return $object;
     }
-
 
     public function deleteRepo($params, $context)
     {
@@ -520,8 +551,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         }');
 
         // Delete the configuration object.
-        $xpath = sprintf("%s[uuid='%s']", $this->getXPathRepo(), $params['uuid']);
-        return $this->deleteConfigObjectByPath($xpath, $this->getEventMessagePathRepo());
+        $xPath = sprintf("%s[uuid='%s']", $this->getXPathRepo(), $params['uuid']);
+        return $this->deleteConfigObjectByPath($xPath, $this->getEventMessagePathRepo());
     }
 
     public function getDeveloper($params, $context)
@@ -557,6 +588,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         // Remove useless fields from the result object.
         unset($object['repos']);
+        unset($object['modules']);
 
         return $object;
     }
@@ -612,7 +644,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "debmm"         => array_boolval($params, 'debmm'),
             "debmmbp"       => array_boolval($params, 'debmmbp'),
             "mariadb"       => array_boolval($params, 'mariadb'),
-            "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array()
+            "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array(),
+            "modules"       => isset($oldObject['modules']) ? $oldObject['modules'] : array()
         );
 
         if (FALSE === $xmlConfig->replace($this->getXPath(), $object))
@@ -624,7 +657,11 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         // Notify configuration changes.
         $dispatcher = &OMVNotifyDispatcher::getInstance();
-        $dispatcher->notify(OMV_NOTIFY_MODIFY, $this->getEventMessagePath(), $object);
+        $dispatcher->notify(
+            OMV_NOTIFY_MODIFY,
+            $this->getEventMessagePath(),
+            $object
+        );
 
         // Apply the changes immediately (no user interaction is wanted).
         OMVRpc::exec(
@@ -635,6 +672,137 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
                 "force"   => TRUE
             ),
             $context
+        );
+
+        // Return the configuration object.
+        return $object;
+    }
+
+    public function getModules($params, $context)
+    {
+        global $xmlConfig;
+
+        // Validate the RPC caller context.
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
+
+        // Get the configuration object.
+        $object = $xmlConfig->get( $this->getXPathModules() );
+        if (is_null($object))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
+                $this->getXPathModules()
+            );
+        }
+
+        // Modify the result object.
+        $object['debian-version'] = boolval($object['debian-version']);
+        $object['omv-version']    = boolval($object['omv-version']);
+        $object['date']           = boolval($object['date']);
+        $object['hostname']       = boolval($object['hostname']);
+        $object['locale']         = boolval($object['locale']);
+        $object['uname']          = boolval($object['uname']);
+        $object['uptime']         = boolval($object['uptime']);
+        $object['interfaces']     = boolval($object['interfaces']);
+        $object['iptables']       = boolval($object['iptables']);
+        $object['route']          = boolval($object['route']);
+        $object['mdadm']          = boolval($object['mdadm']);
+        $object['blkid']          = boolval($object['blkid']);
+        $object['df']             = boolval($object['df']);
+        $object['fstab']          = boolval($object['fstab']);
+        $object['mountinfo']      = boolval($object['mountinfo']);
+        $object['partitions']     = boolval($object['partitions']);
+        $object['apt-sources']    = boolval($object['apt-sources']);
+        $object['dpkg']           = boolval($object['dpkg']);
+        $object['omv-plugins']    = boolval($object['omv-plugins']);
+
+        return $object;
+    }
+
+    public function setModules($params, $context)
+    {
+        global $xmlConfig;
+
+        // Validate the RPC caller context.
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
+
+        // Validate the parameters of the RPC service method.
+        $this->validateMethodParams($params, '{
+            "type"       : "object",
+            "properties" : {
+                "debian-version" : { "type" : "boolean" },
+                "omv-version"    : { "type" : "boolean" },
+                "date"           : { "type" : "boolean" },
+                "hostname"       : { "type" : "boolean" },
+                "locale"         : { "type" : "boolean" },
+                "uname"          : { "type" : "boolean" },
+                "uptime"         : { "type" : "boolean" },
+                "interfaces"     : { "type" : "boolean" },
+                "iptables"       : { "type" : "boolean" },
+                "route"          : { "type" : "boolean" },
+                "mdadm"          : { "type" : "boolean" },
+                "blkid"          : { "type" : "boolean" },
+                "df"             : { "type" : "boolean" },
+                "fstab"          : { "type" : "boolean" },
+                "mountinfo"      : { "type" : "boolean" },
+                "partitions"     : { "type" : "boolean" },
+                "apt-sources"    : { "type" : "boolean" },
+                "dpkg"           : { "type" : "boolean" },
+                "omv-plugins"    : { "type" : "boolean" }
+            }
+        }');
+
+        // Get the existing configuration object.
+        $oldObject = $xmlConfig->get( $this->getXPathModules() );
+        if (is_null($oldObject))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
+                $this->getXPathModules()
+            );
+        }
+
+        // Update the configuration object.
+        $object = array(
+            "debian-version" => array_boolval($params, 'debian-version'),
+            "omv-version"    => array_boolval($params, 'omv-version'),
+            "date"           => array_boolval($params, 'date'),
+            "hostname"       => array_boolval($params, 'hostname'),
+            "locale"         => array_boolval($params, 'locale'),
+            "uname"          => array_boolval($params, 'uname'),
+            "uptime"         => array_boolval($params, 'uptime'),
+            "interfaces"     => array_boolval($params, 'interfaces'),
+            "iptables"       => array_boolval($params, 'iptables'),
+            "route"          => array_boolval($params, 'route'),
+            "mdadm"          => array_boolval($params, 'mdadm'),
+            "blkid"          => array_boolval($params, 'blkid'),
+            "df"             => array_boolval($params, 'df'),
+            "fstab"          => array_boolval($params, 'fstab'),
+            "mountinfo"      => array_boolval($params, 'mountinfo'),
+            "partitions"     => array_boolval($params, 'partitions'),
+            "apt-sources"    => array_boolval($params, 'apt-sources'),
+            "dpkg"           => array_boolval($params, 'dpkg'),
+            "omv-plugins"    => array_boolval($params, 'omv-plugins')
+        );
+        if (FALSE === $xmlConfig->replace($this->getXPathModules(), $object))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED
+            );
+        }
+
+        // Notify configuration changes.
+        $dispatcher = &OMVNotifyDispatcher::getInstance();
+        $dispatcher->notify(
+            OMV_NOTIFY_MODIFY,
+            $this->getEventMessagePathModules(),
+            $object
         );
 
         // Return the configuration object.
@@ -758,8 +926,10 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
     public function getSupportInfo($params, $context)
     {
+        global $xmlConfig;
+
         // Validate the RPC caller context.
-		$this->validateMethodContext(
+        $this->validateMethodContext(
             $context,
             array( "role" => OMV_ROLE_ADMINISTRATOR )
         );
@@ -781,7 +951,34 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         }
         else
         {
-            OMVUtil::exec("/usr/sbin/omv-sysinfo", $result);
+            // Get the configuration object.
+            $object = $xmlConfig->get( $this->getXPathModules() );
+            if (is_null($object))
+            {
+                throw new OMVException(
+                    OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
+                    $this->getXPathModules()
+                );
+            }
+
+            $modules = array("debian-version","omv-version","date","hostname",
+                             "locale","uname","uptime","interfaces","iptables",
+                             "route","mdadm","blkid","df","fstab","mountinfo",
+                             "partitions","apt-sources","dpkg","omv-plugins");
+
+            $sections = array("00","00","10","10",
+                             "10","10","10","20","20",
+                             "20","30","40","40","40","40",
+                             "40","50","50","50");
+
+            foreach ($modules as $modulek => $modulev)
+            {
+                if ( boolval($object[$modulev]) === true )
+                {
+                    $path = sprintf("%s%s-%s", $this->getSysinfoModuleDir(), $sections[$modulek], $modulev);
+                    OMVUtil::exec($path, $result);
+                }
+            }
         }
         $output = implode("\n", $result) . "\n";
 
