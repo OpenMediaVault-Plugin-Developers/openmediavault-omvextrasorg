@@ -20,6 +20,9 @@
  */
 // require("js/omv/WorkspaceManager.js")
 // require("js/omv/workspace/panel/Textarea.js")
+// require("js/omv/workspace/window/Form.js")
+// require("js/omv/workspace/window/plugin/ConfigObject.js")
+// require("js/omv/Rpc.js")
 
 Ext.define("OMV.module.admin.diagnostic.system.ModuleSelect", {
     extend : "OMV.workspace.window.Form",
