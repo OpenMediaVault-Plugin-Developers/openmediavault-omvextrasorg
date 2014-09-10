@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Raul Fernandez Garcia <raulfg3@gmail.com>, 2014
+# Sergio Rius Rodríguez <sergio.rius@hotmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
@@ -127,12 +128,12 @@ msgid "Confirmation"
 msgstr "Confirmación"
 
 msgid "Contains plugins for setting up virtual private networks"
-msgstr ""
+msgstr "Contiene plugins para configurar redes privadas virtuales"
 
 msgid ""
 "Contains various download managers for newsgroups, torrents, usenet, and "
 "streaming"
-msgstr ""
+msgstr "Contiene varios administradores de descargas para grupos de notícias, torrents, usenet, y streaming"
 
 msgid "Custom"
 msgstr "Personal"
@@ -149,7 +150,7 @@ msgstr "Distribución"
 msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
-msgstr ""
+msgstr "No active este repositorio a no ser que utilice el sistema de archivos ZFS"
 
 msgid "Done..."
 msgstr "Hecho..."
@@ -158,7 +159,7 @@ msgid "Dotdeb"
 msgstr "Dotdeb"
 
 msgid "Download Managers"
-msgstr ""
+msgstr "Administradores de descargas"
 
 msgid "Downloading package information"
 msgstr "Descargando información del paquete"
@@ -194,7 +195,7 @@ msgid "Enable VPN repository"
 msgstr "Habilitar repositorio VPN"
 
 msgid "Enable Virtualbox repository."
-msgstr ""
+msgstr "HAbilitar repositorio VirtualBox"
 
 msgid "Enable ZFS repository"
 msgstr "Habilitar repositorio ZFS"
@@ -206,10 +207,10 @@ msgid "Enable deb-multimedia repository"
 msgstr "Habilitar repositorio deb-multimedia"
 
 msgid "Enable download managers repository"
-msgstr ""
+msgstr "Habilitar repositorio Adm. de descargas"
 
 msgid "Enable download managers testing repository (release candidates)"
-msgstr ""
+msgstr "Habilitar repositorio de pruebas Adm. de descargas (release candidates)"
 
 msgid "Enable e-tobi.net repository"
 msgstr "Habilitar repositorio e-tobi.net"
@@ -253,7 +254,7 @@ msgid "MariaDB"
 msgstr "MariaDB"
 
 msgid "Modules"
-msgstr ""
+msgstr "Modulos"
 
 msgid "Name"
 msgstr "Nombre"
@@ -264,7 +265,7 @@ msgstr "OMV-Extras.org"
 msgid ""
 "Only enable repositories you need.  Enabling unnecessary repositories can "
 "slow down your system."
-msgstr ""
+msgstr "Solo active los repositorios que necesite. Habilitar repositorios innecesarios puede ralentizar el sistema."
 
 msgid "PID"
 msgstr "PID"
@@ -276,7 +277,7 @@ msgid "Primary"
 msgstr "Primario"
 
 msgid "Process List"
-msgstr "Listado proc."
+msgstr "Lista de proc."
 
 msgid "Reload"
 msgstr "Recargar"
@@ -294,7 +295,7 @@ msgid "Send"
 msgstr "Enviar"
 
 msgid "Send Support Info"
-msgstr "Enviar info, soporte"
+msgstr "Enviar Inf. de soporte"
 
 msgid "Silent"
 msgstr "Silencioso"
@@ -303,10 +304,10 @@ msgid "State"
 msgstr "Estado"
 
 msgid "Support Info"
-msgstr "Info. soporte"
+msgstr "Inf. de soporte"
 
 msgid "Support Info Module Selection"
-msgstr ""
+msgstr "Selección de modulo de Inf. de soporte"
 
 msgid "Testing"
 msgstr "Testing"
