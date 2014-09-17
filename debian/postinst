@@ -110,7 +110,7 @@ case "$1" in
             apt-key add ${KEYRING_LOCATION}zfsonlinux.gpg
         fi
 
-        chattr +i /etc/apt/sources.list
+        chattr -i /etc/apt/sources.list
 
         dpkg-trigger update-fixperms
         dpkg-trigger update-locale

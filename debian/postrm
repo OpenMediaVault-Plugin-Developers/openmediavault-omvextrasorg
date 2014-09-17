@@ -25,8 +25,6 @@ set -e
 . /usr/share/openmediavault/scripts/helper-functions
 
 OMV_UPGRADE_SCRIPTS_DIR=${OMV_UPGRADE_SCRIPTS_DIR:-"/usr/share/openmediavault/releaseupgrade"}
-OMVEXTRAS_PRE_UNLOCK_SCRIPT=${OMV_UPGRADE_SCRIPTS_DIR}/pre.d/19-unlock-apt-sources
-OMVEXTRAS_PRE_UPGRADE_SCRIPT=${OMV_UPGRADE_SCRIPTS_DIR}/pre.d/21-update-omvextrasorg
 
 if [ "$1" = "purge" ] || [ "$1" = "remove" ]; then
 
@@ -36,13 +34,7 @@ if [ "$1" = "purge" ] || [ "$1" = "remove" ]; then
     /bin/rm -f /etc/apt/preferences.d/99omv-extras-org*
     /bin/rm -f /etc/apt/sources.list.d/omv-extras-org-*.list
 
-    if [ -f ${OMVEXTRAS_PRE_UNLOCK_SCRIPT} ]; then
-        /bin/rm -f ${OMVEXTRAS_PRE_UNLOCK_SCRIPT}
-    fi
-
-    if [ -f ${OMVEXTRAS_PRE_UPGRADE_SCRIPT} ]; then
-        /bin/rm -f ${OMVEXTRAS_PRE_UPGRADE_SCRIPT}
-    fi
+    chattr -i /etc/apt/sources.list
 fi
 
 exit 0
