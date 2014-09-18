@@ -582,10 +582,6 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $object['debmmbp'] = boolval($object['debmmbp']);
         $object['mariadb'] = boolval($object['mariadb']);
 
-        // Get OMV version name
-        $prd = new OMVProduct();
-        $object['versionname'] = strtolower( $prd->getVersionName() );
-
         // Remove useless fields from the result object.
         unset($object['repos']);
         unset($object['modules']);

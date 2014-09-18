@@ -25,46 +25,55 @@ require_once("openmediavault/error.inc");
 class OMVModuleOmvExtrasOrg extends OMVModuleServiceAbstract
     implements OMVINotifyListener {
 
-    public function getName() {
+    public function getName()
+    {
         return "omvextrasorg";
     }
 
-    private function getPluginName() {
+    private function getPluginName()
+    {
         return strtolower( $this->getName() );
     }
 
-    private function getEventMessagePath() {
-        $path = sprintf( "org.openmediavault.system.%s", $this->getPluginName() );
-        return $path;
+    private function getEventMessagePath()
+    {
+        return sprintf( "org.openmediavault.system.%s", $this->getPluginName() );
     }
 
-    private function getEventMessagePathRepo() {
-        $path = sprintf( "%s.repos.repo", $this->getEventMessagePath() );
-        return $path;
+    private function getEventMessagePathRepo()
+    {
+        return sprintf( "%s.repos.repo", $this->getEventMessagePath() );
     }
 
-    public function applyConfig() {
+    public function applyConfig()
+    {
         global $xmlConfig;
 
         $cmd = sprintf("omv-mkconf %s 2>&1", $this->getPluginName() );
-        if(0 !== $this->exec($cmd, $output))
-            throw new OMVException(OMVErrorMsg::E_EXEC_FAILED, $cmd, implode("\n", $output));
+        if (0 !== $this->exec($cmd, $output)) {
+            throw new OMVException(
+                OMVErrorMsg::E_EXEC_FAILED,
+                $cmd,
+                implode("\n", $output)
+            );
+        }
     }
 
     function bindListeners(OMVNotifyDispatcher $dispatcher) {
         $dispatcher->addListener(
             OMV_NOTIFY_MODIFY,
             $this->getEventMessagePath(),
-            array($this, "setDirty"));
+            array($this, "setDirty")
+        );
 
         $dispatcher->addListener(
             OMV_NOTIFY_CREATE | OMV_NOTIFY_MODIFY | OMV_NOTIFY_DELETE,
             $this->getEventMessagePathRepo(),
-            array($this, "setDirty"));
+            array($this, "setDirty")
+        );
     }
 }
 
 // Register module.
 $moduleMgr = &OMVModuleMgr::getInstance();
 $moduleMgr->registerModule(new OMVModuleOmvExtrasOrg());
-?>

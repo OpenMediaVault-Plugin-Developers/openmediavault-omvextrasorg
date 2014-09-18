@@ -36,26 +36,6 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
     rpcSetMethod : "setPrimary",
 
     plugins : [{
-        ptype        : "linkedfields",
-        correlations : [{
-            conditions : [{
-                name  : "versionname",
-                value : "sardaukar"
-            }],
-            name       : [
-                "backports32"
-            ],
-            properties : "show"
-        },{
-            conditions : [{
-                name  : "versionname",
-                value : "kralizec"
-            }],
-            name       : [
-                "backports314"
-            ],
-            properties : "show"
-        },{
             conditions : [{
                 name  : "showbackports",
                 value : "1"
@@ -174,20 +154,11 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
             },
             items         : [{
                 xtype   : "button",
-                name    : "backports32",
-                text    : _("Install Backports 3.2 kernel"),
-                scope   : this,
-                handler : Ext.Function.bind(me.onBackports32Button, me, [ me ]),
-                margin  : "5 0 0 0",
-                hidden  : true
-            },{
-                xtype   : "button",
                 name    : "backports314",
                 text    : _("Install Backports 3.14 kernel"),
                 scope   : this,
                 handler : Ext.Function.bind(me.onBackports314Button, me, [ me ]),
-                margin  : "5 0 0 0",
-                hidden  : true
+                margin  : "5 0 0 0"
             },{
                 border : false,
                 html   : "<ul>" +
@@ -232,22 +203,6 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
                 allowBlank : true
             }]
         }];
-    },
-
-    onBackports32Button : function() {
-        var me = this;
-        Ext.create("OMV.window.Execute", {
-            title          : _("Install Backports 3.2 kernel ..."),
-            rpcService     : "OmvExtrasOrg",
-            rpcMethod      : "doInstallBackports",
-            hideStopButton : true,
-            listeners      : {
-                scope     : me,
-                exception : function(wnd, error) {
-                    OMV.MessageBox.error(null, error);
-                }
-            }
-        }).show();
     },
 
     onBackports314Button : function() {
