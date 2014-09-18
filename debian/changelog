@@ -1,5 +1,6 @@
 openmediavault-omvextrasorg (1.0.8) stable; urgency=low
 
+  * Remove dependency of lsb-release
   * Code cleanup
   * Update locales
 

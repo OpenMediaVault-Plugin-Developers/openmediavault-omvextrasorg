@@ -328,17 +328,6 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             $params['zfs'] = false;
         }
 
-        // Get release and disable zfs if squeeze
-        $output = array();
-        $cmd = "lsb_release -cs";
-        OMVUtil::exec($cmd, $output, $result);
-        $release = strtolower($output[0]);
-
-        if ( $release == "squeeze" )
-        {
-            $params['zfs'] = false;
-        }
-
         // Get the existing configuration object.
         $oldObject = $xmlConfig->get( $this->getXPath() );
         if (is_null($oldObject))

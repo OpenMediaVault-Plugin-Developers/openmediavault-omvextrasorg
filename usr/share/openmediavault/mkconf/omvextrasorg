@@ -25,7 +25,7 @@ set -e
 . /usr/share/openmediavault/scripts/helper-functions
 
 OMVVERSION=$(xmlstarlet sel -t -v "//distribution" ${OMV_PRODUCTINFO_FILE} | xmlstarlet unesc)
-RELEASE=$(lsb_release -cs)
+RELEASE="wheezy"
 
 XPATH="//system/omvextrasorg/"
 XPATH_REPO="${XPATH}repos/repo"
