@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-07 14:38-0500\n"
-"PO-Revision-Date: 2014-09-07 19:38+0000\n"
+"POT-Creation-Date: 2014-09-18 06:52-0500\n"
+"PO-Revision-Date: 2014-09-18 11:54+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -231,12 +231,6 @@ msgid "Install Backports 3.14 kernel"
 msgstr ""
 
 msgid "Install Backports 3.14 kernel ..."
-msgstr ""
-
-msgid "Install Backports 3.2 kernel"
-msgstr ""
-
-msgid "Install Backports 3.2 kernel ..."
 msgstr ""
 
 msgid "Install systemd"

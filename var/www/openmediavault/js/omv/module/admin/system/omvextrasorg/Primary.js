@@ -36,6 +36,8 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
     rpcSetMethod : "setPrimary",
 
     plugins : [{
+        ptype        : "linkedfields",
+        correlations : [{
             conditions : [{
                 name  : "showbackports",
                 value : "1"
