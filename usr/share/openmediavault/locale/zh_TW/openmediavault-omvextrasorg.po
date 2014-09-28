@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-18 06:52-0500\n"
-"PO-Revision-Date: 2014-09-18 11:54+0000\n"
+"POT-Creation-Date: 2014-09-28 10:37-0500\n"
+"PO-Revision-Date: 2014-09-28 15:37+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -147,6 +147,11 @@ msgid "Distribution"
 msgstr "發行版"
 
 msgid ""
+"Do not enable this repository unless you are using the GlusterFS filesystem "
+"(uncommon)"
+msgstr ""
+
+msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
 msgstr ""
@@ -174,6 +179,9 @@ msgstr "啟用 Beta 套件庫"
 
 msgid "Enable Dotdeb repository"
 msgstr "啟用 Dotdeb 套件庫"
+
+msgid "Enable Gluster repository"
+msgstr ""
 
 msgid "Enable Greyhole repository"
 msgstr "啟用 Greyhole 套件庫"
@@ -214,6 +222,9 @@ msgstr ""
 msgid "Enable e-tobi.net repository"
 msgstr "啟用 e-tobi.net 套件庫"
 
+msgid "Gluster"
+msgstr ""
+
 msgid "Greyhole"
 msgstr "Greyhole"
 
@@ -225,11 +236,11 @@ msgstr "如果系統無法使用 backports 核心啟動，啟動選單仍會有�
 msgid "Information"
 msgstr "資訊"
 
-msgid "Install Backports 3.14 kernel"
-msgstr "安裝 Backports 3.14 核心"
+msgid "Install Backports 3.16 kernel"
+msgstr ""
 
-msgid "Install Backports 3.14 kernel ..."
-msgstr "安裝 Backports 3.14 核心 ..."
+msgid "Install Backports 3.16 kernel ..."
+msgstr ""
 
 msgid "Install systemd"
 msgstr "安裝 systemd"

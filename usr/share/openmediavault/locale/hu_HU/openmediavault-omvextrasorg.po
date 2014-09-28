@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-18 06:52-0500\n"
-"PO-Revision-Date: 2014-09-18 11:54+0000\n"
+"POT-Creation-Date: 2014-09-28 10:37-0500\n"
+"PO-Revision-Date: 2014-09-28 15:37+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -25,10 +25,10 @@ msgid "% MEM"
 msgstr "% MEM"
 
 msgid "00 Debian Version"
-msgstr "00 Debian Verzió"
+msgstr "00 Debian verzió"
 
 msgid "00 OMV Version"
-msgstr "00 OMV Verzió"
+msgstr "00 OMV verzió"
 
 msgid "10 Date"
 msgstr "10 Dátum"
@@ -73,7 +73,7 @@ msgid "40 fstab"
 msgstr "40 fstab"
 
 msgid "50 OMV Plugins"
-msgstr "50 OMV Pluginok"
+msgstr "50 OMV pluginok"
 
 msgid "50 apt sources"
 msgstr "50 apt források"
@@ -85,7 +85,7 @@ msgid "Add repo"
 msgstr "Tár hozzáadás"
 
 msgid "Additional Repositories"
-msgstr "További tárolókat"
+msgstr "További tárolók"
 
 msgid "Apt Clean"
 msgstr "Apt törlés"
@@ -103,7 +103,7 @@ msgid "Beta"
 msgstr "Béta"
 
 msgid "Can be helpful in fixing plugin problems."
-msgstr ""
+msgstr "Hasznos lehet, ha egy plugin nem működik megfelelően."
 
 msgid "Checking for new updates ..."
 msgstr "Új frissítések keresése ..."
@@ -127,12 +127,12 @@ msgid "Confirmation"
 msgstr "Megerősítés"
 
 msgid "Contains plugins for setting up virtual private networks"
-msgstr ""
+msgstr "Tartalmazza a virtuális magánhálózat létrehozásához szükséges plugint"
 
 msgid ""
 "Contains various download managers for newsgroups, torrents, usenet, and "
 "streaming"
-msgstr ""
+msgstr "Tartalmazza a különböző letöltésvezérlőket, mint hírcsoportok, torrentek, usenet, és streaming"
 
 msgid "Custom"
 msgstr "Egyedi"
@@ -144,12 +144,17 @@ msgid "Developer Repositories"
 msgstr "Fejlesztői tárterületek"
 
 msgid "Distribution"
-msgstr "Elosztás"
+msgstr "Kódnév"
+
+msgid ""
+"Do not enable this repository unless you are using the GlusterFS filesystem "
+"(uncommon)"
+msgstr ""
 
 msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
-msgstr ""
+msgstr "Ne engedélyezd ezt a tárolót, ha nem használsz ZFS fájlrendszert (ritka)"
 
 msgid "Done..."
 msgstr "Kész..."
@@ -175,11 +180,14 @@ msgstr "Beta tároló engedélyezése"
 msgid "Enable Dotdeb repository"
 msgstr "Dotdeb tároló engedélyezése"
 
+msgid "Enable Gluster repository"
+msgstr ""
+
 msgid "Enable Greyhole repository"
 msgstr "Greyhole tároló engedélyezése"
 
 msgid "Enable MariaDB 10.0 repository"
-msgstr "MariaBD tároló engedélyezése"
+msgstr "MariaBD 10.0 tároló engedélyezése"
 
 msgid "Enable OMV-Extras.org repository"
 msgstr "OMV-Extras.org tároló engedélyezése"
@@ -200,7 +208,7 @@ msgid "Enable ZFS repository"
 msgstr "ZFS tároló engedélyezése"
 
 msgid "Enable deb-multimedia backports repository"
-msgstr ""
+msgstr "deb-multimedia backports tároló engedélyezése"
 
 msgid "Enable deb-multimedia repository"
 msgstr "deb-multimedia tároló engedélyezése"
@@ -214,22 +222,25 @@ msgstr "Letöltésvezérlő teszt tároló engedélyezése (kiadásra szánt)"
 msgid "Enable e-tobi.net repository"
 msgstr "e-tobi.net tároló engedélyezése"
 
+msgid "Gluster"
+msgstr ""
+
 msgid "Greyhole"
 msgstr "Greyhole"
 
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
 "still have the option to boot the standard kernel."
-msgstr ""
+msgstr "Ha a rendszer nem indul el a 'Backports' kernellel, akkor a boot menüben lehetőséged van az eredeti kernellel indítnai a rendszert."
 
 msgid "Information"
 msgstr "Információ"
 
-msgid "Install Backports 3.14 kernel"
-msgstr "Backports 3.14 kernel telepítése"
+msgid "Install Backports 3.16 kernel"
+msgstr ""
 
-msgid "Install Backports 3.14 kernel ..."
-msgstr "Backports 3.14 kernel telepítése ..."
+msgid "Install Backports 3.16 kernel ..."
+msgstr ""
 
 msgid "Install systemd"
 msgstr "Systemd telepítés"
@@ -253,12 +264,12 @@ msgid "Name"
 msgstr "Név"
 
 msgid "OMV-Extras.org"
-msgstr "OMV-Extras"
+msgstr "OMV-Extrák"
 
 msgid ""
 "Only enable repositories you need.  Enabling unnecessary repositories can "
 "slow down your system."
-msgstr ""
+msgstr "Csak azt az opciót engedélyezd amire szükséged van. A felesleges tárolók lassíthatják a rendszert."
 
 msgid "PID"
 msgstr "PID"
@@ -308,18 +319,18 @@ msgstr "Tesztelés"
 msgid ""
 "The information about available software is out-of-date. You need to reload "
 "the information about available software."
-msgstr ""
+msgstr "Az elérhető szoftverrel kapcsolatos információ elavult. Töltsd be újra az elérhető szoftverek információit."
 
 msgid ""
 "The repository will be checked for new, removed or upgraded software "
 "packages."
-msgstr ""
+msgstr "A tároló ellenőrizve lesz az új, eltávolított vagy frissített szoftverekért."
 
 msgid "These repositories may break your system.  Use caution!!"
-msgstr ""
+msgstr "Ezek a tárolók tönkretehetik a rendszert. Légy óvatos!!"
 
 msgid "This will not uninstall the standard kernel."
-msgstr ""
+msgstr "Ez az opció nem távolítja el az eredeti kernelt."
 
 msgid "Update"
 msgstr "Frissítés"
@@ -328,7 +339,7 @@ msgid "User"
 msgstr "Használó"
 
 msgid "Utilities"
-msgstr "Segédprogramok"
+msgstr "Opciók"
 
 msgid "VDR"
 msgstr "VDR"
@@ -349,4 +360,4 @@ msgid "deb-multimedia"
 msgstr "deb-multimedia"
 
 msgid "deb-multimedia backports"
-msgstr ""
+msgstr "deb-multimedia backports"

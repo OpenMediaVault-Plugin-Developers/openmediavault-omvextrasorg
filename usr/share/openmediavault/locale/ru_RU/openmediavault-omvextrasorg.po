@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-18 06:52-0500\n"
-"PO-Revision-Date: 2014-09-18 11:54+0000\n"
+"POT-Creation-Date: 2014-09-28 10:37-0500\n"
+"PO-Revision-Date: 2014-09-28 15:37+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -149,6 +149,11 @@ msgid "Distribution"
 msgstr ""
 
 msgid ""
+"Do not enable this repository unless you are using the GlusterFS filesystem "
+"(uncommon)"
+msgstr ""
+
+msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
 msgstr ""
@@ -176,6 +181,9 @@ msgstr "Включить Beta репозиторий"
 
 msgid "Enable Dotdeb repository"
 msgstr "Включить Dotdeb репозиторий"
+
+msgid "Enable Gluster repository"
+msgstr ""
 
 msgid "Enable Greyhole repository"
 msgstr "Включить Greyhole репозиторий"
@@ -216,6 +224,9 @@ msgstr ""
 msgid "Enable e-tobi.net repository"
 msgstr "Включить e-tobi.net репозиторий"
 
+msgid "Gluster"
+msgstr ""
+
 msgid "Greyhole"
 msgstr "Greyhole"
 
@@ -227,10 +238,10 @@ msgstr ""
 msgid "Information"
 msgstr "Информация"
 
-msgid "Install Backports 3.14 kernel"
+msgid "Install Backports 3.16 kernel"
 msgstr ""
 
-msgid "Install Backports 3.14 kernel ..."
+msgid "Install Backports 3.16 kernel ..."
 msgstr ""
 
 msgid "Install systemd"

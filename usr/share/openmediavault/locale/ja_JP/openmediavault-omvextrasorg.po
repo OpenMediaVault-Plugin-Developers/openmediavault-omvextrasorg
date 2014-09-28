@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-18 06:52-0500\n"
-"PO-Revision-Date: 2014-09-18 11:54+0000\n"
+"POT-Creation-Date: 2014-09-28 10:37-0500\n"
+"PO-Revision-Date: 2014-09-28 15:37+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
@@ -147,6 +147,11 @@ msgid "Distribution"
 msgstr "ディストリビューション"
 
 msgid ""
+"Do not enable this repository unless you are using the GlusterFS filesystem "
+"(uncommon)"
+msgstr ""
+
+msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
 msgstr "ZFSファイルシステムを使用しない限り、このリポジトリを有効にしないでください(非推奨)"
@@ -174,6 +179,9 @@ msgstr "ベータ版のリポジトリを有効にする"
 
 msgid "Enable Dotdeb repository"
 msgstr "Dotdebのリポジトリを有効にする"
+
+msgid "Enable Gluster repository"
+msgstr ""
 
 msgid "Enable Greyhole repository"
 msgstr "Greyholeのリポジトリを有効にする"
@@ -214,6 +222,9 @@ msgstr "ダウンロードマネージャのテスト版のリポジトリを有
 msgid "Enable e-tobi.net repository"
 msgstr "e-tobi.netのリポジトリを有効にする"
 
+msgid "Gluster"
+msgstr ""
+
 msgid "Greyhole"
 msgstr "Greyhole"
 
@@ -225,11 +236,11 @@ msgstr "システムがバックポート版カーネルを使用してブート
 msgid "Information"
 msgstr "情報"
 
-msgid "Install Backports 3.14 kernel"
-msgstr "バックポート3.14カーネルのインストール"
+msgid "Install Backports 3.16 kernel"
+msgstr ""
 
-msgid "Install Backports 3.14 kernel ..."
-msgstr "バックポート3.14カーネルをインストールしています ..."
+msgid "Install Backports 3.16 kernel ..."
+msgstr ""
 
 msgid "Install systemd"
 msgstr "systemdのインストール"

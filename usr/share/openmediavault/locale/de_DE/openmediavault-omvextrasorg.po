@@ -4,14 +4,15 @@
 # 
 # Translators:
 # David Hönel <davidh1990@gmx.de>, 2013-2014
+# Ettore Atalan <atalanttore@googlemail.com>, 2014
 # René P. <phortexx@gmx.net>, 2014
 # Stephan Steiner, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-18 06:52-0500\n"
-"PO-Revision-Date: 2014-09-18 11:54+0000\n"
+"POT-Creation-Date: 2014-09-28 10:37-0500\n"
+"PO-Revision-Date: 2014-09-28 15:37+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -27,61 +28,61 @@ msgid "% MEM"
 msgstr "% MEM"
 
 msgid "00 Debian Version"
-msgstr ""
+msgstr "00 Debian-Version"
 
 msgid "00 OMV Version"
-msgstr ""
+msgstr "00 OMV-Version"
 
 msgid "10 Date"
-msgstr ""
+msgstr "10 Datum"
 
 msgid "10 Hostname"
-msgstr ""
+msgstr "10 Hostname"
 
 msgid "10 Locale"
-msgstr ""
+msgstr "10 Sprachumgebung"
 
 msgid "10 Uptime"
-msgstr ""
+msgstr "10 Betriebszeit"
 
 msgid "10 uname"
-msgstr ""
+msgstr "10 uname"
 
 msgid "20 Interfaces"
-msgstr ""
+msgstr "20 Schnittstellen"
 
 msgid "20 Route"
-msgstr ""
+msgstr "20 Route"
 
 msgid "20 iptables"
-msgstr ""
+msgstr "20 iptables"
 
 msgid "30 mdadm"
-msgstr ""
+msgstr "30 mdadm"
 
 msgid "40 Mount Info"
-msgstr ""
+msgstr "40 Einhängeinformationen"
 
 msgid "40 Partitions"
-msgstr ""
+msgstr "40 Partitionen"
 
 msgid "40 blkid"
-msgstr ""
+msgstr "40 blkid"
 
 msgid "40 df"
-msgstr ""
+msgstr "40 df"
 
 msgid "40 fstab"
-msgstr ""
+msgstr "40 fstab"
 
 msgid "50 OMV Plugins"
 msgstr ""
 
 msgid "50 apt sources"
-msgstr ""
+msgstr "50 apt-Quellen"
 
 msgid "50 dpkg"
-msgstr ""
+msgstr "50 dpkg"
 
 msgid "Add repo"
 msgstr "Quelle hinzufügen"
@@ -149,6 +150,11 @@ msgid "Distribution"
 msgstr "Distribution"
 
 msgid ""
+"Do not enable this repository unless you are using the GlusterFS filesystem "
+"(uncommon)"
+msgstr ""
+
+msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
 msgstr ""
@@ -177,6 +183,9 @@ msgstr "Aktiviere die Beta Paketquelle"
 msgid "Enable Dotdeb repository"
 msgstr "Aktiviere die Dotdeb Paketquelle"
 
+msgid "Enable Gluster repository"
+msgstr ""
+
 msgid "Enable Greyhole repository"
 msgstr "Aktiviere die Greyhole Paketquelle"
 
@@ -196,7 +205,7 @@ msgid "Enable VPN repository"
 msgstr "VPN Quelle aktivieren"
 
 msgid "Enable Virtualbox repository."
-msgstr ""
+msgstr "Virtualbox-Repositorium aktivieren."
 
 msgid "Enable ZFS repository"
 msgstr "ZFS Quelle aktivieren"
@@ -216,6 +225,9 @@ msgstr ""
 msgid "Enable e-tobi.net repository"
 msgstr "Aktiviere die e-tobi.net Paketquelle"
 
+msgid "Gluster"
+msgstr ""
+
 msgid "Greyhole"
 msgstr "Greyhole"
 
@@ -227,11 +239,11 @@ msgstr "Wenn das System unter Verwendung des Backport Kernel nicht startet, wird
 msgid "Information"
 msgstr "Information"
 
-msgid "Install Backports 3.14 kernel"
-msgstr "Installiere Backports 3.14 Kernel"
+msgid "Install Backports 3.16 kernel"
+msgstr ""
 
-msgid "Install Backports 3.14 kernel ..."
-msgstr "Installiere Backports 3.14 Kernel ..."
+msgid "Install Backports 3.16 kernel ..."
+msgstr ""
 
 msgid "Install systemd"
 msgstr "Installiere systemd"
@@ -249,7 +261,7 @@ msgid "MariaDB"
 msgstr "MariaDB"
 
 msgid "Modules"
-msgstr ""
+msgstr "Module"
 
 msgid "Name"
 msgstr "Name"

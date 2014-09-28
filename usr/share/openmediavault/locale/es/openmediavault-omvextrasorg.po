@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-18 06:52-0500\n"
-"PO-Revision-Date: 2014-09-18 11:54+0000\n"
+"POT-Creation-Date: 2014-09-28 10:37-0500\n"
+"PO-Revision-Date: 2014-09-28 15:37+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -147,6 +147,11 @@ msgid "Distribution"
 msgstr "Distribución"
 
 msgid ""
+"Do not enable this repository unless you are using the GlusterFS filesystem "
+"(uncommon)"
+msgstr ""
+
+msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
 msgstr "No habilitar este repositorio , a menos que use ZFS (http://open-zfs.org)"
@@ -174,6 +179,9 @@ msgstr "Habilitar repositorio Beta"
 
 msgid "Enable Dotdeb repository"
 msgstr "Habilitar repositorio Dotdeb"
+
+msgid "Enable Gluster repository"
+msgstr ""
 
 msgid "Enable Greyhole repository"
 msgstr "Habilitar repositorio Greyhole"
@@ -214,6 +222,9 @@ msgstr "Habilitar repositorio Testing (Candidatos a version final)"
 msgid "Enable e-tobi.net repository"
 msgstr "Habilitar repositorio e-tobi.net"
 
+msgid "Gluster"
+msgstr ""
+
 msgid "Greyhole"
 msgstr "Greyhole"
 
@@ -225,11 +236,11 @@ msgstr "Si el sistema no arranca usando el kernel backports, el menu de arranque
 msgid "Information"
 msgstr "Información"
 
-msgid "Install Backports 3.14 kernel"
-msgstr "Instalar kernel 3.14 Backports"
+msgid "Install Backports 3.16 kernel"
+msgstr ""
 
-msgid "Install Backports 3.14 kernel ..."
-msgstr "Instalar kernel 3.14 Backports ..."
+msgid "Install Backports 3.16 kernel ..."
+msgstr ""
 
 msgid "Install systemd"
 msgstr "Instalar systemd"

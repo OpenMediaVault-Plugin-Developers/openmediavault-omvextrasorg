@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-18 06:52-0500\n"
-"PO-Revision-Date: 2014-09-18 11:54+0000\n"
+"POT-Creation-Date: 2014-09-28 10:37-0500\n"
+"PO-Revision-Date: 2014-09-28 15:37+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -147,6 +147,11 @@ msgid "Distribution"
 msgstr "发行版"
 
 msgid ""
+"Do not enable this repository unless you are using the GlusterFS filesystem "
+"(uncommon)"
+msgstr ""
+
+msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
 msgstr "除非你使用ZFS文件系统(特殊的文件系统)，否则不建议启用该软件源。"
@@ -174,6 +179,9 @@ msgstr "启用Beta源"
 
 msgid "Enable Dotdeb repository"
 msgstr "启用Dotdeb源"
+
+msgid "Enable Gluster repository"
+msgstr ""
 
 msgid "Enable Greyhole repository"
 msgstr "启用Greyhole源"
@@ -214,6 +222,9 @@ msgstr "启用download managers测试源(候选发布版)"
 msgid "Enable e-tobi.net repository"
 msgstr "启用e-tobi.net源"
 
+msgid "Gluster"
+msgstr ""
+
 msgid "Greyhole"
 msgstr "Greyhole"
 
@@ -225,11 +236,11 @@ msgstr "如果backports内核不能启动系统，可以在启动菜单选择标
 msgid "Information"
 msgstr "信息"
 
-msgid "Install Backports 3.14 kernel"
-msgstr "安装Backports 3.14内核"
+msgid "Install Backports 3.16 kernel"
+msgstr ""
 
-msgid "Install Backports 3.14 kernel ..."
-msgstr "安装Backports 3.14内核中..."
+msgid "Install Backports 3.16 kernel ..."
+msgstr ""
 
 msgid "Install systemd"
 msgstr "安装 systemd"
