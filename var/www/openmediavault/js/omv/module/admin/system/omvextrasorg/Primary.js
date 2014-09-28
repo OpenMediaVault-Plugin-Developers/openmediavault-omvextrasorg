@@ -156,10 +156,10 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
             },
             items         : [{
                 xtype   : "button",
-                name    : "backports314",
-                text    : _("Install Backports 3.14 kernel"),
+                name    : "backports",
+                text    : _("Install Backports 3.16 kernel"),
                 scope   : this,
-                handler : Ext.Function.bind(me.onBackports314Button, me, [ me ]),
+                handler : Ext.Function.bind(me.onBackportsButton, me, [ me ]),
                 margin  : "5 0 0 0"
             },{
                 border : false,
@@ -207,10 +207,10 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
         }];
     },
 
-    onBackports314Button : function() {
+    onBackportsButton : function() {
         var me = this;
         Ext.create("OMV.window.Execute", {
-            title          : _("Install Backports 3.14 kernel ..."),
+            title          : _("Install Backports 3.16 kernel ..."),
             rpcService     : "OmvExtrasOrg",
             rpcMethod      : "doInstallBackports",
             hideStopButton : true,

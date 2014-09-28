@@ -258,6 +258,18 @@ Pin-Priority: 1001
 EOF
     fi
 
+    # omv-extras gluster
+    if [ "$(omv_config_get "${XPATH}gluster")" = "1" ]; then
+        echo "# Gluster repo" >> ${OMVEXTRASREPOFILE}
+        echo "deb http://download.gluster.org/pub/gluster/glusterfs/3.5/3.5.2/Debian/${RELEASE}/apt ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+        cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release o=download.gluster.org
+Pin-Priority: 1001
+
+EOF
+    fi
+
     cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-backports, origin ${REPO_LOCATION}
@@ -360,12 +372,12 @@ backports()
     else
         case "${RELEASE}" in
             wheezy)
-                echo "Install backports 3.14 kernel and headers"
+                echo "Install backports 3.16 kernel and headers"
                 apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-base initramfs-tools=0.115~bpo70+1
                 if $AMD64; then
-                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.14-0.bpo.1-amd64 linux-headers-3.14-0.bpo.1-amd64 firmware-linux firmware-linux-free
+                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.16-0.bpo.2-amd64 linux-headers-3.16-0.bpo.2-amd64 firmware-linux firmware-linux-free
                 else
-                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.14-0.bpo.1-486 linux-headers-3.14-0.bpo.1-486 firmware-linux firmware-linux-free
+                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.16-0.bpo.2-486 linux-headers-3.16-0.bpo.2-486 firmware-linux firmware-linux-free
                 fi
                 ;;
         esac

@@ -134,6 +134,16 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Secondary", {
                     ptype : "fieldinfo",
                     text  : _("Do not enable this repository unless you are using the ZFS filesystem (uncommon)")
                 }]
+            },{
+                xtype      : "checkbox",
+                name       : "gluster",
+                fieldLabel : _("Gluster"),
+                boxLabel   : _("Enable Gluster repository"),
+                checked    : false,
+                plugins    : [{
+                    ptype : "fieldinfo",
+                    text  : _("Do not enable this repository unless you are using the GlusterFS filesystem (uncommon)")
+                }]
             }]
         }];
     }
