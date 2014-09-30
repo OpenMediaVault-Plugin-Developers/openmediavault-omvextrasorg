@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (1.0.10) UNRELEASED; urgency=low
+
+  * Add omv-extras gluster repo
+  * Update locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 30 Sep 2014 06:53:06 -0500
+
 openmediavault-omvextrasorg (1.0.9) stable; urgency=low
 
   * Add GlusterFS repo

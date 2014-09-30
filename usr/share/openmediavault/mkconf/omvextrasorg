@@ -261,8 +261,13 @@ EOF
     # omv-extras gluster
     if [ "$(omv_config_get "${XPATH}gluster")" = "1" ]; then
         echo "# Gluster repo" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${REPO_URL} ${OMVVERSION}-gluster main" >> ${OMVEXTRASREPOFILE}
         echo "deb http://download.gluster.org/pub/gluster/glusterfs/3.5/3.5.2/Debian/${RELEASE}/apt ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-gluster, origin ${REPO_LOCATION}
+Pin-Priority: 996
+
 Package: *
 Pin: release o=download.gluster.org
 Pin-Priority: 1001
