@@ -210,6 +210,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "vpn"           => array_boolval($oldObject, 'vpn'),
             "zfs"           => array_boolval($oldObject, 'zfs'),
             "gluster"       => array_boolval($oldObject, 'gluster'),
+            "mono"          => array_boolval($oldObject, 'mono'),
             "beta"          => array_boolval($oldObject, 'beta'),
             "dotdeb"        => array_boolval($oldObject, 'dotdeb'),
             "debmm"         => array_boolval($oldObject, 'debmm'),
@@ -279,6 +280,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $object['vpn']           = boolval($object['vpn']);
         $object['zfs']           = boolval($object['zfs']);
         $object['gluster']       = boolval($object['gluster']);
+        $object['mono']          = boolval($object['mono']);
 
         // Remove useless fields from the result object.
         unset($object['repos']);
@@ -310,7 +312,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
                 "btsync"        : { "type" : "boolean" },
                 "vpn"           : { "type" : "boolean" },
                 "zfs"           : { "type" : "boolean" },
-                "gluster"       : { "type" : "boolean" }
+                "gluster"       : { "type" : "boolean" },
+                "mono"          : { "type" : "boolean" }
             }
         }');
 
@@ -324,6 +327,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             $params['vbox'] = false;
             $params['plex'] = false;
             $params['vdr']  = false;
+            $params['mono']  = false;
         }
 
         if ( strpos($uname, "amd64") === false )
@@ -357,6 +361,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "vpn"           => array_boolval($params, 'vpn'),
             "zfs"           => array_boolval($params, 'zfs'),
             "gluster"       => array_boolval($params, 'gluster'),
+            "mono"          => array_boolval($params, 'mono'),
             "beta"          => array_boolval($oldObject, 'beta'),
             "dotdeb"        => array_boolval($oldObject, 'dotdeb'),
             "debmm"         => array_boolval($oldObject, 'debmm'),
@@ -630,6 +635,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "vpn"           => array_boolval($oldObject, 'vpn'),
             "zfs"           => array_boolval($oldObject, 'zfs'),
             "gluster"       => array_boolval($oldObject, 'gluster'),
+            "mono"          => array_boolval($oldObject, 'mono'),
             "beta"          => array_boolval($params, 'beta'),
             "dotdeb"        => array_boolval($params, 'dotdeb'),
             "debmm"         => array_boolval($params, 'debmm'),
