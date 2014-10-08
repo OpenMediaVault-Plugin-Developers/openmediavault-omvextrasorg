@@ -144,6 +144,12 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Secondary", {
                     ptype : "fieldinfo",
                     text  : _("Do not enable this repository unless you are using the GlusterFS filesystem (uncommon)")
                 }]
+            },{
+                xtype      : "checkbox",
+                name       : "mono",
+                fieldLabel : _("Mono"),
+                boxLabel   : _("Enable Mono and mono-project.com repositories"),
+                checked    : false
             }]
         }];
     }

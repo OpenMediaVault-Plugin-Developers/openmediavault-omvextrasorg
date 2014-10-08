@@ -76,6 +76,10 @@ case "$1" in
             omv_config_add_element "${SERVICE_XPATH}" "gluster" "0"
         fi
 
+        if ! omv_config_exists "${SERVICE_XPATH}/mono"; then
+            omv_config_add_element "${SERVICE_XPATH}" "mono" "0"
+        fi
+
         if ! omv_config_exists "${SERVICE_XPATH_MODULES}"; then
             omv_config_add_element "${SERVICE_XPATH}" "modules" ""
             omv_config_add_element "${SERVICE_XPATH_MODULES}" "debian-version" "1"
@@ -113,6 +117,7 @@ case "$1" in
             apt-key add ${KEYRING_LOCATION}mariadb.key
             apt-key add ${KEYRING_LOCATION}zfsonlinux.gpg
             apt-key add ${KEYRING_LOCATION}gluster.gpg
+            apt-key add ${KEYRING_LOCATION}xamarin.gpg
         fi
 
         chattr -i /etc/apt/sources.list

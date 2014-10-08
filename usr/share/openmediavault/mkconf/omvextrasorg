@@ -275,6 +275,23 @@ Pin-Priority: 1001
 EOF
     fi
 
+    # omv-extras mono
+    if [ "$(omv_config_get "${XPATH}mono")" = "1" ]; then
+        echo "# mono-project repo" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${REPO_URL} ${OMVVERSION}-mono main" >> ${OMVEXTRASREPOFILE}
+        echo "deb download.mono-project.com/repo/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+        cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-mono, origin ${REPO_LOCATION}
+Pin-Priority: 996
+
+Package: *
+Pin: release o=download.mono-project.com
+Pin-Priority: 1001
+
+EOF
+    fi
+
     cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-backports, origin ${REPO_LOCATION}

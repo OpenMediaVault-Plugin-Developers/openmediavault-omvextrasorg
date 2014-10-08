@@ -1,4 +1,11 @@
-openmediavault-omvextrasorg (1.0.10) UNRELEASED; urgency=low
+openmediavault-omvextrasorg (1.0.11) stable; urgency=low
+
+  * Add mono repo
+  * Update locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 08 Oct 2014 05:37:59 -0500
+
+openmediavault-omvextrasorg (1.0.10) stable; urgency=low
 
   * Add omv-extras gluster repo
   * Update locales
