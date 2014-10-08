@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-28 10:37-0500\n"
-"PO-Revision-Date: 2014-09-28 17:38+0000\n"
-"Last-Translator: Grawens <szabolcs.szanyi@gmail.com>\n"
+"POT-Creation-Date: 2014-10-08 05:38-0500\n"
+"PO-Revision-Date: 2014-10-08 10:40+0000\n"
+"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -189,6 +189,9 @@ msgstr "Greyhole tároló engedélyezése"
 msgid "Enable MariaDB 10.0 repository"
 msgstr "MariaBD 10.0 tároló engedélyezése"
 
+msgid "Enable Mono and mono-project.com repositories"
+msgstr ""
+
 msgid "Enable OMV-Extras.org repository"
 msgstr "OMV-Extras.org tároló engedélyezése"
 
@@ -259,6 +262,9 @@ msgstr "MariaDB"
 
 msgid "Modules"
 msgstr "Modulok"
+
+msgid "Mono"
+msgstr ""
 
 msgid "Name"
 msgstr "Név"

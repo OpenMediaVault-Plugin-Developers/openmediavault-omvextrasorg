@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-28 10:37-0500\n"
-"PO-Revision-Date: 2014-09-28 15:37+0000\n"
+"POT-Creation-Date: 2014-10-08 05:38-0500\n"
+"PO-Revision-Date: 2014-10-08 10:40+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -149,7 +149,7 @@ msgstr "发行版"
 msgid ""
 "Do not enable this repository unless you are using the GlusterFS filesystem "
 "(uncommon)"
-msgstr ""
+msgstr "除非你使用GlusterFS文件系统(不常见的文件系统)，否则不建议启用该软件源。"
 
 msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
@@ -181,13 +181,16 @@ msgid "Enable Dotdeb repository"
 msgstr "启用Dotdeb源"
 
 msgid "Enable Gluster repository"
-msgstr ""
+msgstr "启用Gluster源"
 
 msgid "Enable Greyhole repository"
 msgstr "启用Greyhole源"
 
 msgid "Enable MariaDB 10.0 repository"
 msgstr "启用MariaDB 10.0源"
+
+msgid "Enable Mono and mono-project.com repositories"
+msgstr ""
 
 msgid "Enable OMV-Extras.org repository"
 msgstr "启用OMV-Extras.org插件源"
@@ -223,7 +226,7 @@ msgid "Enable e-tobi.net repository"
 msgstr "启用e-tobi.net源"
 
 msgid "Gluster"
-msgstr ""
+msgstr "Gluster"
 
 msgid "Greyhole"
 msgstr "Greyhole"
@@ -237,10 +240,10 @@ msgid "Information"
 msgstr "信息"
 
 msgid "Install Backports 3.16 kernel"
-msgstr ""
+msgstr "安装Backports 3.16 kernel"
 
 msgid "Install Backports 3.16 kernel ..."
-msgstr ""
+msgstr "安装Backports 3.16 kernel ..."
 
 msgid "Install systemd"
 msgstr "安装 systemd"
@@ -259,6 +262,9 @@ msgstr "MariaDB"
 
 msgid "Modules"
 msgstr "模块"
+
+msgid "Mono"
+msgstr ""
 
 msgid "Name"
 msgstr "名称"
