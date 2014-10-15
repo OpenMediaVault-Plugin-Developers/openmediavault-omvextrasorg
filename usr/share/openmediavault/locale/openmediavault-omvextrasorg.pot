@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-08 05:38-0500\n"
+"POT-Creation-Date: 2014-10-15 06:21-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,6 +51,9 @@ msgid "20 Route"
 msgstr ""
 
 msgid "20 iptables"
+msgstr ""
+
+msgid "20 netstat"
 msgstr ""
 
 msgid "30 mdadm"
