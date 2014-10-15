@@ -103,6 +103,10 @@ case "$1" in
             omv_config_add_element "${SERVICE_XPATH_MODULES}" "omv-plugins" "1"
         fi
 
+        if ! omv_config_exists "${SERVICE_XPATH_MODULES}/netstat"; then
+            omv_config_add_element "${SERVICE_XPATH_MODULES}" "netstat" "1"
+        fi
+        
         omv-mkconf omvextrasorg
 
         if [ -x /usr/bin/apt-key ]; then

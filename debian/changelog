@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (1.0.13) UNRELEASED; urgency=low
+
+  * Add netstat module to support info
+  * Update locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 15 Oct 2014 06:20:03 -0500
+
 openmediavault-omvextrasorg (1.0.12) stable; urgency=low
 
   * Update vdr repo key

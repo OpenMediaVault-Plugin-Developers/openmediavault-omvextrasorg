@@ -705,6 +705,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $object['uptime']         = boolval($object['uptime']);
         $object['interfaces']     = boolval($object['interfaces']);
         $object['iptables']       = boolval($object['iptables']);
+        $object['netstat']        = boolval($object['netstat']);
         $object['route']          = boolval($object['route']);
         $object['mdadm']          = boolval($object['mdadm']);
         $object['blkid']          = boolval($object['blkid']);
@@ -742,6 +743,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
                 "uptime"         : { "type" : "boolean" },
                 "interfaces"     : { "type" : "boolean" },
                 "iptables"       : { "type" : "boolean" },
+                "netstat"        : { "type" : "boolean" },
                 "route"          : { "type" : "boolean" },
                 "mdadm"          : { "type" : "boolean" },
                 "blkid"          : { "type" : "boolean" },
@@ -776,6 +778,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "uptime"         => array_boolval($params, 'uptime'),
             "interfaces"     => array_boolval($params, 'interfaces'),
             "iptables"       => array_boolval($params, 'iptables'),
+            "netstat"        => array_boolval($params, 'netstat'),
             "route"          => array_boolval($params, 'route'),
             "mdadm"          => array_boolval($params, 'mdadm'),
             "blkid"          => array_boolval($params, 'blkid'),
@@ -959,12 +962,12 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             }
 
             $modules = array("debian-version","omv-version","date","hostname",
-                             "locale","uname","uptime","interfaces","iptables",
+                             "locale","uname","uptime","interfaces","iptables","netstat",
                              "route","mdadm","blkid","df","fstab","mountinfo",
                              "partitions","apt-sources","dpkg","omv-plugins");
 
             $sections = array("00","00","10","10",
-                             "10","10","10","20","20",
+                             "10","10","10","20","20","20",
                              "20","30","40","40","40","40",
                              "40","50","50","50");
 

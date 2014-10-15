@@ -85,6 +85,11 @@ Ext.define("OMV.module.admin.diagnostic.system.ModuleSelect", {
             checked    : false
         },{
             xtype      : "checkbox",
+            name       : "netstat",
+            fieldLabel : _("20 netstat"),
+            checked    : false
+        },{
+            xtype      : "checkbox",
             name       : "route",
             fieldLabel : _("20 Route"),
             checked    : true
