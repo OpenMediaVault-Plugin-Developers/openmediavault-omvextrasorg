@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-15 06:21-0500\n"
-"PO-Revision-Date: 2014-10-15 11:23+0000\n"
-"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
+"PO-Revision-Date: 2014-10-16 13:41+0000\n"
+"Last-Translator: kochin <kochinc@outlook.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,70 +19,70 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "% CPU"
-msgstr ""
+msgstr "% CPU"
 
 msgid "% MEM"
-msgstr ""
+msgstr "% MEM"
 
 msgid "00 Debian Version"
-msgstr ""
+msgstr "00 Debian 版本"
 
 msgid "00 OMV Version"
-msgstr ""
+msgstr "00 OMV 版本"
 
 msgid "10 Date"
-msgstr ""
+msgstr "10 日期"
 
 msgid "10 Hostname"
-msgstr ""
+msgstr "10 主機名稱"
 
 msgid "10 Locale"
-msgstr ""
+msgstr "10 區域"
 
 msgid "10 Uptime"
-msgstr ""
+msgstr "10 運行時間"
 
 msgid "10 uname"
-msgstr ""
+msgstr "10 uname"
 
 msgid "20 Interfaces"
-msgstr ""
+msgstr "20 介面"
 
 msgid "20 Route"
-msgstr ""
+msgstr "20 路線"
 
 msgid "20 iptables"
-msgstr ""
+msgstr "20 iptables"
 
 msgid "20 netstat"
-msgstr ""
+msgstr "20 netstat"
 
 msgid "30 mdadm"
-msgstr ""
+msgstr "30 mdadm"
 
 msgid "40 Mount Info"
-msgstr ""
+msgstr "40 掛載資訊"
 
 msgid "40 Partitions"
-msgstr ""
+msgstr "40 磁碟分割"
 
 msgid "40 blkid"
-msgstr ""
+msgstr "40 blkid"
 
 msgid "40 df"
-msgstr ""
+msgstr "40 df"
 
 msgid "40 fstab"
-msgstr ""
+msgstr "40 fstab"
 
 msgid "50 OMV Plugins"
-msgstr ""
+msgstr "50 OMV 插件"
 
 msgid "50 apt sources"
-msgstr ""
+msgstr "50 apt 來源"
 
 msgid "50 dpkg"
-msgstr ""
+msgstr "50 dpkg"
 
 msgid "Add repo"
 msgstr "新增套件庫"
@@ -121,7 +121,7 @@ msgid "Close"
 msgstr "關閉"
 
 msgid "Command"
-msgstr ""
+msgstr "指令"
 
 msgid "Comment"
 msgstr "註釋"
@@ -130,12 +130,12 @@ msgid "Confirmation"
 msgstr "確認"
 
 msgid "Contains plugins for setting up virtual private networks"
-msgstr ""
+msgstr "含有做虛擬專用網路設定的插件"
 
 msgid ""
 "Contains various download managers for newsgroups, torrents, usenet, and "
 "streaming"
-msgstr ""
+msgstr "含有針對新聞群組、torrents、usenet 及 串流的各種下載管理"
 
 msgid "Custom"
 msgstr "客製"
@@ -152,12 +152,12 @@ msgstr "發行版"
 msgid ""
 "Do not enable this repository unless you are using the GlusterFS filesystem "
 "(uncommon)"
-msgstr ""
+msgstr "不要啟用這個套件庫，除非你使用了 GlusterFS 檔案系統 (罕見)"
 
 msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
-msgstr ""
+msgstr "不要啟用這個套件庫，除非你使用了 ZFS 檔案系統 (罕見)"
 
 msgid "Done..."
 msgstr "完成 ..."
@@ -166,7 +166,7 @@ msgid "Dotdeb"
 msgstr "Dotdeb"
 
 msgid "Download Managers"
-msgstr ""
+msgstr "下載管理員"
 
 msgid "Downloading package information"
 msgstr "下載套件資訊"
@@ -184,7 +184,7 @@ msgid "Enable Dotdeb repository"
 msgstr "啟用 Dotdeb 套件庫"
 
 msgid "Enable Gluster repository"
-msgstr ""
+msgstr "啟用 Gluster 套件庫"
 
 msgid "Enable Greyhole repository"
 msgstr "啟用 Greyhole 套件庫"
@@ -193,7 +193,7 @@ msgid "Enable MariaDB 10.0 repository"
 msgstr "啟用 MariaDB 10.0 套件庫"
 
 msgid "Enable Mono and mono-project.com repositories"
-msgstr ""
+msgstr "啟用 Mono 及 mono-project.com 套件庫"
 
 msgid "Enable OMV-Extras.org repository"
 msgstr "啟用 OMV-Extras.org 套件庫"
@@ -208,7 +208,7 @@ msgid "Enable VPN repository"
 msgstr "啟用 VPN 套件庫"
 
 msgid "Enable Virtualbox repository."
-msgstr ""
+msgstr "啟用 Virtualbox 套件庫"
 
 msgid "Enable ZFS repository"
 msgstr "啟用 ZFS 套件庫"
@@ -220,16 +220,16 @@ msgid "Enable deb-multimedia repository"
 msgstr "啟用 deb-multimedia 套件庫"
 
 msgid "Enable download managers repository"
-msgstr ""
+msgstr "啟用下載管理員套件庫"
 
 msgid "Enable download managers testing repository (release candidates)"
-msgstr ""
+msgstr "啟用下載管理員測試套件庫 (候選發佈版)"
 
 msgid "Enable e-tobi.net repository"
 msgstr "啟用 e-tobi.net 套件庫"
 
 msgid "Gluster"
-msgstr ""
+msgstr "Gluster"
 
 msgid "Greyhole"
 msgstr "Greyhole"
@@ -243,10 +243,10 @@ msgid "Information"
 msgstr "資訊"
 
 msgid "Install Backports 3.16 kernel"
-msgstr ""
+msgstr "安裝 Backports 3.16 核心"
 
 msgid "Install Backports 3.16 kernel ..."
-msgstr ""
+msgstr "安裝 Backports 3.16 核心中 ..."
 
 msgid "Install systemd"
 msgstr "安裝 systemd"
@@ -258,16 +258,16 @@ msgid "Kernel"
 msgstr "系統核心"
 
 msgid "Managers Testing"
-msgstr ""
+msgstr "管理員測試"
 
 msgid "MariaDB"
 msgstr "MariaDB"
 
 msgid "Modules"
-msgstr ""
+msgstr "模組"
 
 msgid "Mono"
-msgstr ""
+msgstr "Mono"
 
 msgid "Name"
 msgstr "名稱"
@@ -278,10 +278,10 @@ msgstr "OMV-Extras.org"
 msgid ""
 "Only enable repositories you need.  Enabling unnecessary repositories can "
 "slow down your system."
-msgstr ""
+msgstr "只啟用你所需的套件庫。啟用不必要的套件庫可能讓你的系統變慢。"
 
 msgid "PID"
-msgstr ""
+msgstr "PID"
 
 msgid "Plex"
 msgstr "Plex"
@@ -290,7 +290,7 @@ msgid "Primary"
 msgstr "主要"
 
 msgid "Process List"
-msgstr ""
+msgstr "程序列表"
 
 msgid "Reload"
 msgstr "重新載入"
@@ -305,22 +305,22 @@ msgid "Secondary"
 msgstr "次要"
 
 msgid "Send"
-msgstr ""
+msgstr "發送"
 
 msgid "Send Support Info"
-msgstr ""
+msgstr "發送支援資訊"
 
 msgid "Silent"
 msgstr "沉默"
 
 msgid "State"
-msgstr ""
+msgstr "狀態"
 
 msgid "Support Info"
-msgstr ""
+msgstr "支援資訊"
 
 msgid "Support Info Module Selection"
-msgstr ""
+msgstr "支援資訊模組選擇"
 
 msgid "Testing"
 msgstr "測試"
@@ -345,7 +345,7 @@ msgid "Update"
 msgstr "更新"
 
 msgid "User"
-msgstr ""
+msgstr "用戶"
 
 msgid "Utilities"
 msgstr "工具"
