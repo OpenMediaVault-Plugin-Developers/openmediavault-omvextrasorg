@@ -247,13 +247,14 @@ EOF
 
     # omv-extras zfs
     if [ "$(omv_config_get "${XPATH}zfs")" = "1" ]; then
+        apt-get --yes --force-yes --fix-missing install linux-headers-$(uname -r)
         echo "# ZFS repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${REPO_URL} ${OMVVERSION}-zfs main" >> ${OMVEXTRASREPOFILE}
         echo "deb http://archive.zfsonlinux.org/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release o=archive.zfsonlinux.org
-Pin-Priority: 1001
+Pin-Priority: 500
 
 EOF
     fi

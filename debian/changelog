@@ -1,9 +1,11 @@
-openmediavault-omvextrasorg (1.0.13) UNRELEASED; urgency=low
+openmediavault-omvextrasorg (1.0.13) stable; urgency=low
 
   * Add netstat module to support info
+  * Install kernel headers when enabling zfs repo
+  * Lower apt pin priority for zfs so zfs grub2 is not automatically installed
   * Update locales
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 15 Oct 2014 06:20:03 -0500
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 17 Oct 2014 06:22:45 -0500
 
 openmediavault-omvextrasorg (1.0.12) stable; urgency=low
 
