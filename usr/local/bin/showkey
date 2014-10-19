@@ -1,0 +1,2 @@
+#!/bin/sh
+cat /etc/openmediavault/config.xml | awk "/<${1}>/,/<\/${1}>/"
