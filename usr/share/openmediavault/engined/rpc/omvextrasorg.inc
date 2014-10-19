@@ -98,6 +98,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $this->registerMethod("getModules");
         $this->registerMethod("setModules");
 
+        $this->registerMethod("getStyles");
+
         $this->registerMethod("doInstallBackports");
         $this->registerMethod("doInstallSystemd");
         $this->registerMethod("doAptClean");
@@ -807,6 +809,57 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         // Return the configuration object.
         return $object;
+    }
+
+    public function getStyles($params, $context)
+    {
+        global $xmlConfig;
+
+        // Validate the RPC caller context.
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
+
+        // Validate the parameters of the RPC service method.
+        $this->validateMethodParams($params, '{
+            "type"       : "object",
+            "properties" : {
+                "start"     : { "type" : "integer" },
+                "limit"     : { '.$GLOBALS['OMV_JSONSCHEMA_COUNTFIELD'].' },
+                "sortfield" : { '.$GLOBALS['OMV_JSONSCHEMA_SORTFIELD'].' },
+                "sortdir"   : { '.$GLOBALS['OMV_JSONSCHEMA_SORTDIR'].' }
+            }
+        }');
+
+        // Get configuration object
+        $styles = array();
+
+        $styles[] = array(
+            "cmd"  => "style1",
+            "name" => "Style #1"
+        );
+
+        $styles[] = array(
+            "cmd"  => "style2",
+            "name" => "Style #2"
+        );
+
+        // Get configuration data.
+        $cmd = "dpkg -l | grep openmediavault- | cut -d\" \" -f3 | cut -d\"-\" -f2";
+        OMVUtil::exec($cmd, $result);
+
+        foreach ($result as $style)
+        {
+            $styles[] = array(
+                "cmd"  => $style,
+                "name" => $style
+            );
+        }
+
+        return $this->applyFilter($styles, $params["start"], $params["count"],
+            $params["sortfield"], $params["sortdir"]
+        );
     }
 
     public function doInstallBackports($params, $context)

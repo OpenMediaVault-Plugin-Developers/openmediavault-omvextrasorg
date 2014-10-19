@@ -177,22 +177,36 @@ Ext.define("OMV.module.admin.diagnostic.system.SupportInfo", {
         },{
             id            : me.getId() + "-info",
             xtype         : "combo",
-            queryMode     : "local",
-            store         : [
-                [ "style1", "Style #1" ],
-                [ "style2", "Style #2" ]
-            ],
             allowBlank    : false,
             editable      : false,
             triggerAction : "all",
-            value         : me.info,
-            listeners     : {
-                scope  : me,
-                change : function(combo, value) {
-                    me.info = value;
-                    me.showSupportInfo();
+            displayField  : "name",
+            valueField    : "cmd",
+            store         : Ext.create("OMV.data.Store", {
+                autoLoad : true,
+                model    : OMV.data.Model.createImplicit({
+                    idProperty : "name",
+                    fields     : [
+                        { name : "cmd", type : "string" },
+                        { name : "name", type : "string" }
+                    ]
+                }),
+                proxy : {
+                    type    : "rpc",
+                    rpcData : {
+                        service : "OmvExtrasOrg",
+                        method  : "getStyles"
+                    }
+                },
+                listeners     : {
+                    scope  : me,
+                    change : function(combo, value) {
+                        me.info = value;
+                        me.showSupportInfo();
+                    }
                 }
-            }
+            }),
+            value : me.info
         },{
             id       : me.getId() + "-modules",
             xtype    : "button",
