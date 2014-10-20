@@ -197,15 +197,15 @@ Ext.define("OMV.module.admin.diagnostic.system.SupportInfo", {
                         service : "OmvExtrasOrg",
                         method  : "getStyles"
                     }
-                },
-                listeners     : {
-                    scope  : me,
-                    change : function(combo, value) {
-                        me.info = value;
-                        me.showSupportInfo();
-                    }
                 }
             }),
+            listeners     : {
+                scope  : me,
+                change : function(combo, value) {
+                    me.info = value;
+                    me.showSupportInfo();
+                }
+            },
             value : me.info
         },{
             id       : me.getId() + "-modules",

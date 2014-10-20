@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (1.0.14) UNRELEASED; urgency=medium
+
+  * Add showkey utility to show xml for specified key
+  * Add xml output for each plugin in SupportInfo tab
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 19 Oct 2014 22:08:50 -0500
+
 openmediavault-omvextrasorg (1.0.13) stable; urgency=low
 
   * Add netstat module to support info
