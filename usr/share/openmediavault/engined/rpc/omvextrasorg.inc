@@ -83,7 +83,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
     {
         return "/usr/local/bin/omv-support.sh";
     }
-    
+
     private function getShowkey()
     {
         return "/usr/local/bin/showkey";
@@ -1012,46 +1012,46 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $result = "";
 
         switch ($params['info'])
-	{
-	    case "":
+    {
+        case "":
             case "style1":
-		    // Get the configuration object.
-		    $object = $xmlConfig->get( $this->getXPathModules() );
-		    if (is_null($object))
-		    {
-			throw new OMVException(
-			    OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
-			    $this->getXPathModules()
-			);
-		    }
+            // Get the configuration object.
+            $object = $xmlConfig->get( $this->getXPathModules() );
+            if (is_null($object))
+            {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
+                $this->getXPathModules()
+            );
+            }
 
-		    $modules = array("debian-version","omv-version","date","hostname",
-				     "locale","uname","uptime","interfaces","iptables","netstat",
-				     "route","mdadm","blkid","df","fstab","mountinfo",
-				     "partitions","apt-sources","dpkg","omv-plugins");
+            $modules = array("debian-version","omv-version","date","hostname",
+                     "locale","uname","uptime","interfaces","iptables","netstat",
+                     "route","mdadm","blkid","df","fstab","mountinfo",
+                     "partitions","apt-sources","dpkg","omv-plugins");
 
-		    $sections = array("00","00","10","10",
-				     "10","10","10","20","20","20",
-				     "20","30","40","40","40","40",
-				     "40","50","50","50");
+            $sections = array("00","00","10","10",
+                     "10","10","10","20","20","20",
+                     "20","30","40","40","40","40",
+                     "40","50","50","50");
 
-		    foreach ($modules as $modulek => $modulev)
-		    {
-			if ( boolval($object[$modulev]) === true )
-			{
-			    $path = sprintf("%s%s-%s", $this->getSysinfoModuleDir(), $sections[$modulek], $modulev);
-			    OMVUtil::exec($path, $result);
-			}
-		    }
-		    break;
-		    
+            foreach ($modules as $modulek => $modulev)
+            {
+            if ( boolval($object[$modulev]) === true )
+            {
+                $path = sprintf("%s%s-%s", $this->getSysinfoModuleDir(), $sections[$modulek], $modulev);
+                OMVUtil::exec($path, $result);
+            }
+            }
+            break;
+
             case "style2":
-	        $cmd = sprintf("%s webgui", $this->getOmvSupport() );
+            $cmd = sprintf("%s webgui", $this->getOmvSupport() );
                 OMVUtil::exec($cmd, $result);
-		break;
-		
-	    default:
-	        $cmd = sprintf("%s %s", $this->getShowkey(), $params['info']);
+        break;
+
+        default:
+            $cmd = sprintf("%s %s", $this->getShowkey(), $params['info']);
                 OMVUtil::exec($cmd, $result);
         }
         $output = implode("\n", $result) . "\n";

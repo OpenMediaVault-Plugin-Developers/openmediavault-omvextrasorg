@@ -30,6 +30,8 @@ RELEASE="wheezy"
 XPATH="//system/omvextrasorg/"
 XPATH_REPO="${XPATH}repos/repo"
 
+conf=$2
+
 update()
 {
     OMVEXTRASREPOFILE="/etc/apt/sources.list.d/omv-extras-org-${OMVVERSION}.list"
@@ -247,7 +249,11 @@ EOF
 
     # omv-extras zfs
     if [ "$(omv_config_get "${XPATH}zfs")" = "1" ]; then
-        apt-get --yes --force-yes --fix-missing install linux-headers-$(uname -r)
+        # add large zfsonlinux key and linux-headers necessary for zfs module compilation
+        gpg --keyserver pgp.mit.edu --recv-keys 4D5843EA
+        if [ ! "${conf}" = "configure" ]; then
+            apt-get --yes --force-yes --fix-missing install linux-headers-$(uname -r) || :
+        fi
         echo "# ZFS repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${REPO_URL} ${OMVVERSION}-zfs main" >> ${OMVEXTRASREPOFILE}
         echo "deb http://archive.zfsonlinux.org/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
