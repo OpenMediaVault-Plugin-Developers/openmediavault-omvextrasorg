@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (1.0.15) stable; urgency=low
+
+  * Fix zfs key
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 21 Oct 2014 10:11:47 -0500
+
 openmediavault-omvextrasorg (1.0.14) stable; urgency=low
 
   * Add showkey utility to show xml for specified key

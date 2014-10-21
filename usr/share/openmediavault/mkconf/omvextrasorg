@@ -251,6 +251,7 @@ EOF
     if [ "$(omv_config_get "${XPATH}zfs")" = "1" ]; then
         # add large zfsonlinux key and linux-headers necessary for zfs module compilation
         gpg --keyserver pgp.mit.edu --recv-keys 4D5843EA
+        gpg --keyserver pgp.mit.edu --recv-keys 8E234FB17DFFA34D
         if [ ! "${conf}" = "configure" ]; then
             apt-get --yes --force-yes --fix-missing install linux-headers-$(uname -r) || :
         fi
@@ -260,7 +261,7 @@ EOF
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release o=archive.zfsonlinux.org
-Pin-Priority: 500
+Pin-Priority: 400
 
 EOF
     fi
