@@ -136,9 +136,14 @@ EOF
     if [ "$(omv_config_get "${XPATH}miller")" = "1" ]; then
         echo "# miller repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${DH2K_REPO_URL} ${OMVVERSION}-miller main" >> ${OMVEXTRASREPOFILE}
+        echo "deb http://ppa.launchpad.net/deluge-team/ppa/ubuntu precise main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-miller, origin ${DH2K_REPO_LOCATION}
+Pin-Priority: 995
+
+Package: *
+Pin: release n=precise, origin ppa.launchpad.net/deluge-team/ppa/ubuntu
 Pin-Priority: 995
 
 EOF

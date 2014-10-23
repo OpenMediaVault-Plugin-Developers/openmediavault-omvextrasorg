@@ -122,6 +122,7 @@ case "$1" in
             apt-key add ${KEYRING_LOCATION}zfsonlinux.gpg
             apt-key add ${KEYRING_LOCATION}gluster.gpg
             apt-key add ${KEYRING_LOCATION}xamarin.gpg
+            apt-key add ${KEYRING_LOCATION}deluge.key
         fi
 
         chattr -i /etc/apt/sources.list
