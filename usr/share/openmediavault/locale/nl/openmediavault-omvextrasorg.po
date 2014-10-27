@@ -3,19 +3,19 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Grawens <szabolcs.szanyi@gmail.com>, 2014
+# okpail <okpail@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-15 06:21-0500\n"
-"PO-Revision-Date: 2014-10-22 07:41+0000\n"
-"Last-Translator: Grawens <szabolcs.szanyi@gmail.com>\n"
-"Language-Team: Hungarian (Hungary) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/hu_HU/)\n"
+"PO-Revision-Date: 2014-10-23 12:12+0000\n"
+"Last-Translator: okpail <okpail@gmail.com>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hu_HU\n"
+"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "% CPU"
@@ -25,34 +25,34 @@ msgid "% MEM"
 msgstr "% MEM"
 
 msgid "00 Debian Version"
-msgstr "00 Debian verzió"
+msgstr "00 Debian Versie"
 
 msgid "00 OMV Version"
-msgstr "00 OMV verzió"
+msgstr "00 OMV Versie"
 
 msgid "10 Date"
-msgstr "10 Dátum"
+msgstr "10 Datum"
 
 msgid "10 Hostname"
-msgstr "10 Hostnév"
+msgstr "10 Hostname"
 
 msgid "10 Locale"
-msgstr "10 Helyszín"
+msgstr "10 Landinstelling"
 
 msgid "10 Uptime"
-msgstr "10 Üzemidő"
+msgstr "10 Uptime"
 
 msgid "10 uname"
-msgstr "10 unév"
+msgstr "10 uname"
 
 msgid "20 Interfaces"
-msgstr "20 Felületek"
+msgstr "20 Interfaces"
 
 msgid "20 Route"
-msgstr "20 Útvonal"
+msgstr "20 Route"
 
 msgid "20 iptables"
-msgstr "20 iptáblák"
+msgstr "20 ip-tabellen"
 
 msgid "20 netstat"
 msgstr "20 netstat"
@@ -61,10 +61,10 @@ msgid "30 mdadm"
 msgstr "30 mdadm"
 
 msgid "40 Mount Info"
-msgstr "40 Tár infó"
+msgstr "40 Mount Info"
 
 msgid "40 Partitions"
-msgstr "40 Particiók"
+msgstr "40 Partities"
 
 msgid "40 blkid"
 msgstr "40 blkid"
@@ -76,157 +76,157 @@ msgid "40 fstab"
 msgstr "40 fstab"
 
 msgid "50 OMV Plugins"
-msgstr "50 OMV pluginok"
+msgstr "50 OMV Plugins"
 
 msgid "50 apt sources"
-msgstr "50 apt források"
+msgstr "50 apt sources"
 
 msgid "50 dpkg"
 msgstr "50 dpkg"
 
 msgid "Add repo"
-msgstr "Tár hozzáadás"
+msgstr "Repository toevoegen"
 
 msgid "Additional Repositories"
-msgstr "További tárolók"
+msgstr "Extra verkrijgbare Repositories"
 
 msgid "Apt Clean"
-msgstr "Apt törlés"
+msgstr "Apt Schoonmaken"
 
 msgid "Apt Clean - Silent"
-msgstr "Apt törlés - Csendes"
+msgstr "Apt schoonmaken - zonder bericht"
 
 msgid "Architecture"
-msgstr "Architektúra"
+msgstr "Architectuur"
 
 msgid "BTSync"
 msgstr "BTSync"
 
 msgid "Beta"
-msgstr "Béta"
+msgstr "Beta"
 
 msgid "Can be helpful in fixing plugin problems."
-msgstr "Hasznos lehet, ha egy plugin nem működik megfelelően."
+msgstr "Can behulpzaam zij bij het repareren van plugin problemen."
 
 msgid "Checking for new updates ..."
-msgstr "Új frissítések keresése ..."
+msgstr "Aan het kijken of er nog nieuwe updates zijn..."
 
 msgid "Cleaning Apt Files and Lists..."
-msgstr "Apt fájlok és listák ürítése..."
+msgstr "Apt Files and Lijsten schoonmaken..."
 
 msgid "Cleans apt repositories and removes lists."
-msgstr "Apt tárolók ürítése és listák eltávolítása."
+msgstr "Maakt apt repositories schoon en verwijderd lijsten"
 
 msgid "Close"
-msgstr "Bezárás"
+msgstr "Sluiten"
 
 msgid "Command"
-msgstr "Parancs"
+msgstr "Opdracht"
 
 msgid "Comment"
-msgstr "Megjegyzés"
+msgstr "Opmerking"
 
 msgid "Confirmation"
-msgstr "Megerősítés"
+msgstr "Bevestiging"
 
 msgid "Contains plugins for setting up virtual private networks"
-msgstr "Tartalmazza a virtuális magánhálózat létrehozásához szükséges plugint"
+msgstr "Bevat plugins voor het installeren van Virtuele Prive Netwerken"
 
 msgid ""
 "Contains various download managers for newsgroups, torrents, usenet, and "
 "streaming"
-msgstr "Tartalmazza a különböző letöltésvezérlőket, mint hírcsoportok, torrentek, usenet, és streaming"
+msgstr "Bevat verschillende download managers for nieuwsgroepen, torrents, usenet en streams"
 
 msgid "Custom"
-msgstr "Egyedi"
+msgstr "Op maat gemaakt"
 
 msgid "Developer"
-msgstr "Fejlesztő"
+msgstr "Ontwikkelaar"
 
 msgid "Developer Repositories"
-msgstr "Fejlesztői tárterületek"
+msgstr "Ontwikkelaar Repositories"
 
 msgid "Distribution"
-msgstr "Kódnév"
+msgstr "Distributie"
 
 msgid ""
 "Do not enable this repository unless you are using the GlusterFS filesystem "
 "(uncommon)"
-msgstr "Ne engedélyezd ezt az opciót, ha nem használsz GlusterFS fájlrendszert (ritka)"
+msgstr "Zet deze repositorie niet aan tenzij je het GlusterFS file systeem gebruikt (ongebruikelijke instelling)"
 
 msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
-msgstr "Ne engedélyezd ezt a tárolót, ha nem használsz ZFS fájlrendszert (ritka)"
+msgstr "et deze repositorie niet aan tenzij je het ZFS file systeem gebruikt (ongebruikelijke instelling)"
 
 msgid "Done..."
-msgstr "Kész..."
+msgstr "Klaar..."
 
 msgid "Dotdeb"
 msgstr "Dotdeb"
 
 msgid "Download Managers"
-msgstr "Letöltésvezérlők"
+msgstr "Download Managers"
 
 msgid "Downloading package information"
-msgstr "Csomaginfók letöltése"
+msgstr "Downloading package informatie"
 
 msgid "Edit repo"
-msgstr "Tár szerkesztés"
+msgstr "Edit de gegevens van de repository"
 
 msgid "Enable BTSync repository"
-msgstr "BTSync tároló engedélyezése"
+msgstr "Schakel de BTSync repository in"
 
 msgid "Enable Beta repository"
-msgstr "Beta tároló engedélyezése"
+msgstr "Schakel de Beta repository in"
 
 msgid "Enable Dotdeb repository"
-msgstr "Dotdeb tároló engedélyezése"
+msgstr "Schakel de Dotdeb repository in"
 
 msgid "Enable Gluster repository"
-msgstr "Gluster tároló engedélyezése"
+msgstr "Schakel de Gluster repository in"
 
 msgid "Enable Greyhole repository"
-msgstr "Greyhole tároló engedélyezése"
+msgstr "Schakel de Greyhole repository in"
 
 msgid "Enable MariaDB 10.0 repository"
-msgstr "MariaBD 10.0 tároló engedélyezése"
+msgstr "Schakel de MariaDB 10.0 repository in"
 
 msgid "Enable Mono and mono-project.com repositories"
-msgstr "Mono és mono-project.com tároló engedélyezése"
+msgstr "Schakel de Mono and mono-project.comr repositories in"
 
 msgid "Enable OMV-Extras.org repository"
-msgstr "OMV-Extras.org tároló engedélyezése"
+msgstr "Schakel de OMV-Extras.org repository in"
 
 msgid "Enable OMV-Extras.org testing repository (release candidates)"
-msgstr "OMV-Extras.org teszt tároló engedélyezése (kiadásra szánt)"
+msgstr "Schakel de OMV-Exstras.org repository in (release kandidaten)"
 
 msgid "Enable Plex Media Server repository"
-msgstr "Plex Media Server tároló engedélyezése"
+msgstr "Schakel de Plex Media Server repository in"
 
 msgid "Enable VPN repository"
-msgstr "VPN tároló engedélyezése"
+msgstr "Schakel de VPN repository in"
 
 msgid "Enable Virtualbox repository."
-msgstr "Virtualbox tároló engedélyezése"
+msgstr "Schakel de Virtualbox repository in"
 
 msgid "Enable ZFS repository"
-msgstr "ZFS tároló engedélyezése"
+msgstr "Schakel de ZFS repository in"
 
 msgid "Enable deb-multimedia backports repository"
-msgstr "deb-multimedia backports tároló engedélyezése"
+msgstr "Schakel de deb-multimedia backports repository in"
 
 msgid "Enable deb-multimedia repository"
-msgstr "deb-multimedia tároló engedélyezése"
+msgstr "Schakel de deb-multimedia repository in"
 
 msgid "Enable download managers repository"
-msgstr "Letöltésvezérlő tároló engedélyezése"
+msgstr "Schakel de download managers repository in"
 
 msgid "Enable download managers testing repository (release candidates)"
-msgstr "Letöltésvezérlő teszt tároló engedélyezése (kiadásra szánt)"
+msgstr "Schakel download managers test repository in (release kandidaten)"
 
 msgid "Enable e-tobi.net repository"
-msgstr "e-tobi.net tároló engedélyezése"
+msgstr "Schakel de e-tobi.net repository in"
 
 msgid "Gluster"
 msgstr "Gluster"
@@ -237,48 +237,48 @@ msgstr "Greyhole"
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
 "still have the option to boot the standard kernel."
-msgstr "Ha a rendszer nem indul el a 'Backports' kernellel, akkor a boot menüben lehetőséged van az eredeti kernellel indítnai a rendszert."
+msgstr "Als het systeem niet start als de back ports kernel is ingesteld, zal het boot menu je instaat stellen om met de standaard kernel op te starten"
 
 msgid "Information"
-msgstr "Információ"
+msgstr "Informatie"
 
 msgid "Install Backports 3.16 kernel"
-msgstr "Backports 3.16 kernel telepítése"
+msgstr "Installeer de Backports 3.16 kernel"
 
 msgid "Install Backports 3.16 kernel ..."
-msgstr "Backports 3.16 kernel telepítése ..."
+msgstr "de Backports 3.16 kernel aan het installeren ..."
 
 msgid "Install systemd"
-msgstr "Systemd telepítés"
+msgstr "geinstalleerde systemd"
 
 msgid "Install systemd..."
-msgstr "Systemd telepítés..."
+msgstr "Installeer systemd..."
 
 msgid "Kernel"
 msgstr "Kernel"
 
 msgid "Managers Testing"
-msgstr "Menedzserek tesztelése"
+msgstr "Managers aan het testen"
 
 msgid "MariaDB"
 msgstr "MariaDB"
 
 msgid "Modules"
-msgstr "Modulok"
+msgstr "Modules"
 
 msgid "Mono"
 msgstr "Mono"
 
 msgid "Name"
-msgstr "Név"
+msgstr "Naam"
 
 msgid "OMV-Extras.org"
-msgstr "OMV-Extrák"
+msgstr "OMV-Extras.org"
 
 msgid ""
 "Only enable repositories you need.  Enabling unnecessary repositories can "
 "slow down your system."
-msgstr "Csak azt az opciót engedélyezd amire szükséged van. A felesleges tárolók lassíthatják a rendszert."
+msgstr "Installer allen de repositories die je nodig hebt. Overbodige repositories vertragen je systeem..."
 
 msgid "PID"
 msgstr "PID"
@@ -287,77 +287,77 @@ msgid "Plex"
 msgstr "Plex"
 
 msgid "Primary"
-msgstr "Elsődleges"
+msgstr "Eerste"
 
 msgid "Process List"
-msgstr "Folyamat lista"
+msgstr "Lijst van processen"
 
 msgid "Reload"
-msgstr "Újratölt"
+msgstr "Opnieuw laden"
 
 msgid "Repo"
-msgstr "Tár"
+msgstr "Repository"
 
 msgid "Repositories"
-msgstr "Tárolók"
+msgstr "Repositories"
 
 msgid "Secondary"
-msgstr "Másodlagos"
+msgstr "Tweede"
 
 msgid "Send"
-msgstr "Küld"
+msgstr "Stuur"
 
 msgid "Send Support Info"
-msgstr "Támogatási infó küldés"
+msgstr "Stuur Support Info per email"
 
 msgid "Silent"
-msgstr "Csendes"
+msgstr "Stil "
 
 msgid "State"
-msgstr "Állapot"
+msgstr "State"
 
 msgid "Support Info"
-msgstr "Támogatási infó"
+msgstr "Support Info"
 
 msgid "Support Info Module Selection"
-msgstr "Támogatási infó modul kiválasztása"
+msgstr "Support Info Module Selectie"
 
 msgid "Testing"
-msgstr "Tesztelés"
+msgstr "Aan het testen..."
 
 msgid ""
 "The information about available software is out-of-date. You need to reload "
 "the information about available software."
-msgstr "Az elérhető szoftverrel kapcsolatos információ elavult. Töltsd be újra az elérhető szoftverek információit."
+msgstr "De informatie over mogelijk te installeren software is verouderd. Haal deze informatie opnieuw op.  "
 
 msgid ""
 "The repository will be checked for new, removed or upgraded software "
 "packages."
-msgstr "A tároló ellenőrizve lesz az új, eltávolított vagy frissített szoftverekért."
+msgstr "De repository zal worden gecheckt op nieuwe, verwijderde of ge-upgrade software packages"
 
 msgid "These repositories may break your system.  Use caution!!"
-msgstr "Ezek a tárolók tönkretehetik a rendszert. Légy óvatos!!"
+msgstr "Deze repositories kunnen je systeem onklaar maken. Wees voorzichtig, weet wat je doet!!"
 
 msgid "This will not uninstall the standard kernel."
-msgstr "Ez az opció nem távolítja el az eredeti kernelt."
+msgstr "Dit zal de standaar kernel niet verwijderen als installatie"
 
 msgid "Update"
-msgstr "Frissítés"
+msgstr "Update"
 
 msgid "User"
-msgstr "Használó"
+msgstr "Gebruiker"
 
 msgid "Utilities"
-msgstr "Opciók"
+msgstr "Gereedschapjes"
 
 msgid "VDR"
 msgstr "VDR"
 
 msgid "VPN"
-msgstr "VPN"
+msgstr "VPN (Virtueel Prive Netwerk)"
 
 msgid "Version"
-msgstr "Verzió"
+msgstr "Versie"
 
 msgid "Virtualbox"
 msgstr "Virtualbox"

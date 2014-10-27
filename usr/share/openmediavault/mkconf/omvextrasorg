@@ -80,7 +80,8 @@ EOF
     if [ "$(omv_config_get "${XPATH}vbox")" = "1" ]; then
         echo "# Virtualbox repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${REPO_URL} ${OMVVERSION}-vb main" >> ${OMVEXTRASREPOFILE}
-        echo "deb http://download.virtualbox.org/virtualbox/debian ${RELEASE} contrib non-free" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${DH2K_REPO_URL} virtualbox-${RELEASE}-mirror main" >> ${OMVEXTRASREPOFILE}
+        #echo "deb http://download.virtualbox.org/virtualbox/debian ${RELEASE} contrib non-free" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-vb, origin ${REPO_LOCATION}
@@ -93,7 +94,8 @@ EOF
     if [ "$(omv_config_get "${XPATH}plex")" = "1" ]; then
         echo "# Plexmediaserver repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${REPO_URL} ${OMVVERSION}-plex main" >> ${OMVEXTRASREPOFILE}
-        echo "deb http://shell.ninthgate.se/packages/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+        #echo "deb http://shell.ninthgate.se/packages/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${DH2K_REPO_URL} plex-${RELEASE}-mirror main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-plex, origin ${REPO_LOCATION}
