@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (1.0.18) UNRELEASED; urgency=low
+
+  * Improve zfs key add
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 27 Oct 2014 06:14:34 -0500
+
 openmediavault-omvextrasorg (1.0.17) stable; urgency=low
 
   * Add OpenMediaVault Plugin Developer key

@@ -257,8 +257,8 @@ EOF
     # omv-extras zfs
     if [ "$(omv_config_get "${XPATH}zfs")" = "1" ]; then
         # add large zfsonlinux key and linux-headers necessary for zfs module compilation
-        gpg --keyserver pgp.mit.edu --recv-keys 4D5843EA
-        gpg --keyserver pgp.mit.edu --recv-keys 8E234FB17DFFA34D
+        apt-key adv --keyserver pgp.mit.edu --recv-keys 4D5843EA
+        apt-key adv --keyserver pgp.mit.edu --recv-keys 8E234FB17DFFA34D
         if [ ! "${conf}" = "configure" ]; then
             apt-get --yes --force-yes --fix-missing install linux-headers-$(uname -r) || :
         fi
