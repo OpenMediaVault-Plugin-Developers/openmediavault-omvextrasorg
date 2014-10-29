@@ -870,7 +870,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             );
         }
 
-        return $this->applyFilter($styles, $params["start"], $params["count"],
+        return $this->applyFilter($styles, $params["start"], $params["limit"],
             $params["sortfield"], $params["sortdir"]
         );
     }
