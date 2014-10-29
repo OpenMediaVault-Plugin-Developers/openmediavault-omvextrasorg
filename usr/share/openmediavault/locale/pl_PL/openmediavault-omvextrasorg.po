@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-15 06:21-0500\n"
-"PO-Revision-Date: 2014-10-16 17:50+0000\n"
+"PO-Revision-Date: 2014-10-27 21:49+0000\n"
 "Last-Translator: Cyryl Sochacki <cyrylsochacki@gmail.com>\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -83,7 +83,7 @@ msgid "50 apt sources"
 msgstr ""
 
 msgid "50 dpkg"
-msgstr ""
+msgstr "50 dpkg"
 
 msgid "Add repo"
 msgstr "Dodaj repozytorium"
@@ -185,7 +185,7 @@ msgid "Enable Dotdeb repository"
 msgstr "Włącz repozytoria Dotdeb"
 
 msgid "Enable Gluster repository"
-msgstr ""
+msgstr "Włącz repozytoria Gluster"
 
 msgid "Enable Greyhole repository"
 msgstr "Włącz repozytoria Greyhole"
@@ -194,7 +194,7 @@ msgid "Enable MariaDB 10.0 repository"
 msgstr "Włącz repozytorium MariaDB 10.0"
 
 msgid "Enable Mono and mono-project.com repositories"
-msgstr ""
+msgstr "Włącz repozytoria mono-project.com i Mono"
 
 msgid "Enable OMV-Extras.org repository"
 msgstr "Włącz repozytoria OMV-Extras.org"
@@ -230,7 +230,7 @@ msgid "Enable e-tobi.net repository"
 msgstr "Włącz repozytoria e-tobi.net"
 
 msgid "Gluster"
-msgstr ""
+msgstr "Gluster"
 
 msgid "Greyhole"
 msgstr "Greyhole"
@@ -268,7 +268,7 @@ msgid "Modules"
 msgstr "Moduły"
 
 msgid "Mono"
-msgstr ""
+msgstr "Mono"
 
 msgid "Name"
 msgstr "Nazwa"

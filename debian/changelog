@@ -1,8 +1,10 @@
-openmediavault-omvextrasorg (1.0.18) UNRELEASED; urgency=low
+openmediavault-omvextrasorg (1.0.18) stable; urgency=low
 
   * Improve zfs key add
+  * Correctly call applyFilter
+  * Update locales
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 27 Oct 2014 06:14:34 -0500
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 29 Oct 2014 11:34:04 -0500
 
 openmediavault-omvextrasorg (1.0.17) stable; urgency=low
 
