@@ -339,6 +339,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             $params['vbox'] = false;
             $params['plex'] = false;
             $params['vdr']  = false;
+            $params['vpn']  = false;
             $params['mono']  = false;
         }
 
