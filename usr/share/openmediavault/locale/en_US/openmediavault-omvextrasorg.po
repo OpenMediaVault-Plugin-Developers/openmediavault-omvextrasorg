@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-15 06:21-0500\n"
-"PO-Revision-Date: 2014-10-15 11:23+0000\n"
+"POT-Creation-Date: 2014-11-01 14:26-0500\n"
+"PO-Revision-Date: 2014-11-01 19:27+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: English (United States) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/en_US/)\n"
 "MIME-Version: 1.0\n"
@@ -58,6 +58,12 @@ msgstr "20 netstat"
 
 msgid "30 mdadm"
 msgstr "30 mdadm"
+
+msgid "30 monit"
+msgstr "30 monit"
+
+msgid "31 hpraid"
+msgstr "31 hpraid"
 
 msgid "40 Mount Info"
 msgstr "40 Mount Info"
@@ -227,11 +233,17 @@ msgstr "Enable download managers testing repository (release candidates)"
 msgid "Enable e-tobi.net repository"
 msgstr "Enable e-tobi.net repository"
 
+msgid "Enable hwraid repository"
+msgstr "Enable hwraid repository"
+
 msgid "Gluster"
 msgstr "Gluster"
 
 msgid "Greyhole"
 msgstr "Greyhole"
+
+msgid "HWRaid"
+msgstr "HWRaid"
 
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "

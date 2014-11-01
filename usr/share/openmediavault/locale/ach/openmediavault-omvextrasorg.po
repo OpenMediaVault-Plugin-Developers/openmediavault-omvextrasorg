@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-15 06:21-0500\n"
-"PO-Revision-Date: 2014-10-15 11:23+0000\n"
+"POT-Creation-Date: 2014-11-01 14:26-0500\n"
+"PO-Revision-Date: 2014-11-01 19:27+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Acoli (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ach/)\n"
 "MIME-Version: 1.0\n"
@@ -57,6 +57,12 @@ msgid "20 netstat"
 msgstr ""
 
 msgid "30 mdadm"
+msgstr ""
+
+msgid "30 monit"
+msgstr ""
+
+msgid "31 hpraid"
 msgstr ""
 
 msgid "40 Mount Info"
@@ -227,10 +233,16 @@ msgstr ""
 msgid "Enable e-tobi.net repository"
 msgstr ""
 
+msgid "Enable hwraid repository"
+msgstr ""
+
 msgid "Gluster"
 msgstr ""
 
 msgid "Greyhole"
+msgstr ""
+
+msgid "HWRaid"
 msgstr ""
 
 msgid ""
