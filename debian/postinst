@@ -80,6 +80,10 @@ case "$1" in
             omv_config_add_element "${SERVICE_XPATH}" "mono" "0"
         fi
 
+        if ! omv_config_exists "${SERVICE_XPATH}/hwraid"; then
+            omv_config_add_element "${SERVICE_XPATH}" "hwraid" "0"
+        fi
+
         if ! omv_config_exists "${SERVICE_XPATH_MODULES}"; then
             omv_config_add_element "${SERVICE_XPATH}" "modules" ""
             omv_config_add_element "${SERVICE_XPATH_MODULES}" "debian-version" "1"
@@ -104,7 +108,15 @@ case "$1" in
         fi
 
         if ! omv_config_exists "${SERVICE_XPATH_MODULES}/netstat"; then
-            omv_config_add_element "${SERVICE_XPATH_MODULES}" "netstat" "1"
+            omv_config_add_element "${SERVICE_XPATH_MODULES}" "netstat" "0"
+        fi
+
+        if ! omv_config_exists "${SERVICE_XPATH_MODULES}/monit"; then
+            omv_config_add_element "${SERVICE_XPATH_MODULES}" "monit" "0"
+        fi
+
+        if ! omv_config_exists "${SERVICE_XPATH_MODULES}/hpraid"; then
+            omv_config_add_element "${SERVICE_XPATH_MODULES}" "hpraid" "0"
         fi
 
         omv-mkconf omvextrasorg configure
@@ -124,6 +136,7 @@ case "$1" in
             apt-key add ${KEYRING_LOCATION}gluster.gpg
             apt-key add ${KEYRING_LOCATION}xamarin.gpg
             apt-key add ${KEYRING_LOCATION}deluge.key
+            apt-key add ${KEYRING_LOCATION}hwraid.le-vert.net.gpg.key
         fi
 
         chattr -i /etc/apt/sources.list

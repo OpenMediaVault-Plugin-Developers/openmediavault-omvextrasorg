@@ -150,6 +150,12 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Secondary", {
                 fieldLabel : _("Mono"),
                 boxLabel   : _("Enable Mono and mono-project.com repositories"),
                 checked    : false
+            },{
+                xtype      : "checkbox",
+                name       : "hwraid",
+                fieldLabel : _("HWRaid"),
+                boxLabel   : _("Enable hwraid repository"),
+                checked    : false
             }]
         }];
     }

@@ -223,6 +223,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "zfs"           => array_boolval($oldObject, 'zfs'),
             "gluster"       => array_boolval($oldObject, 'gluster'),
             "mono"          => array_boolval($oldObject, 'mono'),
+            "hwraid"        => array_boolval($oldObject, 'hwraid'),
             "beta"          => array_boolval($oldObject, 'beta'),
             "dotdeb"        => array_boolval($oldObject, 'dotdeb'),
             "debmm"         => array_boolval($oldObject, 'debmm'),
@@ -293,6 +294,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $object['zfs']           = boolval($object['zfs']);
         $object['gluster']       = boolval($object['gluster']);
         $object['mono']          = boolval($object['mono']);
+        $object['hwraid']        = boolval($object['hwraid']);
 
         // Remove useless fields from the result object.
         unset($object['repos']);
@@ -325,7 +327,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
                 "vpn"           : { "type" : "boolean" },
                 "zfs"           : { "type" : "boolean" },
                 "gluster"       : { "type" : "boolean" },
-                "mono"          : { "type" : "boolean" }
+                "mono"          : { "type" : "boolean" },
+                "hwraid"        : { "type" : "boolean" }
             }
         }');
 
@@ -336,11 +339,12 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
              strpos($uname, "486") === false &&
              strpos($uname, "686") === false )
         {
-            $params['vbox'] = false;
-            $params['plex'] = false;
-            $params['vdr']  = false;
-            $params['vpn']  = false;
-            $params['mono']  = false;
+            $params['vbox']   = false;
+            $params['plex']   = false;
+            $params['vdr']    = false;
+            $params['vpn']    = false;
+            $params['mono']   = false;
+            $params['hwraid'] = false;
         }
 
         if ( strpos($uname, "amd64") === false )
@@ -375,6 +379,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "zfs"           => array_boolval($params, 'zfs'),
             "gluster"       => array_boolval($params, 'gluster'),
             "mono"          => array_boolval($params, 'mono'),
+            "hwraid"        => array_boolval($params, 'hwraid'),
             "beta"          => array_boolval($oldObject, 'beta'),
             "dotdeb"        => array_boolval($oldObject, 'dotdeb'),
             "debmm"         => array_boolval($oldObject, 'debmm'),
@@ -649,6 +654,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "zfs"           => array_boolval($oldObject, 'zfs'),
             "gluster"       => array_boolval($oldObject, 'gluster'),
             "mono"          => array_boolval($oldObject, 'mono'),
+            "hwraid"        => array_boolval($oldObject, 'hwraid'),
             "beta"          => array_boolval($params, 'beta'),
             "dotdeb"        => array_boolval($params, 'dotdeb'),
             "debmm"         => array_boolval($params, 'debmm'),
@@ -721,6 +727,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $object['netstat']        = boolval($object['netstat']);
         $object['route']          = boolval($object['route']);
         $object['mdadm']          = boolval($object['mdadm']);
+        $object['monit']          = boolval($object['monit']);
+        $object['hpraid']         = boolval($object['hpraid']);
         $object['blkid']          = boolval($object['blkid']);
         $object['df']             = boolval($object['df']);
         $object['fstab']          = boolval($object['fstab']);
@@ -759,6 +767,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
                 "netstat"        : { "type" : "boolean" },
                 "route"          : { "type" : "boolean" },
                 "mdadm"          : { "type" : "boolean" },
+                "monit"          : { "type" : "boolean" },
+                "hpraid"         : { "type" : "boolean" },
                 "blkid"          : { "type" : "boolean" },
                 "df"             : { "type" : "boolean" },
                 "fstab"          : { "type" : "boolean" },
@@ -794,6 +804,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "netstat"        => array_boolval($params, 'netstat'),
             "route"          => array_boolval($params, 'route'),
             "mdadm"          => array_boolval($params, 'mdadm'),
+            "monit"          => array_boolval($params, 'monit'),
+            "hpraid"         => array_boolval($params, 'hpraid'),
             "blkid"          => array_boolval($params, 'blkid'),
             "df"             => array_boolval($params, 'df'),
             "fstab"          => array_boolval($params, 'fstab'),
@@ -1013,46 +1025,54 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $result = "";
 
         switch ($params['info'])
-    {
-        case "":
+        {
+            case "":
             case "style1":
-            // Get the configuration object.
-            $object = $xmlConfig->get( $this->getXPathModules() );
-            if (is_null($object))
-            {
-            throw new OMVException(
-                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
-                $this->getXPathModules()
-            );
-            }
+                // Get the configuration object.
+                $object = $xmlConfig->get( $this->getXPathModules() );
+                if (is_null($object))
+                {
+                    throw new OMVException(
+                        OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
+                        $this->getXPathModules()
+                    );
+                }
 
-            $modules = array("debian-version","omv-version","date","hostname",
-                     "locale","uname","uptime","interfaces","iptables","netstat",
-                     "route","mdadm","blkid","df","fstab","mountinfo",
-                     "partitions","apt-sources","dpkg","omv-plugins");
+                $modules = array(
+                    "debian-version","omv-version",
+                    "date","hostname","locale","uname","uptime",
+                    "interfaces","iptables","netstat","route",
+                    "mdadm","monit","hpraid",
+                    "blkid","df","fstab","mountinfo","partitions",
+                    "apt-sources","dpkg","omv-plugins"
+                );
 
-            $sections = array("00","00","10","10",
-                     "10","10","10","20","20","20",
-                     "20","30","40","40","40","40",
-                     "40","50","50","50");
+                $sections = array(
+                    "00","00",
+                    "10","10","10","10","10",
+                    "20","20","20","20",
+                    "30","30","31",
+                    "40","40","40","40","40",
+                    "50","50","50"
+                );
 
-            foreach ($modules as $modulek => $modulev)
-            {
-            if ( boolval($object[$modulev]) === true )
-            {
-                $path = sprintf("%s%s-%s", $this->getSysinfoModuleDir(), $sections[$modulek], $modulev);
-                OMVUtil::exec($path, $result);
-            }
-            }
-            break;
+                foreach ($modules as $modulek => $modulev)
+                {
+                    if ( boolval($object[$modulev]) === true )
+                    {
+                        $path = sprintf("%s%s-%s", $this->getSysinfoModuleDir(), $sections[$modulek], $modulev);
+                        OMVUtil::exec($path, $result);
+                    }
+                }
+                break;
 
             case "style2":
-            $cmd = sprintf("%s webgui", $this->getOmvSupport() );
+                $cmd = sprintf("%s webgui", $this->getOmvSupport() );
                 OMVUtil::exec($cmd, $result);
-        break;
+                break;
 
-        default:
-            $cmd = sprintf("%s %s", $this->getShowkey(), $params['info']);
+            default:
+                $cmd = sprintf("%s %s", $this->getShowkey(), $params['info']);
                 OMVUtil::exec($cmd, $result);
         }
         $output = implode("\n", $result) . "\n";

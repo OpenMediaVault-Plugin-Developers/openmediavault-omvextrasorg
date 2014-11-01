@@ -307,6 +307,19 @@ Pin-Priority: 1001
 EOF
     fi
 
+    # omv-extras hwraid
+    if [ "$(omv_config_get "${XPATH}hwraid")" = "1" ]; then
+        echo "# hwraid repo" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${REPO_URL} ${OMVVERSION}-hwraid main" >> ${OMVEXTRASREPOFILE}
+        echo "deb http://hwraid.le-vert.net/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+        cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-hwraid, origin ${REPO_LOCATION}
+Pin-Priority: 996
+
+EOF
+    fi
+
     cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-backports, origin ${REPO_LOCATION}
@@ -374,17 +387,6 @@ systemd()
 backports()
 {
     BACKPORTS_REPO="/etc/apt/sources.list.d/backports.list"
-
-    if [ "${RELEASE}" = "squeeze" ]; then
-        echo "deb http://backports.debian.org/debian-backports squeeze-backports main non-free" > $BACKPORTS_REPO
-    else
-        echo "deb http://ftp.debian.org/debian ${RELEASE}-backports main contrib non-free" > $BACKPORTS_REPO
-    fi
-    echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-backports main" >> $BACKPORTS_REPO
-
-    echo "Updating..."
-    apt-get --quiet update > /dev/null 2>&1
-
     SKIP=false
     AMD64=false
     ARCH="`/bin/uname -m`"
@@ -407,6 +409,16 @@ backports()
     if $SKIP; then
         echo "Unsupported kernel and/or processor"
     else
+        if [ "${RELEASE}" = "squeeze" ]; then
+            echo "deb http://backports.debian.org/debian-backports squeeze-backports main non-free" > $BACKPORTS_REPO
+        else
+            echo "deb http://ftp.debian.org/debian ${RELEASE}-backports main contrib non-free" > $BACKPORTS_REPO
+        fi
+        echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-backports main" >> $BACKPORTS_REPO
+
+        echo "Updating..."
+        apt-get --quiet update > /dev/null 2>&1
+
         case "${RELEASE}" in
             wheezy)
                 echo "Install backports 3.16 kernel and headers"

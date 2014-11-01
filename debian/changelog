@@ -1,3 +1,11 @@
+openmediavault-omvextrasorg (1.0.20) UNRELEASED; urgency=low
+
+  * Add hwraid repo
+  * Add monit and hpraid support info modules
+  * Update locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 01 Nov 2014 14:25:12 -0500
+
 openmediavault-omvextrasorg (1.0.19) stable; urgency=low
 
   * Automatically remove armel/armhf from vpn repo

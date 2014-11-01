@@ -100,6 +100,16 @@ Ext.define("OMV.module.admin.diagnostic.system.ModuleSelect", {
             checked    : true
         },{
             xtype      : "checkbox",
+            name       : "monit",
+            fieldLabel : _("30 monit"),
+            checked    : false
+        },{
+            xtype      : "checkbox",
+            name       : "hpraid",
+            fieldLabel : _("31 hpraid"),
+            checked    : false
+        },{
+            xtype      : "checkbox",
             name       : "blkid",
             fieldLabel : _("40 blkid"),
             checked    : true
