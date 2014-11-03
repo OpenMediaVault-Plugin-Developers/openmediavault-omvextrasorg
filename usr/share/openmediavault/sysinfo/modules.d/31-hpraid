@@ -1,3 +1,4 @@
+#!/bin/sh
 #
 # @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
 # @author    openmediavault-developers
@@ -20,15 +21,19 @@ set -e
 
 . /usr/share/openmediavault/sysinfo/functions
 
-omv_sysinfo_begin_msg "HP Hardware RAID"
+HWRAID_BIN="/usr/sbin/hpacucli"
 
-HWRAID_BIN="hpacucli"
+if [ ! -f "${HWRAID_BIN}" ]; then
+    exit 0
+fi
+
+omv_sysinfo_begin_msg "HP Hardware RAID"
 
 DETECT_CONTROLLERS="$($HWRAID_BIN ctrl all show &>1 | sed -e '/^\s*$/d')"
 
 REGEX=".*No controllers detected"
 if [ "$(echo $DETECT_CONTROLLERS | grep 'No controllers detected')" ]; then
-	echo "$DETECT_CONTROLLERS" | sed 's/Error: //g'
+    echo "$DETECT_CONTROLLERS" | sed 's/Error: //g'
 fi
 
 #SLOTLIST=$($HWRAID_BIN ctrl all show | \
@@ -37,32 +42,32 @@ SLOTLIST=$(echo "$DETECT_CONTROLLERS" | \
   grep Slot | sed -e 's/^.*Slot //g' -e 's/ .*$//g')
 
 for SLOTNR in $SLOTLIST; do
-	omv_sysinfo_msg ""
-	omv_sysinfo_msg "CONTROLLER INFO:"
-	omv_sysinfo_msg_separator
-	$HWRAID_BIN ctrl slot=$SLOTNR show | grep -v "^$"  | omv_sysinfo_msg
-	omv_sysinfo_msg ""
-	omv_sysinfo_msg ""
-	omv_sysinfo_msg "CONTROLLER STATUS:"
-	omv_sysinfo_msg_separator
-	$HWRAID_BIN ctrl slot=$SLOTNR show status | grep -v "^$"  | omv_sysinfo_msg
-	omv_sysinfo_msg ""
-	omv_sysinfo_msg ""
-	omv_sysinfo_msg "LOGICAL DRIVE INFO:"
-	omv_sysinfo_msg_separator
-	$HWRAID_BIN ctrl slot=$SLOTNR ld all show | grep -v "^$"  | omv_sysinfo_msg
-	omv_sysinfo_msg ""
-	omv_sysinfo_msg ""
-	omv_sysinfo_msg "PHYSICAL DRIVE INFO:"
-	omv_sysinfo_msg_separator
-	$HWRAID_BIN ctrl slot=$SLOTNR pd all show | grep -v "^$" | omv_sysinfo_msg
-	omv_sysinfo_msg ""
-	omv_sysinfo_msg ""
-	omv_sysinfo_msg "PHYSICAL DRIVE STATUS:"
-	omv_sysinfo_msg_separator
-	$HWRAID_BIN ctrl slot=$SLOTNR pd all show detail | \
-	  grep -i -P '.*(physicaldrive|Firmware|Status|Temperature|Interface|Size|Serial|Speed|Transfer|Model).*'  | omv_sysinfo_msg
-	omv_sysinfo_msg ""
+    omv_sysinfo_msg ""
+    omv_sysinfo_msg "CONTROLLER INFO:"
+    omv_sysinfo_msg_separator
+    $HWRAID_BIN ctrl slot=$SLOTNR show | grep -v "^$"  | omv_sysinfo_msg
+    omv_sysinfo_msg ""
+    omv_sysinfo_msg ""
+    omv_sysinfo_msg "CONTROLLER STATUS:"
+    omv_sysinfo_msg_separator
+    $HWRAID_BIN ctrl slot=$SLOTNR show status | grep -v "^$"  | omv_sysinfo_msg
+    omv_sysinfo_msg ""
+    omv_sysinfo_msg ""
+    omv_sysinfo_msg "LOGICAL DRIVE INFO:"
+    omv_sysinfo_msg_separator
+    $HWRAID_BIN ctrl slot=$SLOTNR ld all show | grep -v "^$"  | omv_sysinfo_msg
+    omv_sysinfo_msg ""
+    omv_sysinfo_msg ""
+    omv_sysinfo_msg "PHYSICAL DRIVE INFO:"
+    omv_sysinfo_msg_separator
+    $HWRAID_BIN ctrl slot=$SLOTNR pd all show | grep -v "^$" | omv_sysinfo_msg
+    omv_sysinfo_msg ""
+    omv_sysinfo_msg ""
+    omv_sysinfo_msg "PHYSICAL DRIVE STATUS:"
+    omv_sysinfo_msg_separator
+    $HWRAID_BIN ctrl slot=$SLOTNR pd all show detail | \
+      grep -i -P '.*(physicaldrive|Firmware|Status|Temperature|Interface|Size|Serial|Speed|Transfer|Model).*'  | omv_sysinfo_msg
+    omv_sysinfo_msg ""
 done
 
 omv_sysinfo_end_msg

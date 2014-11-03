@@ -1,4 +1,10 @@
-openmediavault-omvextrasorg (1.0.20) UNRELEASED; urgency=low
+openmediavault-omvextrasorg (1.0.21) stable; urgency=low
+
+  * Fix 31-hpraid module
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 03 Nov 2014 15:16:16 -0600
+
+openmediavault-omvextrasorg (1.0.20) stable; urgency=low
 
   * Add hwraid repo
   * Add monit and hpraid support info modules
