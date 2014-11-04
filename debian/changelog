@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (1.0.22) stable; urgency=low
+
+  * Add lsmod sysinfo module
+  * Update locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 03 Nov 2014 21:52:47 -0600
+
 openmediavault-omvextrasorg (1.0.21) stable; urgency=low
 
   * Fix 31-hpraid module

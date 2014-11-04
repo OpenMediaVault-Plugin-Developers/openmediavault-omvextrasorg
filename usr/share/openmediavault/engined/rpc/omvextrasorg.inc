@@ -737,6 +737,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $object['apt-sources']    = boolval($object['apt-sources']);
         $object['dpkg']           = boolval($object['dpkg']);
         $object['omv-plugins']    = boolval($object['omv-plugins']);
+        $object['lsmod']          = boolval($object['lsmod']);
 
         return $object;
     }
@@ -776,7 +777,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
                 "partitions"     : { "type" : "boolean" },
                 "apt-sources"    : { "type" : "boolean" },
                 "dpkg"           : { "type" : "boolean" },
-                "omv-plugins"    : { "type" : "boolean" }
+                "omv-plugins"    : { "type" : "boolean" },
+                "lsmod"          : { "type" : "boolean" }
             }
         }');
 
@@ -813,7 +815,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "partitions"     => array_boolval($params, 'partitions'),
             "apt-sources"    => array_boolval($params, 'apt-sources'),
             "dpkg"           => array_boolval($params, 'dpkg'),
-            "omv-plugins"    => array_boolval($params, 'omv-plugins')
+            "omv-plugins"    => array_boolval($params, 'omv-plugins'),
+            "lsmod"          => array_boolval($params, 'lsmod')
         );
         if (FALSE === $xmlConfig->replace($this->getXPathModules(), $object))
         {
@@ -1044,7 +1047,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
                     "interfaces","iptables","netstat","route",
                     "mdadm","monit","hpraid",
                     "blkid","df","fstab","mountinfo","partitions",
-                    "apt-sources","dpkg","omv-plugins"
+                    "apt-sources","dpkg","omv-plugins",
+                    "lsmod"
                 );
 
                 $sections = array(
@@ -1053,7 +1057,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
                     "20","20","20","20",
                     "30","30","31",
                     "40","40","40","40","40",
-                    "50","50","50"
+                    "50","50","50",
+                    "61"
                 );
 
                 foreach ($modules as $modulek => $modulev)

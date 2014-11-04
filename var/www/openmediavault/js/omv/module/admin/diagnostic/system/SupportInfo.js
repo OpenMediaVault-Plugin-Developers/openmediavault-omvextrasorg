@@ -148,6 +148,11 @@ Ext.define("OMV.module.admin.diagnostic.system.ModuleSelect", {
             name       : "omv-plugins",
             fieldLabel : _("50 OMV Plugins"),
             checked    : true
+        },{
+            xtype      : "checkbox",
+            name       : "lsmod",
+            fieldLabel : _("61 lsmod"),
+            checked    : true
         }];
     }
 });
