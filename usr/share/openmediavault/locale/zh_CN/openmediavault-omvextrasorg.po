@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-01 14:26-0500\n"
-"PO-Revision-Date: 2014-11-01 19:27+0000\n"
+"POT-Creation-Date: 2014-11-03 21:54-0600\n"
+"PO-Revision-Date: 2014-11-04 03:54+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -89,6 +89,9 @@ msgstr "50 apt源"
 
 msgid "50 dpkg"
 msgstr "50 dpkg"
+
+msgid "61 lsmod"
+msgstr ""
 
 msgid "Add repo"
 msgstr "添加源"
@@ -295,6 +298,9 @@ msgstr "建议只启用需要的软件源，启用不需要的软件源会影响
 msgid "PID"
 msgstr "PID"
 
+msgid "Paused"
+msgstr ""
+
 msgid "Plex"
 msgstr "Plex"
 
@@ -313,6 +319,9 @@ msgstr "源"
 msgid "Repositories"
 msgstr "源"
 
+msgid "Running"
+msgstr ""
+
 msgid "Secondary"
 msgstr "附加选项"
 
@@ -324,6 +333,9 @@ msgstr "发送支持信息"
 
 msgid "Silent"
 msgstr "后台"
+
+msgid "Sleeping"
+msgstr ""
 
 msgid "State"
 msgstr "状态"
@@ -374,8 +386,14 @@ msgstr "版本"
 msgid "Virtualbox"
 msgstr "Virtualbox"
 
+msgid "Wait"
+msgstr ""
+
 msgid "ZFS"
 msgstr "ZFS"
+
+msgid "Zombie"
+msgstr ""
 
 msgid "deb-multimedia"
 msgstr "deb-multimedia"

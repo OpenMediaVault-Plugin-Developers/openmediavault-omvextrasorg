@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-01 14:26-0500\n"
-"PO-Revision-Date: 2014-11-01 19:27+0000\n"
+"POT-Creation-Date: 2014-11-03 21:54-0600\n"
+"PO-Revision-Date: 2014-11-04 03:54+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
@@ -89,6 +89,9 @@ msgstr "50 apt ソース"
 
 msgid "50 dpkg"
 msgstr "50 dpkg"
+
+msgid "61 lsmod"
+msgstr ""
 
 msgid "Add repo"
 msgstr "リポジトリの追加"
@@ -295,6 +298,9 @@ msgstr "必要なリポジトリのみ有効にします。必要のないリポ
 msgid "PID"
 msgstr "PID"
 
+msgid "Paused"
+msgstr ""
+
 msgid "Plex"
 msgstr "Plex"
 
@@ -313,6 +319,9 @@ msgstr "リポジトリ"
 msgid "Repositories"
 msgstr "リポジトリ"
 
+msgid "Running"
+msgstr ""
+
 msgid "Secondary"
 msgstr "セカンダリ"
 
@@ -324,6 +333,9 @@ msgstr "サポート情報を送信"
 
 msgid "Silent"
 msgstr "サイレント"
+
+msgid "Sleeping"
+msgstr ""
 
 msgid "State"
 msgstr "状態"
@@ -374,8 +386,14 @@ msgstr "バージョン"
 msgid "Virtualbox"
 msgstr "Virtualbox"
 
+msgid "Wait"
+msgstr ""
+
 msgid "ZFS"
 msgstr "ZFS"
+
+msgid "Zombie"
+msgstr ""
 
 msgid "deb-multimedia"
 msgstr "deb-multimedia"

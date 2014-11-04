@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-01 14:26-0500\n"
-"PO-Revision-Date: 2014-11-01 19:27+0000\n"
+"POT-Creation-Date: 2014-11-03 21:54-0600\n"
+"PO-Revision-Date: 2014-11-04 03:54+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: English (United States) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/en_US/)\n"
 "MIME-Version: 1.0\n"
@@ -88,6 +88,9 @@ msgstr "50 apt sources"
 
 msgid "50 dpkg"
 msgstr "50 dpkg"
+
+msgid "61 lsmod"
+msgstr "61 lsmod"
 
 msgid "Add repo"
 msgstr "Add repo"
@@ -294,6 +297,9 @@ msgstr "Only enable repositories you need.  Enabling unnecessary repositories ca
 msgid "PID"
 msgstr "PID"
 
+msgid "Paused"
+msgstr "Paused"
+
 msgid "Plex"
 msgstr "Plex"
 
@@ -312,6 +318,9 @@ msgstr "Repo"
 msgid "Repositories"
 msgstr "Repositories"
 
+msgid "Running"
+msgstr "Running"
+
 msgid "Secondary"
 msgstr "Secondary"
 
@@ -323,6 +332,9 @@ msgstr "Send Support Info"
 
 msgid "Silent"
 msgstr "Silent"
+
+msgid "Sleeping"
+msgstr "Sleeping"
 
 msgid "State"
 msgstr "State"
@@ -373,8 +385,14 @@ msgstr "Version"
 msgid "Virtualbox"
 msgstr "Virtualbox"
 
+msgid "Wait"
+msgstr "Wait"
+
 msgid "ZFS"
 msgstr "ZFS"
+
+msgid "Zombie"
+msgstr "Zombie"
 
 msgid "deb-multimedia"
 msgstr "deb-multimedia"

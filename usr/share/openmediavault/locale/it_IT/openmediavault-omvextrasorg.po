@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-01 14:26-0500\n"
-"PO-Revision-Date: 2014-11-01 19:27+0000\n"
+"POT-Creation-Date: 2014-11-03 21:54-0600\n"
+"PO-Revision-Date: 2014-11-04 03:54+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -89,6 +89,9 @@ msgid "50 apt sources"
 msgstr ""
 
 msgid "50 dpkg"
+msgstr ""
+
+msgid "61 lsmod"
 msgstr ""
 
 msgid "Add repo"
@@ -296,6 +299,9 @@ msgstr ""
 msgid "PID"
 msgstr "PID"
 
+msgid "Paused"
+msgstr ""
+
 msgid "Plex"
 msgstr "Plex"
 
@@ -314,6 +320,9 @@ msgstr "Repository"
 msgid "Repositories"
 msgstr "Repository"
 
+msgid "Running"
+msgstr ""
+
 msgid "Secondary"
 msgstr "Secondario"
 
@@ -325,6 +334,9 @@ msgstr "Invia Informazioni di Supporto"
 
 msgid "Silent"
 msgstr "Silenzioso"
+
+msgid "Sleeping"
+msgstr ""
 
 msgid "State"
 msgstr "Stato"
@@ -375,8 +387,14 @@ msgstr "Versione"
 msgid "Virtualbox"
 msgstr "Virtualbox"
 
+msgid "Wait"
+msgstr ""
+
 msgid "ZFS"
 msgstr "ZFS"
+
+msgid "Zombie"
+msgstr ""
 
 msgid "deb-multimedia"
 msgstr "deb-multimedia"
