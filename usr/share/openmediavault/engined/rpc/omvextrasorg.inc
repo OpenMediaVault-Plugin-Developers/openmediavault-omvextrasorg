@@ -872,17 +872,20 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         );
 
         // Get configuration data.
-        $cmd = "dpkg -l | grep openmediavault- | cut -d\" \" -f3 | cut -d\"-\" -f2";
+        $cmd = "export LANG=C; dpkg --get-selections | grep openmediavault-";
         OMVUtil::exec($cmd, $result);
 
         foreach ($result as $style)
         {
-            if ($style == "keyring")
+            $pluginTitle = trim(str_replace("install", "", $style));
+            $pluginTitle = trim(str_replace("openmediavault-", "", $pluginTitle));
+
+            if ($pluginTitle == "keyring")
                 continue;
 
             $styles[] = array(
-                "cmd"  => $style,
-                "name" => sprintf("XML - %s", $style)
+                "cmd"  => $pluginTitle,
+                "name" => sprintf("XML - %s", $pluginTitle)
             );
         }
 

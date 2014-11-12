@@ -3,24 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# David Hönel <davidh1990@gmx.de>, 2013-2014
-# Ettore Atalan <atalanttore@googlemail.com>, 2014
-# René P. <phortexx@gmx.net>, 2014
-# WastlJ, 2014
-# Stephan Steiner, 2014
+# Hyeonkyu Chu <hyeonkyu@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-03 21:54-0600\n"
-"PO-Revision-Date: 2014-11-06 06:06+0000\n"
-"Last-Translator: WastlJ\n"
-"Language-Team: German (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/de/)\n"
+"PO-Revision-Date: 2014-11-12 11:50+0000\n"
+"Last-Translator: Hyeonkyu Chu <hyeonkyu@gmail.com>\n"
+"Language-Team: Korean (Korea) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ko_KR\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "% CPU"
 msgstr "% CPU"
@@ -29,28 +25,28 @@ msgid "% MEM"
 msgstr "% MEM"
 
 msgid "00 Debian Version"
-msgstr "00 Debian-Version"
+msgstr "00 데비안 버전"
 
 msgid "00 OMV Version"
-msgstr "00 OMV-Version"
+msgstr "00 OMV 버전"
 
 msgid "10 Date"
-msgstr "10 Datum"
+msgstr "10 일시"
 
 msgid "10 Hostname"
-msgstr "10 Hostname"
+msgstr "10 호스트 이름"
 
 msgid "10 Locale"
-msgstr "10 Sprachumgebung"
+msgstr "10 언어-지역"
 
 msgid "10 Uptime"
-msgstr "10 Betriebszeit"
+msgstr "10 가동 시간"
 
 msgid "10 uname"
 msgstr "10 uname"
 
 msgid "20 Interfaces"
-msgstr "20 Schnittstellen"
+msgstr "20 Interfaces"
 
 msgid "20 Route"
 msgstr "20 Route"
@@ -71,10 +67,10 @@ msgid "31 hpraid"
 msgstr "31 hpraid"
 
 msgid "40 Mount Info"
-msgstr "40 Einhängeinformationen"
+msgstr "40 마운트 정보"
 
 msgid "40 Partitions"
-msgstr "40 Partitionen"
+msgstr "40 파티션"
 
 msgid "40 blkid"
 msgstr "40 blkid"
@@ -86,10 +82,10 @@ msgid "40 fstab"
 msgstr "40 fstab"
 
 msgid "50 OMV Plugins"
-msgstr "50 OMV Plugins"
+msgstr "50 OMV 플러그인"
 
 msgid "50 apt sources"
-msgstr "50 apt-Quellen"
+msgstr "50 apt sources"
 
 msgid "50 dpkg"
 msgstr "50 dpkg"
@@ -98,151 +94,151 @@ msgid "61 lsmod"
 msgstr "61 lsmod"
 
 msgid "Add repo"
-msgstr "Quelle hinzufügen"
+msgstr "저장소 추가"
 
 msgid "Additional Repositories"
-msgstr "Zusätzliche Paketquellen"
+msgstr "추가 저장소"
 
 msgid "Apt Clean"
 msgstr "Apt Clean"
 
 msgid "Apt Clean - Silent"
-msgstr "Apt Clean - Silent"
+msgstr "Apt Clean - 조용히"
 
 msgid "Architecture"
-msgstr "Architektur"
+msgstr "아키텍처"
 
 msgid "BTSync"
 msgstr "BTSync"
 
 msgid "Beta"
-msgstr "Beta"
+msgstr "베타"
 
 msgid "Can be helpful in fixing plugin problems."
-msgstr "Kann hilfreich beim Beheben von Problemen sein. "
+msgstr "플러그인 문제 해결에 도움이 될 수 있습니다."
 
 msgid "Checking for new updates ..."
-msgstr "Nach neuen Aktualisierungen suchen ..."
+msgstr "새로운 갱신 확인 중 ..."
 
 msgid "Cleaning Apt Files and Lists..."
-msgstr "Apt-Dateien und -Listen werden bereinigt..."
+msgstr "Apt 파일 및 목록 정리 중..."
 
 msgid "Cleans apt repositories and removes lists."
-msgstr "Bereinigt apt-Paketquellen und entfernt die Listen."
+msgstr "Apt 저장소를 청소하고 목록을 제거합니다."
 
 msgid "Close"
-msgstr "Schließen"
+msgstr "닫기"
 
 msgid "Command"
-msgstr "Befehl"
+msgstr "명령"
 
 msgid "Comment"
-msgstr "Kommentar"
+msgstr "설명"
 
 msgid "Confirmation"
-msgstr "Bestätigung"
+msgstr "확인"
 
 msgid "Contains plugins for setting up virtual private networks"
-msgstr "Enthält Plugins zum Erstellen von Virtuellen Privaten Netzwerken (VPN)"
+msgstr "가상 개인 네트워크를 설정하는 플러그인을 포함합니다"
 
 msgid ""
 "Contains various download managers for newsgroups, torrents, usenet, and "
 "streaming"
-msgstr "Enthält diverse Download Manager für Newsgroups, Torrents, Usenet sowie Streaming"
+msgstr "뉴스 그룹, 토런트, 유즈넷 및 스트리밍을 위한 다양한 다운로드 관리자를 포함합니다"
 
 msgid "Custom"
-msgstr "Benutzerdefiniert"
+msgstr "사용자 정의"
 
 msgid "Developer"
-msgstr "Entwickler"
+msgstr "Developer"
 
 msgid "Developer Repositories"
-msgstr "Entwickler-Paketquellen"
+msgstr "개발자 저장소"
 
 msgid "Distribution"
-msgstr "Distribution"
+msgstr "배포"
 
 msgid ""
 "Do not enable this repository unless you are using the GlusterFS filesystem "
 "(uncommon)"
-msgstr "Aktiviere diese Paketquelle nicht, sofern du kein GlusterFS Filesystem benutzt (selten)"
+msgstr "GlusterFS 파일-시스템을 사용하지 않는 경우, 이 저장소를 사용하지 마십시오 (흔히 쓰이는 것이 아님) "
 
 msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
-msgstr "Aktiviere diese Paketquelle nicht, sofern du kein ZFS Filesystem benutzt (selten)"
+msgstr "ZFS 파일-시스템을 사용하지 않는 경우, 이 저장소를 사용하지 마십시오 (흔히 쓰이는 것이 아님)"
 
 msgid "Done..."
-msgstr "Fertig..."
+msgstr "완료..."
 
 msgid "Dotdeb"
 msgstr "Dotdeb"
 
 msgid "Download Managers"
-msgstr "Download Manager"
+msgstr "Download Managers"
 
 msgid "Downloading package information"
-msgstr "Paketinformationen werden heruntergeladen"
+msgstr "꾸러미 정보 내려받기"
 
 msgid "Edit repo"
-msgstr "Paketquelle bearbeiten"
+msgstr "저장소 편집"
 
 msgid "Enable BTSync repository"
-msgstr "BTSync-Paketquelle aktivieren"
+msgstr "BTSync 저장소 활성화"
 
 msgid "Enable Beta repository"
-msgstr "Beta-Paketquelle aktivieren"
+msgstr "베타 저장소 활성화"
 
 msgid "Enable Dotdeb repository"
-msgstr "Dotdeb-Paketquelle aktivieren"
+msgstr "Dotdeb 저장소 활성화"
 
 msgid "Enable Gluster repository"
-msgstr "Gluster-Paketquelle aktivieren"
+msgstr "Gluster 저장소 활성화"
 
 msgid "Enable Greyhole repository"
-msgstr "Greyhole-Paketquelle aktivieren"
+msgstr "Greyhole 저장소 활성화"
 
 msgid "Enable MariaDB 10.0 repository"
-msgstr "MariaDB 10.0-Paketquelle aktivieren"
+msgstr "MariaDB 10.0 저장소 활성화"
 
 msgid "Enable Mono and mono-project.com repositories"
-msgstr "Mono- und mono-project.com-Paketquelle aktivieren"
+msgstr "Mono 및 mono-project.com 저장소 활성화"
 
 msgid "Enable OMV-Extras.org repository"
-msgstr "OMV-Extras.org-Paketquelle aktivieren"
+msgstr "OMV-Extras.org 저장소 활성화"
 
 msgid "Enable OMV-Extras.org testing repository (release candidates)"
-msgstr "OMV-Extras.org Test-Paketquelle aktivieren (Freigabekandidat)"
+msgstr "시험 중인 OMV-Extras.org 저장소 활성화 (출시 후보)"
 
 msgid "Enable Plex Media Server repository"
-msgstr "Plex Media Server-Paketquelle aktivieren"
+msgstr "Plex Media Server 저장소 활성화"
 
 msgid "Enable VPN repository"
-msgstr "VPN-Paketquelle aktivieren"
+msgstr "VPN 저장소 활성화"
 
 msgid "Enable Virtualbox repository."
-msgstr "Virtualbox-Paketquelle aktivieren."
+msgstr "Virtualbox 저장소 활성화"
 
 msgid "Enable ZFS repository"
-msgstr "ZFS-Paketquelle aktivieren"
+msgstr "ZFS 저장소 활성화"
 
 msgid "Enable deb-multimedia backports repository"
-msgstr "deb-multimedia backports-Paketquelle aktivieren"
+msgstr "deb-multimedia backports 저장소 활성화"
 
 msgid "Enable deb-multimedia repository"
-msgstr "deb-multimedia-Paketquelle aktivieren"
+msgstr "deb-multimedia 저장소 활성화"
 
 msgid "Enable download managers repository"
-msgstr "Aktiviere Download Manager Paketquellen"
+msgstr "Download Managers 저장소 활성화"
 
 msgid "Enable download managers testing repository (release candidates)"
-msgstr "Aktiviere Download Manager TEST Paketquellen (Release Candidates)"
+msgstr "시험 중인 Download Managers 저장소 활성화 (출시 후보)"
 
 msgid "Enable e-tobi.net repository"
-msgstr "e-tobi.net-Paketquelle aktivieren"
+msgstr "e-tobi.net 저장소 활성화"
 
 msgid "Enable hwraid repository"
-msgstr "hwraid-Repositorium aktivieren"
+msgstr "HWRaid 저장소 활성화"
 
 msgid "Gluster"
 msgstr "Gluster"
@@ -256,40 +252,40 @@ msgstr "HWRaid"
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
 "still have the option to boot the standard kernel."
-msgstr "Wenn das System unter Verwendung des Backport Kernel nicht startet, wird im Boot Menü die Option zum starten des Standard Kernel zur Verfügung stehen."
+msgstr "Backports 커널로 시스템이 부팅되지 않을 경우에도, 부팅 메뉴에는 표준 커널로 부팅 할 수 있는 옵션이 있습니다."
 
 msgid "Information"
-msgstr "Information"
+msgstr "정보"
 
 msgid "Install Backports 3.16 kernel"
-msgstr "Installiere Backports 3.16 kernel"
+msgstr "Backports 3.16 커널 설치"
 
 msgid "Install Backports 3.16 kernel ..."
-msgstr "Installiere Backports 3.16 Kernel ..."
+msgstr "Backports 3.16 커널 설치 ..."
 
 msgid "Install systemd"
-msgstr "systemd installieren"
+msgstr "systemd 설치"
 
 msgid "Install systemd..."
-msgstr "systemd installieren..."
+msgstr "systemd 설치..."
 
 msgid "Kernel"
-msgstr "Kernel"
+msgstr "커널"
 
 msgid "Managers Testing"
-msgstr "Managers TEST"
+msgstr "Managers Testing"
 
 msgid "MariaDB"
 msgstr "MariaDB"
 
 msgid "Modules"
-msgstr "Module"
+msgstr "단위-기능"
 
 msgid "Mono"
 msgstr "Mono"
 
 msgid "Name"
-msgstr "Name"
+msgstr "이름"
 
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
@@ -297,86 +293,86 @@ msgstr "OMV-Extras.org"
 msgid ""
 "Only enable repositories you need.  Enabling unnecessary repositories can "
 "slow down your system."
-msgstr "Aktiviere nur Paketquellen, die du wirklich benötigst. Das Aktivieren von unnötigen Paketquellen, kann dein System verlangsamen!"
+msgstr "필요한 저장소만을 활성화 하시기 바랍니다. 불필요한 저장소들은 시스템을 느리게 할 수 있습니다."
 
 msgid "PID"
 msgstr "PID"
 
 msgid "Paused"
-msgstr "Pausiert"
+msgstr "멈춘"
 
 msgid "Plex"
 msgstr "Plex"
 
 msgid "Primary"
-msgstr "Primär"
+msgstr "주"
 
 msgid "Process List"
-msgstr "Prozess Liste"
+msgstr "프로세스 목록"
 
 msgid "Reload"
-msgstr "Neu laden"
+msgstr "재 적재"
 
 msgid "Repo"
-msgstr "Paketquelle"
+msgstr "저장소"
 
 msgid "Repositories"
-msgstr "Paketquellen"
+msgstr "저장소"
 
 msgid "Running"
-msgstr "Läuft"
+msgstr "실행 중"
 
 msgid "Secondary"
-msgstr "Sekundär"
+msgstr "보조"
 
 msgid "Send"
-msgstr "Senden"
+msgstr "전송"
 
 msgid "Send Support Info"
-msgstr "Support Informationen senden"
+msgstr "지원 정보 전송"
 
 msgid "Silent"
-msgstr "Still"
+msgstr "조용히"
 
 msgid "Sleeping"
-msgstr "Schläft"
+msgstr "잠든"
 
 msgid "State"
-msgstr "Status"
+msgstr "상태"
 
 msgid "Support Info"
-msgstr "Support Informationen"
+msgstr "지원 정보"
 
 msgid "Support Info Module Selection"
-msgstr "Support Info Modul Auswahl"
+msgstr "지원 정보 단위-기능 선택"
 
 msgid "Testing"
-msgstr "Testen"
+msgstr "Testing"
 
 msgid ""
 "The information about available software is out-of-date. You need to reload "
 "the information about available software."
-msgstr "Die Informationen über die verfügbare Software sind veraltet. Sie müssen die Informationen über die verfügbare Software neu laden."
+msgstr "가용 소프트웨어에 대한 정보가 오래된 것입니다. 해당 정보를 갱신해야합니다."
 
 msgid ""
 "The repository will be checked for new, removed or upgraded software "
 "packages."
-msgstr "Die Paketquelle wird auf neue, entfernte und aktualisierte Softwarepakete überprüft."
+msgstr "해당 저장소의 새로운, 제거된 또는 향상된 소프트웨어 꾸러미를 확인합니다."
 
 msgid "These repositories may break your system.  Use caution!!"
-msgstr "Diese Paketquellen können Ihr System beeinträchtigen. Benutzen Sie diese mit Vorsicht!"
+msgstr "이 저장소들은 당신의 시스템을 정상 동작하지 않게 할 수 있습니다. 주의바랍니다!!"
 
 msgid "This will not uninstall the standard kernel."
-msgstr "Dies wird den Standard Kernel nicht deinstallieren."
+msgstr "이 커널은 표준 커널을 제거하지는 않습니다."
 
 msgid "Update"
-msgstr "Aktualisierung"
+msgstr "갱신"
 
 msgid "User"
-msgstr "Benutzer"
+msgstr "사용자"
 
 msgid "Utilities"
-msgstr "Dienstprogramme"
+msgstr "도구들"
 
 msgid "VDR"
 msgstr "VDR"
@@ -385,22 +381,22 @@ msgid "VPN"
 msgstr "VPN"
 
 msgid "Version"
-msgstr "Version"
+msgstr "버전"
 
 msgid "Virtualbox"
 msgstr "Virtualbox"
 
 msgid "Wait"
-msgstr "Warten"
+msgstr "대기"
 
 msgid "ZFS"
 msgstr "ZFS"
 
 msgid "Zombie"
-msgstr "Zombie"
+msgstr "좀비"
 
 msgid "deb-multimedia"
 msgstr "deb-multimedia"
 
 msgid "deb-multimedia backports"
-msgstr "deb-multimedia backports"
+msgstr "deb-multimedia Backports"
