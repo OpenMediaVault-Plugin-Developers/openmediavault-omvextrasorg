@@ -59,6 +59,11 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         return sprintf( "%s/modules", $this->getXPath() );
     }
 
+    private function getXPathResetPerms()
+    {
+        return sprintf( "%s/resetperms", $this->getXPath() );
+    }
+
     private function getEventMessagePath()
     {
         return sprintf( "org.openmediavault.system.%s", $this->getPluginName() );
@@ -72,6 +77,11 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
     private function getEventMessagePathModules()
     {
         return sprintf( "%s.modules", $this->getEventMessagePath() );
+    }
+
+    private function getEventMessagePathResetPerms()
+    {
+        return sprintf( "%s.resetperms", $this->getEventMessagePath() );
     }
 
     private function getSysinfoModuleDir()
@@ -110,6 +120,9 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         $this->registerMethod("getStyles");
 
+        $this->registerMethod("getResetPerms");
+        $this->registerMethod("setResetPerms");
+
         $this->registerMethod("doInstallBackports");
         $this->registerMethod("doInstallSystemd");
         $this->registerMethod("doAptClean");
@@ -118,6 +131,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $this->registerMethod("getSupportInfo");
         $this->registerMethod("getProcessList");
         $this->registerMethod("doSend");
+
+        $this->registerMethod("doResetPerms");
     }
 
     public function getPrimary($params, $context)
@@ -173,6 +188,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         // Remove useless fields from the result object.
         unset($object['repos']);
         unset($object['modules']);
+        unset($object['resetperms']);
 
         return $object;
     }
@@ -230,7 +246,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "debmmbp"       => array_boolval($oldObject, 'debmmbp'),
             "mariadb"       => array_boolval($oldObject, 'mariadb'),
             "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array(),
-            "modules"       => isset($oldObject['modules']) ? $oldObject['modules'] : array()
+            "modules"       => isset($oldObject['modules']) ? $oldObject['modules'] : array(),
+            "resetperms"    => isset($oldObject['resetperms']) ? $oldObject['resetperms'] : array()
         );
         if (FALSE === $xmlConfig->replace($this->getXPath(), $object))
         {
@@ -299,6 +316,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         // Remove useless fields from the result object.
         unset($object['repos']);
         unset($object['modules']);
+        unset($object['resetperms']);
 
         return $object;
     }
@@ -386,7 +404,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "debmmbp"       => array_boolval($oldObject, 'debmmbp'),
             "mariadb"       => array_boolval($oldObject, 'mariadb'),
             "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array(),
-            "modules"       => isset($oldObject['modules']) ? $oldObject['modules'] : array()
+            "modules"       => isset($oldObject['modules']) ? $oldObject['modules'] : array(),
+            "resetperms"    => isset($oldObject['resetperms']) ? $oldObject['resetperms'] : array()
         );
 
         if (FALSE === $xmlConfig->replace($this->getXPath(), $object))
@@ -602,6 +621,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         // Remove useless fields from the result object.
         unset($object['repos']);
         unset($object['modules']);
+        unset($object['resetperms']);
 
         return $object;
     }
@@ -661,7 +681,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "debmmbp"       => array_boolval($params, 'debmmbp'),
             "mariadb"       => array_boolval($params, 'mariadb'),
             "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array(),
-            "modules"       => isset($oldObject['modules']) ? $oldObject['modules'] : array()
+            "modules"       => isset($oldObject['modules']) ? $oldObject['modules'] : array(),
+            "resetperms"    => isset($oldObject['resetperms']) ? $oldObject['resetperms'] : array()
         );
 
         if (FALSE === $xmlConfig->replace($this->getXPath(), $object))
@@ -892,6 +913,87 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         return $this->applyFilter($styles, $params["start"], $params["limit"],
             $params["sortfield"], $params["sortdir"]
         );
+    }
+
+    public function getResetPerms($params, $context)
+    {
+        global $xmlConfig;
+
+        // Validate the RPC caller context.
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
+
+        // Get the configuration object.
+        $object = $xmlConfig->get( $this->getXPathResetPerms() );
+        if (is_null($object))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
+                $this->getXPathResetPerms()
+            );
+        }
+
+        // Modify the result object.
+        $object['clearacl'] = boolval($object['clearacl']);
+
+        return $object;
+    }
+
+    public function setResetPerms($params, $context)
+    {
+        global $xmlConfig;
+
+        // Validate the RPC caller context.
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
+
+        // Validate the parameters of the RPC service method.
+        $this->validateMethodParams($params, '{
+            "type"       : "object",
+            "properties" : {
+                "sharedfolderref" : { ' . $GLOBALS["OMV_JSONSCHEMA_UUID"] . ' },
+                "mode"            : { "type" : "string" },
+                "clearacl"        : { "type" : "boolean" }
+            }
+        }');
+
+        // Get the existing configuration object.
+        $oldObject = $xmlConfig->get( $this->getXPathResetPerms() );
+        if (is_null($oldObject))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
+                $this->getXPathResetPerms()
+            );
+        }
+
+        // Update the configuration object.
+        $object = array(
+            "sharedfolderref" => $params["sharedfolderref"],
+            "mode"            => $params['mode'],
+            "clearacl"        => array_boolval($params, 'clearacl')
+        );
+        if (FALSE === $xmlConfig->replace($this->getXPathResetPerms(), $object))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED
+            );
+        }
+
+        // Notify configuration changes.
+        $dispatcher = &OMVNotifyDispatcher::getInstance();
+        $dispatcher->notify(
+            OMV_NOTIFY_MODIFY,
+            $this->getEventMessagePathResetPerms(),
+            $object
+        );
+
+        // Return the configuration object.
+        return $object;
     }
 
     public function doInstallBackports($params, $context)
@@ -1155,6 +1257,38 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
 
             $cmd = sprintf("omv-mkconf %s sendsupport 2>&1", $this->getPluginName() );
+            $this->exec($cmd, $output, $bgOutputFilename);
+            $this->finalizeBgProcStatus($bgStatusFilename, $output);
+
+        } catch(Exception $e) {
+            $this->finalizeBgProcStatus($bgStatusFilename, "", $e);
+            exit(1);
+        }
+    }
+
+    public function doResetPerms($params, $context)
+    {
+        // Validate the RPC caller context.
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
+
+        // Create a background process.
+        $bgStatusFilename = $this->createBgProcStatus();
+        $pid = $this->fork();
+        if ($pid > 0)   // Parent process.
+        {
+            $this->initializeBgProcStatus($bgStatusFilename, $pid);
+            return $bgStatusFilename;
+        }
+
+        // Child process.
+        try {
+            $bgOutputFilename = $this->createBgProcOutput();
+            $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
+
+            $cmd = sprintf("omv-mkconf %s resetperms 2>&1", $this->getPluginName() );
             $this->exec($cmd, $output, $bgOutputFilename);
             $this->finalizeBgProcStatus($bgStatusFilename, $output);
 
