@@ -471,6 +471,27 @@ support()
     echo "Done."
 }
 
+resetperms()
+{
+    # Exchange for correct values
+    sfref=$(omv_config_get "${XPATH}resetperms/sharedfolderref")
+    sfpath=$(omv_get_sharedfolder_path "${sfref}")
+    dirperms=$(omv_config_get "${XPATH}resetperms/dirperms")
+    fileperms=$(omv_config_get "${XPATH}resetperms/fileperms")
+
+    # Removes all ACLs and sticky bits
+    setfacl -rB "${sfpath}"
+
+    # Make root:users owner of the shared folder and all subdirs
+    chown root:users "${sfpath}" -R
+
+    # For all folders that are inside that folder (recursively) and the folder itself
+    find "${sfpath}" -type d -print0 | xargs -0 chmod ${dirperms)
+
+    # For all files that are inside that folder (recursively)
+    find "${sfpath}" -type f -print0 | xargs -0 chmod ${fileperms)
+}
+
 case $2 in
     update)
         OMVVERSION="kralizec"
@@ -493,6 +514,10 @@ case $2 in
 
     sendsupport)
         support
+    ;;
+
+    resetperms)
+        resetperms
     ;;
 
     *)
