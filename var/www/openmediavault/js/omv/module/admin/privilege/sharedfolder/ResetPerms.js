@@ -19,6 +19,7 @@
 // require("js/omv/WorkspaceManager.js")
 // require("js/omv/workspace/form/Panel.js")
 // require("js/omv/workspace/window/Form.js")
+// require("js/omv/toolbar/Tip.js")
 // require("js/omv/data/Store.js")
 // require("js/omv/data/Model.js")
 // require("js/omv/data/proxy/Rpc.js")
@@ -28,18 +29,35 @@
 Ext.define("OMV.module.admin.privilege.sharedfolder.ResetPerms", {
     extend   : "OMV.workspace.form.Panel",
     requires : [
-        "OMV.data.Store",
-        "OMV.data.Model"
+        "OMV.workspace.window.plugin.ConfigObject"
+    ],
+    uses     : [
+        "OMV.data.Model",
+        "OMV.data.Store"
     ],
 
     rpcService   : "OmvExtrasOrg",
     rpcGetMethod : "getResetPerms",
     rpcSetMethod : "setResetPerms",
-    plugins      : [{
-        ptype : "configobject"
-    }],
 
-    getFormItems: function() {
+    hideResetButton : true,
+
+    getButtonItems : function() {
+        var me = this;
+        var items = me.callParent(arguments);
+        items.push({
+            id       : me.getId() + "-resetperms",
+            xtype    : "button",
+            text     : _("Reset Permissions"),
+            icon     : "images/refresh.png",
+            iconCls  : Ext.baseCSSPrefix + "btn-icon-16x16",
+            scope    : me,
+            handler  : Ext.Function.bind(me.onResetPermsButton, me, [ me ])
+        });
+        return items;
+    },
+
+    getFormItems : function() {
         var me = this;
         return [{
             xtype      : "sharedfoldercombo",
@@ -73,12 +91,38 @@ Ext.define("OMV.module.admin.privilege.sharedfolder.ResetPerms", {
                 text  : _("Reset folders and files to this file mode.")
             }]
         },{
-                xtype      : "checkbox",
-                name       : "clearacl",
-                fieldLabel : _("Clear ACLs"),
-                boxLabel   : _("Clear all ACLs."),
-                checked    : false
+            xtype      : "checkbox",
+            name       : "clearacl",
+            fieldLabel : _("Clear ACLs"),
+            boxLabel   : _("Clear all ACLs."),
+            checked    : false
         }];
+    },
+
+    onResetPermsButton: function() {
+        var me = this;
+        me.doSubmit();
+        var wnd = Ext.create("OMV.window.Execute", {
+            title      : _("Reset permissions ..."),
+            rpcService : "OmvExtrasOrg",
+            rpcMethod  : "doResetPerms",
+            hideStartButton : true,
+            hideStopButton  : true,
+            listeners       : {
+                scope     : me,
+                finish    : function(wnd, response) {
+                    wnd.appendValue(_("Done..."));
+                    wnd.setButtonDisabled("close", false);
+                },
+                exception : function(wnd, error) {
+                    OMV.MessageBox.error(null, error);
+                    wnd.setButtonDisabled("close", false);
+                }
+            }
+        });
+        wnd.setButtonDisabled("close", true);
+        wnd.show();
+        wnd.start();
     }
 });
 

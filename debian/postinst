@@ -123,6 +123,10 @@ case "$1" in
             omv_config_add_element "${SERVICE_XPATH_MODULES}" "lsmod" "0"
         fi
 
+        if ! omv_config_exists "${SERVICE_XPATH}/resetperms"; then
+            omv_config_add_element "${SERVICE_XPATH}" "resetperms" ""
+        fi
+        
         omv-mkconf omvextrasorg configure
 
         if [ -x /usr/bin/apt-key ]; then

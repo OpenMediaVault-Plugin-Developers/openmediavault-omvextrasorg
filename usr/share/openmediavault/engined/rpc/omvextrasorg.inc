@@ -910,6 +910,21 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             );
         }
 
+        $styles[] = array(
+            "cmd"  => "iface",
+            "name" => "System - iface"
+        );
+
+        $styles[] = array(
+            "cmd"  => "mntent",
+            "name" => "System - mntent"
+        );
+
+        $styles[] = array(
+            "cmd"  => "sharedfolder",
+            "name" => "System - sharedfolder"
+        );
+
         return $this->applyFilter($styles, $params["start"], $params["limit"],
             $params["sortfield"], $params["sortdir"]
         );
@@ -971,11 +986,37 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             );
         }
 
+        switch ($params['mode'])
+        {
+            case "700":
+                $params['fileperms'] = "600";
+                break;
+            case "750":
+                $params['fileperms'] = "640";
+                break;
+            case "770":
+                $params['fileperms'] = "660";
+                break;
+            case "755":
+                $params['fileperms'] = "644";
+                break;
+            case "775":
+                $params['fileperms'] = "664";
+                break;
+            case "777":
+                $params['fileperms'] = "666";
+                break;
+            default:
+                $params['fileperms'] = "644";
+        }
+
         // Update the configuration object.
         $object = array(
             "sharedfolderref" => $params["sharedfolderref"],
             "mode"            => $params['mode'],
-            "clearacl"        => array_boolval($params, 'clearacl')
+            "clearacl"        => array_boolval($params, 'clearacl'),
+            "dirperms"        => $params['mode'],
+            "fileperms"       => $params['fileperms']
         );
         if (FALSE === $xmlConfig->replace($this->getXPathResetPerms(), $object))
         {

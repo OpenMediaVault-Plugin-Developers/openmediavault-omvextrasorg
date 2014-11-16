@@ -473,23 +473,29 @@ support()
 
 resetperms()
 {
-    # Exchange for correct values
-    sfref=$(omv_config_get "${XPATH}resetperms/sharedfolderref")
+    XPATH_RESETPERMS="${XPATH}resetperms/"
+    sfref=$(omv_config_get "${XPATH_RESETPERMS}sharedfolderref")
     sfpath=$(omv_get_sharedfolder_path "${sfref}")
-    dirperms=$(omv_config_get "${XPATH}resetperms/dirperms")
-    fileperms=$(omv_config_get "${XPATH}resetperms/fileperms")
+    dirperms=$(omv_config_get "${XPATH_RESETPERMS}dirperms")
+    fileperms=$(omv_config_get "${XPATH_RESETPERMS}fileperms")
 
     # Removes all ACLs and sticky bits
-    setfacl -rB "${sfpath}"
+    if [ "$(omv_config_get "${XPATH_RESETPERMS}clearacl")" = "1" ]; then
+        echo "Clearing ACLs ..."
+        setfacl -Rb "${sfpath}"
+    fi
 
     # Make root:users owner of the shared folder and all subdirs
-    chown root:users "${sfpath}" -R
+    echo "Changing owner to root:users ..."
+    chown -R root:users "${sfpath}"
 
     # For all folders that are inside that folder (recursively) and the folder itself
-    find "${sfpath}" -type d -print0 | xargs -0 chmod ${dirperms)
+    echo "Change directory permissions to ${dirperms} ..."
+    find "${sfpath}" -type d -exec chmod "${dirperms}" {} +
 
     # For all files that are inside that folder (recursively)
-    find "${sfpath}" -type f -print0 | xargs -0 chmod ${fileperms)
+    echo "Change file permissions to ${fileperms} ..."
+    find "${sfpath}" -type f -exec chmod "${fileperms}" {} +
 }
 
 case $2 in
