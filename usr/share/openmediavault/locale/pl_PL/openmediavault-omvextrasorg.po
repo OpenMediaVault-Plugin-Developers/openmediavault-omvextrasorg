@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-03 21:54-0600\n"
-"PO-Revision-Date: 2014-11-04 03:54+0000\n"
+"POT-Creation-Date: 2014-11-15 18:37-0600\n"
+"PO-Revision-Date: 2014-11-16 00:37+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -100,6 +100,21 @@ msgstr "Dodaj repozytorium"
 msgid "Additional Repositories"
 msgstr "Dodatkowe Repozytoria"
 
+msgid "Administrator: read/write, Users: no access, Others: no access"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read-only, Others: no access"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read-only, Others: read-only"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read/write, Others: no access"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read/write, Others: read-only"
+msgstr ""
+
 msgid "Apt Clean"
 msgstr "Apt Clean"
 
@@ -126,6 +141,12 @@ msgstr "Czyszczę pliki Apt i listy..."
 
 msgid "Cleans apt repositories and removes lists."
 msgstr "Wyczyść repozytoria apt i usuń listę."
+
+msgid "Clear ACLs"
+msgstr ""
+
+msgid "Clear all ACLs."
+msgstr ""
 
 msgid "Close"
 msgstr "Zamknij"
@@ -241,6 +262,9 @@ msgstr "Włącz repozytoria e-tobi.net"
 msgid "Enable hwraid repository"
 msgstr ""
 
+msgid "Everyone: read/write"
+msgstr ""
+
 msgid "Gluster"
 msgstr "Gluster"
 
@@ -299,7 +323,7 @@ msgstr ""
 msgid "PID"
 msgstr "PID"
 
-msgid "Paused"
+msgid "Permissions"
 msgstr ""
 
 msgid "Plex"
@@ -320,7 +344,13 @@ msgstr "Repozytorium"
 msgid "Repositories"
 msgstr "Repozytoria"
 
-msgid "Running"
+msgid "Reset Permissions"
+msgstr ""
+
+msgid "Reset folders and files to this file mode."
+msgstr ""
+
+msgid "Reset permissions ..."
 msgstr ""
 
 msgid "Secondary"
@@ -332,11 +362,11 @@ msgstr "Wyślij"
 msgid "Send Support Info"
 msgstr "Wyślij informacje wsparcia"
 
+msgid "Shared Folder"
+msgstr ""
+
 msgid "Silent"
 msgstr "Cichy"
-
-msgid "Sleeping"
-msgstr ""
 
 msgid "State"
 msgstr "Status"
@@ -387,14 +417,8 @@ msgstr "Wersja"
 msgid "Virtualbox"
 msgstr "Virtualbox"
 
-msgid "Wait"
-msgstr ""
-
 msgid "ZFS"
 msgstr "ZFS"
-
-msgid "Zombie"
-msgstr ""
 
 msgid "deb-multimedia"
 msgstr "deb-multimedia"

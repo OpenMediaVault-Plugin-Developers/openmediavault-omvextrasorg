@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-03 21:54-0600\n"
-"PO-Revision-Date: 2014-11-12 11:50+0000\n"
-"Last-Translator: Hyeonkyu Chu <hyeonkyu@gmail.com>\n"
+"POT-Creation-Date: 2014-11-15 18:37-0600\n"
+"PO-Revision-Date: 2014-11-16 00:37+0000\n"
+"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -99,6 +99,21 @@ msgstr "저장소 추가"
 msgid "Additional Repositories"
 msgstr "추가 저장소"
 
+msgid "Administrator: read/write, Users: no access, Others: no access"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read-only, Others: no access"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read-only, Others: read-only"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read/write, Others: no access"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read/write, Others: read-only"
+msgstr ""
+
 msgid "Apt Clean"
 msgstr "Apt Clean"
 
@@ -125,6 +140,12 @@ msgstr "Apt 파일 및 목록 정리 중..."
 
 msgid "Cleans apt repositories and removes lists."
 msgstr "Apt 저장소를 청소하고 목록을 제거합니다."
+
+msgid "Clear ACLs"
+msgstr ""
+
+msgid "Clear all ACLs."
+msgstr ""
 
 msgid "Close"
 msgstr "닫기"
@@ -240,6 +261,9 @@ msgstr "e-tobi.net 저장소 활성화"
 msgid "Enable hwraid repository"
 msgstr "HWRaid 저장소 활성화"
 
+msgid "Everyone: read/write"
+msgstr ""
+
 msgid "Gluster"
 msgstr "Gluster"
 
@@ -298,8 +322,8 @@ msgstr "필요한 저장소만을 활성화 하시기 바랍니다. 불필요한
 msgid "PID"
 msgstr "PID"
 
-msgid "Paused"
-msgstr "멈춘"
+msgid "Permissions"
+msgstr ""
 
 msgid "Plex"
 msgstr "Plex"
@@ -311,7 +335,7 @@ msgid "Process List"
 msgstr "프로세스 목록"
 
 msgid "Reload"
-msgstr "재 적재"
+msgstr "갱신"
 
 msgid "Repo"
 msgstr "저장소"
@@ -319,8 +343,14 @@ msgstr "저장소"
 msgid "Repositories"
 msgstr "저장소"
 
-msgid "Running"
-msgstr "실행 중"
+msgid "Reset Permissions"
+msgstr ""
+
+msgid "Reset folders and files to this file mode."
+msgstr ""
+
+msgid "Reset permissions ..."
+msgstr ""
 
 msgid "Secondary"
 msgstr "보조"
@@ -331,11 +361,11 @@ msgstr "전송"
 msgid "Send Support Info"
 msgstr "지원 정보 전송"
 
+msgid "Shared Folder"
+msgstr ""
+
 msgid "Silent"
 msgstr "조용히"
-
-msgid "Sleeping"
-msgstr "잠든"
 
 msgid "State"
 msgstr "상태"
@@ -352,7 +382,7 @@ msgstr "Testing"
 msgid ""
 "The information about available software is out-of-date. You need to reload "
 "the information about available software."
-msgstr "가용 소프트웨어에 대한 정보가 오래된 것입니다. 해당 정보를 갱신해야합니다."
+msgstr "가용 소프트웨어에 대한 정보가 오래된 것입니다.<br/>해당 정보를 갱신해야합니다."
 
 msgid ""
 "The repository will be checked for new, removed or upgraded software "
@@ -386,14 +416,8 @@ msgstr "버전"
 msgid "Virtualbox"
 msgstr "Virtualbox"
 
-msgid "Wait"
-msgstr "대기"
-
 msgid "ZFS"
 msgstr "ZFS"
-
-msgid "Zombie"
-msgstr "좀비"
 
 msgid "deb-multimedia"
 msgstr "deb-multimedia"

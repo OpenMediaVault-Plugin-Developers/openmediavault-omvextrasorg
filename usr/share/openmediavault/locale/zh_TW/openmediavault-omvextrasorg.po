@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-03 21:54-0600\n"
-"PO-Revision-Date: 2014-11-04 03:54+0000\n"
+"POT-Creation-Date: 2014-11-15 18:37-0600\n"
+"PO-Revision-Date: 2014-11-16 00:37+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -99,6 +99,21 @@ msgstr "新增套件庫"
 msgid "Additional Repositories"
 msgstr "額外的套件庫"
 
+msgid "Administrator: read/write, Users: no access, Others: no access"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read-only, Others: no access"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read-only, Others: read-only"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read/write, Others: no access"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read/write, Others: read-only"
+msgstr ""
+
 msgid "Apt Clean"
 msgstr "Apt 清理"
 
@@ -125,6 +140,12 @@ msgstr "清理 Apt 檔案和列表 ..."
 
 msgid "Cleans apt repositories and removes lists."
 msgstr "清理 apt 套件庫並移除列表。"
+
+msgid "Clear ACLs"
+msgstr ""
+
+msgid "Clear all ACLs."
+msgstr ""
 
 msgid "Close"
 msgstr "關閉"
@@ -240,6 +261,9 @@ msgstr "啟用 e-tobi.net 套件庫"
 msgid "Enable hwraid repository"
 msgstr ""
 
+msgid "Everyone: read/write"
+msgstr ""
+
 msgid "Gluster"
 msgstr "Gluster"
 
@@ -298,7 +322,7 @@ msgstr "只啟用你所需的套件庫。啟用不必要的套件庫可能讓你
 msgid "PID"
 msgstr "PID"
 
-msgid "Paused"
+msgid "Permissions"
 msgstr ""
 
 msgid "Plex"
@@ -319,7 +343,13 @@ msgstr "套件庫"
 msgid "Repositories"
 msgstr "套件庫"
 
-msgid "Running"
+msgid "Reset Permissions"
+msgstr ""
+
+msgid "Reset folders and files to this file mode."
+msgstr ""
+
+msgid "Reset permissions ..."
 msgstr ""
 
 msgid "Secondary"
@@ -331,11 +361,11 @@ msgstr "發送"
 msgid "Send Support Info"
 msgstr "發送支援資訊"
 
+msgid "Shared Folder"
+msgstr ""
+
 msgid "Silent"
 msgstr "沉默"
-
-msgid "Sleeping"
-msgstr ""
 
 msgid "State"
 msgstr "狀態"
@@ -386,14 +416,8 @@ msgstr "版本"
 msgid "Virtualbox"
 msgstr "Virtualbox"
 
-msgid "Wait"
-msgstr ""
-
 msgid "ZFS"
 msgstr "ZFS"
-
-msgid "Zombie"
-msgstr ""
 
 msgid "deb-multimedia"
 msgstr "deb-multimedia"

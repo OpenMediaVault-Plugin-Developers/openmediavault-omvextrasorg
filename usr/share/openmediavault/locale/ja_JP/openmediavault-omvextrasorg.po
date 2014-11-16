@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-03 21:54-0600\n"
-"PO-Revision-Date: 2014-11-04 04:49+0000\n"
-"Last-Translator: Toshihiro Kan <kansuke4649@gmail.com>\n"
+"POT-Creation-Date: 2014-11-15 18:37-0600\n"
+"PO-Revision-Date: 2014-11-16 00:37+0000\n"
+"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -99,6 +99,21 @@ msgstr "リポジトリの追加"
 msgid "Additional Repositories"
 msgstr "追加のリポジトリ"
 
+msgid "Administrator: read/write, Users: no access, Others: no access"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read-only, Others: no access"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read-only, Others: read-only"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read/write, Others: no access"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read/write, Others: read-only"
+msgstr ""
+
 msgid "Apt Clean"
 msgstr "APTクリーン"
 
@@ -125,6 +140,12 @@ msgstr "APTファイルとリストをクリーニングしています..."
 
 msgid "Cleans apt repositories and removes lists."
 msgstr "APTリポジトリをきれいにし、リストを削除します。"
+
+msgid "Clear ACLs"
+msgstr ""
+
+msgid "Clear all ACLs."
+msgstr ""
 
 msgid "Close"
 msgstr "閉じる"
@@ -240,6 +261,9 @@ msgstr "e-tobi.netのリポジトリを有効にする"
 msgid "Enable hwraid repository"
 msgstr "hwraidのリポジトリを有効にする"
 
+msgid "Everyone: read/write"
+msgstr ""
+
 msgid "Gluster"
 msgstr "Gluster"
 
@@ -298,8 +322,8 @@ msgstr "必要なリポジトリのみ有効にします。必要のないリポ
 msgid "PID"
 msgstr "PID"
 
-msgid "Paused"
-msgstr "一時停止"
+msgid "Permissions"
+msgstr ""
 
 msgid "Plex"
 msgstr "Plex"
@@ -319,8 +343,14 @@ msgstr "リポジトリ"
 msgid "Repositories"
 msgstr "リポジトリ"
 
-msgid "Running"
-msgstr "実行中"
+msgid "Reset Permissions"
+msgstr ""
+
+msgid "Reset folders and files to this file mode."
+msgstr ""
+
+msgid "Reset permissions ..."
+msgstr ""
 
 msgid "Secondary"
 msgstr "セカンダリ"
@@ -331,11 +361,11 @@ msgstr "送信"
 msgid "Send Support Info"
 msgstr "サポート情報を送信"
 
+msgid "Shared Folder"
+msgstr ""
+
 msgid "Silent"
 msgstr "サイレント"
-
-msgid "Sleeping"
-msgstr "スリープ"
 
 msgid "State"
 msgstr "状態"
@@ -386,14 +416,8 @@ msgstr "バージョン"
 msgid "Virtualbox"
 msgstr "Virtualbox"
 
-msgid "Wait"
-msgstr "ウェイト"
-
 msgid "ZFS"
 msgstr "ZFS"
-
-msgid "Zombie"
-msgstr "ゾンビ"
 
 msgid "deb-multimedia"
 msgstr "deb-multimedia"

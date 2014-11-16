@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-03 21:54-0600\n"
-"PO-Revision-Date: 2014-11-04 20:59+0000\n"
-"Last-Translator: okpail <okpail@gmail.com>\n"
+"POT-Creation-Date: 2014-11-15 18:37-0600\n"
+"PO-Revision-Date: 2014-11-16 00:37+0000\n"
+"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -99,6 +99,21 @@ msgstr "Repository toevoegen"
 msgid "Additional Repositories"
 msgstr "Extra verkrijgbare Repositories"
 
+msgid "Administrator: read/write, Users: no access, Others: no access"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read-only, Others: no access"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read-only, Others: read-only"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read/write, Others: no access"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read/write, Others: read-only"
+msgstr ""
+
 msgid "Apt Clean"
 msgstr "Apt Schoonmaken"
 
@@ -125,6 +140,12 @@ msgstr "Apt Files and Lijsten schoonmaken..."
 
 msgid "Cleans apt repositories and removes lists."
 msgstr "Maakt apt repositories schoon en verwijderd lijsten"
+
+msgid "Clear ACLs"
+msgstr ""
+
+msgid "Clear all ACLs."
+msgstr ""
 
 msgid "Close"
 msgstr "Sluiten"
@@ -240,6 +261,9 @@ msgstr "Schakel de e-tobi.net repository in"
 msgid "Enable hwraid repository"
 msgstr "Schakel hwraid repository in"
 
+msgid "Everyone: read/write"
+msgstr ""
+
 msgid "Gluster"
 msgstr "Gluster"
 
@@ -298,8 +322,8 @@ msgstr "Installer allen de repositories die je nodig hebt. Overbodige repositori
 msgid "PID"
 msgstr "PID"
 
-msgid "Paused"
-msgstr "Stil gezet"
+msgid "Permissions"
+msgstr ""
 
 msgid "Plex"
 msgstr "Plex"
@@ -319,8 +343,14 @@ msgstr "Repository"
 msgid "Repositories"
 msgstr "Repositories"
 
-msgid "Running"
-msgstr "Draaien"
+msgid "Reset Permissions"
+msgstr ""
+
+msgid "Reset folders and files to this file mode."
+msgstr ""
+
+msgid "Reset permissions ..."
+msgstr ""
 
 msgid "Secondary"
 msgstr "Tweede"
@@ -331,11 +361,11 @@ msgstr "Stuur"
 msgid "Send Support Info"
 msgstr "Stuur Support Info per email"
 
+msgid "Shared Folder"
+msgstr ""
+
 msgid "Silent"
 msgstr "Stil "
-
-msgid "Sleeping"
-msgstr "Slapend"
 
 msgid "State"
 msgstr "State"
@@ -386,14 +416,8 @@ msgstr "Versie"
 msgid "Virtualbox"
 msgstr "Virtualbox"
 
-msgid "Wait"
-msgstr "Wacht"
-
 msgid "ZFS"
 msgstr "ZFS"
-
-msgid "Zombie"
-msgstr "Zombie"
 
 msgid "deb-multimedia"
 msgstr "deb-multimedia"

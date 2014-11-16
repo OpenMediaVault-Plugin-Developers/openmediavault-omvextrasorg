@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-03 21:54-0600\n"
-"PO-Revision-Date: 2014-11-04 03:54+0000\n"
+"POT-Creation-Date: 2014-11-15 18:37-0600\n"
+"PO-Revision-Date: 2014-11-16 00:37+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -99,6 +99,21 @@ msgstr ""
 msgid "Additional Repositories"
 msgstr "Doplňkové repositáře"
 
+msgid "Administrator: read/write, Users: no access, Others: no access"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read-only, Others: no access"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read-only, Others: read-only"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read/write, Others: no access"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read/write, Others: read-only"
+msgstr ""
+
 msgid "Apt Clean"
 msgstr "Apt Clean"
 
@@ -125,6 +140,12 @@ msgstr "Čistím Apt soubory a seznamy..."
 
 msgid "Cleans apt repositories and removes lists."
 msgstr "Vyčistí apt repositáře a odstraní seznamy."
+
+msgid "Clear ACLs"
+msgstr ""
+
+msgid "Clear all ACLs."
+msgstr ""
 
 msgid "Close"
 msgstr "Zavřít"
@@ -240,6 +261,9 @@ msgstr "Povolit repozitář e-tobi.net"
 msgid "Enable hwraid repository"
 msgstr ""
 
+msgid "Everyone: read/write"
+msgstr ""
+
 msgid "Gluster"
 msgstr ""
 
@@ -298,7 +322,7 @@ msgstr ""
 msgid "PID"
 msgstr ""
 
-msgid "Paused"
+msgid "Permissions"
 msgstr ""
 
 msgid "Plex"
@@ -319,7 +343,13 @@ msgstr ""
 msgid "Repositories"
 msgstr "Repositáře"
 
-msgid "Running"
+msgid "Reset Permissions"
+msgstr ""
+
+msgid "Reset folders and files to this file mode."
+msgstr ""
+
+msgid "Reset permissions ..."
 msgstr ""
 
 msgid "Secondary"
@@ -331,10 +361,10 @@ msgstr ""
 msgid "Send Support Info"
 msgstr ""
 
-msgid "Silent"
+msgid "Shared Folder"
 msgstr ""
 
-msgid "Sleeping"
+msgid "Silent"
 msgstr ""
 
 msgid "State"
@@ -386,13 +416,7 @@ msgstr "Verze"
 msgid "Virtualbox"
 msgstr "Virtualbox"
 
-msgid "Wait"
-msgstr ""
-
 msgid "ZFS"
-msgstr ""
-
-msgid "Zombie"
 msgstr ""
 
 msgid "deb-multimedia"

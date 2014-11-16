@@ -3,400 +3,423 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Raul Fernandez Garcia <raulfg3@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-03 21:54-0600\n"
-"PO-Revision-Date: 2014-11-04 20:40+0000\n"
-"Last-Translator: Raul Fernandez Garcia <raulfg3@gmail.com>\n"
-"Language-Team: Spanish (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/es/)\n"
+"POT-Creation-Date: 2014-11-15 18:37-0600\n"
+"PO-Revision-Date: 2014-11-16 00:37+0000\n"
+"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
+"Language-Team: Spanish (Spain) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es\n"
+"Language: es_ES\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "% CPU"
-msgstr "% CPU"
+msgstr ""
 
 msgid "% MEM"
-msgstr "% MEM"
+msgstr ""
 
 msgid "00 Debian Version"
-msgstr "00 Versión de Debian"
+msgstr ""
 
 msgid "00 OMV Version"
-msgstr "00 Versión de OMV"
+msgstr ""
 
 msgid "10 Date"
-msgstr "10 Fecha"
+msgstr ""
 
 msgid "10 Hostname"
-msgstr "10 Hostname"
+msgstr ""
 
 msgid "10 Locale"
-msgstr "10 Idioma"
+msgstr ""
 
 msgid "10 Uptime"
-msgstr "10 Tiempo en funcionamiento"
+msgstr ""
 
 msgid "10 uname"
-msgstr "10 Nombre único - uname"
+msgstr ""
 
 msgid "20 Interfaces"
-msgstr "20 Interfaces"
+msgstr ""
 
 msgid "20 Route"
-msgstr "20 Rutas"
+msgstr ""
 
 msgid "20 iptables"
-msgstr "20 Tablas IP"
+msgstr ""
 
 msgid "20 netstat"
-msgstr "20 netstat"
+msgstr ""
 
 msgid "30 mdadm"
-msgstr "30 mdadm"
+msgstr ""
 
 msgid "30 monit"
-msgstr "30 monit"
+msgstr ""
 
 msgid "31 hpraid"
-msgstr "31 hpraid"
+msgstr ""
 
 msgid "40 Mount Info"
-msgstr "40 Información de montaje"
+msgstr ""
 
 msgid "40 Partitions"
-msgstr "40 Particiones"
+msgstr ""
 
 msgid "40 blkid"
-msgstr "40 blkid"
+msgstr ""
 
 msgid "40 df"
-msgstr "40 df"
+msgstr ""
 
 msgid "40 fstab"
-msgstr "40 fstab"
+msgstr ""
 
 msgid "50 OMV Plugins"
-msgstr "50 Plugins OMV "
+msgstr ""
 
 msgid "50 apt sources"
-msgstr "50 apt sources"
+msgstr ""
 
 msgid "50 dpkg"
-msgstr "50 dpkg"
+msgstr ""
 
 msgid "61 lsmod"
-msgstr "61 lsmod"
+msgstr ""
 
 msgid "Add repo"
-msgstr "Añadir repo"
+msgstr ""
 
 msgid "Additional Repositories"
-msgstr "Repositorios adicionales"
+msgstr ""
+
+msgid "Administrator: read/write, Users: no access, Others: no access"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read-only, Others: no access"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read-only, Others: read-only"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read/write, Others: no access"
+msgstr ""
+
+msgid "Administrator: read/write, Users: read/write, Others: read-only"
+msgstr ""
 
 msgid "Apt Clean"
-msgstr "Apt Clean"
+msgstr ""
 
 msgid "Apt Clean - Silent"
-msgstr "Apt Clean - Silencioso"
+msgstr ""
 
 msgid "Architecture"
-msgstr "Arquitectura"
+msgstr ""
 
 msgid "BTSync"
-msgstr "BTSync"
+msgstr ""
 
 msgid "Beta"
-msgstr "Beta"
+msgstr ""
 
 msgid "Can be helpful in fixing plugin problems."
-msgstr "Puede ser útil para reparar problemas de los plugin"
+msgstr ""
 
 msgid "Checking for new updates ..."
-msgstr "Buscando nuevas actualizaciones ..."
+msgstr ""
 
 msgid "Cleaning Apt Files and Lists..."
-msgstr "Limpiando archivos Apt y listas ..."
+msgstr ""
 
 msgid "Cleans apt repositories and removes lists."
-msgstr "Limpiando archivos Apt y listas ..."
+msgstr ""
+
+msgid "Clear ACLs"
+msgstr ""
+
+msgid "Clear all ACLs."
+msgstr ""
 
 msgid "Close"
-msgstr "Cerrar"
+msgstr ""
 
 msgid "Command"
-msgstr "Comando"
+msgstr ""
 
 msgid "Comment"
-msgstr "Comentario"
+msgstr ""
 
 msgid "Confirmation"
-msgstr "Confirmación"
+msgstr ""
 
 msgid "Contains plugins for setting up virtual private networks"
-msgstr "Contiene plugings para crear y configurar redes privadas virtuales"
+msgstr ""
 
 msgid ""
 "Contains various download managers for newsgroups, torrents, usenet, and "
 "streaming"
-msgstr "Contiene varios programas para manejar descargas de noticias, torrents, usenet, y video en streaming"
+msgstr ""
 
 msgid "Custom"
-msgstr "Personal"
+msgstr ""
 
 msgid "Developer"
-msgstr "Desarrollo"
+msgstr ""
 
 msgid "Developer Repositories"
-msgstr "Repositorios de desarrollo"
+msgstr ""
 
 msgid "Distribution"
-msgstr "Distribución"
+msgstr ""
 
 msgid ""
 "Do not enable this repository unless you are using the GlusterFS filesystem "
 "(uncommon)"
-msgstr "No habilitar este repositorio a menos que use el sistema de archivos GlusterFS (poco probable)"
+msgstr ""
 
 msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
-msgstr "No habilitar este repositorio , a menos que use ZFS (http://open-zfs.org)"
+msgstr ""
 
 msgid "Done..."
-msgstr "Hecho..."
+msgstr ""
 
 msgid "Dotdeb"
-msgstr "Dotdeb"
+msgstr ""
 
 msgid "Download Managers"
-msgstr "Manejadores de descargas"
+msgstr ""
 
 msgid "Downloading package information"
-msgstr "Descargando información del paquete"
+msgstr ""
 
 msgid "Edit repo"
-msgstr "Editar repo"
+msgstr ""
 
 msgid "Enable BTSync repository"
-msgstr "Habilitar repositorio BTSync"
+msgstr ""
 
 msgid "Enable Beta repository"
-msgstr "Habilitar repositorio Beta"
+msgstr ""
 
 msgid "Enable Dotdeb repository"
-msgstr "Habilitar repositorio Dotdeb"
+msgstr ""
 
 msgid "Enable Gluster repository"
-msgstr "Habilitar el repositorio GlusterFS"
+msgstr ""
 
 msgid "Enable Greyhole repository"
-msgstr "Habilitar repositorio Greyhole"
+msgstr ""
 
 msgid "Enable MariaDB 10.0 repository"
-msgstr "Habilitar el repositorio MariaDB 10.0"
+msgstr ""
 
 msgid "Enable Mono and mono-project.com repositories"
-msgstr "Habilitar repositorios Mono y mono-project.com"
+msgstr ""
 
 msgid "Enable OMV-Extras.org repository"
-msgstr "Habilitar repositorio OMV-Extras.org"
+msgstr ""
 
 msgid "Enable OMV-Extras.org testing repository (release candidates)"
-msgstr "Habilitar repositorio OMV-Extras.org testing  (release candidates)"
+msgstr ""
 
 msgid "Enable Plex Media Server repository"
-msgstr "Habilitar repositorio Plex Media Server"
+msgstr ""
 
 msgid "Enable VPN repository"
-msgstr "Habilitar repositorio VPN"
+msgstr ""
 
 msgid "Enable Virtualbox repository."
-msgstr "Habilitar repositorio VirtualBox"
+msgstr ""
 
 msgid "Enable ZFS repository"
-msgstr "Habilitar repositorio ZFS"
+msgstr ""
 
 msgid "Enable deb-multimedia backports repository"
-msgstr "Habilitar repositorio deb-multimedia backports"
+msgstr ""
 
 msgid "Enable deb-multimedia repository"
-msgstr "Habilitar repositorio deb-multimedia"
+msgstr ""
 
 msgid "Enable download managers repository"
-msgstr "Habilitar el repositorio de los manejadores de descargas"
+msgstr ""
 
 msgid "Enable download managers testing repository (release candidates)"
-msgstr "Habilitar repositorio Testing (Candidatos a version final)"
+msgstr ""
 
 msgid "Enable e-tobi.net repository"
-msgstr "Habilitar repositorio e-tobi.net"
+msgstr ""
 
 msgid "Enable hwraid repository"
-msgstr "Habilitar repositorio hwraid"
+msgstr ""
+
+msgid "Everyone: read/write"
+msgstr ""
 
 msgid "Gluster"
-msgstr "GlusterFS"
+msgstr ""
 
 msgid "Greyhole"
-msgstr "Greyhole"
+msgstr ""
 
 msgid "HWRaid"
-msgstr "HWRaid"
+msgstr ""
 
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
 "still have the option to boot the standard kernel."
-msgstr "Si el sistema no arranca usando el kernel backports, el menu de arranque mantendrá una opción de arrancar el kernel standard."
+msgstr ""
 
 msgid "Information"
-msgstr "Información"
+msgstr ""
 
 msgid "Install Backports 3.16 kernel"
-msgstr "Instalar kernel 3.16 Backports"
+msgstr ""
 
 msgid "Install Backports 3.16 kernel ..."
-msgstr "Instalar kernel 3.16 Backports ..."
+msgstr ""
 
 msgid "Install systemd"
-msgstr "Instalar systemd"
+msgstr ""
 
 msgid "Install systemd..."
-msgstr "Instalando systemd..."
+msgstr ""
 
 msgid "Kernel"
-msgstr "Kernel"
+msgstr ""
 
 msgid "Managers Testing"
-msgstr "Managers Testing"
+msgstr ""
 
 msgid "MariaDB"
-msgstr "MariaDB"
+msgstr ""
 
 msgid "Modules"
-msgstr "Módulos"
+msgstr ""
 
 msgid "Mono"
-msgstr "Mono"
+msgstr ""
 
 msgid "Name"
-msgstr "Nombre"
+msgstr ""
 
 msgid "OMV-Extras.org"
-msgstr "OMV-Extras.org"
+msgstr ""
 
 msgid ""
 "Only enable repositories you need.  Enabling unnecessary repositories can "
 "slow down your system."
-msgstr "Solo se deben habilitar los repositorios estrictamente necesarios, de lo contrario se puede ralentizar innecesariamente el sistema."
+msgstr ""
 
 msgid "PID"
-msgstr "PID"
+msgstr ""
 
-msgid "Paused"
-msgstr "Pausado"
+msgid "Permissions"
+msgstr ""
 
 msgid "Plex"
-msgstr "Plex"
+msgstr ""
 
 msgid "Primary"
-msgstr "Primario"
+msgstr ""
 
 msgid "Process List"
-msgstr "Listado proc."
+msgstr ""
 
 msgid "Reload"
-msgstr "Recargar"
+msgstr ""
 
 msgid "Repo"
-msgstr "Repositorio"
+msgstr ""
 
 msgid "Repositories"
-msgstr "Repositorios"
+msgstr ""
 
-msgid "Running"
-msgstr "Corriendo"
+msgid "Reset Permissions"
+msgstr ""
+
+msgid "Reset folders and files to this file mode."
+msgstr ""
+
+msgid "Reset permissions ..."
+msgstr ""
 
 msgid "Secondary"
-msgstr "Secundario"
+msgstr ""
 
 msgid "Send"
-msgstr "Enviar"
+msgstr ""
 
 msgid "Send Support Info"
-msgstr "Enviar info, soporte"
+msgstr ""
+
+msgid "Shared Folder"
+msgstr ""
 
 msgid "Silent"
-msgstr "Silencioso"
-
-msgid "Sleeping"
-msgstr "Durmiendo"
+msgstr ""
 
 msgid "State"
-msgstr "Estado"
+msgstr ""
 
 msgid "Support Info"
-msgstr "Info. soporte"
+msgstr ""
 
 msgid "Support Info Module Selection"
-msgstr "Selección del módulo de información de soporte."
+msgstr ""
 
 msgid "Testing"
-msgstr "Testing"
+msgstr ""
 
 msgid ""
 "The information about available software is out-of-date. You need to reload "
 "the information about available software."
-msgstr "La información acerca del software disponible esta anticuada. Necesita recargar la información del software disponible."
+msgstr ""
 
 msgid ""
 "The repository will be checked for new, removed or upgraded software "
 "packages."
-msgstr "Se revisará el repositorio en busca de paquetes nuevos, borrados, o actualizados."
+msgstr ""
 
 msgid "These repositories may break your system.  Use caution!!"
-msgstr "Estos repositorios puede dañar el sistema. Utilícelos con precaución!!!"
+msgstr ""
 
 msgid "This will not uninstall the standard kernel."
-msgstr "Esto NO desistalará el kernel standard."
+msgstr ""
 
 msgid "Update"
-msgstr "Actualización"
+msgstr ""
 
 msgid "User"
-msgstr "Usuario"
+msgstr ""
 
 msgid "Utilities"
-msgstr "Utilidades"
+msgstr ""
 
 msgid "VDR"
-msgstr "VDR"
+msgstr ""
 
 msgid "VPN"
-msgstr "VPN"
+msgstr ""
 
 msgid "Version"
-msgstr "Version"
+msgstr ""
 
 msgid "Virtualbox"
-msgstr "Virtualbox"
-
-msgid "Wait"
-msgstr "Esperando"
+msgstr ""
 
 msgid "ZFS"
-msgstr "ZFS"
-
-msgid "Zombie"
-msgstr "Zombi"
+msgstr ""
 
 msgid "deb-multimedia"
-msgstr "deb-multimedia"
+msgstr ""
 
 msgid "deb-multimedia backports"
-msgstr "deb-multimedia backports"
+msgstr ""

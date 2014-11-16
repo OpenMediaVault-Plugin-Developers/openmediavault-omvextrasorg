@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-03 21:54-0600\n"
-"PO-Revision-Date: 2014-11-04 03:54+0000\n"
+"POT-Creation-Date: 2014-11-15 18:37-0600\n"
+"PO-Revision-Date: 2014-11-16 00:37+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: English (United States) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/en_US/)\n"
 "MIME-Version: 1.0\n"
@@ -98,6 +98,21 @@ msgstr "Add repo"
 msgid "Additional Repositories"
 msgstr "Additional Repositories"
 
+msgid "Administrator: read/write, Users: no access, Others: no access"
+msgstr "Administrator: read/write, Users: no access, Others: no access"
+
+msgid "Administrator: read/write, Users: read-only, Others: no access"
+msgstr "Administrator: read/write, Users: read-only, Others: no access"
+
+msgid "Administrator: read/write, Users: read-only, Others: read-only"
+msgstr "Administrator: read/write, Users: read-only, Others: read-only"
+
+msgid "Administrator: read/write, Users: read/write, Others: no access"
+msgstr "Administrator: read/write, Users: read/write, Others: no access"
+
+msgid "Administrator: read/write, Users: read/write, Others: read-only"
+msgstr "Administrator: read/write, Users: read/write, Others: read-only"
+
 msgid "Apt Clean"
 msgstr "Apt Clean"
 
@@ -124,6 +139,12 @@ msgstr "Cleaning Apt Files and Lists..."
 
 msgid "Cleans apt repositories and removes lists."
 msgstr "Cleans apt repositories and removes lists."
+
+msgid "Clear ACLs"
+msgstr "Clear ACLs"
+
+msgid "Clear all ACLs."
+msgstr "Clear all ACLs."
 
 msgid "Close"
 msgstr "Close"
@@ -239,6 +260,9 @@ msgstr "Enable e-tobi.net repository"
 msgid "Enable hwraid repository"
 msgstr "Enable hwraid repository"
 
+msgid "Everyone: read/write"
+msgstr "Everyone: read/write"
+
 msgid "Gluster"
 msgstr "Gluster"
 
@@ -297,8 +321,8 @@ msgstr "Only enable repositories you need.  Enabling unnecessary repositories ca
 msgid "PID"
 msgstr "PID"
 
-msgid "Paused"
-msgstr "Paused"
+msgid "Permissions"
+msgstr "Permissions"
 
 msgid "Plex"
 msgstr "Plex"
@@ -318,8 +342,14 @@ msgstr "Repo"
 msgid "Repositories"
 msgstr "Repositories"
 
-msgid "Running"
-msgstr "Running"
+msgid "Reset Permissions"
+msgstr "Reset Permissions"
+
+msgid "Reset folders and files to this file mode."
+msgstr "Reset folders and files to this file mode."
+
+msgid "Reset permissions ..."
+msgstr "Reset permissions ..."
 
 msgid "Secondary"
 msgstr "Secondary"
@@ -330,11 +360,11 @@ msgstr "Send"
 msgid "Send Support Info"
 msgstr "Send Support Info"
 
+msgid "Shared Folder"
+msgstr "Shared Folder"
+
 msgid "Silent"
 msgstr "Silent"
-
-msgid "Sleeping"
-msgstr "Sleeping"
 
 msgid "State"
 msgstr "State"
@@ -385,14 +415,8 @@ msgstr "Version"
 msgid "Virtualbox"
 msgstr "Virtualbox"
 
-msgid "Wait"
-msgstr "Wait"
-
 msgid "ZFS"
 msgstr "ZFS"
-
-msgid "Zombie"
-msgstr "Zombie"
 
 msgid "deb-multimedia"
 msgstr "deb-multimedia"
