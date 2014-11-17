@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (1.0.27) stable; urgency=low
+
+  * Fix dir chmod
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 17 Nov 2014 11:13:06 -0600
+
 openmediavault-omvextrasorg (1.0.26) stable; urgency=low
 
   * Check for specific plugins to avoid permission reset

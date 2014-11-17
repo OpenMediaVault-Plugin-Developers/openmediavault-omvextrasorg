@@ -1010,12 +1010,14 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
                 $params['fileperms'] = "644";
         }
 
+        $params['dirperms'] = sprintf("2%s", $params['mode']);
+
         // Update the configuration object.
         $object = array(
             "sharedfolderref" => $params["sharedfolderref"],
             "mode"            => $params['mode'],
             "clearacl"        => array_boolval($params, 'clearacl'),
-            "dirperms"        => $params['mode'],
+            "dirperms"        => $params['dirperms'],
             "fileperms"       => $params['fileperms']
         );
         if (FALSE === $xmlConfig->replace($this->getXPathResetPerms(), $object))
