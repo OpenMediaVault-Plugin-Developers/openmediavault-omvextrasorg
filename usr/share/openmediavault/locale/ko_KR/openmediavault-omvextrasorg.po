@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-15 18:37-0600\n"
-"PO-Revision-Date: 2014-11-16 00:37+0000\n"
-"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
+"POT-Creation-Date: 2014-11-17 09:40-0600\n"
+"PO-Revision-Date: 2014-11-17 00:10+0000\n"
+"Last-Translator: Hyeonkyu Chu <hyeonkyu@gmail.com>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,19 +25,19 @@ msgid "% MEM"
 msgstr "% MEM"
 
 msgid "00 Debian Version"
-msgstr "00 데비안 버전"
+msgstr "00 Debian Version"
 
 msgid "00 OMV Version"
-msgstr "00 OMV 버전"
+msgstr "00 OMV Version"
 
 msgid "10 Date"
 msgstr "10 일시"
 
 msgid "10 Hostname"
-msgstr "10 호스트 이름"
+msgstr "10 Hostname"
 
 msgid "10 Locale"
-msgstr "10 언어-지역"
+msgstr "10 지역"
 
 msgid "10 Uptime"
 msgstr "10 가동 시간"
@@ -67,10 +67,10 @@ msgid "31 hpraid"
 msgstr "31 hpraid"
 
 msgid "40 Mount Info"
-msgstr "40 마운트 정보"
+msgstr "40 Mount Info"
 
 msgid "40 Partitions"
-msgstr "40 파티션"
+msgstr "40 Partitions"
 
 msgid "40 blkid"
 msgstr "40 blkid"
@@ -82,7 +82,7 @@ msgid "40 fstab"
 msgstr "40 fstab"
 
 msgid "50 OMV Plugins"
-msgstr "50 OMV 플러그인"
+msgstr "50 OMV Plugins"
 
 msgid "50 apt sources"
 msgstr "50 apt sources"
@@ -100,25 +100,25 @@ msgid "Additional Repositories"
 msgstr "추가 저장소"
 
 msgid "Administrator: read/write, Users: no access, Others: no access"
-msgstr ""
+msgstr "관리자: 읽기/쓰기,　사용자: 접근 금지,　기타: 접근 금지"
 
 msgid "Administrator: read/write, Users: read-only, Others: no access"
-msgstr ""
+msgstr "관리자: 읽기/쓰기,　사용자: 읽기-전용,　기타: 접근 금지"
 
 msgid "Administrator: read/write, Users: read-only, Others: read-only"
-msgstr ""
+msgstr "관리자: 읽기/쓰기,　사용자: 읽기-전용,　기타: 읽기-전용"
 
 msgid "Administrator: read/write, Users: read/write, Others: no access"
-msgstr ""
+msgstr "관리자: 읽기/쓰기,　사용자: 읽기/쓰기,　기타: 접근 금지"
 
 msgid "Administrator: read/write, Users: read/write, Others: read-only"
-msgstr ""
+msgstr "관리자: 읽기/쓰기,　사용자: 읽기/쓰기,　기타: 읽기-전용"
 
 msgid "Apt Clean"
-msgstr "Apt Clean"
+msgstr "Apt 정리"
 
 msgid "Apt Clean - Silent"
-msgstr "Apt Clean - 조용히"
+msgstr "Apt 정리 - 조용히"
 
 msgid "Architecture"
 msgstr "아키텍처"
@@ -139,13 +139,13 @@ msgid "Cleaning Apt Files and Lists..."
 msgstr "Apt 파일 및 목록 정리 중..."
 
 msgid "Cleans apt repositories and removes lists."
-msgstr "Apt 저장소를 청소하고 목록을 제거합니다."
+msgstr "Apt 저장소를 정리하고 목록을 제거합니다."
 
 msgid "Clear ACLs"
-msgstr ""
+msgstr "ACLs 초기화"
 
 msgid "Clear all ACLs."
-msgstr ""
+msgstr "모든 ACLs 초기화."
 
 msgid "Close"
 msgstr "닫기"
@@ -182,12 +182,12 @@ msgstr "배포"
 msgid ""
 "Do not enable this repository unless you are using the GlusterFS filesystem "
 "(uncommon)"
-msgstr "GlusterFS 파일-시스템을 사용하지 않는 경우, 이 저장소를 사용하지 마십시오 (흔히 쓰이는 것이 아님) "
+msgstr "GlusterFS 파일 시스템을 사용하지 않는 경우, 이 저장소를 사용하지 마십시오 (흔히 쓰이는 것이 아님) "
 
 msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
-msgstr "ZFS 파일-시스템을 사용하지 않는 경우, 이 저장소를 사용하지 마십시오 (흔히 쓰이는 것이 아님)"
+msgstr "ZFS 파일 시스템을 사용하지 않는 경우, 이 저장소를 사용하지 마십시오 (흔히 쓰이는 것이 아님)"
 
 msgid "Done..."
 msgstr "완료..."
@@ -262,7 +262,7 @@ msgid "Enable hwraid repository"
 msgstr "HWRaid 저장소 활성화"
 
 msgid "Everyone: read/write"
-msgstr ""
+msgstr "누구나: 읽기/쓰기"
 
 msgid "Gluster"
 msgstr "Gluster"
@@ -303,7 +303,7 @@ msgid "MariaDB"
 msgstr "MariaDB"
 
 msgid "Modules"
-msgstr "단위-기능"
+msgstr "단위"
 
 msgid "Mono"
 msgstr "Mono"
@@ -323,7 +323,7 @@ msgid "PID"
 msgstr "PID"
 
 msgid "Permissions"
-msgstr ""
+msgstr "권한"
 
 msgid "Plex"
 msgstr "Plex"
@@ -344,13 +344,13 @@ msgid "Repositories"
 msgstr "저장소"
 
 msgid "Reset Permissions"
-msgstr ""
+msgstr "권한 재설정"
 
 msgid "Reset folders and files to this file mode."
-msgstr ""
+msgstr "이 파일 상태로 폴더와 파일을 재설정합니다."
 
 msgid "Reset permissions ..."
-msgstr ""
+msgstr "권한 재설정 ..."
 
 msgid "Secondary"
 msgstr "보조"
@@ -362,7 +362,7 @@ msgid "Send Support Info"
 msgstr "지원 정보 전송"
 
 msgid "Shared Folder"
-msgstr ""
+msgstr "공유 폴더"
 
 msgid "Silent"
 msgstr "조용히"
@@ -374,7 +374,7 @@ msgid "Support Info"
 msgstr "지원 정보"
 
 msgid "Support Info Module Selection"
-msgstr "지원 정보 단위-기능 선택"
+msgstr "지원 정보　단위 선택"
 
 msgid "Testing"
 msgstr "Testing"
@@ -402,7 +402,7 @@ msgid "User"
 msgstr "사용자"
 
 msgid "Utilities"
-msgstr "도구들"
+msgstr "도구"
 
 msgid "VDR"
 msgstr "VDR"
