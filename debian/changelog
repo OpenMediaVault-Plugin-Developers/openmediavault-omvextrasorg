@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (1.0.26) stable; urgency=low
+
+  * Check for specific plugins to avoid permission reset
+  * Update locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 17 Nov 2014 09:40:20 -0600
+
 openmediavault-omvextrasorg (1.0.25) stable; urgency=low
 
   * Add shared folder permission reset tab

@@ -1309,11 +1309,67 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
     public function doResetPerms($params, $context)
     {
+        global $xmlConfig;
+
         // Validate the RPC caller context.
         $this->validateMethodContext(
             $context,
             array( "role" => OMV_ROLE_ADMINISTRATOR )
         );
+
+        // Get the configuration object.
+        $object = $xmlConfig->get( $this->getXPathResetPerms() );
+        if (is_null($object))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
+                $this->getXPathResetPerms()
+            );
+        }
+
+        // Check to see if shared folder is used by certain plugins
+        $pluginCheck = array();
+
+        $pluginCheck[] = array(
+            "xpath"        => "//services/calibre",
+            "sharedfolder" => "data.sharedfolderref",
+            "msg"          => "Calibre"
+        );
+
+        $pluginCheck[] = array(
+            "xpath"        => "//services/developer",
+            "sharedfolder" => "sharedfolderref",
+            "msg"          => "Developer"
+        );
+
+        $pluginCheck[] = array(
+            "xpath"        => "//services/mysql",
+            "sharedfolder" => "data.sharedfolderref",
+            "msg"          => "MySQL"
+        );
+
+        $pluginCheck[] = array(
+            "xpath"        => "//services/virtualbox",
+            "sharedfolder" => "machines.sharedfolderref",
+            "msg"          => "Virtualbox"
+        );
+
+
+        foreach($pluginCheck as $plugin)
+        {
+            $objectMysql = $xmlConfig->get($plugin['xpath']);
+            if ( !is_null($objectMysql))
+            {
+                $xPath = sprintf("%s[%s='%s']", $plugin['xpath'], $plugin['sharedfolder'], $object['sharedfolderref']);
+                if (TRUE === $xmlConfig->exists($xPath))
+                {
+                    throw new OMVException(
+                        OMVErrorMsg::E_MISC_FAILURE,
+                        gettext(sprintf("Permissions for the %s data directory cannot be reset.", $plugin['msg']))
+                    );
+                }
+            }
+        }
 
         // Create a background process.
         $bgStatusFilename = $this->createBgProcStatus();
