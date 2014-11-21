@@ -259,15 +259,16 @@ EOF
         # add large zfsonlinux key and linux-headers necessary for zfs module compilation
         apt-key adv --keyserver pgp.mit.edu --recv-keys 4D5843EA
         apt-key adv --keyserver pgp.mit.edu --recv-keys 8E234FB17DFFA34D
-        if [ ! "${conf}" = "configure" ]; then
-            apt-get --yes --force-yes --fix-missing install linux-headers-$(uname -r) || :
-        fi
+        case ${conf} in
+            configure) ;;
+            *)  apt-get --yes --force-yes --fix-missing install linux-headers-$(uname -r) || : ;;
+        esac
         echo "# ZFS repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${REPO_URL} ${OMVVERSION}-zfs main" >> ${OMVEXTRASREPOFILE}
         echo "deb http://archive.zfsonlinux.org/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
-Pin: release o=archive.zfsonlinux.org
+Pin: release n=${RELEASE}, origin archive.zfsonlinux.org
 Pin-Priority: 400
 
 EOF
@@ -326,6 +327,8 @@ Pin: release n=${OMVVERSION}-backports, origin ${REPO_LOCATION}
 Pin-Priority: 995
 
 EOF
+
+    chmod 644 ${OMVEXTRASAPTPREFS}
 
     # Process custom repos
     echo "# Custom repos" > ${OMVEXTRASCUSTOMREPOFILE}
