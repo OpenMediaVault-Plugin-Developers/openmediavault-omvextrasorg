@@ -1,9 +1,9 @@
-openmediavault-omvextrasorg (1.1) UNRELEASED; urgency=low
+openmediavault-omvextrasorg (1.1) stable; urgency=low
 
   * Minor improvements
   * update locales
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 22 Nov 2014 09:08:03 -0600
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 22 Nov 2014 09:37:56 -0600
 
 openmediavault-omvextrasorg (1.0.28) stable; urgency=low
 
