@@ -349,6 +349,8 @@ EOF
 
 aptclean()
 {
+    export LANG=C
+
     echo "1. Cleaning apt cache files..."
     /usr/bin/apt-get clean
 
@@ -370,6 +372,9 @@ aptclean()
 
 systemd()
 {
+    export LANG=C
+    export DEBIAN_FRONTEND=noninteractive
+
     DEFAULTGRUB="/etc/default/grub"
     BACKUPDEFAULTGRUB="/root/default_grub"
 
@@ -389,6 +394,9 @@ systemd()
 
 backports()
 {
+    export LANG=C
+    export DEBIAN_FRONTEND=noninteractive
+
     BACKPORTS_REPO="/etc/apt/sources.list.d/backports.list"
     SKIP=false
     AMD64=false
@@ -440,6 +448,8 @@ backports()
 
 support()
 {
+    export LANG=C
+
     SYSINFO=$(</dev/urandom tr -dc "A-Za-z0-9" | head -c8)
     BATCH="sftp_batch"
 
@@ -476,6 +486,8 @@ support()
 
 resetperms()
 {
+    export LANG=C
+
     XPATH_RESETPERMS="${XPATH}resetperms/"
     sfref=$(omv_config_get "${XPATH_RESETPERMS}sharedfolderref")
     sfpath=$(omv_get_sharedfolder_path "${sfref}")

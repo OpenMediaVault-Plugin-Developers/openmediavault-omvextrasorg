@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (1.1) UNRELEASED; urgency=low
+
+  * Minor improvements
+  * update locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 22 Nov 2014 09:08:03 -0600
+
 openmediavault-omvextrasorg (1.0.28) stable; urgency=low
 
   * Fix header install for zfs

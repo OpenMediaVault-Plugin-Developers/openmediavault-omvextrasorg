@@ -165,7 +165,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         // Get omv-extras version
         $output = array();
-        $cmd = sprintf( "dpkg-query -W -f='\${Version}' openmediavault-%s", $this->getPluginName() );
+        $cmd = sprintf( "export LANG=C; dpkg-query -W -f='\${Version}' openmediavault-%s", $this->getPluginName() );
         OMVUtil::exec($cmd, $output, $result);
         $object['version'] = $output[0];
 
@@ -174,7 +174,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         // Get architecture
         $output = array();
-        $cmd = "dpkg --print-architecture";
+        $cmd = "export LANG=C; dpkg --print-architecture";
         OMVUtil::exec($cmd, $output, $result);
         $object['arch'] = strtolower( $output[0] );
 
