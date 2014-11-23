@@ -8,7 +8,7 @@ Homepage: http://omv-extras.org/simple/index.php?id=how-to-install-omv-extras-pl
 
 Package: openmediavault-omvextrasorg
 Architecture: all
-Depends: ${misc:Depends}, openmediavault (>= 1.0.27.3)
+Depends: ${misc:Depends}, openmediavault (>= 1.0.31), apt-transport-https
 Conflicts: openmediavault-processlist, openmediavault-supportinfo
 Description: OMV-Extras.org Package Repositories for OpenMediaVault
  Allows enabling of multiple repositories hosted by omv-extras.org.
