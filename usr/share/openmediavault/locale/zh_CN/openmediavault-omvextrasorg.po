@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-22 19:31-0600\n"
-"PO-Revision-Date: 2014-11-23 01:31+0000\n"
-"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
+"PO-Revision-Date: 2014-11-23 02:31+0000\n"
+"Last-Translator: songming <by@songming.me>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -64,7 +64,7 @@ msgid "30 monit"
 msgstr ""
 
 msgid "31 hpraid"
-msgstr ""
+msgstr "31 hpraid"
 
 msgid "40 Mount Info"
 msgstr "40挂载信息"
@@ -100,19 +100,19 @@ msgid "Additional Repositories"
 msgstr "额外源"
 
 msgid "Administrator: read/write, Users: no access, Others: no access"
-msgstr ""
+msgstr "管理员：读/写，用户：无权限，其它：无权限"
 
 msgid "Administrator: read/write, Users: read-only, Others: no access"
-msgstr ""
+msgstr "管理员：读/写，用户：只读，其它：无权限"
 
 msgid "Administrator: read/write, Users: read-only, Others: read-only"
-msgstr ""
+msgstr "管理员：读/写，用户：只读，其它：只读"
 
 msgid "Administrator: read/write, Users: read/write, Others: no access"
-msgstr ""
+msgstr "管理员：读/写，用户：读/写，其它：无权限"
 
 msgid "Administrator: read/write, Users: read/write, Others: read-only"
-msgstr ""
+msgstr "管理员：读/写，用户：读/写，其它：读/写"
 
 msgid "Apt Clean"
 msgstr "清除APT缓存"
@@ -142,10 +142,10 @@ msgid "Cleans apt repositories and removes lists."
 msgstr "清除apt源并移除源列表。"
 
 msgid "Clear ACLs"
-msgstr ""
+msgstr "清除ACLs"
 
 msgid "Clear all ACLs."
-msgstr ""
+msgstr "清除所有ACLs。"
 
 msgid "Close"
 msgstr "关闭"
@@ -223,7 +223,7 @@ msgid "Enable MariaDB 10.0 repository"
 msgstr "启用MariaDB 10.0源"
 
 msgid "Enable Mono Testing repository"
-msgstr ""
+msgstr "启用Mono Testing源"
 
 msgid "Enable Mono and mono-project.com repositories"
 msgstr "启用Mono and mono-project.com源"
@@ -265,7 +265,7 @@ msgid "Enable hwraid repository"
 msgstr "启用hwraid源"
 
 msgid "Everyone: read/write"
-msgstr ""
+msgstr "任何人：读/写"
 
 msgid "Gluster"
 msgstr "Gluster"
@@ -312,7 +312,7 @@ msgid "Mono"
 msgstr "Mono"
 
 msgid "Mono Testing"
-msgstr ""
+msgstr "Mono Testing"
 
 msgid "Name"
 msgstr "名称"
@@ -329,7 +329,7 @@ msgid "PID"
 msgstr "PID"
 
 msgid "Permissions"
-msgstr ""
+msgstr "权限"
 
 msgid "Plex"
 msgstr "Plex"
@@ -350,13 +350,13 @@ msgid "Repositories"
 msgstr "源"
 
 msgid "Reset Permissions"
-msgstr ""
+msgstr "重设权限"
 
 msgid "Reset folders and files to this file mode."
-msgstr ""
+msgstr "该模式将重设文件夹和文件。"
 
 msgid "Reset permissions ..."
-msgstr ""
+msgstr "重设权限中 ..."
 
 msgid "Secondary"
 msgstr "附加选项"
@@ -368,7 +368,7 @@ msgid "Send Support Info"
 msgstr "发送支持信息"
 
 msgid "Shared Folder"
-msgstr ""
+msgstr "共享文件夹"
 
 msgid "Silent"
 msgstr "后台"
