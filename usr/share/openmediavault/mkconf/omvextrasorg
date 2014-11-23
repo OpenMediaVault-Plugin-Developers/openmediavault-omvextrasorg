@@ -319,6 +319,7 @@ EOF
     if [ "$(omv_config_get "${XPATH}monotesting")" = "1" ]; then
         echo "# mono testing repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${REPO_URL} ${OMVVERSION}-mono-testing main" >> ${OMVEXTRASREPOFILE}
+        echo "deb https://apt.sonarr.tv/ develop main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-mono-testing, origin ${REPO_LOCATION}
