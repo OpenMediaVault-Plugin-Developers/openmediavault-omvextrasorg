@@ -239,6 +239,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "zfs"           => array_boolval($oldObject, 'zfs'),
             "gluster"       => array_boolval($oldObject, 'gluster'),
             "mono"          => array_boolval($oldObject, 'mono'),
+            "monotesting"   => array_boolval($oldObject, 'monotesting'),
             "hwraid"        => array_boolval($oldObject, 'hwraid'),
             "beta"          => array_boolval($oldObject, 'beta'),
             "dotdeb"        => array_boolval($oldObject, 'dotdeb'),
@@ -311,6 +312,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $object['zfs']           = boolval($object['zfs']);
         $object['gluster']       = boolval($object['gluster']);
         $object['mono']          = boolval($object['mono']);
+        $object['monotesting']   = boolval($object['monotesting']);
         $object['hwraid']        = boolval($object['hwraid']);
 
         // Remove useless fields from the result object.
@@ -346,6 +348,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
                 "zfs"           : { "type" : "boolean" },
                 "gluster"       : { "type" : "boolean" },
                 "mono"          : { "type" : "boolean" },
+                "monotesting"   : { "type" : "boolean" },
                 "hwraid"        : { "type" : "boolean" }
             }
         }');
@@ -357,13 +360,17 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
              strpos($uname, "486") === false &&
              strpos($uname, "686") === false )
         {
-            $params['vbox']   = false;
-            $params['plex']   = false;
-            $params['vdr']    = false;
-            $params['vpn']    = false;
-            $params['mono']   = false;
-            $params['hwraid'] = false;
+            $params['vbox']        = false;
+            $params['plex']        = false;
+            $params['vdr']         = false;
+            $params['vpn']         = false;
+            $params['mono']        = false;
+            $params['monotesting'] = false;
+            $params['hwraid']      = false;
         }
+
+        if ( boolval($params['monotesting']) === true )
+            $params['mono'] = true;
 
         if ( strpos($uname, "amd64") === false )
         {
@@ -397,6 +404,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "zfs"           => array_boolval($params, 'zfs'),
             "gluster"       => array_boolval($params, 'gluster'),
             "mono"          => array_boolval($params, 'mono'),
+            "monotesting"   => array_boolval($params, 'monotesting'),
             "hwraid"        => array_boolval($params, 'hwraid'),
             "beta"          => array_boolval($oldObject, 'beta'),
             "dotdeb"        => array_boolval($oldObject, 'dotdeb'),
@@ -674,6 +682,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "zfs"           => array_boolval($oldObject, 'zfs'),
             "gluster"       => array_boolval($oldObject, 'gluster'),
             "mono"          => array_boolval($oldObject, 'mono'),
+            "monotesting"   => array_boolval($oldObject, 'monotesting'),
             "hwraid"        => array_boolval($oldObject, 'hwraid'),
             "beta"          => array_boolval($params, 'beta'),
             "dotdeb"        => array_boolval($params, 'dotdeb'),

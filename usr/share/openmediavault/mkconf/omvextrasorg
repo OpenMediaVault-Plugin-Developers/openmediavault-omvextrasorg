@@ -315,6 +315,18 @@ Pin-Priority: 995
 EOF
     fi
 
+    # omv-extras mono testing
+    if [ "$(omv_config_get "${XPATH}monotesting")" = "1" ]; then
+        echo "# mono testing repo" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${REPO_URL} ${OMVVERSION}-mono-testing main" >> ${OMVEXTRASREPOFILE}
+        cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-mono-testing, origin ${REPO_LOCATION}
+Pin-Priority: 997
+
+EOF
+    fi
+
     # omv-extras hwraid
     if [ "$(omv_config_get "${XPATH}hwraid")" = "1" ]; then
         echo "# hwraid repo" >> ${OMVEXTRASREPOFILE}

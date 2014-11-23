@@ -152,6 +152,12 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Secondary", {
                 checked    : false
             },{
                 xtype      : "checkbox",
+                name       : "monotesting",
+                fieldLabel : _("Mono Testing"),
+                boxLabel   : _("Enable Mono Testing repository"),
+                checked    : false
+            },{
+                xtype      : "checkbox",
                 name       : "hwraid",
                 fieldLabel : _("HWRaid"),
                 boxLabel   : _("Enable hwraid repository"),

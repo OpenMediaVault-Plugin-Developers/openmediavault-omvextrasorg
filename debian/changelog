@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (1.1.2) stable; urgency=low
+
+  * Add mono testing repo
+  * Update locales
+  
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 22 Nov 2014 19:28:57 -0600
+
 openmediavault-omvextrasorg (1.1.1) stable; urgency=low
 
   * Add nzbdrone repo
