@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-17 09:40-0600\n"
-"PO-Revision-Date: 2014-11-16 00:37+0000\n"
+"POT-Creation-Date: 2014-11-22 19:31-0600\n"
+"PO-Revision-Date: 2014-11-23 01:31+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -224,6 +224,9 @@ msgstr "Включить Greyhole репозиторий"
 msgid "Enable MariaDB 10.0 repository"
 msgstr ""
 
+msgid "Enable Mono Testing repository"
+msgstr ""
+
 msgid "Enable Mono and mono-project.com repositories"
 msgstr ""
 
@@ -308,6 +311,9 @@ msgid "Modules"
 msgstr ""
 
 msgid "Mono"
+msgstr ""
+
+msgid "Mono Testing"
 msgstr ""
 
 msgid "Name"

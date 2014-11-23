@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-17 09:40-0600\n"
-"PO-Revision-Date: 2014-11-16 01:50+0000\n"
-"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
+"POT-Creation-Date: 2014-11-22 19:31-0600\n"
+"PO-Revision-Date: 2014-11-23 01:31+0000\n"
+"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -226,6 +226,9 @@ msgstr "Greyhole-Paketquelle aktivieren"
 msgid "Enable MariaDB 10.0 repository"
 msgstr "MariaDB 10.0-Paketquelle aktivieren"
 
+msgid "Enable Mono Testing repository"
+msgstr ""
+
 msgid "Enable Mono and mono-project.com repositories"
 msgstr "Mono- und mono-project.com-Paketquelle aktivieren"
 
@@ -311,6 +314,9 @@ msgstr "Module"
 
 msgid "Mono"
 msgstr "Mono"
+
+msgid "Mono Testing"
+msgstr ""
 
 msgid "Name"
 msgstr "Name"
