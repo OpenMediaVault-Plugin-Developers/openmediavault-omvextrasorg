@@ -45,165 +45,165 @@ Ext.define("OMV.module.admin.diagnostic.system.ModuleSelect", {
         return [{
             xtype: "compositefield",
             items: [{
-                xtype      : "checkbox",
-                name       : "debian-version",
-                boxLabel   : _("00 Debian Version"),
-                checked    : true,
-                width      : 160
+                xtype    : "checkbox",
+                name     : "debian-version",
+                boxLabel : _("00 Debian Version"),
+                checked  : true,
+                width    : 160
             },{
-                xtype      : "checkbox",
-                name       : "monit",
-                boxLabel   : _("30 monit"),
-                checked    : false
+                xtype    : "checkbox",
+                name     : "monit",
+                boxLabel : _("30 monit"),
+                checked  : false
             }]
         },{
             xtype: "compositefield",
             items: [{
-                xtype      : "checkbox",
-                name       : "omv-version",
-                boxLabel   : _("00 OMV Version"),
-                checked    : true,
-                width      : 160
+                xtype    : "checkbox",
+                name     : "omv-version",
+                boxLabel : _("00 OMV Version"),
+                checked  : true,
+                width    : 160
             },{
-                xtype      : "checkbox",
-                name       : "hpraid",
-                boxLabel   : _("31 hpraid"),
-                checked    : false
+                xtype    : "checkbox",
+                name     : "hpraid",
+                boxLabel : _("31 hpraid"),
+                checked  : false
             }]
         },{
             xtype: "compositefield",
             items: [{
-                xtype      : "checkbox",
-                name       : "date",
-                boxLabel   : _("10 Date"),
-                checked    : true,
-                width      : 160
+                xtype    : "checkbox",
+                name     : "date",
+                boxLabel : _("10 Date"),
+                checked  : true,
+                width    : 160
             },{
-                xtype      : "checkbox",
-                name       : "blkid",
-                boxLabel   : _("40 blkid"),
-                checked    : true
+                xtype    : "checkbox",
+                name     : "blkid",
+                boxLabel : _("40 blkid"),
+                checked  : true
             }]
         },{
             xtype: "compositefield",
             items: [{
-                xtype      : "checkbox",
-                name       : "hostname",
-                boxLabel   : _("10 Hostname"),
-                checked    : false,
-                width      : 160
+                xtype    : "checkbox",
+                name     : "hostname",
+                boxLabel : _("10 Hostname"),
+                checked  : false,
+                width    : 160
             },{
-                xtype      : "checkbox",
-                name       : "df",
-                boxLabel   : _("40 df"),
-                checked    : true
+                xtype    : "checkbox",
+                name     : "df",
+                boxLabel : _("40 df"),
+                checked  : true
             }]
         },{
             xtype: "compositefield",
             items: [{
-                xtype      : "checkbox",
-                name       : "locale",
-                boxLabel   : _("10 Locale"),
-                checked    : true,
-                width      : 160
+                xtype    : "checkbox",
+                name     : "locale",
+                boxLabel : _("10 Locale"),
+                checked  : true,
+                width    : 160
             },{
-                xtype      : "checkbox",
-                name       : "fstab",
-                boxLabel   : _("40 fstab"),
-                checked    : true
+                xtype    : "checkbox",
+                name     : "fstab",
+                boxLabel : _("40 fstab"),
+                checked  : true
             }]
         },{
             xtype: "compositefield",
             items: [{
-                xtype      : "checkbox",
-                name       : "uname",
-                boxLabel   : _("10 uname"),
-                checked    : true,
-                width      : 160
+                xtype    : "checkbox",
+                name     : "uname",
+                boxLabel : _("10 uname"),
+                checked  : true,
+                width    : 160
             },{
-                xtype      : "checkbox",
-                name       : "mountinfo",
-                boxLabel   : _("40 Mount Info"),
-                checked    : true
+                xtype    : "checkbox",
+                name     : "mountinfo",
+                boxLabel : _("40 Mount Info"),
+                checked  : true
             }]
         },{
             xtype: "compositefield",
             items: [{
-                xtype      : "checkbox",
-                name       : "uptime",
-                boxLabel   : _("10 Uptime"),
-                checked    : true,
-                width      : 160
+                xtype    : "checkbox",
+                name     : "uptime",
+                boxLabel : _("10 Uptime"),
+                checked  : true,
+                width    : 160
             },{
-                xtype      : "checkbox",
-                name       : "partitions",
-                boxLabel   : _("40 Partitions"),
-                checked    : true
+                xtype    : "checkbox",
+                name     : "partitions",
+                boxLabel : _("40 Partitions"),
+                checked  : true
             }]
         },{
             xtype: "compositefield",
             items: [{
-                xtype      : "checkbox",
-                name       : "interfaces",
-                boxLabel   : _("20 Interfaces"),
-                checked    : true,
-                width      : 160
+                xtype    : "checkbox",
+                name     : "interfaces",
+                boxLabel : _("20 Interfaces"),
+                checked  : true,
+                width    : 160
             },{
-                xtype      : "checkbox",
-                name       : "apt-sources",
-                boxLabel   : _("50 apt sources"),
-                checked    : true
+                xtype    : "checkbox",
+                name     : "apt-sources",
+                boxLabel : _("50 apt sources"),
+                checked  : true
             }]
         },{
             xtype: "compositefield",
             items: [{
-                xtype      : "checkbox",
-                name       : "iptables",
-                boxLabel   : _("20 iptables"),
-                checked    : false,
-                width      : 160
+                xtype    : "checkbox",
+                name     : "iptables",
+                boxLabel : _("20 iptables"),
+                checked  : false,
+                width    : 160
             },{
-                xtype      : "checkbox",
-                name       : "dpkg",
-                boxLabel   : _("50 dpkg"),
-                checked    : false
+                xtype    : "checkbox",
+                name     : "dpkg",
+                boxLabel : _("50 dpkg"),
+                checked  : false
             }]
         },{
             xtype: "compositefield",
             items: [{
-                xtype      : "checkbox",
-                name       : "netstat",
-                boxLabel   : _("20 netstat"),
-                checked    : false,
-                width      : 160
+                xtype    : "checkbox",
+                name     : "netstat",
+                boxLabel : _("20 netstat"),
+                checked  : false,
+                width    : 160
             },{
-                xtype      : "checkbox",
-                name       : "omv-plugins",
-                boxLabel   : _("50 OMV Plugins"),
-                checked    : true
+                xtype    : "checkbox",
+                name     : "omv-plugins",
+                boxLabel : _("50 OMV Plugins"),
+                checked  : true
             }]
         },{
             xtype: "compositefield",
             items: [{
-                xtype      : "checkbox",
-                name       : "route",
-                boxLabel   : _("20 Route"),
-                checked    : true,
-                width      : 160
+                xtype    : "checkbox",
+                name     : "route",
+                boxLabel : _("20 Route"),
+                checked  : true,
+                width    : 160
             },{
-                xtype      : "checkbox",
-                name       : "lsmod",
-                boxLabel   : _("61 lsmod"),
-                checked    : true
+                xtype    : "checkbox",
+                name     : "lsmod",
+                boxLabel : _("61 lsmod"),
+                checked  : true
             }]
         },{
             xtype: "compositefield",
             items: [{
-                xtype      : "checkbox",
-                name       : "mdadm",
-                boxLabel   : _("30 mdadm"),
-                checked    : true,
-                width      : 160
+                xtype    : "checkbox",
+                name     : "mdadm",
+                boxLabel : _("30 mdadm"),
+                checked  : true,
+                width    : 160
             }]
         }];
     }
@@ -234,13 +234,13 @@ Ext.define("OMV.module.admin.diagnostic.system.SupportInfo", {
         var items = me.callParent(arguments);
 
         items.push({
-            id       : me.getId() + "-send",
-            xtype    : "button",
-            text     : _("Send"),
-            icon     : "images/mail.png",
-            iconCls  : Ext.baseCSSPrefix + "btn-icon-16x16",
-            handler  : Ext.Function.bind(me.onSendButton, me, [ me ]),
-            scope    : me
+            id      : me.getId() + "-send",
+            xtype   : "button",
+            text    : _("Send"),
+            icon    : "images/mail.png",
+            iconCls : Ext.baseCSSPrefix + "btn-icon-16x16",
+            handler : Ext.Function.bind(me.onSendButton, me, [ me ]),
+            scope   : me
         },{
             id            : me.getId() + "-info",
             xtype         : "combo",
@@ -275,13 +275,13 @@ Ext.define("OMV.module.admin.diagnostic.system.SupportInfo", {
             },
             value : me.info
         },{
-            id       : me.getId() + "-modules",
-            xtype    : "button",
-            text     : _("Modules"),
-            icon     : "images/grid.png",
-            iconCls  : Ext.baseCSSPrefix + "btn-icon-16x16",
-            handler  : Ext.Function.bind(me.onModulesButton, me, [ me ]),
-            scope    : me
+            id      : me.getId() + "-modules",
+            xtype   : "button",
+            text    : _("Modules"),
+            icon    : "images/grid.png",
+            iconCls : Ext.baseCSSPrefix + "btn-icon-16x16",
+            handler : Ext.Function.bind(me.onModulesButton, me, [ me ]),
+            scope   : me
         });
         return items;
     },
