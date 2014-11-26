@@ -27,6 +27,7 @@
 Ext.define("OMV.module.admin.diagnostic.system.ModuleSelect", {
     extend : "OMV.workspace.window.Form",
     uses   : [
+        "OMV.form.CompositeField",
         "OMV.workspace.window.plugin.ConfigObject"
     ],
 
@@ -36,123 +37,174 @@ Ext.define("OMV.module.admin.diagnostic.system.ModuleSelect", {
 
     hideResetButton : true,
 
+    height : 400,
+    width  : 350,
+
     getFormItems : function() {
         var me = this;
         return [{
-            xtype      : "checkbox",
-            name       : "debian-version",
-            fieldLabel : _("00 Debian Version"),
-            checked    : true
+            xtype: "compositefield",
+            items: [{
+                xtype      : "checkbox",
+                name       : "debian-version",
+                boxLabel   : _("00 Debian Version"),
+                checked    : true,
+                width      : 160
+            },{
+                xtype      : "checkbox",
+                name       : "monit",
+                boxLabel   : _("30 monit"),
+                checked    : false
+            }]
         },{
-            xtype      : "checkbox",
-            name       : "omv-version",
-            fieldLabel : _("00 OMV Version"),
-            checked    : true
+            xtype: "compositefield",
+            items: [{
+                xtype      : "checkbox",
+                name       : "omv-version",
+                boxLabel   : _("00 OMV Version"),
+                checked    : true,
+                width      : 160
+            },{
+                xtype      : "checkbox",
+                name       : "hpraid",
+                boxLabel   : _("31 hpraid"),
+                checked    : false
+            }]
         },{
-            xtype      : "checkbox",
-            name       : "date",
-            fieldLabel : _("10 Date"),
-            checked    : true
+            xtype: "compositefield",
+            items: [{
+                xtype      : "checkbox",
+                name       : "date",
+                boxLabel   : _("10 Date"),
+                checked    : true,
+                width      : 160
+            },{
+                xtype      : "checkbox",
+                name       : "blkid",
+                boxLabel   : _("40 blkid"),
+                checked    : true
+            }]
         },{
-            xtype      : "checkbox",
-            name       : "hostname",
-            fieldLabel : _("10 Hostname"),
-            checked    : false
+            xtype: "compositefield",
+            items: [{
+                xtype      : "checkbox",
+                name       : "hostname",
+                boxLabel   : _("10 Hostname"),
+                checked    : false,
+                width      : 160
+            },{
+                xtype      : "checkbox",
+                name       : "df",
+                boxLabel   : _("40 df"),
+                checked    : true
+            }]
         },{
-            xtype      : "checkbox",
-            name       : "locale",
-            fieldLabel : _("10 Locale"),
-            checked    : true
+            xtype: "compositefield",
+            items: [{
+                xtype      : "checkbox",
+                name       : "locale",
+                boxLabel   : _("10 Locale"),
+                checked    : true,
+                width      : 160
+            },{
+                xtype      : "checkbox",
+                name       : "fstab",
+                boxLabel   : _("40 fstab"),
+                checked    : true
+            }]
         },{
-            xtype      : "checkbox",
-            name       : "uname",
-            fieldLabel : _("10 uname"),
-            checked    : true
+            xtype: "compositefield",
+            items: [{
+                xtype      : "checkbox",
+                name       : "uname",
+                boxLabel   : _("10 uname"),
+                checked    : true,
+                width      : 160
+            },{
+                xtype      : "checkbox",
+                name       : "mountinfo",
+                boxLabel   : _("40 Mount Info"),
+                checked    : true
+            }]
         },{
-            xtype      : "checkbox",
-            name       : "uptime",
-            fieldLabel : _("10 Uptime"),
-            checked    : true
+            xtype: "compositefield",
+            items: [{
+                xtype      : "checkbox",
+                name       : "uptime",
+                boxLabel   : _("10 Uptime"),
+                checked    : true,
+                width      : 160
+            },{
+                xtype      : "checkbox",
+                name       : "partitions",
+                boxLabel   : _("40 Partitions"),
+                checked    : true
+            }]
         },{
-            xtype      : "checkbox",
-            name       : "interfaces",
-            fieldLabel : _("20 Interfaces"),
-            checked    : true
+            xtype: "compositefield",
+            items: [{
+                xtype      : "checkbox",
+                name       : "interfaces",
+                boxLabel   : _("20 Interfaces"),
+                checked    : true,
+                width      : 160
+            },{
+                xtype      : "checkbox",
+                name       : "apt-sources",
+                boxLabel   : _("50 apt sources"),
+                checked    : true
+            }]
         },{
-            xtype      : "checkbox",
-            name       : "iptables",
-            fieldLabel : _("20 iptables"),
-            checked    : false
+            xtype: "compositefield",
+            items: [{
+                xtype      : "checkbox",
+                name       : "iptables",
+                boxLabel   : _("20 iptables"),
+                checked    : false,
+                width      : 160
+            },{
+                xtype      : "checkbox",
+                name       : "dpkg",
+                boxLabel   : _("50 dpkg"),
+                checked    : false
+            }]
         },{
-            xtype      : "checkbox",
-            name       : "netstat",
-            fieldLabel : _("20 netstat"),
-            checked    : false
+            xtype: "compositefield",
+            items: [{
+                xtype      : "checkbox",
+                name       : "netstat",
+                boxLabel   : _("20 netstat"),
+                checked    : false,
+                width      : 160
+            },{
+                xtype      : "checkbox",
+                name       : "omv-plugins",
+                boxLabel   : _("50 OMV Plugins"),
+                checked    : true
+            }]
         },{
-            xtype      : "checkbox",
-            name       : "route",
-            fieldLabel : _("20 Route"),
-            checked    : true
+            xtype: "compositefield",
+            items: [{
+                xtype      : "checkbox",
+                name       : "route",
+                boxLabel   : _("20 Route"),
+                checked    : true,
+                width      : 160
+            },{
+                xtype      : "checkbox",
+                name       : "lsmod",
+                boxLabel   : _("61 lsmod"),
+                checked    : true
+            }]
         },{
-            xtype      : "checkbox",
-            name       : "mdadm",
-            fieldLabel : _("30 mdadm"),
-            checked    : true
-        },{
-            xtype      : "checkbox",
-            name       : "monit",
-            fieldLabel : _("30 monit"),
-            checked    : false
-        },{
-            xtype      : "checkbox",
-            name       : "hpraid",
-            fieldLabel : _("31 hpraid"),
-            checked    : false
-        },{
-            xtype      : "checkbox",
-            name       : "blkid",
-            fieldLabel : _("40 blkid"),
-            checked    : true
-        },{
-            xtype      : "checkbox",
-            name       : "df",
-            fieldLabel : _("40 df"),
-            checked    : true
-        },{
-            xtype      : "checkbox",
-            name       : "fstab",
-            fieldLabel : _("40 fstab"),
-            checked    : true
-        },{
-            xtype      : "checkbox",
-            name       : "mountinfo",
-            fieldLabel : _("40 Mount Info"),
-            checked    : true
-        },{
-            xtype      : "checkbox",
-            name       : "partitions",
-            fieldLabel : _("40 Partitions"),
-            checked    : true
-        },{
-            xtype      : "checkbox",
-            name       : "apt-sources",
-            fieldLabel : _("50 apt sources"),
-            checked    : true
-        },{
-            xtype      : "checkbox",
-            name       : "dpkg",
-            fieldLabel : _("50 dpkg"),
-            checked    : false
-        },{
-            xtype      : "checkbox",
-            name       : "omv-plugins",
-            fieldLabel : _("50 OMV Plugins"),
-            checked    : true
-        },{
-            xtype      : "checkbox",
-            name       : "lsmod",
-            fieldLabel : _("61 lsmod"),
-            checked    : true
+            xtype: "compositefield",
+            items: [{
+                xtype      : "checkbox",
+                name       : "mdadm",
+                boxLabel   : _("30 mdadm"),
+                checked    : true,
+                width      : 160
+            }]
         }];
     }
 });
