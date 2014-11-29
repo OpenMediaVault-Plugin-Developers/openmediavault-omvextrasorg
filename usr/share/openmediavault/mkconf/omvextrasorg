@@ -298,7 +298,6 @@ EOF
         echo "# mono-project repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${REPO_URL} ${OMVVERSION}-mono main" >> ${OMVEXTRASREPOFILE}
         echo "deb http://download.mono-project.com/repo/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-        echo "deb https://apt.sonarr.tv/ master main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-mono, origin ${REPO_LOCATION}
@@ -308,10 +307,6 @@ Package: *
 Pin: release o=download.mono-project.com
 Pin-Priority: 1001
 
-Package: *
-Pin: release o=apt.sonarr.tv
-Pin-Priority: 995
-
 EOF
     fi
 
@@ -319,7 +314,6 @@ EOF
     if [ "$(omv_config_get "${XPATH}monotesting")" = "1" ]; then
         echo "# mono testing repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${REPO_URL} ${OMVVERSION}-mono-testing main" >> ${OMVEXTRASREPOFILE}
-        echo "deb https://apt.sonarr.tv/ develop main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-mono-testing, origin ${REPO_LOCATION}
