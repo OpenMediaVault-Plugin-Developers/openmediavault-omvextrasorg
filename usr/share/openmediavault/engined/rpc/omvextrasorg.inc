@@ -123,6 +123,10 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $this->registerMethod("getResetPerms");
         $this->registerMethod("setResetPerms");
 
+        $this->registerMethod("getKernels");
+        $this->registerMethod("getBootKernel");
+        $this->registerMethod("setBootKernel");
+
         $this->registerMethod("doInstallBackports");
         $this->registerMethod("doInstallSystemd");
         $this->registerMethod("doAptClean");
@@ -1046,6 +1050,119 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         // Return the configuration object.
         return $object;
+    }
+
+    public function getKernels($params, $context)
+    {
+        global $xmlConfig;
+
+        // Validate the RPC caller context.
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
+
+        // Get configuration object
+        $kernels = array();
+
+        // Get configuration data.
+        $cmd = "export LANG=C; cat /boot/grub/grub.cfg | grep ^menuentry";
+        OMVUtil::exec($cmd, $result);
+
+        foreach ($result as $kernelk => $kernelv)
+        {
+            $line = str_replace("'", "\"", $kernelv);
+            $name = explode("\"", $line);
+
+            if (empty($name[1]))
+                continue;
+
+            $kernels[] = array(
+                "key"  => $kernelk,
+                "name" => $name[1]
+            );
+        }
+
+        return $this->applyFilter($kernels, $params["start"], $params["limit"],
+            $params["sortfield"], $params["sortdir"]
+        );
+    }
+
+    public function getBootKernel($params, $context)
+    {
+        global $xmlConfig;
+
+        // Validate the RPC caller context.
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
+
+        $object = array();
+
+        $grub_default = "/etc/default/grub";
+        $line_grub = "GRUB_DEFAULT=";
+
+        $cmd = sprintf("export LANG=C; cat %s | grep %s", $grub_default, $line_grub);
+        OMVUtil::exec($cmd, $output, $result);
+        $object['kernels'] = intval(str_replace($line_grub, "", $output[0]));
+
+        return $object;
+    }
+
+    public function setBootKernel($params, $context)
+    {
+        global $xmlConfig;
+
+        // Validate the RPC caller context.
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
+
+        // Validate the parameters of the RPC service method.
+        $this->validateMethodParams($params, '{
+            "type"       : "object",
+            "properties" : {
+                "key"  : { "type" : "integer" }
+            }
+        }');
+
+        $grub = "/etc/default/grub";
+        $line = "GRUB_DEFAULT=";
+        $contents = file($grub);
+        $newdata = array();
+        $new = sprintf("%s%s\n", $line, $params['key']);
+
+        foreach ($contents as $filerow)
+        {
+            if (strstr($filerow, $line) !== false)
+                $filerow = $new;
+
+            $newdata[] = $filerow;
+        }
+
+        file_put_contents($grub, implode($newdata));
+
+        $cmd = sprintf("export LANG=C; grub-set-default %s", $params['key']);
+        if (0 !== $this->exec($cmd, $output))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_EXEC_FAILED,
+                $cmd,
+                implode("\n", $output)
+            );
+        }
+
+        $cmd = "export LANG=C; update-grub";
+        if (0 !== $this->exec($cmd, $output))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_EXEC_FAILED,
+                $cmd,
+                implode("\n", $output)
+            );
+        }
     }
 
     public function doInstallBackports($params, $context)

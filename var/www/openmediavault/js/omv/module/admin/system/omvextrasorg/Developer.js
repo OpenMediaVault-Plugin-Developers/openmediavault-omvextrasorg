@@ -144,6 +144,6 @@ OMV.WorkspaceManager.registerPanel({
     id        : "developer",
     path      : "/system/omvextrasorg",
     text      : _("Developer"),
-    position  : 40,
+    position  : 50,
     className : "OMV.module.admin.system.omvextrasorg.Developer"
 });

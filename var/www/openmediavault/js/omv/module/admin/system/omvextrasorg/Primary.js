@@ -35,30 +35,16 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
     rpcGetMethod : "getPrimary",
     rpcSetMethod : "setPrimary",
 
-    plugins : [{
-        ptype        : "linkedfields",
-        correlations : [{
-            conditions : [{
-                name  : "showbackports",
-                value : "1"
-            }],
-            name       : [
-                "kernel"
-            ],
-            properties : "show"
-        }]
-    }],
-
     initComponent : function () {
         var me = this;
 
         me.on('load', function () {
-            var code   = me.findField('developer').getValue();
             var parent = me.up('tabpanel');
 
             if (!parent)
                 return;
 
+            var code = me.findField('developer').getValue();
             var developerPanel = parent.down('panel[title=' + _("Developer") + ']');
 
             if (developerPanel) {
@@ -66,6 +52,18 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
                     developerPanel.tab.show();
                 } else {
                     developerPanel.tab.hide();
+                }
+            }
+
+            var arch = me.findField('arch').getValue();
+            var kernelPanel = parent.down('panel[title=' + _("Kernel") + ']');
+
+            if (kernelPanel) {
+                var n = arch.indexOf("arm");
+                if (n < 0) {
+                    kernelPanel.tab.show();
+                } else {
+                    kernelPanel.tab.hide();
                 }
             }
         });
@@ -148,28 +146,6 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
             }]
         },{
             xtype         : "fieldset",
-            title         : _("Kernel"),
-            name          : "kernel",
-            hidden        : true,
-            fieldDefaults : {
-                labelSeparator : ""
-            },
-            items         : [{
-                xtype   : "button",
-                name    : "backports",
-                text    : _("Install Backports 3.16 kernel"),
-                scope   : this,
-                handler : Ext.Function.bind(me.onBackportsButton, me, [ me ]),
-                margin  : "5 0 0 0"
-            },{
-                border : false,
-                html   : "<ul>" +
-                           "<li>" + _("This will not uninstall the standard kernel.") + "</li>" +
-                           "<li>" + _("If the system does not boot using the backports kernel, the boot menu will still have the option to boot the standard kernel.") + "</li>" +
-                         "</ul>"
-            }]
-        },{
-            xtype         : "fieldset",
             title         : _("Information"),
             fieldDefaults : {
                 labelSeparator : ""
@@ -205,22 +181,6 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Primary", {
                 allowBlank : true
             }]
         }];
-    },
-
-    onBackportsButton : function() {
-        var me = this;
-        Ext.create("OMV.window.Execute", {
-            title          : _("Install Backports 3.16 kernel ..."),
-            rpcService     : "OmvExtrasOrg",
-            rpcMethod      : "doInstallBackports",
-            hideStopButton : true,
-            listeners      : {
-                scope     : me,
-                exception : function(wnd, error) {
-                    OMV.MessageBox.error(null, error);
-                }
-            }
-        }).show();
     },
 
     onAptCleanButton: function() {
