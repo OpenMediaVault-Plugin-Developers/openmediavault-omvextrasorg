@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-22 19:31-0600\n"
+"POT-Creation-Date: 2014-12-03 14:15-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -287,7 +287,16 @@ msgstr ""
 msgid "Install systemd..."
 msgstr ""
 
+msgid "Installed Kernels"
+msgstr ""
+
+msgid "Installing the backports kernel with not uninstall the standard kernel."
+msgstr ""
+
 msgid "Kernel"
+msgstr ""
+
+msgid "Kernels"
 msgstr ""
 
 msgid "Managers Testing"
@@ -306,6 +315,9 @@ msgid "Mono Testing"
 msgstr ""
 
 msgid "Name"
+msgstr ""
+
+msgid "Notes"
 msgstr ""
 
 msgid "OMV-Extras.org"
@@ -356,6 +368,15 @@ msgstr ""
 msgid "Send Support Info"
 msgstr ""
 
+msgid "Set as default boot kernel"
+msgstr ""
+
+msgid "Setting boot kernel ..."
+msgstr ""
+
+msgid "Setting the wrong default boot kernel may cause the system to be inaccessible.  The boot menu will still be available to select a different kernel."
+msgstr ""
+
 msgid "Shared Folder"
 msgstr ""
 
@@ -381,9 +402,6 @@ msgid "The repository will be checked for new, removed or upgraded software pack
 msgstr ""
 
 msgid "These repositories may break your system.  Use caution!!"
-msgstr ""
-
-msgid "This will not uninstall the standard kernel."
 msgstr ""
 
 msgid "Update"

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-22 19:31-0600\n"
-"PO-Revision-Date: 2014-11-23 01:31+0000\n"
+"POT-Creation-Date: 2014-12-03 14:15-0600\n"
+"PO-Revision-Date: 2014-12-03 20:18+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -296,8 +296,18 @@ msgstr "Systemd telepítés"
 msgid "Install systemd..."
 msgstr "Systemd telepítés..."
 
+msgid "Installed Kernels"
+msgstr ""
+
+msgid ""
+"Installing the backports kernel with not uninstall the standard kernel."
+msgstr ""
+
 msgid "Kernel"
 msgstr "Kernel"
+
+msgid "Kernels"
+msgstr ""
 
 msgid "Managers Testing"
 msgstr "Menedzserek tesztelése"
@@ -316,6 +326,9 @@ msgstr ""
 
 msgid "Name"
 msgstr "Név"
+
+msgid "Notes"
+msgstr ""
 
 msgid "OMV-Extras.org"
 msgstr "OMV-Extrák"
@@ -367,6 +380,18 @@ msgstr "Küld"
 msgid "Send Support Info"
 msgstr "Támogatási infó küldés"
 
+msgid "Set as default boot kernel"
+msgstr ""
+
+msgid "Setting boot kernel ..."
+msgstr ""
+
+msgid ""
+"Setting the wrong default boot kernel may cause the system to be "
+"inaccessible.  The boot menu will still be available to select a different "
+"kernel."
+msgstr ""
+
 msgid "Shared Folder"
 msgstr ""
 
@@ -397,9 +422,6 @@ msgstr "A tároló ellenőrizve lesz az új, eltávolított vagy frissített szo
 
 msgid "These repositories may break your system.  Use caution!!"
 msgstr "Ezek a tárolók tönkretehetik a rendszert. Légy óvatos!!"
-
-msgid "This will not uninstall the standard kernel."
-msgstr "Ez az opció nem távolítja el az eredeti kernelt."
 
 msgid "Update"
 msgstr "Frissítés"

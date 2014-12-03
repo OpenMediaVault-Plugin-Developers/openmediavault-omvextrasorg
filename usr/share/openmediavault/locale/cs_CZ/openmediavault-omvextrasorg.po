@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-22 19:31-0600\n"
-"PO-Revision-Date: 2014-11-23 01:31+0000\n"
+"POT-Creation-Date: 2014-12-03 14:15-0600\n"
+"PO-Revision-Date: 2014-12-03 20:18+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -296,8 +296,18 @@ msgstr ""
 msgid "Install systemd..."
 msgstr ""
 
+msgid "Installed Kernels"
+msgstr ""
+
+msgid ""
+"Installing the backports kernel with not uninstall the standard kernel."
+msgstr ""
+
 msgid "Kernel"
 msgstr "Kernel"
+
+msgid "Kernels"
+msgstr ""
 
 msgid "Managers Testing"
 msgstr ""
@@ -315,6 +325,9 @@ msgid "Mono Testing"
 msgstr ""
 
 msgid "Name"
+msgstr ""
+
+msgid "Notes"
 msgstr ""
 
 msgid "OMV-Extras.org"
@@ -367,6 +380,18 @@ msgstr ""
 msgid "Send Support Info"
 msgstr ""
 
+msgid "Set as default boot kernel"
+msgstr ""
+
+msgid "Setting boot kernel ..."
+msgstr ""
+
+msgid ""
+"Setting the wrong default boot kernel may cause the system to be "
+"inaccessible.  The boot menu will still be available to select a different "
+"kernel."
+msgstr ""
+
 msgid "Shared Folder"
 msgstr ""
 
@@ -397,9 +422,6 @@ msgstr "Bude zkontrolován repozitář, zda byly nějaké balíčky přidány, z
 
 msgid "These repositories may break your system.  Use caution!!"
 msgstr "Tyto repositáře mohou poškodit váš systém. Užívejte je s rozvahou."
-
-msgid "This will not uninstall the standard kernel."
-msgstr ""
 
 msgid "Update"
 msgstr ""

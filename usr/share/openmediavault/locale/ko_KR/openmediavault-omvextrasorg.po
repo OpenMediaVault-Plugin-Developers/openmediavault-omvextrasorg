@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-22 19:31-0600\n"
-"PO-Revision-Date: 2014-11-23 09:20+0000\n"
-"Last-Translator: Hyeonkyu Chu <hyeonkyu@gmail.com>\n"
+"POT-Creation-Date: 2014-12-03 14:15-0600\n"
+"PO-Revision-Date: 2014-12-03 20:18+0000\n"
+"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -296,8 +296,18 @@ msgstr "systemd 설치"
 msgid "Install systemd..."
 msgstr "systemd 설치..."
 
+msgid "Installed Kernels"
+msgstr ""
+
+msgid ""
+"Installing the backports kernel with not uninstall the standard kernel."
+msgstr ""
+
 msgid "Kernel"
 msgstr "커널"
+
+msgid "Kernels"
+msgstr ""
 
 msgid "Managers Testing"
 msgstr "Managers Testing"
@@ -316,6 +326,9 @@ msgstr "Mono Testing"
 
 msgid "Name"
 msgstr "이름"
+
+msgid "Notes"
+msgstr ""
 
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
@@ -367,6 +380,18 @@ msgstr "전송"
 msgid "Send Support Info"
 msgstr "지원 정보 전송"
 
+msgid "Set as default boot kernel"
+msgstr ""
+
+msgid "Setting boot kernel ..."
+msgstr ""
+
+msgid ""
+"Setting the wrong default boot kernel may cause the system to be "
+"inaccessible.  The boot menu will still be available to select a different "
+"kernel."
+msgstr ""
+
 msgid "Shared Folder"
 msgstr "공유 폴더"
 
@@ -397,9 +422,6 @@ msgstr "해당 저장소의 새로운, 제거된 또는 향상된 소프트웨�
 
 msgid "These repositories may break your system.  Use caution!!"
 msgstr "이 저장소들은 당신의 시스템을 정상 동작하지 않게 할 수 있습니다. 주의바랍니다!!"
-
-msgid "This will not uninstall the standard kernel."
-msgstr "이 커널은 표준 커널을 제거하지는 않습니다."
 
 msgid "Update"
 msgstr "갱신"

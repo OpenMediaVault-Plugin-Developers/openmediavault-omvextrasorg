@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-22 19:31-0600\n"
-"PO-Revision-Date: 2014-11-23 01:31+0000\n"
+"POT-Creation-Date: 2014-12-03 14:15-0600\n"
+"PO-Revision-Date: 2014-12-03 20:18+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: English (United States) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/en_US/)\n"
 "MIME-Version: 1.0\n"
@@ -295,8 +295,18 @@ msgstr "Install systemd"
 msgid "Install systemd..."
 msgstr "Install systemd..."
 
+msgid "Installed Kernels"
+msgstr "Installed Kernels"
+
+msgid ""
+"Installing the backports kernel with not uninstall the standard kernel."
+msgstr "Installing the backports kernel with not uninstall the standard kernel."
+
 msgid "Kernel"
 msgstr "Kernel"
+
+msgid "Kernels"
+msgstr "Kernels"
 
 msgid "Managers Testing"
 msgstr "Managers Testing"
@@ -315,6 +325,9 @@ msgstr "Mono Testing"
 
 msgid "Name"
 msgstr "Name"
+
+msgid "Notes"
+msgstr "Notes"
 
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
@@ -366,6 +379,18 @@ msgstr "Send"
 msgid "Send Support Info"
 msgstr "Send Support Info"
 
+msgid "Set as default boot kernel"
+msgstr "Set as default boot kernel"
+
+msgid "Setting boot kernel ..."
+msgstr "Setting boot kernel ..."
+
+msgid ""
+"Setting the wrong default boot kernel may cause the system to be "
+"inaccessible.  The boot menu will still be available to select a different "
+"kernel."
+msgstr "Setting the wrong default boot kernel may cause the system to be inaccessible.  The boot menu will still be available to select a different kernel."
+
 msgid "Shared Folder"
 msgstr "Shared Folder"
 
@@ -396,9 +421,6 @@ msgstr "The repository will be checked for new, removed or upgraded software pac
 
 msgid "These repositories may break your system.  Use caution!!"
 msgstr "These repositories may break your system.  Use caution!!"
-
-msgid "This will not uninstall the standard kernel."
-msgstr "This will not uninstall the standard kernel."
 
 msgid "Update"
 msgstr "Update"

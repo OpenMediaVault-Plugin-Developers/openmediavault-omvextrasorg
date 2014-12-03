@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-22 19:31-0600\n"
-"PO-Revision-Date: 2014-11-23 05:25+0000\n"
-"Last-Translator: Stefan Thrane Overby <stoverby@gmail.com>\n"
+"POT-Creation-Date: 2014-12-03 14:15-0600\n"
+"PO-Revision-Date: 2014-12-03 20:18+0000\n"
+"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -296,8 +296,18 @@ msgstr "Installer systemd"
 msgid "Install systemd..."
 msgstr "Installer systemd..."
 
+msgid "Installed Kernels"
+msgstr ""
+
+msgid ""
+"Installing the backports kernel with not uninstall the standard kernel."
+msgstr ""
+
 msgid "Kernel"
 msgstr "Kerne"
+
+msgid "Kernels"
+msgstr ""
 
 msgid "Managers Testing"
 msgstr "Håndterings Test"
@@ -316,6 +326,9 @@ msgstr "Mono Test"
 
 msgid "Name"
 msgstr "Navn"
+
+msgid "Notes"
+msgstr ""
 
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
@@ -367,6 +380,18 @@ msgstr "Send"
 msgid "Send Support Info"
 msgstr "Send Support Oplysning"
 
+msgid "Set as default boot kernel"
+msgstr ""
+
+msgid "Setting boot kernel ..."
+msgstr ""
+
+msgid ""
+"Setting the wrong default boot kernel may cause the system to be "
+"inaccessible.  The boot menu will still be available to select a different "
+"kernel."
+msgstr ""
+
 msgid "Shared Folder"
 msgstr "Delt Mappe"
 
@@ -397,9 +422,6 @@ msgstr "Arkivet vil blive kontrolleret for ny, fjernet eller opgraderet software
 
 msgid "These repositories may break your system.  Use caution!!"
 msgstr "Disse arkiver kan ødelægge dit system. Brug med forsigtighed!!"
-
-msgid "This will not uninstall the standard kernel."
-msgstr "Dette vil ikke afinstallere standard kernen."
 
 msgid "Update"
 msgstr "Opdater"

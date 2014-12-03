@@ -1,8 +1,9 @@
-openmediavault-omvextrasorg (1.3) UNRELEASED; urgency=low
+openmediavault-omvextrasorg (1.3) stable; urgency=low
 
   * Add kernel tab with boot kernel selection
+  * Update locales
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 03 Dec 2014 10:35:16 -0600
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 03 Dec 2014 14:16:21 -0600
 
 openmediavault-omvextrasorg (1.2) stable; urgency=low
 
