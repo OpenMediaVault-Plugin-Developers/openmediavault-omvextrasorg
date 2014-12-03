@@ -96,7 +96,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
     private function getShowkey()
     {
-        return "/usr/local/bin/showkey";
+        return "/usr/local/bin/omv-showkey";
     }
 
     public function initialize()
