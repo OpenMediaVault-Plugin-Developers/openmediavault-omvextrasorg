@@ -62,7 +62,8 @@ Ext.define("OMV.module.admin.privilege.sharedfolder.ResetPerms", {
         return [{
             xtype      : "sharedfoldercombo",
             name       : "sharedfolderref",
-            fieldLabel : _("Shared Folder")
+            fieldLabel : _("Shared Folder"),
+            allowNone  : true
         },{
             xtype       : "combo",
             name        : "mode",

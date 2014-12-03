@@ -983,7 +983,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $this->validateMethodParams($params, '{
             "type"       : "object",
             "properties" : {
-                "sharedfolderref" : { ' . $GLOBALS["OMV_JSONSCHEMA_UUID"] . ' },
+                "sharedfolderref" : { ' . $GLOBALS["OMV_JSONSCHEMA_UUID_NONE"] . ' },
                 "mode"            : { "type" : "string" },
                 "clearacl"        : { "type" : "boolean" }
             }
@@ -1455,6 +1455,15 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             );
         }
 
+        // Check if shared folder is set to none
+        if (is_null($object['sharedfolderref']))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_MISC_FAILURE,
+                gettext("Please select a shared folder.")
+            );
+        }
+
         // Check to see if shared folder is used by certain plugins
         $pluginCheck = array();
 
@@ -1485,8 +1494,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         foreach($pluginCheck as $plugin)
         {
-            $objectMysql = $xmlConfig->get($plugin['xpath']);
-            if ( !is_null($objectMysql))
+            $objectCheck = $xmlConfig->get($plugin['xpath']);
+            if ( !is_null($objectCheck))
             {
                 $xPath = sprintf("%s[%s='%s']", $plugin['xpath'], $plugin['sharedfolder'], $object['sharedfolderref']);
                 if (TRUE === $xmlConfig->exists($xPath))
