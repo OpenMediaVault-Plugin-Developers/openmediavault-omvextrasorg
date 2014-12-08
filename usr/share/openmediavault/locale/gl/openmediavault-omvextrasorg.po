@@ -3,452 +3,451 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Stefan Thrane Overby <stoverby@gmail.com>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-03 14:15-0600\n"
-"PO-Revision-Date: 2014-12-04 14:51+0000\n"
-"Last-Translator: Stefan Thrane Overby <stoverby@gmail.com>\n"
-"Language-Team: Danish (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/da/)\n"
+"PO-Revision-Date: 2013-10-28 11:35+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Galician (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: da\n"
+"Language: gl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "% CPU"
-msgstr "% CPU"
+msgstr ""
 
 msgid "% MEM"
-msgstr "% MEM"
+msgstr ""
 
 msgid "00 Debian Version"
-msgstr "00 Debian Version"
+msgstr ""
 
 msgid "00 OMV Version"
-msgstr "00 OMV Version"
+msgstr ""
 
 msgid "10 Date"
-msgstr "10 Dato"
+msgstr ""
 
 msgid "10 Hostname"
-msgstr "10 Værtsnavn"
+msgstr ""
 
 msgid "10 Locale"
-msgstr "10 Lokal"
+msgstr ""
 
 msgid "10 Uptime"
-msgstr "10 Oppetid"
+msgstr ""
 
 msgid "10 uname"
-msgstr "10 unavn"
+msgstr ""
 
 msgid "20 Interfaces"
-msgstr "20 Interfacer"
+msgstr ""
 
 msgid "20 Route"
-msgstr "20 Route"
+msgstr ""
 
 msgid "20 iptables"
-msgstr "20 iptabler"
+msgstr ""
 
 msgid "20 netstat"
-msgstr "20 netstat"
+msgstr ""
 
 msgid "30 mdadm"
-msgstr "30 mdadm"
+msgstr ""
 
 msgid "30 monit"
-msgstr "30 monit"
+msgstr ""
 
 msgid "31 hpraid"
-msgstr "31 hpraid"
+msgstr ""
 
 msgid "40 Mount Info"
-msgstr "40 Monterings Oplysning"
+msgstr ""
 
 msgid "40 Partitions"
-msgstr "40 Partitioner"
+msgstr ""
 
 msgid "40 blkid"
-msgstr "40 blkid"
+msgstr ""
 
 msgid "40 df"
-msgstr "40 df"
+msgstr ""
 
 msgid "40 fstab"
-msgstr "40 fstab"
+msgstr ""
 
 msgid "50 OMV Plugins"
-msgstr "50 OMV Plugins"
+msgstr ""
 
 msgid "50 apt sources"
-msgstr "50 apt kilder"
+msgstr ""
 
 msgid "50 dpkg"
-msgstr "50 dpkg"
+msgstr ""
 
 msgid "61 lsmod"
-msgstr "61 lsmod"
+msgstr ""
 
 msgid "Add repo"
-msgstr "Tilføj arkiv"
+msgstr ""
 
 msgid "Additional Repositories"
-msgstr "Øvrige Arkiver"
+msgstr ""
 
 msgid "Administrator: read/write, Users: no access, Others: no access"
-msgstr "Administrator: læse/skrive, Brugere: ingen adgang, Andre: ingen adgang"
+msgstr ""
 
 msgid "Administrator: read/write, Users: read-only, Others: no access"
-msgstr "Administrator: læse/skrive, Brugere: skrivebeskyttet, Andre: ingen adgang"
+msgstr ""
 
 msgid "Administrator: read/write, Users: read-only, Others: read-only"
-msgstr "Administrator: læse/skrive, Brugere: skrivebeskyttet, Andre: skrivebeskyttet"
+msgstr ""
 
 msgid "Administrator: read/write, Users: read/write, Others: no access"
-msgstr "Administrator: læse/skrive, Brugere: læse/skrive, Andre: ingen adgang"
+msgstr ""
 
 msgid "Administrator: read/write, Users: read/write, Others: read-only"
-msgstr "Administrator: læse/skrive, Brugere: læse/skrive, Andre: skrivebeskyttet"
+msgstr ""
 
 msgid "Apt Clean"
-msgstr "Apt Oprydning"
+msgstr ""
 
 msgid "Apt Clean - Silent"
-msgstr "Apt Oprydning - Stille"
+msgstr ""
 
 msgid "Architecture"
-msgstr "Arkitektur"
+msgstr ""
 
 msgid "BTSync"
-msgstr "BTSynk"
+msgstr ""
 
 msgid "Beta"
-msgstr "Beta"
+msgstr ""
 
 msgid "Can be helpful in fixing plugin problems."
-msgstr "Kan være brugbar i rettelse af plugin problemer."
+msgstr ""
 
 msgid "Checking for new updates ..."
-msgstr "Kontroller efter nye opdateringer ..."
+msgstr ""
 
 msgid "Cleaning Apt Files and Lists..."
-msgstr "Rydder op i Apt Filer og Lister.."
+msgstr ""
 
 msgid "Cleans apt repositories and removes lists."
-msgstr "Rydder op i apt arkiver og fjerner lister."
+msgstr ""
 
 msgid "Clear ACLs"
-msgstr "Slet ALCér"
+msgstr ""
 
 msgid "Clear all ACLs."
-msgstr "Slet alle ALCér."
+msgstr ""
 
 msgid "Close"
-msgstr "Luk"
+msgstr ""
 
 msgid "Command"
-msgstr "Kommando"
+msgstr ""
 
 msgid "Comment"
-msgstr "Kommentar"
+msgstr ""
 
 msgid "Confirmation"
-msgstr "Bekræftelse"
+msgstr ""
 
 msgid "Contains plugins for setting up virtual private networks"
-msgstr "Indholder plugins til opsætning af virtuel privat netværker"
+msgstr ""
 
 msgid ""
 "Contains various download managers for newsgroups, torrents, usenet, and "
 "streaming"
-msgstr "Indholder forskellige download håndtering til nyhedsgrupper, torrents, usenet og streaming."
+msgstr ""
 
 msgid "Custom"
-msgstr "Brugerdefineret"
+msgstr ""
 
 msgid "Developer"
-msgstr "Udvikler"
+msgstr ""
 
 msgid "Developer Repositories"
-msgstr "Udvikler Arkiver"
+msgstr ""
 
 msgid "Distribution"
-msgstr "Distribution"
+msgstr ""
 
 msgid ""
 "Do not enable this repository unless you are using the GlusterFS filesystem "
 "(uncommon)"
-msgstr "Aktiver ikke dette arkiv medmindre du bruger GlusterFS filsystemet (ikke almindeligt)"
+msgstr ""
 
 msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
-msgstr "Aktiver ikke dette arkiv medmindre du bruger ZFS filsystemet (ikke almindeligt)"
+msgstr ""
 
 msgid "Done..."
-msgstr "Færdig..."
+msgstr ""
 
 msgid "Dotdeb"
-msgstr "Dotdeb"
+msgstr ""
 
 msgid "Download Managers"
-msgstr "Download Håndtering"
+msgstr ""
 
 msgid "Downloading package information"
-msgstr "Henter pakke oplysninger"
+msgstr ""
 
 msgid "Edit repo"
-msgstr "Rediger arkiv"
+msgstr ""
 
 msgid "Enable BTSync repository"
-msgstr "Aktiver BTSynk arkiv"
+msgstr ""
 
 msgid "Enable Beta repository"
-msgstr "Aktiver Beta arkiv"
+msgstr ""
 
 msgid "Enable Dotdeb repository"
-msgstr "Aktiver Dotdeb arkiv"
+msgstr ""
 
 msgid "Enable Gluster repository"
-msgstr "Aktiver Gluster arkiv"
+msgstr ""
 
 msgid "Enable Greyhole repository"
-msgstr "Aktiver Greyhole arkiv"
+msgstr ""
 
 msgid "Enable MariaDB 10.0 repository"
-msgstr "Aktiver MariaDB 10.0 arkiv"
+msgstr ""
 
 msgid "Enable Mono Testing repository"
-msgstr "Aktiver Mono Test arkiv"
+msgstr ""
 
 msgid "Enable Mono and mono-project.com repositories"
-msgstr "Aktiver Mono og mono-project.com arkiv"
+msgstr ""
 
 msgid "Enable OMV-Extras.org repository"
-msgstr "Aktiver OMV-Extras.org arkiv"
+msgstr ""
 
 msgid "Enable OMV-Extras.org testing repository (release candidates)"
-msgstr "Aktiver OMV-Extras.org test arkiv (udgivelseskandidater)"
+msgstr ""
 
 msgid "Enable Plex Media Server repository"
-msgstr "Aktiver Plex Media Server arkiv"
+msgstr ""
 
 msgid "Enable VPN repository"
-msgstr "Aktiver VPN arkiv"
+msgstr ""
 
 msgid "Enable Virtualbox repository."
-msgstr "Aktiver Virtualbox arkiv"
+msgstr ""
 
 msgid "Enable ZFS repository"
-msgstr "Aktiver ZFS arkiv"
+msgstr ""
 
 msgid "Enable deb-multimedia backports repository"
-msgstr "Aktiver deb-multimedia backports arkiv"
+msgstr ""
 
 msgid "Enable deb-multimedia repository"
-msgstr "Aktiver deb-multimedia arkiv"
+msgstr ""
 
 msgid "Enable download managers repository"
-msgstr "Aktiver download håndterings arkiv"
+msgstr ""
 
 msgid "Enable download managers testing repository (release candidates)"
-msgstr "Aktiver download håndterings test arkiv (udgivelseskandidater)"
+msgstr ""
 
 msgid "Enable e-tobi.net repository"
-msgstr "Aktiver e-tobi.net arkiv"
+msgstr ""
 
 msgid "Enable hwraid repository"
-msgstr "Aktiver hwraid arkiv"
+msgstr ""
 
 msgid "Everyone: read/write"
-msgstr "Alle: læse/skrive"
+msgstr ""
 
 msgid "Gluster"
-msgstr "Gluster"
+msgstr ""
 
 msgid "Greyhole"
-msgstr "Greyhole"
+msgstr ""
 
 msgid "HWRaid"
-msgstr "HWRaid"
+msgstr ""
 
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
 "still have the option to boot the standard kernel."
-msgstr "Hvis systemet ikke kan boote ved brug af backports kernen, vil boot menuen stadig have mulighed for at boote standard kernen."
+msgstr ""
 
 msgid "Information"
-msgstr "Oplysninger"
+msgstr ""
 
 msgid "Install Backports 3.16 kernel"
-msgstr "Installer Backports 3.16 Kerne"
+msgstr ""
 
 msgid "Install Backports 3.16 kernel ..."
-msgstr "Installer Backports 3.16 kerne ..."
+msgstr ""
 
 msgid "Install systemd"
-msgstr "Installer systemd"
+msgstr ""
 
 msgid "Install systemd..."
-msgstr "Installer systemd..."
+msgstr ""
 
 msgid "Installed Kernels"
-msgstr "Installeret Kerner"
+msgstr ""
 
 msgid ""
 "Installing the backports kernel with not uninstall the standard kernel."
-msgstr "Installer backports kerne uden at afinstallere standard kerne."
+msgstr ""
 
 msgid "Kernel"
-msgstr "Kerne"
+msgstr ""
 
 msgid "Kernels"
-msgstr "Kerner"
+msgstr ""
 
 msgid "Managers Testing"
-msgstr "Håndterings Test"
+msgstr ""
 
 msgid "MariaDB"
-msgstr "MariaDB"
+msgstr ""
 
 msgid "Modules"
-msgstr "Moduler"
+msgstr ""
 
 msgid "Mono"
-msgstr "Mono"
+msgstr ""
 
 msgid "Mono Testing"
-msgstr "Mono Test"
+msgstr ""
 
 msgid "Name"
-msgstr "Navn"
+msgstr ""
 
 msgid "Notes"
-msgstr "Noter"
+msgstr ""
 
 msgid "OMV-Extras.org"
-msgstr "OMV-Extras.org"
+msgstr ""
 
 msgid ""
 "Only enable repositories you need.  Enabling unnecessary repositories can "
 "slow down your system."
-msgstr "Aktiver kun arkiver, du har brug for. Aktivering af unødvendige arkiver kan gøre dit system langsom."
+msgstr ""
 
 msgid "PID"
-msgstr "PID"
+msgstr ""
 
 msgid "Permissions"
-msgstr "Rettigheder"
+msgstr ""
 
 msgid "Plex"
-msgstr "Plex"
+msgstr ""
 
 msgid "Primary"
-msgstr "Primær"
+msgstr ""
 
 msgid "Process List"
-msgstr "Proces Liste"
+msgstr ""
 
 msgid "Reload"
-msgstr "Genindlæs"
+msgstr ""
 
 msgid "Repo"
-msgstr "Arkiv"
+msgstr ""
 
 msgid "Repositories"
-msgstr "Arkiver"
+msgstr ""
 
 msgid "Reset Permissions"
-msgstr "Nulstil Rettigheder "
+msgstr ""
 
 msgid "Reset folders and files to this file mode."
-msgstr "Nulstil mapper og filer til denne fil tilstand."
+msgstr ""
 
 msgid "Reset permissions ..."
-msgstr "Nulstil rettigheder ..."
+msgstr ""
 
 msgid "Secondary"
-msgstr "Sekundær"
+msgstr ""
 
 msgid "Send"
-msgstr "Send"
+msgstr ""
 
 msgid "Send Support Info"
-msgstr "Send Support Oplysning"
+msgstr ""
 
 msgid "Set as default boot kernel"
-msgstr "Indstil som standard boot kerne"
+msgstr ""
 
 msgid "Setting boot kernel ..."
-msgstr "Indstiller boot kerne ..."
+msgstr ""
 
 msgid ""
 "Setting the wrong default boot kernel may cause the system to be "
 "inaccessible.  The boot menu will still be available to select a different "
 "kernel."
-msgstr "Indstilling af forkert standard boot kerne kan gøre systemet utilgængeligt. Boot menuen vil stadig være tilgængelig til at vælge en anden kerne."
+msgstr ""
 
 msgid "Shared Folder"
-msgstr "Delt Mappe"
+msgstr ""
 
 msgid "Silent"
-msgstr "Stille"
+msgstr ""
 
 msgid "State"
-msgstr "Tilstand"
+msgstr ""
 
 msgid "Support Info"
-msgstr "Support Oplysning"
+msgstr ""
 
 msgid "Support Info Module Selection"
-msgstr "Understøt Oplysning Modul Valg"
+msgstr ""
 
 msgid "Testing"
-msgstr "Test"
+msgstr ""
 
 msgid ""
 "The information about available software is out-of-date. You need to reload "
 "the information about available software."
-msgstr "Oplysningerne om tilgængelig software er ikke opdateret. Du skal genindlæse oplysningerne om tilgængelig software."
+msgstr ""
 
 msgid ""
 "The repository will be checked for new, removed or upgraded software "
 "packages."
-msgstr "Arkivet vil blive kontrolleret for ny, fjernet eller opgraderet software pakker."
+msgstr ""
 
 msgid "These repositories may break your system.  Use caution!!"
-msgstr "Disse arkiver kan ødelægge dit system. Brug med forsigtighed!!"
+msgstr ""
 
 msgid "Update"
-msgstr "Opdater"
+msgstr ""
 
 msgid "User"
-msgstr "Bruger"
+msgstr ""
 
 msgid "Utilities"
-msgstr "Værktøjer"
+msgstr ""
 
 msgid "VDR"
-msgstr "VDR"
+msgstr ""
 
 msgid "VPN"
-msgstr "VPN"
+msgstr ""
 
 msgid "Version"
-msgstr "Version"
+msgstr ""
 
 msgid "Virtualbox"
-msgstr "Virtualbox"
+msgstr ""
 
 msgid "ZFS"
-msgstr "ZFS"
+msgstr ""
 
 msgid "deb-multimedia"
-msgstr "deb-multimedia"
+msgstr ""
 
 msgid "deb-multimedia backports"
-msgstr "deb-multimedia backports"
+msgstr ""
