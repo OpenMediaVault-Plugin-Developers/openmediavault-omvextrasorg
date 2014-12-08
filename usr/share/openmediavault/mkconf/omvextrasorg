@@ -34,6 +34,8 @@ conf=$2
 
 update()
 {
+    export LANG=C
+
     OMVEXTRASREPOFILE="/etc/apt/sources.list.d/omv-extras-org-${OMVVERSION}.list"
     OMVEXTRASCUSTOMREPOFILE="/etc/apt/sources.list.d/omv-extras-org-custom.list"
     OMVEXTRASAPTPREFS="/etc/apt/preferences.d/99omv-extras-org"
@@ -257,8 +259,8 @@ EOF
     # omv-extras zfs
     if [ "$(omv_config_get "${XPATH}zfs")" = "1" ]; then
         # add large zfsonlinux key and linux-headers necessary for zfs module compilation
-        apt-key adv --keyserver pgp.mit.edu --recv-keys 4D5843EA
-        apt-key adv --keyserver pgp.mit.edu --recv-keys 8E234FB17DFFA34D
+        apt-key adv --keyserver pgp.mit.edu --recv-keys "4D5843EA"
+        apt-key adv --keyserver pgp.mit.edu --recv-keys "8E234FB17DFFA34D"
         case ${conf} in
             configure) ;;
             *)  apt-get --yes --force-yes --fix-missing install linux-headers-$(uname -r) || : ;;
@@ -294,7 +296,7 @@ EOF
     # omv-extras mono
     if [ "$(omv_config_get "${XPATH}mono")" = "1" ]; then
         # add NzbDrone repository key
-        apt-key adv --keyserver pgp.mit.edu --recv-keys FDA5DFFC
+        apt-key adv --keyserver pgp.mit.edu --recv-keys "FDA5DFFC"
         echo "# mono-project repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${REPO_URL} ${OMVVERSION}-mono main" >> ${OMVEXTRASREPOFILE}
         echo "deb http://download.mono-project.com/repo/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
