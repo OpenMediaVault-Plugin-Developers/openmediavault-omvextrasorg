@@ -27,10 +27,9 @@
 Ext.define("OMV.module.admin.system.omvextrasorg.Kernel", {
     extend : "OMV.workspace.form.Panel",
 
-    hideOkButton    : true,
-
     rpcService   : "OmvExtrasOrg",
     rpcGetMethod : "getBootKernel",
+    rpcSetMethod : "setDeveloper",
 
     getButtonItems : function() {
         var me = this;
@@ -103,6 +102,42 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Kernel", {
                            "<li>" + _("If the system does not boot using the backports kernel, the boot menu will still have the option to boot the standard kernel.") + "</li>" +
                          "</ul>"
             }]
+        },{
+            xtype         : "fieldset",
+            title         : _("Information"),
+            fieldDefaults : {
+                labelSeparator : ""
+            },
+            items         : [{
+                xtype       : "textfield",
+                name        : "version",
+                fieldLabel  : _("Version"),
+                submitValue : false,
+                readOnly    : true
+            },{
+                xtype       : "textfield",
+                name        : "versionname",
+                fieldLabel  : _("Distribution"),
+                submitValue : false,
+                readOnly    : true
+            },{
+                xtype       : "textfield",
+                name        : "kernel",
+                fieldLabel  : _("Kernel"),
+                submitValue : false,
+                readOnly    : true
+            },{
+                xtype       : "textfield",
+                name        : "arch",
+                fieldLabel  : _("Architecture"),
+                submitValue : false,
+                readOnly    : true
+            },{
+                xtype      : "textfield",
+                name       : "developer",
+                fieldLabel : _("Developer"),
+                allowBlank : true
+            }]
         }];
     },
 
@@ -148,6 +183,6 @@ OMV.WorkspaceManager.registerPanel({
     id        : "kernel",
     path      : "/system/omvextrasorg",
     text      : _("Kernel"),
-    position  : 40,
+    position  : 30,
     className : "OMV.module.admin.system.omvextrasorg.Kernel"
 });

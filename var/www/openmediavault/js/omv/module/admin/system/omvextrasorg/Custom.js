@@ -131,14 +131,6 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Custom", {
             iconCls: Ext.baseCSSPrefix + "btn-icon-16x16",
             handler: Ext.Function.bind(me.onCheckButton, me, [ me ]),
             scope: me
-        },{
-            id: me.getId() + "-silent",
-            xtype: "button",
-            text: _("Silent"),
-            icon: "images/refresh.png",
-            iconCls: Ext.baseCSSPrefix + "btn-icon-16x16",
-            handler: Ext.Function.bind(me.onSilentButton, me, [ me ]),
-            scope: me
         });
         return items;
     },
@@ -211,21 +203,6 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Custom", {
         wnd.setButtonDisabled("close", true);
         wnd.show();
         wnd.start();
-    },
-
-    onSilentButton : function() {
-        var me = this;
-        OMV.RpcObserver.request({
-            msg     : _("Checking for new updates ..."),
-            rpcData : {
-                service : "Apt",
-                method  : "update"
-            },
-            scope   : me,
-            finish  : function() {
-                this.doReload();
-            }
-        });
     }
 });
 
@@ -233,6 +210,6 @@ OMV.WorkspaceManager.registerPanel({
     id        : "scheduledjobs",
     path      : "/system/omvextrasorg",
     text      : _("Custom"),
-    position  : 30,
+    position  : 20,
     className : "OMV.module.admin.system.omvextrasorg.Custom"
 });

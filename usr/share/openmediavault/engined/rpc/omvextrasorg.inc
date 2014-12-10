@@ -101,10 +101,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
     public function initialize()
     {
-        $this->registerMethod("getPrimary");
-        $this->registerMethod("setPrimary");
-
         $this->registerMethod("getSecondaryList");
+        $this->registerMethod("getArch");
         $this->registerMethod("getSecondary");
         $this->registerMethod("setSecondary");
 
@@ -112,9 +110,6 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $this->registerMethod("getRepo");
         $this->registerMethod("setRepo");
         $this->registerMethod("deleteRepo");
-
-        $this->registerMethod("getDeveloper");
-        $this->registerMethod("setDeveloper");
 
         $this->registerMethod("getModules");
         $this->registerMethod("setModules");
@@ -127,75 +122,16 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $this->registerMethod("getKernels");
         $this->registerMethod("getBootKernel");
         $this->registerMethod("setBootKernel");
+        $this->registerMethod("setDeveloper");
 
         $this->registerMethod("doInstallBackports");
-        $this->registerMethod("doInstallSystemd");
         $this->registerMethod("doAptClean");
-        $this->registerMethod("doAptCleanSilent");
 
         $this->registerMethod("getSupportInfo");
         $this->registerMethod("getProcessList");
         $this->registerMethod("doSend");
 
         $this->registerMethod("doResetPerms");
-    }
-
-    public function getPrimary($params, $context)
-    {
-        global $xmlConfig;
-
-        // Validate the RPC caller context.
-        $this->validateMethodContext(
-            $context,
-            array( "role" => OMV_ROLE_ADMINISTRATOR )
-        );
-
-        // Get the configuration object.
-        $object = $xmlConfig->get( $this->getXPath() );
-        if (is_null($object))
-        {
-            throw new OMVException(
-                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
-                $this->getXPath()
-            );
-        }
-
-        // Modify the result object.
-        $object['enable']  = boolval($object['enable']);
-        $object['testing'] = boolval($object['testing']);
-
-        // Get OMV version name
-        $prd = new OMVProduct();
-        $object['versionname'] = strtolower( $prd->getVersionName() );
-
-        // Get omv-extras version
-        $output = array();
-        $cmd = sprintf( "export LANG=C; dpkg-query -W -f='\${Version}' openmediavault-%s", $this->getPluginName() );
-        OMVUtil::exec($cmd, $output, $result);
-        $object['version'] = $output[0];
-
-        // Get kernel version
-        $object['kernel'] = php_uname('r');
-
-        // Get architecture
-        $output = array();
-        $cmd = "export LANG=C; dpkg --print-architecture";
-        OMVUtil::exec($cmd, $output, $result);
-        $object['arch'] = strtolower( $output[0] );
-
-        // Determine if backports kernel button should be shown
-        $pos = strpos( $object['arch'], "arm" );
-        if ( $pos === false )
-            $object['showbackports'] = "1";
-        else
-            $object['showbackports'] = "0";
-
-        // Remove useless fields from the result object.
-        unset($object['repos']);
-        unset($object['modules']);
-        unset($object['resetperms']);
-
-        return $object;
     }
 
     public function setPrimary($params, $context)
@@ -212,9 +148,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $this->validateMethodParams($params, '{
             "type"       : "object",
             "properties" : {
-                "enable"    : { "type" : "boolean" },
-                "testing"   : { "type" : "boolean" },
-                "developer" : { "type" : "string", "optional" : true }
+
             }
         }');
 
@@ -230,9 +164,9 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         // Update the configuration object.
         $object = array(
-            "enable"        => array_boolval($params, 'enable'),
-            "testing"       => array_boolval($params, 'testing'),
             "developer"     => $params['developer'],
+            "enable"        => array_boolval($oldObject, 'enable'),
+            "testing"       => array_boolval($oldObject, 'testing'),
             "vbox"          => array_boolval($oldObject, 'vbox'),
             "plex"          => array_boolval($oldObject, 'plex'),
             "greyhole"      => array_boolval($oldObject, 'greyhole'),
@@ -285,7 +219,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         return $object;
     }
 
-    function getSecondaryList($params, $context)
+    public function getSecondaryList($params, $context)
     {
         global $xmlConfig;
 
@@ -295,129 +229,208 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             array( "role" => OMV_ROLE_ADMINISTRATOR )
         );
 
+        // Get the existing configuration object.
+        $object = $xmlConfig->get( $this->getXPath() );
+        if (is_null($object))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
+                $this->getXPath()
+            );
+        }
+
+        // Remove useless fields from the result object.
+        unset($object['repos']);
+        unset($object['modules']);
+        unset($object['resetperms']);
+
+        // Create repo array
         $result = array();
 
         $result[] = array(
-            "id" => "btsync",
-            "type" => "Backup",
-            "enable" => false,
-            "repo" => "BTSync",
+            "id"          => "btsync",
+            "type"        => "Backup",
+            "enable"      => $object['btsync'],
+            "repo"        => "BTSync",
             "description" => "BTSync"
         );
 
         $result[] = array(
-            "id" => "gluster",
-            "type" => "Filesystems",
-            "enable" => false,
-            "repo" => "GlusterFS",
+            "id"          => "gluster",
+            "type"        => "Filesystems",
+            "enable"      => $object['gluster'],
+            "repo"        => "GlusterFS",
             "description" => "Gluster - do not enable this repository unless you are using the GlusterFS filesystem (uncommon)"
         );
 
         $result[] = array(
-            "id" => "greyhole",
-            "type" => "Filesystems",
-            "enable" => false,
-            "repo" => "Greyhole",
+            "id"          => "greyhole",
+            "type"        => "Filesystems",
+            "enable"      => $object['greyhole'],
+            "repo"        => "Greyhole",
             "description" => "Greyhole"
         );
 
         $result[] = array(
-            "id" => "hwraid",
-            "type" => "Utilities",
-            "enable" => false,
-            "repo" => "HWRaid",
+            "id"          => "hwraid",
+            "type"        => "Utilities",
+            "enable"      => $object['hwraid'],
+            "repo"        => "HWRaid",
             "description" => "hwraid"
         );
 
         $result[] = array(
-            "id" => "miller",
-            "type" => "Downloaders",
-            "enable" => false,
-            "repo" => "Download Managers",
+            "id"          => "miller",
+            "type"        => "Downloaders",
+            "enable"      => $object['miller'],
+            "repo"        => "Download Managers",
             "description" => "Download managers - contains various download managers for newsgroups, torrents, usenet, and streaming"
         );
 
         $result[] = array(
-            "id" => "millertesting",
-            "type" => "Downloaders",
-            "enable" => false,
-            "repo" => "Download Managers Testing",
+            "id"          => "millertesting",
+            "type"        => "Downloaders",
+            "enable"      => $object['millertesting'],
+            "repo"        => "Download Managers Testing",
             "description" => "Download managers testing - contains various download managers for newsgroups, torrents, usenet, and streaming"
         );
 
         $result[] = array(
-            "id" => "mono",
-            "type" => "Multimedia",
-            "enable" => false,
-            "repo" => "Mono",
+            "id"          => "mono",
+            "type"        => "Multimedia",
+            "enable"      => $object['mono'],
+            "repo"        => "Mono",
             "description" => "Mono and mono-project.com"
         );
 
         $result[] = array(
-            "id" => "monotesting",
-            "type" => "Multimedia",
-            "enable" => false,
-            "repo" => "Mono Testing",
+            "id"          => "monotesting",
+            "type"        => "Multimedia",
+            "enable"      => $object['monotesting'],
+            "repo"        => "Mono Testing",
             "description" => "Mono testing"
         );
 
         $result[] = array(
-            "id" => "omvextras",
-            "type" => "All",
-            "enable" => false,
-            "repo" => "OMV-Extras.org",
+            "id"          => "omvextras",
+            "type"        => "All",
+            "enable"      => $object['enable'],
+            "repo"        => "OMV-Extras.org",
             "description" => "OMV-Extras"
         );
 
         $result[] = array(
-            "id" => "omvextrastesting",
-            "type" => "All",
-            "enable" => false,
-            "repo" => "OMV-Extras.org Testing",
+            "id"          => "omvextrastesting",
+            "type"        => "All",
+            "enable"      => $object['testing'],
+            "repo"        => "OMV-Extras.org Testing",
             "description" => "OMV-Extras.org testing (release candidates)"
         );
-        
+
         $result[] = array(
-            "id" => "plex",
-            "type" => "Multimedia",
-            "enable" => false,
-            "repo" => "Plex",
+            "id"          => "plex",
+            "type"        => "Multimedia",
+            "enable"      => $object['plex'],
+            "repo"        => "Plex",
             "description" => "Plex Media Server"
         );
 
         $result[] = array(
-            "id" => "vbox",
-            "type" => "Virtualization",
-            "enable" => false,
-            "repo" => "Virtualbox",
+            "id"          => "vbox",
+            "type"        => "Virtualization",
+            "enable"      => $object['vbox'],
+            "repo"        => "Virtualbox",
             "description" => "Virtualbox"
         );
 
         $result[] = array(
-            "id" => "vdr",
-            "type" => "Multimedia",
-            "enable" => false,
-            "repo" => "VDR",
+            "id"          => "vdr",
+            "type"        => "Multimedia",
+            "enable"      => $object['vdr'],
+            "repo"        => "VDR",
             "description" => "e-tobi.net"
         );
 
         $result[] = array(
-            "id" => "vpn",
-            "type" => "Remote",
-            "enable" => false,
-            "repo" => "VPN",
+            "id"          => "vpn",
+            "type"        => "Remote",
+            "enable"      => $object['vpn'],
+            "repo"        => "VPN",
             "description" => "VPN - contains plugins for setting up virtual private networks"
         );
 
         $result[] = array(
-            "id" => "zfs",
-            "type" => "Filesystems",
-            "enable" => false,
-            "repo" => "ZFS",
+            "id"          => "zfs",
+            "type"        => "Filesystems",
+            "enable"      => $object['zfs'],
+            "repo"        => "ZFS",
             "description" => "ZFS - do not enable this repository unless you are using the ZFS filesystem (uncommon)"
         );
 
+        if ( $object['developer'] == "0827" )
+        {
+            $result[] = array(
+                "id"          => "beta",
+                "type"        => "All",
+                "enable"      => $object['beta'],
+                "repo"        => "Beta",
+                "description" => "Beta"
+            );
+
+            $result[] = array(
+                "id"          => "dotdeb",
+                "type"        => "All",
+                "enable"      => $object['dotdeb'],
+                "repo"        => "Dotdeb",
+                "description" => "Dotdeb"
+            );
+
+            $result[] = array(
+                "id"          => "debmm",
+                "type"        => "Multimedia",
+                "enable"      => $object['debmm'],
+                "repo"        => "Deb-Multimedia",
+                "description" => "Deb-Multimedia"
+            );
+
+            $result[] = array(
+                "id"          => "debmmbp",
+                "type"        => "Multimedia",
+                "enable"      => $object['debmmbp'],
+                "repo"        => "Deb-Multimedia Backports",
+                "description" => "Deb-Multimedia Backports"
+            );
+
+            $result[] = array(
+                "id"          => "mariadb",
+                "type"        => "Network",
+                "enable"      => $object['mariadb'],
+                "repo"        => "MariaDB",
+                "description" => "MariaDB 10.0"
+            );
+        }
+
+        file_put_contents('/tmp/object.txt', print_r($object, true));
+        file_put_contents('/tmp/result.txt', print_r($result, true));
+
         return $result;
+    }
+
+    public function getArch($params, $context)
+    {
+        // Validate the RPC caller context.
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
+
+        // Get architecture
+        $output = array();
+        $cmd = "export LANG=C; dpkg --print-architecture";
+        OMVUtil::exec($cmd, $output, $result);
+        $object['arch'] = strtolower( $output[0] );
+
+        return $object;
     }
 
     public function getSecondary($params, $context)
@@ -737,131 +750,6 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         // Delete the configuration object.
         $xPath = sprintf("%s[uuid='%s']", $this->getXPathRepo(), $params['uuid']);
         return $this->deleteConfigObjectByPath($xPath, $this->getEventMessagePathRepo());
-    }
-
-    public function getDeveloper($params, $context)
-    {
-        global $xmlConfig;
-
-        // Validate the RPC caller context.
-        $this->validateMethodContext(
-            $context,
-            array( "role" => OMV_ROLE_ADMINISTRATOR )
-        );
-
-        // Get the configuration object.
-        $object = $xmlConfig->get( $this->getXPath() );
-        if (is_null($object))
-        {
-            throw new OMVException(
-                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
-                $this->getXPath()
-            );
-        }
-
-        // Modify the result object.
-        $object['beta']    = boolval($object['beta']);
-        $object['dotdeb']  = boolval($object['dotdeb']);
-        $object['debmm']   = boolval($object['debmm']);
-        $object['debmmbp'] = boolval($object['debmmbp']);
-        $object['mariadb'] = boolval($object['mariadb']);
-
-        // Remove useless fields from the result object.
-        unset($object['repos']);
-        unset($object['modules']);
-        unset($object['resetperms']);
-
-        return $object;
-    }
-
-    public function setDeveloper($params, $context)
-    {
-        global $xmlConfig;
-
-        // Validate the RPC caller context.
-        $this->validateMethodContext(
-            $context,
-            array( "role" => OMV_ROLE_ADMINISTRATOR )
-        );
-
-        // Validate the parameters of the RPC service method.
-        $this->validateMethodParams($params, '{
-            "type"       : "object",
-            "properties" : {
-                "beta"        : { "type" : "boolean" },
-                "dotdeb"      : { "type" : "boolean" },
-                "debmm"       : { "type" : "boolean" },
-                "debmmbp"     : { "type" : "boolean" },
-                "mariadb"     : { "type" : "boolean" }
-            }
-        }');
-
-        // Get the existing configuration object.
-        $oldObject = $xmlConfig->get( $this->getXPath() );
-        if (is_null($oldObject))
-        {
-            throw new OMVException(
-                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
-                $this->getXPath()
-            );
-        }
-
-        // Update the configuration object.
-        $object = array(
-            "enable"        => array_boolval($oldObject, 'enable'),
-            "testing"       => array_boolval($oldObject, 'testing'),
-            "developer"     => $oldObject['developer'],
-            "vbox"          => array_boolval($oldObject, 'vbox'),
-            "plex"          => array_boolval($oldObject, 'plex'),
-            "greyhole"      => array_boolval($oldObject, 'greyhole'),
-            "vdr"           => array_boolval($oldObject, 'vdr'),
-            "miller"        => array_boolval($oldObject, 'miller'),
-            "millertesting" => array_boolval($oldObject, 'millertesting'),
-            "btsync"        => array_boolval($oldObject, 'btsync'),
-            "vpn"           => array_boolval($oldObject, 'vpn'),
-            "zfs"           => array_boolval($oldObject, 'zfs'),
-            "gluster"       => array_boolval($oldObject, 'gluster'),
-            "mono"          => array_boolval($oldObject, 'mono'),
-            "monotesting"   => array_boolval($oldObject, 'monotesting'),
-            "hwraid"        => array_boolval($oldObject, 'hwraid'),
-            "beta"          => array_boolval($params, 'beta'),
-            "dotdeb"        => array_boolval($params, 'dotdeb'),
-            "debmm"         => array_boolval($params, 'debmm'),
-            "debmmbp"       => array_boolval($params, 'debmmbp'),
-            "mariadb"       => array_boolval($params, 'mariadb'),
-            "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array(),
-            "modules"       => isset($oldObject['modules']) ? $oldObject['modules'] : array(),
-            "resetperms"    => isset($oldObject['resetperms']) ? $oldObject['resetperms'] : array()
-        );
-
-        if (FALSE === $xmlConfig->replace($this->getXPath(), $object))
-        {
-            throw new OMVException(
-                OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED
-            );
-        }
-
-        // Notify configuration changes.
-        $dispatcher = &OMVNotifyDispatcher::getInstance();
-        $dispatcher->notify(
-            OMV_NOTIFY_MODIFY,
-            $this->getEventMessagePath(),
-            $object
-        );
-
-        // Apply the changes immediately (no user interaction is wanted).
-        OMVRpc::exec(
-            "Config",
-            "applyChanges",
-            array(
-                "modules" => array( $this->getPluginName() ),
-                "force"   => TRUE
-            ),
-            $context
-        );
-
-        // Return the configuration object.
-        return $object;
     }
 
     public function getModules($params, $context)
@@ -1234,8 +1122,17 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             array( "role" => OMV_ROLE_ADMINISTRATOR )
         );
 
-        $object = array();
+        // Get the configuration object.
+        $object = $xmlConfig->get( $this->getXPath() );
+        if (is_null($object))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
+                $this->getXPath()
+            );
+        }
 
+        // Get boot kernel
         $grub_default = "/etc/default/grub";
         $line_grub = "GRUB_DEFAULT=";
 
@@ -1243,13 +1140,35 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         OMVUtil::exec($cmd, $output, $result);
         $object['kernels'] = intval(str_replace($line_grub, "", $output[0]));
 
+        // Get OMV version name
+        $prd = new OMVProduct();
+        $object['versionname'] = strtolower( $prd->getVersionName() );
+
+        // Get omv-extras version
+        $output = array();
+        $cmd = sprintf( "export LANG=C; dpkg-query -W -f='\${Version}' openmediavault-%s", $this->getPluginName() );
+        OMVUtil::exec($cmd, $output, $result);
+        $object['version'] = $output[0];
+
+        // Get kernel version
+        $object['kernel'] = php_uname('r');
+
+        // Get architecture
+        $output = array();
+        $cmd = "export LANG=C; dpkg --print-architecture";
+        OMVUtil::exec($cmd, $output, $result);
+        $object['arch'] = strtolower( $output[0] );
+
+        // Remove useless fields from the result object.
+        unset($object['repos']);
+        unset($object['modules']);
+        unset($object['resetperms']);
+
         return $object;
     }
 
     public function setBootKernel($params, $context)
     {
-        global $xmlConfig;
-
         // Validate the RPC caller context.
         $this->validateMethodContext(
             $context,
@@ -1260,10 +1179,12 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $this->validateMethodParams($params, '{
             "type"       : "object",
             "properties" : {
-                "key"  : { "type" : "integer" }
+                "key"       : { "type" : "integer" },
+                "developer" : { "type" : "string", "optional" : true }
             }
         }');
 
+        // Set boot kernel
         $grub = "/etc/default/grub";
         $line = "GRUB_DEFAULT=";
         $contents = file($grub);
@@ -1301,6 +1222,71 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         }
     }
 
+    public function setDeveloper($params, $context)
+    {
+        global $xmlConfig;
+
+        // Validate the RPC caller context.
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
+
+        // Validate the parameters of the RPC service method.
+        $this->validateMethodParams($params, '{
+            "type"       : "object",
+            "properties" : {
+                "kernels"   : { "type" : "integer" },
+                "developer" : { "type" : "string", "optional" : true }
+            }
+        }');
+
+        // Get the existing configuration object.
+        $oldObject = $xmlConfig->get( $this->getXPath() );
+        if (is_null($oldObject))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
+                $this->getXPath()
+            );
+        }
+
+        // Update the configuration object.
+        $object = array(
+            "developer"     => $params['developer'],
+            "enable"        => array_boolval($oldObject, 'enable'),
+            "testing"       => array_boolval($oldObject, 'testing'),
+            "vbox"          => array_boolval($oldObject, 'vbox'),
+            "plex"          => array_boolval($oldObject, 'plex'),
+            "greyhole"      => array_boolval($oldObject, 'greyhole'),
+            "vdr"           => array_boolval($oldObject, 'vdr'),
+            "miller"        => array_boolval($oldObject, 'miller'),
+            "millertesting" => array_boolval($oldObject, 'millertesting'),
+            "btsync"        => array_boolval($oldObject, 'btsync'),
+            "vpn"           => array_boolval($oldObject, 'vpn'),
+            "zfs"           => array_boolval($oldObject, 'zfs'),
+            "gluster"       => array_boolval($oldObject, 'gluster'),
+            "mono"          => array_boolval($oldObject, 'mono'),
+            "monotesting"   => array_boolval($oldObject, 'monotesting'),
+            "hwraid"        => array_boolval($oldObject, 'hwraid'),
+            "beta"          => array_boolval($oldObject, 'beta'),
+            "dotdeb"        => array_boolval($oldObject, 'dotdeb'),
+            "debmm"         => array_boolval($oldObject, 'debmm'),
+            "debmmbp"       => array_boolval($oldObject, 'debmmbp'),
+            "mariadb"       => array_boolval($oldObject, 'mariadb'),
+            "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array(),
+            "modules"       => isset($oldObject['modules']) ? $oldObject['modules'] : array(),
+            "resetperms"    => isset($oldObject['resetperms']) ? $oldObject['resetperms'] : array()
+        );
+
+        if (FALSE === $xmlConfig->replace($this->getXPath(), $object))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED
+            );
+        }
+    }
+
     public function doInstallBackports($params, $context)
     {
         // Validate the RPC caller context.
@@ -1330,57 +1316,6 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         } catch(Exception $e) {
             $this->finalizeBgProcStatus($bgStatusFilename, "", $e);
             exit(1);
-        }
-    }
-
-    public function doInstallSystemd($params, $context)
-    {
-        // Validate the RPC caller context.
-        $this->validateMethodContext(
-            $context,
-            array( "role" => OMV_ROLE_ADMINISTRATOR )
-        );
-
-        // Create a background process.
-        $bgStatusFilename = $this->createBgProcStatus();
-        $pid = $this->fork();
-        if ($pid > 0)   // Parent process.
-        {
-            $this->initializeBgProcStatus($bgStatusFilename, $pid);
-            return $bgStatusFilename;
-        }
-
-        // Child process.
-        try {
-            $bgOutputFilename = $this->createBgProcOutput();
-            $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
-
-            $cmd = sprintf("omv-mkconf %s installsystemd 2>&1", $this->getPluginName() );
-            $this->exec($cmd, $output, $bgOutputFilename);
-            $this->finalizeBgProcStatus($bgStatusFilename, $output);
-
-        } catch(Exception $e) {
-            $this->finalizeBgProcStatus($bgStatusFilename, "", $e);
-            exit(1);
-        }
-    }
-
-    public function doAptCleanSilent($params, $context)
-    {
-        // Validate the RPC caller context.
-        $this->validateMethodContext(
-            $context,
-            array( "role" => OMV_ROLE_ADMINISTRATOR )
-        );
-
-        $cmd = sprintf("omv-mkconf %s aptclean 2>&1", $this->getPluginName() );
-        if (0 !== $this->exec($cmd, $output))
-        {
-            throw new OMVException(
-                OMVErrorMsg::E_EXEC_FAILED,
-                $cmd,
-                implode("\n", $output)
-            );
         }
     }
 
