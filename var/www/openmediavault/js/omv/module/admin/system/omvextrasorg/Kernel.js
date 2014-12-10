@@ -28,8 +28,8 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Kernel", {
     extend : "OMV.workspace.form.Panel",
 
     rpcService   : "OmvExtrasOrg",
-    rpcGetMethod : "getBootKernel",
-    rpcSetMethod : "setDeveloper",
+    rpcGetMethod : "getKernel",
+    rpcSetMethod : "setKernel",
 
     getButtonItems : function() {
         var me = this;
@@ -76,7 +76,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Kernel", {
                         type    : "rpc",
                         rpcData : {
                             service : "OmvExtrasOrg",
-                            method  : "getKernels"
+                            method  : "getKernelList"
                         }
                     }
                 })

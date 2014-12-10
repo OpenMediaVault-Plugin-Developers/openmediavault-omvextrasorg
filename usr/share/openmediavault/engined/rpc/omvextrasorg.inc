@@ -101,15 +101,14 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
     public function initialize()
     {
-        $this->registerMethod("getSecondaryList");
-        $this->registerMethod("getArch");
-        $this->registerMethod("getSecondary");
-        $this->registerMethod("setSecondary");
-
-        $this->registerMethod("getRepos");
         $this->registerMethod("getRepo");
         $this->registerMethod("setRepo");
-        $this->registerMethod("deleteRepo");
+        $this->registerMethod("getArch");
+
+        $this->registerMethod("getCustomList");
+        $this->registerMethod("getCustom");
+        $this->registerMethod("setCustom");
+        $this->registerMethod("deleteCustom");
 
         $this->registerMethod("getModules");
         $this->registerMethod("setModules");
@@ -119,10 +118,10 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $this->registerMethod("getResetPerms");
         $this->registerMethod("setResetPerms");
 
-        $this->registerMethod("getKernels");
-        $this->registerMethod("getBootKernel");
+        $this->registerMethod("getKernel");
+        $this->registerMethod("setKernel");
+        $this->registerMethod("getKernelList");
         $this->registerMethod("setBootKernel");
-        $this->registerMethod("setDeveloper");
 
         $this->registerMethod("doInstallBackports");
         $this->registerMethod("doAptClean");
@@ -134,92 +133,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $this->registerMethod("doResetPerms");
     }
 
-    public function setPrimary($params, $context)
-    {
-        global $xmlConfig;
-
-        // Validate the RPC caller context.
-        $this->validateMethodContext(
-            $context,
-            array( "role" => OMV_ROLE_ADMINISTRATOR )
-        );
-
-        // Validate the parameters of the RPC service method.
-        $this->validateMethodParams($params, '{
-            "type"       : "object",
-            "properties" : {
-
-            }
-        }');
-
-        // Get the existing configuration object.
-        $oldObject = $xmlConfig->get( $this->getXPath() );
-        if (is_null($oldObject))
-        {
-            throw new OMVException(
-                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
-                $this->getXPath()
-            );
-        }
-
-        // Update the configuration object.
-        $object = array(
-            "developer"     => $params['developer'],
-            "enable"        => array_boolval($oldObject, 'enable'),
-            "testing"       => array_boolval($oldObject, 'testing'),
-            "vbox"          => array_boolval($oldObject, 'vbox'),
-            "plex"          => array_boolval($oldObject, 'plex'),
-            "greyhole"      => array_boolval($oldObject, 'greyhole'),
-            "vdr"           => array_boolval($oldObject, 'vdr'),
-            "miller"        => array_boolval($oldObject, 'miller'),
-            "millertesting" => array_boolval($oldObject, 'millertesting'),
-            "btsync"        => array_boolval($oldObject, 'btsync'),
-            "vpn"           => array_boolval($oldObject, 'vpn'),
-            "zfs"           => array_boolval($oldObject, 'zfs'),
-            "gluster"       => array_boolval($oldObject, 'gluster'),
-            "mono"          => array_boolval($oldObject, 'mono'),
-            "monotesting"   => array_boolval($oldObject, 'monotesting'),
-            "hwraid"        => array_boolval($oldObject, 'hwraid'),
-            "beta"          => array_boolval($oldObject, 'beta'),
-            "dotdeb"        => array_boolval($oldObject, 'dotdeb'),
-            "debmm"         => array_boolval($oldObject, 'debmm'),
-            "debmmbp"       => array_boolval($oldObject, 'debmmbp'),
-            "mariadb"       => array_boolval($oldObject, 'mariadb'),
-            "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array(),
-            "modules"       => isset($oldObject['modules']) ? $oldObject['modules'] : array(),
-            "resetperms"    => isset($oldObject['resetperms']) ? $oldObject['resetperms'] : array()
-        );
-        if (FALSE === $xmlConfig->replace($this->getXPath(), $object))
-        {
-            throw new OMVException(
-                OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED
-            );
-        }
-
-        // Notify configuration changes.
-        $dispatcher = &OMVNotifyDispatcher::getInstance();
-        $dispatcher->notify(
-            OMV_NOTIFY_MODIFY,
-            $this->getEventMessagePath(),
-            $object
-        );
-
-        // Apply the changes immediately (no user interaction is wanted).
-        OMVRpc::exec(
-            "Config",
-            "applyChanges",
-            array(
-                "modules" => array( $this->getPluginName() ),
-                "force"   => TRUE
-            ),
-            $context
-        );
-
-        // Return the configuration object.
-        return $object;
-    }
-
-    public function getSecondaryList($params, $context)
+    public function getRepo($params, $context)
     {
         global $xmlConfig;
 
@@ -312,7 +226,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         );
 
         $result[] = array(
-            "id"          => "omvextras",
+            "id"          => "enable",
             "type"        => "All",
             "enable"      => $object['enable'],
             "repo"        => "OMV-Extras.org",
@@ -320,7 +234,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         );
 
         $result[] = array(
-            "id"          => "omvextrastesting",
+            "id"          => "testing",
             "type"        => "All",
             "enable"      => $object['testing'],
             "repo"        => "OMV-Extras.org Testing",
@@ -410,73 +324,10 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             );
         }
 
-        file_put_contents('/tmp/object.txt', print_r($object, true));
-        file_put_contents('/tmp/result.txt', print_r($result, true));
-
         return $result;
     }
 
-    public function getArch($params, $context)
-    {
-        // Validate the RPC caller context.
-        $this->validateMethodContext(
-            $context,
-            array( "role" => OMV_ROLE_ADMINISTRATOR )
-        );
-
-        // Get architecture
-        $output = array();
-        $cmd = "export LANG=C; dpkg --print-architecture";
-        OMVUtil::exec($cmd, $output, $result);
-        $object['arch'] = strtolower( $output[0] );
-
-        return $object;
-    }
-
-    public function getSecondary($params, $context)
-    {
-        global $xmlConfig;
-
-        // Validate the RPC caller context.
-        $this->validateMethodContext(
-            $context,
-            array( "role" => OMV_ROLE_ADMINISTRATOR )
-        );
-
-        // Get the configuration object.
-        $object = $xmlConfig->get( $this->getXPath() );
-        if (is_null($object))
-        {
-            throw new OMVException(
-                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
-                $this->getXPath()
-            );
-        }
-
-        // Modify the result object.
-        $object['vbox']          = boolval($object['vbox']);
-        $object['plex']          = boolval($object['plex']);
-        $object['greyhole']      = boolval($object['greyhole']);
-        $object['vdr']           = boolval($object['vdr']);
-        $object['miller']        = boolval($object['miller']);
-        $object['millertesting'] = boolval($object['millertesting']);
-        $object['btsync']        = boolval($object['btsync']);
-        $object['vpn']           = boolval($object['vpn']);
-        $object['zfs']           = boolval($object['zfs']);
-        $object['gluster']       = boolval($object['gluster']);
-        $object['mono']          = boolval($object['mono']);
-        $object['monotesting']   = boolval($object['monotesting']);
-        $object['hwraid']        = boolval($object['hwraid']);
-
-        // Remove useless fields from the result object.
-        unset($object['repos']);
-        unset($object['modules']);
-        unset($object['resetperms']);
-
-        return $object;
-    }
-
-    public function setSecondary($params, $context)
+    public function setRepo($params, $context)
     {
         global $xmlConfig;
 
@@ -488,23 +339,23 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         // Validate the parameters of the RPC service method.
         $this->validateMethodParams($params, '{
-            "type"       : "object",
-            "properties" : {
-                "vbox"          : { "type" : "boolean" },
-                "plex"          : { "type" : "boolean" },
-                "greyhole"      : { "type" : "boolean" },
-                "vdr"           : { "type" : "boolean" },
-                "miller"        : { "type" : "boolean" },
-                "millertesting" : { "type" : "boolean" },
-                "btsync"        : { "type" : "boolean" },
-                "vpn"           : { "type" : "boolean" },
-                "zfs"           : { "type" : "boolean" },
-                "gluster"       : { "type" : "boolean" },
-                "mono"          : { "type" : "boolean" },
-                "monotesting"   : { "type" : "boolean" },
-                "hwraid"        : { "type" : "boolean" }
+            "type"  : "array",
+            "items" : {
+                "type"       : "object",
+                "properties" : {
+                    "id"      : { "type" : "string" },
+                    "enable"  : { "type" : "boolean" }
+                }
             }
         }');
+
+        // Prepare the configuration object.
+        $repos = array();
+
+        foreach($params as $paramk => $paramv)
+        {
+            $repos[$paramv['id']] = $paramv['enable'];
+        }
 
         // Check architecture and disable appropriate repos
         $uname = php_uname();
@@ -513,22 +364,22 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
              strpos($uname, "486") === false &&
              strpos($uname, "686") === false )
         {
-            $params['vbox']        = false;
-            $params['plex']        = false;
-            $params['vdr']         = false;
-            $params['vpn']         = false;
-            $params['mono']        = false;
-            $params['monotesting'] = false;
-            $params['hwraid']      = false;
+            $repos['vbox']        = false;
+            $repos['plex']        = false;
+            $repos['vdr']         = false;
+            $repos['vpn']         = false;
+            $repos['mono']        = false;
+            $repos['monotesting'] = false;
+            $repos['hwraid']      = false;
         }
 
-        if ( boolval($params['monotesting']) === true )
-            $params['mono'] = true;
+        if ( boolval($repos['monotesting']) === true )
+            $repos['mono'] = true;
 
         if ( strpos($uname, "amd64") === false )
         {
-            $params['zfs'] = false;
-            $params['gluster'] = false;
+            $repos['zfs'] = false;
+            $repos['gluster'] = false;
         }
 
         // Get the existing configuration object.
@@ -543,27 +394,27 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         // Update the configuration object.
         $object = array(
-            "enable"        => array_boolval($oldObject, 'enable'),
-            "testing"       => array_boolval($oldObject, 'testing'),
+            "enable"        => array_boolval($repos, 'enable'),
+            "testing"       => array_boolval($repos, 'testing'),
+            "vbox"          => array_boolval($repos, 'vbox'),
+            "plex"          => array_boolval($repos, 'plex'),
+            "greyhole"      => array_boolval($repos, 'greyhole'),
+            "vdr"           => array_boolval($repos, 'vdr'),
+            "miller"        => array_boolval($repos, 'miller'),
+            "millertesting" => array_boolval($repos, 'millertesting'),
+            "btsync"        => array_boolval($repos, 'btsync'),
+            "vpn"           => array_boolval($repos, 'vpn'),
+            "zfs"           => array_boolval($repos, 'zfs'),
+            "gluster"       => array_boolval($repos, 'gluster'),
+            "mono"          => array_boolval($repos, 'mono'),
+            "monotesting"   => array_boolval($repos, 'monotesting'),
+            "hwraid"        => array_boolval($repos, 'hwraid'),
+            "beta"          => array_boolval($repos, 'beta'),
+            "dotdeb"        => array_boolval($repos, 'dotdeb'),
+            "debmm"         => array_boolval($repos, 'debmm'),
+            "debmmbp"       => array_boolval($repos, 'debmmbp'),
+            "mariadb"       => array_boolval($repos, 'mariadb'),
             "developer"     => $oldObject['developer'],
-            "vbox"          => array_boolval($params, 'vbox'),
-            "plex"          => array_boolval($params, 'plex'),
-            "greyhole"      => array_boolval($params, 'greyhole'),
-            "vdr"           => array_boolval($params, 'vdr'),
-            "miller"        => array_boolval($params, 'miller'),
-            "millertesting" => array_boolval($params, 'millertesting'),
-            "btsync"        => array_boolval($params, 'btsync'),
-            "vpn"           => array_boolval($params, 'vpn'),
-            "zfs"           => array_boolval($params, 'zfs'),
-            "gluster"       => array_boolval($params, 'gluster'),
-            "mono"          => array_boolval($params, 'mono'),
-            "monotesting"   => array_boolval($params, 'monotesting'),
-            "hwraid"        => array_boolval($params, 'hwraid'),
-            "beta"          => array_boolval($oldObject, 'beta'),
-            "dotdeb"        => array_boolval($oldObject, 'dotdeb'),
-            "debmm"         => array_boolval($oldObject, 'debmm'),
-            "debmmbp"       => array_boolval($oldObject, 'debmmbp'),
-            "mariadb"       => array_boolval($oldObject, 'mariadb'),
             "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array(),
             "modules"       => isset($oldObject['modules']) ? $oldObject['modules'] : array(),
             "resetperms"    => isset($oldObject['resetperms']) ? $oldObject['resetperms'] : array()
@@ -584,22 +435,28 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             $object
         );
 
-        // Apply the changes immediately (no user interaction is wanted).
-        OMVRpc::exec(
-            "Config",
-            "applyChanges",
-            array(
-                "modules" => array( $this->getPluginName() ),
-                "force"   => TRUE
-            ),
-            $context
-        );
-
         // Return the configuration object.
         return $object;
     }
 
-    public function getRepos($params, $context)
+    public function getArch($params, $context)
+    {
+        // Validate the RPC caller context.
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
+
+        // Get architecture
+        $output = array();
+        $cmd = "export LANG=C; dpkg --print-architecture";
+        OMVUtil::exec($cmd, $output, $result);
+        $object['arch'] = strtolower( $output[0] );
+
+        return $object;
+    }
+
+    public function getCustomList($params, $context)
     {
         global $xmlConfig;
 
@@ -635,7 +492,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             $params['sortfield'], $params['sortdir']);
     }
 
-    public function getRepo($params, $context)
+    public function getCustom($params, $context)
     {
         global $xmlConfig;
 
@@ -667,7 +524,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         return $object;
     }
 
-    public function setRepo($params, $context)
+    public function setCustom($params, $context)
     {
         global $xmlConfig;
 
@@ -729,7 +586,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         return $object;
     }
 
-    public function deleteRepo($params, $context)
+    public function deleteCustom($params, $context)
     {
         global $xmlConfig;
 
@@ -1076,43 +933,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         return $object;
     }
 
-    public function getKernels($params, $context)
-    {
-        global $xmlConfig;
-
-        // Validate the RPC caller context.
-        $this->validateMethodContext(
-            $context,
-            array( "role" => OMV_ROLE_ADMINISTRATOR )
-        );
-
-        // Get configuration object
-        $kernels = array();
-
-        // Get configuration data.
-        $cmd = "export LANG=C; cat /boot/grub/grub.cfg | grep ^menuentry";
-        OMVUtil::exec($cmd, $result);
-
-        foreach ($result as $kernelk => $kernelv)
-        {
-            $line = str_replace("'", "\"", $kernelv);
-            $name = explode("\"", $line);
-
-            if (empty($name[1]))
-                continue;
-
-            $kernels[] = array(
-                "key"  => $kernelk,
-                "name" => $name[1]
-            );
-        }
-
-        return $this->applyFilter($kernels, $params["start"], $params["limit"],
-            $params["sortfield"], $params["sortdir"]
-        );
-    }
-
-    public function getBootKernel($params, $context)
+    public function getKernel($params, $context)
     {
         global $xmlConfig;
 
@@ -1167,62 +988,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         return $object;
     }
 
-    public function setBootKernel($params, $context)
-    {
-        // Validate the RPC caller context.
-        $this->validateMethodContext(
-            $context,
-            array( "role" => OMV_ROLE_ADMINISTRATOR )
-        );
-
-        // Validate the parameters of the RPC service method.
-        $this->validateMethodParams($params, '{
-            "type"       : "object",
-            "properties" : {
-                "key"       : { "type" : "integer" },
-                "developer" : { "type" : "string", "optional" : true }
-            }
-        }');
-
-        // Set boot kernel
-        $grub = "/etc/default/grub";
-        $line = "GRUB_DEFAULT=";
-        $contents = file($grub);
-        $newdata = array();
-        $new = sprintf("%s%s\n", $line, $params['key']);
-
-        foreach ($contents as $filerow)
-        {
-            if (strstr($filerow, $line) !== false)
-                $filerow = $new;
-
-            $newdata[] = $filerow;
-        }
-
-        file_put_contents($grub, implode($newdata));
-
-        $cmd = sprintf("export LANG=C; grub-set-default %s", $params['key']);
-        if (0 !== $this->exec($cmd, $output))
-        {
-            throw new OMVException(
-                OMVErrorMsg::E_EXEC_FAILED,
-                $cmd,
-                implode("\n", $output)
-            );
-        }
-
-        $cmd = "export LANG=C; update-grub";
-        if (0 !== $this->exec($cmd, $output))
-        {
-            throw new OMVException(
-                OMVErrorMsg::E_EXEC_FAILED,
-                $cmd,
-                implode("\n", $output)
-            );
-        }
-    }
-
-    public function setDeveloper($params, $context)
+    public function setKernel($params, $context)
     {
         global $xmlConfig;
 
@@ -1283,6 +1049,97 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         {
             throw new OMVException(
                 OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED
+            );
+        }
+    }
+
+    public function getKernelList($params, $context)
+    {
+        global $xmlConfig;
+
+        // Validate the RPC caller context.
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
+
+        // Get configuration object
+        $kernels = array();
+
+        // Get configuration data.
+        $cmd = "export LANG=C; cat /boot/grub/grub.cfg | grep ^menuentry";
+        OMVUtil::exec($cmd, $result);
+
+        foreach ($result as $kernelk => $kernelv)
+        {
+            $line = str_replace("'", "\"", $kernelv);
+            $name = explode("\"", $line);
+
+            if (empty($name[1]))
+                continue;
+
+            $kernels[] = array(
+                "key"  => $kernelk,
+                "name" => $name[1]
+            );
+        }
+
+        return $this->applyFilter($kernels, $params["start"], $params["limit"],
+            $params["sortfield"], $params["sortdir"]
+        );
+    }
+
+    public function setBootKernel($params, $context)
+    {
+        // Validate the RPC caller context.
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
+
+        // Validate the parameters of the RPC service method.
+        $this->validateMethodParams($params, '{
+            "type"       : "object",
+            "properties" : {
+                "key"       : { "type" : "integer" },
+                "developer" : { "type" : "string", "optional" : true }
+            }
+        }');
+
+        // Set boot kernel
+        $grub = "/etc/default/grub";
+        $line = "GRUB_DEFAULT=";
+        $contents = file($grub);
+        $newdata = array();
+        $new = sprintf("%s%s\n", $line, $params['key']);
+
+        foreach ($contents as $filerow)
+        {
+            if (strstr($filerow, $line) !== false)
+                $filerow = $new;
+
+            $newdata[] = $filerow;
+        }
+
+        file_put_contents($grub, implode($newdata));
+
+        $cmd = sprintf("export LANG=C; grub-set-default %s", $params['key']);
+        if (0 !== $this->exec($cmd, $output))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_EXEC_FAILED,
+                $cmd,
+                implode("\n", $output)
+            );
+        }
+
+        $cmd = "export LANG=C; update-grub";
+        if (0 !== $this->exec($cmd, $output))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_EXEC_FAILED,
+                $cmd,
+                implode("\n", $output)
             );
         }
     }

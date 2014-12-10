@@ -560,6 +560,11 @@ case $2 in
 
     *)
         update
+        case ${conf} in
+            configure) ;;
+            *)  apt-get update || : ;;
+        esac
+
     ;;
 esac
 

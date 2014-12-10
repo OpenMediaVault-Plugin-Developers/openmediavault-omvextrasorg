@@ -28,15 +28,16 @@
 // require("js/omv/data/Model.js")
 // require("js/omv/data/proxy/Rpc.js")
 
-Ext.define("OMV.module.admin.system.omvextrasorg.Repo", {
+Ext.define("OMV.module.admin.system.omvextrasorg.Custom", {
     extend   : "OMV.workspace.window.Form",
     requires : [
         "OMV.workspace.window.plugin.ConfigObject"
     ],
 
     rpcService   : "OmvExtrasOrg",
-    rpcGetMethod : "getRepo",
-    rpcSetMethod : "setRepo",
+    rpcGetMethod : "getCustom",
+    rpcSetMethod : "setCustom",
+
     plugins      : [{
         ptype : "configobject"
     }],
@@ -61,7 +62,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Repo", {
     }
 });
 
-Ext.define("OMV.module.admin.system.omvextrasorg.Custom", {
+Ext.define("OMV.module.admin.system.omvextrasorg.CustomRepos", {
     extend   : "OMV.workspace.grid.Panel",
     requires : [
         "OMV.Rpc",
@@ -71,7 +72,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Custom", {
         "OMV.util.Format"
     ],
     uses     : [
-        "OMV.module.admin.system.omvextrasorg.Repo"
+        "OMV.module.admin.system.omvextrasorg.Custom"
     ],
 
     hidePagingToolbar : false,
@@ -112,7 +113,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Custom", {
                     type    : "rpc",
                     rpcData : {
                         service : "OmvExtrasOrg",
-                        method  : "getRepos"
+                        method  : "getCustomList"
                     }
                 }
             })
@@ -120,25 +121,25 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Custom", {
         me.callParent(arguments);
     },
 
-    getTopToolbarItems: function() {
+    getTopToolbarItems : function() {
         var me = this;
         var items = me.callParent(arguments);
         Ext.Array.push(items, {
-            id: me.getId() + "-check",
-            xtype: "button",
-            text: _("Update"),
-            icon: "images/refresh.png",
-            iconCls: Ext.baseCSSPrefix + "btn-icon-16x16",
-            handler: Ext.Function.bind(me.onCheckButton, me, [ me ]),
-            scope: me
+            id      : me.getId() + "-check",
+            xtype   : "button",
+            text    : _("Update"),
+            icon    : "images/refresh.png",
+            iconCls : Ext.baseCSSPrefix + "btn-icon-16x16",
+            handler : Ext.Function.bind(me.onCheckButton, me, [ me ]),
+            scope   : me
         });
         return items;
     },
 
     onAddButton : function() {
         var me = this;
-        Ext.create("OMV.module.admin.system.omvextrasorg.Repo", {
-            title     : _("Add repo"),
+        Ext.create("OMV.module.admin.system.omvextrasorg.Custom", {
+            title     : _("Add custom repo"),
             uuid      : OMV.UUID_UNDEFINED,
             listeners : {
                 scope  : me,
@@ -152,8 +153,8 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Custom", {
     onEditButton : function() {
         var me = this;
         var record = me.getSelected();
-        Ext.create("OMV.module.admin.system.omvextrasorg.Repo", {
-            title     : _("Edit repo"),
+        Ext.create("OMV.module.admin.system.omvextrasorg.Custom", {
+            title     : _("Edit custom repo"),
             uuid      : record.get("uuid"),
             listeners : {
                 scope  : me,
@@ -171,7 +172,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Custom", {
             callback : me.onDeletion,
             rpcData  : {
                 service : "OmvExtrasOrg",
-                method  : "deleteRepo",
+                method  : "deleteCustom",
                 params  : {
                     uuid : record.get("uuid")
                 }
@@ -207,9 +208,9 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Custom", {
 });
 
 OMV.WorkspaceManager.registerPanel({
-    id        : "scheduledjobs",
+    id        : "customrepos",
     path      : "/system/omvextrasorg",
-    text      : _("Custom"),
+    text      : _("Custom Repos"),
     position  : 20,
-    className : "OMV.module.admin.system.omvextrasorg.Custom"
+    className : "OMV.module.admin.system.omvextrasorg.CustomRepos"
 });
