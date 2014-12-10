@@ -165,120 +165,120 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "id"          => "btsync",
             "type"        => "Backup",
             "enable"      => $object['btsync'],
-            "repo"        => "BTSync",
-            "description" => "BTSync"
+            "repo"        => gettext("BTSync"),
+            "description" => gettext("BTSync repository")
         );
 
         $result[] = array(
             "id"          => "gluster",
             "type"        => "Filesystems",
             "enable"      => $object['gluster'],
-            "repo"        => "GlusterFS",
-            "description" => "Gluster - do not enable this repository unless you are using the GlusterFS filesystem (uncommon)"
+            "repo"        => gettext("GlusterFS"),
+            "description" => gettext("Do not enable this repository unless you are using the GlusterFS filesystem (uncommon)")
         );
 
         $result[] = array(
             "id"          => "greyhole",
             "type"        => "Filesystems",
             "enable"      => $object['greyhole'],
-            "repo"        => "Greyhole",
-            "description" => "Greyhole"
+            "repo"        => gettext("Greyhole"),
+            "description" => gettext("Greyhole repository")
         );
 
         $result[] = array(
             "id"          => "hwraid",
             "type"        => "Utilities",
             "enable"      => $object['hwraid'],
-            "repo"        => "HWRaid",
-            "description" => "hwraid"
+            "repo"        => gettext("HWRaid"),
+            "description" => gettext("Modules for different hardware raid controllers")
         );
 
         $result[] = array(
             "id"          => "miller",
             "type"        => "Downloaders",
             "enable"      => $object['miller'],
-            "repo"        => "Download Managers",
-            "description" => "Download managers - contains various download managers for newsgroups, torrents, usenet, and streaming"
+            "repo"        => gettext("Download Managers"),
+            "description" => gettext("Download managers for newsgroups, torrents, usenet, and streaming")
         );
 
         $result[] = array(
             "id"          => "millertesting",
             "type"        => "Downloaders",
             "enable"      => $object['millertesting'],
-            "repo"        => "Download Managers Testing",
-            "description" => "Download managers testing - contains various download managers for newsgroups, torrents, usenet, and streaming"
+            "repo"        => gettext("Download Managers Testing"),
+            "description" => gettext("Testing repository for download managers")
         );
 
         $result[] = array(
             "id"          => "mono",
             "type"        => "Multimedia",
             "enable"      => $object['mono'],
-            "repo"        => "Mono",
-            "description" => "Mono and mono-project.com"
+            "repo"        => gettext("Mono"),
+            "description" => gettext("Mono and mono-project.com")
         );
 
         $result[] = array(
             "id"          => "monotesting",
             "type"        => "Multimedia",
             "enable"      => $object['monotesting'],
-            "repo"        => "Mono Testing",
-            "description" => "Mono testing"
+            "repo"        => gettext("Mono Testing"),
+            "description" => gettext("Testing repository for Mono")
         );
 
         $result[] = array(
             "id"          => "enable",
             "type"        => "All",
             "enable"      => $object['enable'],
-            "repo"        => "OMV-Extras.org",
-            "description" => "OMV-Extras"
+            "repo"        => gettext("OMV-Extras.org"),
+            "description" => gettext("Main package repository")
         );
 
         $result[] = array(
             "id"          => "testing",
             "type"        => "All",
             "enable"      => $object['testing'],
-            "repo"        => "OMV-Extras.org Testing",
-            "description" => "OMV-Extras.org testing (release candidates)"
+            "repo"        => gettext("OMV-Extras.org Testing"),
+            "description" => gettext("Release candidates")
         );
 
         $result[] = array(
             "id"          => "plex",
             "type"        => "Multimedia",
             "enable"      => $object['plex'],
-            "repo"        => "Plex",
-            "description" => "Plex Media Server"
+            "repo"        => gettext("Plex"),
+            "description" => gettext("Plex Media Server repository")
         );
 
         $result[] = array(
             "id"          => "vbox",
             "type"        => "Virtualization",
             "enable"      => $object['vbox'],
-            "repo"        => "Virtualbox",
-            "description" => "Virtualbox"
+            "repo"        => gettext("Virtualbox"),
+            "description" => gettext("Virtualbox repository")
         );
 
         $result[] = array(
             "id"          => "vdr",
             "type"        => "Multimedia",
             "enable"      => $object['vdr'],
-            "repo"        => "VDR",
-            "description" => "e-tobi.net"
+            "repo"        => gettext("VDR"),
+            "description" => gettext("e-tobi.net repository")
         );
 
         $result[] = array(
             "id"          => "vpn",
             "type"        => "Remote",
             "enable"      => $object['vpn'],
-            "repo"        => "VPN",
-            "description" => "VPN - contains plugins for setting up virtual private networks"
+            "repo"        => gettext("VPN"),
+            "description" => gettext("Plugins for setting up virtual private networks")
         );
 
         $result[] = array(
             "id"          => "zfs",
             "type"        => "Filesystems",
             "enable"      => $object['zfs'],
-            "repo"        => "ZFS",
-            "description" => "ZFS - do not enable this repository unless you are using the ZFS filesystem (uncommon)"
+            "repo"        => gettext("ZFS"),
+            "description" => gettext("Do not enable this repository unless you are using the ZFS filesystem (uncommon)")
         );
 
         if ( $object['developer'] == "0827" )
@@ -287,40 +287,40 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
                 "id"          => "beta",
                 "type"        => "All",
                 "enable"      => $object['beta'],
-                "repo"        => "Beta",
-                "description" => "Beta"
+                "repo"        => gettext("Beta"),
+                "description" => gettext("Beta repository")
             );
 
             $result[] = array(
                 "id"          => "dotdeb",
                 "type"        => "All",
                 "enable"      => $object['dotdeb'],
-                "repo"        => "Dotdeb",
-                "description" => "Dotdeb"
+                "repo"        => gettext("Dotdeb"),
+                "description" => gettext("Dotdeb")
             );
 
             $result[] = array(
                 "id"          => "debmm",
                 "type"        => "Multimedia",
                 "enable"      => $object['debmm'],
-                "repo"        => "Deb-Multimedia",
-                "description" => "Deb-Multimedia"
+                "repo"        => gettext("Deb-Multimedia"),
+                "description" => gettext("Repository for new versions of multimedia packages")
             );
 
             $result[] = array(
                 "id"          => "debmmbp",
                 "type"        => "Multimedia",
                 "enable"      => $object['debmmbp'],
-                "repo"        => "Deb-Multimedia Backports",
-                "description" => "Deb-Multimedia Backports"
+                "repo"        => gettext("Deb-Multimedia Backports"),
+                "description" => gettext("Deb-Multimedia backports repository")
             );
 
             $result[] = array(
                 "id"          => "mariadb",
                 "type"        => "Network",
                 "enable"      => $object['mariadb'],
-                "repo"        => "MariaDB",
-                "description" => "MariaDB 10.0"
+                "repo"        => gettext("MariaDB"),
+                "description" => gettext("MariaDB 10.0 repository")
             );
         }
 
@@ -778,12 +778,12 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         $styles[] = array(
             "cmd"  => "style1",
-            "name" => "Style #1"
+            "name" => gettext("Style #1")
         );
 
         $styles[] = array(
             "cmd"  => "style2",
-            "name" => "Style #2"
+            "name" => gettext("Style #2")
         );
 
         // Get configuration data.
@@ -806,17 +806,17 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         $styles[] = array(
             "cmd"  => "iface",
-            "name" => "System - iface"
+            "name" => gettext("System - iface")
         );
 
         $styles[] = array(
             "cmd"  => "mntent",
-            "name" => "System - mntent"
+            "name" => gettext("System - mntent")
         );
 
         $styles[] = array(
             "cmd"  => "sharedfolder",
-            "name" => "System - sharedfolder"
+            "name" => gettext("System - sharedfolder")
         );
 
         return $this->applyFilter($styles, $params["start"], $params["limit"],

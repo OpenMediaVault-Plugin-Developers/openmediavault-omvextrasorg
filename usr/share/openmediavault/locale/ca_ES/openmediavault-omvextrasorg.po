@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-03 14:15-0600\n"
-"PO-Revision-Date: 2014-12-03 20:18+0000\n"
+"POT-Creation-Date: 2014-12-10 17:21-0600\n"
+"PO-Revision-Date: 2014-12-10 23:21+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Catalan (Spain) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ca_ES/)\n"
 "MIME-Version: 1.0\n"
@@ -93,11 +93,8 @@ msgstr ""
 msgid "61 lsmod"
 msgstr ""
 
-msgid "Add repo"
+msgid "Add custom repo"
 msgstr ""
-
-msgid "Additional Repositories"
-msgstr "Repositoris adicionals"
 
 msgid "Administrator: read/write, Users: no access, Others: no access"
 msgstr ""
@@ -117,20 +114,20 @@ msgstr ""
 msgid "Apt Clean"
 msgstr ""
 
-msgid "Apt Clean - Silent"
-msgstr ""
-
 msgid "Architecture"
 msgstr "Arquitectura"
 
 msgid "BTSync"
 msgstr ""
 
+msgid "BTSync repository"
+msgstr ""
+
 msgid "Beta"
 msgstr ""
 
-msgid "Can be helpful in fixing plugin problems."
-msgstr "Pot ser útil per corregir errors del complement."
+msgid "Beta repository"
+msgstr ""
 
 msgid "Checking for new updates ..."
 msgstr "Comprovant noves actualitzacions ..."
@@ -138,17 +135,11 @@ msgstr "Comprovant noves actualitzacions ..."
 msgid "Cleaning Apt Files and Lists..."
 msgstr "Netejant arxius i llistes Apt..."
 
-msgid "Cleans apt repositories and removes lists."
-msgstr "Neteja arxius Apt i elimina llistes..."
-
 msgid "Clear ACLs"
 msgstr ""
 
 msgid "Clear all ACLs."
 msgstr ""
-
-msgid "Close"
-msgstr "Tancar"
 
 msgid "Command"
 msgstr "Ordre"
@@ -156,24 +147,22 @@ msgstr "Ordre"
 msgid "Comment"
 msgstr "Comentari"
 
-msgid "Confirmation"
-msgstr "Confirmació"
-
-msgid "Contains plugins for setting up virtual private networks"
-msgstr "Conté complements per configurar xarxes privades virtuals"
-
-msgid ""
-"Contains various download managers for newsgroups, torrents, usenet, and "
-"streaming"
-msgstr "Conté diversos administradors de descàrregues per bolletins de notícies, torrents, usenet i streaming. "
-
-msgid "Custom"
-msgstr "Personalitzat"
-
-msgid "Developer"
+msgid "Custom Repos"
 msgstr ""
 
-msgid "Developer Repositories"
+msgid "Deb-Multimedia"
+msgstr ""
+
+msgid "Deb-Multimedia Backports"
+msgstr ""
+
+msgid "Deb-Multimedia backports repository"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Developer"
 msgstr ""
 
 msgid "Distribution"
@@ -198,79 +187,28 @@ msgstr ""
 msgid "Download Managers"
 msgstr "Administradors de descarregues"
 
-msgid "Downloading package information"
-msgstr "Descarregant informació del paquet."
-
-msgid "Edit repo"
-msgstr "Editar repo"
-
-msgid "Enable BTSync repository"
-msgstr "Activar el repositori BTSync"
-
-msgid "Enable Beta repository"
-msgstr "Activar el repositori Beta"
-
-msgid "Enable Dotdeb repository"
-msgstr "Activar el repositori Dotdeb"
-
-msgid "Enable Gluster repository"
-msgstr "Activar el repositori Gluster"
-
-msgid "Enable Greyhole repository"
-msgstr "Activar el repositori Greyhole"
-
-msgid "Enable MariaDB 10.0 repository"
-msgstr "Activar el repositori MariaDB 10.0"
-
-msgid "Enable Mono Testing repository"
+msgid "Download Managers Testing"
 msgstr ""
 
-msgid "Enable Mono and mono-project.com repositories"
-msgstr "Activar els repositoris Mono i mono-project.com"
+msgid "Download managers for newsgroups, torrents, usenet, and streaming"
+msgstr ""
 
-msgid "Enable OMV-Extras.org repository"
-msgstr "Activar el repositori OMV-Extras.org"
+msgid "Edit custom repo"
+msgstr ""
 
-msgid "Enable OMV-Extras.org testing repository (release candidates)"
-msgstr "Activar el repositori OMV-Extras (candidats per distribució)"
-
-msgid "Enable Plex Media Server repository"
-msgstr "Activar el repositori Plex Media Server"
-
-msgid "Enable VPN repository"
-msgstr "Activar el repositori VPN"
-
-msgid "Enable Virtualbox repository."
-msgstr "Activar el repositori VirtualBox"
-
-msgid "Enable ZFS repository"
-msgstr "Activar el repositori ZFS"
-
-msgid "Enable deb-multimedia backports repository"
-msgstr "Activar el repositori deb-multimedia backports"
-
-msgid "Enable deb-multimedia repository"
-msgstr "Activar el repositori deb-multimedia"
-
-msgid "Enable download managers repository"
-msgstr "Activar el repositori d'administradors de descàrregues"
-
-msgid "Enable download managers testing repository (release candidates)"
-msgstr "Activar el repositori d'administradors de descàrregues de proves (release candidates)"
-
-msgid "Enable e-tobi.net repository"
-msgstr "Activar el repositori e-tobi.net"
-
-msgid "Enable hwraid repository"
+msgid "Enable"
 msgstr ""
 
 msgid "Everyone: read/write"
 msgstr ""
 
-msgid "Gluster"
+msgid "GlusterFS"
 msgstr ""
 
 msgid "Greyhole"
+msgstr ""
+
+msgid "Greyhole repository"
 msgstr ""
 
 msgid "HWRaid"
@@ -290,12 +228,6 @@ msgstr "Instal·lar el kernel 3.16 Backports"
 msgid "Install Backports 3.16 kernel ..."
 msgstr "Instal·lant  el kernel 3.16 backports ..."
 
-msgid "Install systemd"
-msgstr "Instal·lar systemd"
-
-msgid "Install systemd..."
-msgstr "Instal·lant systemd ..."
-
 msgid "Installed Kernels"
 msgstr ""
 
@@ -309,19 +241,28 @@ msgstr ""
 msgid "Kernels"
 msgstr ""
 
-msgid "Managers Testing"
+msgid "Main package repository"
 msgstr ""
 
 msgid "MariaDB"
 msgstr ""
 
+msgid "MariaDB 10.0 repository"
+msgstr ""
+
 msgid "Modules"
 msgstr "Móduls"
+
+msgid "Modules for different hardware raid controllers"
+msgstr ""
 
 msgid "Mono"
 msgstr ""
 
 msgid "Mono Testing"
+msgstr ""
+
+msgid "Mono and mono-project.com"
 msgstr ""
 
 msgid "Name"
@@ -333,10 +274,8 @@ msgstr ""
 msgid "OMV-Extras.org"
 msgstr ""
 
-msgid ""
-"Only enable repositories you need.  Enabling unnecessary repositories can "
-"slow down your system."
-msgstr "Activi només els repositoris necessaris. Activar repositoris in-necessaris pot alentir el sistema."
+msgid "OMV-Extras.org Testing"
+msgstr ""
 
 msgid "PID"
 msgstr ""
@@ -344,23 +283,35 @@ msgstr ""
 msgid "Permissions"
 msgstr ""
 
+msgid "Please select a shared folder."
+msgstr ""
+
 msgid "Plex"
 msgstr ""
 
-msgid "Primary"
-msgstr "Primari"
+msgid "Plex Media Server repository"
+msgstr ""
+
+msgid "Plugins for setting up virtual private networks"
+msgstr ""
 
 msgid "Process List"
 msgstr "Llista de processos"
 
-msgid "Reload"
-msgstr "Recarregar"
+msgid "Release candidates"
+msgstr ""
 
 msgid "Repo"
 msgstr ""
 
-msgid "Repositories"
-msgstr "Repositoris"
+msgid "Repos"
+msgstr ""
+
+msgid "Repository"
+msgstr ""
+
+msgid "Repository for new versions of multimedia packages"
+msgstr ""
 
 msgid "Reset Permissions"
 msgstr ""
@@ -370,9 +321,6 @@ msgstr ""
 
 msgid "Reset permissions ..."
 msgstr ""
-
-msgid "Secondary"
-msgstr "Secondari"
 
 msgid "Send"
 msgstr "Enviar"
@@ -395,11 +343,14 @@ msgstr ""
 msgid "Shared Folder"
 msgstr ""
 
-msgid "Silent"
-msgstr "Silenciós"
-
 msgid "State"
 msgstr "Estat"
+
+msgid "Style #1"
+msgstr ""
+
+msgid "Style #2"
+msgstr ""
 
 msgid "Support Info"
 msgstr "Informació de suport"
@@ -407,30 +358,29 @@ msgstr "Informació de suport"
 msgid "Support Info Module Selection"
 msgstr "Selecció del mòdul d'informació de suport"
 
-msgid "Testing"
-msgstr "Proves"
+msgid "System - iface"
+msgstr ""
 
-msgid ""
-"The information about available software is out-of-date. You need to reload "
-"the information about available software."
-msgstr "La informació sobre el software disponible ha caducat. Necessita recarregar la informació del software disponible."
+msgid "System - mntent"
+msgstr ""
 
-msgid ""
-"The repository will be checked for new, removed or upgraded software "
-"packages."
-msgstr "El repositori es comprovarà buscant paquets nous, eliminats o actualitzats."
+msgid "System - sharedfolder"
+msgstr ""
 
-msgid "These repositories may break your system.  Use caution!!"
-msgstr "Aquests repositoris poden inutilitzar el seu sistema. Vagi amb compte!!"
+msgid "Testing repository for Mono"
+msgstr ""
+
+msgid "Testing repository for download managers"
+msgstr ""
+
+msgid "Type"
+msgstr ""
 
 msgid "Update"
 msgstr "Actualitzar"
 
 msgid "User"
 msgstr "Usuari"
-
-msgid "Utilities"
-msgstr "Utilitats"
 
 msgid "VDR"
 msgstr ""
@@ -444,11 +394,11 @@ msgstr "Versió"
 msgid "Virtualbox"
 msgstr ""
 
+msgid "Virtualbox repository"
+msgstr ""
+
 msgid "ZFS"
 msgstr ""
 
-msgid "deb-multimedia"
-msgstr ""
-
-msgid "deb-multimedia backports"
+msgid "e-tobi.net repository"
 msgstr ""

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-03 14:15-0600\n"
-"PO-Revision-Date: 2014-12-03 20:18+0000\n"
+"POT-Creation-Date: 2014-12-10 17:21-0600\n"
+"PO-Revision-Date: 2014-12-10 23:21+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -93,11 +93,8 @@ msgstr "50 dpkg"
 msgid "61 lsmod"
 msgstr "61 lsmod"
 
-msgid "Add repo"
-msgstr "Repository toevoegen"
-
-msgid "Additional Repositories"
-msgstr "Extra verkrijgbare Repositories"
+msgid "Add custom repo"
+msgstr ""
 
 msgid "Administrator: read/write, Users: no access, Others: no access"
 msgstr ""
@@ -117,20 +114,20 @@ msgstr ""
 msgid "Apt Clean"
 msgstr "Apt Schoonmaken"
 
-msgid "Apt Clean - Silent"
-msgstr "Apt schoonmaken - zonder bericht"
-
 msgid "Architecture"
 msgstr "Architectuur"
 
 msgid "BTSync"
 msgstr "BTSync"
 
+msgid "BTSync repository"
+msgstr ""
+
 msgid "Beta"
 msgstr "Beta"
 
-msgid "Can be helpful in fixing plugin problems."
-msgstr "Can behulpzaam zij bij het repareren van plugin problemen."
+msgid "Beta repository"
+msgstr ""
 
 msgid "Checking for new updates ..."
 msgstr "Aan het kijken of er nog nieuwe updates zijn..."
@@ -138,17 +135,11 @@ msgstr "Aan het kijken of er nog nieuwe updates zijn..."
 msgid "Cleaning Apt Files and Lists..."
 msgstr "Apt Files and Lijsten schoonmaken..."
 
-msgid "Cleans apt repositories and removes lists."
-msgstr "Maakt apt repositories schoon en verwijderd lijsten"
-
 msgid "Clear ACLs"
 msgstr ""
 
 msgid "Clear all ACLs."
 msgstr ""
-
-msgid "Close"
-msgstr "Sluiten"
 
 msgid "Command"
 msgstr "Opdracht"
@@ -156,25 +147,23 @@ msgstr "Opdracht"
 msgid "Comment"
 msgstr "Opmerking"
 
-msgid "Confirmation"
-msgstr "Bevestiging"
+msgid "Custom Repos"
+msgstr ""
 
-msgid "Contains plugins for setting up virtual private networks"
-msgstr "Bevat plugins voor het installeren van Virtuele Prive Netwerken"
+msgid "Deb-Multimedia"
+msgstr ""
 
-msgid ""
-"Contains various download managers for newsgroups, torrents, usenet, and "
-"streaming"
-msgstr "Bevat verschillende download managers for nieuwsgroepen, torrents, usenet en streams"
+msgid "Deb-Multimedia Backports"
+msgstr ""
 
-msgid "Custom"
-msgstr "Op maat gemaakt"
+msgid "Deb-Multimedia backports repository"
+msgstr ""
+
+msgid "Description"
+msgstr ""
 
 msgid "Developer"
 msgstr "Ontwikkelaar"
-
-msgid "Developer Repositories"
-msgstr "Ontwikkelaar Repositories"
 
 msgid "Distribution"
 msgstr "Distributie"
@@ -198,80 +187,29 @@ msgstr "Dotdeb"
 msgid "Download Managers"
 msgstr "Download Managers"
 
-msgid "Downloading package information"
-msgstr "Downloading package informatie"
-
-msgid "Edit repo"
-msgstr "Edit de gegevens van de repository"
-
-msgid "Enable BTSync repository"
-msgstr "Schakel de BTSync repository in"
-
-msgid "Enable Beta repository"
-msgstr "Schakel de Beta repository in"
-
-msgid "Enable Dotdeb repository"
-msgstr "Schakel de Dotdeb repository in"
-
-msgid "Enable Gluster repository"
-msgstr "Schakel de Gluster repository in"
-
-msgid "Enable Greyhole repository"
-msgstr "Schakel de Greyhole repository in"
-
-msgid "Enable MariaDB 10.0 repository"
-msgstr "Schakel de MariaDB 10.0 repository in"
-
-msgid "Enable Mono Testing repository"
+msgid "Download Managers Testing"
 msgstr ""
 
-msgid "Enable Mono and mono-project.com repositories"
-msgstr "Schakel de Mono and mono-project.comr repositories in"
+msgid "Download managers for newsgroups, torrents, usenet, and streaming"
+msgstr ""
 
-msgid "Enable OMV-Extras.org repository"
-msgstr "Schakel de OMV-Extras.org repository in"
+msgid "Edit custom repo"
+msgstr ""
 
-msgid "Enable OMV-Extras.org testing repository (release candidates)"
-msgstr "Schakel de OMV-Exstras.org repository in (release kandidaten)"
-
-msgid "Enable Plex Media Server repository"
-msgstr "Schakel de Plex Media Server repository in"
-
-msgid "Enable VPN repository"
-msgstr "Schakel de VPN repository in"
-
-msgid "Enable Virtualbox repository."
-msgstr "Schakel de Virtualbox repository in"
-
-msgid "Enable ZFS repository"
-msgstr "Schakel de ZFS repository in"
-
-msgid "Enable deb-multimedia backports repository"
-msgstr "Schakel de deb-multimedia backports repository in"
-
-msgid "Enable deb-multimedia repository"
-msgstr "Schakel de deb-multimedia repository in"
-
-msgid "Enable download managers repository"
-msgstr "Schakel de download managers repository in"
-
-msgid "Enable download managers testing repository (release candidates)"
-msgstr "Schakel download managers test repository in (release kandidaten)"
-
-msgid "Enable e-tobi.net repository"
-msgstr "Schakel de e-tobi.net repository in"
-
-msgid "Enable hwraid repository"
-msgstr "Schakel hwraid repository in"
+msgid "Enable"
+msgstr ""
 
 msgid "Everyone: read/write"
 msgstr ""
 
-msgid "Gluster"
-msgstr "Gluster"
+msgid "GlusterFS"
+msgstr ""
 
 msgid "Greyhole"
 msgstr "Greyhole"
+
+msgid "Greyhole repository"
+msgstr ""
 
 msgid "HWRaid"
 msgstr "HWRaid"
@@ -290,12 +228,6 @@ msgstr "Installeer de Backports 3.16 kernel"
 msgid "Install Backports 3.16 kernel ..."
 msgstr "de Backports 3.16 kernel aan het installeren ..."
 
-msgid "Install systemd"
-msgstr "geinstalleerde systemd"
-
-msgid "Install systemd..."
-msgstr "Installeer systemd..."
-
 msgid "Installed Kernels"
 msgstr ""
 
@@ -309,19 +241,28 @@ msgstr "Kernel"
 msgid "Kernels"
 msgstr ""
 
-msgid "Managers Testing"
-msgstr "Managers aan het testen"
+msgid "Main package repository"
+msgstr ""
 
 msgid "MariaDB"
 msgstr "MariaDB"
 
+msgid "MariaDB 10.0 repository"
+msgstr ""
+
 msgid "Modules"
 msgstr "Modules"
+
+msgid "Modules for different hardware raid controllers"
+msgstr ""
 
 msgid "Mono"
 msgstr "Mono"
 
 msgid "Mono Testing"
+msgstr ""
+
+msgid "Mono and mono-project.com"
 msgstr ""
 
 msgid "Name"
@@ -333,10 +274,8 @@ msgstr ""
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
 
-msgid ""
-"Only enable repositories you need.  Enabling unnecessary repositories can "
-"slow down your system."
-msgstr "Installer allen de repositories die je nodig hebt. Overbodige repositories vertragen je systeem..."
+msgid "OMV-Extras.org Testing"
+msgstr ""
 
 msgid "PID"
 msgstr "PID"
@@ -344,23 +283,35 @@ msgstr "PID"
 msgid "Permissions"
 msgstr ""
 
+msgid "Please select a shared folder."
+msgstr ""
+
 msgid "Plex"
 msgstr "Plex"
 
-msgid "Primary"
-msgstr "Eerste"
+msgid "Plex Media Server repository"
+msgstr ""
+
+msgid "Plugins for setting up virtual private networks"
+msgstr ""
 
 msgid "Process List"
 msgstr "Lijst van processen"
 
-msgid "Reload"
-msgstr "Opnieuw laden"
+msgid "Release candidates"
+msgstr ""
 
 msgid "Repo"
 msgstr "Repository"
 
-msgid "Repositories"
-msgstr "Repositories"
+msgid "Repos"
+msgstr ""
+
+msgid "Repository"
+msgstr ""
+
+msgid "Repository for new versions of multimedia packages"
+msgstr ""
 
 msgid "Reset Permissions"
 msgstr ""
@@ -370,9 +321,6 @@ msgstr ""
 
 msgid "Reset permissions ..."
 msgstr ""
-
-msgid "Secondary"
-msgstr "Tweede"
 
 msgid "Send"
 msgstr "Stuur"
@@ -395,11 +343,14 @@ msgstr ""
 msgid "Shared Folder"
 msgstr ""
 
-msgid "Silent"
-msgstr "Stil "
-
 msgid "State"
 msgstr "State"
+
+msgid "Style #1"
+msgstr ""
+
+msgid "Style #2"
+msgstr ""
 
 msgid "Support Info"
 msgstr "Support Info"
@@ -407,30 +358,29 @@ msgstr "Support Info"
 msgid "Support Info Module Selection"
 msgstr "Support Info Module Selectie"
 
-msgid "Testing"
-msgstr "Aan het testen..."
+msgid "System - iface"
+msgstr ""
 
-msgid ""
-"The information about available software is out-of-date. You need to reload "
-"the information about available software."
-msgstr "De informatie over mogelijk te installeren software is verouderd. Haal deze informatie opnieuw op.  "
+msgid "System - mntent"
+msgstr ""
 
-msgid ""
-"The repository will be checked for new, removed or upgraded software "
-"packages."
-msgstr "De repository zal worden gecheckt op nieuwe, verwijderde of ge-upgrade software packages"
+msgid "System - sharedfolder"
+msgstr ""
 
-msgid "These repositories may break your system.  Use caution!!"
-msgstr "Deze repositories kunnen je systeem onklaar maken. Wees voorzichtig, weet wat je doet!!"
+msgid "Testing repository for Mono"
+msgstr ""
+
+msgid "Testing repository for download managers"
+msgstr ""
+
+msgid "Type"
+msgstr ""
 
 msgid "Update"
 msgstr "Update"
 
 msgid "User"
 msgstr "Gebruiker"
-
-msgid "Utilities"
-msgstr "Gereedschapjes"
 
 msgid "VDR"
 msgstr "VDR"
@@ -444,11 +394,11 @@ msgstr "Versie"
 msgid "Virtualbox"
 msgstr "Virtualbox"
 
+msgid "Virtualbox repository"
+msgstr ""
+
 msgid "ZFS"
 msgstr "ZFS"
 
-msgid "deb-multimedia"
-msgstr "deb-multimedia"
-
-msgid "deb-multimedia backports"
-msgstr "deb-multimedia backports"
+msgid "e-tobi.net repository"
+msgstr ""

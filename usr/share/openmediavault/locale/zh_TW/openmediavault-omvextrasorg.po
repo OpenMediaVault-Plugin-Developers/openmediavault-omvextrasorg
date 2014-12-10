@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-03 14:15-0600\n"
-"PO-Revision-Date: 2014-12-04 15:32+0000\n"
-"Last-Translator: kochin <kochinc@outlook.com>\n"
+"POT-Creation-Date: 2014-12-10 17:21-0600\n"
+"PO-Revision-Date: 2014-12-10 23:21+0000\n"
+"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -93,11 +93,8 @@ msgstr "50 dpkg"
 msgid "61 lsmod"
 msgstr "61 lsmod"
 
-msgid "Add repo"
-msgstr "新增套件庫"
-
-msgid "Additional Repositories"
-msgstr "額外的套件庫"
+msgid "Add custom repo"
+msgstr ""
 
 msgid "Administrator: read/write, Users: no access, Others: no access"
 msgstr "管理員：讀/寫，用戶：不能存取，其他：不能存取"
@@ -117,20 +114,20 @@ msgstr "管理員：讀/寫，用戶：讀/寫，其他：只能讀取"
 msgid "Apt Clean"
 msgstr "Apt 清理"
 
-msgid "Apt Clean - Silent"
-msgstr "Apt 清理 - 沉默"
-
 msgid "Architecture"
 msgstr "架構"
 
 msgid "BTSync"
 msgstr "BTSync"
 
+msgid "BTSync repository"
+msgstr ""
+
 msgid "Beta"
 msgstr "Beta"
 
-msgid "Can be helpful in fixing plugin problems."
-msgstr "可能對修復插件遭遇的問題有用。"
+msgid "Beta repository"
+msgstr ""
 
 msgid "Checking for new updates ..."
 msgstr "檢查新的更新 ..."
@@ -138,17 +135,11 @@ msgstr "檢查新的更新 ..."
 msgid "Cleaning Apt Files and Lists..."
 msgstr "清理 Apt 檔案和列表 ..."
 
-msgid "Cleans apt repositories and removes lists."
-msgstr "清理 apt 套件庫並移除列表。"
-
 msgid "Clear ACLs"
 msgstr "清除 ACLs"
 
 msgid "Clear all ACLs."
 msgstr "清除全部 ACLs"
-
-msgid "Close"
-msgstr "關閉"
 
 msgid "Command"
 msgstr "指令"
@@ -156,25 +147,23 @@ msgstr "指令"
 msgid "Comment"
 msgstr "註釋"
 
-msgid "Confirmation"
-msgstr "確認"
+msgid "Custom Repos"
+msgstr ""
 
-msgid "Contains plugins for setting up virtual private networks"
-msgstr "含有做虛擬專用網路設定的插件"
+msgid "Deb-Multimedia"
+msgstr ""
 
-msgid ""
-"Contains various download managers for newsgroups, torrents, usenet, and "
-"streaming"
-msgstr "含有針對新聞群組、torrents、usenet 及 串流的各種下載管理"
+msgid "Deb-Multimedia Backports"
+msgstr ""
 
-msgid "Custom"
-msgstr "客製"
+msgid "Deb-Multimedia backports repository"
+msgstr ""
+
+msgid "Description"
+msgstr ""
 
 msgid "Developer"
 msgstr "開發者"
-
-msgid "Developer Repositories"
-msgstr "開發人員套件庫"
 
 msgid "Distribution"
 msgstr "發行版"
@@ -198,80 +187,29 @@ msgstr "Dotdeb"
 msgid "Download Managers"
 msgstr "下載管理員"
 
-msgid "Downloading package information"
-msgstr "下載套件資訊"
+msgid "Download Managers Testing"
+msgstr ""
 
-msgid "Edit repo"
-msgstr "編輯套件庫"
+msgid "Download managers for newsgroups, torrents, usenet, and streaming"
+msgstr ""
 
-msgid "Enable BTSync repository"
-msgstr "啟用 BTSync 套件庫"
+msgid "Edit custom repo"
+msgstr ""
 
-msgid "Enable Beta repository"
-msgstr "啟用 Beta 套件庫"
-
-msgid "Enable Dotdeb repository"
-msgstr "啟用 Dotdeb 套件庫"
-
-msgid "Enable Gluster repository"
-msgstr "啟用 Gluster 套件庫"
-
-msgid "Enable Greyhole repository"
-msgstr "啟用 Greyhole 套件庫"
-
-msgid "Enable MariaDB 10.0 repository"
-msgstr "啟用 MariaDB 10.0 套件庫"
-
-msgid "Enable Mono Testing repository"
-msgstr "啟用 Mono 測試套件庫"
-
-msgid "Enable Mono and mono-project.com repositories"
-msgstr "啟用 Mono 及 mono-project.com 套件庫"
-
-msgid "Enable OMV-Extras.org repository"
-msgstr "啟用 OMV-Extras.org 套件庫"
-
-msgid "Enable OMV-Extras.org testing repository (release candidates)"
-msgstr "啟用 OMV-Extras.org 測試套件庫 (候選發佈版)"
-
-msgid "Enable Plex Media Server repository"
-msgstr "啟用 Plex 媒體伺服器套件庫"
-
-msgid "Enable VPN repository"
-msgstr "啟用 VPN 套件庫"
-
-msgid "Enable Virtualbox repository."
-msgstr "啟用 Virtualbox 套件庫"
-
-msgid "Enable ZFS repository"
-msgstr "啟用 ZFS 套件庫"
-
-msgid "Enable deb-multimedia backports repository"
-msgstr "啟用 deb-multimedia backports 套件庫"
-
-msgid "Enable deb-multimedia repository"
-msgstr "啟用 deb-multimedia 套件庫"
-
-msgid "Enable download managers repository"
-msgstr "啟用下載管理員套件庫"
-
-msgid "Enable download managers testing repository (release candidates)"
-msgstr "啟用下載管理員測試套件庫 (候選發佈版)"
-
-msgid "Enable e-tobi.net repository"
-msgstr "啟用 e-tobi.net 套件庫"
-
-msgid "Enable hwraid repository"
-msgstr "啟用 hwraid 套件庫"
+msgid "Enable"
+msgstr ""
 
 msgid "Everyone: read/write"
 msgstr "每個人：讀/寫"
 
-msgid "Gluster"
-msgstr "Gluster"
+msgid "GlusterFS"
+msgstr ""
 
 msgid "Greyhole"
 msgstr "Greyhole"
+
+msgid "Greyhole repository"
+msgstr ""
 
 msgid "HWRaid"
 msgstr "HWRaid"
@@ -290,12 +228,6 @@ msgstr "安裝 Backports 3.16 核心"
 msgid "Install Backports 3.16 kernel ..."
 msgstr "安裝 Backports 3.16 核心中 ..."
 
-msgid "Install systemd"
-msgstr "安裝 systemd"
-
-msgid "Install systemd..."
-msgstr "安裝 systemd ..."
-
 msgid "Installed Kernels"
 msgstr "已安裝的核心"
 
@@ -309,20 +241,29 @@ msgstr "系統核心"
 msgid "Kernels"
 msgstr "核心"
 
-msgid "Managers Testing"
-msgstr "管理員測試"
+msgid "Main package repository"
+msgstr ""
 
 msgid "MariaDB"
 msgstr "MariaDB"
 
+msgid "MariaDB 10.0 repository"
+msgstr ""
+
 msgid "Modules"
 msgstr "模組"
+
+msgid "Modules for different hardware raid controllers"
+msgstr ""
 
 msgid "Mono"
 msgstr "Mono"
 
 msgid "Mono Testing"
 msgstr "Mono 測試"
+
+msgid "Mono and mono-project.com"
+msgstr ""
 
 msgid "Name"
 msgstr "名稱"
@@ -333,10 +274,8 @@ msgstr "附註"
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
 
-msgid ""
-"Only enable repositories you need.  Enabling unnecessary repositories can "
-"slow down your system."
-msgstr "只啟用你所需的套件庫。啟用不必要的套件庫可能讓你的系統變慢。"
+msgid "OMV-Extras.org Testing"
+msgstr ""
 
 msgid "PID"
 msgstr "PID"
@@ -344,23 +283,35 @@ msgstr "PID"
 msgid "Permissions"
 msgstr "權限"
 
+msgid "Please select a shared folder."
+msgstr ""
+
 msgid "Plex"
 msgstr "Plex"
 
-msgid "Primary"
-msgstr "主要"
+msgid "Plex Media Server repository"
+msgstr ""
+
+msgid "Plugins for setting up virtual private networks"
+msgstr ""
 
 msgid "Process List"
 msgstr "程序列表"
 
-msgid "Reload"
-msgstr "重新載入"
+msgid "Release candidates"
+msgstr ""
 
 msgid "Repo"
 msgstr "套件庫"
 
-msgid "Repositories"
-msgstr "套件庫"
+msgid "Repos"
+msgstr ""
+
+msgid "Repository"
+msgstr ""
+
+msgid "Repository for new versions of multimedia packages"
+msgstr ""
 
 msgid "Reset Permissions"
 msgstr "重設權限"
@@ -370,9 +321,6 @@ msgstr "將檔案夾及檔案重設成此檔案模式。"
 
 msgid "Reset permissions ..."
 msgstr "重設權限 ..."
-
-msgid "Secondary"
-msgstr "次要"
 
 msgid "Send"
 msgstr "發送"
@@ -395,11 +343,14 @@ msgstr "設定錯誤的啟動核心可能造成系統無法取用。啟動選單
 msgid "Shared Folder"
 msgstr "共享檔案夾"
 
-msgid "Silent"
-msgstr "沉默"
-
 msgid "State"
 msgstr "狀態"
+
+msgid "Style #1"
+msgstr ""
+
+msgid "Style #2"
+msgstr ""
 
 msgid "Support Info"
 msgstr "支援資訊"
@@ -407,30 +358,29 @@ msgstr "支援資訊"
 msgid "Support Info Module Selection"
 msgstr "支援資訊模組選擇"
 
-msgid "Testing"
-msgstr "測試"
+msgid "System - iface"
+msgstr ""
 
-msgid ""
-"The information about available software is out-of-date. You need to reload "
-"the information about available software."
-msgstr "有關可用套件的資訊已經過時。您需要重新載入有關可用套件的資訊。"
+msgid "System - mntent"
+msgstr ""
 
-msgid ""
-"The repository will be checked for new, removed or upgraded software "
-"packages."
-msgstr "此套件庫將被檢查有無新增、移除或更新的軟體套件。"
+msgid "System - sharedfolder"
+msgstr ""
 
-msgid "These repositories may break your system.  Use caution!!"
-msgstr "這些套件庫可能損壞您的系統。請小心使用！"
+msgid "Testing repository for Mono"
+msgstr ""
+
+msgid "Testing repository for download managers"
+msgstr ""
+
+msgid "Type"
+msgstr ""
 
 msgid "Update"
 msgstr "更新"
 
 msgid "User"
 msgstr "用戶"
-
-msgid "Utilities"
-msgstr "工具"
 
 msgid "VDR"
 msgstr "VDR"
@@ -444,11 +394,11 @@ msgstr "版本"
 msgid "Virtualbox"
 msgstr "Virtualbox"
 
+msgid "Virtualbox repository"
+msgstr ""
+
 msgid "ZFS"
 msgstr "ZFS"
 
-msgid "deb-multimedia"
-msgstr "deb-multimedia"
-
-msgid "deb-multimedia backports"
-msgstr "deb-multimedia backports"
+msgid "e-tobi.net repository"
+msgstr ""

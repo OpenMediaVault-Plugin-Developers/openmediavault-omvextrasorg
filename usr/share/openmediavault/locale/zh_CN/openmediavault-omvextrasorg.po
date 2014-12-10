@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-03 14:15-0600\n"
-"PO-Revision-Date: 2014-12-03 20:18+0000\n"
+"POT-Creation-Date: 2014-12-10 17:21-0600\n"
+"PO-Revision-Date: 2014-12-10 23:21+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -93,11 +93,8 @@ msgstr "50 dpkg"
 msgid "61 lsmod"
 msgstr ""
 
-msgid "Add repo"
-msgstr "添加源"
-
-msgid "Additional Repositories"
-msgstr "额外源"
+msgid "Add custom repo"
+msgstr ""
 
 msgid "Administrator: read/write, Users: no access, Others: no access"
 msgstr "管理员：读/写，用户：无权限，其它：无权限"
@@ -117,20 +114,20 @@ msgstr "管理员：读/写，用户：读/写，其它：读/写"
 msgid "Apt Clean"
 msgstr "清除APT缓存"
 
-msgid "Apt Clean - Silent"
-msgstr "后台清除APT缓存"
-
 msgid "Architecture"
 msgstr "构架"
 
 msgid "BTSync"
 msgstr "BTSync"
 
+msgid "BTSync repository"
+msgstr ""
+
 msgid "Beta"
 msgstr "Beta"
 
-msgid "Can be helpful in fixing plugin problems."
-msgstr "尝试修复插件更新安装问题"
+msgid "Beta repository"
+msgstr ""
 
 msgid "Checking for new updates ..."
 msgstr "检查更新中..."
@@ -138,17 +135,11 @@ msgstr "检查更新中..."
 msgid "Cleaning Apt Files and Lists..."
 msgstr "清除Apt文件及列表"
 
-msgid "Cleans apt repositories and removes lists."
-msgstr "清除apt源并移除源列表。"
-
 msgid "Clear ACLs"
 msgstr "清除ACLs"
 
 msgid "Clear all ACLs."
 msgstr "清除所有ACLs。"
-
-msgid "Close"
-msgstr "关闭"
 
 msgid "Command"
 msgstr "命令"
@@ -156,25 +147,23 @@ msgstr "命令"
 msgid "Comment"
 msgstr "注释"
 
-msgid "Confirmation"
-msgstr "确认"
+msgid "Custom Repos"
+msgstr ""
 
-msgid "Contains plugins for setting up virtual private networks"
-msgstr "包含VPN插件设置"
+msgid "Deb-Multimedia"
+msgstr ""
 
-msgid ""
-"Contains various download managers for newsgroups, torrents, usenet, and "
-"streaming"
-msgstr "下载管理器包含各种下载协议，newsgroups, torrents, usenet, and streaming"
+msgid "Deb-Multimedia Backports"
+msgstr ""
 
-msgid "Custom"
-msgstr "自定义"
+msgid "Deb-Multimedia backports repository"
+msgstr ""
+
+msgid "Description"
+msgstr ""
 
 msgid "Developer"
 msgstr "开发者"
-
-msgid "Developer Repositories"
-msgstr "开发者源"
 
 msgid "Distribution"
 msgstr "发行版"
@@ -198,80 +187,29 @@ msgstr "Dotdeb"
 msgid "Download Managers"
 msgstr "Download Managers"
 
-msgid "Downloading package information"
-msgstr "下载软件包信息"
+msgid "Download Managers Testing"
+msgstr ""
 
-msgid "Edit repo"
-msgstr "编辑源"
+msgid "Download managers for newsgroups, torrents, usenet, and streaming"
+msgstr ""
 
-msgid "Enable BTSync repository"
-msgstr "启用BTSync源"
+msgid "Edit custom repo"
+msgstr ""
 
-msgid "Enable Beta repository"
-msgstr "启用Beta源"
-
-msgid "Enable Dotdeb repository"
-msgstr "启用Dotdeb源"
-
-msgid "Enable Gluster repository"
-msgstr "启用Gluster源"
-
-msgid "Enable Greyhole repository"
-msgstr "启用Greyhole源"
-
-msgid "Enable MariaDB 10.0 repository"
-msgstr "启用MariaDB 10.0源"
-
-msgid "Enable Mono Testing repository"
-msgstr "启用Mono Testing源"
-
-msgid "Enable Mono and mono-project.com repositories"
-msgstr "启用Mono and mono-project.com源"
-
-msgid "Enable OMV-Extras.org repository"
-msgstr "启用OMV-Extras.org插件源"
-
-msgid "Enable OMV-Extras.org testing repository (release candidates)"
-msgstr "启用OMV-Extras.org测试源(候选发布版)"
-
-msgid "Enable Plex Media Server repository"
-msgstr "启用Plex多媒体服务源"
-
-msgid "Enable VPN repository"
-msgstr "启用VPN源"
-
-msgid "Enable Virtualbox repository."
-msgstr "启用Virtualbox源"
-
-msgid "Enable ZFS repository"
-msgstr "启用ZFS源"
-
-msgid "Enable deb-multimedia backports repository"
-msgstr "启用deb-multimedia backports源"
-
-msgid "Enable deb-multimedia repository"
-msgstr "启用deb-multimedia源"
-
-msgid "Enable download managers repository"
-msgstr "启用download managers源"
-
-msgid "Enable download managers testing repository (release candidates)"
-msgstr "启用download managers测试源(候选发布版)"
-
-msgid "Enable e-tobi.net repository"
-msgstr "启用e-tobi.net源"
-
-msgid "Enable hwraid repository"
-msgstr "启用hwraid源"
+msgid "Enable"
+msgstr ""
 
 msgid "Everyone: read/write"
 msgstr "任何人：读/写"
 
-msgid "Gluster"
-msgstr "Gluster"
+msgid "GlusterFS"
+msgstr ""
 
 msgid "Greyhole"
 msgstr "Greyhole"
+
+msgid "Greyhole repository"
+msgstr ""
 
 msgid "HWRaid"
 msgstr "HWRaid"
@@ -290,39 +228,42 @@ msgstr "安装Backports 3.16 kernel"
 msgid "Install Backports 3.16 kernel ..."
 msgstr "安装Backports 3.16 kernel ..."
 
-msgid "Install systemd"
-msgstr "安装 systemd"
-
-msgid "Install systemd..."
-msgstr "安装systemd中 ..."
-
 msgid "Installed Kernels"
-msgstr ""
+msgstr "安装内核"
 
 msgid ""
 "Installing the backports kernel with not uninstall the standard kernel."
-msgstr ""
+msgstr "安装backports内核不会卸载标准内核。"
 
 msgid "Kernel"
 msgstr "内核"
 
 msgid "Kernels"
-msgstr ""
+msgstr "内核"
 
-msgid "Managers Testing"
-msgstr "Managers测试源"
+msgid "Main package repository"
+msgstr ""
 
 msgid "MariaDB"
 msgstr "MariaDB"
 
+msgid "MariaDB 10.0 repository"
+msgstr ""
+
 msgid "Modules"
 msgstr "模块"
+
+msgid "Modules for different hardware raid controllers"
+msgstr ""
 
 msgid "Mono"
 msgstr "Mono"
 
 msgid "Mono Testing"
 msgstr "Mono Testing"
+
+msgid "Mono and mono-project.com"
+msgstr ""
 
 msgid "Name"
 msgstr "名称"
@@ -333,10 +274,8 @@ msgstr ""
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
 
-msgid ""
-"Only enable repositories you need.  Enabling unnecessary repositories can "
-"slow down your system."
-msgstr "建议只启用需要的软件源，启用不需要的软件源会影响系统速度。"
+msgid "OMV-Extras.org Testing"
+msgstr ""
 
 msgid "PID"
 msgstr "PID"
@@ -344,23 +283,35 @@ msgstr "PID"
 msgid "Permissions"
 msgstr "权限"
 
+msgid "Please select a shared folder."
+msgstr ""
+
 msgid "Plex"
 msgstr "Plex"
 
-msgid "Primary"
-msgstr "主要选项"
+msgid "Plex Media Server repository"
+msgstr ""
+
+msgid "Plugins for setting up virtual private networks"
+msgstr ""
 
 msgid "Process List"
 msgstr "进程列表"
 
-msgid "Reload"
-msgstr "重新载入"
+msgid "Release candidates"
+msgstr ""
 
 msgid "Repo"
 msgstr "源"
 
-msgid "Repositories"
-msgstr "源"
+msgid "Repos"
+msgstr ""
+
+msgid "Repository"
+msgstr ""
+
+msgid "Repository for new versions of multimedia packages"
+msgstr ""
 
 msgid "Reset Permissions"
 msgstr "重设权限"
@@ -371,9 +322,6 @@ msgstr "该模式将重设文件夹和文件。"
 msgid "Reset permissions ..."
 msgstr "重设权限中 ..."
 
-msgid "Secondary"
-msgstr "附加选项"
-
 msgid "Send"
 msgstr "发送"
 
@@ -381,25 +329,28 @@ msgid "Send Support Info"
 msgstr "发送支持信息"
 
 msgid "Set as default boot kernel"
-msgstr ""
+msgstr "设置默认启动内核"
 
 msgid "Setting boot kernel ..."
-msgstr ""
+msgstr "设置启动内核 ..."
 
 msgid ""
 "Setting the wrong default boot kernel may cause the system to be "
 "inaccessible.  The boot menu will still be available to select a different "
 "kernel."
-msgstr ""
+msgstr "如果设置的默认启动内核错误而不能启动系统，可以通过终端在启动菜单选择不同的内核来启动。"
 
 msgid "Shared Folder"
 msgstr "共享文件夹"
 
-msgid "Silent"
-msgstr "后台"
-
 msgid "State"
 msgstr "状态"
+
+msgid "Style #1"
+msgstr ""
+
+msgid "Style #2"
+msgstr ""
 
 msgid "Support Info"
 msgstr "支持信息"
@@ -407,30 +358,29 @@ msgstr "支持信息"
 msgid "Support Info Module Selection"
 msgstr ""
 
-msgid "Testing"
-msgstr "测试版"
+msgid "System - iface"
+msgstr ""
 
-msgid ""
-"The information about available software is out-of-date. You need to reload "
-"the information about available software."
-msgstr "软件信息已过期，你需要重载以获取最新软件信息。"
+msgid "System - mntent"
+msgstr ""
 
-msgid ""
-"The repository will be checked for new, removed or upgraded software "
-"packages."
-msgstr "将检查更新源是否有删除和升级的软件包。"
+msgid "System - sharedfolder"
+msgstr ""
 
-msgid "These repositories may break your system.  Use caution!!"
-msgstr "注意，这些源可能会使系统崩溃！"
+msgid "Testing repository for Mono"
+msgstr ""
+
+msgid "Testing repository for download managers"
+msgstr ""
+
+msgid "Type"
+msgstr ""
 
 msgid "Update"
 msgstr "更新"
 
 msgid "User"
 msgstr "用户"
-
-msgid "Utilities"
-msgstr "实用工具"
 
 msgid "VDR"
 msgstr "VDR"
@@ -444,11 +394,11 @@ msgstr "版本"
 msgid "Virtualbox"
 msgstr "Virtualbox"
 
+msgid "Virtualbox repository"
+msgstr ""
+
 msgid "ZFS"
 msgstr "ZFS"
 
-msgid "deb-multimedia"
-msgstr "deb-multimedia"
-
-msgid "deb-multimedia backports"
-msgstr "deb-multimedia backports"
+msgid "e-tobi.net repository"
+msgstr ""

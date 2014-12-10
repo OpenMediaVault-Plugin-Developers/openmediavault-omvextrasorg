@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-03 14:15-0600\n"
-"PO-Revision-Date: 2014-12-04 06:13+0000\n"
-"Last-Translator: Hyeonkyu Chu <hyeonkyu@gmail.com>\n"
+"POT-Creation-Date: 2014-12-10 17:21-0600\n"
+"PO-Revision-Date: 2014-12-10 23:21+0000\n"
+"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -93,11 +93,8 @@ msgstr "50 dpkg"
 msgid "61 lsmod"
 msgstr "61 lsmod"
 
-msgid "Add repo"
-msgstr "저장소 추가"
-
-msgid "Additional Repositories"
-msgstr "추가 저장소"
+msgid "Add custom repo"
+msgstr ""
 
 msgid "Administrator: read/write, Users: no access, Others: no access"
 msgstr "관리자: 읽기/쓰기,　사용자: 접근 금지,　기타: 접근 금지"
@@ -117,20 +114,20 @@ msgstr "관리자: 읽기/쓰기,　사용자: 읽기/쓰기,　기타: 읽기-�
 msgid "Apt Clean"
 msgstr "Apt 정리"
 
-msgid "Apt Clean - Silent"
-msgstr "Apt 정리 - 조용히"
-
 msgid "Architecture"
 msgstr "아키텍처"
 
 msgid "BTSync"
 msgstr "BTSync"
 
+msgid "BTSync repository"
+msgstr ""
+
 msgid "Beta"
 msgstr "베타"
 
-msgid "Can be helpful in fixing plugin problems."
-msgstr "플러그인 문제 해결에 도움이 될 수 있습니다."
+msgid "Beta repository"
+msgstr ""
 
 msgid "Checking for new updates ..."
 msgstr "새로운 갱신 확인 중 ..."
@@ -138,17 +135,11 @@ msgstr "새로운 갱신 확인 중 ..."
 msgid "Cleaning Apt Files and Lists..."
 msgstr "Apt 파일 및 목록 정리 중..."
 
-msgid "Cleans apt repositories and removes lists."
-msgstr "Apt 저장소를 정리하고 목록을 제거합니다."
-
 msgid "Clear ACLs"
 msgstr "ACLs 초기화"
 
 msgid "Clear all ACLs."
 msgstr "모든 ACLs 초기화."
-
-msgid "Close"
-msgstr "닫기"
 
 msgid "Command"
 msgstr "명령"
@@ -156,25 +147,23 @@ msgstr "명령"
 msgid "Comment"
 msgstr "설명"
 
-msgid "Confirmation"
-msgstr "확인"
+msgid "Custom Repos"
+msgstr ""
 
-msgid "Contains plugins for setting up virtual private networks"
-msgstr "가상 개인 네트워크를 설정하는 플러그인을 포함합니다"
+msgid "Deb-Multimedia"
+msgstr ""
 
-msgid ""
-"Contains various download managers for newsgroups, torrents, usenet, and "
-"streaming"
-msgstr "뉴스 그룹, 토런트, 유즈넷 및 스트리밍을 위한 다양한 다운로드 관리자를 포함합니다"
+msgid "Deb-Multimedia Backports"
+msgstr ""
 
-msgid "Custom"
-msgstr "사용자 정의"
+msgid "Deb-Multimedia backports repository"
+msgstr ""
+
+msgid "Description"
+msgstr ""
 
 msgid "Developer"
 msgstr "Developer"
-
-msgid "Developer Repositories"
-msgstr "개발자 저장소"
 
 msgid "Distribution"
 msgstr "배포"
@@ -198,80 +187,29 @@ msgstr "Dotdeb"
 msgid "Download Managers"
 msgstr "Download Managers"
 
-msgid "Downloading package information"
-msgstr "꾸러미 정보 내려받기"
+msgid "Download Managers Testing"
+msgstr ""
 
-msgid "Edit repo"
-msgstr "저장소 편집"
+msgid "Download managers for newsgroups, torrents, usenet, and streaming"
+msgstr ""
 
-msgid "Enable BTSync repository"
-msgstr "BTSync 저장소 활성화"
+msgid "Edit custom repo"
+msgstr ""
 
-msgid "Enable Beta repository"
-msgstr "베타 저장소 활성화"
-
-msgid "Enable Dotdeb repository"
-msgstr "Dotdeb 저장소 활성화"
-
-msgid "Enable Gluster repository"
-msgstr "Gluster 저장소 활성화"
-
-msgid "Enable Greyhole repository"
-msgstr "Greyhole 저장소 활성화"
-
-msgid "Enable MariaDB 10.0 repository"
-msgstr "MariaDB 10.0 저장소 활성화"
-
-msgid "Enable Mono Testing repository"
-msgstr "시험 중인 Mono 저장소 활성화"
-
-msgid "Enable Mono and mono-project.com repositories"
-msgstr "Mono 및 mono-project.com 저장소 활성화"
-
-msgid "Enable OMV-Extras.org repository"
-msgstr "OMV-Extras.org 저장소 활성화"
-
-msgid "Enable OMV-Extras.org testing repository (release candidates)"
-msgstr "시험 중인 OMV-Extras.org 저장소 활성화 (출시 후보)"
-
-msgid "Enable Plex Media Server repository"
-msgstr "Plex Media Server 저장소 활성화"
-
-msgid "Enable VPN repository"
-msgstr "VPN 저장소 활성화"
-
-msgid "Enable Virtualbox repository."
-msgstr "Virtualbox 저장소 활성화"
-
-msgid "Enable ZFS repository"
-msgstr "ZFS 저장소 활성화"
-
-msgid "Enable deb-multimedia backports repository"
-msgstr "deb-multimedia backports 저장소 활성화"
-
-msgid "Enable deb-multimedia repository"
-msgstr "deb-multimedia 저장소 활성화"
-
-msgid "Enable download managers repository"
-msgstr "Download Managers 저장소 활성화"
-
-msgid "Enable download managers testing repository (release candidates)"
-msgstr "시험 중인 Download Managers 저장소 활성화 (출시 후보)"
-
-msgid "Enable e-tobi.net repository"
-msgstr "e-tobi.net 저장소 활성화"
-
-msgid "Enable hwraid repository"
-msgstr "HWRaid 저장소 활성화"
+msgid "Enable"
+msgstr ""
 
 msgid "Everyone: read/write"
 msgstr "누구나: 읽기/쓰기"
 
-msgid "Gluster"
-msgstr "Gluster"
+msgid "GlusterFS"
+msgstr ""
 
 msgid "Greyhole"
 msgstr "Greyhole"
+
+msgid "Greyhole repository"
+msgstr ""
 
 msgid "HWRaid"
 msgstr "HWRaid"
@@ -279,7 +217,7 @@ msgstr "HWRaid"
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
 "still have the option to boot the standard kernel."
-msgstr "Backports 커널로 시스템이 시작되지 않을 경우에도,<br/>시작 선택표에는 표준 커널로 시작할 수 있는 선택 사항이 있습니다."
+msgstr "Backports 커널로 시스템이 시작되지 않을 경우에도, 시작 선택표에는 표준 커널로 시작할 수 있는 선택 사항이 있습니다."
 
 msgid "Information"
 msgstr "정보"
@@ -290,18 +228,12 @@ msgstr "Backports 3.16 커널 설치"
 msgid "Install Backports 3.16 kernel ..."
 msgstr "Backports 3.16 커널 설치 ..."
 
-msgid "Install systemd"
-msgstr "systemd 설치"
-
-msgid "Install systemd..."
-msgstr "systemd 설치..."
-
 msgid "Installed Kernels"
 msgstr "설치된 커널"
 
 msgid ""
 "Installing the backports kernel with not uninstall the standard kernel."
-msgstr "표준 커널을 제거하지 않고, Backports 커널 설치합니다."
+msgstr "표준 커널을 제거하지 않고, Backports 커널을 설치합니다."
 
 msgid "Kernel"
 msgstr "커널"
@@ -309,20 +241,29 @@ msgstr "커널"
 msgid "Kernels"
 msgstr "커널"
 
-msgid "Managers Testing"
-msgstr "Managers Testing"
+msgid "Main package repository"
+msgstr ""
 
 msgid "MariaDB"
 msgstr "MariaDB"
 
+msgid "MariaDB 10.0 repository"
+msgstr ""
+
 msgid "Modules"
 msgstr "단위 기능"
+
+msgid "Modules for different hardware raid controllers"
+msgstr ""
 
 msgid "Mono"
 msgstr "Mono"
 
 msgid "Mono Testing"
 msgstr "Mono Testing"
+
+msgid "Mono and mono-project.com"
+msgstr ""
 
 msgid "Name"
 msgstr "이름"
@@ -333,10 +274,8 @@ msgstr "참고"
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
 
-msgid ""
-"Only enable repositories you need.  Enabling unnecessary repositories can "
-"slow down your system."
-msgstr "필요한 저장소 만을 활성화 하시기 바랍니다. 불필요한 저장소들은 시스템을 느려지게 할 수 있습니다."
+msgid "OMV-Extras.org Testing"
+msgstr ""
 
 msgid "PID"
 msgstr "PID"
@@ -344,23 +283,35 @@ msgstr "PID"
 msgid "Permissions"
 msgstr "권한"
 
+msgid "Please select a shared folder."
+msgstr ""
+
 msgid "Plex"
 msgstr "Plex"
 
-msgid "Primary"
-msgstr "주"
+msgid "Plex Media Server repository"
+msgstr ""
+
+msgid "Plugins for setting up virtual private networks"
+msgstr ""
 
 msgid "Process List"
 msgstr "프로세스 목록"
 
-msgid "Reload"
-msgstr "갱신"
+msgid "Release candidates"
+msgstr ""
 
 msgid "Repo"
 msgstr "저장소"
 
-msgid "Repositories"
-msgstr "저장소"
+msgid "Repos"
+msgstr ""
+
+msgid "Repository"
+msgstr ""
+
+msgid "Repository for new versions of multimedia packages"
+msgstr ""
 
 msgid "Reset Permissions"
 msgstr "권한 재설정"
@@ -370,9 +321,6 @@ msgstr "이 파일 상태로 폴더와 파일을 재설정합니다."
 
 msgid "Reset permissions ..."
 msgstr "권한 재설정 ..."
-
-msgid "Secondary"
-msgstr "보조"
 
 msgid "Send"
 msgstr "전송"
@@ -390,16 +338,19 @@ msgid ""
 "Setting the wrong default boot kernel may cause the system to be "
 "inaccessible.  The boot menu will still be available to select a different "
 "kernel."
-msgstr "잘못된 기본 시작 커널을 설정하면, 시스템에 접근 할 수 없게 될 수 있습니다.<br/>시작 선택표에서 다른 커널을 선택할 수 있습니다."
+msgstr "잘못된 기본 시작 커널 설정은, 시스템에 접근할 수 없게 할 수 있습니다. 이런 경우, 시작 선택표에서 다른 커널을 선택할 수 있습니다."
 
 msgid "Shared Folder"
 msgstr "공유 폴더"
 
-msgid "Silent"
-msgstr "조용히"
-
 msgid "State"
 msgstr "상태"
+
+msgid "Style #1"
+msgstr ""
+
+msgid "Style #2"
+msgstr ""
 
 msgid "Support Info"
 msgstr "지원 정보"
@@ -407,30 +358,29 @@ msgstr "지원 정보"
 msgid "Support Info Module Selection"
 msgstr "지원 정보　단위 기능 선택"
 
-msgid "Testing"
-msgstr "Testing"
+msgid "System - iface"
+msgstr ""
 
-msgid ""
-"The information about available software is out-of-date. You need to reload "
-"the information about available software."
-msgstr "가용 소프트웨어에 대한 정보가 오래된 것입니다.<br/>해당 정보를 갱신해야합니다."
+msgid "System - mntent"
+msgstr ""
 
-msgid ""
-"The repository will be checked for new, removed or upgraded software "
-"packages."
-msgstr "해당 저장소의 새로운, 제거된 또는 향상된 소프트웨어 꾸러미를 확인합니다."
+msgid "System - sharedfolder"
+msgstr ""
 
-msgid "These repositories may break your system.  Use caution!!"
-msgstr "이 저장소들은 당신의 시스템을 정상 동작하지 않게 할 수 있습니다. 주의바랍니다!!"
+msgid "Testing repository for Mono"
+msgstr ""
+
+msgid "Testing repository for download managers"
+msgstr ""
+
+msgid "Type"
+msgstr ""
 
 msgid "Update"
 msgstr "갱신"
 
 msgid "User"
 msgstr "사용자"
-
-msgid "Utilities"
-msgstr "도구"
 
 msgid "VDR"
 msgstr "VDR"
@@ -444,11 +394,11 @@ msgstr "버전"
 msgid "Virtualbox"
 msgstr "Virtualbox"
 
+msgid "Virtualbox repository"
+msgstr ""
+
 msgid "ZFS"
 msgstr "ZFS"
 
-msgid "deb-multimedia"
-msgstr "deb-multimedia"
-
-msgid "deb-multimedia backports"
-msgstr "deb-multimedia Backports"
+msgid "e-tobi.net repository"
+msgstr ""

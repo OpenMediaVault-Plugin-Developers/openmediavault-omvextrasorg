@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-03 14:15-0600\n"
-"PO-Revision-Date: 2014-12-03 20:18+0000\n"
+"POT-Creation-Date: 2014-12-10 17:21-0600\n"
+"PO-Revision-Date: 2014-12-10 23:21+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -95,11 +95,8 @@ msgstr ""
 msgid "61 lsmod"
 msgstr ""
 
-msgid "Add repo"
+msgid "Add custom repo"
 msgstr ""
-
-msgid "Additional Repositories"
-msgstr "Дополнительные репозитории"
 
 msgid "Administrator: read/write, Users: no access, Others: no access"
 msgstr ""
@@ -119,20 +116,20 @@ msgstr ""
 msgid "Apt Clean"
 msgstr "Очистить кеш пакетов APT"
 
-msgid "Apt Clean - Silent"
-msgstr ""
-
 msgid "Architecture"
 msgstr "Архитектура"
 
 msgid "BTSync"
 msgstr "BTSync"
 
+msgid "BTSync repository"
+msgstr ""
+
 msgid "Beta"
 msgstr "Бета"
 
-msgid "Can be helpful in fixing plugin problems."
-msgstr "Может быть полезным в исправлении проблем плагинов."
+msgid "Beta repository"
+msgstr ""
 
 msgid "Checking for new updates ..."
 msgstr ""
@@ -140,17 +137,11 @@ msgstr ""
 msgid "Cleaning Apt Files and Lists..."
 msgstr "Очистка Apt файлов и списков ..."
 
-msgid "Cleans apt repositories and removes lists."
-msgstr "Очищает apt репозиториии и чистит списки."
-
 msgid "Clear ACLs"
 msgstr ""
 
 msgid "Clear all ACLs."
 msgstr ""
-
-msgid "Close"
-msgstr "Закрыто"
 
 msgid "Command"
 msgstr ""
@@ -158,25 +149,23 @@ msgstr ""
 msgid "Comment"
 msgstr "Комментарий"
 
-msgid "Confirmation"
-msgstr "Подтверждение"
-
-msgid "Contains plugins for setting up virtual private networks"
+msgid "Custom Repos"
 msgstr ""
 
-msgid ""
-"Contains various download managers for newsgroups, torrents, usenet, and "
-"streaming"
+msgid "Deb-Multimedia"
 msgstr ""
 
-msgid "Custom"
+msgid "Deb-Multimedia Backports"
+msgstr ""
+
+msgid "Deb-Multimedia backports repository"
+msgstr ""
+
+msgid "Description"
 msgstr ""
 
 msgid "Developer"
 msgstr "Разработчик"
-
-msgid "Developer Repositories"
-msgstr "Репозитории для разработчиков"
 
 msgid "Distribution"
 msgstr ""
@@ -200,80 +189,29 @@ msgstr "Dotdeb"
 msgid "Download Managers"
 msgstr ""
 
-msgid "Downloading package information"
-msgstr "Загрузка информации о пакетах"
-
-msgid "Edit repo"
+msgid "Download Managers Testing"
 msgstr ""
 
-msgid "Enable BTSync repository"
-msgstr "Enable BTSync repository"
-
-msgid "Enable Beta repository"
-msgstr "Включить Beta репозиторий"
-
-msgid "Enable Dotdeb repository"
-msgstr "Включить Dotdeb репозиторий"
-
-msgid "Enable Gluster repository"
+msgid "Download managers for newsgroups, torrents, usenet, and streaming"
 msgstr ""
 
-msgid "Enable Greyhole repository"
-msgstr "Включить Greyhole репозиторий"
-
-msgid "Enable MariaDB 10.0 repository"
+msgid "Edit custom repo"
 msgstr ""
 
-msgid "Enable Mono Testing repository"
-msgstr ""
-
-msgid "Enable Mono and mono-project.com repositories"
-msgstr ""
-
-msgid "Enable OMV-Extras.org repository"
-msgstr "Включить OMV-Extras.org репозиторий"
-
-msgid "Enable OMV-Extras.org testing repository (release candidates)"
-msgstr "ВключитьOMV-Extras.org тестировый репозиторий (релиз кандидатов)"
-
-msgid "Enable Plex Media Server repository"
-msgstr "Включить Plex Media Server репозиторий"
-
-msgid "Enable VPN repository"
-msgstr ""
-
-msgid "Enable Virtualbox repository."
-msgstr ""
-
-msgid "Enable ZFS repository"
-msgstr ""
-
-msgid "Enable deb-multimedia backports repository"
-msgstr "Включить deb-multimedia backports репозиторий"
-
-msgid "Enable deb-multimedia repository"
-msgstr "Включить deb-multimedia репозиторий"
-
-msgid "Enable download managers repository"
-msgstr ""
-
-msgid "Enable download managers testing repository (release candidates)"
-msgstr ""
-
-msgid "Enable e-tobi.net repository"
-msgstr "Включить e-tobi.net репозиторий"
-
-msgid "Enable hwraid repository"
+msgid "Enable"
 msgstr ""
 
 msgid "Everyone: read/write"
 msgstr ""
 
-msgid "Gluster"
+msgid "GlusterFS"
 msgstr ""
 
 msgid "Greyhole"
 msgstr "Greyhole"
+
+msgid "Greyhole repository"
+msgstr ""
 
 msgid "HWRaid"
 msgstr ""
@@ -292,12 +230,6 @@ msgstr ""
 msgid "Install Backports 3.16 kernel ..."
 msgstr ""
 
-msgid "Install systemd"
-msgstr ""
-
-msgid "Install systemd..."
-msgstr ""
-
 msgid "Installed Kernels"
 msgstr ""
 
@@ -311,19 +243,28 @@ msgstr "Ядро"
 msgid "Kernels"
 msgstr ""
 
-msgid "Managers Testing"
+msgid "Main package repository"
 msgstr ""
 
 msgid "MariaDB"
 msgstr "MariaDB"
 
+msgid "MariaDB 10.0 repository"
+msgstr ""
+
 msgid "Modules"
+msgstr ""
+
+msgid "Modules for different hardware raid controllers"
 msgstr ""
 
 msgid "Mono"
 msgstr ""
 
 msgid "Mono Testing"
+msgstr ""
+
+msgid "Mono and mono-project.com"
 msgstr ""
 
 msgid "Name"
@@ -335,9 +276,7 @@ msgstr ""
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
 
-msgid ""
-"Only enable repositories you need.  Enabling unnecessary repositories can "
-"slow down your system."
+msgid "OMV-Extras.org Testing"
 msgstr ""
 
 msgid "PID"
@@ -346,23 +285,35 @@ msgstr ""
 msgid "Permissions"
 msgstr ""
 
+msgid "Please select a shared folder."
+msgstr ""
+
 msgid "Plex"
 msgstr "Plex"
 
-msgid "Primary"
-msgstr "Основной"
+msgid "Plex Media Server repository"
+msgstr ""
+
+msgid "Plugins for setting up virtual private networks"
+msgstr ""
 
 msgid "Process List"
 msgstr ""
 
-msgid "Reload"
-msgstr "Перезагрузка"
+msgid "Release candidates"
+msgstr ""
 
 msgid "Repo"
 msgstr ""
 
-msgid "Repositories"
-msgstr "Репозитории"
+msgid "Repos"
+msgstr ""
+
+msgid "Repository"
+msgstr ""
+
+msgid "Repository for new versions of multimedia packages"
+msgstr ""
 
 msgid "Reset Permissions"
 msgstr ""
@@ -372,9 +323,6 @@ msgstr ""
 
 msgid "Reset permissions ..."
 msgstr ""
-
-msgid "Secondary"
-msgstr "Вторичный"
 
 msgid "Send"
 msgstr ""
@@ -397,10 +345,13 @@ msgstr ""
 msgid "Shared Folder"
 msgstr ""
 
-msgid "Silent"
+msgid "State"
 msgstr ""
 
-msgid "State"
+msgid "Style #1"
+msgstr ""
+
+msgid "Style #2"
 msgstr ""
 
 msgid "Support Info"
@@ -409,30 +360,29 @@ msgstr ""
 msgid "Support Info Module Selection"
 msgstr ""
 
-msgid "Testing"
-msgstr "Тестирование"
+msgid "System - iface"
+msgstr ""
 
-msgid ""
-"The information about available software is out-of-date. You need to reload "
-"the information about available software."
-msgstr "Информация о доступном программном обеспечении просрочено. Вы должны перезагрузить информацию о доступном программного обеспечении."
+msgid "System - mntent"
+msgstr ""
 
-msgid ""
-"The repository will be checked for new, removed or upgraded software "
-"packages."
-msgstr "Хранилище будет проверенно на новые, удаленные или обновленные пакеты программного обеспечения."
+msgid "System - sharedfolder"
+msgstr ""
 
-msgid "These repositories may break your system.  Use caution!!"
-msgstr "Эти хранилища могут повредить вашу систему. Будьте осторожны!"
+msgid "Testing repository for Mono"
+msgstr ""
+
+msgid "Testing repository for download managers"
+msgstr ""
+
+msgid "Type"
+msgstr ""
 
 msgid "Update"
 msgstr "Обновить"
 
 msgid "User"
 msgstr ""
-
-msgid "Utilities"
-msgstr "Utilities"
 
 msgid "VDR"
 msgstr "VDR"
@@ -446,11 +396,11 @@ msgstr "Версия"
 msgid "Virtualbox"
 msgstr "Virtualbox"
 
+msgid "Virtualbox repository"
+msgstr ""
+
 msgid "ZFS"
 msgstr "ZFS"
 
-msgid "deb-multimedia"
-msgstr "deb-multimedia"
-
-msgid "deb-multimedia backports"
-msgstr "deb-multimedia backports"
+msgid "e-tobi.net repository"
+msgstr ""

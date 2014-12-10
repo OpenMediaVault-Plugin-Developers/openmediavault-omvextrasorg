@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-03 14:15-0600\n"
-"PO-Revision-Date: 2014-12-04 00:09+0000\n"
-"Last-Translator: Toshihiro Kan <kansuke4649@gmail.com>\n"
+"POT-Creation-Date: 2014-12-10 17:21-0600\n"
+"PO-Revision-Date: 2014-12-10 23:21+0000\n"
+"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -93,11 +93,8 @@ msgstr "50 dpkg"
 msgid "61 lsmod"
 msgstr "61 lsmod"
 
-msgid "Add repo"
-msgstr "リポジトリの追加"
-
-msgid "Additional Repositories"
-msgstr "追加のリポジトリ"
+msgid "Add custom repo"
+msgstr ""
 
 msgid "Administrator: read/write, Users: no access, Others: no access"
 msgstr "Administrator: 読み込み/書き込み, Users: アクセス不可, Others: アクセス不可"
@@ -117,20 +114,20 @@ msgstr "Administrator: 読み込み/書き込み, Users: 読み込み/書き込�
 msgid "Apt Clean"
 msgstr "APTクリーン"
 
-msgid "Apt Clean - Silent"
-msgstr "APTクリーン - サイレント"
-
 msgid "Architecture"
 msgstr "アーキテクチャ"
 
 msgid "BTSync"
 msgstr "BTSync"
 
+msgid "BTSync repository"
+msgstr ""
+
 msgid "Beta"
 msgstr "ベータ"
 
-msgid "Can be helpful in fixing plugin problems."
-msgstr "プラグインの問題を修正する際に役立ちます。"
+msgid "Beta repository"
+msgstr ""
 
 msgid "Checking for new updates ..."
 msgstr "新しいアップデートを確認しています ..."
@@ -138,17 +135,11 @@ msgstr "新しいアップデートを確認しています ..."
 msgid "Cleaning Apt Files and Lists..."
 msgstr "APTファイルとリストをクリーニングしています..."
 
-msgid "Cleans apt repositories and removes lists."
-msgstr "APTリポジトリをきれいにし、リストを削除します。"
-
 msgid "Clear ACLs"
 msgstr "ACLのクリア"
 
 msgid "Clear all ACLs."
 msgstr "すべてのACLをクリア"
-
-msgid "Close"
-msgstr "閉じる"
 
 msgid "Command"
 msgstr "コマンド"
@@ -156,25 +147,23 @@ msgstr "コマンド"
 msgid "Comment"
 msgstr "コメント"
 
-msgid "Confirmation"
-msgstr "確認"
+msgid "Custom Repos"
+msgstr ""
 
-msgid "Contains plugins for setting up virtual private networks"
-msgstr "仮想プライベートネットワークをセットアップするためのプラグインが含まれています"
+msgid "Deb-Multimedia"
+msgstr ""
 
-msgid ""
-"Contains various download managers for newsgroups, torrents, usenet, and "
-"streaming"
-msgstr "ニュースグループ、トレント、ユーズネット、ストリーミングのための様々なダウンロードマネージャが含まれます"
+msgid "Deb-Multimedia Backports"
+msgstr ""
 
-msgid "Custom"
-msgstr "カスタム"
+msgid "Deb-Multimedia backports repository"
+msgstr ""
+
+msgid "Description"
+msgstr ""
 
 msgid "Developer"
 msgstr "開発者"
-
-msgid "Developer Repositories"
-msgstr "開発者のリポジトリ"
 
 msgid "Distribution"
 msgstr "ディストリビューション"
@@ -198,80 +187,29 @@ msgstr "Dotdeb"
 msgid "Download Managers"
 msgstr "ダウンロードマネージャ"
 
-msgid "Downloading package information"
-msgstr "パッケージの情報をダウンロードしています"
+msgid "Download Managers Testing"
+msgstr ""
 
-msgid "Edit repo"
-msgstr "リポジトリの編集"
+msgid "Download managers for newsgroups, torrents, usenet, and streaming"
+msgstr ""
 
-msgid "Enable BTSync repository"
-msgstr "BTSyncのリポジトリを有効にする"
+msgid "Edit custom repo"
+msgstr ""
 
-msgid "Enable Beta repository"
-msgstr "ベータ版のリポジトリを有効にする"
-
-msgid "Enable Dotdeb repository"
-msgstr "Dotdebのリポジトリを有効にする"
-
-msgid "Enable Gluster repository"
-msgstr "Glusterリポジトリを有効にする"
-
-msgid "Enable Greyhole repository"
-msgstr "Greyholeのリポジトリを有効にする"
-
-msgid "Enable MariaDB 10.0 repository"
-msgstr "MariaDB 10.0 のリポジトリを有効にする"
-
-msgid "Enable Mono Testing repository"
-msgstr "Monoのテスト版リポジトリを有効にする"
-
-msgid "Enable Mono and mono-project.com repositories"
-msgstr "Monoとmono-project.comのリポジトリを有効にする"
-
-msgid "Enable OMV-Extras.org repository"
-msgstr "OMV-Extras.orgリポジトリを有効にする"
-
-msgid "Enable OMV-Extras.org testing repository (release candidates)"
-msgstr "OMV-Extras.orgのテスト版リポジトリを有効にする（リリース候補版）"
-
-msgid "Enable Plex Media Server repository"
-msgstr "Plex Media Serverのリポジトリを有効にする"
-
-msgid "Enable VPN repository"
-msgstr "VPNのリポジトリを有効にする"
-
-msgid "Enable Virtualbox repository."
-msgstr "Virtualboxのリポジトリを有効にします。"
-
-msgid "Enable ZFS repository"
-msgstr "ZFSのリポジトリを有効にする"
-
-msgid "Enable deb-multimedia backports repository"
-msgstr "deb-multimediaバックポートのリポジトリを有効にする"
-
-msgid "Enable deb-multimedia repository"
-msgstr "deb-multimediaのリポジトリを有効にする"
-
-msgid "Enable download managers repository"
-msgstr "ダウンロードマネージャのリポジトリを有効にする"
-
-msgid "Enable download managers testing repository (release candidates)"
-msgstr "ダウンロードマネージャのテスト版のリポジトリを有効にする(リリース候補版)"
-
-msgid "Enable e-tobi.net repository"
-msgstr "e-tobi.netのリポジトリを有効にする"
-
-msgid "Enable hwraid repository"
-msgstr "hwraidのリポジトリを有効にする"
+msgid "Enable"
+msgstr ""
 
 msgid "Everyone: read/write"
 msgstr "Everyone: 読み込み/書き込み"
 
-msgid "Gluster"
-msgstr "Gluster"
+msgid "GlusterFS"
+msgstr ""
 
 msgid "Greyhole"
 msgstr "Greyhole"
+
+msgid "Greyhole repository"
+msgstr ""
 
 msgid "HWRaid"
 msgstr "HWRaid"
@@ -290,12 +228,6 @@ msgstr "バックポート3.16カーネルのインストール"
 msgid "Install Backports 3.16 kernel ..."
 msgstr "バックポート3.16カーネルをインストールしています ..."
 
-msgid "Install systemd"
-msgstr "systemdのインストール"
-
-msgid "Install systemd..."
-msgstr "systemdをインストールしています..."
-
 msgid "Installed Kernels"
 msgstr "インストールされているカーネル"
 
@@ -309,20 +241,29 @@ msgstr "カーネル"
 msgid "Kernels"
 msgstr "カーネル"
 
-msgid "Managers Testing"
-msgstr "マネージャのテスト"
+msgid "Main package repository"
+msgstr ""
 
 msgid "MariaDB"
 msgstr "MariaDB"
 
+msgid "MariaDB 10.0 repository"
+msgstr ""
+
 msgid "Modules"
 msgstr "モジュール"
+
+msgid "Modules for different hardware raid controllers"
+msgstr ""
 
 msgid "Mono"
 msgstr "Mono"
 
 msgid "Mono Testing"
 msgstr "Monoテスト版"
+
+msgid "Mono and mono-project.com"
+msgstr ""
 
 msgid "Name"
 msgstr "名前"
@@ -333,10 +274,8 @@ msgstr "注意"
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
 
-msgid ""
-"Only enable repositories you need.  Enabling unnecessary repositories can "
-"slow down your system."
-msgstr "必要なリポジトリのみ有効にします。必要のないリポジトリを有効にすると、システムが遅くなります。"
+msgid "OMV-Extras.org Testing"
+msgstr ""
 
 msgid "PID"
 msgstr "PID"
@@ -344,23 +283,35 @@ msgstr "PID"
 msgid "Permissions"
 msgstr "パーミッション"
 
+msgid "Please select a shared folder."
+msgstr ""
+
 msgid "Plex"
 msgstr "Plex"
 
-msgid "Primary"
-msgstr "プライマリ"
+msgid "Plex Media Server repository"
+msgstr ""
+
+msgid "Plugins for setting up virtual private networks"
+msgstr ""
 
 msgid "Process List"
 msgstr "プロセスリスト"
 
-msgid "Reload"
-msgstr "再読み込み"
+msgid "Release candidates"
+msgstr ""
 
 msgid "Repo"
 msgstr "リポジトリ"
 
-msgid "Repositories"
-msgstr "リポジトリ"
+msgid "Repos"
+msgstr ""
+
+msgid "Repository"
+msgstr ""
+
+msgid "Repository for new versions of multimedia packages"
+msgstr ""
 
 msgid "Reset Permissions"
 msgstr "パーミッションのリセット"
@@ -370,9 +321,6 @@ msgstr "このファイルモードにフォルダとファイルを再設定し
 
 msgid "Reset permissions ..."
 msgstr "パミッションの初期化 ..."
-
-msgid "Secondary"
-msgstr "セカンダリ"
 
 msgid "Send"
 msgstr "送信"
@@ -395,11 +343,14 @@ msgstr "間違ったデフォルトの起動カーネルを設定すると、シ
 msgid "Shared Folder"
 msgstr "共有フォルダ"
 
-msgid "Silent"
-msgstr "サイレント"
-
 msgid "State"
 msgstr "状態"
+
+msgid "Style #1"
+msgstr ""
+
+msgid "Style #2"
+msgstr ""
 
 msgid "Support Info"
 msgstr "サポート情報"
@@ -407,30 +358,29 @@ msgstr "サポート情報"
 msgid "Support Info Module Selection"
 msgstr "モジュールセクションのサポート情報"
 
-msgid "Testing"
-msgstr "テスト版"
+msgid "System - iface"
+msgstr ""
 
-msgid ""
-"The information about available software is out-of-date. You need to reload "
-"the information about available software."
-msgstr "利用可能なソフトウェアについての情報は古くなっています。利用可能なソフトウェアについての情報を再読み込みする必要があります。"
+msgid "System - mntent"
+msgstr ""
 
-msgid ""
-"The repository will be checked for new, removed or upgraded software "
-"packages."
-msgstr "新規追加、削除またはアップグレードされたソフトウェアパッケージがないかリポジトリをチェックします。"
+msgid "System - sharedfolder"
+msgstr ""
 
-msgid "These repositories may break your system.  Use caution!!"
-msgstr "これらのリポジトリは、システムを破壊することがあります。十分に注意してください！"
+msgid "Testing repository for Mono"
+msgstr ""
+
+msgid "Testing repository for download managers"
+msgstr ""
+
+msgid "Type"
+msgstr ""
 
 msgid "Update"
 msgstr "アップデート"
 
 msgid "User"
 msgstr "ユーザー"
-
-msgid "Utilities"
-msgstr "ユーティリティ"
 
 msgid "VDR"
 msgstr "VDR"
@@ -444,11 +394,11 @@ msgstr "バージョン"
 msgid "Virtualbox"
 msgstr "Virtualbox"
 
+msgid "Virtualbox repository"
+msgstr ""
+
 msgid "ZFS"
 msgstr "ZFS"
 
-msgid "deb-multimedia"
-msgstr "deb-multimedia"
-
-msgid "deb-multimedia backports"
-msgstr "deb-multimediaバックポート"
+msgid "e-tobi.net repository"
+msgstr ""
