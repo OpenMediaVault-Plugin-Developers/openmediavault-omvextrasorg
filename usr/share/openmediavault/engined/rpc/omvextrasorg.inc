@@ -104,6 +104,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $this->registerMethod("getPrimary");
         $this->registerMethod("setPrimary");
 
+        $this->registerMethod("getSecondaryList");
         $this->registerMethod("getSecondary");
         $this->registerMethod("setSecondary");
 
@@ -282,6 +283,141 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         // Return the configuration object.
         return $object;
+    }
+
+    function getSecondaryList($params, $context)
+    {
+        global $xmlConfig;
+
+        // Validate the RPC caller context.
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
+
+        $result = array();
+
+        $result[] = array(
+            "id" => "btsync",
+            "type" => "Backup",
+            "enable" => false,
+            "repo" => "BTSync",
+            "description" => "BTSync"
+        );
+
+        $result[] = array(
+            "id" => "gluster",
+            "type" => "Filesystems",
+            "enable" => false,
+            "repo" => "GlusterFS",
+            "description" => "Gluster - do not enable this repository unless you are using the GlusterFS filesystem (uncommon)"
+        );
+
+        $result[] = array(
+            "id" => "greyhole",
+            "type" => "Filesystems",
+            "enable" => false,
+            "repo" => "Greyhole",
+            "description" => "Greyhole"
+        );
+
+        $result[] = array(
+            "id" => "hwraid",
+            "type" => "Utilities",
+            "enable" => false,
+            "repo" => "HWRaid",
+            "description" => "hwraid"
+        );
+
+        $result[] = array(
+            "id" => "miller",
+            "type" => "Downloaders",
+            "enable" => false,
+            "repo" => "Download Managers",
+            "description" => "Download managers - contains various download managers for newsgroups, torrents, usenet, and streaming"
+        );
+
+        $result[] = array(
+            "id" => "millertesting",
+            "type" => "Downloaders",
+            "enable" => false,
+            "repo" => "Download Managers Testing",
+            "description" => "Download managers testing - contains various download managers for newsgroups, torrents, usenet, and streaming"
+        );
+
+        $result[] = array(
+            "id" => "mono",
+            "type" => "Multimedia",
+            "enable" => false,
+            "repo" => "Mono",
+            "description" => "Mono and mono-project.com"
+        );
+
+        $result[] = array(
+            "id" => "monotesting",
+            "type" => "Multimedia",
+            "enable" => false,
+            "repo" => "Mono Testing",
+            "description" => "Mono testing"
+        );
+
+        $result[] = array(
+            "id" => "omvextras",
+            "type" => "All",
+            "enable" => false,
+            "repo" => "OMV-Extras.org",
+            "description" => "OMV-Extras"
+        );
+
+        $result[] = array(
+            "id" => "omvextrastesting",
+            "type" => "All",
+            "enable" => false,
+            "repo" => "OMV-Extras.org Testing",
+            "description" => "OMV-Extras.org testing (release candidates)"
+        );
+        
+        $result[] = array(
+            "id" => "plex",
+            "type" => "Multimedia",
+            "enable" => false,
+            "repo" => "Plex",
+            "description" => "Plex Media Server"
+        );
+
+        $result[] = array(
+            "id" => "vbox",
+            "type" => "Virtualization",
+            "enable" => false,
+            "repo" => "Virtualbox",
+            "description" => "Virtualbox"
+        );
+
+        $result[] = array(
+            "id" => "vdr",
+            "type" => "Multimedia",
+            "enable" => false,
+            "repo" => "VDR",
+            "description" => "e-tobi.net"
+        );
+
+        $result[] = array(
+            "id" => "vpn",
+            "type" => "Remote",
+            "enable" => false,
+            "repo" => "VPN",
+            "description" => "VPN - contains plugins for setting up virtual private networks"
+        );
+
+        $result[] = array(
+            "id" => "zfs",
+            "type" => "Filesystems",
+            "enable" => false,
+            "repo" => "ZFS",
+            "description" => "ZFS - do not enable this repository unless you are using the ZFS filesystem (uncommon)"
+        );
+
+        return $result;
     }
 
     public function getSecondary($params, $context)
