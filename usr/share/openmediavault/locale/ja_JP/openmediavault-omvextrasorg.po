@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-10 17:21-0600\n"
-"PO-Revision-Date: 2014-12-10 23:21+0000\n"
-"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
+"PO-Revision-Date: 2014-12-11 08:44+0000\n"
+"Last-Translator: Toshihiro Kan <kansuke4649@gmail.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -94,7 +94,7 @@ msgid "61 lsmod"
 msgstr "61 lsmod"
 
 msgid "Add custom repo"
-msgstr ""
+msgstr "カスタムリポジトリの追加"
 
 msgid "Administrator: read/write, Users: no access, Others: no access"
 msgstr "Administrator: 読み込み/書き込み, Users: アクセス不可, Others: アクセス不可"
@@ -121,13 +121,13 @@ msgid "BTSync"
 msgstr "BTSync"
 
 msgid "BTSync repository"
-msgstr ""
+msgstr "BTSyncリポジトリ"
 
 msgid "Beta"
 msgstr "ベータ"
 
 msgid "Beta repository"
-msgstr ""
+msgstr "ベータリポジトリ"
 
 msgid "Checking for new updates ..."
 msgstr "新しいアップデートを確認しています ..."
@@ -148,19 +148,19 @@ msgid "Comment"
 msgstr "コメント"
 
 msgid "Custom Repos"
-msgstr ""
+msgstr "カスタムリポジトリ"
 
 msgid "Deb-Multimedia"
-msgstr ""
+msgstr "Deb-Multimedia"
 
 msgid "Deb-Multimedia Backports"
-msgstr ""
+msgstr "Deb-Multimedia バックポート"
 
 msgid "Deb-Multimedia backports repository"
-msgstr ""
+msgstr "Deb-Multimedia バックポートリポジトリ"
 
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 msgid "Developer"
 msgstr "開発者"
@@ -188,28 +188,28 @@ msgid "Download Managers"
 msgstr "ダウンロードマネージャ"
 
 msgid "Download Managers Testing"
-msgstr ""
+msgstr "ダウンロードマネージャのテスト版"
 
 msgid "Download managers for newsgroups, torrents, usenet, and streaming"
-msgstr ""
+msgstr "ニュースグループ、トレント、ユーズネット、ストリーミングのためのダウンロードマネージャ"
 
 msgid "Edit custom repo"
-msgstr ""
+msgstr "カスタムリポジトリの編集"
 
 msgid "Enable"
-msgstr ""
+msgstr "有効化"
 
 msgid "Everyone: read/write"
 msgstr "Everyone: 読み込み/書き込み"
 
 msgid "GlusterFS"
-msgstr ""
+msgstr "GlusterFS"
 
 msgid "Greyhole"
 msgstr "Greyhole"
 
 msgid "Greyhole repository"
-msgstr ""
+msgstr "Greyhole リポジトリ"
 
 msgid "HWRaid"
 msgstr "HWRaid"
@@ -242,19 +242,19 @@ msgid "Kernels"
 msgstr "カーネル"
 
 msgid "Main package repository"
-msgstr ""
+msgstr "メインパッケージリポジトリ"
 
 msgid "MariaDB"
 msgstr "MariaDB"
 
 msgid "MariaDB 10.0 repository"
-msgstr ""
+msgstr "MariaDB 10.0 リポジトリ"
 
 msgid "Modules"
 msgstr "モジュール"
 
 msgid "Modules for different hardware raid controllers"
-msgstr ""
+msgstr "異なるハードウェアRAIDコントローラ用のモジュール"
 
 msgid "Mono"
 msgstr "Mono"
@@ -263,7 +263,7 @@ msgid "Mono Testing"
 msgstr "Monoテスト版"
 
 msgid "Mono and mono-project.com"
-msgstr ""
+msgstr "Monoとmono-project.com"
 
 msgid "Name"
 msgstr "名前"
@@ -275,7 +275,7 @@ msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
 
 msgid "OMV-Extras.org Testing"
-msgstr ""
+msgstr "OMV-Extras.orgテスト版"
 
 msgid "PID"
 msgstr "PID"
@@ -284,34 +284,34 @@ msgid "Permissions"
 msgstr "パーミッション"
 
 msgid "Please select a shared folder."
-msgstr ""
+msgstr "共有フォルダを選択してください。"
 
 msgid "Plex"
 msgstr "Plex"
 
 msgid "Plex Media Server repository"
-msgstr ""
+msgstr "Plex Media Serverリポジトリ"
 
 msgid "Plugins for setting up virtual private networks"
-msgstr ""
+msgstr "仮想プライベートネットワークをセットアップするためのプラグイン"
 
 msgid "Process List"
 msgstr "プロセスリスト"
 
 msgid "Release candidates"
-msgstr ""
+msgstr "リリース候補版"
 
 msgid "Repo"
 msgstr "リポジトリ"
 
 msgid "Repos"
-msgstr ""
+msgstr "リポジトリ"
 
 msgid "Repository"
-msgstr ""
+msgstr "リポジトリ"
 
 msgid "Repository for new versions of multimedia packages"
-msgstr ""
+msgstr "マルチメディアパッケージの新しいバージョン用リポジトリ"
 
 msgid "Reset Permissions"
 msgstr "パーミッションのリセット"
@@ -347,10 +347,10 @@ msgid "State"
 msgstr "状態"
 
 msgid "Style #1"
-msgstr ""
+msgstr "スタイル #1"
 
 msgid "Style #2"
-msgstr ""
+msgstr "スタイル #2"
 
 msgid "Support Info"
 msgstr "サポート情報"
@@ -359,22 +359,22 @@ msgid "Support Info Module Selection"
 msgstr "モジュールセクションのサポート情報"
 
 msgid "System - iface"
-msgstr ""
+msgstr "システム - iface"
 
 msgid "System - mntent"
-msgstr ""
+msgstr "システム - mntent"
 
 msgid "System - sharedfolder"
-msgstr ""
+msgstr "システム - 共有フォルダ"
 
 msgid "Testing repository for Mono"
-msgstr ""
+msgstr "Mono用テスト版リポジトリ"
 
 msgid "Testing repository for download managers"
-msgstr ""
+msgstr "ダウンロードマネージャ用テスト版リポジトリ"
 
 msgid "Type"
-msgstr ""
+msgstr "タイプ"
 
 msgid "Update"
 msgstr "アップデート"
@@ -395,10 +395,10 @@ msgid "Virtualbox"
 msgstr "Virtualbox"
 
 msgid "Virtualbox repository"
-msgstr ""
+msgstr "Virtualboxリポジトリ"
 
 msgid "ZFS"
 msgstr "ZFS"
 
 msgid "e-tobi.net repository"
-msgstr ""
+msgstr "e-tobi.netリポジトリ"
