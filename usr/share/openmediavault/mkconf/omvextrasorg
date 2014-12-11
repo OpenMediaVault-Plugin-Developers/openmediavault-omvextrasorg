@@ -455,9 +455,9 @@ backports()
                 echo "Install backports 3.16 kernel and headers"
                 apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-base initramfs-tools=0.115~bpo70+1
                 if $AMD64; then
-                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.16-0.bpo.2-amd64 linux-headers-3.16-0.bpo.2-amd64 firmware-linux firmware-linux-free
+                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.16.0-0.bpo.4-amd64 linux-headers-3.16.0-0.bpo.4-amd64 firmware-linux firmware-linux-free
                 else
-                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.16-0.bpo.2-486 linux-headers-3.16-0.bpo.2-486 firmware-linux firmware-linux-free
+                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.16.0-0.bpo.4-486 linux-headers-3.16.0-0.bpo.4-486 firmware-linux firmware-linux-free
                 fi
                 ;;
         esac
