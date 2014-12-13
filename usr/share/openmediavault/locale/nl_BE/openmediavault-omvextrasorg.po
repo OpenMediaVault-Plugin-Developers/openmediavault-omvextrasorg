@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-10 17:21-0600\n"
-"PO-Revision-Date: 2014-12-10 23:21+0000\n"
+"POT-Creation-Date: 2014-12-13 13:20-0600\n"
+"PO-Revision-Date: 2014-12-13 19:20+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Dutch (Belgium) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/nl_BE/)\n"
 "MIME-Version: 1.0\n"
@@ -225,6 +225,12 @@ msgid "Install Backports 3.16 kernel"
 msgstr ""
 
 msgid "Install Backports 3.16 kernel ..."
+msgstr ""
+
+msgid "Install kernel headers"
+msgstr ""
+
+msgid "Install kernel headers ..."
 msgstr ""
 
 msgid "Installed Kernels"

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-10 17:21-0600\n"
-"PO-Revision-Date: 2014-12-10 23:21+0000\n"
+"POT-Creation-Date: 2014-12-13 13:20-0600\n"
+"PO-Revision-Date: 2014-12-13 19:20+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Spanish (Spain) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/es_ES/)\n"
 "MIME-Version: 1.0\n"
@@ -94,7 +94,7 @@ msgid "61 lsmod"
 msgstr "61 lsmod"
 
 msgid "Add custom repo"
-msgstr ""
+msgstr "Añadir Repositorio personal."
 
 msgid "Administrator: read/write, Users: no access, Others: no access"
 msgstr "Admin: Lectura/Escritura, Usuarios: Sin acceso, Otros: Sin Acceso"
@@ -121,13 +121,13 @@ msgid "BTSync"
 msgstr "BTSync"
 
 msgid "BTSync repository"
-msgstr ""
+msgstr "Repositorio BTSync"
 
 msgid "Beta"
 msgstr "Beta"
 
 msgid "Beta repository"
-msgstr ""
+msgstr "Repositorio Beta"
 
 msgid "Checking for new updates ..."
 msgstr "Buscando nuevas actualizaciones ..."
@@ -148,19 +148,19 @@ msgid "Comment"
 msgstr "Comentario"
 
 msgid "Custom Repos"
-msgstr ""
+msgstr "Repositorio Personal"
 
 msgid "Deb-Multimedia"
-msgstr ""
+msgstr "Deb-Multimedia"
 
 msgid "Deb-Multimedia Backports"
-msgstr ""
+msgstr "Deb-Multimedia Backports"
 
 msgid "Deb-Multimedia backports repository"
-msgstr ""
+msgstr "Repositorio Deb-Multimedia backports"
 
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 msgid "Developer"
 msgstr "Desarrollo"
@@ -188,28 +188,28 @@ msgid "Download Managers"
 msgstr "Manejadores de descargas"
 
 msgid "Download Managers Testing"
-msgstr ""
+msgstr "Download Managers Testing"
 
 msgid "Download managers for newsgroups, torrents, usenet, and streaming"
-msgstr ""
+msgstr "Manejadores de  descargas de noticias, torrents, usenet, y video en streaming"
 
 msgid "Edit custom repo"
-msgstr ""
+msgstr "Editar Repositorio personal."
 
 msgid "Enable"
-msgstr ""
+msgstr "Habilitar"
 
 msgid "Everyone: read/write"
 msgstr "Todo el mundo: Lectura/Escritura"
 
 msgid "GlusterFS"
-msgstr ""
+msgstr "GlusterFS"
 
 msgid "Greyhole"
 msgstr "Greyhole"
 
 msgid "Greyhole repository"
-msgstr ""
+msgstr "Repositorio Greyhole"
 
 msgid "HWRaid"
 msgstr "HWRaid"
@@ -228,6 +228,12 @@ msgstr "Instalar kernel 3.16 Backports"
 msgid "Install Backports 3.16 kernel ..."
 msgstr "Instalar kernel 3.16 Backports ..."
 
+msgid "Install kernel headers"
+msgstr ""
+
+msgid "Install kernel headers ..."
+msgstr ""
+
 msgid "Installed Kernels"
 msgstr "Kelnel Instalados"
 
@@ -242,19 +248,19 @@ msgid "Kernels"
 msgstr "Kernels"
 
 msgid "Main package repository"
-msgstr ""
+msgstr "Repositorio Principal"
 
 msgid "MariaDB"
 msgstr "MariaDB"
 
 msgid "MariaDB 10.0 repository"
-msgstr ""
+msgstr "Repositorio MariaDB 10.0"
 
 msgid "Modules"
 msgstr "Módulos"
 
 msgid "Modules for different hardware raid controllers"
-msgstr ""
+msgstr "Modulos para diferentes controladoras RAID por hardware"
 
 msgid "Mono"
 msgstr "Mono"
@@ -263,7 +269,7 @@ msgid "Mono Testing"
 msgstr "Mono"
 
 msgid "Mono and mono-project.com"
-msgstr ""
+msgstr "Mono y mono-project.com"
 
 msgid "Name"
 msgstr "Nombre"
@@ -275,7 +281,7 @@ msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
 
 msgid "OMV-Extras.org Testing"
-msgstr ""
+msgstr "OMV-Extras.org Testing"
 
 msgid "PID"
 msgstr "PID"
@@ -284,34 +290,34 @@ msgid "Permissions"
 msgstr "Permisos"
 
 msgid "Please select a shared folder."
-msgstr ""
+msgstr "Por favor seleccione una carpeta compartida."
 
 msgid "Plex"
 msgstr "Plex"
 
 msgid "Plex Media Server repository"
-msgstr ""
+msgstr "Repositorio PLEX"
 
 msgid "Plugins for setting up virtual private networks"
-msgstr ""
+msgstr "Plugings para crear y configurar redes privadas virtuales"
 
 msgid "Process List"
 msgstr "Listado proc."
 
 msgid "Release candidates"
-msgstr ""
+msgstr "Candidatos a version final."
 
 msgid "Repo"
 msgstr "Repositorio"
 
 msgid "Repos"
-msgstr ""
+msgstr "Repositorios"
 
 msgid "Repository"
-msgstr ""
+msgstr "Repositorio"
 
 msgid "Repository for new versions of multimedia packages"
-msgstr ""
+msgstr "Repositorio Multimedia"
 
 msgid "Reset Permissions"
 msgstr "Reiniciar permisos"
@@ -347,10 +353,10 @@ msgid "State"
 msgstr "Estado"
 
 msgid "Style #1"
-msgstr ""
+msgstr "Estilo #1"
 
 msgid "Style #2"
-msgstr ""
+msgstr "Estilo #2"
 
 msgid "Support Info"
 msgstr "Info. soporte"
@@ -359,22 +365,22 @@ msgid "Support Info Module Selection"
 msgstr "Selección del módulo de información de soporte."
 
 msgid "System - iface"
-msgstr ""
+msgstr "Sistema - iface"
 
 msgid "System - mntent"
-msgstr ""
+msgstr "Sistema - mntent"
 
 msgid "System - sharedfolder"
-msgstr ""
+msgstr "Sistema - Carpeta compartida"
 
 msgid "Testing repository for Mono"
-msgstr ""
+msgstr "Repositorio Testing de Mono"
 
 msgid "Testing repository for download managers"
-msgstr ""
+msgstr "Repo Testing de manejadores de descargas"
 
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 msgid "Update"
 msgstr "Actualización"
@@ -395,10 +401,10 @@ msgid "Virtualbox"
 msgstr "Virtualbox"
 
 msgid "Virtualbox repository"
-msgstr ""
+msgstr "Repositorio Virtualbox"
 
 msgid "ZFS"
 msgstr "ZFS"
 
 msgid "e-tobi.net repository"
-msgstr ""
+msgstr "Repositorio e-tobi.net"
