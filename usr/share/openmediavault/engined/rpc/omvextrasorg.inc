@@ -171,7 +171,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             $arm = true;
         }
 
-        if ( strpos($uname, "amd64") === false )
+        if ( strpos($uname, "amd64") !== false  )
         {
             $amd64 = true;
         }
@@ -187,7 +187,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "description" => gettext("BTSync repository")
         );
 
-        if ( $arm64 === true )
+        if ( $amd64 === true )
         {
             $result[] = array(
                 "id"          => "gluster",
