@@ -204,7 +204,10 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Repos", {
         var wnd = Ext.create("OMV.window.Execute", {
             title           : _("Cleaning Apt Files and Lists..."),
             rpcService      : "OmvExtrasOrg",
-            rpcMethod       : "doAptClean",
+            rpcMethod       : "doCommand",
+            rpcParams      : {
+                "command" : "aptclean"
+            },            
             rpcIgnoreErrors : true,
             hideStartButton : true,
             hideStopButton  : true,

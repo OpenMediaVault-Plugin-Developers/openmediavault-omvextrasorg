@@ -466,6 +466,14 @@ backports()
     fi
 }
 
+headers()
+{
+    export LANG=C
+    export DEBIAN_FRONTEND=noninteractive
+
+    apt-get --yes --force-yes --fix-missing install linux-headers-$(uname -r)
+}
+
 support()
 {
     export LANG=C
@@ -551,6 +559,10 @@ case $2 in
 
     installbackports)
         backports
+    ;;
+
+    installheaders)
+        headers
     ;;
 
     sendsupport)

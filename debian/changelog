@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (1.7) stable; urgency=low
+
+  * Add kernel header install button
+  * Update locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 13 Dec 2014 13:19:40 -0600
+
 openmediavault-omvextrasorg (1.6) stable; urgency=low
 
   * Only show repo if architecture can use it

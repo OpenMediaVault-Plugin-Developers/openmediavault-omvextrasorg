@@ -41,7 +41,15 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Kernel", {
             icon     : "images/add.png",
             iconCls  : Ext.baseCSSPrefix + "btn-icon-16x16",
             scope    : me,
-            handler  : Ext.Function.bind(me.onBackportsButton, me, [ me ])
+            handler  : Ext.Function.bind(me.onCommandButton, me, [ "installbackports" ])
+        },{
+            id       : me.getId() + "-headers",
+            xtype    : "button",
+            text     : _("Install kernel headers"),
+            icon     : "images/add.png",
+            iconCls  : Ext.baseCSSPrefix + "btn-icon-16x16",
+            scope    : me,
+            handler  : Ext.Function.bind(me.onCommandButton, me, [ "installheaders" ])
         });
         return items;
     },
@@ -141,12 +149,20 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Kernel", {
         }];
     },
 
-    onBackportsButton : function() {
+    onCommandButton : function(cmd) {
         var me = this;
+        if(cmd == "backports") {
+            title = _("Install Backports 3.16 kernel ...");
+        } else {
+            title = _("Install kernel headers ...");
+        }
         Ext.create("OMV.window.Execute", {
-            title          : _("Install Backports 3.16 kernel ..."),
+            title          : title,
             rpcService     : "OmvExtrasOrg",
-            rpcMethod      : "doInstallBackports",
+            rpcMethod      : "doCommand",
+            rpcParams      : {
+                "command" : cmd
+            },
             hideStopButton : true,
             listeners      : {
                 scope     : me,

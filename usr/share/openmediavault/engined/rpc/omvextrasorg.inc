@@ -29,6 +29,9 @@ require_once("openmediavault/product.inc");
 
 class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 {
+
+    private static $commands = array("aptclean","installbackports","installheaders");
+        
     public function getName()
     {
         return "OmvExtrasOrg";
@@ -123,8 +126,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $this->registerMethod("getKernelList");
         $this->registerMethod("setBootKernel");
 
-        $this->registerMethod("doInstallBackports");
-        $this->registerMethod("doAptClean");
+        $this->registerMethod("doCommand");
 
         $this->registerMethod("getSupportInfo");
         $this->registerMethod("getProcessList");
@@ -1177,7 +1179,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         }
     }
 
-    public function doInstallBackports($params, $context)
+    public function doCommand($params, $context)
     {
         // Validate the RPC caller context.
         $this->validateMethodContext(
@@ -1185,6 +1187,22 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             array( "role" => OMV_ROLE_ADMINISTRATOR )
         );
 
+        // Validate the parameters of the RPC service method.
+        $this->validateMethodParams($params, '{
+            "type"       : "object",
+            "properties" : {
+                "command"  : { "type" : "string" }
+            }
+        }');
+
+        if (!in_array($params['command'], self::$commands))
+        {
+            throw new OMVException(
+                OMVErrorMsg::E_MISC_OPERATION_DENIED,
+                sprinf("Unknown command - %s", $params['command'])
+            );
+        }
+        
         // Create a background process.
         $bgStatusFilename = $this->createBgProcStatus();
         $pid = $this->fork();
@@ -1199,39 +1217,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             $bgOutputFilename = $this->createBgProcOutput();
             $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
 
-            $cmd = sprintf("omv-mkconf %s installbackports 2>&1", $this->getPluginName() );
-            $this->exec($cmd, $output, $bgOutputFilename);
-            $this->finalizeBgProcStatus($bgStatusFilename, $output);
-
-        } catch(Exception $e) {
-            $this->finalizeBgProcStatus($bgStatusFilename, "", $e);
-            exit(1);
-        }
-    }
-
-    public function doAptClean($params, $context)
-    {
-        // Validate the RPC caller context.
-        $this->validateMethodContext(
-            $context,
-            array( "role" => OMV_ROLE_ADMINISTRATOR )
-        );
-
-        // Create a background process.
-        $bgStatusFilename = $this->createBgProcStatus();
-        $pid = $this->fork();
-        if ($pid > 0)   // Parent process.
-        {
-            $this->initializeBgProcStatus($bgStatusFilename, $pid);
-            return $bgStatusFilename;
-        }
-
-        // Child process.
-        try {
-            $bgOutputFilename = $this->createBgProcOutput();
-            $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
-
-            $cmd = sprintf("omv-mkconf %s aptclean 2>&1", $this->getPluginName() );
+            $cmd = sprintf("omv-mkconf %s %s 2>&1", $this->getPluginName(), $params['command'] );
             $this->exec($cmd, $output, $bgOutputFilename);
             $this->finalizeBgProcStatus($bgStatusFilename, $output);
 
