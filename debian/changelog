@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (1.6) stable; urgency=low
+
+  * Only show repo if architecture can use it
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 13 Dec 2014 07:40:19 -0600
+
 openmediavault-omvextrasorg (1.5) stable; urgency=low
 
   * Major visual reorganization
