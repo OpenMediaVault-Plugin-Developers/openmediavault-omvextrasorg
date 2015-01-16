@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-13 13:20-0600\n"
-"PO-Revision-Date: 2014-12-13 19:20+0000\n"
-"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
+"PO-Revision-Date: 2014-12-15 18:16+0000\n"
+"Last-Translator: kochin <kochinc@outlook.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -94,7 +94,7 @@ msgid "61 lsmod"
 msgstr "61 lsmod"
 
 msgid "Add custom repo"
-msgstr ""
+msgstr "新增客製套件庫"
 
 msgid "Administrator: read/write, Users: no access, Others: no access"
 msgstr "管理員：讀/寫，用戶：不能存取，其他：不能存取"
@@ -121,13 +121,13 @@ msgid "BTSync"
 msgstr "BTSync"
 
 msgid "BTSync repository"
-msgstr ""
+msgstr "BTSync 套件庫"
 
 msgid "Beta"
 msgstr "Beta"
 
 msgid "Beta repository"
-msgstr ""
+msgstr "Beta 套件庫"
 
 msgid "Checking for new updates ..."
 msgstr "檢查新的更新 ..."
@@ -148,19 +148,19 @@ msgid "Comment"
 msgstr "註釋"
 
 msgid "Custom Repos"
-msgstr ""
+msgstr "客製套件庫"
 
 msgid "Deb-Multimedia"
-msgstr ""
+msgstr "Deb-Multimedia"
 
 msgid "Deb-Multimedia Backports"
-msgstr ""
+msgstr "Deb-Multimedia 向後移植"
 
 msgid "Deb-Multimedia backports repository"
-msgstr ""
+msgstr "Deb-Multimedia 向後移植(backports)套件庫"
 
 msgid "Description"
-msgstr ""
+msgstr "敘述"
 
 msgid "Developer"
 msgstr "開發者"
@@ -188,28 +188,28 @@ msgid "Download Managers"
 msgstr "下載管理員"
 
 msgid "Download Managers Testing"
-msgstr ""
+msgstr "下載管理員測試"
 
 msgid "Download managers for newsgroups, torrents, usenet, and streaming"
-msgstr ""
+msgstr "用於新聞群組(newsgroups)、torrents、usenet 及串流(streaming)的下載管理員"
 
 msgid "Edit custom repo"
-msgstr ""
+msgstr "編輯客製套件庫"
 
 msgid "Enable"
-msgstr ""
+msgstr "啟用"
 
 msgid "Everyone: read/write"
 msgstr "每個人：讀/寫"
 
 msgid "GlusterFS"
-msgstr ""
+msgstr "GlusterFS"
 
 msgid "Greyhole"
 msgstr "Greyhole"
 
 msgid "Greyhole repository"
-msgstr ""
+msgstr "Greyhole 套件庫"
 
 msgid "HWRaid"
 msgstr "HWRaid"
@@ -217,29 +217,29 @@ msgstr "HWRaid"
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
 "still have the option to boot the standard kernel."
-msgstr "如果系統無法使用 backports 核心啟動，啟動選單仍會有選項可啟動標準核心。"
+msgstr "如果系統無法使用向後移植(backports)核心啟動，啟動選單仍會有選項可啟動標準核心。"
 
 msgid "Information"
 msgstr "資訊"
 
 msgid "Install Backports 3.16 kernel"
-msgstr "安裝 Backports 3.16 核心"
+msgstr "安裝向後移植 3.16 核心"
 
 msgid "Install Backports 3.16 kernel ..."
-msgstr "安裝 Backports 3.16 核心中 ..."
+msgstr "安裝向後移植 3.16 核心中 ..."
 
 msgid "Install kernel headers"
-msgstr ""
+msgstr "安裝核心標頭檔案"
 
 msgid "Install kernel headers ..."
-msgstr ""
+msgstr "安裝核心標頭檔案 ..."
 
 msgid "Installed Kernels"
 msgstr "已安裝的核心"
 
 msgid ""
 "Installing the backports kernel with not uninstall the standard kernel."
-msgstr "安裝 backports 核心且不移除標準核心的安裝。"
+msgstr "安裝向後移植(backports)核心且不移除標準核心的安裝。"
 
 msgid "Kernel"
 msgstr "系統核心"
@@ -248,19 +248,19 @@ msgid "Kernels"
 msgstr "核心"
 
 msgid "Main package repository"
-msgstr ""
+msgstr "主套件庫"
 
 msgid "MariaDB"
 msgstr "MariaDB"
 
 msgid "MariaDB 10.0 repository"
-msgstr ""
+msgstr "MariaDB 10.0 套件庫"
 
 msgid "Modules"
 msgstr "模組"
 
 msgid "Modules for different hardware raid controllers"
-msgstr ""
+msgstr "用於不同硬體 raid 控制器的模組"
 
 msgid "Mono"
 msgstr "Mono"
@@ -269,7 +269,7 @@ msgid "Mono Testing"
 msgstr "Mono 測試"
 
 msgid "Mono and mono-project.com"
-msgstr ""
+msgstr "Mono 和 mono-project.com"
 
 msgid "Name"
 msgstr "名稱"
@@ -281,7 +281,7 @@ msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
 
 msgid "OMV-Extras.org Testing"
-msgstr ""
+msgstr "OMV-Extras.org 測試"
 
 msgid "PID"
 msgstr "PID"
@@ -290,34 +290,34 @@ msgid "Permissions"
 msgstr "權限"
 
 msgid "Please select a shared folder."
-msgstr ""
+msgstr "請選擇一個共享檔案夾。"
 
 msgid "Plex"
 msgstr "Plex"
 
 msgid "Plex Media Server repository"
-msgstr ""
+msgstr "Plex Media Server 套件庫"
 
 msgid "Plugins for setting up virtual private networks"
-msgstr ""
+msgstr "用於設定虛擬專用網路的插件"
 
 msgid "Process List"
 msgstr "程序列表"
 
 msgid "Release candidates"
-msgstr ""
+msgstr "發佈候選"
 
 msgid "Repo"
 msgstr "套件庫"
 
 msgid "Repos"
-msgstr ""
+msgstr "套件庫"
 
 msgid "Repository"
-msgstr ""
+msgstr "套件庫"
 
 msgid "Repository for new versions of multimedia packages"
-msgstr ""
+msgstr "新版多媒體套件的套件庫"
 
 msgid "Reset Permissions"
 msgstr "重設權限"
@@ -353,10 +353,10 @@ msgid "State"
 msgstr "狀態"
 
 msgid "Style #1"
-msgstr ""
+msgstr "樣式 #1"
 
 msgid "Style #2"
-msgstr ""
+msgstr "樣式 #2"
 
 msgid "Support Info"
 msgstr "支援資訊"
@@ -365,22 +365,22 @@ msgid "Support Info Module Selection"
 msgstr "支援資訊模組選擇"
 
 msgid "System - iface"
-msgstr ""
+msgstr "系統 - iface"
 
 msgid "System - mntent"
-msgstr ""
+msgstr "系統 - mntent"
 
 msgid "System - sharedfolder"
-msgstr ""
+msgstr "系統 - sharedfolder"
 
 msgid "Testing repository for Mono"
-msgstr ""
+msgstr "Mono 的測試套件庫"
 
 msgid "Testing repository for download managers"
-msgstr ""
+msgstr "下載管理員的測試套件庫"
 
 msgid "Type"
-msgstr ""
+msgstr "型式"
 
 msgid "Update"
 msgstr "更新"
@@ -401,10 +401,10 @@ msgid "Virtualbox"
 msgstr "Virtualbox"
 
 msgid "Virtualbox repository"
-msgstr ""
+msgstr "Virtualbox 套件庫"
 
 msgid "ZFS"
 msgstr "ZFS"
 
 msgid "e-tobi.net repository"
-msgstr ""
+msgstr "e-tobi.net 套件庫"
