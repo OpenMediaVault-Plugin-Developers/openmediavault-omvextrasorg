@@ -2,6 +2,7 @@ openmediavault-omvextrasorg (1.8) stable; urgency=low
 
   * Add js cache clear to apt clean
   * Update locales
+  * Update copyrights
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 16 Jan 2015 05:56:02 -0600
 
