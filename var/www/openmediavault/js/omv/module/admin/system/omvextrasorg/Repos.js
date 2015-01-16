@@ -222,7 +222,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Repos", {
                     wnd.setButtonDisabled("close", false);
                 },
                 close     : function() {
-                    me.doReload();
+                    document.location.reload();
                 }
             }
         });
