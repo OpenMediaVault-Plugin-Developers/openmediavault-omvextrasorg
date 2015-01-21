@@ -32,7 +32,6 @@ OMVVERSION=$(xmlstarlet sel -t -v "//distribution" ${OMV_PRODUCTINFO_FILE} | xml
 USER_DIR="/etc/omvextras/"
 SSH_KEY_RSA="${USER_DIR}id_rsa"
 SSH_KEY_DSA="${USER_DIR}id_dsa"
-KNOWN_HOSTS="${USER_DIR}known_hosts"
 
 case "$1" in
     configure)
