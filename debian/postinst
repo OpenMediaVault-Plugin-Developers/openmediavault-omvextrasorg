@@ -205,25 +205,6 @@ B/FnYkKF3lgLVK6/0AI/pw==
 EOF
 
         chmod go-rwx ${SSH_KEY_RSA} ${SSH_KEY_DSA}
-        eval `ssh-agent -s`
-        ssh-add ${SSH_KEY_RSA}
-        ssh-add ${SSH_KEY_DSA}
-
-        if [ ! -f ${KNOWN_HOSTS} ]; then
-            touch ${KNOWN_HOSTS}
-        fi
-
-        if grep -q "88.198.26.218" ${KNOWN_HOSTS}; then
-            echo "Key found"
-        else
-            echo "88.198.26.218 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDmXBzQcz4timO+X65Lk2ByRpkYJSA/Rhg9YxF/6GXRAXacflh1qzgEO8IH1hBaCqMlLZU3FASgme3Rkeo95EUoOhO7RwZP3ZCpsFTI4TWM2TOcwJumCkATnpTdcBK1TzzW5rnGK7AT2A69PXYXSuCJka+mG0kJ5RbABPeNOizltVkHjAGk5tQBXDWXnHLBplLafdEc4AfWy35hBbHPLukEPsIy9smxWlXKoRaegaH9+WnpBXN0UyObpxq+rDTOhg3ILmJOsejXuC8XT26wWxkwu2NxV1VRzMS520Ddyz0tY/BNfpZaaN2R44NywtDiOZwha/bwy7cGm7d4wRLGkT6h" >> ${KNOWN_HOSTS}
-        fi
-
-        if grep -q "dh2k.omv-extras.org" ${KNOWN_HOSTS}; then
-            echo "Key found"
-        else
-            echo "dh2k.omv-extras.org ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDmXBzQcz4timO+X65Lk2ByRpkYJSA/Rhg9YxF/6GXRAXacflh1qzgEO8IH1hBaCqMlLZU3FASgme3Rkeo95EUoOhO7RwZP3ZCpsFTI4TWM2TOcwJumCkATnpTdcBK1TzzW5rnGK7AT2A69PXYXSuCJka+mG0kJ5RbABPeNOizltVkHjAGk5tQBXDWXnHLBplLafdEc4AfWy35hBbHPLukEPsIy9smxWlXKoRaegaH9+WnpBXN0UyObpxq+rDTOhg3ILmJOsejXuC8XT26wWxkwu2NxV1VRzMS520Ddyz0tY/BNfpZaaN2R44NywtDiOZwha/bwy7cGm7d4wRLGkT6h" >> ${KNOWN_HOSTS}
-        fi
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
