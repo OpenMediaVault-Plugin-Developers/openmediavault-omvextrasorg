@@ -29,7 +29,7 @@ SERVICE_XPATH="/config/system/${SERVICE_XPATH_NAME}"
 SERVICE_XPATH_MODULES="${SERVICE_XPATH}/modules"
 KEYRING_LOCATION="/usr/share/keyrings/"
 OMVVERSION=$(xmlstarlet sel -t -v "//distribution" ${OMV_PRODUCTINFO_FILE} | xmlstarlet unesc)
-USER_DIR="/root/.ssh/"
+USER_DIR="/etc/omvextras/"
 SSH_KEY_RSA="${USER_DIR}id_rsa"
 SSH_KEY_DSA="${USER_DIR}id_dsa"
 KNOWN_HOSTS="${USER_DIR}known_hosts"
@@ -155,6 +155,8 @@ case "$1" in
 
         dpkg-trigger update-fixperms
         dpkg-trigger update-locale
+
+        mkdir -p ${USER_DIR}
 
         # add ssh keys for supportinfo log upload
         cat <<EOF > ${SSH_KEY_RSA}

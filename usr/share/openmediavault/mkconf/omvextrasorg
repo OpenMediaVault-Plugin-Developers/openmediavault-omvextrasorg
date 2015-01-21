@@ -483,6 +483,7 @@ support()
 
     SYSINFO=$(</dev/urandom tr -dc "A-Za-z0-9" | head -c8)
     BATCH="sftp_batch"
+    KEY="/etc/omvextras/id_dsa"
 
     # show message
     echo "ATTENTION - Your system info will be provided to the OpenMediaVault forum moderators - forums.openmediavault.org."
@@ -507,7 +508,7 @@ support()
     echo "put ${SYSINFO}.xml" >> ${BATCH}
 
     # sftp file to server
-    sftp -b ${BATCH} -o PubkeyAuthentication=yes logupload@88.198.26.218:logs
+    sftp -b ${BATCH} -i ${KEY} logupload@88.198.26.218:logs
 
     # remove support files
     rm -f ${SYSINFO}.*
