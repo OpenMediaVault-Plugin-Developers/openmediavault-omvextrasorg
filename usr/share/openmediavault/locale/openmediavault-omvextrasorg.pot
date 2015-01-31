@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-13 13:20-0600\n"
+"POT-Creation-Date: 2015-01-31 11:54-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -171,6 +171,9 @@ msgid "Do not enable this repository unless you are using the GlusterFS filesyst
 msgstr ""
 
 msgid "Do not enable this repository unless you are using the ZFS filesystem (uncommon)"
+msgstr ""
+
+msgid "Do not enable this testing repository unless you are using the ZFS filesystem (uncommon)"
 msgstr ""
 
 msgid "Done..."
@@ -393,6 +396,9 @@ msgid "Virtualbox repository"
 msgstr ""
 
 msgid "ZFS"
+msgstr ""
+
+msgid "ZFS Testing"
 msgstr ""
 
 msgid "e-tobi.net repository"
