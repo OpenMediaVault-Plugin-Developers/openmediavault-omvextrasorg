@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (1.10) stable; urgency=low
+
+  * Add zfs testing repo
+  * Update locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 31 Jan 2015 11:53:32 -0600
+
 openmediavault-omvextrasorg (1.9) stable; urgency=low
 
   * Fix send support settings

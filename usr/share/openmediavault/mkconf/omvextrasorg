@@ -276,6 +276,22 @@ Package: *
 Pin: release n=${RELEASE}, origin archive.zfsonlinux.org
 Pin-Priority: 400
 
+Package: *
+Pin: release n=${OMVVERSION}-zfs, origin ${REPO_LOCATION}
+Pin-Priority: 996
+
+EOF
+    fi
+
+    # omv-extras zfs testing
+    if [ "$(omv_config_get "${XPATH}zfstesting")" = "1" ]; then
+        echo "# ZFS testing repo" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${REPO_URL} ${OMVVERSION}-zfs-testing main" >> ${OMVEXTRASREPOFILE}
+        cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-zfs-testing, origin ${REPO_LOCATION}
+Pin-Priority: 997
+
 EOF
     fi
 

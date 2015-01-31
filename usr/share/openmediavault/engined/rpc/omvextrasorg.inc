@@ -31,7 +31,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 {
 
     private static $commands = array("aptclean","installbackports","installheaders");
-        
+
     public function getName()
     {
         return "OmvExtrasOrg";
@@ -314,6 +314,14 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
                 "repo"        => gettext("ZFS"),
                 "description" => gettext("Do not enable this repository unless you are using the ZFS filesystem (uncommon)")
             );
+
+            $result[] = array(
+                "id"          => "zfstesting",
+                "type"        => "Filesystems",
+                "enable"      => $object['zfstesting'],
+                "repo"        => gettext("ZFS Testing"),
+                "description" => gettext("Do not enable this testing repository unless you are using the ZFS filesystem (uncommon)")
+            );
         }
 
         if ( $object['developer'] == "0827" )
@@ -411,9 +419,13 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         if ( boolval($repos['monotesting']) === true )
             $repos['mono'] = true;
 
+        if ( boolval($repos['zfstesting']) === true )
+            $repos['zfs'] = true;
+
         if ( strpos($uname, "amd64") === false )
         {
             $repos['zfs'] = false;
+            $repos['zfstesting'] = false;
             $repos['gluster'] = false;
         }
 
@@ -440,6 +452,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "btsync"        => array_boolval($repos, 'btsync'),
             "vpn"           => array_boolval($repos, 'vpn'),
             "zfs"           => array_boolval($repos, 'zfs'),
+            "zfstesting"    => array_boolval($repos, 'zfstesting'),
             "gluster"       => array_boolval($repos, 'gluster'),
             "mono"          => array_boolval($repos, 'mono'),
             "monotesting"   => array_boolval($repos, 'monotesting'),
@@ -1066,6 +1079,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "btsync"        => array_boolval($oldObject, 'btsync'),
             "vpn"           => array_boolval($oldObject, 'vpn'),
             "zfs"           => array_boolval($oldObject, 'zfs'),
+            "zfstesting"    => array_boolval($oldObject, 'zfstesting'),
             "gluster"       => array_boolval($oldObject, 'gluster'),
             "mono"          => array_boolval($oldObject, 'mono'),
             "monotesting"   => array_boolval($oldObject, 'monotesting'),
@@ -1202,7 +1216,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
                 sprinf("Unknown command - %s", $params['command'])
             );
         }
-        
+
         // Create a background process.
         $bgStatusFilename = $this->createBgProcStatus();
         $pid = $this->fork();
