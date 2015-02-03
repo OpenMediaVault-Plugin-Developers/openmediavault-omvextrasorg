@@ -1277,30 +1277,36 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
                 }
 
                 $modules = array(
-                    "debian-version","omv-version",
-                    "date","hostname","locale","uname","uptime",
-                    "interfaces","iptables","netstat","route",
-                    "mdadm","monit","hpraid",
-                    "blkid","df","fstab","mountinfo","partitions",
-                    "apt-sources","dpkg","omv-plugins",
-                    "lsmod"
+                    "00" => "debian-version",
+                    "00" => "omv-version",
+                    "10" => "date",
+                    "10" => "hostname",
+                    "10" => "locale",
+                    "10" => "uname",
+                    "10" => "uptime",
+                    "20" => "interfaces",
+                    "20" => "iptables",
+                    "20" => "netstat",
+                    "20" => "route",
+                    "30" => "mdadm",
+                    "30" => "monit",
+                    "31" => "hpraid",
+                    "40" => "blkid",
+                    "40" => "df",
+                    "40" => "fstab",
+                    "40" => "mountinfo",
+                    "40" => "partitions",
+                    "50" => "apt-sources",
+                    "50" => "dpkg",
+                    "50" => "omv-plugins",
+                    "61" => "lsmod"
                 );
 
-                $sections = array(
-                    "00","00",
-                    "10","10","10","10","10",
-                    "20","20","20","20",
-                    "30","30","31",
-                    "40","40","40","40","40",
-                    "50","50","50",
-                    "61"
-                );
-
-                foreach ($modules as $modulek => $modulev)
+                foreach ($modules as $section => $module)
                 {
-                    if ( boolval($object[$modulev]) === true )
+                    if ( boolval($object[$module]) === true )
                     {
-                        $path = sprintf("%s%s-%s", $this->getSysinfoModuleDir(), $sections[$modulek], $modulev);
+                        $path = sprintf("%s%s-%s", $this->getSysinfoModuleDir(), $section, $module);
                         OMVUtil::exec($path, $result);
                     }
                 }
