@@ -24,8 +24,6 @@ set -e
 . /etc/default/openmediavault
 . /usr/share/openmediavault/scripts/helper-functions
 
-OMV_UPGRADE_SCRIPTS_DIR=${OMV_UPGRADE_SCRIPTS_DIR:-"/usr/share/openmediavault/releaseupgrade"}
-
 if [ "$1" = "purge" ] || [ "$1" = "remove" ]; then
 
     # Remove the configuration data
@@ -34,8 +32,6 @@ if [ "$1" = "purge" ] || [ "$1" = "remove" ]; then
     /bin/rm -f /etc/apt/preferences.d/99omv-extras-org*
     /bin/rm -f /etc/apt/sources.list.d/omv-extras-org-*.list
     /bin/rm -rf /etc/omvextras
-
-    chattr -i /etc/apt/sources.list
 fi
 
 exit 0

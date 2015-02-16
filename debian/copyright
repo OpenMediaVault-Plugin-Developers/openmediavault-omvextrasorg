@@ -1,12 +1,16 @@
-Format: http://dep.debian.net/deps/dep5
-Upstream-Contact: OpenMediaVault Plugin Developers <plugins@omv-extras.org>
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+
+Files: *
 Copyright: 2013-2015 OpenMediaVault Plugin Developers <plugins@omv-extras.org>
  2011,2012 Marcel Beck <marcel.beck@mbeck.org>
  2011 Ian Moore <imooreyahoo@gmail.com>
-License: GPL-3
+License: GPL-3+
 
 Files: /var/www/openmediavault/images/plug.png
        /var/www/openmediavault/images/plug.svg
 Copyright: IcoMoon <http://www.icomoon.io>
 IcoMoon <http://www.icomoon.io>
 License: GPLv3
+
+License: GPL-3+
+ /usr/share/common-licenses/GPL-3

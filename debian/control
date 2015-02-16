@@ -3,13 +3,13 @@ Section: net
 XB-Plugin-Section: utilities
 Priority: optional
 Maintainer: OpenMediaVault Plugin Developers <plugins@omv-extras.org>
-Build-Depends: debhelper (>= 9.0.0 )
-Standards-Version: 3.9.3
+Build-Depends: debhelper (>= 9 )
+Standards-Version: 3.9.6
 Homepage: http://omv-extras.org/simple/index.php?id=how-to-install-omv-extras-plugin
 
 Package: openmediavault-omvextrasorg
 Architecture: all
-Depends: ${misc:Depends}, openmediavault (>= 1.0.31), apt-transport-https
+Depends: ${misc:Depends}, openmediavault (>= 1.12), apt-transport-https
 Conflicts: openmediavault-processlist, openmediavault-supportinfo
 Description: OMV-Extras.org Package Repositories for OpenMediaVault
  Allows enabling of multiple repositories hosted by omv-extras.org.

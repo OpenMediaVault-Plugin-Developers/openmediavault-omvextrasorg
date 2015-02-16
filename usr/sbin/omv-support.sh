@@ -51,7 +51,7 @@ DEBUG=false
 # OMV_CACHE_DIR="/var/cache/openmediavault"
 
 # import the needed Libs
-. /usr/local/bin/omv-support-libs
+. /usr/sbin/omv-support-libs
 
 ###########################################################################################
 ### Functions

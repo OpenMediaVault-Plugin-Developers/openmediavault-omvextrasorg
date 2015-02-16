@@ -94,12 +94,12 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
     private function getOmvSupport()
     {
-        return "/usr/local/bin/omv-support.sh";
+        return "/usr/sbin/omv-support.sh";
     }
 
     private function getShowkey()
     {
-        return "/usr/local/bin/omv-showkey";
+        return "/usr/sbin/omv-showkey";
     }
 
     public function initialize()
