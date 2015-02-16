@@ -1277,36 +1277,36 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
                 }
 
                 $modules = array(
-                    "00" => "debian-version",
-                    "00" => "omv-version",
-                    "10" => "date",
-                    "10" => "hostname",
-                    "10" => "locale",
-                    "10" => "uname",
-                    "10" => "uptime",
-                    "20" => "interfaces",
-                    "20" => "iptables",
-                    "20" => "netstat",
-                    "20" => "route",
-                    "30" => "mdadm",
-                    "30" => "monit",
-                    "31" => "hpraid",
-                    "40" => "blkid",
-                    "40" => "df",
-                    "40" => "fstab",
-                    "40" => "mountinfo",
-                    "40" => "partitions",
-                    "50" => "apt-sources",
-                    "50" => "dpkg",
-                    "50" => "omv-plugins",
-                    "61" => "lsmod"
+                    array("section" => "00", "module_name" => "debian-version"),
+                    array("section" => "00", "module_name" => "omv-version"),
+                    array("section" => "10", "module_name" => "date"),
+                    array("section" => "10", "module_name" => "hostname"),
+                    array("section" => "10", "module_name" => "locale"),
+                    array("section" => "10", "module_name" => "uname"),
+                    array("section" => "10", "module_name" => "uptime"),
+                    array("section" => "20", "module_name" => "interfaces"),
+                    array("section" => "20", "module_name" => "iptables"),
+                    array("section" => "20", "module_name" => "netstat"),
+                    array("section" => "20", "module_name" => "route"),
+                    array("section" => "30", "module_name" => "mdadm"),
+                    array("section" => "30", "module_name" => "monit"),
+                    array("section" => "31", "module_name" => "hpraid"),
+                    array("section" => "40", "module_name" => "blkid"),
+                    array("section" => "40", "module_name" => "df"),
+                    array("section" => "40", "module_name" => "fstab"),
+                    array("section" => "40", "module_name" => "mountinfo"),
+                    array("section" => "40", "module_name" => "partitions"),
+                    array("section" => "50", "module_name" => "apt-sources"),
+                    array("section" => "50", "module_name" => "dpkg"),
+                    array("section" => "50", "module_name" => "omv-plugins"),
+                    array("section" => "61", "module_name" => "lsmod")
                 );
 
-                foreach ($modules as $section => $module)
+                foreach ($modules as $module)
                 {
-                    if ( boolval($object[$module]) === true )
+                    if ( boolval($object[$module["module_name"]]) === true )
                     {
-                        $path = sprintf("%s%s-%s", $this->getSysinfoModuleDir(), $section, $module);
+                        $path = sprintf("%s%s-%s", $this->getSysinfoModuleDir(), $module["section"], $module["module_name"]);
                         OMVUtil::exec($path, $result);
                     }
                 }
