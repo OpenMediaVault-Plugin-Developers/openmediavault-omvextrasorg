@@ -127,6 +127,8 @@ EOF
         echo "# VDR repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${REPO_URL} ${OMVVERSION}-vdr main" >> ${OMVEXTRASREPOFILE}
         echo "deb http://e-tobi.net/vdr-experimental/ ${RELEASE} addons base vdr-multipatch" >> ${OMVEXTRASREPOFILE}
+        gpg --keyserver keyring.debian.org --recv keys 041390BC
+        gpg --export --armor 041390BC | apt-key add -
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-vdr, origin ${REPO_LOCATION}
