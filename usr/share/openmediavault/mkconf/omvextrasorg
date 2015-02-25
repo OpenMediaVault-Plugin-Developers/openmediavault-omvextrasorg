@@ -47,7 +47,7 @@ update()
     DH2K_REPO_LOCATION="dh2k.omv-extras.org"
     DH2K_REPO_URL="http://${DH2K_REPO_LOCATION}/debian/"
 
-    KEYSERVER="keyserver.ubuntu.com"
+    KEYSERVER="hkp://keyserver.ubuntu.com:80"
 
     /bin/rm -f ${OMVEXTRASREPOFILE}
     /bin/rm -f ${OMVEXTRASCUSTOMREPOFILE}
