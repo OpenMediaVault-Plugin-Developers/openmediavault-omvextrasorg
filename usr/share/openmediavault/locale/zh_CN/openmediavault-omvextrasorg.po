@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# songming <by@songming.me>, 2013-2014
+# songming <by@songming.me>, 2013-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-31 11:54-0600\n"
-"PO-Revision-Date: 2015-01-31 17:54+0000\n"
-"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
+"PO-Revision-Date: 2015-02-25 04:54+0000\n"
+"Last-Translator: songming <by@songming.me>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,13 +37,13 @@ msgid "10 Hostname"
 msgstr "10主机名"
 
 msgid "10 Locale"
-msgstr ""
+msgstr "10 Locale"
 
 msgid "10 Uptime"
 msgstr "10运行时间"
 
 msgid "10 uname"
-msgstr ""
+msgstr "10 uname"
 
 msgid "20 Interfaces"
 msgstr ""
@@ -181,7 +181,7 @@ msgstr "除非你使用ZFS文件系统(特殊的文件系统)，否则不建议�
 msgid ""
 "Do not enable this testing repository unless you are using the ZFS "
 "filesystem (uncommon)"
-msgstr ""
+msgstr "除非你使用ZFS文件系统(特殊的文件系统)，否则建议不要启用该源。"
 
 msgid "Done..."
 msgstr "完成..."
@@ -280,13 +280,13 @@ msgid "Name"
 msgstr "名称"
 
 msgid "Notes"
-msgstr ""
+msgstr "注释"
 
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
 
 msgid "OMV-Extras.org Testing"
-msgstr "OMV-Extras.org测试"
+msgstr "OMV-Extras.org测试源"
 
 msgid "PID"
 msgstr "PID"
@@ -304,7 +304,7 @@ msgid "Plex Media Server repository"
 msgstr "Plex多媒体服务源"
 
 msgid "Plugins for setting up virtual private networks"
-msgstr ""
+msgstr "虚拟私有网络VPN插件"
 
 msgid "Process List"
 msgstr "进程列表"
@@ -322,7 +322,7 @@ msgid "Repository"
 msgstr "源"
 
 msgid "Repository for new versions of multimedia packages"
-msgstr ""
+msgstr "多媒体软件源"
 
 msgid "Reset Permissions"
 msgstr "重设权限"
@@ -367,7 +367,7 @@ msgid "Support Info"
 msgstr "支持信息"
 
 msgid "Support Info Module Selection"
-msgstr ""
+msgstr "选择需要的模块以获得支持信息"
 
 msgid "System - iface"
 msgstr ""
@@ -412,7 +412,7 @@ msgid "ZFS"
 msgstr "ZFS"
 
 msgid "ZFS Testing"
-msgstr ""
+msgstr "ZFS测试源"
 
 msgid "e-tobi.net repository"
 msgstr "e-tobi.net源"

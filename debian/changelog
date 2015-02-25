@@ -1,6 +1,7 @@
 openmediavault-omvextrasorg (1.12) stable; urgency=low
 
   * Use port 80 with apt-key
+  * Update locales
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 25 Feb 2015 06:57:19 -0600
 
