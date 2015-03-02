@@ -525,7 +525,7 @@ support()
     echo "put ${SYSINFO}.xml" >> ${BATCH}
 
     # sftp file to server
-    sftp -b ${BATCH} -i ${KEY} -o StrictHostKeyChecking=no logupload@88.198.26.218:logs
+    sftp -b ${BATCH} -i ${KEY} -o StrictHostKeyChecking=no logupload@5.9.105.9:logs
 
     # remove support files
     rm -f ${SYSINFO}.*
