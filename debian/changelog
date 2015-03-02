@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (1.13) stable; urgency=low
+
+  * Fix logupload IP for new server
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 02 Mar 2015 19:03:17 +0100
+
 openmediavault-omvextrasorg (1.12) stable; urgency=low
 
   * Use port 80 with apt-key
