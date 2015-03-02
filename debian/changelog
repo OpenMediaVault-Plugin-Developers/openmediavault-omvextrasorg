@@ -1,6 +1,7 @@
 openmediavault-omvextrasorg (1.13) stable; urgency=low
 
   * Fix logupload IP for new server
+  * Update locales
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 02 Mar 2015 19:03:17 +0100
 
