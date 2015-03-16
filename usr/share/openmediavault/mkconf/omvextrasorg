@@ -173,7 +173,7 @@ EOF
     if [ "$(omv_config_get "${XPATH}btsync")" = "1" ]; then
         echo "# btsync repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${REPO_URL} ${OMVVERSION}-btsync main" >> ${OMVEXTRASREPOFILE}
-        echo "deb http://debian.yeasoft.net/btsync ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+        echo "deb http://debian.yeasoft.net/btsync14 ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-btsync, origin ${REPO_LOCATION}
