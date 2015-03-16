@@ -3,22 +3,19 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Alexander Savchenko, 2013
-# Alexander Savchenko, 2014-2015
-# артур Мудрых <arturmon82@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-31 11:54-0600\n"
-"PO-Revision-Date: 2015-03-04 19:41+0000\n"
-"Last-Translator: Alexander Savchenko\n"
-"Language-Team: Russian (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ru/)\n"
+"PO-Revision-Date: 2013-10-28 11:35+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: English (United Kingdom) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/en_GB/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: en_GB\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "% CPU"
 msgstr ""
@@ -114,19 +111,19 @@ msgid "Administrator: read/write, Users: read/write, Others: read-only"
 msgstr ""
 
 msgid "Apt Clean"
-msgstr "Очистить кеш пакетов APT"
+msgstr ""
 
 msgid "Architecture"
-msgstr "Архитектура"
+msgstr ""
 
 msgid "BTSync"
-msgstr "BTSync"
+msgstr ""
 
 msgid "BTSync repository"
 msgstr ""
 
 msgid "Beta"
-msgstr "Бета"
+msgstr ""
 
 msgid "Beta repository"
 msgstr ""
@@ -135,7 +132,7 @@ msgid "Checking for new updates ..."
 msgstr ""
 
 msgid "Cleaning Apt Files and Lists..."
-msgstr "Очистка Apt файлов и списков ..."
+msgstr ""
 
 msgid "Clear ACLs"
 msgstr ""
@@ -147,7 +144,7 @@ msgid "Command"
 msgstr ""
 
 msgid "Comment"
-msgstr "Комментарий"
+msgstr ""
 
 msgid "Custom Repos"
 msgstr ""
@@ -162,10 +159,10 @@ msgid "Deb-Multimedia backports repository"
 msgstr ""
 
 msgid "Description"
-msgstr "Описание"
+msgstr ""
 
 msgid "Developer"
-msgstr "Разработчик"
+msgstr ""
 
 msgid "Distribution"
 msgstr ""
@@ -189,7 +186,7 @@ msgid "Done..."
 msgstr ""
 
 msgid "Dotdeb"
-msgstr "Dotdeb"
+msgstr ""
 
 msgid "Download Managers"
 msgstr ""
@@ -204,7 +201,7 @@ msgid "Edit custom repo"
 msgstr ""
 
 msgid "Enable"
-msgstr "Включить"
+msgstr ""
 
 msgid "Everyone: read/write"
 msgstr ""
@@ -213,7 +210,7 @@ msgid "GlusterFS"
 msgstr ""
 
 msgid "Greyhole"
-msgstr "Greyhole"
+msgstr ""
 
 msgid "Greyhole repository"
 msgstr ""
@@ -227,7 +224,7 @@ msgid ""
 msgstr ""
 
 msgid "Information"
-msgstr "Информация"
+msgstr ""
 
 msgid "Install Backports 3.16 kernel"
 msgstr ""
@@ -249,7 +246,7 @@ msgid ""
 msgstr ""
 
 msgid "Kernel"
-msgstr "Ядро"
+msgstr ""
 
 msgid "Kernels"
 msgstr ""
@@ -258,7 +255,7 @@ msgid "Main package repository"
 msgstr ""
 
 msgid "MariaDB"
-msgstr "MariaDB"
+msgstr ""
 
 msgid "MariaDB 10.0 repository"
 msgstr ""
@@ -279,13 +276,13 @@ msgid "Mono and mono-project.com"
 msgstr ""
 
 msgid "Name"
-msgstr "Имя"
+msgstr ""
 
 msgid "Notes"
 msgstr ""
 
 msgid "OMV-Extras.org"
-msgstr "OMV-Extras.org"
+msgstr ""
 
 msgid "OMV-Extras.org Testing"
 msgstr ""
@@ -300,7 +297,7 @@ msgid "Please select a shared folder."
 msgstr ""
 
 msgid "Plex"
-msgstr "Plex"
+msgstr ""
 
 msgid "Plex Media Server repository"
 msgstr ""
@@ -390,28 +387,28 @@ msgid "Type"
 msgstr ""
 
 msgid "Update"
-msgstr "Обновить"
+msgstr ""
 
 msgid "User"
-msgstr "Пользователь"
+msgstr ""
 
 msgid "VDR"
-msgstr "VDR"
+msgstr ""
 
 msgid "VPN"
-msgstr "VPN"
+msgstr ""
 
 msgid "Version"
-msgstr "Версия"
+msgstr ""
 
 msgid "Virtualbox"
-msgstr "Virtualbox"
+msgstr ""
 
 msgid "Virtualbox repository"
 msgstr ""
 
 msgid "ZFS"
-msgstr "ZFS"
+msgstr ""
 
 msgid "ZFS Testing"
 msgstr ""

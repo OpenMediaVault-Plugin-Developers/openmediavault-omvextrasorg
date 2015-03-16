@@ -1,6 +1,7 @@
 openmediavault-omvextrasorg (1.14) stable; urgency=low
 
   * Update btsync repo address
+  * Update locales
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 16 Mar 2015 06:37:28 -0500
 
