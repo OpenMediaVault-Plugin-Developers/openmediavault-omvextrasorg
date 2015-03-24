@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-31 11:54-0600\n"
-"PO-Revision-Date: 2015-02-16 18:20+0000\n"
-"Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
+"POT-Creation-Date: 2015-03-24 15:00-0500\n"
+"PO-Revision-Date: 2015-03-24 20:04+0000\n"
+"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Galician (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -150,15 +150,6 @@ msgstr "Comentario"
 msgid "Custom Repos"
 msgstr "Repositorios personalizados"
 
-msgid "Deb-Multimedia"
-msgstr "Deb-Multimedia"
-
-msgid "Deb-Multimedia Backports"
-msgstr "Deb-Multimedia Backports"
-
-msgid "Deb-Multimedia backports repository"
-msgstr "Repositorio Deb-Multimedia Backports"
-
 msgid "Description"
 msgstr "Descrición"
 
@@ -185,9 +176,6 @@ msgstr "Non active este repositorio «testing», a non ser que estea a empregar 
 
 msgid "Done..."
 msgstr "Feito..."
-
-msgid "Dotdeb"
-msgstr "Dotdeb"
 
 msgid "Download Managers"
 msgstr "Xestores de descarga"
@@ -255,12 +243,6 @@ msgstr "Núcleos"
 msgid "Main package repository"
 msgstr "Repositorio principal de paquetes"
 
-msgid "MariaDB"
-msgstr "MariaDB"
-
-msgid "MariaDB 10.0 repository"
-msgstr "Repositorio de MariaDB 10.0"
-
 msgid "Modules"
 msgstr "Módulos"
 
@@ -320,9 +302,6 @@ msgstr "Repos"
 
 msgid "Repository"
 msgstr "Repositorio"
-
-msgid "Repository for new versions of multimedia packages"
-msgstr "Repositorio para as novas versións dos paquetes multimedia"
 
 msgid "Reset Permissions"
 msgstr "Restabelecer os permisos"

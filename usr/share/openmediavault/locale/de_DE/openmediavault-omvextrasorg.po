@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-31 11:54-0600\n"
-"PO-Revision-Date: 2015-01-31 17:54+0000\n"
+"POT-Creation-Date: 2015-03-24 15:00-0500\n"
+"PO-Revision-Date: 2015-03-24 20:04+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -154,15 +154,6 @@ msgstr "Kommentar"
 msgid "Custom Repos"
 msgstr "Benutzerdefinierte Paketquellen"
 
-msgid "Deb-Multimedia"
-msgstr "Deb-Multimedia"
-
-msgid "Deb-Multimedia Backports"
-msgstr "Deb-Multimedia-Rückportierungen"
-
-msgid "Deb-Multimedia backports repository"
-msgstr "Deb-Multimedia-Rückportierungspaketquelle"
-
 msgid "Description"
 msgstr "Beschreibung"
 
@@ -189,9 +180,6 @@ msgstr ""
 
 msgid "Done..."
 msgstr "Fertig..."
-
-msgid "Dotdeb"
-msgstr "Dotdeb"
 
 msgid "Download Managers"
 msgstr "Download Manager"
@@ -259,12 +247,6 @@ msgstr "Kernel"
 msgid "Main package repository"
 msgstr "Hauptpaketquelle"
 
-msgid "MariaDB"
-msgstr "MariaDB"
-
-msgid "MariaDB 10.0 repository"
-msgstr "MariaDB 10.0-Paketquelle"
-
 msgid "Modules"
 msgstr "Module"
 
@@ -324,9 +306,6 @@ msgstr "Paketquellen"
 
 msgid "Repository"
 msgstr "Paketquelle"
-
-msgid "Repository for new versions of multimedia packages"
-msgstr "Paketquelle für neue Versionen von Multimediapaketen"
 
 msgid "Reset Permissions"
 msgstr "Berechtigungen zurücksetzen"

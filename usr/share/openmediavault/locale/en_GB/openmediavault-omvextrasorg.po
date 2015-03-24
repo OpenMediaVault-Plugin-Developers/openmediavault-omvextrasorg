@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Andi Chandler <andi@gowling.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-31 11:54-0600\n"
-"PO-Revision-Date: 2013-10-28 11:35+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-03-24 15:00-0500\n"
+"PO-Revision-Date: 2015-03-24 20:04+0000\n"
+"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: English (United Kingdom) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/en_GB/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,112 +19,112 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "% CPU"
-msgstr ""
+msgstr "% CPU"
 
 msgid "% MEM"
-msgstr ""
+msgstr "% MEM"
 
 msgid "00 Debian Version"
-msgstr ""
+msgstr "00 Debian Version"
 
 msgid "00 OMV Version"
-msgstr ""
+msgstr "00 OMV Version"
 
 msgid "10 Date"
-msgstr ""
+msgstr "10 Date"
 
 msgid "10 Hostname"
-msgstr ""
+msgstr "10 Hostname"
 
 msgid "10 Locale"
-msgstr ""
+msgstr "10 Locale"
 
 msgid "10 Uptime"
-msgstr ""
+msgstr "10 Uptime"
 
 msgid "10 uname"
-msgstr ""
+msgstr "10 uname"
 
 msgid "20 Interfaces"
-msgstr ""
+msgstr "20 Interfaces"
 
 msgid "20 Route"
-msgstr ""
+msgstr "20 Route"
 
 msgid "20 iptables"
-msgstr ""
+msgstr "20 iptables"
 
 msgid "20 netstat"
-msgstr ""
+msgstr "20 netstat"
 
 msgid "30 mdadm"
-msgstr ""
+msgstr "30 mdadm"
 
 msgid "30 monit"
-msgstr ""
+msgstr "30 monit"
 
 msgid "31 hpraid"
-msgstr ""
+msgstr "31 hpraid"
 
 msgid "40 Mount Info"
-msgstr ""
+msgstr "40 Mount Info"
 
 msgid "40 Partitions"
-msgstr ""
+msgstr "40 Partitions"
 
 msgid "40 blkid"
-msgstr ""
+msgstr "40 blkid"
 
 msgid "40 df"
-msgstr ""
+msgstr "40 df"
 
 msgid "40 fstab"
-msgstr ""
+msgstr "40 fstab"
 
 msgid "50 OMV Plugins"
-msgstr ""
+msgstr "50 OMV Plugins"
 
 msgid "50 apt sources"
-msgstr ""
+msgstr "50 apt sources"
 
 msgid "50 dpkg"
-msgstr ""
+msgstr "50 dpkg"
 
 msgid "61 lsmod"
-msgstr ""
+msgstr "61 lsmod"
 
 msgid "Add custom repo"
 msgstr ""
 
 msgid "Administrator: read/write, Users: no access, Others: no access"
-msgstr ""
+msgstr "Administrator: read/write, Users: no access, Others: no access"
 
 msgid "Administrator: read/write, Users: read-only, Others: no access"
-msgstr ""
+msgstr "Administrator: read/write, Users: read-only, Others: no access"
 
 msgid "Administrator: read/write, Users: read-only, Others: read-only"
-msgstr ""
+msgstr "Administrator: read/write, Users: read-only, Others: read-only"
 
 msgid "Administrator: read/write, Users: read/write, Others: no access"
-msgstr ""
+msgstr "Administrator: read/write, Users: read/write, Others: no access"
 
 msgid "Administrator: read/write, Users: read/write, Others: read-only"
-msgstr ""
+msgstr "Administrator: read/write, Users: read/write, Others: read-only"
 
 msgid "Apt Clean"
 msgstr ""
 
 msgid "Architecture"
-msgstr ""
+msgstr "Architecture"
 
 msgid "BTSync"
 msgstr ""
 
 msgid "BTSync repository"
-msgstr ""
+msgstr "BTSync repository"
 
 msgid "Beta"
-msgstr ""
+msgstr "Beta"
 
 msgid "Beta repository"
 msgstr ""
@@ -147,15 +148,6 @@ msgid "Comment"
 msgstr ""
 
 msgid "Custom Repos"
-msgstr ""
-
-msgid "Deb-Multimedia"
-msgstr ""
-
-msgid "Deb-Multimedia Backports"
-msgstr ""
-
-msgid "Deb-Multimedia backports repository"
 msgstr ""
 
 msgid "Description"
@@ -183,9 +175,6 @@ msgid ""
 msgstr ""
 
 msgid "Done..."
-msgstr ""
-
-msgid "Dotdeb"
 msgstr ""
 
 msgid "Download Managers"
@@ -254,12 +243,6 @@ msgstr ""
 msgid "Main package repository"
 msgstr ""
 
-msgid "MariaDB"
-msgstr ""
-
-msgid "MariaDB 10.0 repository"
-msgstr ""
-
 msgid "Modules"
 msgstr ""
 
@@ -318,9 +301,6 @@ msgid "Repos"
 msgstr ""
 
 msgid "Repository"
-msgstr ""
-
-msgid "Repository for new versions of multimedia packages"
 msgstr ""
 
 msgid "Reset Permissions"

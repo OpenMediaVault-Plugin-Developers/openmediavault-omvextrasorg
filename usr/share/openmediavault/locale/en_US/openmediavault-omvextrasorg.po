@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-31 11:54-0600\n"
-"PO-Revision-Date: 2015-01-31 17:54+0000\n"
+"POT-Creation-Date: 2015-03-24 15:00-0500\n"
+"PO-Revision-Date: 2015-03-24 20:04+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: English (United States) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/en_US/)\n"
 "MIME-Version: 1.0\n"
@@ -149,15 +149,6 @@ msgstr "Comment"
 msgid "Custom Repos"
 msgstr "Custom Repos"
 
-msgid "Deb-Multimedia"
-msgstr "Deb-Multimedia"
-
-msgid "Deb-Multimedia Backports"
-msgstr "Deb-Multimedia Backports"
-
-msgid "Deb-Multimedia backports repository"
-msgstr "Deb-Multimedia backports repository"
-
 msgid "Description"
 msgstr "Description"
 
@@ -184,9 +175,6 @@ msgstr "Do not enable this testing repository unless you are using the ZFS files
 
 msgid "Done..."
 msgstr "Done..."
-
-msgid "Dotdeb"
-msgstr "Dotdeb"
 
 msgid "Download Managers"
 msgstr "Download Managers"
@@ -254,12 +242,6 @@ msgstr "Kernels"
 msgid "Main package repository"
 msgstr "Main package repository"
 
-msgid "MariaDB"
-msgstr "MariaDB"
-
-msgid "MariaDB 10.0 repository"
-msgstr "MariaDB 10.0 repository"
-
 msgid "Modules"
 msgstr "Modules"
 
@@ -319,9 +301,6 @@ msgstr "Repos"
 
 msgid "Repository"
 msgstr "Repository"
-
-msgid "Repository for new versions of multimedia packages"
-msgstr "Repository for new versions of multimedia packages"
 
 msgid "Reset Permissions"
 msgstr "Reset Permissions"

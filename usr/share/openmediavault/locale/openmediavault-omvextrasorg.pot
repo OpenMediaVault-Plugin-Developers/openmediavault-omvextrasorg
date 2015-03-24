@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-31 11:54-0600\n"
+"POT-Creation-Date: 2015-03-24 15:00-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -149,15 +149,6 @@ msgstr ""
 msgid "Custom Repos"
 msgstr ""
 
-msgid "Deb-Multimedia"
-msgstr ""
-
-msgid "Deb-Multimedia Backports"
-msgstr ""
-
-msgid "Deb-Multimedia backports repository"
-msgstr ""
-
 msgid "Description"
 msgstr ""
 
@@ -177,9 +168,6 @@ msgid "Do not enable this testing repository unless you are using the ZFS filesy
 msgstr ""
 
 msgid "Done..."
-msgstr ""
-
-msgid "Dotdeb"
 msgstr ""
 
 msgid "Download Managers"
@@ -245,12 +233,6 @@ msgstr ""
 msgid "Main package repository"
 msgstr ""
 
-msgid "MariaDB"
-msgstr ""
-
-msgid "MariaDB 10.0 repository"
-msgstr ""
-
 msgid "Modules"
 msgstr ""
 
@@ -309,9 +291,6 @@ msgid "Repos"
 msgstr ""
 
 msgid "Repository"
-msgstr ""
-
-msgid "Repository for new versions of multimedia packages"
 msgstr ""
 
 msgid "Reset Permissions"

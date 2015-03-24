@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-31 11:54-0600\n"
-"PO-Revision-Date: 2015-02-21 13:00+0000\n"
-"Last-Translator: Hyeonkyu Chu <hyeonkyu@gmail.com>\n"
+"POT-Creation-Date: 2015-03-24 15:00-0500\n"
+"PO-Revision-Date: 2015-03-24 20:04+0000\n"
+"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -150,15 +150,6 @@ msgstr "설명"
 msgid "Custom Repos"
 msgstr "사용자 정의 저장소"
 
-msgid "Deb-Multimedia"
-msgstr "Deb-Multimedia"
-
-msgid "Deb-Multimedia Backports"
-msgstr "Deb-Multimedia Backports"
-
-msgid "Deb-Multimedia backports repository"
-msgstr "Deb-Multimedia Backports 저장소"
-
 msgid "Description"
 msgstr "설명"
 
@@ -185,9 +176,6 @@ msgstr "ZFS 파일 시스템을 사용하지 않는 경우, 이 실험적인 저
 
 msgid "Done..."
 msgstr "완료..."
-
-msgid "Dotdeb"
-msgstr "Dotdeb"
 
 msgid "Download Managers"
 msgstr "Download Managers"
@@ -255,12 +243,6 @@ msgstr "커널"
 msgid "Main package repository"
 msgstr "주 꾸러미 저장소"
 
-msgid "MariaDB"
-msgstr "MariaDB"
-
-msgid "MariaDB 10.0 repository"
-msgstr "MariaDB 10.0 저장소"
-
 msgid "Modules"
 msgstr "단위 기능"
 
@@ -320,9 +302,6 @@ msgstr "저장소"
 
 msgid "Repository"
 msgstr "저장소"
-
-msgid "Repository for new versions of multimedia packages"
-msgstr "멀티미디어 꾸러미의 새로운 버전을 위한 저장소"
 
 msgid "Reset Permissions"
 msgstr "권한 재설정"
