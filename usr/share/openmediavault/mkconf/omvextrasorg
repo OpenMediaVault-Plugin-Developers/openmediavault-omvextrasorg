@@ -99,7 +99,6 @@ EOF
     if [ "$(omv_config_get "${XPATH}plex")" = "1" ]; then
         echo "# Plexmediaserver repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${REPO_URL} ${OMVVERSION}-plex main" >> ${OMVEXTRASREPOFILE}
-        #echo "deb http://shell.ninthgate.se/packages/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         echo "deb ${DH2K_REPO_URL} plex-${RELEASE}-mirror main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
@@ -210,56 +209,6 @@ Pin-Priority: 995
 EOF
     fi
 
-    # omv-extras dotdeb
-    if [ "$(omv_config_get "${XPATH}dotdeb")" = "1" ]; then
-        echo "# Dotdeb experimental repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${REPO_URL} ${OMVVERSION}-dotdeb main" >> ${OMVEXTRASREPOFILE}
-        echo "deb http://packages.dotdeb.org ${RELEASE} all" >> ${OMVEXTRASREPOFILE}
-        echo "deb-src http://packages.dotdeb.org ${RELEASE} all" >> ${OMVEXTRASREPOFILE}
-
-        if [ "${OMVVERSION}" = "sardaukar" ]; then
-            php="php54"
-        else
-            php="php55"
-        fi
-
-        echo "deb http://packages.dotdeb.org ${RELEASE}-${php} all" >> ${OMVEXTRASREPOFILE}
-        echo "deb-src http://packages.dotdeb.org ${RELEASE}-${php} all" >> ${OMVEXTRASREPOFILE}
-
-        cat <<EOF >> ${OMVEXTRASAPTPREFS}
-Package: *
-Pin: release n=${OMVVERSION}-dotdeb, origin ${REPO_LOCATION}
-Pin-Priority: 996
-
-Package: *
-Pin: release n=${RELEASE}, origin packages.dotdeb.org
-Pin-Priority: 996
-
-Package: *
-Pin: release n=${RELEASE}-${php}, origin packages.dotdeb.org
-Pin-Priority: 996
-
-EOF
-    fi
-
-    # omv-extras deb-multimedia
-    if [ "$(omv_config_get "${XPATH}debmmbp")" = "1" ]; then
-        echo "# Deb-multimedia backports repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb http://www.deb-multimedia.org ${RELEASE} main non-free" >> ${OMVEXTRASREPOFILE}
-        echo "deb http://www.deb-multimedia.org ${RELEASE}-backports main" >> ${OMVEXTRASREPOFILE}
-    else
-        if [ "$(omv_config_get "${XPATH}debmm")" = "1" ]; then
-            echo "# Deb-multimedia repo" >> ${OMVEXTRASREPOFILE}
-            echo "deb http://www.deb-multimedia.org ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-        fi
-    fi
-
-    if [ "$(omv_config_get "${XPATH}mariadb")" = "1" ]; then
-        echo "# MariaDB repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb http://ftp.osuosl.org/pub/mariadb/repo/10.0/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-        echo "deb-src http://ftp.osuosl.org/pub/mariadb/repo/10.0/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-    fi
-
     # omv-extras zfs
     if [ "$(omv_config_get "${XPATH}zfs")" = "1" ]; then
         # add large zfsonlinux key and linux-headers necessary for zfs module compilation
@@ -320,7 +269,6 @@ EOF
         echo "# mono-project repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${REPO_URL} ${OMVVERSION}-mono main" >> ${OMVEXTRASREPOFILE}
         echo "deb http://download.mono-project.com/repo/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-        #echo "deb http://www.deb-multimedia.org ${RELEASE} main non-free" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-mono, origin ${REPO_LOCATION}

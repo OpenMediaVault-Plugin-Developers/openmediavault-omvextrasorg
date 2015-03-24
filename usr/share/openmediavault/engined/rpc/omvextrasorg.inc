@@ -161,16 +161,23 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         unset($object['resetperms']);
 
         // Get architecture
-        $arm = false;
+        $armel = false;
+        $armhf = false;
         $amd64 = false;
 
         $uname = php_uname();
 
         if ( strpos($uname, "x86") === false &&
              strpos($uname, "486") === false &&
-             strpos($uname, "686") === false )
+             strpos($uname, "686") === false &&
+             strpos($uname, "armv7l") === false)
         {
-            $arm = true;
+            $armel = true;
+        }
+
+        if ( strpos($uname, "armv7l") !== false  )
+        {
+            $armhf = true;
         }
 
         if ( strpos($uname, "amd64") !== false  )
@@ -208,7 +215,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "description" => gettext("Greyhole repository")
         );
 
-        if ( $arm === false )
+        if ( $armel === false && $armhf === false )
         {
             $result[] = array(
                 "id"          => "hwraid",
@@ -235,7 +242,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "description" => gettext("Testing repository for download managers")
         );
 
-        if ( $arm === false )
+        if ( $armel === false )
         {
             $result[] = array(
                 "id"          => "mono",
@@ -270,7 +277,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "description" => gettext("Release candidates")
         );
 
-        if ( $arm === false )
+        if ( $armel === false )
         {
             $result[] = array(
                 "id"          => "plex",
@@ -279,7 +286,10 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
                 "repo"        => gettext("Plex"),
                 "description" => gettext("Plex Media Server repository")
             );
+        }
 
+        if ( $armel === false && $armhf === false )
+        {
             $result[] = array(
                 "id"          => "vbox",
                 "type"        => "Virtualization",
@@ -287,7 +297,10 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
                 "repo"        => gettext("Virtualbox"),
                 "description" => gettext("Virtualbox repository")
             );
+        }
 
+        if ( $armel === false )
+        {        
             $result[] = array(
                 "id"          => "vdr",
                 "type"        => "Multimedia",
@@ -333,38 +346,6 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
                 "repo"        => gettext("Beta"),
                 "description" => gettext("Beta repository")
             );
-
-            $result[] = array(
-                "id"          => "dotdeb",
-                "type"        => "All",
-                "enable"      => $object['dotdeb'],
-                "repo"        => gettext("Dotdeb"),
-                "description" => gettext("Dotdeb")
-            );
-
-            $result[] = array(
-                "id"          => "debmm",
-                "type"        => "Multimedia",
-                "enable"      => $object['debmm'],
-                "repo"        => gettext("Deb-Multimedia"),
-                "description" => gettext("Repository for new versions of multimedia packages")
-            );
-
-            $result[] = array(
-                "id"          => "debmmbp",
-                "type"        => "Multimedia",
-                "enable"      => $object['debmmbp'],
-                "repo"        => gettext("Deb-Multimedia Backports"),
-                "description" => gettext("Deb-Multimedia backports repository")
-            );
-
-            $result[] = array(
-                "id"          => "mariadb",
-                "type"        => "Network",
-                "enable"      => $object['mariadb'],
-                "repo"        => gettext("MariaDB"),
-                "description" => gettext("MariaDB 10.0 repository")
-            );
         }
 
         return $result;
@@ -398,22 +379,6 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         foreach($params as $paramk => $paramv)
         {
             $repos[$paramv['id']] = $paramv['enable'];
-        }
-
-        // Check architecture and disable appropriate repos
-        $uname = php_uname();
-
-        if ( strpos($uname, "x86") === false &&
-             strpos($uname, "486") === false &&
-             strpos($uname, "686") === false )
-        {
-            $repos['vbox']        = false;
-            $repos['plex']        = false;
-            $repos['vdr']         = false;
-            $repos['vpn']         = false;
-            $repos['mono']        = false;
-            $repos['monotesting'] = false;
-            $repos['hwraid']      = false;
         }
 
         if ( boolval($repos['monotesting']) === true )
@@ -458,10 +423,6 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "monotesting"   => array_boolval($repos, 'monotesting'),
             "hwraid"        => array_boolval($repos, 'hwraid'),
             "beta"          => array_boolval($repos, 'beta'),
-            "dotdeb"        => array_boolval($repos, 'dotdeb'),
-            "debmm"         => array_boolval($repos, 'debmm'),
-            "debmmbp"       => array_boolval($repos, 'debmmbp'),
-            "mariadb"       => array_boolval($repos, 'mariadb'),
             "developer"     => $oldObject['developer'],
             "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array(),
             "modules"       => isset($oldObject['modules']) ? $oldObject['modules'] : array(),
@@ -1085,10 +1046,6 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "monotesting"   => array_boolval($oldObject, 'monotesting'),
             "hwraid"        => array_boolval($oldObject, 'hwraid'),
             "beta"          => array_boolval($oldObject, 'beta'),
-            "dotdeb"        => array_boolval($oldObject, 'dotdeb'),
-            "debmm"         => array_boolval($oldObject, 'debmm'),
-            "debmmbp"       => array_boolval($oldObject, 'debmmbp'),
-            "mariadb"       => array_boolval($oldObject, 'mariadb'),
             "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array(),
             "modules"       => isset($oldObject['modules']) ? $oldObject['modules'] : array(),
             "resetperms"    => isset($oldObject['resetperms']) ? $oldObject['resetperms'] : array()
