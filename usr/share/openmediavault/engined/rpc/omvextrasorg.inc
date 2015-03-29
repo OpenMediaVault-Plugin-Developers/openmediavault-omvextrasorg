@@ -300,7 +300,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         }
 
         if ( $armel === false )
-        {        
+        {
             $result[] = array(
                 "id"          => "vdr",
                 "type"        => "Multimedia",
@@ -387,6 +387,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         if ( boolval($repos['zfstesting']) === true )
             $repos['zfs'] = true;
 
+        $uname = php_uname();
         if ( strpos($uname, "amd64") === false )
         {
             $repos['zfs'] = false;

@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (1.16) stable; urgency=low
+
+  * Fix bug for zfs repos
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 29 Mar 2015 14:28:16 -0500
+
 openmediavault-omvextrasorg (1.15) stable; urgency=low
 
   * Add armhf to plex and mono repos
