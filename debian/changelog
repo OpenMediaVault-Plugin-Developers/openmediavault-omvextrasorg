@@ -1,8 +1,9 @@
-openmediavault-omvextrasorg (1.17) UNRELEASED; urgency=low
+openmediavault-omvextrasorg (1.17) stable; urgency=low
 
   * Add key field for custom repo
+  * Update locales
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 07 Apr 2015 17:18:32 -0500
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 07 Apr 2015 17:31:29 -0500
 
 openmediavault-omvextrasorg (1.16) stable; urgency=low
 
