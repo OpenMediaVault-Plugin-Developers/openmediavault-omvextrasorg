@@ -55,6 +55,11 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Custom", {
             allowBlank : false
         },{
             xtype      : "textfield",
+            name       : "key",
+            fieldLabel : _("Key"),
+            allowBlank : true
+        },{
+            xtype      : "textfield",
             name       : "comment",
             fieldLabel : _("Comment"),
             allowBlank : false

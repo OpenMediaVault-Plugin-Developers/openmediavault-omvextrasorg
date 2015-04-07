@@ -320,12 +320,18 @@ EOF
     count=$(omv_config_get_count "${XPATH_REPO}")
     index=0
     while [ ${index} -le ${count} ]; do
-        name=$(omv_config_get "${XPATH_REPO}[position()=${index}]/name")
         repo=$(omv_config_get "${XPATH_REPO}[position()=${index}]/repo")
 
         if [ "${repo}" != "" ]; then
+            name=$(omv_config_get "${XPATH_REPO}[position()=${index}]/name")
+            key=$(omv_config_get "${XPATH_REPO}[position()=${index}]/key")
+
             echo "# ${name}" >> ${OMVEXTRASCUSTOMREPOFILE}
             echo "${repo}" >> ${OMVEXTRASCUSTOMREPOFILE}
+
+            if [ "${key}" != "" ]; then
+                apt-key adv --keyserver ${KEYSERVER} --recv-keys "${key}"
+            fi
         fi
 
         index=$(( ${index} + 1 ))

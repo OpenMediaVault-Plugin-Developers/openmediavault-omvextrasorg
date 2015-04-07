@@ -551,6 +551,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
                 "uuid"    : { '.$GLOBALS['OMV_JSONSCHEMA_UUID_UNDEFINED'].' },
                 "name"    : { "type" : "string" },
                 "repo"    : { "type" : "string" },
+                "key"     : { "type" : "string", "optional" : true },
                 "comment" : { "type" : "string" }
             }
         }');
@@ -560,6 +561,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "uuid"    => ($params['uuid'] == $GLOBALS['OMV_UUID_UNDEFINED']) ? OMVUtil::uuid() : $params['uuid'],
             "name"    => $params['name'],
             "repo"    => $params['repo'],
+            "key"     => $params['key'],
             "comment" => $params['comment']
         );
 
