@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# okpail <okpail@gmail.com>, 2014
+# okpail <okpail@gmail.com>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-07 17:31-0500\n"
-"PO-Revision-Date: 2015-04-07 22:31+0000\n"
+"POT-Creation-Date: 2015-04-29 21:30-0500\n"
+"PO-Revision-Date: 2015-04-30 02:30+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -94,22 +94,22 @@ msgid "61 lsmod"
 msgstr "61 lsmod"
 
 msgid "Add custom repo"
-msgstr ""
+msgstr "Voeg een op maat repository toe"
 
 msgid "Administrator: read/write, Users: no access, Others: no access"
-msgstr ""
+msgstr "Administrator: lezen/schrijven, Gebruikers: geen toegang, Anderen: geen toegang"
 
 msgid "Administrator: read/write, Users: read-only, Others: no access"
-msgstr ""
+msgstr "Administrator: lezen/schrijven, Gebruikers: alleen-lezen, Anderen: geen toegang"
 
 msgid "Administrator: read/write, Users: read-only, Others: read-only"
-msgstr ""
+msgstr "Administrator: lezen/schrijven, Gebruikers: alleen-lezen, Anderen: alleen lezen"
 
 msgid "Administrator: read/write, Users: read/write, Others: no access"
-msgstr ""
+msgstr "Administrator: lezen/schrijven, Gebruikers: lezen/schrijven, Anderen: geen toegang"
 
 msgid "Administrator: read/write, Users: read/write, Others: read-only"
-msgstr ""
+msgstr "Administrator: lezen/schrijven, Gebruikers: lezen/schrijven, Anderen: geen toegang"
 
 msgid "Apt Clean"
 msgstr "Apt Schoonmaken"
@@ -121,13 +121,13 @@ msgid "BTSync"
 msgstr "BTSync"
 
 msgid "BTSync repository"
-msgstr ""
+msgstr "BTSync repository"
 
 msgid "Beta"
 msgstr "Beta"
 
 msgid "Beta repository"
-msgstr ""
+msgstr "Beta repository"
 
 msgid "Checking for new updates ..."
 msgstr "Aan het kijken of er nog nieuwe updates zijn..."
@@ -136,10 +136,10 @@ msgid "Cleaning Apt Files and Lists..."
 msgstr "Apt Files and Lijsten schoonmaken..."
 
 msgid "Clear ACLs"
-msgstr ""
+msgstr "Wis ACLs"
 
 msgid "Clear all ACLs."
-msgstr ""
+msgstr "Wis alle ACLs"
 
 msgid "Command"
 msgstr "Opdracht"
@@ -148,10 +148,10 @@ msgid "Comment"
 msgstr "Opmerking"
 
 msgid "Custom Repos"
-msgstr ""
+msgstr "Aangepaste Repositories"
 
 msgid "Description"
-msgstr ""
+msgstr "Beschrijving"
 
 msgid "Developer"
 msgstr "Ontwikkelaar"
@@ -172,6 +172,15 @@ msgstr "et deze repositorie niet aan tenzij je het ZFS file systeem gebruikt (on
 msgid ""
 "Do not enable this testing repository unless you are using the ZFS "
 "filesystem (uncommon)"
+msgstr "Zet deze test repository niet aan tenzij je het ZFS filesysteem gebruikt  (ongebruikelijk)"
+
+msgid "Docker"
+msgstr ""
+
+msgid "Docker Testing"
+msgstr ""
+
+msgid "Docker repository"
 msgstr ""
 
 msgid "Done..."
@@ -181,28 +190,28 @@ msgid "Download Managers"
 msgstr "Download Managers"
 
 msgid "Download Managers Testing"
-msgstr ""
+msgstr "Download Managers testen"
 
 msgid "Download managers for newsgroups, torrents, usenet, and streaming"
-msgstr ""
+msgstr "Download managers voor nieuwsgroepen, torrents, usenet, en streaming"
 
 msgid "Edit custom repo"
-msgstr ""
+msgstr "Aanpassen van de aangepast repository"
 
 msgid "Enable"
-msgstr ""
+msgstr "Inschakelen"
 
 msgid "Everyone: read/write"
-msgstr ""
+msgstr "Allen: lezen/schrijven"
 
 msgid "GlusterFS"
-msgstr ""
+msgstr "GlusterFS"
 
 msgid "Greyhole"
 msgstr "Greyhole"
 
 msgid "Greyhole repository"
-msgstr ""
+msgstr "Greyhole repository"
 
 msgid "HWRaid"
 msgstr "HWRaid"
@@ -222,98 +231,98 @@ msgid "Install Backports 3.16 kernel ..."
 msgstr "de Backports 3.16 kernel aan het installeren ..."
 
 msgid "Install kernel headers"
-msgstr ""
+msgstr "Kernel headers installeren"
 
 msgid "Install kernel headers ..."
-msgstr ""
+msgstr "Kernel headers installeren..."
 
 msgid "Installed Kernels"
-msgstr ""
+msgstr "Geinstalleerde Kernels"
 
 msgid ""
 "Installing the backports kernel with not uninstall the standard kernel."
-msgstr ""
+msgstr "De standaard kernel zal niet verwijderd worden als backport kernels worden geïnstalleerd "
 
 msgid "Kernel"
 msgstr "Kernel"
 
 msgid "Kernels"
-msgstr ""
+msgstr "Kernels"
 
 msgid "Key"
-msgstr ""
+msgstr "Sleutel"
 
 msgid "Main package repository"
-msgstr ""
+msgstr "Main package repository"
 
 msgid "Modules"
 msgstr "Modules"
 
 msgid "Modules for different hardware raid controllers"
-msgstr ""
+msgstr "Modules voor verschillende hardware raid controllers"
 
 msgid "Mono"
 msgstr "Mono"
 
 msgid "Mono Testing"
-msgstr ""
+msgstr "Mono Testen"
 
 msgid "Mono and mono-project.com"
-msgstr ""
+msgstr "Mono en mono-project.com"
 
 msgid "Name"
 msgstr "Naam"
 
 msgid "Notes"
-msgstr ""
+msgstr "Aantekeningen"
 
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
 
 msgid "OMV-Extras.org Testing"
-msgstr ""
+msgstr "OMV-Extras.org Testen"
 
 msgid "PID"
 msgstr "PID"
 
 msgid "Permissions"
-msgstr ""
+msgstr "Permissies"
 
 msgid "Please select a shared folder."
-msgstr ""
+msgstr "Selecteer alsjeblieft een te delen folder"
 
 msgid "Plex"
 msgstr "Plex"
 
 msgid "Plex Media Server repository"
-msgstr ""
+msgstr "Plex Media Server repository"
 
 msgid "Plugins for setting up virtual private networks"
-msgstr ""
+msgstr "Plugins voor het opzetten van virtual private netwerken"
 
 msgid "Process List"
 msgstr "Lijst van processen"
 
 msgid "Release candidates"
-msgstr ""
+msgstr "Release kandidaten"
 
 msgid "Repo"
 msgstr "Repository"
 
 msgid "Repos"
-msgstr ""
+msgstr "Repositories"
 
 msgid "Repository"
-msgstr ""
+msgstr "Repository"
 
 msgid "Reset Permissions"
-msgstr ""
+msgstr "Resetten van Permissies"
 
 msgid "Reset folders and files to this file mode."
-msgstr ""
+msgstr "Reset folders en files naar deze file mode."
 
 msgid "Reset permissions ..."
-msgstr ""
+msgstr "Resetten van Permissies..."
 
 msgid "Send"
 msgstr "Stuur"
@@ -322,28 +331,28 @@ msgid "Send Support Info"
 msgstr "Stuur Support Info per email"
 
 msgid "Set as default boot kernel"
-msgstr ""
+msgstr "Als default boot kernel instellen"
 
 msgid "Setting boot kernel ..."
-msgstr ""
+msgstr "Als boot kernel instellen..."
 
 msgid ""
 "Setting the wrong default boot kernel may cause the system to be "
 "inaccessible.  The boot menu will still be available to select a different "
 "kernel."
-msgstr ""
+msgstr "Het instellen van de verkeerde boot kernel kan het niet meer opstarten van het systeem veroorzaken. Het boot menu zal wel bereikbaar blijven zodat een andere boot kernel kan worden gekozen inden beschikbaar"
 
 msgid "Shared Folder"
-msgstr ""
+msgstr "Gedeelde Folder"
 
 msgid "State"
 msgstr "State"
 
 msgid "Style #1"
-msgstr ""
+msgstr "Style #1"
 
 msgid "Style #2"
-msgstr ""
+msgstr "Style #2"
 
 msgid "Support Info"
 msgstr "Support Info"
@@ -352,22 +361,25 @@ msgid "Support Info Module Selection"
 msgstr "Support Info Module Selectie"
 
 msgid "System - iface"
-msgstr ""
+msgstr "System - iface"
 
 msgid "System - mntent"
-msgstr ""
+msgstr "System - mntent"
 
 msgid "System - sharedfolder"
+msgstr "System - gedeelde folder"
+
+msgid "Testing repository for Docker"
 msgstr ""
 
 msgid "Testing repository for Mono"
-msgstr ""
+msgstr "De repository testen voor het beschikbaar zijn van Mono"
 
 msgid "Testing repository for download managers"
-msgstr ""
+msgstr "Test de repository of download managers beschikbaar zijn"
 
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 msgid "Update"
 msgstr "Update"
@@ -388,13 +400,13 @@ msgid "Virtualbox"
 msgstr "Virtualbox"
 
 msgid "Virtualbox repository"
-msgstr ""
+msgstr "Virtualbox repository"
 
 msgid "ZFS"
 msgstr "ZFS"
 
 msgid "ZFS Testing"
-msgstr ""
+msgstr "ZFS Testing"
 
 msgid "e-tobi.net repository"
-msgstr ""
+msgstr "e-tobi.net repository"

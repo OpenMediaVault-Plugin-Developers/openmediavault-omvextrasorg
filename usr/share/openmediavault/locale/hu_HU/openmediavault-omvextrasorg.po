@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-07 17:31-0500\n"
-"PO-Revision-Date: 2015-04-07 22:31+0000\n"
+"POT-Creation-Date: 2015-04-29 21:30-0500\n"
+"PO-Revision-Date: 2015-04-30 02:30+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -173,6 +173,15 @@ msgid ""
 "Do not enable this testing repository unless you are using the ZFS "
 "filesystem (uncommon)"
 msgstr "Ne engedélyezd ezt az opciót, ha nem használsz ZFS fájlrendszert (ritka)"
+
+msgid "Docker"
+msgstr ""
+
+msgid "Docker Testing"
+msgstr ""
+
+msgid "Docker repository"
+msgstr ""
 
 msgid "Done..."
 msgstr "Kész..."
@@ -359,6 +368,9 @@ msgstr "Rendszer - mntent"
 
 msgid "System - sharedfolder"
 msgstr "Rendszer - osztottmappa"
+
+msgid "Testing repository for Docker"
+msgstr ""
 
 msgid "Testing repository for Mono"
 msgstr "Mono tároló tesztelés"

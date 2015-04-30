@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-07 17:31-0500\n"
+"POT-Creation-Date: 2015-04-29 21:30-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -165,6 +165,15 @@ msgid "Do not enable this repository unless you are using the ZFS filesystem (un
 msgstr ""
 
 msgid "Do not enable this testing repository unless you are using the ZFS filesystem (uncommon)"
+msgstr ""
+
+msgid "Docker"
+msgstr ""
+
+msgid "Docker Testing"
+msgstr ""
+
+msgid "Docker repository"
 msgstr ""
 
 msgid "Done..."
@@ -345,6 +354,9 @@ msgid "System - mntent"
 msgstr ""
 
 msgid "System - sharedfolder"
+msgstr ""
+
+msgid "Testing repository for Docker"
 msgstr ""
 
 msgid "Testing repository for Mono"

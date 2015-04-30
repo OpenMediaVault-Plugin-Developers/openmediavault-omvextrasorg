@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-07 17:31-0500\n"
-"PO-Revision-Date: 2015-04-07 22:31+0000\n"
+"POT-Creation-Date: 2015-04-29 21:30-0500\n"
+"PO-Revision-Date: 2015-04-30 02:30+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid "% CPU"
 msgstr "% CPU"
 
 msgid "% MEM"
-msgstr "% MEM"
+msgstr "% SP."
 
 msgid "00 Debian Version"
 msgstr "00 Debian-Version"
@@ -178,6 +178,15 @@ msgid ""
 "filesystem (uncommon)"
 msgstr "Aktiviere Sie diese Erprobungspaketquelle nicht, wenn Sie kein ZFS-Dateisystem verwenden (selten)"
 
+msgid "Docker"
+msgstr ""
+
+msgid "Docker Testing"
+msgstr ""
+
+msgid "Docker repository"
+msgstr ""
+
 msgid "Done..."
 msgstr "Fertig..."
 
@@ -245,7 +254,7 @@ msgid "Kernels"
 msgstr "Kernel"
 
 msgid "Key"
-msgstr ""
+msgstr "Schlüssel"
 
 msgid "Main package repository"
 msgstr "Hauptpaketquelle"
@@ -335,7 +344,7 @@ msgid ""
 "Setting the wrong default boot kernel may cause the system to be "
 "inaccessible.  The boot menu will still be available to select a different "
 "kernel."
-msgstr ""
+msgstr "Durch einen falsch festgelegten Standard-Boot-Kernel kann das System unzugänglich werden. Das Bootmenü wird zur Auswahl eines anderen Kernels trotzdem verfügbar sein."
 
 msgid "Shared Folder"
 msgstr "Gemeinsamer Ordner"
@@ -363,6 +372,9 @@ msgstr "System - mntent"
 
 msgid "System - sharedfolder"
 msgstr "System - freigegebenerOrdner"
+
+msgid "Testing repository for Docker"
+msgstr ""
 
 msgid "Testing repository for Mono"
 msgstr "Erprobungspaketquelle für Mono"

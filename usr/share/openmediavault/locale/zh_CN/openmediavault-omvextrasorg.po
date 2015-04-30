@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-07 17:31-0500\n"
-"PO-Revision-Date: 2015-04-07 22:31+0000\n"
+"POT-Creation-Date: 2015-04-29 21:30-0500\n"
+"PO-Revision-Date: 2015-04-30 02:30+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -173,6 +173,15 @@ msgid ""
 "Do not enable this testing repository unless you are using the ZFS "
 "filesystem (uncommon)"
 msgstr "除非你使用ZFS文件系统(特殊的文件系统)，否则建议不要启用该源。"
+
+msgid "Docker"
+msgstr ""
+
+msgid "Docker Testing"
+msgstr ""
+
+msgid "Docker repository"
+msgstr ""
 
 msgid "Done..."
 msgstr "完成..."
@@ -358,6 +367,9 @@ msgid "System - mntent"
 msgstr ""
 
 msgid "System - sharedfolder"
+msgstr ""
+
+msgid "Testing repository for Docker"
 msgstr ""
 
 msgid "Testing repository for Mono"

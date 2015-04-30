@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Epe, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-07 17:31-0500\n"
-"PO-Revision-Date: 2015-04-07 22:31+0000\n"
+"POT-Creation-Date: 2015-04-29 21:30-0500\n"
+"PO-Revision-Date: 2015-04-30 02:30+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Finnish (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/fi/)\n"
 "MIME-Version: 1.0\n"
@@ -18,22 +19,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "% CPU"
-msgstr ""
+msgstr "% CPU"
 
 msgid "% MEM"
-msgstr ""
+msgstr "% MEM"
 
 msgid "00 Debian Version"
-msgstr ""
+msgstr "00 Debian Versio"
 
 msgid "00 OMV Version"
-msgstr ""
+msgstr "00 OMV Versio"
 
 msgid "10 Date"
-msgstr ""
+msgstr "10 Päiväys"
 
 msgid "10 Hostname"
-msgstr ""
+msgstr "10 Isäntänimi"
 
 msgid "10 Locale"
 msgstr ""
@@ -171,6 +172,15 @@ msgstr ""
 msgid ""
 "Do not enable this testing repository unless you are using the ZFS "
 "filesystem (uncommon)"
+msgstr ""
+
+msgid "Docker"
+msgstr ""
+
+msgid "Docker Testing"
+msgstr ""
+
+msgid "Docker repository"
 msgstr ""
 
 msgid "Done..."
@@ -359,6 +369,9 @@ msgstr ""
 msgid "System - sharedfolder"
 msgstr ""
 
+msgid "Testing repository for Docker"
+msgstr ""
+
 msgid "Testing repository for Mono"
 msgstr ""
 
@@ -375,13 +388,13 @@ msgid "User"
 msgstr ""
 
 msgid "VDR"
-msgstr ""
+msgstr "VDR"
 
 msgid "VPN"
-msgstr ""
+msgstr "VPN"
 
 msgid "Version"
-msgstr ""
+msgstr "Versio"
 
 msgid "Virtualbox"
 msgstr ""
@@ -390,10 +403,10 @@ msgid "Virtualbox repository"
 msgstr ""
 
 msgid "ZFS"
-msgstr ""
+msgstr "ZFS"
 
 msgid "ZFS Testing"
-msgstr ""
+msgstr "ZFS Testaus"
 
 msgid "e-tobi.net repository"
 msgstr ""

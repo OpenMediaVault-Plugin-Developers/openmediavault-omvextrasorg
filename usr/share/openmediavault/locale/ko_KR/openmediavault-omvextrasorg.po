@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-07 17:31-0500\n"
-"PO-Revision-Date: 2015-04-07 22:31+0000\n"
+"POT-Creation-Date: 2015-04-29 21:30-0500\n"
+"PO-Revision-Date: 2015-04-30 02:30+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
@@ -174,6 +174,15 @@ msgid ""
 "filesystem (uncommon)"
 msgstr "ZFS 파일 시스템을 사용하지 않는 경우, 이 실험적인 저장소를 사용하지 마십시오 (흔히 쓰이는 것이 아님)"
 
+msgid "Docker"
+msgstr ""
+
+msgid "Docker Testing"
+msgstr ""
+
+msgid "Docker repository"
+msgstr ""
+
 msgid "Done..."
 msgstr "완료..."
 
@@ -241,7 +250,7 @@ msgid "Kernels"
 msgstr "커널"
 
 msgid "Key"
-msgstr ""
+msgstr "Key"
 
 msgid "Main package repository"
 msgstr "주 꾸러미 저장소"
@@ -359,6 +368,9 @@ msgstr "System - mntent"
 
 msgid "System - sharedfolder"
 msgstr "System - 공유 폴더"
+
+msgid "Testing repository for Docker"
+msgstr ""
 
 msgid "Testing repository for Mono"
 msgstr "Mono를 위한 실험적인 저장소"

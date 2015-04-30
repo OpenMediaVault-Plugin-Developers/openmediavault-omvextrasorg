@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-07 17:31-0500\n"
-"PO-Revision-Date: 2015-04-07 22:31+0000\n"
+"POT-Creation-Date: 2015-04-29 21:30-0500\n"
+"PO-Revision-Date: 2015-04-30 02:30+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: English (United Kingdom) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/en_GB/)\n"
 "MIME-Version: 1.0\n"
@@ -94,7 +94,7 @@ msgid "61 lsmod"
 msgstr "61 lsmod"
 
 msgid "Add custom repo"
-msgstr ""
+msgstr "Add custom repo"
 
 msgid "Administrator: read/write, Users: no access, Others: no access"
 msgstr "Administrator: read/write, Users: no access, Others: no access"
@@ -112,13 +112,13 @@ msgid "Administrator: read/write, Users: read/write, Others: read-only"
 msgstr "Administrator: read/write, Users: read/write, Others: read-only"
 
 msgid "Apt Clean"
-msgstr ""
+msgstr "Apt Clean"
 
 msgid "Architecture"
 msgstr "Architecture"
 
 msgid "BTSync"
-msgstr ""
+msgstr "BTSync"
 
 msgid "BTSync repository"
 msgstr "BTSync repository"
@@ -127,274 +127,286 @@ msgid "Beta"
 msgstr "Beta"
 
 msgid "Beta repository"
-msgstr ""
+msgstr "Beta repository"
 
 msgid "Checking for new updates ..."
-msgstr ""
+msgstr "Checking for new updates ..."
 
 msgid "Cleaning Apt Files and Lists..."
-msgstr ""
+msgstr "Cleaning Apt Files and Lists..."
 
 msgid "Clear ACLs"
-msgstr ""
+msgstr "Clear ACLs"
 
 msgid "Clear all ACLs."
-msgstr ""
+msgstr "Clear all ACLs."
 
 msgid "Command"
-msgstr ""
+msgstr "Command"
 
 msgid "Comment"
-msgstr ""
+msgstr "Comment"
 
 msgid "Custom Repos"
-msgstr ""
+msgstr "Custom Repos"
 
 msgid "Description"
-msgstr ""
+msgstr "Description"
 
 msgid "Developer"
-msgstr ""
+msgstr "Developer"
 
 msgid "Distribution"
-msgstr ""
+msgstr "Distribution"
 
 msgid ""
 "Do not enable this repository unless you are using the GlusterFS filesystem "
 "(uncommon)"
-msgstr ""
+msgstr "Do not enable this repository unless you are using the GlusterFS filesystem (uncommon)"
 
 msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
-msgstr ""
+msgstr "Do not enable this repository unless you are using the ZFS filesystem (uncommon)"
 
 msgid ""
 "Do not enable this testing repository unless you are using the ZFS "
 "filesystem (uncommon)"
+msgstr "Do not enable this testing repository unless you are using the ZFS filesystem (uncommon)"
+
+msgid "Docker"
+msgstr ""
+
+msgid "Docker Testing"
+msgstr ""
+
+msgid "Docker repository"
 msgstr ""
 
 msgid "Done..."
-msgstr ""
+msgstr "Done..."
 
 msgid "Download Managers"
-msgstr ""
+msgstr "Download Managers"
 
 msgid "Download Managers Testing"
-msgstr ""
+msgstr "Download Managers Testing"
 
 msgid "Download managers for newsgroups, torrents, usenet, and streaming"
-msgstr ""
+msgstr "Download managers for newsgroups, torrents, usenet, and streaming"
 
 msgid "Edit custom repo"
-msgstr ""
+msgstr "Edit custom repo"
 
 msgid "Enable"
-msgstr ""
+msgstr "Enable"
 
 msgid "Everyone: read/write"
-msgstr ""
+msgstr "Everyone: read/write"
 
 msgid "GlusterFS"
-msgstr ""
+msgstr "GlusterFS"
 
 msgid "Greyhole"
-msgstr ""
+msgstr "Greyhole"
 
 msgid "Greyhole repository"
-msgstr ""
+msgstr "Greyhole repository"
 
 msgid "HWRaid"
-msgstr ""
+msgstr "HWRaid"
 
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
 "still have the option to boot the standard kernel."
-msgstr ""
+msgstr "If the system does not boot using the backports kernel, the boot menu will still have the option to boot the standard kernel."
 
 msgid "Information"
-msgstr ""
+msgstr "Information"
 
 msgid "Install Backports 3.16 kernel"
-msgstr ""
+msgstr "Install Backports 3.16 kernel"
 
 msgid "Install Backports 3.16 kernel ..."
-msgstr ""
+msgstr "Install Backports 3.16 kernel ..."
 
 msgid "Install kernel headers"
-msgstr ""
+msgstr "Install kernel headers"
 
 msgid "Install kernel headers ..."
-msgstr ""
+msgstr "Install kernel headers ..."
 
 msgid "Installed Kernels"
-msgstr ""
+msgstr "Installed Kernels"
 
 msgid ""
 "Installing the backports kernel with not uninstall the standard kernel."
-msgstr ""
+msgstr "Installing the backports kernel with not uninstall the standard kernel."
 
 msgid "Kernel"
-msgstr ""
+msgstr "Kernel"
 
 msgid "Kernels"
-msgstr ""
+msgstr "Kernels"
 
 msgid "Key"
-msgstr ""
+msgstr "Key"
 
 msgid "Main package repository"
-msgstr ""
+msgstr "Main package repository"
 
 msgid "Modules"
-msgstr ""
+msgstr "Modules"
 
 msgid "Modules for different hardware raid controllers"
-msgstr ""
+msgstr "Modules for different hardware raid controllers"
 
 msgid "Mono"
-msgstr ""
+msgstr "Mono"
 
 msgid "Mono Testing"
-msgstr ""
+msgstr "Mono Testing"
 
 msgid "Mono and mono-project.com"
-msgstr ""
+msgstr "Mono and mono-project.com"
 
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 msgid "Notes"
-msgstr ""
+msgstr "Notes"
 
 msgid "OMV-Extras.org"
-msgstr ""
+msgstr "OMV-Extras.org"
 
 msgid "OMV-Extras.org Testing"
-msgstr ""
+msgstr "OMV-Extras.org Testing"
 
 msgid "PID"
-msgstr ""
+msgstr "PID"
 
 msgid "Permissions"
-msgstr ""
+msgstr "Permissions"
 
 msgid "Please select a shared folder."
-msgstr ""
+msgstr "Please select a shared folder."
 
 msgid "Plex"
-msgstr ""
+msgstr "Plex"
 
 msgid "Plex Media Server repository"
-msgstr ""
+msgstr "Plex Media Server repository"
 
 msgid "Plugins for setting up virtual private networks"
-msgstr ""
+msgstr "Plugins for setting up virtual private networks"
 
 msgid "Process List"
-msgstr ""
+msgstr "Process List"
 
 msgid "Release candidates"
-msgstr ""
+msgstr "Release candidates"
 
 msgid "Repo"
-msgstr ""
+msgstr "Repo"
 
 msgid "Repos"
-msgstr ""
+msgstr "Repos"
 
 msgid "Repository"
-msgstr ""
+msgstr "Repository"
 
 msgid "Reset Permissions"
-msgstr ""
+msgstr "Reset Permissions"
 
 msgid "Reset folders and files to this file mode."
-msgstr ""
+msgstr "Reset folders and files to this file mode."
 
 msgid "Reset permissions ..."
-msgstr ""
+msgstr "Reset permissions ..."
 
 msgid "Send"
-msgstr ""
+msgstr "Send"
 
 msgid "Send Support Info"
-msgstr ""
+msgstr "Send Support Info"
 
 msgid "Set as default boot kernel"
-msgstr ""
+msgstr "Set as default boot kernel"
 
 msgid "Setting boot kernel ..."
-msgstr ""
+msgstr "Setting boot kernel ..."
 
 msgid ""
 "Setting the wrong default boot kernel may cause the system to be "
 "inaccessible.  The boot menu will still be available to select a different "
 "kernel."
-msgstr ""
+msgstr "Setting the wrong default boot kernel may cause the system to be inaccessible.  The boot menu will still be available to select a different kernel."
 
 msgid "Shared Folder"
-msgstr ""
+msgstr "Shared Folder"
 
 msgid "State"
-msgstr ""
+msgstr "State"
 
 msgid "Style #1"
-msgstr ""
+msgstr "Style #1"
 
 msgid "Style #2"
-msgstr ""
+msgstr "Style #2"
 
 msgid "Support Info"
-msgstr ""
+msgstr "Support Info"
 
 msgid "Support Info Module Selection"
-msgstr ""
+msgstr "Support Info Module Selection"
 
 msgid "System - iface"
-msgstr ""
+msgstr "System - iface"
 
 msgid "System - mntent"
-msgstr ""
+msgstr "System - mntent"
 
 msgid "System - sharedfolder"
+msgstr "System - sharedfolder"
+
+msgid "Testing repository for Docker"
 msgstr ""
 
 msgid "Testing repository for Mono"
-msgstr ""
+msgstr "Testing repository for Mono"
 
 msgid "Testing repository for download managers"
-msgstr ""
+msgstr "Testing repository for download managers"
 
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 msgid "Update"
-msgstr ""
+msgstr "Update"
 
 msgid "User"
-msgstr ""
+msgstr "User"
 
 msgid "VDR"
-msgstr ""
+msgstr "VDR"
 
 msgid "VPN"
-msgstr ""
+msgstr "VPN"
 
 msgid "Version"
-msgstr ""
+msgstr "Version"
 
 msgid "Virtualbox"
-msgstr ""
+msgstr "Virtualbox"
 
 msgid "Virtualbox repository"
-msgstr ""
+msgstr "Virtualbox repository"
 
 msgid "ZFS"
-msgstr ""
+msgstr "ZFS"
 
 msgid "ZFS Testing"
-msgstr ""
+msgstr "ZFS Testing"
 
 msgid "e-tobi.net repository"
-msgstr ""
+msgstr "e-tobi.net repository"

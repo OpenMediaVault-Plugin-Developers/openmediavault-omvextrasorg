@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-07 17:31-0500\n"
-"PO-Revision-Date: 2015-04-07 22:31+0000\n"
+"POT-Creation-Date: 2015-04-29 21:30-0500\n"
+"PO-Revision-Date: 2015-04-30 02:30+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -173,6 +173,15 @@ msgid ""
 "Do not enable this testing repository unless you are using the ZFS "
 "filesystem (uncommon)"
 msgstr "Aktiver ikke dette test arkiv medmindre du bruger ZFS filsystemet (ikke almindeligt)"
+
+msgid "Docker"
+msgstr ""
+
+msgid "Docker Testing"
+msgstr ""
+
+msgid "Docker repository"
+msgstr ""
 
 msgid "Done..."
 msgstr "Færdig..."
@@ -359,6 +368,9 @@ msgstr "System - mntent"
 
 msgid "System - sharedfolder"
 msgstr "System - delt mappe"
+
+msgid "Testing repository for Docker"
+msgstr ""
 
 msgid "Testing repository for Mono"
 msgstr "Test aktiv til Mono"
