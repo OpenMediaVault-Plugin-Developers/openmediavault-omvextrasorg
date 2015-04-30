@@ -261,6 +261,25 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             );
         }
 
+        if ( $armel === false && $armhf === false )
+        {
+            $result[] = array(
+                "id"          => "docker",
+                "type"        => "Virtualization",
+                "enable"      => $object['docker'],
+                "repo"        => gettext("Docker"),
+                "description" => gettext("Docker repository")
+            );
+
+            $result[] = array(
+                "id"          => "dockertesting",
+                "type"        => "Virtualization",
+                "enable"      => $object['dockertesting'],
+                "repo"        => gettext("Docker Testing"),
+                "description" => gettext("Testing repository for Docker")
+            );
+        }
+
         $result[] = array(
             "id"          => "enable",
             "type"        => "All",
@@ -384,6 +403,9 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         if ( boolval($repos['monotesting']) === true )
             $repos['mono'] = true;
 
+        if ( boolval($repos['dockertesting']) === true )
+            $repos['docker'] = true;
+
         if ( boolval($repos['zfstesting']) === true )
             $repos['zfs'] = true;
 
@@ -422,6 +444,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "gluster"       => array_boolval($repos, 'gluster'),
             "mono"          => array_boolval($repos, 'mono'),
             "monotesting"   => array_boolval($repos, 'monotesting'),
+            "docker"        => array_boolval($repos, 'docker'),
+            "dockertesting" => array_boolval($repos, 'dockertesting'),
             "hwraid"        => array_boolval($repos, 'hwraid'),
             "beta"          => array_boolval($repos, 'beta'),
             "developer"     => $oldObject['developer'],
@@ -1047,6 +1071,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "gluster"       => array_boolval($oldObject, 'gluster'),
             "mono"          => array_boolval($oldObject, 'mono'),
             "monotesting"   => array_boolval($oldObject, 'monotesting'),
+            "docker"        => array_boolval($oldObject, 'docker'),
+            "dockertesting" => array_boolval($oldObject, 'dockertesting'),
             "hwraid"        => array_boolval($oldObject, 'hwraid'),
             "beta"          => array_boolval($oldObject, 'beta'),
             "repos"         => isset($oldObject['repos']) ? $oldObject['repos'] : array(),

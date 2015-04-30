@@ -80,6 +80,14 @@ case "$1" in
             omv_config_add_element "${SERVICE_XPATH}" "monotesting" "0"
         fi
 
+        if ! omv_config_exists "${SERVICE_XPATH}/docker"; then
+            omv_config_add_element "${SERVICE_XPATH}" "docker" "0"
+        fi
+
+        if ! omv_config_exists "${SERVICE_XPATH}/dockertesting"; then
+            omv_config_add_element "${SERVICE_XPATH}" "dockertesting" "0"
+        fi
+
         if ! omv_config_exists "${SERVICE_XPATH_MODULES}"; then
             omv_config_add_element "${SERVICE_XPATH}" "modules" ""
             omv_config_add_element "${SERVICE_XPATH_MODULES}" "debian-version" "1"
@@ -137,6 +145,7 @@ case "$1" in
             apt-key add ${KEYRING_LOCATION}xamarin.gpg
             apt-key add ${KEYRING_LOCATION}deluge.key
             apt-key add ${KEYRING_LOCATION}hwraid.le-vert.net.gpg.key
+            apt-key add ${KEYRING_LOCATION}docker.gpg
         fi
 
         chattr -i /etc/apt/sources.list

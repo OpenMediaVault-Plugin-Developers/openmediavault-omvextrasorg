@@ -293,6 +293,35 @@ Pin-Priority: 997
 EOF
     fi
 
+    # omv-extras docker
+    if [ "$(omv_config_get "${XPATH}docker")" = "1" ]; then
+        echo "# docker repo" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${REPO_URL} ${OMVVERSION}-docker main" >> ${OMVEXTRASREPOFILE}
+        echo "deb https://get.docker.com/ubuntu docker main" >> ${OMVEXTRASREPOFILE}
+        cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-docker, origin ${REPO_LOCATION}
+Pin-Priority: 996
+
+Package: *
+Pin: release o=get.docker.com
+Pin-Priority: 1001
+
+EOF
+    fi
+
+    # omv-extras docker testing
+    if [ "$(omv_config_get "${XPATH}dockertesting")" = "1" ]; then
+        echo "# docker testing repo" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${REPO_URL} ${OMVVERSION}-docker-testing main" >> ${OMVEXTRASREPOFILE}
+        cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-docker-testing, origin ${REPO_LOCATION}
+Pin-Priority: 997
+
+EOF
+    fi
+
     # omv-extras hwraid
     if [ "$(omv_config_get "${XPATH}hwraid")" = "1" ]; then
         echo "# hwraid repo" >> ${OMVEXTRASREPOFILE}
