@@ -5,20 +5,20 @@
 # Translators:
 # Alexander Savchenko, 2013
 # Alexander Savchenko, 2014-2015
-# артур Мудрых <arturmon82@gmail.com>, 2013
+# артур Мудрых <arturmon82@gmail.com>, 2013,2015
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-04-29 21:30-0500\n"
-"PO-Revision-Date: 2015-04-30 02:30+0000\n"
-"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
+"PO-Revision-Date: 2015-05-06 12:37+0000\n"
+"Last-Translator: артур Мудрых <arturmon82@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ru\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 msgid "% CPU"
 msgstr ""
@@ -96,22 +96,22 @@ msgid "61 lsmod"
 msgstr ""
 
 msgid "Add custom repo"
-msgstr ""
+msgstr "Добавить пользовательский репозиторий"
 
 msgid "Administrator: read/write, Users: no access, Others: no access"
-msgstr ""
+msgstr "Администратор: чтения / записи, Пользователи: нет доступа, Другие: нет доступа"
 
 msgid "Administrator: read/write, Users: read-only, Others: no access"
-msgstr ""
+msgstr "Администратор: не чтение / запись, Пользователи: только для чтения, Другие: нет доступа"
 
 msgid "Administrator: read/write, Users: read-only, Others: read-only"
-msgstr ""
+msgstr "Администратор: чтение / запись, Пользователи: только для чтения, Другие: только для чтения"
 
 msgid "Administrator: read/write, Users: read/write, Others: no access"
-msgstr ""
+msgstr "Администратор: чтения / записи, Пользователи: чтения / записи, Другие: нет доступа"
 
 msgid "Administrator: read/write, Users: read/write, Others: read-only"
-msgstr ""
+msgstr "Администратор: чтение / запись, Пользователи: чтение / запись, Другие: только для чтения"
 
 msgid "Apt Clean"
 msgstr "Очистить кеш пакетов APT"
@@ -123,25 +123,25 @@ msgid "BTSync"
 msgstr "BTSync"
 
 msgid "BTSync repository"
-msgstr ""
+msgstr "BTSync репозиторий"
 
 msgid "Beta"
 msgstr "Бета"
 
 msgid "Beta repository"
-msgstr ""
+msgstr "Бета хранилище"
 
 msgid "Checking for new updates ..."
-msgstr ""
+msgstr "Проверка обновлений ..."
 
 msgid "Cleaning Apt Files and Lists..."
 msgstr "Очистка Apt файлов и списков ..."
 
 msgid "Clear ACLs"
-msgstr ""
+msgstr "Очистить ACLs"
 
 msgid "Clear all ACLs."
-msgstr ""
+msgstr "Очистить все ACLs."
 
 msgid "Command"
 msgstr ""
@@ -150,7 +150,7 @@ msgid "Comment"
 msgstr "Комментарий"
 
 msgid "Custom Repos"
-msgstr ""
+msgstr "Пользовательские репозитории"
 
 msgid "Description"
 msgstr "Описание"
@@ -164,17 +164,17 @@ msgstr ""
 msgid ""
 "Do not enable this repository unless you are using the GlusterFS filesystem "
 "(uncommon)"
-msgstr ""
+msgstr "Не включайте этот репозиторий, если вы не используете файловую систему GlusterFS (редко)"
 
 msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
-msgstr ""
+msgstr "Не включайте этот репозиторий, если вы не используете файловую систему ZFS (редко)"
 
 msgid ""
 "Do not enable this testing repository unless you are using the ZFS "
 "filesystem (uncommon)"
-msgstr ""
+msgstr "Не включайте этот тестовый репозиторий, если вы не используете файловую систему ZFS (редко)"
 
 msgid "Docker"
 msgstr ""
@@ -186,13 +186,13 @@ msgid "Docker repository"
 msgstr ""
 
 msgid "Done..."
-msgstr ""
+msgstr "Готово..."
 
 msgid "Download Managers"
-msgstr ""
+msgstr "Менеджеры загрузок"
 
 msgid "Download Managers Testing"
-msgstr ""
+msgstr "Менеджеры загрузок тестовые"
 
 msgid "Download managers for newsgroups, torrents, usenet, and streaming"
 msgstr ""
@@ -204,19 +204,19 @@ msgid "Enable"
 msgstr "Включить"
 
 msgid "Everyone: read/write"
-msgstr ""
+msgstr "Все: чтение / запись"
 
 msgid "GlusterFS"
-msgstr ""
+msgstr "GlusterFS"
 
 msgid "Greyhole"
 msgstr "Greyhole"
 
 msgid "Greyhole repository"
-msgstr ""
+msgstr "Greyhole репозиторий"
 
 msgid "HWRaid"
-msgstr ""
+msgstr "HWRaid"
 
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
@@ -227,19 +227,19 @@ msgid "Information"
 msgstr "Информация"
 
 msgid "Install Backports 3.16 kernel"
-msgstr ""
+msgstr "Установить ядро Backports 3.16"
 
 msgid "Install Backports 3.16 kernel ..."
-msgstr ""
+msgstr "Устанавливается ядро 3.16 ..."
 
 msgid "Install kernel headers"
-msgstr ""
+msgstr "Устанавливаем заголовки ядра"
 
 msgid "Install kernel headers ..."
-msgstr ""
+msgstr "Устанавливаются заголовки ядра ..."
 
 msgid "Installed Kernels"
-msgstr ""
+msgstr "Установленные ядра"
 
 msgid ""
 "Installing the backports kernel with not uninstall the standard kernel."
@@ -249,49 +249,49 @@ msgid "Kernel"
 msgstr "Ядро"
 
 msgid "Kernels"
-msgstr ""
+msgstr "Ядра"
 
 msgid "Key"
-msgstr ""
+msgstr "Ключ"
 
 msgid "Main package repository"
-msgstr ""
+msgstr "Главный репозиторий пакетов"
 
 msgid "Modules"
-msgstr ""
+msgstr "Модули"
 
 msgid "Modules for different hardware raid controllers"
-msgstr ""
+msgstr "Модули для различных аппаратных контроллеров raid"
 
 msgid "Mono"
-msgstr ""
+msgstr "Mono"
 
 msgid "Mono Testing"
-msgstr ""
+msgstr "Mono тестовое"
 
 msgid "Mono and mono-project.com"
-msgstr ""
+msgstr "Mono и mono-project.com"
 
 msgid "Name"
 msgstr "Имя"
 
 msgid "Notes"
-msgstr ""
+msgstr "Примечание"
 
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
 
 msgid "OMV-Extras.org Testing"
-msgstr ""
+msgstr "OMV-Extras.org Тестовый"
 
 msgid "PID"
-msgstr ""
+msgstr "PID"
 
 msgid "Permissions"
-msgstr ""
+msgstr "Разрешения"
 
 msgid "Please select a shared folder."
-msgstr ""
+msgstr "Пожалуйста, выберите общую папку."
 
 msgid "Plex"
 msgstr "Plex"
@@ -300,13 +300,13 @@ msgid "Plex Media Server repository"
 msgstr ""
 
 msgid "Plugins for setting up virtual private networks"
-msgstr ""
+msgstr "Плагины для создания виртуальных частных сетей"
 
 msgid "Process List"
-msgstr ""
+msgstr "Список процессов"
 
 msgid "Release candidates"
-msgstr ""
+msgstr "Релиз кандидат"
 
 msgid "Repo"
 msgstr ""
@@ -324,16 +324,16 @@ msgid "Reset folders and files to this file mode."
 msgstr ""
 
 msgid "Reset permissions ..."
-msgstr ""
+msgstr "Сброс разрешений ..."
 
 msgid "Send"
-msgstr ""
+msgstr "Отправить"
 
 msgid "Send Support Info"
 msgstr ""
 
 msgid "Set as default boot kernel"
-msgstr ""
+msgstr "Установить как ядро загрузки по умолчанию"
 
 msgid "Setting boot kernel ..."
 msgstr ""
@@ -408,7 +408,7 @@ msgid "ZFS"
 msgstr "ZFS"
 
 msgid "ZFS Testing"
-msgstr ""
+msgstr "ZFS Тестовый"
 
 msgid "e-tobi.net repository"
 msgstr ""

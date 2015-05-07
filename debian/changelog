@@ -1,8 +1,9 @@
-openmediavault-omvextrasorg (1.19) UNRELEASED; urgency=low
+openmediavault-omvextrasorg (1.19) stable; urgency=low
 
   * Fix RPi arch detection
+  * Update locales
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 07 May 2015 06:47:49 -0500
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 07 May 2015 06:49:01 -0500
 
 openmediavault-omvextrasorg (1.18) stable; urgency=low
 
