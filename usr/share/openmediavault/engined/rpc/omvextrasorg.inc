@@ -161,29 +161,31 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         unset($object['resetperms']);
 
         // Get architecture
-        $armel = false;
-        $armhf = false;
-        $amd64 = false;
+        // arch values
+        // 0 - armel
+        // 1 - armv6l armhf
+        // 2 - armv7l armhf
+        // 3 - i386
+        // 4 - amd64
+        $arch = 0;
 
         $uname = php_uname();
 
-        if ( strpos($uname, "x86") === false &&
-             strpos($uname, "486") === false &&
-             strpos($uname, "686") === false &&
-             strpos($uname, "armv7l") === false &&
-             strpos($uname, "armv6l") === false)
+        if ( strpos($uname, "armv6l") !== false  )
         {
-            $armel = true;
+            $arch = 1;
         }
-
-        if ( strpos($uname, "armv7l") !== false || strpos($uname, "armv6l") !== false  )
+        elseif ( strpos($uname, "armv7l") !== false )
         {
-            $armhf = true;
+            $arch = 2;
         }
-
-        if ( strpos($uname, "amd64") !== false  )
+        elseif ( strpos($uname, "486") !== false || strpos($uname, "686") !== false )
         {
-            $amd64 = true;
+            $arch = 3;
+        }
+        elseif ( strpos($uname, "amd64") !== false  )
+        {
+            $arch = 4;
         }
 
         // Create repo array
@@ -197,7 +199,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "description" => gettext("BTSync repository")
         );
 
-        if ( $amd64 === true )
+        // must be amd64
+        if ( $arch > 3 )
         {
             $result[] = array(
                 "id"          => "gluster",
@@ -216,7 +219,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "description" => gettext("Greyhole repository")
         );
 
-        if ( $armel === false && $armhf === false )
+        // no arm arches
+        if ( $arch > 2 )
         {
             $result[] = array(
                 "id"          => "hwraid",
@@ -243,7 +247,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "description" => gettext("Testing repository for download managers")
         );
 
-        if ( $armel === false )
+        // no armel
+        if ( $arch > 0 )
         {
             $result[] = array(
                 "id"          => "mono",
@@ -262,7 +267,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             );
         }
 
-        if ( $armel === false && $armhf === false )
+        // no arm arches
+        if ( $arch > 2 )
         {
             $result[] = array(
                 "id"          => "docker",
@@ -297,7 +303,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "description" => gettext("Release candidates")
         );
 
-        if ( $armel === false )
+        // no armel or armv6l
+        if ( $arch > 1 )
         {
             $result[] = array(
                 "id"          => "plex",
@@ -319,7 +326,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             );
         }
 
-        if ( $armel === false )
+        // no armel
+        if ( $arch > 0 )
         {
             $result[] = array(
                 "id"          => "vdr",
@@ -338,7 +346,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             );
         }
 
-        if ( $amd64 === true )
+        // amd64 only
+        if ( $arch > 3 )
         {
             $result[] = array(
                 "id"          => "zfs",
