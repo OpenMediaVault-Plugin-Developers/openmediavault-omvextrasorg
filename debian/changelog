@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (1.20) stable; urgency=low
+
+  * Fix rpi arch detection again
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 07 May 2015 06:53:36 -0500
+
 openmediavault-omvextrasorg (1.19) stable; urgency=low
 
   * Fix RPi arch detection
