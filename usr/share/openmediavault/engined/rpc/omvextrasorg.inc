@@ -170,7 +170,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         if ( strpos($uname, "x86") === false &&
              strpos($uname, "486") === false &&
              strpos($uname, "686") === false &&
-             strpos($uname, "armv7l") === false)
+             strpos($uname, "armv7l") === false &&
+             strpos($uname, "armv6l") === false)
         {
             $armel = true;
         }
