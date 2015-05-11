@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (1.22) stable; urgency=low
+
+  * Fix arch detection typo
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 11 May 2015 09:14:10 -0500
+
 openmediavault-omvextrasorg (1.21) stable; urgency=low
 
   * Improve architecture detection

@@ -315,7 +315,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             );
         }
 
-        if ( $armel === false && $armhf === false )
+        // no arm arches
+        if ( $arch > 2 )
         {
             $result[] = array(
                 "id"          => "vbox",
