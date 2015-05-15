@@ -852,6 +852,11 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         }
 
         $styles[] = array(
+            "cmd"  => "degraded",
+            "name" => gettext("Degraded Array Info")
+        );
+
+        $styles[] = array(
             "cmd"  => "iface",
             "name" => gettext("System - iface")
         );
@@ -1228,7 +1233,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             $bgOutputFilename = $this->createBgProcOutput();
             $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
 
-            $cmd = sprintf("omv-mkconf %s %s 2>&1", $this->getPluginName(), $params['command'] );
+            $cmd = sprintf("export LANG=C; omv-mkconf %s %s 2>&1", $this->getPluginName(), $params['command'] );
             $this->exec($cmd, $output, $bgOutputFilename);
             $this->finalizeBgProcStatus($bgStatusFilename, $output);
 
@@ -1303,14 +1308,25 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
                 {
                     if ( boolval($object[$module["module_name"]]) === true )
                     {
-                        $path = sprintf("%s%s-%s", $this->getSysinfoModuleDir(), $module["section"], $module["module_name"]);
+                        $path = sprintf("export LANG=C; %s%s-%s", $this->getSysinfoModuleDir(), $module["section"], $module["module_name"]);
                         OMVUtil::exec($path, $result);
                     }
                 }
                 break;
 
             case "style2":
-                $cmd = sprintf("%s webgui", $this->getOmvSupport() );
+                $cmd = sprintf("export LANG=C; %s webgui", $this->getOmvSupport() );
+                OMVUtil::exec($cmd, $result);
+                break;
+
+            case "degraded":
+                $cmd = sprintf("export LANG=C; cat /proc/mdstat", $this->getOmvSupport() );
+                OMVUtil::exec($cmd, $result);
+
+                $cmd = sprintf("export LANG=C; blkid", $this->getOmvSupport() );
+                OMVUtil::exec($cmd, $result);
+
+                $cmd = sprintf("export LANG=C; fdisk -l", $this->getOmvSupport() );
                 OMVUtil::exec($cmd, $result);
                 break;
 
@@ -1332,7 +1348,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         );
 
         // Get ps output
-        $cmd = 'ps axww -o pid,user,%cpu,%mem,stat,args 2>&1';
+        $cmd = 'export LANG=C; ps axww -o pid,user,%cpu,%mem,stat,args 2>&1';
         OMVUtil::exec($cmd, $output, $result);
 
         if ($result !== 0)
@@ -1389,7 +1405,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             $bgOutputFilename = $this->createBgProcOutput();
             $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
 
-            $cmd = sprintf("omv-mkconf %s sendsupport 2>&1", $this->getPluginName() );
+            $cmd = sprintf("export LANG=C; omv-mkconf %s sendsupport 2>&1", $this->getPluginName() );
             $this->exec($cmd, $output, $bgOutputFilename);
             $this->finalizeBgProcStatus($bgStatusFilename, $output);
 
@@ -1486,7 +1502,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             $bgOutputFilename = $this->createBgProcOutput();
             $this->updateBgProcStatus($bgStatusFilename, "outputfilename", $bgOutputFilename);
 
-            $cmd = sprintf("omv-mkconf %s resetperms 2>&1", $this->getPluginName() );
+            $cmd = sprintf("export LANG=C; omv-mkconf %s resetperms 2>&1", $this->getPluginName() );
             $this->exec($cmd, $output, $bgOutputFilename);
             $this->finalizeBgProcStatus($bgStatusFilename, $output);
 

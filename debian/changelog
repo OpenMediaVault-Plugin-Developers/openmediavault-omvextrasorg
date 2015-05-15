@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (1.23) stable; urgency=low
+
+  * Add degraded option to supportinfo
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 15 May 2015 09:28:39 -0500
+
 openmediavault-omvextrasorg (1.22) stable; urgency=low
 
   * Fix arch detection typo
