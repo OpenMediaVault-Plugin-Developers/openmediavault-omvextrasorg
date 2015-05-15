@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-29 21:30-0500\n"
+"POT-Creation-Date: 2015-05-15 09:30-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -147,6 +147,9 @@ msgid "Comment"
 msgstr ""
 
 msgid "Custom Repos"
+msgstr ""
+
+msgid "Degraded Array Info"
 msgstr ""
 
 msgid "Description"
