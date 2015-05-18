@@ -173,6 +173,10 @@ EOF
         echo "# btsync repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${REPO_URL} ${OMVVERSION}-btsync main" >> ${OMVEXTRASREPOFILE}
         echo "deb http://debian.yeasoft.net/btsync14 ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+
+        echo "# syncthing repo" >> ${OMVEXTRASREPOFILE}
+        echo "deb http://apt.syncthing.net/ syncthing release" >> ${OMVEXTRASREPOFILE}
+
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-btsync, origin ${REPO_LOCATION}

@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (1.24) stable; urgency=low
+
+  * Add syncthing repo
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 18 May 2015 13:27:17 -0500
+
 openmediavault-omvextrasorg (1.23) stable; urgency=low
 
   * Add degraded option to supportinfo
