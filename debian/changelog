@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (1.25) stable; urgency=low
+
+  * Only add syncthing repo if amd64 or i386
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 22 May 2015 06:58:01 -0500
+
 openmediavault-omvextrasorg (1.24) stable; urgency=low
 
   * Add syncthing repo

@@ -30,6 +30,9 @@ RELEASE="wheezy"
 XPATH="//system/omvextrasorg/"
 XPATH_REPO="${XPATH}repos/repo"
 
+SKIP=false
+AMD64=false
+
 conf=$2
 
 update()
@@ -174,8 +177,12 @@ EOF
         echo "deb ${REPO_URL} ${OMVVERSION}-btsync main" >> ${OMVEXTRASREPOFILE}
         echo "deb http://debian.yeasoft.net/btsync14 ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
 
-        echo "# syncthing repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb http://apt.syncthing.net/ syncthing release" >> ${OMVEXTRASREPOFILE}
+        getArch
+
+        if ! $SKIP; then
+            echo "# syncthing repo" >> ${OMVEXTRASREPOFILE}
+            echo "deb http://apt.syncthing.net/ syncthing release" >> ${OMVEXTRASREPOFILE}
+        fi
 
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
@@ -425,24 +432,8 @@ backports()
     export DEBIAN_FRONTEND=noninteractive
 
     BACKPORTS_REPO="/etc/apt/sources.list.d/backports.list"
-    SKIP=false
-    AMD64=false
-    ARCH="`/bin/uname -m`"
 
-    case "$ARCH" in
-        *x86_64*)
-            AMD64=true
-        ;;
-        *486*)
-            AMD64=false
-        ;;
-        *686*)
-            AMD64=false
-        ;;
-        *)
-            SKIP=true
-        ;;
-    esac
+    getArch
 
     if $SKIP; then
         echo "Unsupported kernel and/or processor"
@@ -547,6 +538,26 @@ resetperms()
     # For all files that are inside that folder (recursively)
     echo "Change file permissions to ${fileperms} ..."
     find "${sfpath}" -type f -exec chmod "${fileperms}" {} +
+}
+
+getArch()
+{
+    ARCH="`/bin/uname -m`"
+
+    case "$ARCH" in
+        *x86_64*)
+            AMD64=true
+        ;;
+        *486*)
+            AMD64=false
+        ;;
+        *686*)
+            AMD64=false
+        ;;
+        *)
+            SKIP=true
+        ;;
+    esac
 }
 
 case $2 in
