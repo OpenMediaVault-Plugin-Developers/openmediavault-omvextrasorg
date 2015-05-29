@@ -147,6 +147,7 @@ case "$1" in
             apt-key add ${KEYRING_LOCATION}hwraid.le-vert.net.gpg.key
             apt-key add ${KEYRING_LOCATION}docker.gpg
             apt-key add ${KEYRING_LOCATION}syncthing.key
+            apt-key add ${KEYRING_LOCATION}spideroak-apt-2013.asc
         fi
 
         dpkg-trigger update-fixperms

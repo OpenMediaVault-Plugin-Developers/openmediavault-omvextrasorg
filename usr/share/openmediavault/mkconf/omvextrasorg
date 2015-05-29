@@ -182,6 +182,8 @@ EOF
         if ! $SKIP; then
             echo "# syncthing repo" >> ${OMVEXTRASREPOFILE}
             echo "deb http://apt.syncthing.net/ syncthing release" >> ${OMVEXTRASREPOFILE}
+            echo "# spideroak repo" >> ${OMVEXTRASREPOFILE}
+            echo "deb http://apt.spideroak.com/ubuntu-spideroak-hardy/ release restricted" >> ${OMVEXTRASREPOFILE}
         fi
 
         cat <<EOF >> ${OMVEXTRASAPTPREFS}

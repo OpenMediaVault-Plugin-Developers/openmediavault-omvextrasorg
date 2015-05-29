@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (1.26) stable; urgency=low
+
+  * Add spideroak repo
+  * Update locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 29 May 2015 08:12:30 -0500
+
 openmediavault-omvextrasorg (1.25) stable; urgency=low
 
   * Only add syncthing repo if amd64 or i386
