@@ -1,6 +1,6 @@
 openmediavault-omvextrasorg (1.27) stable; urgency=low
 
-  * Add new syncthing key
+  * Add armhf and armel to syncthing repo
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 01 Jun 2015 08:43:01 -0500
 

@@ -176,12 +176,12 @@ EOF
         echo "# btsync repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${REPO_URL} ${OMVVERSION}-btsync main" >> ${OMVEXTRASREPOFILE}
         echo "deb http://debian.yeasoft.net/btsync14 ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+        echo "# syncthing repo" >> ${OMVEXTRASREPOFILE}
+        echo "deb http://apt.syncthing.net/ syncthing release" >> ${OMVEXTRASREPOFILE}
 
         getArch
 
         if ! $SKIP; then
-            echo "# syncthing repo" >> ${OMVEXTRASREPOFILE}
-            echo "deb http://apt.syncthing.net/ syncthing release" >> ${OMVEXTRASREPOFILE}
             echo "# spideroak repo" >> ${OMVEXTRASREPOFILE}
             echo "deb http://apt.spideroak.com/ubuntu-spideroak-hardy/ release restricted" >> ${OMVEXTRASREPOFILE}
         fi
