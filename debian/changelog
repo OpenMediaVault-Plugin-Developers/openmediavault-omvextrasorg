@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (1.28) stable; urgency=low
+
+  * Remove unneeded key
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 02 Jun 2015 08:13:36 -0500
+
 openmediavault-omvextrasorg (1.27) stable; urgency=low
 
   * Add armhf and armel to syncthing repo
