@@ -6,15 +6,15 @@
 # David Hönel <davidh1990@gmx.de>, 2013-2015
 # Ettore Atalan <atalanttore@googlemail.com>, 2014-2015
 # René P. <phortexx@gmx.net>, 2014
-# WastlJ, 2014
+# WastlJ, 2014-2015
 # Stephan Steiner, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-15 09:30-0500\n"
-"PO-Revision-Date: 2015-05-25 14:16+0000\n"
-"Last-Translator: David Hönel <davidh1990@gmx.de>\n"
+"PO-Revision-Date: 2015-06-02 07:57+0000\n"
+"Last-Translator: WastlJ\n"
 "Language-Team: German (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -226,16 +226,16 @@ msgstr "HWRaid"
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
 "still have the option to boot the standard kernel."
-msgstr "Wenn das System unter Verwendung des Rückportierungskernel nicht startet, wird im Boot-Menü die Option zum Starten des Standardkernels zur Verfügung stehen."
+msgstr "Wenn das System unter Verwendung des Backports-Kernels nicht startet, wird im Boot-Menü die Option zum Starten des Standardkernels zur Verfügung stehen."
 
 msgid "Information"
 msgstr "Information"
 
 msgid "Install Backports 3.16 kernel"
-msgstr "Rückportierungskernel 3.16 installieren"
+msgstr "Backports-Kernel 3.16 installieren"
 
 msgid "Install Backports 3.16 kernel ..."
-msgstr "Rückportierungskernel 3.16 installieren ..."
+msgstr "Installiere Backports-Kernel 3.16 ..."
 
 msgid "Install kernel headers"
 msgstr "Kernel-Kopfzeilen installieren"
@@ -248,7 +248,7 @@ msgstr "Installierte Kernel"
 
 msgid ""
 "Installing the backports kernel with not uninstall the standard kernel."
-msgstr "Die Installation des Rückportierungskernel wird den Standardkernel nicht deinstallieren."
+msgstr "Die Installation des Backports-Kernels wird den Standardkernel nicht deinstallieren."
 
 msgid "Kernel"
 msgstr "Kernel"
