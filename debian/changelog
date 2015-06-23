@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (1.29) stable; urgency=low
+
+  * Update backports repo file when it exists
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 23 Jun 2015 06:11:54 -0500
+
 openmediavault-omvextrasorg (1.28) stable; urgency=low
 
   * Remove unneeded key

@@ -24,6 +24,8 @@ set -e
 . /etc/default/openmediavault
 . /usr/share/openmediavault/scripts/helper-functions
 
+BACKPORTS_REPO="/etc/apt/sources.list.d/backports.list"
+
 OMVVERSION=$(xmlstarlet sel -t -v "//distribution" ${OMV_PRODUCTINFO_FILE} | xmlstarlet unesc)
 RELEASE="wheezy"
 
@@ -378,6 +380,10 @@ EOF
 
         index=$(( ${index} + 1 ))
     done
+
+    if [ -f "${BACKPORTS_REPO}" ]; then
+        createBackportsFile
+    fi
 }
 
 aptclean()
@@ -433,19 +439,12 @@ backports()
     export LANG=C
     export DEBIAN_FRONTEND=noninteractive
 
-    BACKPORTS_REPO="/etc/apt/sources.list.d/backports.list"
-
     getArch
 
     if $SKIP; then
         echo "Unsupported kernel and/or processor"
     else
-        if [ "${RELEASE}" = "squeeze" ]; then
-            echo "deb http://backports.debian.org/debian-backports squeeze-backports main non-free" > $BACKPORTS_REPO
-        else
-            echo "deb http://ftp.debian.org/debian ${RELEASE}-backports main contrib non-free" > $BACKPORTS_REPO
-        fi
-        echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-backports main" >> $BACKPORTS_REPO
+        createBackportsFile
 
         echo "Updating..."
         apt-get --quiet update > /dev/null 2>&1
@@ -464,6 +463,16 @@ backports()
         echo "..."
         echo "Please reboot to use new kernel"
     fi
+}
+
+createBackportsFile()
+{
+    if [ "${RELEASE}" = "squeeze" ]; then
+        echo "deb http://backports.debian.org/debian-backports squeeze-backports main non-free" > $BACKPORTS_REPO
+    else
+        echo "deb http://ftp.debian.org/debian ${RELEASE}-backports main contrib non-free" > $BACKPORTS_REPO
+    fi
+    echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-backports main" >> $BACKPORTS_REPO
 }
 
 headers()
