@@ -1,6 +1,7 @@
 openmediavault-omvextrasorg (1.30) stable; urgency=low
 
   * Add sources.list update to apt clean
+  * Update locales
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 19 Jul 2015 08:10:08 -0500
 
