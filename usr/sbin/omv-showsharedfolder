@@ -22,15 +22,15 @@ if [ -z "${uuid}" ]; then
 fi
 
 # Search for uuid in all elements
-elements=$(grep ${uuid} ${OMV_CONFIG_FILE} | awk -F'[<>]' '{print $2}')
+elements=$(grep ${uuid} ${OMV_CONFIG_FILE} | awk -F'[<>]' '{print $2}' | uniq)
 
-echo "Shared folder found in:"
+show=""
 
 # Check all elements for uuid
 for element in $elements; do
 
   # Get list of all elements with element in location
-  elementlist=$(xmlstarlet el -u /etc/openmediavault/config.xml | grep ${element})
+  elementlist=$(xmlstarlet el -u /etc/openmediavault/config.xml | grep ${element} | uniq)
 
   # check all locations for uuid
   for searchelement in $elementlist; do
@@ -41,11 +41,20 @@ for element in $elements; do
     # search for uuid in config file using location
     plugin=$(xmlstarlet sel -t -m "/${parent}[${element}='${uuid}']" -v "${element}" ${OMV_CONFIG_FILE})
 
-    # if found then display
+    # if found then add to display
     if [ -n "${plugin}" ]; then
-      echo "${parent}"
+      show="${show}${parent} "
     fi
   done
+done
+
+# Display unique results
+unique=$(echo "${show}" | tr ' ' '\n' | sort -u)
+
+for output in $unique; do
+  if [ -n "${output}" ]; then
+    echo ${output}
+  fi
 done
 
 exit 0

@@ -133,6 +133,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $this->registerMethod("doSend");
 
         $this->registerMethod("doResetPerms");
+        $this->registerMethod("getSharedFolderInUseList");
     }
 
     public function getRepo($params, $context)
@@ -1511,6 +1512,51 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             exit(1);
         }
     }
+
+    public function getSharedFolderInUseList($params, $context)
+    {
+        global $xmlConfig;
+    
+        // Validate the RPC caller context.
+        $this->validateMethodContext(
+            $context,
+            array( "role" => OMV_ROLE_ADMINISTRATOR )
+        );
+
+        // Validate the parameters of the RPC service method.
+        $this->validateMethodParams($params, '{
+            "type"       : "object",
+            "properties" : {
+                "start"     : { "type" : "integer" },
+                "limit"     : { '.$GLOBALS['OMV_JSONSCHEMA_COUNTFIELD'].' },
+                "sortfield" : { '.$GLOBALS['OMV_JSONSCHEMA_SORTFIELD'].' },
+                "sortdir"   : { '.$GLOBALS['OMV_JSONSCHEMA_SORTDIR'].' }
+            }
+        }');
+
+        // Get all configured shared folder configuration objects.
+        $xPath = "//system/shares/sharedfolder";
+        $objects = $xmlConfig->getList($xPath);
+        if (is_null($objects)) {
+            throw new OMVException(
+                OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
+                $xPath
+            );
+        }
+
+        // Add additional informations.
+        foreach ($objects as $objectk => &$objectv) {
+            $output = array();
+            $cmd = sprintf("omv-showsharedfolder %s", $objectv['name']);
+            OMVUtil::exec($cmd, $output, $result);
+            $objectv['inuse'] = implode("<br />", $output);
+        }
+
+        // Filter the result.
+        return $this->applyFilter($objects, $params['start'], $params['limit'],
+            $params['sortfield'], $params['sortdir']);
+    }
+
 }
 
 // Register the RPC service.

@@ -1,8 +1,9 @@
-openmediavault-omvextrasorg (1.31) UNRELEASED; urgency=low
+openmediavault-omvextrasorg (1.31) stable; urgency=low
 
   * Add omv-showsharedfolder utility
+  * Update locales
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 28 Jul 2015 10:31:05 -0500
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 28 Jul 2015 11:41:23 -0500
 
 openmediavault-omvextrasorg (1.30) stable; urgency=low
 
