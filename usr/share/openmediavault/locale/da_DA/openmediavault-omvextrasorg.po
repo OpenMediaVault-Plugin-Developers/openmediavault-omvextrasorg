@@ -8,10 +8,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-15 09:30-0500\n"
-"PO-Revision-Date: 2015-05-23 20:52+0000\n"
-"Last-Translator: Stefan Thrane Overby <stoverby@gmail.com>\n"
-"Language-Team: Danish (http://www.transifex.com/p/openmediavault-omvextrasorg/language/da/)\n"
+"POT-Creation-Date: 2015-07-28 11:42-0500\n"
+"PO-Revision-Date: 2015-07-28 16:42+0000\n"
+"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
+"Language-Team: Danish (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -224,6 +224,9 @@ msgid ""
 "still have the option to boot the standard kernel."
 msgstr "Hvis systemet ikke kan boote ved brug af backports kernen, vil boot menuen stadig have mulighed for at boote standard kernen."
 
+msgid "In Use By"
+msgstr ""
+
 msgid "Information"
 msgstr "Oplysninger"
 
@@ -347,6 +350,9 @@ msgstr "Indstilling af forkert standard boot kerne kan gøre systemet utilgænge
 
 msgid "Shared Folder"
 msgstr "Delt Mappe"
+
+msgid "Shared Folder In Use"
+msgstr ""
 
 msgid "State"
 msgstr "Tilstand"

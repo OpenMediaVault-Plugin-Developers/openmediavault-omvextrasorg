@@ -8,10 +8,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-15 09:30-0500\n"
-"PO-Revision-Date: 2015-05-15 14:30+0000\n"
+"POT-Creation-Date: 2015-07-28 11:42-0500\n"
+"PO-Revision-Date: 2015-07-28 16:42+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
-"Language-Team: Chinese (Taiwan) (http://www.transifex.com/p/openmediavault-omvextrasorg/language/zh_TW/)\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/openmediavault-omvextrasorg/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -151,7 +151,7 @@ msgid "Custom Repos"
 msgstr "客製套件庫"
 
 msgid "Degraded Array Info"
-msgstr ""
+msgstr "降級陣列資訊"
 
 msgid "Description"
 msgstr "敘述"
@@ -178,13 +178,13 @@ msgid ""
 msgstr "不要啟用此測試套件庫，除非您在使用 ZFS 檔案系統 (不常用)"
 
 msgid "Docker"
-msgstr ""
+msgstr "Docker"
 
 msgid "Docker Testing"
-msgstr ""
+msgstr "Docker 測試"
 
 msgid "Docker repository"
-msgstr ""
+msgstr "Docker 套件庫"
 
 msgid "Done..."
 msgstr "完成 ..."
@@ -223,6 +223,9 @@ msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
 "still have the option to boot the standard kernel."
 msgstr "如果系統無法使用向後移植(backports)核心啟動，啟動選單仍會有選項可啟動標準核心。"
+
+msgid "In Use By"
+msgstr ""
 
 msgid "Information"
 msgstr "資訊"
@@ -348,6 +351,9 @@ msgstr "設定錯誤的啟動核心可能造成系統無法取用。啟動選單
 msgid "Shared Folder"
 msgstr "共享檔案夾"
 
+msgid "Shared Folder In Use"
+msgstr ""
+
 msgid "State"
 msgstr "狀態"
 
@@ -373,7 +379,7 @@ msgid "System - sharedfolder"
 msgstr "系統 - sharedfolder"
 
 msgid "Testing repository for Docker"
-msgstr ""
+msgstr "Docker 的測試套件庫"
 
 msgid "Testing repository for Mono"
 msgstr "Mono 的測試套件庫"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-15 09:30-0500\n"
+"POT-Creation-Date: 2015-07-28 11:42-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -215,6 +215,9 @@ msgstr ""
 msgid "If the system does not boot using the backports kernel, the boot menu will still have the option to boot the standard kernel."
 msgstr ""
 
+msgid "In Use By"
+msgstr ""
+
 msgid "Information"
 msgstr ""
 
@@ -333,6 +336,9 @@ msgid "Setting the wrong default boot kernel may cause the system to be inaccess
 msgstr ""
 
 msgid "Shared Folder"
+msgstr ""
+
+msgid "Shared Folder In Use"
 msgstr ""
 
 msgid "State"
