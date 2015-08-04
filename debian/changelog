@@ -1,8 +1,9 @@
-openmediavault-omvextrasorg (1.32) UNRELEASED; urgency=low
+openmediavault-omvextrasorg (1.32) stable; urgency=low
 
   * Move apt clean function to separate file and create omv-aptclean
+  * Update locales
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 04 Aug 2015 07:30:05 -0500
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 04 Aug 2015 07:35:43 -0500
 
 openmediavault-omvextrasorg (1.31) stable; urgency=low
 
