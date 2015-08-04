@@ -386,32 +386,6 @@ EOF
     fi
 }
 
-aptclean()
-{
-    export LANG=C
-
-    echo "1. Cleaning apt cache files..."
-    /usr/bin/apt-get clean
-
-    echo "\n2. Clearing available dpkg packages..."
-    dpkg --clear-avail
-
-    echo "\n3. Removing apt lists..."
-    rm -rfv /var/lib/apt/lists/*
-
-    echo "\n4. Purging internal cache ..."
-    omv_purge_internal_cache
-
-    echo "\n5. Removing OpenMediaVault cache packages..."
-    rm -fv /var/cache/openmediavault/archives/*
-
-    echo "\n6. Creating new OpenMediaVault packages file..."
-    touch /var/cache/openmediavault/archives/Packages
-
-    echo "\n7. Updating apt..."
-    /usr/bin/apt-get update
-}
-
 systemd()
 {
     export LANG=C
@@ -581,7 +555,7 @@ case $2 in
 
     aptclean)
         update
-        aptclean
+        /usr/sbin/omv-aptclean
     ;;
 
     installsystemd)
