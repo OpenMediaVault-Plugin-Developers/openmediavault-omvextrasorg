@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-28 11:42-0500\n"
-"PO-Revision-Date: 2015-07-31 18:58+0000\n"
+"PO-Revision-Date: 2015-08-14 17:56+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -38,61 +38,61 @@ msgid "10 Hostname"
 msgstr "10 název stroje"
 
 msgid "10 Locale"
-msgstr "10 místní jazykové nastavení"
+msgstr "10 místní a jazyková nastavení"
 
 msgid "10 Uptime"
 msgstr "10 doba chodu"
 
 msgid "10 uname"
-msgstr ""
+msgstr "10 systém (uname)"
 
 msgid "20 Interfaces"
 msgstr "20 sítová rozhraní"
 
 msgid "20 Route"
-msgstr "20 trasa"
+msgstr "20 směrování"
 
 msgid "20 iptables"
-msgstr ""
+msgstr "20 pravidla brány firewall"
 
 msgid "20 netstat"
-msgstr ""
+msgstr "20 síť. spojení (netstat)"
 
 msgid "30 mdadm"
-msgstr ""
+msgstr "30 sw raid (mdadm)"
 
 msgid "30 monit"
-msgstr ""
+msgstr "30 stav služeb (monit)"
 
 msgid "31 hpraid"
 msgstr ""
 
 msgid "40 Mount Info"
-msgstr "40 informace o přípojných bodech"
+msgstr "40 připojené soubor. systémy"
 
 msgid "40 Partitions"
-msgstr "40 oddíly"
+msgstr "40 oddíly dat. úložišť"
 
 msgid "40 blkid"
-msgstr ""
+msgstr "40 bloková zař. (blkid)"
 
 msgid "40 df"
-msgstr ""
+msgstr "40 využití disků"
 
 msgid "40 fstab"
-msgstr ""
+msgstr "40 přípojné body (fstab)"
 
 msgid "50 OMV Plugins"
 msgstr "50 zásuvné moduly pro OMV"
 
 msgid "50 apt sources"
-msgstr "50 apt zdroje"
+msgstr "50 zdroje balíčků (apt)"
 
 msgid "50 dpkg"
-msgstr ""
+msgstr "50 správa balíčků (dpkg)"
 
 msgid "61 lsmod"
-msgstr "61 seznam zavedených modulů (lsmod)"
+msgstr "61 používané moduly jádra (lsmod)"
 
 msgid "Add custom repo"
 msgstr "Přidat vlastní repozitář"
@@ -113,28 +113,28 @@ msgid "Administrator: read/write, Users: read/write, Others: read-only"
 msgstr "Správce: číst/zapisovat, uživatelé: číst/zapisovat, ostatní: pouze číst"
 
 msgid "Apt Clean"
-msgstr "Apt Clean"
+msgstr "Vyčistit mezipaměť balíčků"
 
 msgid "Architecture"
 msgstr "Architektura"
 
 msgid "BTSync"
-msgstr "BTSync"
+msgstr ""
 
 msgid "BTSync repository"
-msgstr "Repozitář s BTSync"
+msgstr "Nástroj BTSync pro decentralizovanou synchronizaci souborů mezi zařízeními"
 
 msgid "Beta"
-msgstr "Beta"
+msgstr "Vývojové (beta)"
 
 msgid "Beta repository"
-msgstr "Repozitář s vývojovými verzemi (beta)"
+msgstr "Vývojové (beta) verze"
 
 msgid "Checking for new updates ..."
-msgstr "Kontrola dostupnosti aktualizací …"
+msgstr "Kontrola dostupnosti aktualizací…"
 
 msgid "Cleaning Apt Files and Lists..."
-msgstr "Čistím Apt soubory a seznamy..."
+msgstr "Čistění souborů a seznamů Apt…"
 
 msgid "Clear ACLs"
 msgstr "Smazat seznamy řízení přístupu (ACL)"
@@ -161,22 +161,22 @@ msgid "Developer"
 msgstr "Vývojář"
 
 msgid "Distribution"
-msgstr "Distribuce"
+msgstr "Vydání"
 
 msgid ""
 "Do not enable this repository unless you are using the GlusterFS filesystem "
 "(uncommon)"
-msgstr "Tento repozitář nezapínejte, pokud nepoužíváte souborový systém GlusterFS (není běžné)"
+msgstr "Součásti pro podporu souborového systému GlusterFS (nepříliš obvyklý) – používejte pouze v případě, že GlusterFS opravdu provozujete"
 
 msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
-msgstr "Tento repozitář nezapínejte, pokud nepoužíváte souborový systém ZFS (není běžné)"
+msgstr "Součásti pro podporu souborového systému ZFS (nepříliš obvyklý) – používejte pouze v případě, že ZFS opravdu provozujete"
 
 msgid ""
 "Do not enable this testing repository unless you are using the ZFS "
 "filesystem (uncommon)"
-msgstr "Tento testovací repozitář nezapínejte, pokud nepoužíváte souborový systém ZFS (není běžné)"
+msgstr "Vývojové verze součástí pro podporu souborového systému ZFS (nepříliš obvyklý) – používejte pouze v případě, že ZFS opravdu provozujete"
 
 msgid "Docker"
 msgstr ""
@@ -185,7 +185,7 @@ msgid "Docker Testing"
 msgstr "Docker – testovací"
 
 msgid "Docker repository"
-msgstr "Repozitář s Docker"
+msgstr "Platforma aplikačních kontejnerů Docker"
 
 msgid "Done..."
 msgstr "Hotovo…"
@@ -197,13 +197,13 @@ msgid "Download Managers Testing"
 msgstr "Správci stahování – testovací"
 
 msgid "Download managers for newsgroups, torrents, usenet, and streaming"
-msgstr "Správci stahování pro newsgroup, torrenty, usenet a proudová média"
+msgstr "Nástroje pro stahování z newsgroup, torrent, usenet a proudových médií"
 
 msgid "Edit custom repo"
 msgstr "Upravit vlastní repozitář"
 
 msgid "Enable"
-msgstr "Zapnout"
+msgstr "Používat"
 
 msgid "Everyone: read/write"
 msgstr "Všichni: číst/zapisovat"
@@ -212,18 +212,18 @@ msgid "GlusterFS"
 msgstr ""
 
 msgid "Greyhole"
-msgstr "Greyhole"
+msgstr ""
 
 msgid "Greyhole repository"
-msgstr "Repozitář Greyhole"
+msgstr "Systém distribuovaného ukládání souborů Greyhole"
 
 msgid "HWRaid"
-msgstr ""
+msgstr "Hardware RAID"
 
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
 "still have the option to boot the standard kernel."
-msgstr "V případě, že systém nebude schopen startu zpětně přeneseného jádra, nabídka zavádění pořád bude mít možnost spuštění standardního jádra."
+msgstr "Pro případ, že systém nebude schopen startu s jádrem z novější verze, v nabídce zavádění stále bude možnost použití standardního jádra."
 
 msgid "In Use By"
 msgstr "Používáno"
@@ -232,23 +232,23 @@ msgid "Information"
 msgstr "Informace"
 
 msgid "Install Backports 3.16 kernel"
-msgstr "Nainstalovat zpětně přenesené jádro systému verze 3.16"
+msgstr "Nainstalovat jádro 3.16, přenesené z novější verze systému"
 
 msgid "Install Backports 3.16 kernel ..."
-msgstr "Instalace zpětně přeneseného jádra systému verze 3.16 …"
+msgstr "Instalace jádra 3.16, přeneseného z novější verze systému…"
 
 msgid "Install kernel headers"
 msgstr "Nainstalovat hlavičkové soubory k jádru"
 
 msgid "Install kernel headers ..."
-msgstr "Instalace hlavičkových souborů k jádru …"
+msgstr "Instalace hlavičkových souborů k jádru…"
 
 msgid "Installed Kernels"
-msgstr "Nainstalovaná jádra operačního systému"
+msgstr "Nainstalovaná jádra operačního systému:"
 
 msgid ""
 "Installing the backports kernel with not uninstall the standard kernel."
-msgstr "Instalace zpětně přeneseného jádra nepovede k odebrání toho standardního."
+msgstr "Instalace jádra, přeneseného z novější verze systému, nepovede k odebrání toho standardního."
 
 msgid "Kernel"
 msgstr "Jádro"
@@ -257,16 +257,16 @@ msgid "Kernels"
 msgstr "Jádra"
 
 msgid "Key"
-msgstr "Klíč"
+msgstr "Podpisový klíč balíčků:"
 
 msgid "Main package repository"
-msgstr "Hlavní repozitář balíčku"
+msgstr "Hlavní balíčky"
 
 msgid "Modules"
 msgstr "Moduly"
 
 msgid "Modules for different hardware raid controllers"
-msgstr "Moduly pro nejrůznější hardwarové řadiče RAID polí"
+msgstr "Ovladače pro nejrůznější hardwarové řadiče RAID polí"
 
 msgid "Mono"
 msgstr ""
@@ -275,7 +275,7 @@ msgid "Mono Testing"
 msgstr "Mono – testovací"
 
 msgid "Mono and mono-project.com"
-msgstr "Mono a mono-project.com"
+msgstr "Běhové/vývojové prostředí Mono (mono-project.com)"
 
 msgid "Name"
 msgstr "Název"
@@ -302,7 +302,7 @@ msgid "Plex"
 msgstr ""
 
 msgid "Plex Media Server repository"
-msgstr "Repozitář s Plex Media Server"
+msgstr "Multimediální centrum Plex Media Server"
 
 msgid "Plugins for setting up virtual private networks"
 msgstr "Zásuvné moduly pro nastavení virtuálních soukromých sítí (VPN)"
@@ -311,10 +311,10 @@ msgid "Process List"
 msgstr "Seznam procesů"
 
 msgid "Release candidates"
-msgstr "Testovací verze"
+msgstr "Verze pro testování před vydáním"
 
 msgid "Repo"
-msgstr "Repozitář"
+msgstr "URL adresa repozitáře"
 
 msgid "Repos"
 msgstr "Repozitáře"
@@ -329,25 +329,25 @@ msgid "Reset folders and files to this file mode."
 msgstr "Vrátit režim přístupu (mode) souborů a složek na tento."
 
 msgid "Reset permissions ..."
-msgstr "Vrátit přístupová oprávnění na výchozí hodnoty …"
+msgstr "Vrátit přístupová oprávnění na výchozí hodnoty…"
 
 msgid "Send"
 msgstr "Odeslat"
 
 msgid "Send Support Info"
-msgstr "Odeslat informace pro technickou podporu"
+msgstr "Odeslat informace pro podporu"
 
 msgid "Set as default boot kernel"
 msgstr "Nastavit jako výchozí jádro k zavádění"
 
 msgid "Setting boot kernel ..."
-msgstr "Nastavení jádra k zavádění …"
+msgstr "Nastavení jádra k zavádění…"
 
 msgid ""
 "Setting the wrong default boot kernel may cause the system to be "
 "inaccessible.  The boot menu will still be available to select a different "
 "kernel."
-msgstr "Nastavení nefungujího výchozího jádra může způsobit nedostupnost systému. V nabídce zavádění bude stále možné zvolit jiné jádro."
+msgstr "Nastavení nefungujícího výchozího jádra může způsobit nedostupnost systému. V nabídce zavaděče bude ovšem stále možné zvolit jiné jádro."
 
 msgid "Shared Folder"
 msgstr "Sdílená složka"
@@ -365,28 +365,28 @@ msgid "Style #2"
 msgstr "Styl č. 2"
 
 msgid "Support Info"
-msgstr "Informace pro podporu"
+msgstr "Informace pro technickou podporu"
 
 msgid "Support Info Module Selection"
-msgstr "Sekce Moduly informací pro podporu"
+msgstr "Výběr oblastí informací pro podporu"
 
 msgid "System - iface"
-msgstr ""
+msgstr "Systém – síťová rozhraní"
 
 msgid "System - mntent"
-msgstr ""
+msgstr "Systém – položka připojování (mntent)"
 
 msgid "System - sharedfolder"
 msgstr "Systém – sdílená složka"
 
 msgid "Testing repository for Docker"
-msgstr "Testovací repozitář pro nástroj Docker"
+msgstr "Vývojové verze platformy Docker"
 
 msgid "Testing repository for Mono"
-msgstr "Testovací repozitář pro běhové prostředí Mono"
+msgstr "Vývojové verze prostředí Mono"
 
 msgid "Testing repository for download managers"
-msgstr "Testovací repozitář pro správce stahování"
+msgstr "Vývojové verze nástrojů pro stahování"
 
 msgid "Type"
 msgstr "Typ"
@@ -398,7 +398,7 @@ msgid "User"
 msgstr "Uživatel"
 
 msgid "VDR"
-msgstr "VRD"
+msgstr ""
 
 msgid "VPN"
 msgstr ""
@@ -407,10 +407,10 @@ msgid "Version"
 msgstr "Verze"
 
 msgid "Virtualbox"
-msgstr "Virtualbox"
+msgstr ""
 
 msgid "Virtualbox repository"
-msgstr "Repozitář s Virtualbox"
+msgstr "Virtualizační platforma Virtualbox"
 
 msgid "ZFS"
 msgstr ""
@@ -419,4 +419,4 @@ msgid "ZFS Testing"
 msgstr "ZFS – testovací"
 
 msgid "e-tobi.net repository"
-msgstr "repozitář e-tobi.net"
+msgstr "Aplikace pro nahrávání televizního vysílání na počítač"
