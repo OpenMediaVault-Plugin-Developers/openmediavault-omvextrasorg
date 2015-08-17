@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (1.33) stable; urgency=low
+
+  * Change docker repo to debian specific repo
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 17 Aug 2015 14:59:38 -0500
+
 openmediavault-omvextrasorg (1.32) stable; urgency=low
 
   * Move apt clean function to separate file and create omv-aptclean

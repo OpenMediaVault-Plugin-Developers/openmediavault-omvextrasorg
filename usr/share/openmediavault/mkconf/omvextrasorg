@@ -53,6 +53,7 @@ update()
     DH2K_REPO_URL="http://${DH2K_REPO_LOCATION}/debian/"
 
     KEYSERVER="hkp://keyserver.ubuntu.com:80"
+    KEYSERVER2="hkp://p80.pool.sks-keyservers.net:80"
 
     /bin/rm -f ${OMVEXTRASREPOFILE}
     /bin/rm -f ${OMVEXTRASCUSTOMREPOFILE}
@@ -310,16 +311,17 @@ EOF
 
     # omv-extras docker
     if [ "$(omv_config_get "${XPATH}docker")" = "1" ]; then
+        apt-key adv --keyserver ${KEYSERVER2} --recv-keys "58118E89F3A912897C070ADBF76221572C52609D"
         echo "# docker repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${REPO_URL} ${OMVVERSION}-docker main" >> ${OMVEXTRASREPOFILE}
-        echo "deb https://get.docker.com/ubuntu docker main" >> ${OMVEXTRASREPOFILE}
+        echo "deb https://apt.dockerproject.org/repo debian-${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-docker, origin ${REPO_LOCATION}
 Pin-Priority: 996
 
 Package: *
-Pin: release o=get.docker.com
+Pin: release o=apt.dockerproject.org
 Pin-Priority: 1001
 
 EOF
