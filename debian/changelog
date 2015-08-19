@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (1.34) stable; urgency=low
+
+  * Change backports 486 kernel to 586
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 19 Aug 2015 16:59:59 -0500
+
 openmediavault-omvextrasorg (1.33) stable; urgency=low
 
   * Change docker repo to debian specific repo

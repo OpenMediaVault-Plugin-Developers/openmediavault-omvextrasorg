@@ -432,7 +432,7 @@ backports()
                 if $AMD64; then
                     apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.16.0-0.bpo.4-amd64 linux-headers-3.16.0-0.bpo.4-amd64 firmware-linux firmware-linux-free
                 else
-                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.16.0-0.bpo.4-486 linux-headers-3.16.0-0.bpo.4-486 firmware-linux firmware-linux-free
+                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.16.0-0.bpo.4-586 linux-headers-3.16.0-0.bpo.4-586 firmware-linux firmware-linux-free
                 fi
                 ;;
         esac
@@ -536,6 +536,9 @@ getArch()
             AMD64=true
         ;;
         *486*)
+            AMD64=false
+        ;;
+        *586*)
             AMD64=false
         ;;
         *686*)
