@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (2.0) stable; urgency=low
+
+  * Change dependency to OMV 2
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 30 Aug 2015 08:58:47 -0500
+
 openmediavault-omvextrasorg (1.35) stable; urgency=low
 
   * Add rootfolderbrowser for other plugins to share
