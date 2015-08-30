@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-28 11:42-0500\n"
-"PO-Revision-Date: 2015-07-28 16:42+0000\n"
+"POT-Creation-Date: 2015-08-30 08:45-0500\n"
+"PO-Revision-Date: 2015-08-30 13:45+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Russian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -130,6 +130,9 @@ msgstr "Бета"
 
 msgid "Beta repository"
 msgstr "Бета хранилище"
+
+msgid "Cancel"
+msgstr ""
 
 msgid "Checking for new updates ..."
 msgstr "Проверка обновлений ..."
@@ -284,6 +287,9 @@ msgstr "Имя"
 msgid "Notes"
 msgstr "Примечание"
 
+msgid "OK"
+msgstr ""
+
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
 
@@ -331,6 +337,9 @@ msgstr ""
 
 msgid "Reset permissions ..."
 msgstr "Сброс разрешений ..."
+
+msgid "Select a directory"
+msgstr ""
 
 msgid "Send"
 msgstr "Отправить"

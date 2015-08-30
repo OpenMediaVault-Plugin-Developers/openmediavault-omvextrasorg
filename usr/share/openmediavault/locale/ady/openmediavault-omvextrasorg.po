@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-28 11:42-0500\n"
-"PO-Revision-Date: 2015-07-28 16:42+0000\n"
+"POT-Creation-Date: 2015-08-30 08:45-0500\n"
+"PO-Revision-Date: 2015-08-30 13:45+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Adyghe (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ady/)\n"
 "MIME-Version: 1.0\n"
@@ -126,6 +126,9 @@ msgid "Beta"
 msgstr ""
 
 msgid "Beta repository"
+msgstr ""
+
+msgid "Cancel"
 msgstr ""
 
 msgid "Checking for new updates ..."
@@ -281,6 +284,9 @@ msgstr ""
 msgid "Notes"
 msgstr ""
 
+msgid "OK"
+msgstr ""
+
 msgid "OMV-Extras.org"
 msgstr ""
 
@@ -327,6 +333,9 @@ msgid "Reset folders and files to this file mode."
 msgstr ""
 
 msgid "Reset permissions ..."
+msgstr ""
+
+msgid "Select a directory"
 msgstr ""
 
 msgid "Send"

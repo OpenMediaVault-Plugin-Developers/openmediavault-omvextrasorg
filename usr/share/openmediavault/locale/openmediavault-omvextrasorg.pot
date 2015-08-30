@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-28 11:42-0500\n"
+"POT-Creation-Date: 2015-08-30 08:45-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -126,6 +126,9 @@ msgid "Beta"
 msgstr ""
 
 msgid "Beta repository"
+msgstr ""
+
+msgid "Cancel"
 msgstr ""
 
 msgid "Checking for new updates ..."
@@ -272,6 +275,9 @@ msgstr ""
 msgid "Notes"
 msgstr ""
 
+msgid "OK"
+msgstr ""
+
 msgid "OMV-Extras.org"
 msgstr ""
 
@@ -318,6 +324,9 @@ msgid "Reset folders and files to this file mode."
 msgstr ""
 
 msgid "Reset permissions ..."
+msgstr ""
+
+msgid "Select a directory"
 msgstr ""
 
 msgid "Send"

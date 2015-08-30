@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-28 11:42-0500\n"
-"PO-Revision-Date: 2015-07-28 16:42+0000\n"
+"POT-Creation-Date: 2015-08-30 08:45-0500\n"
+"PO-Revision-Date: 2015-08-30 13:45+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -128,6 +128,9 @@ msgstr "Béta"
 
 msgid "Beta repository"
 msgstr "Beta tároló"
+
+msgid "Cancel"
+msgstr ""
 
 msgid "Checking for new updates ..."
 msgstr "Új frissítések keresése ..."
@@ -282,6 +285,9 @@ msgstr "Név"
 msgid "Notes"
 msgstr "Megjegyzések"
 
+msgid "OK"
+msgstr ""
+
 msgid "OMV-Extras.org"
 msgstr "OMV-Extrák"
 
@@ -329,6 +335,9 @@ msgstr "Fájlok és mappák visszaállítása."
 
 msgid "Reset permissions ..."
 msgstr "Engedélyek visszaállítása ..."
+
+msgid "Select a directory"
+msgstr ""
 
 msgid "Send"
 msgstr "Küld"
