@@ -55,7 +55,7 @@ Ext.define("OMV.tree.RootFolder", {
 					reader: "rpcarray",
 					appendSortParams: false,
 					rpcData: {
-						service: "Downloader",
+						service: "OmvExtrasOrg",
 						method: "getRootFolders"
 					}
 				},
