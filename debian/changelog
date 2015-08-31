@@ -1,6 +1,7 @@
 openmediavault-omvextrasorg (2.1) stable; urgency=low
 
   * Add rootfolder rpc function needed for rootfolderbrowser
+  * Update locales
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 31 Aug 2015 06:54:50 -0500
 
