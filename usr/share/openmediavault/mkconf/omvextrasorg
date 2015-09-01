@@ -46,8 +46,8 @@ update()
     OMVEXTRASCUSTOMREPOFILE="/etc/apt/sources.list.d/omv-extras-org-custom.list"
     OMVEXTRASAPTPREFS="/etc/apt/preferences.d/99omv-extras-org"
 
-    REPO_LOCATION="packages.omv-extras.org"
-    REPO_URL="http://${REPO_LOCATION}/debian/"
+    REPO_LOCATION="192.168.1.3"
+    REPO_URL="http://${REPO_LOCATION}/omvextras/"
 
     DH2K_REPO_LOCATION="dh2k.omv-extras.org"
     DH2K_REPO_URL="http://${DH2K_REPO_LOCATION}/debian/"
@@ -448,7 +448,7 @@ createBackportsFile()
     else
         echo "deb http://ftp.debian.org/debian ${RELEASE}-backports main contrib non-free" > $BACKPORTS_REPO
     fi
-    echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-backports main" >> $BACKPORTS_REPO
+    echo "deb http://192.168.1.3/omvextras ${OMVVERSION}-backports main" >> $BACKPORTS_REPO
 }
 
 headers()
