@@ -330,10 +330,11 @@ EOF
     # omv-extras docker testing
     if [ "$(omv_config_get "${XPATH}dockertesting")" = "1" ]; then
         echo "# docker testing repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${REPO_URL} ${OMVVERSION}-docker-testing main" >> ${OMVEXTRASREPOFILE}
+        echo "deb https://dl.bintray.com/openmediavault-plugin-developers/stoneburner-docker2 wheezy main" >> ${OMVEXTRASREPOFILE}
+        # echo "deb ${REPO_URL} ${OMVVERSION}-docker-testing main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
-Pin: release n=${OMVVERSION}-docker-testing, origin ${REPO_LOCATION}
+Pin: release n=${OMVVERSION}-docker2, origin dl.bintray.com
 Pin-Priority: 997
 
 EOF

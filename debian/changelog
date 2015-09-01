@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (2.2) stable; urgency=low
+
+  * Start using bintray repo for docker testing
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 01 Sep 2015 06:08:35 -0500
+
 openmediavault-omvextrasorg (2.1) stable; urgency=low
 
   * Add rootfolder rpc function needed for rootfolderbrowser
