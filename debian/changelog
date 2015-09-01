@@ -1,6 +1,7 @@
 openmediavault-omvextrasorg (2.2) stable; urgency=low
 
   * Start using bintray repo for docker testing
+  * update locales
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 01 Sep 2015 06:08:35 -0500
 
