@@ -134,8 +134,8 @@ case "$1" in
         omv-mkconf omvextrasorg configure
 
         if [ -x /usr/bin/apt-key ]; then
-            apt-key add ${KEYRING_LOCATION}omvextrasorg-keyring.gpg
-            apt-key add ${KEYRING_LOCATION}omvplugindevs.gpg
+            #apt-key add ${KEYRING_LOCATION}omvextrasorg-keyring.gpg
+            #apt-key add ${KEYRING_LOCATION}omvplugindevs.gpg
             apt-key add ${KEYRING_LOCATION}oracle_vbox.asc
             apt-key add ${KEYRING_LOCATION}greyhole-debsig.asc
             apt-key add ${KEYRING_LOCATION}e-tobi-keyring.gpg
