@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (2.4) stable; urgency=low
+
+  * Fix typo
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 18 Sep 2015 05:09:01 -0500
+
 openmediavault-omvextrasorg (2.3) stable; urgency=low
 
   * Move zfs repos to bintray
