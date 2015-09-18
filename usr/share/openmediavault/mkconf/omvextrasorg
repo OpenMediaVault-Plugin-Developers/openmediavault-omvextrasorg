@@ -52,6 +52,8 @@ update()
     DH2K_REPO_LOCATION="dh2k.omv-extras.org"
     DH2K_REPO_URL="http://${DH2K_REPO_LOCATION}/debian/"
 
+    BINTRAY_REPO="https://dl.bintray.com/openmediavault-plugin-developers"
+
     KEYSERVER="hkp://keyserver.ubuntu.com:80"
     KEYSERVER2="hkp://p80.pool.sks-keyservers.net:80"
 
@@ -235,6 +237,7 @@ EOF
             *)  apt-get --yes --force-yes --fix-missing install linux-headers-$(uname -r) || : ;;
         esac
         echo "# ZFS repo" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${BINTRAY_REPO}/${OMVVERSION}-zfstesting ${release} main"
         echo "deb ${REPO_URL} ${OMVVERSION}-zfs main" >> ${OMVEXTRASREPOFILE}
         echo "deb http://archive.zfsonlinux.org/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
@@ -252,7 +255,8 @@ EOF
     # omv-extras zfs testing
     if [ "$(omv_config_get "${XPATH}zfstesting")" = "1" ]; then
         echo "# ZFS testing repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${REPO_URL} ${OMVVERSION}-zfs-testing main" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${BINTRAY_REPO}/${OMVVERSION}-zfstesting ${release} main"
+        #echo "deb ${REPO_URL} ${OMVVERSION}-zfs-testing main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-zfs-testing, origin ${REPO_LOCATION}
@@ -330,7 +334,7 @@ EOF
     # omv-extras docker testing
     if [ "$(omv_config_get "${XPATH}dockertesting")" = "1" ]; then
         echo "# docker testing repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb https://dl.bintray.com/openmediavault-plugin-developers/stoneburner-docker2 wheezy main" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${BINTRAY_REPO}/${OMVVERSION}-docker2 ${release} main" >> ${OMVEXTRASREPOFILE}
         # echo "deb ${REPO_URL} ${OMVVERSION}-docker-testing main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *

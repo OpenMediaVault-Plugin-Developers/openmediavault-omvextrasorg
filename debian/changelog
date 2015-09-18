@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (2.3) stable; urgency=low
+
+  * Move zfs repos to bintray
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 17 Sep 2015 19:17:17 -0500
+
 openmediavault-omvextrasorg (2.2) stable; urgency=low
 
   * Start using bintray repo for docker testing
