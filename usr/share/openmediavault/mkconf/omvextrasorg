@@ -237,8 +237,8 @@ EOF
             *)  apt-get --yes --force-yes --fix-missing install linux-headers-$(uname -r) || : ;;
         esac
         echo "# ZFS repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${BINTRAY_REPO}/${OMVVERSION}-zfstesting ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${REPO_URL} ${OMVVERSION}-zfs main" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${BINTRAY_REPO}/${OMVVERSION}-zfs ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+        #echo "deb ${REPO_URL} ${OMVVERSION}-zfs main" >> ${OMVEXTRASREPOFILE}
         echo "deb http://archive.zfsonlinux.org/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
