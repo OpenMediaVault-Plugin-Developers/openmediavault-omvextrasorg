@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (2.7) stable; urgency=low
+
+  * Movedockerandbetarepostobintray
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 22 Sep 2015 20:33:45 -0500
+
 openmediavault-omvextrasorg (2.6) stable; urgency=low
 
   * Fix cut and paste error
