@@ -52,7 +52,8 @@ update()
     DH2K_REPO_LOCATION="dh2k.omv-extras.org"
     DH2K_REPO_URL="http://${DH2K_REPO_LOCATION}/debian/"
 
-    BINTRAY_REPO="https://dl.bintray.com/openmediavault-plugin-developers"
+    BINTRAY_REPO_LOCATION="dl.bintray.com"
+    BINTRAY_REPO="https://${BINTRAY_REPO_LOCATION}/openmediavault-plugin-developers"
 
     KEYSERVER="hkp://keyserver.ubuntu.com:80"
     KEYSERVER2="hkp://p80.pool.sks-keyservers.net:80"
@@ -179,7 +180,7 @@ EOF
     # omv-extras btsync
     if [ "$(omv_config_get "${XPATH}btsync")" = "1" ]; then
         echo "# btsync repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${REPO_URL} ${OMVVERSION}-btsync main" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${BINTRAY_REPO}/${OMVVERSION}-sync ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         echo "deb http://debian.yeasoft.net/btsync14 ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         echo "# syncthing repo" >> ${OMVEXTRASREPOFILE}
         echo "deb http://apt.syncthing.net/ syncthing release" >> ${OMVEXTRASREPOFILE}
@@ -193,7 +194,7 @@ EOF
 
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
-Pin: release n=${OMVVERSION}-btsync, origin ${REPO_LOCATION}
+Pin: release n=${OMVVERSION}-sync, origin ${BINTRAY_REPO_LOCATION}
 Pin-Priority: 995
 
 Package: *
@@ -218,11 +219,10 @@ EOF
     # omv-extras developer/beta
     if [ "$(omv_config_get "${XPATH}beta")" = "1" ]; then
         echo "# Beta repo" >> ${OMVEXTRASREPOFILE}
-        #echo "deb ${REPO_URL} ${OMVVERSION}-beta main" >> ${OMVEXTRASREPOFILE}
         echo "deb ${BINTRAY_REPO}/${OMVVERSION}-beta ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
-Pin: release n=${OMVVERSION}-beta, origin ${REPO_LOCATION}
+Pin: release n=${OMVVERSION}-beta, origin ${BINTRAY_REPO_LOCATION}
 Pin-Priority: 995
 
 EOF

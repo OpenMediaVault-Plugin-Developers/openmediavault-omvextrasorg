@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (2.8) stable; urgency=low
+
+  * Move btsync repo to bintray
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 10 Nov 2015 10:23:52 -0600
+
 openmediavault-omvextrasorg (2.7) stable; urgency=low
 
   * Movedockerandbetarepostobintray
