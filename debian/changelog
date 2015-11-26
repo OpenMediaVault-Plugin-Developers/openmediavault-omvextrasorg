@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (2.9) stable; urgency=low
+
+  * Add multi-file upload code
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 26 Nov 2015 08:24:24 -0600
+
 openmediavault-omvextrasorg (2.8) stable; urgency=low
 
   * Move btsync repo to bintray
