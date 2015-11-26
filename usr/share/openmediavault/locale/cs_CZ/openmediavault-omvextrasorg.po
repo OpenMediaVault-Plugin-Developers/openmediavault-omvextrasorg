@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-30 08:45-0500\n"
-"PO-Revision-Date: 2015-09-03 11:56+0000\n"
+"POT-Creation-Date: 2015-11-26 08:24-0600\n"
+"PO-Revision-Date: 2015-11-20 09:47+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -65,7 +65,7 @@ msgid "30 monit"
 msgstr "30 stav služeb (monit)"
 
 msgid "31 hpraid"
-msgstr ""
+msgstr "31 hpraid"
 
 msgid "40 Mount Info"
 msgstr "40 připojené soubor. systémy"
@@ -119,7 +119,7 @@ msgid "Architecture"
 msgstr "Architektura"
 
 msgid "BTSync"
-msgstr ""
+msgstr "BTSync"
 
 msgid "BTSync repository"
 msgstr "Nástroj BTSync pro decentralizovanou synchronizaci souborů mezi zařízeními"
@@ -182,7 +182,7 @@ msgid ""
 msgstr "Vývojové verze součástí pro podporu souborového systému ZFS (nepříliš obvyklý) – používejte pouze v případě, že ZFS opravdu provozujete"
 
 msgid "Docker"
-msgstr ""
+msgstr "Docker"
 
 msgid "Docker Testing"
 msgstr "Docker – testovací"
@@ -212,10 +212,10 @@ msgid "Everyone: read/write"
 msgstr "Všichni: číst/zapisovat"
 
 msgid "GlusterFS"
-msgstr ""
+msgstr "GlusterFS"
 
 msgid "Greyhole"
-msgstr ""
+msgstr "Greyhole"
 
 msgid "Greyhole repository"
 msgstr "Systém distribuovaného ukládání souborů Greyhole"
@@ -272,7 +272,7 @@ msgid "Modules for different hardware raid controllers"
 msgstr "Ovladače pro nejrůznější hardwarové řadiče RAID polí"
 
 msgid "Mono"
-msgstr ""
+msgstr "Mono"
 
 msgid "Mono Testing"
 msgstr "Mono – testovací"
@@ -287,10 +287,10 @@ msgid "Notes"
 msgstr "Poznámky"
 
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 msgid "OMV-Extras.org"
-msgstr ""
+msgstr "OMV-Extras.org"
 
 msgid "OMV-Extras.org Testing"
 msgstr "OMV-Extras.org – testovací"
@@ -305,7 +305,7 @@ msgid "Please select a shared folder."
 msgstr "Vyberte sdílenou složku."
 
 msgid "Plex"
-msgstr ""
+msgstr "Plex"
 
 msgid "Plex Media Server repository"
 msgstr "Multimediální centrum Plex Media Server"
@@ -407,22 +407,22 @@ msgid "User"
 msgstr "Uživatel"
 
 msgid "VDR"
-msgstr ""
+msgstr "VDR"
 
 msgid "VPN"
-msgstr ""
+msgstr "VPN"
 
 msgid "Version"
 msgstr "Verze"
 
 msgid "Virtualbox"
-msgstr ""
+msgstr "Virtualbox"
 
 msgid "Virtualbox repository"
 msgstr "Virtualizační platforma Virtualbox"
 
 msgid "ZFS"
-msgstr ""
+msgstr "ZFS"
 
 msgid "ZFS Testing"
 msgstr "ZFS – testovací"
