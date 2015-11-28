@@ -31,6 +31,7 @@ case $(cat /etc/debian_version) in
   6*) RELEASE="squeeze" ;;
   7*) RELEASE="wheezy"  ;;
   8*) RELEASE="jessie"  ;;
+  9*) RELEASE="stretch" ;;  
   *)  exit 1            ;;
 esac
 

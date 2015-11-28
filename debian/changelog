@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (2.10) UNRELEASED; urgency=low
+
+  * Update OS detection
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 28 Nov 2015 13:52:45 -0600
+
 openmediavault-omvextrasorg (2.9) stable; urgency=low
 
   * Add multi-file upload code

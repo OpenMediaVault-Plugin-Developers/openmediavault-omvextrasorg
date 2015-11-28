@@ -37,7 +37,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Kernel", {
         items.push({
             id       : me.getId() + "-backports",
             xtype    : "button",
-            text     : _("Install Backports 3.16 kernel"),
+            text     : _("Install Backports kernel"),
             icon     : "images/add.png",
             iconCls  : Ext.baseCSSPrefix + "btn-icon-16x16",
             scope    : me,
