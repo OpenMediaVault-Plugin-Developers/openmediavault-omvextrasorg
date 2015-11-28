@@ -135,7 +135,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $this->registerMethod("doResetPerms");
         $this->registerMethod("getSharedFolderInUseList");
 
-        $this->registerMethod("getRootFolders");        
+        $this->registerMethod("getRootFolders");
     }
 
     public function getRepo($params, $context)
@@ -196,7 +196,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         $result[] = array(
             "id"          => "btsync",
-            "type"        => "Backup",
+            "type"        => gettext("Backup"),
             "enable"      => $object['btsync'],
             "repo"        => gettext("BTSync"),
             "description" => gettext("BTSync repository")
@@ -207,7 +207,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         {
             $result[] = array(
                 "id"          => "gluster",
-                "type"        => "Filesystems",
+                "type"        => gettext("Filesystems"),
                 "enable"      => $object['gluster'],
                 "repo"        => gettext("GlusterFS"),
                 "description" => gettext("Do not enable this repository unless you are using the GlusterFS filesystem (uncommon)")
@@ -216,7 +216,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         $result[] = array(
             "id"          => "greyhole",
-            "type"        => "Filesystems",
+            "type"        => gettext("Filesystems"),
             "enable"      => $object['greyhole'],
             "repo"        => gettext("Greyhole"),
             "description" => gettext("Greyhole repository")
@@ -227,7 +227,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         {
             $result[] = array(
                 "id"          => "hwraid",
-                "type"        => "Utilities",
+                "type"        => gettext("Utilities"),
                 "enable"      => $object['hwraid'],
                 "repo"        => gettext("HWRaid"),
                 "description" => gettext("Modules for different hardware raid controllers")
@@ -236,7 +236,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         $result[] = array(
             "id"          => "miller",
-            "type"        => "Downloaders",
+            "type"        => gettext("Downloaders"),
             "enable"      => $object['miller'],
             "repo"        => gettext("Download Managers"),
             "description" => gettext("Download managers for newsgroups, torrents, usenet, and streaming")
@@ -244,7 +244,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         $result[] = array(
             "id"          => "millertesting",
-            "type"        => "Downloaders",
+            "type"        => gettext("Downloaders"),
             "enable"      => $object['millertesting'],
             "repo"        => gettext("Download Managers Testing"),
             "description" => gettext("Testing repository for download managers")
@@ -255,7 +255,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         {
             $result[] = array(
                 "id"          => "mono",
-                "type"        => "Multimedia",
+                "type"        => gettext("Multimedia"),
                 "enable"      => $object['mono'],
                 "repo"        => gettext("Mono"),
                 "description" => gettext("Mono and mono-project.com")
@@ -263,7 +263,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
             $result[] = array(
                 "id"          => "monotesting",
-                "type"        => "Multimedia",
+                "type"        => gettext("Multimedia"),
                 "enable"      => $object['monotesting'],
                 "repo"        => gettext("Mono Testing"),
                 "description" => gettext("Testing repository for Mono")
@@ -275,7 +275,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         {
             $result[] = array(
                 "id"          => "docker",
-                "type"        => "Virtualization",
+                "type"        => gettext("Virtualization"),
                 "enable"      => $object['docker'],
                 "repo"        => gettext("Docker"),
                 "description" => gettext("Docker repository")
@@ -283,7 +283,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
             $result[] = array(
                 "id"          => "dockertesting",
-                "type"        => "Virtualization",
+                "type"        => gettext("Virtualization"),
                 "enable"      => $object['dockertesting'],
                 "repo"        => gettext("Docker Testing"),
                 "description" => gettext("Testing repository for Docker")
@@ -292,7 +292,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         $result[] = array(
             "id"          => "enable",
-            "type"        => "All",
+            "type"        => gettext("All"),
             "enable"      => $object['enable'],
             "repo"        => gettext("OMV-Extras.org"),
             "description" => gettext("Main package repository")
@@ -300,7 +300,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         $result[] = array(
             "id"          => "testing",
-            "type"        => "All",
+            "type"        => gettext("All"),
             "enable"      => $object['testing'],
             "repo"        => gettext("OMV-Extras.org Testing"),
             "description" => gettext("Release candidates")
@@ -311,7 +311,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         {
             $result[] = array(
                 "id"          => "plex",
-                "type"        => "Multimedia",
+                "type"        => gettext("Multimedia"),
                 "enable"      => $object['plex'],
                 "repo"        => gettext("Plex"),
                 "description" => gettext("Plex Media Server repository")
@@ -323,7 +323,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         {
             $result[] = array(
                 "id"          => "vbox",
-                "type"        => "Virtualization",
+                "type"        => gettext("Virtualization"),
                 "enable"      => $object['vbox'],
                 "repo"        => gettext("Virtualbox"),
                 "description" => gettext("Virtualbox repository")
@@ -335,7 +335,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         {
             $result[] = array(
                 "id"          => "vdr",
-                "type"        => "Multimedia",
+                "type"        => gettext("Multimedia"),
                 "enable"      => $object['vdr'],
                 "repo"        => gettext("VDR"),
                 "description" => gettext("e-tobi.net repository")
@@ -343,7 +343,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
             $result[] = array(
                 "id"          => "vpn",
-                "type"        => "Remote",
+                "type"        => gettext("Remote"),
                 "enable"      => $object['vpn'],
                 "repo"        => gettext("VPN"),
                 "description" => gettext("Plugins for setting up virtual private networks")
@@ -355,7 +355,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         {
             $result[] = array(
                 "id"          => "zfs",
-                "type"        => "Filesystems",
+                "type"        => gettext("Filesystems"),
                 "enable"      => $object['zfs'],
                 "repo"        => gettext("ZFS"),
                 "description" => gettext("Do not enable this repository unless you are using the ZFS filesystem (uncommon)")
@@ -363,7 +363,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
             $result[] = array(
                 "id"          => "zfstesting",
-                "type"        => "Filesystems",
+                "type"        => gettext("Filesystems"),
                 "enable"      => $object['zfstesting'],
                 "repo"        => gettext("ZFS Testing"),
                 "description" => gettext("Do not enable this testing repository unless you are using the ZFS filesystem (uncommon)")
@@ -374,7 +374,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         {
             $result[] = array(
                 "id"          => "beta",
-                "type"        => "All",
+                "type"        => gettext("All"),
                 "enable"      => $object['beta'],
                 "repo"        => gettext("Beta"),
                 "description" => gettext("Beta repository")
@@ -1518,7 +1518,7 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
     public function getSharedFolderInUseList($params, $context)
     {
         global $xmlConfig;
-    
+
         // Validate the RPC caller context.
         $this->validateMethodContext(
             $context,
