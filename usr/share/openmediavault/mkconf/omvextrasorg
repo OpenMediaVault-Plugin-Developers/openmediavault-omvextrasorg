@@ -27,7 +27,12 @@ set -e
 BACKPORTS_REPO="/etc/apt/sources.list.d/backports.list"
 
 OMVVERSION=$(xmlstarlet sel -t -v "//distribution" ${OMV_PRODUCTINFO_FILE} | xmlstarlet unesc)
-RELEASE="wheezy"
+case $(cat /etc/debian_version) in
+  6*) RELEASE="squeeze" ;;
+  7*) RELEASE="wheezy"  ;;
+  8*) RELEASE="jessie"  ;;
+  *)  exit 1            ;;
+esac
 
 XPATH="//system/omvextrasorg/"
 XPATH_REPO="${XPATH}repos/repo"
@@ -440,6 +445,14 @@ backports()
                     apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.16.0-0.bpo.4-amd64 linux-headers-3.16.0-0.bpo.4-amd64 firmware-linux firmware-linux-free
                 else
                     apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-3.16.0-0.bpo.4-586 linux-headers-3.16.0-0.bpo.4-586 firmware-linux firmware-linux-free
+                fi
+                ;;
+            jessie)
+                echo "Install backports 4.2 kernel and headers"
+                if $AMD64; then
+                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-4.2.0-0.bpo.1-amd64 linux-headers-4.2.0-0.bpo.1-amd64 firmware-linux firmware-linux-free
+                else
+                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-4.2.0-0.bpo.1-586 linux-headers-4.2.0-0.bpo.1-586 firmware-linux firmware-linux-free
                 fi
                 ;;
         esac
