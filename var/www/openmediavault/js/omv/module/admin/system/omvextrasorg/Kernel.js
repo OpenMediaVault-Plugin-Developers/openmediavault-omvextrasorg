@@ -152,7 +152,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Kernel", {
     onCommandButton : function(cmd) {
         var me = this;
         if(cmd == "backports") {
-            title = _("Install Backports 3.16 kernel ...");
+            title = _("Install Backports kernel ...");
         } else {
             title = _("Install kernel headers ...");
         }

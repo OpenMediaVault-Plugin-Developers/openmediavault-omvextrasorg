@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-26 08:24-0600\n"
+"POT-Creation-Date: 2015-11-29 10:05-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -110,6 +110,9 @@ msgstr ""
 msgid "Administrator: read/write, Users: read/write, Others: read-only"
 msgstr ""
 
+msgid "All"
+msgstr ""
+
 msgid "Apt Clean"
 msgstr ""
 
@@ -120,6 +123,9 @@ msgid "BTSync"
 msgstr ""
 
 msgid "BTSync repository"
+msgstr ""
+
+msgid "Backup"
 msgstr ""
 
 msgid "Beta"
@@ -194,6 +200,9 @@ msgstr ""
 msgid "Download managers for newsgroups, torrents, usenet, and streaming"
 msgstr ""
 
+msgid "Downloaders"
+msgstr ""
+
 msgid "Edit custom repo"
 msgstr ""
 
@@ -201,6 +210,9 @@ msgid "Enable"
 msgstr ""
 
 msgid "Everyone: read/write"
+msgstr ""
+
+msgid "Filesystems"
 msgstr ""
 
 msgid "GlusterFS"
@@ -224,10 +236,10 @@ msgstr ""
 msgid "Information"
 msgstr ""
 
-msgid "Install Backports 3.16 kernel"
+msgid "Install Backports kernel"
 msgstr ""
 
-msgid "Install Backports 3.16 kernel ..."
+msgid "Install Backports kernel ..."
 msgstr ""
 
 msgid "Install kernel headers"
@@ -269,6 +281,9 @@ msgstr ""
 msgid "Mono and mono-project.com"
 msgstr ""
 
+msgid "Multimedia"
+msgstr ""
+
 msgid "Name"
 msgstr ""
 
@@ -306,6 +321,9 @@ msgid "Process List"
 msgstr ""
 
 msgid "Release candidates"
+msgstr ""
+
+msgid "Remote"
 msgstr ""
 
 msgid "Repo"
@@ -392,6 +410,9 @@ msgstr ""
 msgid "User"
 msgstr ""
 
+msgid "Utilities"
+msgstr ""
+
 msgid "VDR"
 msgstr ""
 
@@ -405,6 +426,9 @@ msgid "Virtualbox"
 msgstr ""
 
 msgid "Virtualbox repository"
+msgstr ""
+
+msgid "Virtualization"
 msgstr ""
 
 msgid "ZFS"
