@@ -1,8 +1,9 @@
-openmediavault-omvextrasorg (2.10) UNRELEASED; urgency=low
+openmediavault-omvextrasorg (2.11) stable; urgency=low
 
   * Update OS detection
+  * Fix vdr repo url
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 28 Nov 2015 13:52:45 -0600
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 10 Dec 2015 17:32:44 -0600
 
 openmediavault-omvextrasorg (2.9) stable; urgency=low
 
