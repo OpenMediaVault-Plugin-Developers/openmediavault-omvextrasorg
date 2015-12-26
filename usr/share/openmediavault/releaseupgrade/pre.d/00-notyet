@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo "You shouldn't upgrade yet..."
+
+exit 99

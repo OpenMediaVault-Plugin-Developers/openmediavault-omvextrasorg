@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (2.12) stable; urgency=low
+
+  * Update locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 26 Dec 2015 15:26:45 -0600
+
 openmediavault-omvextrasorg (2.11) stable; urgency=low
 
   * Update OS detection

@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Zacharie ARNAISE <spacebrain.damage@gmail.com>, 2013
+# Zacharie ARNAISE <spacebrain.damage@gmail.com>, 2013,2015
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-11-26 08:24-0600\n"
-"PO-Revision-Date: 2015-08-30 13:45+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2015-11-27 10:39+0000\n"
+"Last-Translator: Zacharie ARNAISE <spacebrain.damage@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,79 +19,79 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 msgid "% CPU"
-msgstr ""
+msgstr "% CPU"
 
 msgid "% MEM"
-msgstr ""
+msgstr "% MEM"
 
 msgid "00 Debian Version"
-msgstr ""
+msgstr "00 Version de Debian"
 
 msgid "00 OMV Version"
-msgstr ""
+msgstr "00 Version d'OMV"
 
 msgid "10 Date"
-msgstr ""
+msgstr "10 Date"
 
 msgid "10 Hostname"
-msgstr ""
+msgstr "10 Nom d'hôte"
 
 msgid "10 Locale"
 msgstr ""
 
 msgid "10 Uptime"
-msgstr ""
+msgstr "10 Temps d'activité"
 
 msgid "10 uname"
-msgstr ""
+msgstr "10 uname"
 
 msgid "20 Interfaces"
-msgstr ""
+msgstr "20 Interfaces"
 
 msgid "20 Route"
 msgstr ""
 
 msgid "20 iptables"
-msgstr ""
+msgstr "20 iptables"
 
 msgid "20 netstat"
-msgstr ""
+msgstr "20 netstat"
 
 msgid "30 mdadm"
-msgstr ""
+msgstr "30 mdadm"
 
 msgid "30 monit"
-msgstr ""
+msgstr "30 monit"
 
 msgid "31 hpraid"
-msgstr ""
+msgstr "31 hpraid"
 
 msgid "40 Mount Info"
 msgstr ""
 
 msgid "40 Partitions"
-msgstr ""
+msgstr "40 Partitions"
 
 msgid "40 blkid"
-msgstr ""
+msgstr "40 blkid"
 
 msgid "40 df"
-msgstr ""
+msgstr "40 df"
 
 msgid "40 fstab"
-msgstr ""
+msgstr "40 fstab"
 
 msgid "50 OMV Plugins"
-msgstr ""
+msgstr "50 Compléments OMV"
 
 msgid "50 apt sources"
-msgstr ""
+msgstr "50 apt sources"
 
 msgid "50 dpkg"
-msgstr ""
+msgstr "50 dpkg"
 
 msgid "61 lsmod"
-msgstr ""
+msgstr "61 lsmod"
 
 msgid "Add custom repo"
 msgstr ""
@@ -115,25 +115,25 @@ msgid "Apt Clean"
 msgstr ""
 
 msgid "Architecture"
-msgstr ""
+msgstr "Architecture"
 
 msgid "BTSync"
-msgstr ""
+msgstr "BTSync"
 
 msgid "BTSync repository"
-msgstr ""
+msgstr "Répértoire BTSync"
 
 msgid "Beta"
-msgstr ""
+msgstr "Beta"
 
 msgid "Beta repository"
 msgstr ""
 
 msgid "Cancel"
-msgstr ""
+msgstr "Annuler"
 
 msgid "Checking for new updates ..."
-msgstr ""
+msgstr "Recherche de mises à jour..."
 
 msgid "Cleaning Apt Files and Lists..."
 msgstr ""
@@ -145,10 +145,10 @@ msgid "Clear all ACLs."
 msgstr ""
 
 msgid "Command"
-msgstr ""
+msgstr "Commande"
 
 msgid "Comment"
-msgstr ""
+msgstr "Commentaire"
 
 msgid "Custom Repos"
 msgstr ""
@@ -157,13 +157,13 @@ msgid "Degraded Array Info"
 msgstr ""
 
 msgid "Description"
-msgstr ""
+msgstr "Description"
 
 msgid "Developer"
-msgstr ""
+msgstr "Développeur"
 
 msgid "Distribution"
-msgstr ""
+msgstr "Distribution"
 
 msgid ""
 "Do not enable this repository unless you are using the GlusterFS filesystem "
@@ -190,10 +190,10 @@ msgid "Docker repository"
 msgstr ""
 
 msgid "Done..."
-msgstr ""
+msgstr "Terminé..."
 
 msgid "Download Managers"
-msgstr ""
+msgstr "Gestionnaires de téléchargement"
 
 msgid "Download Managers Testing"
 msgstr ""
@@ -205,7 +205,7 @@ msgid "Edit custom repo"
 msgstr ""
 
 msgid "Enable"
-msgstr ""
+msgstr "Activer"
 
 msgid "Everyone: read/write"
 msgstr ""
@@ -228,10 +228,10 @@ msgid ""
 msgstr ""
 
 msgid "In Use By"
-msgstr ""
+msgstr "En cours d'utilisation par"
 
 msgid "Information"
-msgstr ""
+msgstr "Information"
 
 msgid "Install Backports 3.16 kernel"
 msgstr ""
@@ -253,25 +253,25 @@ msgid ""
 msgstr ""
 
 msgid "Kernel"
-msgstr ""
+msgstr "Kernel"
 
 msgid "Kernels"
-msgstr ""
+msgstr "Kernels"
 
 msgid "Key"
-msgstr ""
+msgstr "Clé"
 
 msgid "Main package repository"
 msgstr ""
 
 msgid "Modules"
-msgstr ""
+msgstr "Modules"
 
 msgid "Modules for different hardware raid controllers"
 msgstr ""
 
 msgid "Mono"
-msgstr ""
+msgstr "Mono"
 
 msgid "Mono Testing"
 msgstr ""
@@ -280,13 +280,13 @@ msgid "Mono and mono-project.com"
 msgstr ""
 
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 msgid "Notes"
-msgstr ""
+msgstr "Notes"
 
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 msgid "OMV-Extras.org"
 msgstr "OMV-Extras.org"
@@ -295,13 +295,13 @@ msgid "OMV-Extras.org Testing"
 msgstr ""
 
 msgid "PID"
-msgstr ""
+msgstr "PID"
 
 msgid "Permissions"
-msgstr ""
+msgstr "Permissions"
 
 msgid "Please select a shared folder."
-msgstr ""
+msgstr "Veuillez sélectionner un répertoire partagé."
 
 msgid "Plex"
 msgstr "Plex"
@@ -313,7 +313,7 @@ msgid "Plugins for setting up virtual private networks"
 msgstr ""
 
 msgid "Process List"
-msgstr ""
+msgstr "Liste des processus"
 
 msgid "Release candidates"
 msgstr ""
@@ -328,19 +328,19 @@ msgid "Repository"
 msgstr ""
 
 msgid "Reset Permissions"
-msgstr ""
+msgstr "Réinitialiser les permissions "
 
 msgid "Reset folders and files to this file mode."
 msgstr ""
 
 msgid "Reset permissions ..."
-msgstr ""
+msgstr "Réinitisalier les permissinos..."
 
 msgid "Select a directory"
-msgstr ""
+msgstr "Séléctionner un dossier"
 
 msgid "Send"
-msgstr ""
+msgstr "Envoyer"
 
 msgid "Send Support Info"
 msgstr ""
@@ -358,13 +358,13 @@ msgid ""
 msgstr ""
 
 msgid "Shared Folder"
-msgstr ""
+msgstr "Dossier partagé"
 
 msgid "Shared Folder In Use"
 msgstr ""
 
 msgid "State"
-msgstr ""
+msgstr "État"
 
 msgid "Style #1"
 msgstr ""
@@ -397,31 +397,31 @@ msgid "Testing repository for download managers"
 msgstr ""
 
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 msgid "Update"
-msgstr ""
+msgstr "Mise à jour"
 
 msgid "User"
-msgstr ""
+msgstr "Utilisateur"
 
 msgid "VDR"
-msgstr ""
+msgstr "VDR"
 
 msgid "VPN"
-msgstr ""
+msgstr "VPN"
 
 msgid "Version"
-msgstr ""
+msgstr "Version"
 
 msgid "Virtualbox"
 msgstr "Virtualbox"
 
 msgid "Virtualbox repository"
-msgstr ""
+msgstr "Répértoire VirtualBox"
 
 msgid "ZFS"
-msgstr ""
+msgstr "ZFS"
 
 msgid "ZFS Testing"
 msgstr ""
