@@ -90,18 +90,6 @@ Pin-Priority: 996
 EOF
     fi
 
-    # omv-extras virtualbox
-    if [ "$(omv_config_get "${XPATH}vbox")" = "1" ]; then
-        echo "# Virtualbox repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${BINTRAY_REPO}/${OMVVERSION}-vb ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-        cat <<EOF >> ${OMVEXTRASAPTPREFS}
-Package: *
-Pin: release n=${OMVVERSION}-vb, origin ${BINTRAY_REPO_LOCATION}
-Pin-Priority: 995
-
-EOF
-    fi
-
     # omv-extras plexmediaserver
     if [ "$(omv_config_get "${XPATH}plex")" = "1" ]; then
         echo "# Plexmediaserver repo" >> ${OMVEXTRASREPOFILE}
@@ -127,30 +115,6 @@ Pin-Priority: 995
 EOF
     fi
 
-    # omv-extras miller
-    if [ "$(omv_config_get "${XPATH}miller")" = "1" ]; then
-        echo "# miller repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${BINTRAY_REPO}/${OMVVERSION}-miller ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-        cat <<EOF >> ${OMVEXTRASAPTPREFS}
-Package: *
-Pin: release n=${OMVVERSION}-miller, origin ${BINTRAY_REPO_LOCATION}
-Pin-Priority: 995
-
-EOF
-    fi
-
-    # omv-extras miller-testing
-    if [ "$(omv_config_get "${XPATH}millertesting")" = "1" ]; then
-        echo "# miller testing repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${BINTRAY_REPO}/${OMVVERSION}-miller-testing ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-        cat <<EOF >> ${OMVEXTRASAPTPREFS}
-Package: *
-Pin: release n=${OMVVERSION}-miller-testing, origin ${BINTRAY_REPO_LOCATION}
-Pin-Priority: 995
-
-EOF
-    fi
-
     # omv-extras sync
     if [ "$(omv_config_get "${XPATH}sync")" = "1" ]; then
         echo "# btsync repo" >> ${OMVEXTRASREPOFILE}
@@ -161,18 +125,6 @@ EOF
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-sync, origin ${BINTRAY_REPO_LOCATION}
-Pin-Priority: 995
-
-EOF
-    fi
-
-    # omv-extras vpn
-    if [ "$(omv_config_get "${XPATH}vpn")" = "1" ]; then
-        echo "# VPN repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${BINTRAY_REPO}/${OMVVERSION}-vpn ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-        cat <<EOF >> ${OMVEXTRASAPTPREFS}
-Package: *
-Pin: release n=${OMVVERSION}-vpn, origin ${BINTRAY_REPO_LOCATION}
 Pin-Priority: 995
 
 EOF

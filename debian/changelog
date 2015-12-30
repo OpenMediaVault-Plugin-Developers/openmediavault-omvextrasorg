@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (3.0.3) stable; urgency=low
+
+  * Remove unneeded repos
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 30 Dec 2015 08:01:57 -0600
+
 openmediavault-omvextrasorg (3.0.2) stable; urgency=low
 
   * Fix bug

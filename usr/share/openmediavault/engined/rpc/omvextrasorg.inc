@@ -222,22 +222,6 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             );
         }
 
-        $result[] = array(
-            "id"          => "miller",
-            "type"        => gettext("Downloaders"),
-            "enable"      => $object['miller'],
-            "repo"        => gettext("Download Managers"),
-            "description" => gettext("Download managers for newsgroups, torrents, usenet, and streaming")
-        );
-
-        $result[] = array(
-            "id"          => "millertesting",
-            "type"        => gettext("Downloaders"),
-            "enable"      => $object['millertesting'],
-            "repo"        => gettext("Download Managers Testing"),
-            "description" => gettext("Testing repository for download managers")
-        );
-
         // no armel
         if ( $arch > 0 )
         {
@@ -303,30 +287,6 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
                 "enable"      => $object['plex'],
                 "repo"        => gettext("Plex"),
                 "description" => gettext("Plex Media Server repository")
-            );
-        }
-
-        // no arm arches
-        if ( $arch > 2 )
-        {
-            $result[] = array(
-                "id"          => "vbox",
-                "type"        => gettext("Virtualization"),
-                "enable"      => $object['vbox'],
-                "repo"        => gettext("Virtualbox"),
-                "description" => gettext("Virtualbox repository")
-            );
-        }
-
-        // no armel
-        if ( $arch > 0 )
-        {
-            $result[] = array(
-                "id"          => "vpn",
-                "type"        => gettext("Remote"),
-                "enable"      => $object['vpn'],
-                "repo"        => gettext("VPN"),
-                "description" => gettext("Plugins for setting up virtual private networks")
             );
         }
 
