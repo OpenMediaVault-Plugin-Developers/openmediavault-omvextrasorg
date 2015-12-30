@@ -26,6 +26,9 @@ set -e
 
 BACKPORTS_REPO="/etc/apt/sources.list.d/backports.list"
 
+BINTRAY_REPO_LOCATION="dl.bintray.com"
+BINTRAY_REPO="https://${BINTRAY_REPO_LOCATION}/openmediavault-plugin-developers"
+
 OMVVERSION=$(xmlstarlet sel -t -v "//distribution" ${OMV_PRODUCTINFO_FILE} | xmlstarlet unesc)
 case $(cat /etc/debian_version) in
   6*) RELEASE="squeeze" ;;
@@ -51,9 +54,6 @@ update()
     OMVEXTRASREPOFILE="/etc/apt/sources.list.d/omv-extras-org-${OMVVERSION}.list"
     OMVEXTRASCUSTOMREPOFILE="/etc/apt/sources.list.d/omv-extras-org-custom.list"
     OMVEXTRASAPTPREFS="/etc/apt/preferences.d/99omv-extras-org"
-
-    BINTRAY_REPO_LOCATION="dl.bintray.com"
-    BINTRAY_REPO="https://${BINTRAY_REPO_LOCATION}/openmediavault-plugin-developers"
 
     KEYSERVER="hkp://keyserver.ubuntu.com:80"
     KEYSERVER2="hkp://p80.pool.sks-keyservers.net:80"
@@ -380,9 +380,9 @@ createBackportsFile()
     if [ "${RELEASE}" = "squeeze" ]; then
         echo "deb http://backports.debian.org/debian-backports squeeze-backports main non-free" > $BACKPORTS_REPO
     else
-        echo "deb http://ftp.debian.org/debian ${RELEASE}-backports main contrib non-free" > $BACKPORTS_REPO
+        echo "deb http://httpredir.debian.org/debian ${RELEASE}-backports main contrib non-free" > $BACKPORTS_REPO
     fi
-    echo "deb ${BINTRAY_REPO}/${OMVVERSION}-backports ${RELEASE} main" >> $BACKPORTS_REPO
+    #echo "deb ${BINTRAY_REPO}/${OMVVERSION}-backports ${RELEASE} main" >> $BACKPORTS_REPO
 }
 
 headers()
