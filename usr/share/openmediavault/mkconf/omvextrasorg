@@ -52,12 +52,6 @@ update()
     OMVEXTRASCUSTOMREPOFILE="/etc/apt/sources.list.d/omv-extras-org-custom.list"
     OMVEXTRASAPTPREFS="/etc/apt/preferences.d/99omv-extras-org"
 
-    REPO_LOCATION="packages.omv-extras.org"
-    REPO_URL="http://${REPO_LOCATION}/debian/"
-
-    DH2K_REPO_LOCATION="dh2k.omv-extras.org"
-    DH2K_REPO_URL="http://${DH2K_REPO_LOCATION}/debian/"
-
     BINTRAY_REPO_LOCATION="dl.bintray.com"
     BINTRAY_REPO="https://${BINTRAY_REPO_LOCATION}/openmediavault-plugin-developers"
 
@@ -75,10 +69,10 @@ update()
     # omv-extras stable
     if [ "$(omv_config_get "${XPATH}enable")" = "1" ]; then
         echo "# Regular omv-extras.org repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${REPO_URL} ${OMVVERSION} main" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${BINTRAY_REPO}/${OMVVERSION} ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
-Pin: release n=${OMVVERSION}, origin ${REPO_LOCATION}
+Pin: release n=${OMVVERSION}, origin ${BINTRAY_REPO_LOCATION}
 Pin-Priority: 995
 
 EOF
@@ -87,10 +81,10 @@ EOF
     # omv-extras testing
     if [ "$(omv_config_get "${XPATH}testing")" = "1" ]; then
         echo "# Testing omv-extras.org repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${REPO_URL} ${OMVVERSION}-testing main" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${BINTRAY_REPO}/${OMVVERSION}-testing ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
-Pin: release n=${OMVVERSION}-testing, origin ${REPO_LOCATION}
+Pin: release n=${OMVVERSION}-testing, origin ${BINTRAY_REPO_LOCATION}
 Pin-Priority: 996
 
 EOF
@@ -99,12 +93,10 @@ EOF
     # omv-extras virtualbox
     if [ "$(omv_config_get "${XPATH}vbox")" = "1" ]; then
         echo "# Virtualbox repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${REPO_URL} ${OMVVERSION}-vb main" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${DH2K_REPO_URL} virtualbox-${RELEASE}-mirror main" >> ${OMVEXTRASREPOFILE}
-        #echo "deb http://download.virtualbox.org/virtualbox/debian ${RELEASE} contrib non-free" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${BINTRAY_REPO}/${OMVVERSION}-vb ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
-Pin: release n=${OMVVERSION}-vb, origin ${REPO_LOCATION}
+Pin: release n=${OMVVERSION}-vb, origin ${BINTRAY_REPO_LOCATION}
 Pin-Priority: 995
 
 EOF
@@ -113,11 +105,10 @@ EOF
     # omv-extras plexmediaserver
     if [ "$(omv_config_get "${XPATH}plex")" = "1" ]; then
         echo "# Plexmediaserver repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${REPO_URL} ${OMVVERSION}-plex main" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${DH2K_REPO_URL} plex-${RELEASE}-mirror main" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${BINTRAY_REPO}/${OMVVERSION}-plex ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
-Pin: release n=${OMVVERSION}-plex, origin ${REPO_LOCATION}
+Pin: release n=${OMVVERSION}-plex, origin ${BINTRAY_REPO_LOCATION}
 Pin-Priority: 995
 
 EOF
@@ -126,29 +117,11 @@ EOF
     # omv-extras greyhole
     if [ "$(omv_config_get "${XPATH}greyhole")" = "1" ]; then
         echo "# Greyhole repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${REPO_URL} ${OMVVERSION}-greyhole main" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${BINTRAY_REPO}/${OMVVERSION}-greyhole ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         echo "deb http://www.greyhole.net/releases/deb stable main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
-Pin: release n=${OMVVERSION}-greyhole, origin ${REPO_LOCATION}
-Pin-Priority: 995
-
-EOF
-    fi
-
-    # omv-extras vdr
-    if [ "$(omv_config_get "${XPATH}vdr")" = "1" ]; then
-        echo "# VDR repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${REPO_URL} ${OMVVERSION}-vdr main" >> ${OMVEXTRASREPOFILE}
-        echo "deb https://e-tobi.net/vdr-experimental/ ${RELEASE} addons base vdr-multipatch" >> ${OMVEXTRASREPOFILE}
-        apt-key adv --keyserver ${KEYSERVER} --recv-keys "041390BC"
-        cat <<EOF >> ${OMVEXTRASAPTPREFS}
-Package: *
-Pin: release n=${OMVVERSION}-vdr, origin ${REPO_LOCATION}
-Pin-Priority: 995
-
-Package: *
-Pin: release o=e-tobi.net
+Pin: release n=${OMVVERSION}-greyhole, origin ${BINTRAY_REPO_LOCATION}
 Pin-Priority: 995
 
 EOF
@@ -157,15 +130,10 @@ EOF
     # omv-extras miller
     if [ "$(omv_config_get "${XPATH}miller")" = "1" ]; then
         echo "# miller repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${DH2K_REPO_URL} ${OMVVERSION}-miller main" >> ${OMVEXTRASREPOFILE}
-        echo "deb http://ppa.launchpad.net/deluge-team/ppa/ubuntu precise main" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${BINTRAY_REPO}/${OMVVERSION}-miller ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
-Pin: release n=${OMVVERSION}-miller, origin ${DH2K_REPO_LOCATION}
-Pin-Priority: 995
-
-Package: *
-Pin: release n=precise, origin ppa.launchpad.net/deluge-team/ppa/ubuntu
+Pin: release n=${OMVVERSION}-miller, origin ${BINTRAY_REPO_LOCATION}
 Pin-Priority: 995
 
 EOF
@@ -174,37 +142,25 @@ EOF
     # omv-extras miller-testing
     if [ "$(omv_config_get "${XPATH}millertesting")" = "1" ]; then
         echo "# miller testing repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${DH2K_REPO_URL} ${OMVVERSION}-miller-testing main" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${BINTRAY_REPO}/${OMVVERSION}-miller-testing ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
-Pin: release n=${OMVVERSION}-miller-testing, origin ${DH2K_REPO_LOCATION}
+Pin: release n=${OMVVERSION}-miller-testing, origin ${BINTRAY_REPO_LOCATION}
 Pin-Priority: 995
 
 EOF
     fi
 
-    # omv-extras btsync
-    if [ "$(omv_config_get "${XPATH}btsync")" = "1" ]; then
+    # omv-extras sync
+    if [ "$(omv_config_get "${XPATH}sync")" = "1" ]; then
         echo "# btsync repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${BINTRAY_REPO}/${OMVVERSION}-sync ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-        echo "deb http://debian.yeasoft.net/btsync14 ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         echo "# syncthing repo" >> ${OMVEXTRASREPOFILE}
         echo "deb http://apt.syncthing.net/ syncthing release" >> ${OMVEXTRASREPOFILE}
-
-        getArch
-
-        if ! $SKIP; then
-            echo "# spideroak repo" >> ${OMVEXTRASREPOFILE}
-            echo "deb http://apt.spideroak.com/ubuntu-spideroak-hardy/ release restricted" >> ${OMVEXTRASREPOFILE}
-        fi
 
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-sync, origin ${BINTRAY_REPO_LOCATION}
-Pin-Priority: 995
-
-Package: *
-Pin: release n=${RELEASE}, origin debian.yeasoft.net
 Pin-Priority: 995
 
 EOF
@@ -213,10 +169,10 @@ EOF
     # omv-extras vpn
     if [ "$(omv_config_get "${XPATH}vpn")" = "1" ]; then
         echo "# VPN repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${DH2K_REPO_URL} ${OMVVERSION}-vpn main" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${BINTRAY_REPO}/${OMVVERSION}-vpn ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
-Pin: release n=${OMVVERSION}-vpn, origin ${DH2K_REPO_LOCATION}
+Pin: release n=${OMVVERSION}-vpn, origin ${BINTRAY_REPO_LOCATION}
 Pin-Priority: 995
 
 EOF
@@ -245,7 +201,6 @@ EOF
         esac
         echo "# ZFS repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${BINTRAY_REPO}/${OMVVERSION}-zfs ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-        #echo "deb ${REPO_URL} ${OMVVERSION}-zfs main" >> ${OMVEXTRASREPOFILE}
         echo "deb http://archive.zfsonlinux.org/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
@@ -253,7 +208,7 @@ Pin: release n=${RELEASE}, origin archive.zfsonlinux.org
 Pin-Priority: 400
 
 Package: *
-Pin: release n=${OMVVERSION}-zfs, origin ${REPO_LOCATION}
+Pin: release n=${OMVVERSION}-zfs, origin ${BINTRAY_REPO_LOCATION}
 Pin-Priority: 996
 
 EOF
@@ -263,28 +218,10 @@ EOF
     if [ "$(omv_config_get "${XPATH}zfstesting")" = "1" ]; then
         echo "# ZFS testing repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${BINTRAY_REPO}/${OMVVERSION}-zfstesting ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-        #echo "deb ${REPO_URL} ${OMVVERSION}-zfs-testing main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
-Pin: release n=${OMVVERSION}-zfs-testing, origin ${REPO_LOCATION}
+Pin: release n=${OMVVERSION}-zfs-testing, origin ${BINTRAY_REPO_LOCATION}
 Pin-Priority: 997
-
-EOF
-    fi
-
-    # omv-extras gluster
-    if [ "$(omv_config_get "${XPATH}gluster")" = "1" ]; then
-        echo "# Gluster repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${REPO_URL} ${OMVVERSION}-gluster main" >> ${OMVEXTRASREPOFILE}
-        echo "deb http://download.gluster.org/pub/gluster/glusterfs/3.5/3.5.2/Debian/${RELEASE}/apt ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-        cat <<EOF >> ${OMVEXTRASAPTPREFS}
-Package: *
-Pin: release n=${OMVVERSION}-gluster, origin ${REPO_LOCATION}
-Pin-Priority: 996
-
-Package: *
-Pin: release o=download.gluster.org
-Pin-Priority: 1001
 
 EOF
     fi
@@ -294,11 +231,11 @@ EOF
         # add NzbDrone repository key
         apt-key adv --keyserver ${KEYSERVER} --recv-keys "FDA5DFFC"
         echo "# mono-project repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${REPO_URL} ${OMVVERSION}-mono main" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${BINTRAY_REPO}/${OMVVERSION}-mono ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         echo "deb http://download.mono-project.com/repo/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
-Pin: release n=${OMVVERSION}-mono, origin ${REPO_LOCATION}
+Pin: release n=${OMVVERSION}-mono, origin ${BINTRAY_REPO_LOCATION}
 Pin-Priority: 996
 
 Package: *
@@ -311,10 +248,10 @@ EOF
     # omv-extras mono testing
     if [ "$(omv_config_get "${XPATH}monotesting")" = "1" ]; then
         echo "# mono testing repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${REPO_URL} ${OMVVERSION}-mono-testing main" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${BINTRAY_REPO}/${OMVVERSION}-monotesting ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
-Pin: release n=${OMVVERSION}-mono-testing, origin ${REPO_LOCATION}
+Pin: release n=${OMVVERSION}-mono-testing, origin ${BINTRAY_REPO_LOCATION}
 Pin-Priority: 997
 
 EOF
@@ -325,11 +262,10 @@ EOF
         apt-key adv --keyserver ${KEYSERVER2} --recv-keys "58118E89F3A912897C070ADBF76221572C52609D"
         echo "# docker repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${BINTRAY_REPO}/${OMVVERSION}-docker ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-        #echo "deb ${REPO_URL} ${OMVVERSION}-docker main" >> ${OMVEXTRASREPOFILE}
         echo "deb https://apt.dockerproject.org/repo debian-${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
-Pin: release n=${OMVVERSION}-docker, origin ${REPO_LOCATION}
+Pin: release n=${OMVVERSION}-docker, origin ${BINTRAY_REPO_LOCATION}
 Pin-Priority: 996
 
 Package: *
@@ -343,7 +279,6 @@ EOF
     if [ "$(omv_config_get "${XPATH}dockertesting")" = "1" ]; then
         echo "# docker testing repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${BINTRAY_REPO}/${OMVVERSION}-docker2 ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-        # echo "deb ${REPO_URL} ${OMVVERSION}-docker-testing main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-docker2, origin dl.bintray.com
@@ -355,11 +290,11 @@ EOF
     # omv-extras hwraid
     if [ "$(omv_config_get "${XPATH}hwraid")" = "1" ]; then
         echo "# hwraid repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${REPO_URL} ${OMVVERSION}-hwraid main" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${BINTRAY_REPO}/${OMVVERSION}-hwraid ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         echo "deb http://hwraid.le-vert.net/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
-Pin: release n=${OMVVERSION}-hwraid, origin ${REPO_LOCATION}
+Pin: release n=${OMVVERSION}-hwraid, origin ${BINTRAY_REPO_LOCATION}
 Pin-Priority: 996
 
 EOF
@@ -367,7 +302,7 @@ EOF
 
     cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
-Pin: release n=${OMVVERSION}-backports, origin ${REPO_LOCATION}
+Pin: release n=${OMVVERSION}-backports, origin ${BINTRAY_REPO_LOCATION}
 Pin-Priority: 995
 
 EOF
@@ -399,28 +334,6 @@ EOF
     if [ -f "${BACKPORTS_REPO}" ]; then
         createBackportsFile
     fi
-}
-
-systemd()
-{
-    export LANG=C
-    export DEBIAN_FRONTEND=noninteractive
-
-    DEFAULTGRUB="/etc/default/grub"
-    BACKUPDEFAULTGRUB="/root/default_grub"
-
-    echo "Installing systemd..."
-    apt-get --yes --force-yes --fix-missing install systemd
-
-    echo "Change grub default..."
-    cp ${DEFAULTGRUB} ${BACKUPDEFAULTGRUB}
-    sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT=\"quiet\"/GRUB_CMDLINE_LINUX_DEFAULT=\"quiet init=\/bin\/systemd\"/g' ${DEFAULTGRUB}
-
-    echo "Updating grub..."
-    update-grub
-
-    echo "..."
-    echo "Please reboot to use systemd"
 }
 
 backports()
@@ -469,7 +382,7 @@ createBackportsFile()
     else
         echo "deb http://ftp.debian.org/debian ${RELEASE}-backports main contrib non-free" > $BACKPORTS_REPO
     fi
-    echo "deb http://packages.omv-extras.org/debian/ ${OMVVERSION}-backports main" >> $BACKPORTS_REPO
+    echo "deb ${BINTRAY_REPO}/${OMVVERSION}-backports ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
 }
 
 headers()
@@ -573,8 +486,8 @@ getArch()
 
 case $2 in
     update)
-        OMVVERSION="kralizec"
-        RELEASE="wheezy"
+        OMVVERSION="stoneburner"
+        RELEASE="jessie"
 
         update
     ;;

@@ -45,50 +45,21 @@ case "$1" in
             omv_config_add_element "${SERVICE_XPATH}" "vbox" "0"
             omv_config_add_element "${SERVICE_XPATH}" "plex" "0"
             omv_config_add_element "${SERVICE_XPATH}" "greyhole" "0"
-            omv_config_add_element "${SERVICE_XPATH}" "vdr" "0"
             omv_config_add_element "${SERVICE_XPATH}" "miller" "0"
             omv_config_add_element "${SERVICE_XPATH}" "millertesting" "0"
-            omv_config_add_element "${SERVICE_XPATH}" "btsync" "0"
+            omv_config_add_element "${SERVICE_XPATH}" "sync" "0"
             omv_config_add_element "${SERVICE_XPATH}" "beta" "0"
-        fi
-
-        if ! omv_config_exists "${SERVICE_XPATH}/repos"; then
-            omv_config_add_element "${SERVICE_XPATH}" "repos" ""
-        fi
-
-        if ! omv_config_exists "${SERVICE_XPATH}/vpn"; then
             omv_config_add_element "${SERVICE_XPATH}" "vpn" "0"
-        fi
-
-        if ! omv_config_exists "${SERVICE_XPATH}/zfs"; then
             omv_config_add_element "${SERVICE_XPATH}" "zfs" "0"
-        fi
-
-        if ! omv_config_exists "${SERVICE_XPATH}/gluster"; then
-            omv_config_add_element "${SERVICE_XPATH}" "gluster" "0"
-        fi
-
-        if ! omv_config_exists "${SERVICE_XPATH}/mono"; then
+            omv_config_add_element "${SERVICE_XPATH}" "zfstesting" "0"
+            omv_config_add_element "${SERVICE_XPATH}" "repos" ""
             omv_config_add_element "${SERVICE_XPATH}" "mono" "0"
-        fi
-
-        if ! omv_config_exists "${SERVICE_XPATH}/hwraid"; then
-            omv_config_add_element "${SERVICE_XPATH}" "hwraid" "0"
-        fi
-
-        if ! omv_config_exists "${SERVICE_XPATH}/monotesting"; then
             omv_config_add_element "${SERVICE_XPATH}" "monotesting" "0"
-        fi
-
-        if ! omv_config_exists "${SERVICE_XPATH}/docker"; then
+            omv_config_add_element "${SERVICE_XPATH}" "hwraid" "0"
             omv_config_add_element "${SERVICE_XPATH}" "docker" "0"
-        fi
-
-        if ! omv_config_exists "${SERVICE_XPATH}/dockertesting"; then
             omv_config_add_element "${SERVICE_XPATH}" "dockertesting" "0"
-        fi
+            omv_config_add_element "${SERVICE_XPATH}" "resetperms" ""
 
-        if ! omv_config_exists "${SERVICE_XPATH_MODULES}"; then
             omv_config_add_element "${SERVICE_XPATH}" "modules" ""
             omv_config_add_element "${SERVICE_XPATH_MODULES}" "debian-version" "1"
             omv_config_add_element "${SERVICE_XPATH_MODULES}" "omv-version" "1"
@@ -109,26 +80,10 @@ case "$1" in
             omv_config_add_element "${SERVICE_XPATH_MODULES}" "apt-sources" "1"
             omv_config_add_element "${SERVICE_XPATH_MODULES}" "dpkg" "0"
             omv_config_add_element "${SERVICE_XPATH_MODULES}" "omv-plugins" "1"
-        fi
-
-        if ! omv_config_exists "${SERVICE_XPATH_MODULES}/netstat"; then
             omv_config_add_element "${SERVICE_XPATH_MODULES}" "netstat" "0"
-        fi
-
-        if ! omv_config_exists "${SERVICE_XPATH_MODULES}/monit"; then
             omv_config_add_element "${SERVICE_XPATH_MODULES}" "monit" "0"
-        fi
-
-        if ! omv_config_exists "${SERVICE_XPATH_MODULES}/hpraid"; then
             omv_config_add_element "${SERVICE_XPATH_MODULES}" "hpraid" "0"
-        fi
-
-        if ! omv_config_exists "${SERVICE_XPATH_MODULES}/lsmod"; then
             omv_config_add_element "${SERVICE_XPATH_MODULES}" "lsmod" "0"
-        fi
-
-        if ! omv_config_exists "${SERVICE_XPATH}/resetperms"; then
-            omv_config_add_element "${SERVICE_XPATH}" "resetperms" ""
         fi
 
         omv-mkconf omvextrasorg configure

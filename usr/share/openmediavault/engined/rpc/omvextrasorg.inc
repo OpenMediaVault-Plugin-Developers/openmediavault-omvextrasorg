@@ -195,24 +195,12 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         $result = array();
 
         $result[] = array(
-            "id"          => "btsync",
+            "id"          => "sync",
             "type"        => gettext("Backup"),
-            "enable"      => $object['btsync'],
-            "repo"        => gettext("BTSync"),
-            "description" => gettext("BTSync repository")
+            "enable"      => $object['sync'],
+            "repo"        => gettext("Sync"),
+            "description" => gettext("Sync repository")
         );
-
-        // must be amd64
-        if ( $arch > 3 )
-        {
-            $result[] = array(
-                "id"          => "gluster",
-                "type"        => gettext("Filesystems"),
-                "enable"      => $object['gluster'],
-                "repo"        => gettext("GlusterFS"),
-                "description" => gettext("Do not enable this repository unless you are using the GlusterFS filesystem (uncommon)")
-            );
-        }
 
         $result[] = array(
             "id"          => "greyhole",
@@ -334,14 +322,6 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         if ( $arch > 0 )
         {
             $result[] = array(
-                "id"          => "vdr",
-                "type"        => gettext("Multimedia"),
-                "enable"      => $object['vdr'],
-                "repo"        => gettext("VDR"),
-                "description" => gettext("e-tobi.net repository")
-            );
-
-            $result[] = array(
                 "id"          => "vpn",
                 "type"        => gettext("Remote"),
                 "enable"      => $object['vpn'],
@@ -428,7 +408,6 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         {
             $repos['zfs'] = false;
             $repos['zfstesting'] = false;
-            $repos['gluster'] = false;
         }
 
         // Get the existing configuration object.
@@ -448,14 +427,12 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "vbox"          => array_boolval($repos, 'vbox'),
             "plex"          => array_boolval($repos, 'plex'),
             "greyhole"      => array_boolval($repos, 'greyhole'),
-            "vdr"           => array_boolval($repos, 'vdr'),
             "miller"        => array_boolval($repos, 'miller'),
             "millertesting" => array_boolval($repos, 'millertesting'),
-            "btsync"        => array_boolval($repos, 'btsync'),
+            "sync"          => array_boolval($repos, 'sync'),
             "vpn"           => array_boolval($repos, 'vpn'),
             "zfs"           => array_boolval($repos, 'zfs'),
             "zfstesting"    => array_boolval($repos, 'zfstesting'),
-            "gluster"       => array_boolval($repos, 'gluster'),
             "mono"          => array_boolval($repos, 'mono'),
             "monotesting"   => array_boolval($repos, 'monotesting'),
             "docker"        => array_boolval($repos, 'docker'),
@@ -1083,11 +1060,10 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "vdr"           => array_boolval($oldObject, 'vdr'),
             "miller"        => array_boolval($oldObject, 'miller'),
             "millertesting" => array_boolval($oldObject, 'millertesting'),
-            "btsync"        => array_boolval($oldObject, 'btsync'),
+            "sync"          => array_boolval($oldObject, 'sync'),
             "vpn"           => array_boolval($oldObject, 'vpn'),
             "zfs"           => array_boolval($oldObject, 'zfs'),
             "zfstesting"    => array_boolval($oldObject, 'zfstesting'),
-            "gluster"       => array_boolval($oldObject, 'gluster'),
             "mono"          => array_boolval($oldObject, 'mono'),
             "monotesting"   => array_boolval($oldObject, 'monotesting'),
             "docker"        => array_boolval($oldObject, 'docker'),
