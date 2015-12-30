@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (3.0.1) stable; urgency=low
+
+  * Fix file location
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 29 Dec 2015 21:48:13 -0600
+
 openmediavault-omvextrasorg (3.0) stable; urgency=low
 
   * Update for OMV 3

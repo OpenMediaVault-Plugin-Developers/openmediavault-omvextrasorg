@@ -382,7 +382,7 @@ createBackportsFile()
     else
         echo "deb http://ftp.debian.org/debian ${RELEASE}-backports main contrib non-free" > $BACKPORTS_REPO
     fi
-    echo "deb ${BINTRAY_REPO}/${OMVVERSION}-backports ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+    echo "deb ${BINTRAY_REPO}/${OMVVERSION}-backports ${RELEASE} main" >> $BACKPORTS_REPO
 }
 
 headers()
