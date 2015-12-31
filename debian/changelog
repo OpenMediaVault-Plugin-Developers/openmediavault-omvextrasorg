@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (2.12.2) stable; urgency=low
+
+  * Remove unneeded file
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 31 Dec 2015 08:58:45 -0600
+
 openmediavault-omvextrasorg (2.12.1) stable; urgency=low
 
   * Fix permissions
