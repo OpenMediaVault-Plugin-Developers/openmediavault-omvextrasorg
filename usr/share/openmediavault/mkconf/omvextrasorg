@@ -572,13 +572,6 @@ getArch()
 }
 
 case $2 in
-    update)
-        OMVVERSION="kralizec"
-        RELEASE="wheezy"
-
-        update
-    ;;
-
     aptclean)
         update
         /usr/sbin/omv-aptclean

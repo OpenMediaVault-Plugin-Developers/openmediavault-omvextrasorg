@@ -1,0 +1,260 @@
+#!/bin/sh
+#
+# @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
+# @author    Volker Theile <volker.theile@openmediavault.org>
+# @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
+# @copyright Copyright (c) 2009-2013 Volker Theile
+# @copyright Copyright (c) 2013-2016 OpenMediaVault Plugin Developers
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+set -e
+
+. /etc/default/openmediavault
+. /usr/share/openmediavault/scripts/helper-functions
+
+BACKPORTS_REPO="/etc/apt/sources.list.d/backports.list"
+
+BINTRAY_REPO_LOCATION="dl.bintray.com"
+BINTRAY_REPO="https://${BINTRAY_REPO_LOCATION}/openmediavault-plugin-developers"
+
+RELEASE="jessie"
+OMVVERSION="erasmus"
+
+XPATH="//system/omvextrasorg/"
+XPATH_REPO="${XPATH}repos/repo"
+
+export LANG=C
+export LC_ALL=C
+
+OMVEXTRASREPOFILE="/etc/apt/sources.list.d/omv-extras-org-${OMVVERSION}.list"
+OMVEXTRASCUSTOMREPOFILE="/etc/apt/sources.list.d/omv-extras-org-custom.list"
+OMVEXTRASAPTPREFS="/etc/apt/preferences.d/99omv-extras-org"
+
+/bin/rm -f ${OMVEXTRASREPOFILE}
+/bin/rm -f ${OMVEXTRASCUSTOMREPOFILE}
+/bin/rm -f ${OMVEXTRASAPTPREFS}
+/bin/rm -f /etc/apt/sources.list.d/omv-extras-org-*.list
+
+echo "# This is file is generated." > ${OMVEXTRASCUSTOMREPOFILE}
+touch ${OMVEXTRASAPTPREFS}
+
+# omv-extras stable
+if [ "$(omv_config_get "${XPATH}enable")" = "1" ]; then
+    echo "# Regular omv-extras.org repo" >> ${OMVEXTRASREPOFILE}
+    echo "deb ${BINTRAY_REPO}/${OMVVERSION} ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}, origin ${BINTRAY_REPO_LOCATION}
+Pin-Priority: 995
+
+EOF
+fi
+
+# omv-extras testing
+if [ "$(omv_config_get "${XPATH}testing")" = "1" ]; then
+    echo "# Testing omv-extras.org repo" >> ${OMVEXTRASREPOFILE}
+    echo "deb ${BINTRAY_REPO}/${OMVVERSION}-testing ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-testing, origin ${BINTRAY_REPO_LOCATION}
+Pin-Priority: 996
+
+EOF
+fi
+
+# omv-extras plexmediaserver
+if [ "$(omv_config_get "${XPATH}plex")" = "1" ]; then
+    echo "# Plexmediaserver repo" >> ${OMVEXTRASREPOFILE}
+    echo "deb ${BINTRAY_REPO}/${OMVVERSION}-plex ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-plex, origin ${BINTRAY_REPO_LOCATION}
+Pin-Priority: 995
+
+EOF
+fi
+
+# omv-extras greyhole
+if [ "$(omv_config_get "${XPATH}greyhole")" = "1" ]; then
+    echo "# Greyhole repo" >> ${OMVEXTRASREPOFILE}
+    echo "deb ${BINTRAY_REPO}/${OMVVERSION}-greyhole ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+    echo "deb http://www.greyhole.net/releases/deb stable main" >> ${OMVEXTRASREPOFILE}
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-greyhole, origin ${BINTRAY_REPO_LOCATION}
+Pin-Priority: 995
+
+EOF
+fi
+
+# omv-extras sync
+if [ "$(omv_config_get "${XPATH}sync")" = "1" ]; then
+    echo "# btsync repo" >> ${OMVEXTRASREPOFILE}
+    echo "deb ${BINTRAY_REPO}/${OMVVERSION}-sync ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+    echo "# syncthing repo" >> ${OMVEXTRASREPOFILE}
+    echo "deb http://apt.syncthing.net/ syncthing release" >> ${OMVEXTRASREPOFILE}
+
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-sync, origin ${BINTRAY_REPO_LOCATION}
+Pin-Priority: 995
+
+EOF
+fi
+
+# omv-extras developer/beta
+if [ "$(omv_config_get "${XPATH}beta")" = "1" ]; then
+    echo "# Beta repo" >> ${OMVEXTRASREPOFILE}
+    echo "deb ${BINTRAY_REPO}/${OMVVERSION}-beta ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-beta, origin ${BINTRAY_REPO_LOCATION}
+Pin-Priority: 995
+
+EOF
+fi
+
+# omv-extras zfs
+if [ "$(omv_config_get "${XPATH}zfs")" = "1" ]; then
+    echo "# ZFS repo" >> ${OMVEXTRASREPOFILE}
+    echo "deb ${BINTRAY_REPO}/${OMVVERSION}-zfs ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+    echo "deb http://archive.zfsonlinux.org/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${RELEASE}, origin archive.zfsonlinux.org
+Pin-Priority: 400
+
+Package: *
+Pin: release n=${OMVVERSION}-zfs, origin ${BINTRAY_REPO_LOCATION}
+Pin-Priority: 996
+
+EOF
+fi
+
+# omv-extras zfs testing
+if [ "$(omv_config_get "${XPATH}zfstesting")" = "1" ]; then
+    echo "# ZFS testing repo" >> ${OMVEXTRASREPOFILE}
+    echo "deb ${BINTRAY_REPO}/${OMVVERSION}-zfstesting ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-zfs-testing, origin ${BINTRAY_REPO_LOCATION}
+Pin-Priority: 997
+
+EOF
+fi
+
+# omv-extras mono
+if [ "$(omv_config_get "${XPATH}mono")" = "1" ]; then
+    echo "# mono-project repo" >> ${OMVEXTRASREPOFILE}
+    echo "deb ${BINTRAY_REPO}/${OMVVERSION}-mono ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+    echo "deb http://download.mono-project.com/repo/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-mono, origin ${BINTRAY_REPO_LOCATION}
+Pin-Priority: 996
+
+Package: *
+Pin: release o=download.mono-project.com
+Pin-Priority: 1001
+
+EOF
+fi
+
+# omv-extras mono testing
+if [ "$(omv_config_get "${XPATH}monotesting")" = "1" ]; then
+    echo "# mono testing repo" >> ${OMVEXTRASREPOFILE}
+    echo "deb ${BINTRAY_REPO}/${OMVVERSION}-monotesting ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-mono-testing, origin ${BINTRAY_REPO_LOCATION}
+Pin-Priority: 997
+
+EOF
+fi
+
+# omv-extras docker
+if [ "$(omv_config_get "${XPATH}docker")" = "1" ]; then
+    echo "# docker repo" >> ${OMVEXTRASREPOFILE}
+    echo "deb ${BINTRAY_REPO}/${OMVVERSION}-docker ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+    echo "deb https://apt.dockerproject.org/repo debian-${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-docker, origin ${BINTRAY_REPO_LOCATION}
+Pin-Priority: 996
+
+Package: *
+Pin: release o=apt.dockerproject.org
+Pin-Priority: 1001
+
+EOF
+fi
+
+# omv-extras docker testing
+if [ "$(omv_config_get "${XPATH}dockertesting")" = "1" ]; then
+    echo "# docker testing repo" >> ${OMVEXTRASREPOFILE}
+    echo "deb ${BINTRAY_REPO}/${OMVVERSION}-docker2 ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-docker2, origin dl.bintray.com
+Pin-Priority: 997
+
+EOF
+fi
+
+# omv-extras hwraid
+if [ "$(omv_config_get "${XPATH}hwraid")" = "1" ]; then
+    echo "# hwraid repo" >> ${OMVEXTRASREPOFILE}
+    echo "deb ${BINTRAY_REPO}/${OMVVERSION}-hwraid ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+    echo "deb http://hwraid.le-vert.net/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+    cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-hwraid, origin ${BINTRAY_REPO_LOCATION}
+Pin-Priority: 996
+
+EOF
+fi
+
+cat <<EOF >> ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-backports, origin ${BINTRAY_REPO_LOCATION}
+Pin-Priority: 995
+
+EOF
+
+chmod 644 ${OMVEXTRASAPTPREFS}
+
+# Process custom repos
+echo "# Custom repos" > ${OMVEXTRASCUSTOMREPOFILE}
+count=$(omv_config_get_count "${XPATH_REPO}")
+index=0
+while [ ${index} -le ${count} ]; do
+    repo=$(omv_config_get "${XPATH_REPO}[position()=${index}]/repo")
+
+    if [ "${repo}" != "" ]; then
+        name=$(omv_config_get "${XPATH_REPO}[position()=${index}]/name")
+        key=$(omv_config_get "${XPATH_REPO}[position()=${index}]/key")
+
+        echo "# ${name}" >> ${OMVEXTRASCUSTOMREPOFILE}
+        echo "${repo}" >> ${OMVEXTRASCUSTOMREPOFILE}
+    fi
+
+    index=$(( ${index} + 1 ))
+done
+
+if [ -f "${BACKPORTS_REPO}" ]; then
+    echo "deb http://httpredir.debian.org/debian ${RELEASE}-backports main contrib non-free" > $BACKPORTS_REPO
+fi
+
+exit 0
