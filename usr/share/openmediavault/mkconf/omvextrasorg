@@ -29,6 +29,9 @@ BACKPORTS_REPO="/etc/apt/sources.list.d/backports.list"
 BINTRAY_REPO_LOCATION="dl.bintray.com"
 BINTRAY_REPO="https://${BINTRAY_REPO_LOCATION}/openmediavault-plugin-developers"
 
+DH2K_REPO_LOCATION="dh2k.omv-extras.org"
+DH2K_REPO_URL="http://${DH2K_REPO_LOCATION}/debian/"
+    
 OMVVERSION=$(xmlstarlet sel -t -v "//distribution" ${OMV_PRODUCTINFO_FILE} | xmlstarlet unesc)
 case $(cat /etc/debian_version) in
   6*) RELEASE="squeeze" ;;
@@ -94,6 +97,7 @@ EOF
     if [ "$(omv_config_get "${XPATH}plex")" = "1" ]; then
         echo "# Plexmediaserver repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${BINTRAY_REPO}/${OMVVERSION}-plex ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+        echo "deb ${DH2K_REPO_URL} plex-${RELEASE}-mirror main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-plex, origin ${BINTRAY_REPO_LOCATION}
