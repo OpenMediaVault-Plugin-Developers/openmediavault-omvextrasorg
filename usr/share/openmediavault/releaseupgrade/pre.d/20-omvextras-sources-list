@@ -45,6 +45,7 @@ OMVEXTRASAPTPREFS="/etc/apt/preferences.d/99omv-extras-org"
 /bin/rm -f ${OMVEXTRASREPOFILE}
 /bin/rm -f ${OMVEXTRASCUSTOMREPOFILE}
 /bin/rm -f ${OMVEXTRASAPTPREFS}
+/bin/rm -f ${BACKPORTS_REPO}
 /bin/rm -f /etc/apt/sources.list.d/omv-extras-org-*.list
 
 echo "# This is file is generated." > ${OMVEXTRASCUSTOMREPOFILE}
@@ -252,9 +253,5 @@ while [ ${index} -le ${count} ]; do
 
     index=$(( ${index} + 1 ))
 done
-
-if [ -f "${BACKPORTS_REPO}" ]; then
-    echo "deb http://httpredir.debian.org/debian ${RELEASE}-backports main contrib non-free" > $BACKPORTS_REPO
-fi
 
 exit 0
