@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (2.13) stable; urgency=low
+
+  * Update arch detection
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 14 Jan 2016 12:01:11 -0600
+
 openmediavault-omvextrasorg (2.12.3) stable; urgency=low
 
   * Minor tweak
