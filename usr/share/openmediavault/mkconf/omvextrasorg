@@ -422,6 +422,9 @@ getArch()
     ARCH="`/bin/uname -m`"
 
     case "$ARCH" in
+        *amd64*)
+            AMD64=true
+        ;;
         *x86_64*)
             AMD64=true
         ;;

@@ -174,20 +174,16 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
 
         $uname = php_uname();
 
-        if ( strpos($uname, "armv6l") !== false  )
-        {
+        if ( strpos($uname, "armv6l") !== false  ) {
             $arch = 1;
-        }
-        elseif ( strpos($uname, "armv7l") !== false )
-        {
+        } elseif ( strpos($uname, "armv7l") !== false ) {
             $arch = 2;
-        }
-        elseif ( strpos($uname, "486") !== false || strpos($uname, "686") !== false )
-        {
+        } elseif ( strpos($uname, "486") !== false ||
+                   strpos($uname, "586") !== false ||
+                   strpos($uname, "686") !== false || ) {
             $arch = 3;
-        }
-        elseif ( strpos($uname, "amd64") !== false  )
-        {
+        } elseif ( strpos($uname, "amd64") !== false ||
+                   strpos($uname, "x86_64") !== false ) {
             $arch = 4;
         }
 
