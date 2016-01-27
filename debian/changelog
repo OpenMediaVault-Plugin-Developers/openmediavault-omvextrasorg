@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (3.0.8) stable; urgency=low
+
+  * Add virtualbox apt pinning
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 27 Jan 2016 11:46:24 -0600
+
 openmediavault-omvextrasorg (3.0.7) stable; urgency=medium
 
   * Fix typo
