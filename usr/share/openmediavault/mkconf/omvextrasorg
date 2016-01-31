@@ -188,7 +188,8 @@ EOF
         apt-key adv --keyserver ${KEYSERVER} --recv-keys "FDA5DFFC"
         echo "# mono-project repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${BINTRAY_REPO}/${OMVVERSION}-mono ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-        echo "deb http://download.mono-project.com/repo/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+        echo "deb http://download.mono-project.com/repo/debian wheezy main" >> ${OMVEXTRASREPOFILE}
+        echo "deb http://download.mono-project.com/repo/debian wheezy-libjpeg62-compat main" >> ${OMVEXTRASREPOFILE}
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-mono, origin ${BINTRAY_REPO_LOCATION}
