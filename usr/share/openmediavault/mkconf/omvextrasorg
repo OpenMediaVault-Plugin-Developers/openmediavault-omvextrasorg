@@ -262,7 +262,7 @@ Package: *
 Pin: release n=${OMVVERSION}-backports, origin ${BINTRAY_REPO_LOCATION}
 Pin-Priority: 995
 
-Package: virtualbox virtualbox-dkms
+Package: virtualbox virtualbox-dkms virtualbox-qt
 Pin: release a=jessie-backports
 Pin-Priority: 500
 EOF
