@@ -46,4 +46,7 @@ touch /var/cache/openmediavault/archives/Packages
 echo "\n7. Updating apt..."
 /usr/bin/apt-get update
 
+echo "\n8. Saving current package list..."
+dpkg -l | grep ^ii | awk '{print $2 "=" $3 " \\"}' > /var/cache/openmediavault/currently_installed_packages.list
+
 exit 0
