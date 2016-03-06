@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-26 08:24-0600\n"
-"PO-Revision-Date: 2015-08-30 13:45+0000\n"
+"POT-Creation-Date: 2016-03-06 15:33-0600\n"
+"PO-Revision-Date: 2016-03-06 21:33+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -112,17 +112,17 @@ msgstr ""
 msgid "Administrator: read/write, Users: read/write, Others: read-only"
 msgstr ""
 
+msgid "All"
+msgstr ""
+
 msgid "Apt Clean"
 msgstr "Apt Clean"
 
 msgid "Architecture"
 msgstr "Architektura"
 
-msgid "BTSync"
-msgstr "BTSync"
-
-msgid "BTSync repository"
-msgstr "Repozytorium BTSync"
+msgid "Backup"
+msgstr ""
 
 msgid "Beta"
 msgstr "Beta"
@@ -167,11 +167,6 @@ msgid "Distribution"
 msgstr "Dystrybucja"
 
 msgid ""
-"Do not enable this repository unless you are using the GlusterFS filesystem "
-"(uncommon)"
-msgstr ""
-
-msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
 msgstr ""
@@ -193,15 +188,6 @@ msgstr ""
 msgid "Done..."
 msgstr "Skończone..."
 
-msgid "Download Managers"
-msgstr "Menadżery pobierania"
-
-msgid "Download Managers Testing"
-msgstr ""
-
-msgid "Download managers for newsgroups, torrents, usenet, and streaming"
-msgstr ""
-
 msgid "Edit custom repo"
 msgstr "Edytuj repozytorium"
 
@@ -211,8 +197,8 @@ msgstr "Włącz"
 msgid "Everyone: read/write"
 msgstr "Wszyscy: odczyt/zapis"
 
-msgid "GlusterFS"
-msgstr "GlusterFS"
+msgid "Filesystems"
+msgstr ""
 
 msgid "Greyhole"
 msgstr "Greyhole"
@@ -234,11 +220,11 @@ msgstr ""
 msgid "Information"
 msgstr "Informacje"
 
-msgid "Install Backports 3.16 kernel"
-msgstr "Zainstaluj kernel 3.16 z Backports"
+msgid "Install Backports kernel"
+msgstr ""
 
-msgid "Install Backports 3.16 kernel ..."
-msgstr "Instaluję Kernel 3.16 z Backports ..."
+msgid "Install Backports kernel ..."
+msgstr ""
 
 msgid "Install kernel headers"
 msgstr ""
@@ -280,6 +266,9 @@ msgstr "Testowe Mono"
 msgid "Mono and mono-project.com"
 msgstr "Mono i mono-project.com"
 
+msgid "Multimedia"
+msgstr ""
+
 msgid "Name"
 msgstr "Nazwa"
 
@@ -298,6 +287,9 @@ msgstr "OMV-Extras.org Testowe"
 msgid "PID"
 msgstr "PID"
 
+msgid "Paused"
+msgstr ""
+
 msgid "Permissions"
 msgstr "Uprawnienia"
 
@@ -309,9 +301,6 @@ msgstr "Plex"
 
 msgid "Plex Media Server repository"
 msgstr "Repozytoria Plex Media Server"
-
-msgid "Plugins for setting up virtual private networks"
-msgstr ""
 
 msgid "Process List"
 msgstr "Lista procesów"
@@ -336,6 +325,9 @@ msgstr ""
 
 msgid "Reset permissions ..."
 msgstr "Resetuje uprawnienia ..."
+
+msgid "Running"
+msgstr ""
 
 msgid "Select a directory"
 msgstr ""
@@ -364,6 +356,9 @@ msgstr "Udostępniony folder"
 msgid "Shared Folder In Use"
 msgstr ""
 
+msgid "Sleeping"
+msgstr ""
+
 msgid "State"
 msgstr "Status"
 
@@ -377,6 +372,12 @@ msgid "Support Info"
 msgstr "Informacja wsparcia"
 
 msgid "Support Info Module Selection"
+msgstr ""
+
+msgid "Sync"
+msgstr ""
+
+msgid "Sync repository"
 msgstr ""
 
 msgid "System - iface"
@@ -394,9 +395,6 @@ msgstr ""
 msgid "Testing repository for Mono"
 msgstr "Testowe repozytorium Mono"
 
-msgid "Testing repository for download managers"
-msgstr "Testowe repozytorium dla menadżerów pobierania"
-
 msgid "Type"
 msgstr "Typ"
 
@@ -406,20 +404,17 @@ msgstr "Odśwież"
 msgid "User"
 msgstr "Użytkownik"
 
-msgid "VDR"
-msgstr "VDR"
-
-msgid "VPN"
-msgstr "VPN"
+msgid "Utilities"
+msgstr ""
 
 msgid "Version"
 msgstr "Wersja"
 
-msgid "Virtualbox"
-msgstr "Virtualbox"
+msgid "Virtualization"
+msgstr ""
 
-msgid "Virtualbox repository"
-msgstr "Repozytoria Virtualbox"
+msgid "Wait"
+msgstr ""
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -427,5 +422,5 @@ msgstr "ZFS"
 msgid "ZFS Testing"
 msgstr ""
 
-msgid "e-tobi.net repository"
-msgstr "Repozytoria e-tobi.net"
+msgid "Zombie"
+msgstr ""

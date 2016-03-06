@@ -5,14 +5,14 @@
 # Translators:
 # Alexander Savchenko, 2013
 # Alexander Savchenko, 2014-2015
-# артур Мудрых <arturmon82@gmail.com>, 2013,2015
+# артур Мудрых <arturmon82@gmail.com>, 2013,2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-26 08:24-0600\n"
-"PO-Revision-Date: 2015-09-15 07:28+0000\n"
-"Last-Translator: артур Мудрых <arturmon82@gmail.com>\n"
+"POT-Creation-Date: 2016-03-06 15:33-0600\n"
+"PO-Revision-Date: 2016-03-06 21:33+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -113,17 +113,17 @@ msgstr "Администратор: чтения / записи, Пользов�
 msgid "Administrator: read/write, Users: read/write, Others: read-only"
 msgstr "Администратор: чтение / запись, Пользователи: чтение / запись, Другие: только для чтения"
 
+msgid "All"
+msgstr ""
+
 msgid "Apt Clean"
 msgstr "Очистить кеш пакетов APT"
 
 msgid "Architecture"
 msgstr "Архитектура"
 
-msgid "BTSync"
-msgstr "BTSync"
-
-msgid "BTSync repository"
-msgstr "BTSync репозиторий"
+msgid "Backup"
+msgstr ""
 
 msgid "Beta"
 msgstr "Бета"
@@ -132,7 +132,7 @@ msgid "Beta repository"
 msgstr "Бета хранилище"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Отмена"
 
 msgid "Checking for new updates ..."
 msgstr "Проверка обновлений ..."
@@ -147,7 +147,7 @@ msgid "Clear all ACLs."
 msgstr "Очистить все ACLs."
 
 msgid "Command"
-msgstr ""
+msgstr "Команда"
 
 msgid "Comment"
 msgstr "Комментарий"
@@ -166,11 +166,6 @@ msgstr "Разработчик"
 
 msgid "Distribution"
 msgstr ""
-
-msgid ""
-"Do not enable this repository unless you are using the GlusterFS filesystem "
-"(uncommon)"
-msgstr "Не включайте этот репозиторий, если вы не используете файловую систему GlusterFS (редко)"
 
 msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
@@ -194,17 +189,8 @@ msgstr ""
 msgid "Done..."
 msgstr "Готово..."
 
-msgid "Download Managers"
-msgstr "Менеджеры загрузок"
-
-msgid "Download Managers Testing"
-msgstr "Менеджеры загрузок тестовые"
-
-msgid "Download managers for newsgroups, torrents, usenet, and streaming"
-msgstr ""
-
 msgid "Edit custom repo"
-msgstr ""
+msgstr "Редактировать пользовательский репозиторий"
 
 msgid "Enable"
 msgstr "Включить"
@@ -212,8 +198,8 @@ msgstr "Включить"
 msgid "Everyone: read/write"
 msgstr "Все: чтение / запись"
 
-msgid "GlusterFS"
-msgstr "GlusterFS"
+msgid "Filesystems"
+msgstr ""
 
 msgid "Greyhole"
 msgstr "Greyhole"
@@ -235,11 +221,11 @@ msgstr "Используется"
 msgid "Information"
 msgstr "Информация"
 
-msgid "Install Backports 3.16 kernel"
-msgstr "Установить ядро Backports 3.16"
+msgid "Install Backports kernel"
+msgstr ""
 
-msgid "Install Backports 3.16 kernel ..."
-msgstr "Устанавливается ядро 3.16 ..."
+msgid "Install Backports kernel ..."
+msgstr ""
 
 msgid "Install kernel headers"
 msgstr "Устанавливаем заголовки ядра"
@@ -281,6 +267,9 @@ msgstr "Mono тестовое"
 msgid "Mono and mono-project.com"
 msgstr "Mono и mono-project.com"
 
+msgid "Multimedia"
+msgstr ""
+
 msgid "Name"
 msgstr "Имя"
 
@@ -299,6 +288,9 @@ msgstr "OMV-Extras.org Тестовый"
 msgid "PID"
 msgstr "PID"
 
+msgid "Paused"
+msgstr ""
+
 msgid "Permissions"
 msgstr "Разрешения"
 
@@ -310,9 +302,6 @@ msgstr "Plex"
 
 msgid "Plex Media Server repository"
 msgstr "Plex Media Server репозиторий"
-
-msgid "Plugins for setting up virtual private networks"
-msgstr "Плагины для создания виртуальных частных сетей"
 
 msgid "Process List"
 msgstr "Список процессов"
@@ -337,6 +326,9 @@ msgstr ""
 
 msgid "Reset permissions ..."
 msgstr "Сброс разрешений ..."
+
+msgid "Running"
+msgstr ""
 
 msgid "Select a directory"
 msgstr "Выбрать каталог"
@@ -365,8 +357,11 @@ msgstr ""
 msgid "Shared Folder In Use"
 msgstr ""
 
-msgid "State"
+msgid "Sleeping"
 msgstr ""
+
+msgid "State"
+msgstr "Состояние"
 
 msgid "Style #1"
 msgstr ""
@@ -378,6 +373,12 @@ msgid "Support Info"
 msgstr ""
 
 msgid "Support Info Module Selection"
+msgstr ""
+
+msgid "Sync"
+msgstr ""
+
+msgid "Sync repository"
 msgstr ""
 
 msgid "System - iface"
@@ -395,9 +396,6 @@ msgstr "Тестовое хранилище Docker"
 msgid "Testing repository for Mono"
 msgstr "Тестовое хранилище Mono"
 
-msgid "Testing repository for download managers"
-msgstr "Тестовое хранилище для менеджеров загрузки"
-
 msgid "Type"
 msgstr "Тип"
 
@@ -407,19 +405,16 @@ msgstr "Обновить"
 msgid "User"
 msgstr "Пользователь"
 
-msgid "VDR"
-msgstr "VDR"
-
-msgid "VPN"
-msgstr "VPN"
+msgid "Utilities"
+msgstr ""
 
 msgid "Version"
 msgstr "Версия"
 
-msgid "Virtualbox"
-msgstr "Virtualbox"
+msgid "Virtualization"
+msgstr ""
 
-msgid "Virtualbox repository"
+msgid "Wait"
 msgstr ""
 
 msgid "ZFS"
@@ -428,5 +423,5 @@ msgstr "ZFS"
 msgid "ZFS Testing"
 msgstr "ZFS Тестовый"
 
-msgid "e-tobi.net repository"
+msgid "Zombie"
 msgstr ""

@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-26 08:24-0600\n"
-"PO-Revision-Date: 2015-12-11 06:01+0000\n"
-"Last-Translator: songming <by@songming.me>\n"
+"POT-Creation-Date: 2016-03-06 15:33-0600\n"
+"PO-Revision-Date: 2016-03-06 21:33+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -111,17 +111,17 @@ msgstr "管理员：读/写，用户：读/写，其它：无权限"
 msgid "Administrator: read/write, Users: read/write, Others: read-only"
 msgstr "管理员：读/写，用户：读/写，其它：读/写"
 
+msgid "All"
+msgstr ""
+
 msgid "Apt Clean"
 msgstr "清除APT缓存"
 
 msgid "Architecture"
 msgstr "构架"
 
-msgid "BTSync"
-msgstr "BTSync"
-
-msgid "BTSync repository"
-msgstr "BTSync源"
+msgid "Backup"
+msgstr ""
 
 msgid "Beta"
 msgstr "Beta"
@@ -166,11 +166,6 @@ msgid "Distribution"
 msgstr "发行版"
 
 msgid ""
-"Do not enable this repository unless you are using the GlusterFS filesystem "
-"(uncommon)"
-msgstr "除非你使用GlusterFS文件系统(特殊的文件系统)，否则不建议启用该软件源。"
-
-msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
 msgstr "除非你使用ZFS文件系统(特殊的文件系统)，否则不建议启用该软件源。"
@@ -192,15 +187,6 @@ msgstr "Docker源"
 msgid "Done..."
 msgstr "完成..."
 
-msgid "Download Managers"
-msgstr "Download Managers"
-
-msgid "Download Managers Testing"
-msgstr "Download Managers Testing"
-
-msgid "Download managers for newsgroups, torrents, usenet, and streaming"
-msgstr "下载管理器包含各种下载协议，newsgroups, torrents, usenet, streaming"
-
 msgid "Edit custom repo"
 msgstr "编辑自定义源"
 
@@ -210,8 +196,8 @@ msgstr "启用"
 msgid "Everyone: read/write"
 msgstr "任何人：读/写"
 
-msgid "GlusterFS"
-msgstr "GlusterFS"
+msgid "Filesystems"
+msgstr ""
 
 msgid "Greyhole"
 msgstr "Greyhole"
@@ -233,11 +219,11 @@ msgstr "使用位置"
 msgid "Information"
 msgstr "信息"
 
-msgid "Install Backports 3.16 kernel"
-msgstr "安装Backports 3.16内核"
+msgid "Install Backports kernel"
+msgstr ""
 
-msgid "Install Backports 3.16 kernel ..."
-msgstr "安装Backports 3.16内核中 ..."
+msgid "Install Backports kernel ..."
+msgstr ""
 
 msgid "Install kernel headers"
 msgstr "安装kernel headers"
@@ -279,6 +265,9 @@ msgstr "Mono Testing"
 msgid "Mono and mono-project.com"
 msgstr "Mono和mono-project.com"
 
+msgid "Multimedia"
+msgstr ""
+
 msgid "Name"
 msgstr "名称"
 
@@ -297,6 +286,9 @@ msgstr "OMV-Extras.org测试源"
 msgid "PID"
 msgstr "PID"
 
+msgid "Paused"
+msgstr ""
+
 msgid "Permissions"
 msgstr "权限"
 
@@ -308,9 +300,6 @@ msgstr "Plex"
 
 msgid "Plex Media Server repository"
 msgstr "Plex多媒体服务源"
-
-msgid "Plugins for setting up virtual private networks"
-msgstr "虚拟私有网络VPN插件"
 
 msgid "Process List"
 msgstr "进程列表"
@@ -335,6 +324,9 @@ msgstr "该模式将重设文件夹和文件。"
 
 msgid "Reset permissions ..."
 msgstr "重设权限中 ..."
+
+msgid "Running"
+msgstr ""
 
 msgid "Select a directory"
 msgstr "选择目录"
@@ -363,6 +355,9 @@ msgstr "共享文件夹"
 msgid "Shared Folder In Use"
 msgstr "共享文件夹使用情况"
 
+msgid "Sleeping"
+msgstr ""
+
 msgid "State"
 msgstr "状态"
 
@@ -377,6 +372,12 @@ msgstr "支持信息"
 
 msgid "Support Info Module Selection"
 msgstr "选择需要的模块以获得支持信息"
+
+msgid "Sync"
+msgstr ""
+
+msgid "Sync repository"
+msgstr ""
 
 msgid "System - iface"
 msgstr ""
@@ -393,9 +394,6 @@ msgstr "Docker的测试源"
 msgid "Testing repository for Mono"
 msgstr "Mono测试源"
 
-msgid "Testing repository for download managers"
-msgstr "download managers测试源"
-
 msgid "Type"
 msgstr "类型"
 
@@ -405,20 +403,17 @@ msgstr "更新"
 msgid "User"
 msgstr "用户"
 
-msgid "VDR"
-msgstr "VDR"
-
-msgid "VPN"
-msgstr "VPN"
+msgid "Utilities"
+msgstr ""
 
 msgid "Version"
 msgstr "版本"
 
-msgid "Virtualbox"
-msgstr "Virtualbox"
+msgid "Virtualization"
+msgstr ""
 
-msgid "Virtualbox repository"
-msgstr "Virtualbox源"
+msgid "Wait"
+msgstr ""
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -426,5 +421,5 @@ msgstr "ZFS"
 msgid "ZFS Testing"
 msgstr "ZFS测试源"
 
-msgid "e-tobi.net repository"
-msgstr "e-tobi.net源"
+msgid "Zombie"
+msgstr ""

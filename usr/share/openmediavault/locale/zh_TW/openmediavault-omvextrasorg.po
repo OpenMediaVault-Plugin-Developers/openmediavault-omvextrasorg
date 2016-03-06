@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-26 08:24-0600\n"
-"PO-Revision-Date: 2015-09-03 14:20+0000\n"
-"Last-Translator: kochin <kochinc@outlook.com>\n"
+"POT-Creation-Date: 2016-03-06 15:33-0600\n"
+"PO-Revision-Date: 2016-03-06 21:33+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -111,17 +111,17 @@ msgstr "管理員：讀/寫，用戶：讀/寫，其他：不能存取"
 msgid "Administrator: read/write, Users: read/write, Others: read-only"
 msgstr "管理員：讀/寫，用戶：讀/寫，其他：只能讀取"
 
+msgid "All"
+msgstr ""
+
 msgid "Apt Clean"
 msgstr "Apt 清理"
 
 msgid "Architecture"
 msgstr "架構"
 
-msgid "BTSync"
-msgstr "BTSync"
-
-msgid "BTSync repository"
-msgstr "BTSync 套件庫"
+msgid "Backup"
+msgstr ""
 
 msgid "Beta"
 msgstr "Beta"
@@ -166,11 +166,6 @@ msgid "Distribution"
 msgstr "發行版"
 
 msgid ""
-"Do not enable this repository unless you are using the GlusterFS filesystem "
-"(uncommon)"
-msgstr "不要啟用這個套件庫，除非你使用了 GlusterFS 檔案系統 (罕見)"
-
-msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
 msgstr "不要啟用這個套件庫，除非你使用了 ZFS 檔案系統 (罕見)"
@@ -192,15 +187,6 @@ msgstr "Docker 套件庫"
 msgid "Done..."
 msgstr "完成 ..."
 
-msgid "Download Managers"
-msgstr "下載管理員"
-
-msgid "Download Managers Testing"
-msgstr "下載管理員測試"
-
-msgid "Download managers for newsgroups, torrents, usenet, and streaming"
-msgstr "用於新聞群組(newsgroups)、torrents、usenet 及串流(streaming)的下載管理員"
-
 msgid "Edit custom repo"
 msgstr "編輯客製套件庫"
 
@@ -210,8 +196,8 @@ msgstr "啟用"
 msgid "Everyone: read/write"
 msgstr "每個人：讀/寫"
 
-msgid "GlusterFS"
-msgstr "GlusterFS"
+msgid "Filesystems"
+msgstr ""
 
 msgid "Greyhole"
 msgstr "Greyhole"
@@ -233,11 +219,11 @@ msgstr "使用者"
 msgid "Information"
 msgstr "資訊"
 
-msgid "Install Backports 3.16 kernel"
-msgstr "安裝向後移植 3.16 核心"
+msgid "Install Backports kernel"
+msgstr ""
 
-msgid "Install Backports 3.16 kernel ..."
-msgstr "安裝向後移植 3.16 核心中 ..."
+msgid "Install Backports kernel ..."
+msgstr ""
 
 msgid "Install kernel headers"
 msgstr "安裝核心標頭檔案"
@@ -279,6 +265,9 @@ msgstr "Mono 測試"
 msgid "Mono and mono-project.com"
 msgstr "Mono 和 mono-project.com"
 
+msgid "Multimedia"
+msgstr ""
+
 msgid "Name"
 msgstr "名稱"
 
@@ -297,6 +286,9 @@ msgstr "OMV-Extras.org 測試"
 msgid "PID"
 msgstr "PID"
 
+msgid "Paused"
+msgstr ""
+
 msgid "Permissions"
 msgstr "權限"
 
@@ -308,9 +300,6 @@ msgstr "Plex"
 
 msgid "Plex Media Server repository"
 msgstr "Plex Media Server 套件庫"
-
-msgid "Plugins for setting up virtual private networks"
-msgstr "用於設定虛擬專用網路的插件"
 
 msgid "Process List"
 msgstr "程序列表"
@@ -335,6 +324,9 @@ msgstr "將檔案夾及檔案重設成此檔案模式。"
 
 msgid "Reset permissions ..."
 msgstr "重設權限 ..."
+
+msgid "Running"
+msgstr ""
 
 msgid "Select a directory"
 msgstr "選擇一個目錄"
@@ -363,6 +355,9 @@ msgstr "共享檔案夾"
 msgid "Shared Folder In Use"
 msgstr "共享檔案夾被使用中"
 
+msgid "Sleeping"
+msgstr ""
+
 msgid "State"
 msgstr "狀態"
 
@@ -377,6 +372,12 @@ msgstr "支援資訊"
 
 msgid "Support Info Module Selection"
 msgstr "支援資訊模組選擇"
+
+msgid "Sync"
+msgstr ""
+
+msgid "Sync repository"
+msgstr ""
 
 msgid "System - iface"
 msgstr "系統 - iface"
@@ -393,9 +394,6 @@ msgstr "Docker 的測試套件庫"
 msgid "Testing repository for Mono"
 msgstr "Mono 的測試套件庫"
 
-msgid "Testing repository for download managers"
-msgstr "下載管理員的測試套件庫"
-
 msgid "Type"
 msgstr "型式"
 
@@ -405,20 +403,17 @@ msgstr "更新"
 msgid "User"
 msgstr "用戶"
 
-msgid "VDR"
-msgstr "VDR"
-
-msgid "VPN"
-msgstr "VPN"
+msgid "Utilities"
+msgstr ""
 
 msgid "Version"
 msgstr "版本"
 
-msgid "Virtualbox"
-msgstr "Virtualbox"
+msgid "Virtualization"
+msgstr ""
 
-msgid "Virtualbox repository"
-msgstr "Virtualbox 套件庫"
+msgid "Wait"
+msgstr ""
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -426,5 +421,5 @@ msgstr "ZFS"
 msgid "ZFS Testing"
 msgstr "ZFS 測試"
 
-msgid "e-tobi.net repository"
-msgstr "e-tobi.net 套件庫"
+msgid "Zombie"
+msgstr ""

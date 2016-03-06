@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-26 08:24-0600\n"
-"PO-Revision-Date: 2015-09-20 19:31+0000\n"
-"Last-Translator: okpail <okpail@gmail.com>\n"
+"POT-Creation-Date: 2016-03-06 15:33-0600\n"
+"PO-Revision-Date: 2016-03-06 21:33+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -111,17 +111,17 @@ msgstr "Administrator: lezen/schrijven, Gebruikers: lezen/schrijven, Anderen: ge
 msgid "Administrator: read/write, Users: read/write, Others: read-only"
 msgstr "Administrator: lezen/schrijven, Gebruikers: lezen/schrijven, Anderen: geen toegang"
 
+msgid "All"
+msgstr ""
+
 msgid "Apt Clean"
 msgstr "Apt Schoonmaken"
 
 msgid "Architecture"
 msgstr "Architectuur"
 
-msgid "BTSync"
-msgstr "BTSync"
-
-msgid "BTSync repository"
-msgstr "BTSync repository"
+msgid "Backup"
+msgstr ""
 
 msgid "Beta"
 msgstr "Beta"
@@ -166,11 +166,6 @@ msgid "Distribution"
 msgstr "Distributie"
 
 msgid ""
-"Do not enable this repository unless you are using the GlusterFS filesystem "
-"(uncommon)"
-msgstr "Zet deze repositorie niet aan tenzij je het GlusterFS file systeem gebruikt (ongebruikelijke instelling)"
-
-msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
 msgstr "et deze repositorie niet aan tenzij je het ZFS file systeem gebruikt (ongebruikelijke instelling)"
@@ -192,15 +187,6 @@ msgstr "Docker repository"
 msgid "Done..."
 msgstr "Klaar..."
 
-msgid "Download Managers"
-msgstr "Download Managers"
-
-msgid "Download Managers Testing"
-msgstr "Download Managers testen"
-
-msgid "Download managers for newsgroups, torrents, usenet, and streaming"
-msgstr "Download managers voor nieuwsgroepen, torrents, usenet, en streaming"
-
 msgid "Edit custom repo"
 msgstr "Aanpassen van de aangepast repository"
 
@@ -210,8 +196,8 @@ msgstr "Inschakelen"
 msgid "Everyone: read/write"
 msgstr "Allen: lezen/schrijven"
 
-msgid "GlusterFS"
-msgstr "GlusterFS"
+msgid "Filesystems"
+msgstr ""
 
 msgid "Greyhole"
 msgstr "Greyhole"
@@ -233,11 +219,11 @@ msgstr "In gebruik door"
 msgid "Information"
 msgstr "Informatie"
 
-msgid "Install Backports 3.16 kernel"
-msgstr "Installeer de Backports 3.16 kernel"
+msgid "Install Backports kernel"
+msgstr ""
 
-msgid "Install Backports 3.16 kernel ..."
-msgstr "de Backports 3.16 kernel aan het installeren ..."
+msgid "Install Backports kernel ..."
+msgstr ""
 
 msgid "Install kernel headers"
 msgstr "Kernel headers installeren"
@@ -279,6 +265,9 @@ msgstr "Mono Testen"
 msgid "Mono and mono-project.com"
 msgstr "Mono en mono-project.com"
 
+msgid "Multimedia"
+msgstr ""
+
 msgid "Name"
 msgstr "Naam"
 
@@ -297,6 +286,9 @@ msgstr "OMV-Extras.org Testen"
 msgid "PID"
 msgstr "PID"
 
+msgid "Paused"
+msgstr ""
+
 msgid "Permissions"
 msgstr "Permissies"
 
@@ -308,9 +300,6 @@ msgstr "Plex"
 
 msgid "Plex Media Server repository"
 msgstr "Plex Media Server repository"
-
-msgid "Plugins for setting up virtual private networks"
-msgstr "Plugins voor het opzetten van virtual private netwerken"
 
 msgid "Process List"
 msgstr "Lijst van processen"
@@ -335,6 +324,9 @@ msgstr "Reset folders en files naar deze file mode."
 
 msgid "Reset permissions ..."
 msgstr "Resetten van Permissies..."
+
+msgid "Running"
+msgstr ""
 
 msgid "Select a directory"
 msgstr "Selecteer een directory"
@@ -363,6 +355,9 @@ msgstr "Gedeelde Folder"
 msgid "Shared Folder In Use"
 msgstr "In gebruik zijn gedeelde folder"
 
+msgid "Sleeping"
+msgstr ""
+
 msgid "State"
 msgstr "State"
 
@@ -377,6 +372,12 @@ msgstr "Support Info"
 
 msgid "Support Info Module Selection"
 msgstr "Support Info Module Selectie"
+
+msgid "Sync"
+msgstr ""
+
+msgid "Sync repository"
+msgstr ""
 
 msgid "System - iface"
 msgstr "System - iface"
@@ -393,9 +394,6 @@ msgstr "De repository voor Docker aan het testen"
 msgid "Testing repository for Mono"
 msgstr "De repository testen voor het beschikbaar zijn van Mono"
 
-msgid "Testing repository for download managers"
-msgstr "Test de repository of download managers beschikbaar zijn"
-
 msgid "Type"
 msgstr "Type"
 
@@ -405,20 +403,17 @@ msgstr "Update"
 msgid "User"
 msgstr "Gebruiker"
 
-msgid "VDR"
-msgstr "VDR"
-
-msgid "VPN"
-msgstr "VPN (Virtueel Prive Netwerk)"
+msgid "Utilities"
+msgstr ""
 
 msgid "Version"
 msgstr "Versie"
 
-msgid "Virtualbox"
-msgstr "Virtualbox"
+msgid "Virtualization"
+msgstr ""
 
-msgid "Virtualbox repository"
-msgstr "Virtualbox repository"
+msgid "Wait"
+msgstr ""
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -426,5 +421,5 @@ msgstr "ZFS"
 msgid "ZFS Testing"
 msgstr "ZFS Testing"
 
-msgid "e-tobi.net repository"
-msgstr "e-tobi.net repository"
+msgid "Zombie"
+msgstr ""

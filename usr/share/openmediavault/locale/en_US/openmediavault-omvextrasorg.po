@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-26 08:24-0600\n"
-"PO-Revision-Date: 2015-08-30 13:45+0000\n"
+"POT-Creation-Date: 2016-03-06 15:33-0600\n"
+"PO-Revision-Date: 2016-03-06 21:33+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: English (United States) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/en_US/)\n"
 "MIME-Version: 1.0\n"
@@ -110,17 +110,17 @@ msgstr "Administrator: read/write, Users: read/write, Others: no access"
 msgid "Administrator: read/write, Users: read/write, Others: read-only"
 msgstr "Administrator: read/write, Users: read/write, Others: read-only"
 
+msgid "All"
+msgstr "All"
+
 msgid "Apt Clean"
 msgstr "Apt Clean"
 
 msgid "Architecture"
 msgstr "Architecture"
 
-msgid "BTSync"
-msgstr "BTSync"
-
-msgid "BTSync repository"
-msgstr "BTSync repository"
+msgid "Backup"
+msgstr "Backup"
 
 msgid "Beta"
 msgstr "Beta"
@@ -165,11 +165,6 @@ msgid "Distribution"
 msgstr "Distribution"
 
 msgid ""
-"Do not enable this repository unless you are using the GlusterFS filesystem "
-"(uncommon)"
-msgstr "Do not enable this repository unless you are using the GlusterFS filesystem (uncommon)"
-
-msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
 msgstr "Do not enable this repository unless you are using the ZFS filesystem (uncommon)"
@@ -191,15 +186,6 @@ msgstr "Docker repository"
 msgid "Done..."
 msgstr "Done..."
 
-msgid "Download Managers"
-msgstr "Download Managers"
-
-msgid "Download Managers Testing"
-msgstr "Download Managers Testing"
-
-msgid "Download managers for newsgroups, torrents, usenet, and streaming"
-msgstr "Download managers for newsgroups, torrents, usenet, and streaming"
-
 msgid "Edit custom repo"
 msgstr "Edit custom repo"
 
@@ -209,8 +195,8 @@ msgstr "Enable"
 msgid "Everyone: read/write"
 msgstr "Everyone: read/write"
 
-msgid "GlusterFS"
-msgstr "GlusterFS"
+msgid "Filesystems"
+msgstr "Filesystems"
 
 msgid "Greyhole"
 msgstr "Greyhole"
@@ -232,11 +218,11 @@ msgstr "In Use By"
 msgid "Information"
 msgstr "Information"
 
-msgid "Install Backports 3.16 kernel"
-msgstr "Install Backports 3.16 kernel"
+msgid "Install Backports kernel"
+msgstr "Install Backports kernel"
 
-msgid "Install Backports 3.16 kernel ..."
-msgstr "Install Backports 3.16 kernel ..."
+msgid "Install Backports kernel ..."
+msgstr "Install Backports kernel ..."
 
 msgid "Install kernel headers"
 msgstr "Install kernel headers"
@@ -278,6 +264,9 @@ msgstr "Mono Testing"
 msgid "Mono and mono-project.com"
 msgstr "Mono and mono-project.com"
 
+msgid "Multimedia"
+msgstr "Multimedia"
+
 msgid "Name"
 msgstr "Name"
 
@@ -296,6 +285,9 @@ msgstr "OMV-Extras.org Testing"
 msgid "PID"
 msgstr "PID"
 
+msgid "Paused"
+msgstr "Paused"
+
 msgid "Permissions"
 msgstr "Permissions"
 
@@ -307,9 +299,6 @@ msgstr "Plex"
 
 msgid "Plex Media Server repository"
 msgstr "Plex Media Server repository"
-
-msgid "Plugins for setting up virtual private networks"
-msgstr "Plugins for setting up virtual private networks"
 
 msgid "Process List"
 msgstr "Process List"
@@ -334,6 +323,9 @@ msgstr "Reset folders and files to this file mode."
 
 msgid "Reset permissions ..."
 msgstr "Reset permissions ..."
+
+msgid "Running"
+msgstr "Running"
 
 msgid "Select a directory"
 msgstr "Select a directory"
@@ -362,6 +354,9 @@ msgstr "Shared Folder"
 msgid "Shared Folder In Use"
 msgstr "Shared Folder In Use"
 
+msgid "Sleeping"
+msgstr "Sleeping"
+
 msgid "State"
 msgstr "State"
 
@@ -376,6 +371,12 @@ msgstr "Support Info"
 
 msgid "Support Info Module Selection"
 msgstr "Support Info Module Selection"
+
+msgid "Sync"
+msgstr "Sync"
+
+msgid "Sync repository"
+msgstr "Sync repository"
 
 msgid "System - iface"
 msgstr "System - iface"
@@ -392,9 +393,6 @@ msgstr "Testing repository for Docker"
 msgid "Testing repository for Mono"
 msgstr "Testing repository for Mono"
 
-msgid "Testing repository for download managers"
-msgstr "Testing repository for download managers"
-
 msgid "Type"
 msgstr "Type"
 
@@ -404,20 +402,17 @@ msgstr "Update"
 msgid "User"
 msgstr "User"
 
-msgid "VDR"
-msgstr "VDR"
-
-msgid "VPN"
-msgstr "VPN"
+msgid "Utilities"
+msgstr "Utilities"
 
 msgid "Version"
 msgstr "Version"
 
-msgid "Virtualbox"
-msgstr "Virtualbox"
+msgid "Virtualization"
+msgstr "Virtualization"
 
-msgid "Virtualbox repository"
-msgstr "Virtualbox repository"
+msgid "Wait"
+msgstr "Wait"
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -425,5 +420,5 @@ msgstr "ZFS"
 msgid "ZFS Testing"
 msgstr "ZFS Testing"
 
-msgid "e-tobi.net repository"
-msgstr "e-tobi.net repository"
+msgid "Zombie"
+msgstr "Zombie"

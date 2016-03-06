@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-26 08:24-0600\n"
-"PO-Revision-Date: 2015-11-20 09:47+0000\n"
-"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
+"POT-Creation-Date: 2016-03-06 15:33-0600\n"
+"PO-Revision-Date: 2016-03-06 21:33+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -112,17 +112,17 @@ msgstr "Správce: číst/zapisovat, uživatelé: číst/zapisovat, ostatní: ž�
 msgid "Administrator: read/write, Users: read/write, Others: read-only"
 msgstr "Správce: číst/zapisovat, uživatelé: číst/zapisovat, ostatní: pouze číst"
 
+msgid "All"
+msgstr ""
+
 msgid "Apt Clean"
 msgstr "Vyčistit mezipaměť balíčků"
 
 msgid "Architecture"
 msgstr "Architektura"
 
-msgid "BTSync"
-msgstr "BTSync"
-
-msgid "BTSync repository"
-msgstr "Nástroj BTSync pro decentralizovanou synchronizaci souborů mezi zařízeními"
+msgid "Backup"
+msgstr ""
 
 msgid "Beta"
 msgstr "Vývojové (beta)"
@@ -167,11 +167,6 @@ msgid "Distribution"
 msgstr "Vydání"
 
 msgid ""
-"Do not enable this repository unless you are using the GlusterFS filesystem "
-"(uncommon)"
-msgstr "Součásti pro podporu souborového systému GlusterFS (nepříliš obvyklý) – používejte pouze v případě, že GlusterFS opravdu provozujete"
-
-msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
 msgstr "Součásti pro podporu souborového systému ZFS (nepříliš obvyklý) – používejte pouze v případě, že ZFS opravdu provozujete"
@@ -193,15 +188,6 @@ msgstr "Platforma aplikačních kontejnerů Docker"
 msgid "Done..."
 msgstr "Hotovo…"
 
-msgid "Download Managers"
-msgstr "Správci stahování"
-
-msgid "Download Managers Testing"
-msgstr "Správci stahování – testovací"
-
-msgid "Download managers for newsgroups, torrents, usenet, and streaming"
-msgstr "Nástroje pro stahování z newsgroup, torrent, usenet a proudových médií"
-
 msgid "Edit custom repo"
 msgstr "Upravit vlastní repozitář"
 
@@ -211,8 +197,8 @@ msgstr "Používat"
 msgid "Everyone: read/write"
 msgstr "Všichni: číst/zapisovat"
 
-msgid "GlusterFS"
-msgstr "GlusterFS"
+msgid "Filesystems"
+msgstr ""
 
 msgid "Greyhole"
 msgstr "Greyhole"
@@ -234,11 +220,11 @@ msgstr "Používáno"
 msgid "Information"
 msgstr "Informace"
 
-msgid "Install Backports 3.16 kernel"
-msgstr "Nainstalovat jádro 3.16, přenesené z novější verze systému"
+msgid "Install Backports kernel"
+msgstr ""
 
-msgid "Install Backports 3.16 kernel ..."
-msgstr "Instalace jádra 3.16, přeneseného z novější verze systému…"
+msgid "Install Backports kernel ..."
+msgstr ""
 
 msgid "Install kernel headers"
 msgstr "Nainstalovat hlavičkové soubory k jádru"
@@ -280,6 +266,9 @@ msgstr "Mono – testovací"
 msgid "Mono and mono-project.com"
 msgstr "Běhové/vývojové prostředí Mono (mono-project.com)"
 
+msgid "Multimedia"
+msgstr ""
+
 msgid "Name"
 msgstr "Název"
 
@@ -298,6 +287,9 @@ msgstr "OMV-Extras.org – testovací"
 msgid "PID"
 msgstr "Identifikátor procesu (PID)"
 
+msgid "Paused"
+msgstr ""
+
 msgid "Permissions"
 msgstr "Oprávnění"
 
@@ -309,9 +301,6 @@ msgstr "Plex"
 
 msgid "Plex Media Server repository"
 msgstr "Multimediální centrum Plex Media Server"
-
-msgid "Plugins for setting up virtual private networks"
-msgstr "Zásuvné moduly pro nastavení virtuálních soukromých sítí (VPN)"
 
 msgid "Process List"
 msgstr "Seznam procesů"
@@ -336,6 +325,9 @@ msgstr "Vrátit režim přístupu (mode) souborů a složek na tento."
 
 msgid "Reset permissions ..."
 msgstr "Vrátit přístupová oprávnění na výchozí hodnoty…"
+
+msgid "Running"
+msgstr ""
 
 msgid "Select a directory"
 msgstr "Vyberte složku"
@@ -364,6 +356,9 @@ msgstr "Sdílená složka"
 msgid "Shared Folder In Use"
 msgstr "Právě používaná sdílená složka"
 
+msgid "Sleeping"
+msgstr ""
+
 msgid "State"
 msgstr "Stav"
 
@@ -378,6 +373,12 @@ msgstr "Informace pro technickou podporu"
 
 msgid "Support Info Module Selection"
 msgstr "Výběr oblastí informací pro podporu"
+
+msgid "Sync"
+msgstr ""
+
+msgid "Sync repository"
+msgstr ""
 
 msgid "System - iface"
 msgstr "Systém – síťová rozhraní"
@@ -394,9 +395,6 @@ msgstr "Vývojové verze platformy Docker"
 msgid "Testing repository for Mono"
 msgstr "Vývojové verze prostředí Mono"
 
-msgid "Testing repository for download managers"
-msgstr "Vývojové verze nástrojů pro stahování"
-
 msgid "Type"
 msgstr "Typ"
 
@@ -406,20 +404,17 @@ msgstr "Aktualizovat"
 msgid "User"
 msgstr "Uživatel"
 
-msgid "VDR"
-msgstr "VDR"
-
-msgid "VPN"
-msgstr "VPN"
+msgid "Utilities"
+msgstr ""
 
 msgid "Version"
 msgstr "Verze"
 
-msgid "Virtualbox"
-msgstr "Virtualbox"
+msgid "Virtualization"
+msgstr ""
 
-msgid "Virtualbox repository"
-msgstr "Virtualizační platforma Virtualbox"
+msgid "Wait"
+msgstr ""
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -427,5 +422,5 @@ msgstr "ZFS"
 msgid "ZFS Testing"
 msgstr "ZFS – testovací"
 
-msgid "e-tobi.net repository"
-msgstr "Aplikace pro nahrávání televizního vysílání na počítač"
+msgid "Zombie"
+msgstr ""

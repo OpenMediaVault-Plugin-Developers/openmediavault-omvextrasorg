@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-26 08:24-0600\n"
-"PO-Revision-Date: 2015-09-23 09:57+0000\n"
-"Last-Translator: Hyeonkyu Chu <hyeonkyu@gmail.com>\n"
+"POT-Creation-Date: 2016-03-06 15:33-0600\n"
+"PO-Revision-Date: 2016-03-06 21:33+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -111,17 +111,17 @@ msgstr "관리자: 읽기/쓰기,　사용자: 읽기/쓰기,　기타: 접근 �
 msgid "Administrator: read/write, Users: read/write, Others: read-only"
 msgstr "관리자: 읽기/쓰기,　사용자: 읽기/쓰기,　기타: 읽기-전용"
 
+msgid "All"
+msgstr ""
+
 msgid "Apt Clean"
 msgstr "Apt 정리"
 
 msgid "Architecture"
 msgstr "아키텍처"
 
-msgid "BTSync"
-msgstr "BTSync"
-
-msgid "BTSync repository"
-msgstr "BTSync 저장소"
+msgid "Backup"
+msgstr ""
 
 msgid "Beta"
 msgstr "베타"
@@ -166,11 +166,6 @@ msgid "Distribution"
 msgstr "배포"
 
 msgid ""
-"Do not enable this repository unless you are using the GlusterFS filesystem "
-"(uncommon)"
-msgstr "GlusterFS 파일 시스템을 사용하지 않는 경우, 이 저장소를 사용하지 마십시오 (흔히 쓰이는 것이 아님) "
-
-msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
 msgstr "ZFS 파일 시스템을 사용하지 않는 경우, 이 저장소를 사용하지 마십시오 (흔히 쓰이는 것이 아님)"
@@ -192,15 +187,6 @@ msgstr "Docker 저장소"
 msgid "Done..."
 msgstr "완료..."
 
-msgid "Download Managers"
-msgstr "Download Managers"
-
-msgid "Download Managers Testing"
-msgstr "Download Managers Testing"
-
-msgid "Download managers for newsgroups, torrents, usenet, and streaming"
-msgstr "뉴스 그룹, 토런트, 유즈넷 및 스트리밍을 위한 내려받기 관리자"
-
 msgid "Edit custom repo"
 msgstr "사용자 정의 저장소 편집"
 
@@ -210,8 +196,8 @@ msgstr "활성화"
 msgid "Everyone: read/write"
 msgstr "누구나: 읽기/쓰기"
 
-msgid "GlusterFS"
-msgstr "GlusterFS"
+msgid "Filesystems"
+msgstr ""
 
 msgid "Greyhole"
 msgstr "Greyhole"
@@ -233,11 +219,11 @@ msgstr "사용됨"
 msgid "Information"
 msgstr "정보"
 
-msgid "Install Backports 3.16 kernel"
-msgstr "Backports 3.16 커널 설치"
+msgid "Install Backports kernel"
+msgstr ""
 
-msgid "Install Backports 3.16 kernel ..."
-msgstr "Backports 3.16 커널 설치 ..."
+msgid "Install Backports kernel ..."
+msgstr ""
 
 msgid "Install kernel headers"
 msgstr "커널 헤더 설치"
@@ -279,6 +265,9 @@ msgstr "Mono Testing"
 msgid "Mono and mono-project.com"
 msgstr "Mono 및 mono-project.com"
 
+msgid "Multimedia"
+msgstr ""
+
 msgid "Name"
 msgstr "이름"
 
@@ -297,6 +286,9 @@ msgstr "OMV-Extras.org Testing"
 msgid "PID"
 msgstr "PID"
 
+msgid "Paused"
+msgstr ""
+
 msgid "Permissions"
 msgstr "권한"
 
@@ -308,9 +300,6 @@ msgstr "Plex"
 
 msgid "Plex Media Server repository"
 msgstr "Plex Media Server 저장소"
-
-msgid "Plugins for setting up virtual private networks"
-msgstr "가상 개인 네트워크 설정을 위한 플러그인"
 
 msgid "Process List"
 msgstr "프로세스 목록"
@@ -335,6 +324,9 @@ msgstr "이 파일 상태로 폴더와 파일을 재설정합니다."
 
 msgid "Reset permissions ..."
 msgstr "권한 재설정 ..."
+
+msgid "Running"
+msgstr ""
 
 msgid "Select a directory"
 msgstr "디렉터리 선택"
@@ -363,6 +355,9 @@ msgstr "공유 폴더"
 msgid "Shared Folder In Use"
 msgstr "공유 폴더에 사용됨"
 
+msgid "Sleeping"
+msgstr ""
+
 msgid "State"
 msgstr "상태"
 
@@ -377,6 +372,12 @@ msgstr "지원 정보"
 
 msgid "Support Info Module Selection"
 msgstr "지원 정보　단위 기능 선택"
+
+msgid "Sync"
+msgstr ""
+
+msgid "Sync repository"
+msgstr ""
 
 msgid "System - iface"
 msgstr "System - iface"
@@ -393,9 +394,6 @@ msgstr "Docker를 위한 실험적인 저장소"
 msgid "Testing repository for Mono"
 msgstr "Mono를 위한 실험적인 저장소"
 
-msgid "Testing repository for download managers"
-msgstr "내려받기 관리자를 위한 실험적인 저장소"
-
 msgid "Type"
 msgstr "유형"
 
@@ -405,20 +403,17 @@ msgstr "갱신"
 msgid "User"
 msgstr "사용자"
 
-msgid "VDR"
-msgstr "VDR"
-
-msgid "VPN"
-msgstr "VPN"
+msgid "Utilities"
+msgstr ""
 
 msgid "Version"
 msgstr "버전"
 
-msgid "Virtualbox"
-msgstr "Virtualbox"
+msgid "Virtualization"
+msgstr ""
 
-msgid "Virtualbox repository"
-msgstr "Virtualbox 저장소"
+msgid "Wait"
+msgstr ""
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -426,5 +421,5 @@ msgstr "ZFS"
 msgid "ZFS Testing"
 msgstr "ZFS Testing"
 
-msgid "e-tobi.net repository"
-msgstr "e-tobi.net 저장소"
+msgid "Zombie"
+msgstr ""

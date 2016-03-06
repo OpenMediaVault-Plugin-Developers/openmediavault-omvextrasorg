@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-26 08:24-0600\n"
-"PO-Revision-Date: 2015-08-30 13:45+0000\n"
+"POT-Creation-Date: 2016-03-06 15:33-0600\n"
+"PO-Revision-Date: 2016-03-06 21:33+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -111,17 +111,17 @@ msgstr "Adminisztrátor: olvasás/írás, Felhasználók: olvasás/írás, Máso
 msgid "Administrator: read/write, Users: read/write, Others: read-only"
 msgstr "Adminisztrátor: olvasás/írás, Felhasználók: olvasás/írás, Mások: csak olvasás"
 
+msgid "All"
+msgstr ""
+
 msgid "Apt Clean"
 msgstr "Apt törlés"
 
 msgid "Architecture"
 msgstr "Architektúra"
 
-msgid "BTSync"
-msgstr "BTSync"
-
-msgid "BTSync repository"
-msgstr "BTSync tároló"
+msgid "Backup"
+msgstr ""
 
 msgid "Beta"
 msgstr "Béta"
@@ -166,11 +166,6 @@ msgid "Distribution"
 msgstr "Kódnév"
 
 msgid ""
-"Do not enable this repository unless you are using the GlusterFS filesystem "
-"(uncommon)"
-msgstr "Ne engedélyezd ezt az opciót, ha nem használsz GlusterFS fájlrendszert (ritka)"
-
-msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
 msgstr "Ne engedélyezd ezt a tárolót, ha nem használsz ZFS fájlrendszert (ritka)"
@@ -192,15 +187,6 @@ msgstr "Docker tároló"
 msgid "Done..."
 msgstr "Kész..."
 
-msgid "Download Managers"
-msgstr "Letöltésvezérlők"
-
-msgid "Download Managers Testing"
-msgstr "Letöltésvezérlők tesztelése"
-
-msgid "Download managers for newsgroups, torrents, usenet, and streaming"
-msgstr "Letöltésvezérlők, mint hírcsoportok, torrentek, usenet, és streaming"
-
 msgid "Edit custom repo"
 msgstr "Egyedi tár szerkesztése"
 
@@ -210,8 +196,8 @@ msgstr "Bekapcsol"
 msgid "Everyone: read/write"
 msgstr "Mindenki: olvasás/írás"
 
-msgid "GlusterFS"
-msgstr "GlusterFS"
+msgid "Filesystems"
+msgstr ""
 
 msgid "Greyhole"
 msgstr "Greyhole"
@@ -233,11 +219,11 @@ msgstr ""
 msgid "Information"
 msgstr "Információ"
 
-msgid "Install Backports 3.16 kernel"
-msgstr "Backports 3.16 kernel telepítése"
+msgid "Install Backports kernel"
+msgstr ""
 
-msgid "Install Backports 3.16 kernel ..."
-msgstr "Backports 3.16 kernel telepítése ..."
+msgid "Install Backports kernel ..."
+msgstr ""
 
 msgid "Install kernel headers"
 msgstr "Kernel fejlécek telepítése"
@@ -279,6 +265,9 @@ msgstr "Mono tesztelés"
 msgid "Mono and mono-project.com"
 msgstr "Mono és mono-project.com"
 
+msgid "Multimedia"
+msgstr ""
+
 msgid "Name"
 msgstr "Név"
 
@@ -297,6 +286,9 @@ msgstr "OMV-Extras.org tesztelés"
 msgid "PID"
 msgstr "PID"
 
+msgid "Paused"
+msgstr ""
+
 msgid "Permissions"
 msgstr "Engedélyek"
 
@@ -308,9 +300,6 @@ msgstr "Plex"
 
 msgid "Plex Media Server repository"
 msgstr "Plex médiaszerver tároló"
-
-msgid "Plugins for setting up virtual private networks"
-msgstr "Virtuális magánhálózat létrehozásához szükséges plugin"
 
 msgid "Process List"
 msgstr "Folyamat lista"
@@ -335,6 +324,9 @@ msgstr "Fájlok és mappák visszaállítása."
 
 msgid "Reset permissions ..."
 msgstr "Engedélyek visszaállítása ..."
+
+msgid "Running"
+msgstr ""
 
 msgid "Select a directory"
 msgstr ""
@@ -363,6 +355,9 @@ msgstr "Megosztott mappa"
 msgid "Shared Folder In Use"
 msgstr ""
 
+msgid "Sleeping"
+msgstr ""
+
 msgid "State"
 msgstr "Állapot"
 
@@ -377,6 +372,12 @@ msgstr "Támogatási infó"
 
 msgid "Support Info Module Selection"
 msgstr "Támogatási infó modul kiválasztása"
+
+msgid "Sync"
+msgstr ""
+
+msgid "Sync repository"
+msgstr ""
 
 msgid "System - iface"
 msgstr "Rendszer - iface"
@@ -393,9 +394,6 @@ msgstr "Docker tároló tesztelés"
 msgid "Testing repository for Mono"
 msgstr "Mono tároló tesztelés"
 
-msgid "Testing repository for download managers"
-msgstr "Letöltésvezérlő tároló tesztelés"
-
 msgid "Type"
 msgstr "Típus"
 
@@ -405,20 +403,17 @@ msgstr "Frissítés"
 msgid "User"
 msgstr "Felhasználó"
 
-msgid "VDR"
-msgstr "VDR"
-
-msgid "VPN"
-msgstr "VPN"
+msgid "Utilities"
+msgstr ""
 
 msgid "Version"
 msgstr "Verzió"
 
-msgid "Virtualbox"
-msgstr "Virtualbox"
+msgid "Virtualization"
+msgstr ""
 
-msgid "Virtualbox repository"
-msgstr "Virtualbox tároló"
+msgid "Wait"
+msgstr ""
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -426,5 +421,5 @@ msgstr "ZFS"
 msgid "ZFS Testing"
 msgstr "ZFS tesztelés"
 
-msgid "e-tobi.net repository"
-msgstr "e-tobi.net tároló"
+msgid "Zombie"
+msgstr ""

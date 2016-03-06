@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-26 08:24-0600\n"
-"PO-Revision-Date: 2015-08-30 13:53+0000\n"
-"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
+"POT-Creation-Date: 2016-03-06 15:33-0600\n"
+"PO-Revision-Date: 2016-03-06 21:33+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -115,17 +115,17 @@ msgstr "Administrator: lesen/schreiben, Benutzer: lesen/schreiben, Andere: kein 
 msgid "Administrator: read/write, Users: read/write, Others: read-only"
 msgstr "Administrator: lesen/schreiben, Benutzer: lesen/schreiben, Andere: nur lesen"
 
+msgid "All"
+msgstr ""
+
 msgid "Apt Clean"
 msgstr "Apt Clean"
 
 msgid "Architecture"
 msgstr "Architektur"
 
-msgid "BTSync"
-msgstr "BTSync"
-
-msgid "BTSync repository"
-msgstr "BTSync-Paketquelle"
+msgid "Backup"
+msgstr ""
 
 msgid "Beta"
 msgstr "Beta"
@@ -170,11 +170,6 @@ msgid "Distribution"
 msgstr "Distribution"
 
 msgid ""
-"Do not enable this repository unless you are using the GlusterFS filesystem "
-"(uncommon)"
-msgstr "Aktiviere Sie diese Paketquelle nicht, wenn Sie kein GlusterFS-Dateisystem verwenden (selten)"
-
-msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
 msgstr "Aktiviere Sie diese Paketquelle nicht, wenn Sie kein ZFS-Dateisystem verwenden (selten)"
@@ -196,15 +191,6 @@ msgstr "Docker-Paketquelle"
 msgid "Done..."
 msgstr "Fertig..."
 
-msgid "Download Managers"
-msgstr "Download Manager"
-
-msgid "Download Managers Testing"
-msgstr "Download Manager-Erprobung"
-
-msgid "Download managers for newsgroups, torrents, usenet, and streaming"
-msgstr "Download Manager für Newsgruppen, Torrents, Usenet und Streaming"
-
 msgid "Edit custom repo"
 msgstr "Benutzerdefinierte Paketquelle bearbeiten"
 
@@ -214,8 +200,8 @@ msgstr "Aktivieren"
 msgid "Everyone: read/write"
 msgstr "Jeder: lesen/schreiben"
 
-msgid "GlusterFS"
-msgstr "GlusterFS"
+msgid "Filesystems"
+msgstr ""
 
 msgid "Greyhole"
 msgstr "Greyhole"
@@ -237,11 +223,11 @@ msgstr "Wird verwendet von"
 msgid "Information"
 msgstr "Information"
 
-msgid "Install Backports 3.16 kernel"
-msgstr "Backports-Kernel 3.16 installieren"
+msgid "Install Backports kernel"
+msgstr ""
 
-msgid "Install Backports 3.16 kernel ..."
-msgstr "Installiere Backports-Kernel 3.16 ..."
+msgid "Install Backports kernel ..."
+msgstr ""
 
 msgid "Install kernel headers"
 msgstr "Kernel-Kopfzeilen installieren"
@@ -283,6 +269,9 @@ msgstr "Mono-Erprobung"
 msgid "Mono and mono-project.com"
 msgstr "Mono und mono-project.com"
 
+msgid "Multimedia"
+msgstr ""
+
 msgid "Name"
 msgstr "Name"
 
@@ -301,6 +290,9 @@ msgstr "OMV-Extras.org-Erprobung"
 msgid "PID"
 msgstr "PID"
 
+msgid "Paused"
+msgstr ""
+
 msgid "Permissions"
 msgstr "Berechtigungen"
 
@@ -312,9 +304,6 @@ msgstr "Plex"
 
 msgid "Plex Media Server repository"
 msgstr "Plex Media Server-Paketquelle"
-
-msgid "Plugins for setting up virtual private networks"
-msgstr "Plugins zum Einrichten virtueller privater Netzwerke"
 
 msgid "Process List"
 msgstr "Prozess Liste"
@@ -339,6 +328,9 @@ msgstr "Ordner und Dateien in diesen Dateimodus zurücksetzen."
 
 msgid "Reset permissions ..."
 msgstr "Berechtigungen zurücksetzen ..."
+
+msgid "Running"
+msgstr ""
 
 msgid "Select a directory"
 msgstr "Wählen Sie ein Verzeichnis aus"
@@ -367,6 +359,9 @@ msgstr "Gemeinsamer Ordner"
 msgid "Shared Folder In Use"
 msgstr "Gemeinsamer Ordner wird verwendet"
 
+msgid "Sleeping"
+msgstr ""
+
 msgid "State"
 msgstr "Status"
 
@@ -381,6 +376,12 @@ msgstr "Support-Informationen"
 
 msgid "Support Info Module Selection"
 msgstr "Unterstützungsinformationsmodulauswahl"
+
+msgid "Sync"
+msgstr ""
+
+msgid "Sync repository"
+msgstr ""
 
 msgid "System - iface"
 msgstr "System - iface"
@@ -397,9 +398,6 @@ msgstr "Erprobungspaketquelle für Docker"
 msgid "Testing repository for Mono"
 msgstr "Erprobungspaketquelle für Mono"
 
-msgid "Testing repository for download managers"
-msgstr "Erprobungspaketquelle für Download Manager"
-
 msgid "Type"
 msgstr "Typ"
 
@@ -409,20 +407,17 @@ msgstr "Aktualisierung"
 msgid "User"
 msgstr "Benutzer"
 
-msgid "VDR"
-msgstr "VDR"
-
-msgid "VPN"
-msgstr "VPN"
+msgid "Utilities"
+msgstr ""
 
 msgid "Version"
 msgstr "Version"
 
-msgid "Virtualbox"
-msgstr "Virtualbox"
+msgid "Virtualization"
+msgstr ""
 
-msgid "Virtualbox repository"
-msgstr "Virtualbox-Paketquelle"
+msgid "Wait"
+msgstr ""
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -430,5 +425,5 @@ msgstr "ZFS"
 msgid "ZFS Testing"
 msgstr "ZFS-Erprobung"
 
-msgid "e-tobi.net repository"
-msgstr "e-tobi.net-Paketquelle"
+msgid "Zombie"
+msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-29 10:05-0600\n"
+"POT-Creation-Date: 2016-03-06 15:33-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -119,12 +119,6 @@ msgstr ""
 msgid "Architecture"
 msgstr ""
 
-msgid "BTSync"
-msgstr ""
-
-msgid "BTSync repository"
-msgstr ""
-
 msgid "Backup"
 msgstr ""
 
@@ -170,9 +164,6 @@ msgstr ""
 msgid "Distribution"
 msgstr ""
 
-msgid "Do not enable this repository unless you are using the GlusterFS filesystem (uncommon)"
-msgstr ""
-
 msgid "Do not enable this repository unless you are using the ZFS filesystem (uncommon)"
 msgstr ""
 
@@ -191,18 +182,6 @@ msgstr ""
 msgid "Done..."
 msgstr ""
 
-msgid "Download Managers"
-msgstr ""
-
-msgid "Download Managers Testing"
-msgstr ""
-
-msgid "Download managers for newsgroups, torrents, usenet, and streaming"
-msgstr ""
-
-msgid "Downloaders"
-msgstr ""
-
 msgid "Edit custom repo"
 msgstr ""
 
@@ -213,9 +192,6 @@ msgid "Everyone: read/write"
 msgstr ""
 
 msgid "Filesystems"
-msgstr ""
-
-msgid "GlusterFS"
 msgstr ""
 
 msgid "Greyhole"
@@ -302,6 +278,9 @@ msgstr ""
 msgid "PID"
 msgstr ""
 
+msgid "Paused"
+msgstr ""
+
 msgid "Permissions"
 msgstr ""
 
@@ -314,16 +293,10 @@ msgstr ""
 msgid "Plex Media Server repository"
 msgstr ""
 
-msgid "Plugins for setting up virtual private networks"
-msgstr ""
-
 msgid "Process List"
 msgstr ""
 
 msgid "Release candidates"
-msgstr ""
-
-msgid "Remote"
 msgstr ""
 
 msgid "Repo"
@@ -342,6 +315,9 @@ msgid "Reset folders and files to this file mode."
 msgstr ""
 
 msgid "Reset permissions ..."
+msgstr ""
+
+msgid "Running"
 msgstr ""
 
 msgid "Select a directory"
@@ -368,6 +344,9 @@ msgstr ""
 msgid "Shared Folder In Use"
 msgstr ""
 
+msgid "Sleeping"
+msgstr ""
+
 msgid "State"
 msgstr ""
 
@@ -381,6 +360,12 @@ msgid "Support Info"
 msgstr ""
 
 msgid "Support Info Module Selection"
+msgstr ""
+
+msgid "Sync"
+msgstr ""
+
+msgid "Sync repository"
 msgstr ""
 
 msgid "System - iface"
@@ -398,9 +383,6 @@ msgstr ""
 msgid "Testing repository for Mono"
 msgstr ""
 
-msgid "Testing repository for download managers"
-msgstr ""
-
 msgid "Type"
 msgstr ""
 
@@ -413,22 +395,13 @@ msgstr ""
 msgid "Utilities"
 msgstr ""
 
-msgid "VDR"
-msgstr ""
-
-msgid "VPN"
-msgstr ""
-
 msgid "Version"
 msgstr ""
 
-msgid "Virtualbox"
-msgstr ""
-
-msgid "Virtualbox repository"
-msgstr ""
-
 msgid "Virtualization"
+msgstr ""
+
+msgid "Wait"
 msgstr ""
 
 msgid "ZFS"
@@ -437,5 +410,5 @@ msgstr ""
 msgid "ZFS Testing"
 msgstr ""
 
-msgid "e-tobi.net repository"
+msgid "Zombie"
 msgstr ""

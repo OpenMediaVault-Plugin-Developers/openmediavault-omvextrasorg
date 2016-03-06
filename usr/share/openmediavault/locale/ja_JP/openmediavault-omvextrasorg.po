@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-26 08:24-0600\n"
-"PO-Revision-Date: 2015-09-15 01:22+0000\n"
-"Last-Translator: Toshihiro Kan <kansuke4649@gmail.com>\n"
+"POT-Creation-Date: 2016-03-06 15:33-0600\n"
+"PO-Revision-Date: 2016-03-06 21:33+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -111,17 +111,17 @@ msgstr "Administrator: 読み込み/書き込み, Users: 読み込み/書き込�
 msgid "Administrator: read/write, Users: read/write, Others: read-only"
 msgstr "Administrator: 読み込み/書き込み, Users: 読み込み/書き込み, Others: 読み込みのみ"
 
+msgid "All"
+msgstr ""
+
 msgid "Apt Clean"
 msgstr "APTクリーン"
 
 msgid "Architecture"
 msgstr "アーキテクチャ"
 
-msgid "BTSync"
-msgstr "BTSync"
-
-msgid "BTSync repository"
-msgstr "BTSyncリポジトリ"
+msgid "Backup"
+msgstr ""
 
 msgid "Beta"
 msgstr "ベータ"
@@ -166,11 +166,6 @@ msgid "Distribution"
 msgstr "ディストリビューション"
 
 msgid ""
-"Do not enable this repository unless you are using the GlusterFS filesystem "
-"(uncommon)"
-msgstr "GlusterFSファイルシステムを使用しない限り、このリポジトリを有効にしないでください(非推奨)"
-
-msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
 msgstr "ZFSファイルシステムを使用しない限り、このリポジトリを有効にしないでください(非推奨)"
@@ -192,15 +187,6 @@ msgstr "Dockerリポジトリ"
 msgid "Done..."
 msgstr "完了"
 
-msgid "Download Managers"
-msgstr "ダウンロードマネージャ"
-
-msgid "Download Managers Testing"
-msgstr "ダウンロードマネージャのテスト版"
-
-msgid "Download managers for newsgroups, torrents, usenet, and streaming"
-msgstr "ニュースグループ、トレント、ユーズネット、ストリーミングのためのダウンロードマネージャ"
-
 msgid "Edit custom repo"
 msgstr "カスタムリポジトリの編集"
 
@@ -210,8 +196,8 @@ msgstr "有効化"
 msgid "Everyone: read/write"
 msgstr "Everyone: 読み込み/書き込み"
 
-msgid "GlusterFS"
-msgstr "GlusterFS"
+msgid "Filesystems"
+msgstr ""
 
 msgid "Greyhole"
 msgstr "Greyhole"
@@ -233,11 +219,11 @@ msgstr "使用中"
 msgid "Information"
 msgstr "情報"
 
-msgid "Install Backports 3.16 kernel"
-msgstr "バックポート3.16カーネルのインストール"
+msgid "Install Backports kernel"
+msgstr ""
 
-msgid "Install Backports 3.16 kernel ..."
-msgstr "バックポート3.16カーネルをインストールしています ..."
+msgid "Install Backports kernel ..."
+msgstr ""
 
 msgid "Install kernel headers"
 msgstr "カーネルヘッダのインストール"
@@ -279,6 +265,9 @@ msgstr "Monoテスト版"
 msgid "Mono and mono-project.com"
 msgstr "Monoとmono-project.com"
 
+msgid "Multimedia"
+msgstr ""
+
 msgid "Name"
 msgstr "名前"
 
@@ -297,6 +286,9 @@ msgstr "OMV-Extras.orgテスト版"
 msgid "PID"
 msgstr "PID"
 
+msgid "Paused"
+msgstr ""
+
 msgid "Permissions"
 msgstr "パーミッション"
 
@@ -308,9 +300,6 @@ msgstr "Plex"
 
 msgid "Plex Media Server repository"
 msgstr "Plex Media Serverリポジトリ"
-
-msgid "Plugins for setting up virtual private networks"
-msgstr "仮想プライベートネットワークをセットアップするためのプラグイン"
 
 msgid "Process List"
 msgstr "プロセスリスト"
@@ -335,6 +324,9 @@ msgstr "このファイルモードにフォルダとファイルを再設定し
 
 msgid "Reset permissions ..."
 msgstr "パミッションの初期化 ..."
+
+msgid "Running"
+msgstr ""
 
 msgid "Select a directory"
 msgstr "ディレクトリを選択"
@@ -363,6 +355,9 @@ msgstr "共有フォルダ"
 msgid "Shared Folder In Use"
 msgstr "共有フォルダを使用中"
 
+msgid "Sleeping"
+msgstr ""
+
 msgid "State"
 msgstr "状態"
 
@@ -377,6 +372,12 @@ msgstr "サポート情報"
 
 msgid "Support Info Module Selection"
 msgstr "モジュールセクションのサポート情報"
+
+msgid "Sync"
+msgstr ""
+
+msgid "Sync repository"
+msgstr ""
 
 msgid "System - iface"
 msgstr "システム - iface"
@@ -393,9 +394,6 @@ msgstr "Docker用テスト版リポジトリ"
 msgid "Testing repository for Mono"
 msgstr "Mono用テスト版リポジトリ"
 
-msgid "Testing repository for download managers"
-msgstr "ダウンロードマネージャ用テスト版リポジトリ"
-
 msgid "Type"
 msgstr "タイプ"
 
@@ -405,20 +403,17 @@ msgstr "アップデート"
 msgid "User"
 msgstr "ユーザー"
 
-msgid "VDR"
-msgstr "VDR"
-
-msgid "VPN"
-msgstr "VPN"
+msgid "Utilities"
+msgstr ""
 
 msgid "Version"
 msgstr "バージョン"
 
-msgid "Virtualbox"
-msgstr "Virtualbox"
+msgid "Virtualization"
+msgstr ""
 
-msgid "Virtualbox repository"
-msgstr "Virtualboxリポジトリ"
+msgid "Wait"
+msgstr ""
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -426,5 +421,5 @@ msgstr "ZFS"
 msgid "ZFS Testing"
 msgstr "ZFSテスト版"
 
-msgid "e-tobi.net repository"
-msgstr "e-tobi.netリポジトリ"
+msgid "Zombie"
+msgstr ""

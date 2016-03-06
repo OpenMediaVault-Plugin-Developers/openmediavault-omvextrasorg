@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-26 08:24-0600\n"
-"PO-Revision-Date: 2015-08-31 21:51+0000\n"
-"Last-Translator: Stefan Thrane Overby <stoverby@gmail.com>\n"
+"POT-Creation-Date: 2016-03-06 15:33-0600\n"
+"PO-Revision-Date: 2016-03-06 21:33+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Danish (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -111,17 +111,17 @@ msgstr "Administrator: læse/skrive, Brugere: læse/skrive, Andre: ingen adgang"
 msgid "Administrator: read/write, Users: read/write, Others: read-only"
 msgstr "Administrator: læse/skrive, Brugere: læse/skrive, Andre: skrivebeskyttet"
 
+msgid "All"
+msgstr ""
+
 msgid "Apt Clean"
 msgstr "Apt Oprydning"
 
 msgid "Architecture"
 msgstr "Arkitektur"
 
-msgid "BTSync"
-msgstr "BTSync"
-
-msgid "BTSync repository"
-msgstr "BTSync arkiv"
+msgid "Backup"
+msgstr ""
 
 msgid "Beta"
 msgstr "Beta"
@@ -166,11 +166,6 @@ msgid "Distribution"
 msgstr "Distribution"
 
 msgid ""
-"Do not enable this repository unless you are using the GlusterFS filesystem "
-"(uncommon)"
-msgstr "Aktiver ikke dette arkiv medmindre du bruger GlusterFS filsystemet (ikke almindeligt)"
-
-msgid ""
 "Do not enable this repository unless you are using the ZFS filesystem "
 "(uncommon)"
 msgstr "Aktiver ikke dette arkiv medmindre du bruger ZFS filsystemet (ikke almindeligt)"
@@ -192,15 +187,6 @@ msgstr "Docker arkiv"
 msgid "Done..."
 msgstr "Færdig..."
 
-msgid "Download Managers"
-msgstr "Download Håndtering"
-
-msgid "Download Managers Testing"
-msgstr "Download Håndterings Test"
-
-msgid "Download managers for newsgroups, torrents, usenet, and streaming"
-msgstr "Download håndtering af nyhedsgrupper, torrents, usenet, og streaming."
-
 msgid "Edit custom repo"
 msgstr "Rediger brugerdefineret arkiv"
 
@@ -210,8 +196,8 @@ msgstr "Aktiver"
 msgid "Everyone: read/write"
 msgstr "Alle: læse/skrive"
 
-msgid "GlusterFS"
-msgstr "GlusterFS"
+msgid "Filesystems"
+msgstr ""
 
 msgid "Greyhole"
 msgstr "Greyhole"
@@ -233,11 +219,11 @@ msgstr "I Brug Af"
 msgid "Information"
 msgstr "Oplysninger"
 
-msgid "Install Backports 3.16 kernel"
-msgstr "Installer Backports 3.16 Kerne"
+msgid "Install Backports kernel"
+msgstr ""
 
-msgid "Install Backports 3.16 kernel ..."
-msgstr "Installer Backports 3.16 kerne ..."
+msgid "Install Backports kernel ..."
+msgstr ""
 
 msgid "Install kernel headers"
 msgstr "Installer kerne headers"
@@ -279,6 +265,9 @@ msgstr "Mono Test"
 msgid "Mono and mono-project.com"
 msgstr "Mono og mono-project.com"
 
+msgid "Multimedia"
+msgstr ""
+
 msgid "Name"
 msgstr "Navn"
 
@@ -297,6 +286,9 @@ msgstr "OMV-Extras.org Test"
 msgid "PID"
 msgstr "PID"
 
+msgid "Paused"
+msgstr ""
+
 msgid "Permissions"
 msgstr "Rettigheder"
 
@@ -308,9 +300,6 @@ msgstr "Plex"
 
 msgid "Plex Media Server repository"
 msgstr "Plex Media Server arkiv"
-
-msgid "Plugins for setting up virtual private networks"
-msgstr "Plugins til opsætning af virtuel privat netværker"
 
 msgid "Process List"
 msgstr "Proces Liste"
@@ -335,6 +324,9 @@ msgstr "Nulstil mapper og filer til denne fil tilstand."
 
 msgid "Reset permissions ..."
 msgstr "Nulstil rettigheder ..."
+
+msgid "Running"
+msgstr ""
 
 msgid "Select a directory"
 msgstr "Vælg et bibliotek"
@@ -363,6 +355,9 @@ msgstr "Delt Mappe"
 msgid "Shared Folder In Use"
 msgstr "Delt Mappe I Brug"
 
+msgid "Sleeping"
+msgstr ""
+
 msgid "State"
 msgstr "Tilstand"
 
@@ -377,6 +372,12 @@ msgstr "Support Oplysning"
 
 msgid "Support Info Module Selection"
 msgstr "Understøt Oplysning Modul Valg"
+
+msgid "Sync"
+msgstr ""
+
+msgid "Sync repository"
+msgstr ""
 
 msgid "System - iface"
 msgstr "System - iface"
@@ -393,9 +394,6 @@ msgstr "Test arkiv til Docker"
 msgid "Testing repository for Mono"
 msgstr "Test aktiv til Mono"
 
-msgid "Testing repository for download managers"
-msgstr "Test arkiv til download håndtering"
-
 msgid "Type"
 msgstr "Type"
 
@@ -405,20 +403,17 @@ msgstr "Opdater"
 msgid "User"
 msgstr "Bruger"
 
-msgid "VDR"
-msgstr "VDR"
-
-msgid "VPN"
-msgstr "VPN"
+msgid "Utilities"
+msgstr ""
 
 msgid "Version"
 msgstr "Version"
 
-msgid "Virtualbox"
-msgstr "Virtualbox"
+msgid "Virtualization"
+msgstr ""
 
-msgid "Virtualbox repository"
-msgstr "Virtualbox arkiv"
+msgid "Wait"
+msgstr ""
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -426,5 +421,5 @@ msgstr "ZFS"
 msgid "ZFS Testing"
 msgstr "ZFS Test"
 
-msgid "e-tobi.net repository"
-msgstr "e-tobi.net arkiv"
+msgid "Zombie"
+msgstr ""
