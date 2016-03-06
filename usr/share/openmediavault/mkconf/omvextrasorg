@@ -31,7 +31,7 @@ BINTRAY_REPO="https://${BINTRAY_REPO_LOCATION}/openmediavault-plugin-developers"
 
 DH2K_REPO_LOCATION="dh2k.omv-extras.org"
 DH2K_REPO_URL="http://${DH2K_REPO_LOCATION}/debian/"
-    
+
 OMVVERSION=$(xmlstarlet sel -t -v "//distribution" ${OMV_PRODUCTINFO_FILE} | xmlstarlet unesc)
 case $(cat /etc/debian_version) in
   6*) RELEASE="squeeze" ;;
@@ -330,6 +330,7 @@ backports()
                 fi
                 ;;
         esac
+        disablesubmenu
         echo "..."
         echo "Please reboot to use new kernel"
     fi
@@ -447,6 +448,16 @@ getArch()
     esac
 }
 
+disablesubmenu()
+{
+    GRUB="/etc/default/grub"
+
+    if ! grep -q 'GRUB_DISABLE_SUBMENU' ${GRUB}; then
+        echo "GRUB_DISABLE_SUBMENU=y" >> ${GRUB}
+        update-grub
+    fi
+}
+
 case $2 in
     update)
         OMVVERSION="stoneburner"
@@ -478,6 +489,10 @@ case $2 in
 
     resetperms)
         resetperms
+    ;;
+
+    disablesubmenu)
+        disablesubmenu
     ;;
 
     *)

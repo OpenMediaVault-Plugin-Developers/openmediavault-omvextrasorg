@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (3.0.10) stable; urgency=low
+
+  * Disable grub submenus when installing backports kernel
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 06 Mar 2016 15:32:53 -0600
+
 openmediavault-omvextrasorg (3.0.9) stable; urgency=low
 
   * Fix mono repo
