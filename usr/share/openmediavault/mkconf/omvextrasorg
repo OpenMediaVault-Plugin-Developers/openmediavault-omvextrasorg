@@ -322,11 +322,11 @@ backports()
                 fi
                 ;;
             jessie)
-                echo "Install backports 4.3 kernel and headers"
+                echo "Install backports 4.4 kernel and headers"
                 if $AMD64; then
-                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-4.3.0-0.bpo.1-amd64 linux-headers-4.3.0-0.bpo.1-amd64 firmware-linux firmware-linux-free
+                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-4.4.0-0.bpo.1-amd64 linux-headers-4.4.0-0.bpo.1-amd64 firmware-linux firmware-linux-free
                 else
-                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-4.3.0-0.bpo.1-586 linux-headers-4.3.0-0.bpo.1-586 firmware-linux firmware-linux-free
+                    apt-get -t ${RELEASE}-backports --yes --force-yes --fix-missing install linux-image-4.4.0-0.bpo.1-586 linux-headers-4.4.0-0.bpo.1-586 firmware-linux firmware-linux-free
                 fi
                 ;;
         esac
