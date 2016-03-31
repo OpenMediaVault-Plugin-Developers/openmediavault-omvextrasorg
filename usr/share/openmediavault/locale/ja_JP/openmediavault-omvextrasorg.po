@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Toshihiro Kan <kansuke4649@gmail.com>, 2014-2015
+# Toshihiro Kan <kansuke4649@gmail.com>, 2014-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-06 15:33-0600\n"
-"PO-Revision-Date: 2016-03-06 21:33+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2016-03-08 05:17+0000\n"
+"Last-Translator: Toshihiro Kan <kansuke4649@gmail.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -112,7 +112,7 @@ msgid "Administrator: read/write, Users: read/write, Others: read-only"
 msgstr "Administrator: 読み込み/書き込み, Users: 読み込み/書き込み, Others: 読み込みのみ"
 
 msgid "All"
-msgstr ""
+msgstr "すべて"
 
 msgid "Apt Clean"
 msgstr "APTクリーン"
@@ -121,7 +121,7 @@ msgid "Architecture"
 msgstr "アーキテクチャ"
 
 msgid "Backup"
-msgstr ""
+msgstr "バックアップ"
 
 msgid "Beta"
 msgstr "ベータ"
@@ -197,7 +197,7 @@ msgid "Everyone: read/write"
 msgstr "Everyone: 読み込み/書き込み"
 
 msgid "Filesystems"
-msgstr ""
+msgstr "ファイルシステム"
 
 msgid "Greyhole"
 msgstr "Greyhole"
@@ -220,10 +220,10 @@ msgid "Information"
 msgstr "情報"
 
 msgid "Install Backports kernel"
-msgstr ""
+msgstr "バックポートカーネルのインストール"
 
 msgid "Install Backports kernel ..."
-msgstr ""
+msgstr "バックポートカーネルをインストールしています ..."
 
 msgid "Install kernel headers"
 msgstr "カーネルヘッダのインストール"
@@ -266,7 +266,7 @@ msgid "Mono and mono-project.com"
 msgstr "Monoとmono-project.com"
 
 msgid "Multimedia"
-msgstr ""
+msgstr "マルチメディア"
 
 msgid "Name"
 msgstr "名前"
@@ -287,7 +287,7 @@ msgid "PID"
 msgstr "PID"
 
 msgid "Paused"
-msgstr ""
+msgstr "一時停止"
 
 msgid "Permissions"
 msgstr "パーミッション"
@@ -326,7 +326,7 @@ msgid "Reset permissions ..."
 msgstr "パミッションの初期化 ..."
 
 msgid "Running"
-msgstr ""
+msgstr "実行中"
 
 msgid "Select a directory"
 msgstr "ディレクトリを選択"
@@ -356,7 +356,7 @@ msgid "Shared Folder In Use"
 msgstr "共有フォルダを使用中"
 
 msgid "Sleeping"
-msgstr ""
+msgstr "スリープ中"
 
 msgid "State"
 msgstr "状態"
@@ -374,10 +374,10 @@ msgid "Support Info Module Selection"
 msgstr "モジュールセクションのサポート情報"
 
 msgid "Sync"
-msgstr ""
+msgstr "同期"
 
 msgid "Sync repository"
-msgstr ""
+msgstr "リポジトリの同期"
 
 msgid "System - iface"
 msgstr "システム - iface"
@@ -404,16 +404,16 @@ msgid "User"
 msgstr "ユーザー"
 
 msgid "Utilities"
-msgstr ""
+msgstr "ユーティリティ"
 
 msgid "Version"
 msgstr "バージョン"
 
 msgid "Virtualization"
-msgstr ""
+msgstr "仮想化"
 
 msgid "Wait"
-msgstr ""
+msgstr "ウェイト"
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -422,4 +422,4 @@ msgid "ZFS Testing"
 msgstr "ZFSテスト版"
 
 msgid "Zombie"
-msgstr ""
+msgstr "ゾンビ"

@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Hyeonkyu Chu <hyeonkyu@gmail.com>, 2014-2015
+# Hyeonkyu Chu <hyeonkyu@gmail.com>, 2014-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-06 15:33-0600\n"
-"PO-Revision-Date: 2016-03-06 21:33+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2016-03-19 11:16+0000\n"
+"Last-Translator: Hyeonkyu Chu <hyeonkyu@gmail.com>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -112,7 +112,7 @@ msgid "Administrator: read/write, Users: read/write, Others: read-only"
 msgstr "관리자: 읽기/쓰기,　사용자: 읽기/쓰기,　기타: 읽기-전용"
 
 msgid "All"
-msgstr ""
+msgstr "모든"
 
 msgid "Apt Clean"
 msgstr "Apt 정리"
@@ -121,7 +121,7 @@ msgid "Architecture"
 msgstr "아키텍처"
 
 msgid "Backup"
-msgstr ""
+msgstr "백업"
 
 msgid "Beta"
 msgstr "베타"
@@ -197,7 +197,7 @@ msgid "Everyone: read/write"
 msgstr "누구나: 읽기/쓰기"
 
 msgid "Filesystems"
-msgstr ""
+msgstr "파일시스템"
 
 msgid "Greyhole"
 msgstr "Greyhole"
@@ -220,10 +220,10 @@ msgid "Information"
 msgstr "정보"
 
 msgid "Install Backports kernel"
-msgstr ""
+msgstr "Backports 커널 설치"
 
 msgid "Install Backports kernel ..."
-msgstr ""
+msgstr "Backports 커널 설치 ..."
 
 msgid "Install kernel headers"
 msgstr "커널 헤더 설치"
@@ -266,7 +266,7 @@ msgid "Mono and mono-project.com"
 msgstr "Mono 및 mono-project.com"
 
 msgid "Multimedia"
-msgstr ""
+msgstr "멀티미디어"
 
 msgid "Name"
 msgstr "이름"
@@ -287,7 +287,7 @@ msgid "PID"
 msgstr "PID"
 
 msgid "Paused"
-msgstr ""
+msgstr "중지된"
 
 msgid "Permissions"
 msgstr "권한"
@@ -326,7 +326,7 @@ msgid "Reset permissions ..."
 msgstr "권한 재설정 ..."
 
 msgid "Running"
-msgstr ""
+msgstr "실행중"
 
 msgid "Select a directory"
 msgstr "디렉터리 선택"
@@ -356,7 +356,7 @@ msgid "Shared Folder In Use"
 msgstr "공유 폴더에 사용됨"
 
 msgid "Sleeping"
-msgstr ""
+msgstr "잠든"
 
 msgid "State"
 msgstr "상태"
@@ -374,10 +374,10 @@ msgid "Support Info Module Selection"
 msgstr "지원 정보　단위 기능 선택"
 
 msgid "Sync"
-msgstr ""
+msgstr "동기화"
 
 msgid "Sync repository"
-msgstr ""
+msgstr "저장소 동기화"
 
 msgid "System - iface"
 msgstr "System - iface"
@@ -404,16 +404,16 @@ msgid "User"
 msgstr "사용자"
 
 msgid "Utilities"
-msgstr ""
+msgstr "Utilities"
 
 msgid "Version"
-msgstr "버전"
+msgstr "판"
 
 msgid "Virtualization"
-msgstr ""
+msgstr "가상화"
 
 msgid "Wait"
-msgstr ""
+msgstr "대기"
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -422,4 +422,4 @@ msgid "ZFS Testing"
 msgstr "ZFS Testing"
 
 msgid "Zombie"
-msgstr ""
+msgstr "좀비"

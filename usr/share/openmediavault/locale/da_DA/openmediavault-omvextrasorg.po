@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Stefan Thrane Overby <stoverby@gmail.com>, 2013-2015
+# Stefan Thrane Overby <stoverby@gmail.com>, 2013-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-06 15:33-0600\n"
-"PO-Revision-Date: 2016-03-06 21:33+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2016-03-07 11:07+0000\n"
+"Last-Translator: Stefan Thrane Overby <stoverby@gmail.com>\n"
 "Language-Team: Danish (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -112,7 +112,7 @@ msgid "Administrator: read/write, Users: read/write, Others: read-only"
 msgstr "Administrator: læse/skrive, Brugere: læse/skrive, Andre: skrivebeskyttet"
 
 msgid "All"
-msgstr ""
+msgstr "Alle"
 
 msgid "Apt Clean"
 msgstr "Apt Oprydning"
@@ -121,7 +121,7 @@ msgid "Architecture"
 msgstr "Arkitektur"
 
 msgid "Backup"
-msgstr ""
+msgstr "Backup"
 
 msgid "Beta"
 msgstr "Beta"
@@ -197,7 +197,7 @@ msgid "Everyone: read/write"
 msgstr "Alle: læse/skrive"
 
 msgid "Filesystems"
-msgstr ""
+msgstr "Filsystemer"
 
 msgid "Greyhole"
 msgstr "Greyhole"
@@ -220,10 +220,10 @@ msgid "Information"
 msgstr "Oplysninger"
 
 msgid "Install Backports kernel"
-msgstr ""
+msgstr "Installer Backports Kerne"
 
 msgid "Install Backports kernel ..."
-msgstr ""
+msgstr "Installer Backports kerne ..."
 
 msgid "Install kernel headers"
 msgstr "Installer kerne headers"
@@ -266,7 +266,7 @@ msgid "Mono and mono-project.com"
 msgstr "Mono og mono-project.com"
 
 msgid "Multimedia"
-msgstr ""
+msgstr "Multimedia"
 
 msgid "Name"
 msgstr "Navn"
@@ -287,7 +287,7 @@ msgid "PID"
 msgstr "PID"
 
 msgid "Paused"
-msgstr ""
+msgstr "Pauset"
 
 msgid "Permissions"
 msgstr "Rettigheder"
@@ -326,7 +326,7 @@ msgid "Reset permissions ..."
 msgstr "Nulstil rettigheder ..."
 
 msgid "Running"
-msgstr ""
+msgstr "Kører"
 
 msgid "Select a directory"
 msgstr "Vælg et bibliotek"
@@ -356,7 +356,7 @@ msgid "Shared Folder In Use"
 msgstr "Delt Mappe I Brug"
 
 msgid "Sleeping"
-msgstr ""
+msgstr "Dvale"
 
 msgid "State"
 msgstr "Tilstand"
@@ -374,10 +374,10 @@ msgid "Support Info Module Selection"
 msgstr "Understøt Oplysning Modul Valg"
 
 msgid "Sync"
-msgstr ""
+msgstr "Synk"
 
 msgid "Sync repository"
-msgstr ""
+msgstr "Synk arkiv"
 
 msgid "System - iface"
 msgstr "System - iface"
@@ -404,16 +404,16 @@ msgid "User"
 msgstr "Bruger"
 
 msgid "Utilities"
-msgstr ""
+msgstr "Værktøjer"
 
 msgid "Version"
 msgstr "Version"
 
 msgid "Virtualization"
-msgstr ""
+msgstr "Virtualisering"
 
 msgid "Wait"
-msgstr ""
+msgstr "Vent"
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -422,4 +422,4 @@ msgid "ZFS Testing"
 msgstr "ZFS Test"
 
 msgid "Zombie"
-msgstr ""
+msgstr "Zombie"

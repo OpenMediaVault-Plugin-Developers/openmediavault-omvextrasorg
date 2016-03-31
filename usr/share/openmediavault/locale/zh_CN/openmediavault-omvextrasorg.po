@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# songming <by@songming.me>, 2013-2015
+# songming <by@songming.me>, 2013-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-06 15:33-0600\n"
-"PO-Revision-Date: 2016-03-06 21:33+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2016-03-08 10:13+0000\n"
+"Last-Translator: songming <by@songming.me>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -112,7 +112,7 @@ msgid "Administrator: read/write, Users: read/write, Others: read-only"
 msgstr "管理员：读/写，用户：读/写，其它：读/写"
 
 msgid "All"
-msgstr ""
+msgstr "全部"
 
 msgid "Apt Clean"
 msgstr "清除APT缓存"
@@ -121,7 +121,7 @@ msgid "Architecture"
 msgstr "构架"
 
 msgid "Backup"
-msgstr ""
+msgstr "备份"
 
 msgid "Beta"
 msgstr "Beta"
@@ -197,7 +197,7 @@ msgid "Everyone: read/write"
 msgstr "任何人：读/写"
 
 msgid "Filesystems"
-msgstr ""
+msgstr "文件系统"
 
 msgid "Greyhole"
 msgstr "Greyhole"
@@ -220,10 +220,10 @@ msgid "Information"
 msgstr "信息"
 
 msgid "Install Backports kernel"
-msgstr ""
+msgstr "安装Backports内核"
 
 msgid "Install Backports kernel ..."
-msgstr ""
+msgstr "安装Backports内核中 ..."
 
 msgid "Install kernel headers"
 msgstr "安装kernel headers"
@@ -266,7 +266,7 @@ msgid "Mono and mono-project.com"
 msgstr "Mono和mono-project.com"
 
 msgid "Multimedia"
-msgstr ""
+msgstr "多媒体"
 
 msgid "Name"
 msgstr "名称"
@@ -287,7 +287,7 @@ msgid "PID"
 msgstr "PID"
 
 msgid "Paused"
-msgstr ""
+msgstr "暂停"
 
 msgid "Permissions"
 msgstr "权限"
@@ -326,7 +326,7 @@ msgid "Reset permissions ..."
 msgstr "重设权限中 ..."
 
 msgid "Running"
-msgstr ""
+msgstr "运行"
 
 msgid "Select a directory"
 msgstr "选择目录"
@@ -356,7 +356,7 @@ msgid "Shared Folder In Use"
 msgstr "共享文件夹使用情况"
 
 msgid "Sleeping"
-msgstr ""
+msgstr "睡眠"
 
 msgid "State"
 msgstr "状态"
@@ -374,10 +374,10 @@ msgid "Support Info Module Selection"
 msgstr "选择需要的模块以获得支持信息"
 
 msgid "Sync"
-msgstr ""
+msgstr "同步"
 
 msgid "Sync repository"
-msgstr ""
+msgstr "同步源"
 
 msgid "System - iface"
 msgstr ""
@@ -404,16 +404,16 @@ msgid "User"
 msgstr "用户"
 
 msgid "Utilities"
-msgstr ""
+msgstr "使用工具"
 
 msgid "Version"
 msgstr "版本"
 
 msgid "Virtualization"
-msgstr ""
+msgstr "虚拟化"
 
 msgid "Wait"
-msgstr ""
+msgstr "等待"
 
 msgid "ZFS"
 msgstr "ZFS"

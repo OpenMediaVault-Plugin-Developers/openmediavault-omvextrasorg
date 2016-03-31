@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Andi Chandler <andi@gowling.com>, 2015
+# Andi Chandler <andi@gowling.com>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-06 15:33-0600\n"
-"PO-Revision-Date: 2016-03-06 21:33+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2016-03-08 14:55+0000\n"
+"Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/en_GB/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -112,7 +112,7 @@ msgid "Administrator: read/write, Users: read/write, Others: read-only"
 msgstr "Administrator: read/write, Users: read/write, Others: read-only"
 
 msgid "All"
-msgstr ""
+msgstr "All"
 
 msgid "Apt Clean"
 msgstr "Apt Clean"
@@ -121,7 +121,7 @@ msgid "Architecture"
 msgstr "Architecture"
 
 msgid "Backup"
-msgstr ""
+msgstr "Backup"
 
 msgid "Beta"
 msgstr "Beta"
@@ -197,7 +197,7 @@ msgid "Everyone: read/write"
 msgstr "Everyone: read/write"
 
 msgid "Filesystems"
-msgstr ""
+msgstr "Filesystems"
 
 msgid "Greyhole"
 msgstr "Greyhole"
@@ -220,10 +220,10 @@ msgid "Information"
 msgstr "Information"
 
 msgid "Install Backports kernel"
-msgstr ""
+msgstr "Install Backports kernel"
 
 msgid "Install Backports kernel ..."
-msgstr ""
+msgstr "Install Backports kernel ..."
 
 msgid "Install kernel headers"
 msgstr "Install kernel headers"
@@ -266,7 +266,7 @@ msgid "Mono and mono-project.com"
 msgstr "Mono and mono-project.com"
 
 msgid "Multimedia"
-msgstr ""
+msgstr "Multimedia"
 
 msgid "Name"
 msgstr "Name"
@@ -287,7 +287,7 @@ msgid "PID"
 msgstr "PID"
 
 msgid "Paused"
-msgstr ""
+msgstr "Paused"
 
 msgid "Permissions"
 msgstr "Permissions"
@@ -326,7 +326,7 @@ msgid "Reset permissions ..."
 msgstr "Reset permissions ..."
 
 msgid "Running"
-msgstr ""
+msgstr "Running"
 
 msgid "Select a directory"
 msgstr "Select a directory"
@@ -356,7 +356,7 @@ msgid "Shared Folder In Use"
 msgstr "Shared Folder In Use"
 
 msgid "Sleeping"
-msgstr ""
+msgstr "Sleeping"
 
 msgid "State"
 msgstr "State"
@@ -374,10 +374,10 @@ msgid "Support Info Module Selection"
 msgstr "Support Info Module Selection"
 
 msgid "Sync"
-msgstr ""
+msgstr "Sync"
 
 msgid "Sync repository"
-msgstr ""
+msgstr "Sync repository"
 
 msgid "System - iface"
 msgstr "System - iface"
@@ -404,16 +404,16 @@ msgid "User"
 msgstr "User"
 
 msgid "Utilities"
-msgstr ""
+msgstr "Utilities"
 
 msgid "Version"
 msgstr "Version"
 
 msgid "Virtualization"
-msgstr ""
+msgstr "Virtualisation"
 
 msgid "Wait"
-msgstr ""
+msgstr "Wait"
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -422,4 +422,4 @@ msgid "ZFS Testing"
 msgstr "ZFS Testing"
 
 msgid "Zombie"
-msgstr ""
+msgstr "Zombie"
