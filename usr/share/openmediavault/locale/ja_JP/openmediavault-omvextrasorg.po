@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-06 15:33-0600\n"
-"PO-Revision-Date: 2016-03-08 05:17+0000\n"
-"Last-Translator: Toshihiro Kan <kansuke4649@gmail.com>\n"
+"POT-Creation-Date: 2016-05-01 18:37-0500\n"
+"PO-Revision-Date: 2016-05-01 23:38+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,116 +18,11 @@ msgstr ""
 "Language: ja_JP\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-msgid "% CPU"
-msgstr "% CPU"
-
-msgid "% MEM"
-msgstr "% MEM"
-
-msgid "00 Debian Version"
-msgstr "00 Debian バージョン"
-
-msgid "00 OMV Version"
-msgstr "00 OMV バージョン"
-
-msgid "10 Date"
-msgstr "10 日付"
-
-msgid "10 Hostname"
-msgstr "10 ホスト名"
-
-msgid "10 Locale"
-msgstr "10 ロケール"
-
-msgid "10 Uptime"
-msgstr "10 起動時間"
-
-msgid "10 uname"
-msgstr "10 uname"
-
-msgid "20 Interfaces"
-msgstr "20 インタフェース"
-
-msgid "20 Route"
-msgstr "20 経路"
-
-msgid "20 iptables"
-msgstr "20 iptables"
-
-msgid "20 netstat"
-msgstr "20 netstat"
-
-msgid "30 mdadm"
-msgstr "30 mdadm"
-
-msgid "30 monit"
-msgstr "30 monit"
-
-msgid "31 hpraid"
-msgstr "31 hpraid"
-
-msgid "40 Mount Info"
-msgstr "40 マウント情報"
-
-msgid "40 Partitions"
-msgstr "40 パーティション"
-
-msgid "40 blkid"
-msgstr "40 blkid"
-
-msgid "40 df"
-msgstr "40 df"
-
-msgid "40 fstab"
-msgstr "40 fstab"
-
-msgid "50 OMV Plugins"
-msgstr "50 OMV プラグイン"
-
-msgid "50 apt sources"
-msgstr "50 apt ソース"
-
-msgid "50 dpkg"
-msgstr "50 dpkg"
-
-msgid "61 lsmod"
-msgstr "61 lsmod"
-
-msgid "Add custom repo"
-msgstr "カスタムリポジトリの追加"
-
-msgid "Administrator: read/write, Users: no access, Others: no access"
-msgstr "Administrator: 読み込み/書き込み, Users: アクセス不可, Others: アクセス不可"
-
-msgid "Administrator: read/write, Users: read-only, Others: no access"
-msgstr "Administrator: 読み込み/書き込み, Users: 読み込みのみ, Others: アクセス不可"
-
-msgid "Administrator: read/write, Users: read-only, Others: read-only"
-msgstr "Administrator: 読み込み/書き込み, Users: 読み込みのみ, Others: 読み込みのみ"
-
-msgid "Administrator: read/write, Users: read/write, Others: no access"
-msgstr "Administrator: 読み込み/書き込み, Users: 読み込み/書き込み, Others: アクセス不可"
-
-msgid "Administrator: read/write, Users: read/write, Others: read-only"
-msgstr "Administrator: 読み込み/書き込み, Users: 読み込み/書き込み, Others: 読み込みのみ"
-
-msgid "All"
-msgstr "すべて"
+msgid "Add repo"
+msgstr ""
 
 msgid "Apt Clean"
 msgstr "APTクリーン"
-
-msgid "Architecture"
-msgstr "アーキテクチャ"
-
-msgid "Backup"
-msgstr "バックアップ"
-
-msgid "Beta"
-msgstr "ベータ"
-
-msgid "Beta repository"
-msgstr "ベータリポジトリ"
 
 msgid "Cancel"
 msgstr "キャンセル"
@@ -138,98 +33,31 @@ msgstr "新しいアップデートを確認しています ..."
 msgid "Cleaning Apt Files and Lists..."
 msgstr "APTファイルとリストをクリーニングしています..."
 
-msgid "Clear ACLs"
-msgstr "ACLのクリア"
-
-msgid "Clear all ACLs."
-msgstr "すべてのACLをクリア"
-
-msgid "Command"
-msgstr "コマンド"
-
 msgid "Comment"
 msgstr "コメント"
-
-msgid "Custom Repos"
-msgstr "カスタムリポジトリ"
-
-msgid "Degraded Array Info"
-msgstr "デグレードしたアレイの情報"
-
-msgid "Description"
-msgstr "説明"
-
-msgid "Developer"
-msgstr "開発者"
-
-msgid "Distribution"
-msgstr "ディストリビューション"
-
-msgid ""
-"Do not enable this repository unless you are using the ZFS filesystem "
-"(uncommon)"
-msgstr "ZFSファイルシステムを使用しない限り、このリポジトリを有効にしないでください(非推奨)"
-
-msgid ""
-"Do not enable this testing repository unless you are using the ZFS "
-"filesystem (uncommon)"
-msgstr "ZFSファイルシステムを使用しない限り、このテスト版リポジトリを有効にしないでください(非推奨)"
-
-msgid "Docker"
-msgstr "Docker"
-
-msgid "Docker Testing"
-msgstr "Dockerテスト版"
-
-msgid "Docker repository"
-msgstr "Dockerリポジトリ"
 
 msgid "Done..."
 msgstr "完了"
 
-msgid "Edit custom repo"
-msgstr "カスタムリポジトリの編集"
+msgid "Edit repo"
+msgstr ""
 
 msgid "Enable"
 msgstr "有効化"
 
-msgid "Everyone: read/write"
-msgstr "Everyone: 読み込み/書き込み"
-
-msgid "Filesystems"
-msgstr "ファイルシステム"
-
-msgid "Greyhole"
-msgstr "Greyhole"
-
-msgid "Greyhole repository"
-msgstr "Greyhole リポジトリ"
-
-msgid "HWRaid"
-msgstr "HWRaid"
+msgid "Enabled"
+msgstr ""
 
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
 "still have the option to boot the standard kernel."
 msgstr "システムがバックポート版カーネルを使用してブートしない場合は、ブートメニューでまだ標準のカーネルを使用して起動する設定になっています。"
 
-msgid "In Use By"
-msgstr "使用中"
-
-msgid "Information"
-msgstr "情報"
-
 msgid "Install Backports kernel"
 msgstr "バックポートカーネルのインストール"
 
 msgid "Install Backports kernel ..."
 msgstr "バックポートカーネルをインストールしています ..."
-
-msgid "Install kernel headers"
-msgstr "カーネルヘッダのインストール"
-
-msgid "Install kernel headers ..."
-msgstr "カーネルヘッダをインストールしています ..."
 
 msgid "Installed Kernels"
 msgstr "インストールされているカーネル"
@@ -247,27 +75,6 @@ msgstr "カーネル"
 msgid "Key"
 msgstr "キー"
 
-msgid "Main package repository"
-msgstr "メインパッケージリポジトリ"
-
-msgid "Modules"
-msgstr "モジュール"
-
-msgid "Modules for different hardware raid controllers"
-msgstr "異なるハードウェアRAIDコントローラ用のモジュール"
-
-msgid "Mono"
-msgstr "Mono"
-
-msgid "Mono Testing"
-msgstr "Monoテスト版"
-
-msgid "Mono and mono-project.com"
-msgstr "Monoとmono-project.com"
-
-msgid "Multimedia"
-msgstr "マルチメディア"
-
 msgid "Name"
 msgstr "名前"
 
@@ -277,65 +84,38 @@ msgstr "注意"
 msgid "OK"
 msgstr "OK"
 
-msgid "OMV-Extras.org"
-msgstr "OMV-Extras.org"
+msgid "OMV-Extras"
+msgstr ""
 
-msgid "OMV-Extras.org Testing"
-msgstr "OMV-Extras.orgテスト版"
+msgid "Package"
+msgstr ""
 
-msgid "PID"
-msgstr "PID"
+msgid "Permanent"
+msgstr ""
 
-msgid "Paused"
-msgstr "一時停止"
+msgid "Pin"
+msgstr ""
 
-msgid "Permissions"
-msgstr "パーミッション"
-
-msgid "Please select a shared folder."
-msgstr "共有フォルダを選択してください。"
-
-msgid "Plex"
-msgstr "Plex"
-
-msgid "Plex Media Server repository"
-msgstr "Plex Media Serverリポジトリ"
-
-msgid "Process List"
-msgstr "プロセスリスト"
-
-msgid "Release candidates"
-msgstr "リリース候補版"
+msgid "Priority"
+msgstr ""
 
 msgid "Repo"
 msgstr "リポジトリ"
 
+msgid "Repo #1"
+msgstr ""
+
+msgid "Repo #2"
+msgstr ""
+
+msgid "Repo #3"
+msgstr ""
+
 msgid "Repos"
 msgstr "リポジトリ"
 
-msgid "Repository"
-msgstr "リポジトリ"
-
-msgid "Reset Permissions"
-msgstr "パーミッションのリセット"
-
-msgid "Reset folders and files to this file mode."
-msgstr "このファイルモードにフォルダとファイルを再設定します。"
-
-msgid "Reset permissions ..."
-msgstr "パミッションの初期化 ..."
-
-msgid "Running"
-msgstr "実行中"
-
 msgid "Select a directory"
 msgstr "ディレクトリを選択"
-
-msgid "Send"
-msgstr "送信"
-
-msgid "Send Support Info"
-msgstr "サポート情報を送信"
 
 msgid "Set as default boot kernel"
 msgstr "デフォルトの起動カーネルをセット"
@@ -349,77 +129,5 @@ msgid ""
 "kernel."
 msgstr "間違ったデフォルトの起動カーネルを設定すると、システムにアクセスできなくなることがあります。　別のカーネルを選択するためにブートメニューが利用可能となります。"
 
-msgid "Shared Folder"
-msgstr "共有フォルダ"
-
-msgid "Shared Folder In Use"
-msgstr "共有フォルダを使用中"
-
-msgid "Sleeping"
-msgstr "スリープ中"
-
-msgid "State"
-msgstr "状態"
-
-msgid "Style #1"
-msgstr "スタイル #1"
-
-msgid "Style #2"
-msgstr "スタイル #2"
-
-msgid "Support Info"
-msgstr "サポート情報"
-
-msgid "Support Info Module Selection"
-msgstr "モジュールセクションのサポート情報"
-
-msgid "Sync"
-msgstr "同期"
-
-msgid "Sync repository"
-msgstr "リポジトリの同期"
-
-msgid "System - iface"
-msgstr "システム - iface"
-
-msgid "System - mntent"
-msgstr "システム - mntent"
-
-msgid "System - sharedfolder"
-msgstr "システム - 共有フォルダ"
-
-msgid "Testing repository for Docker"
-msgstr "Docker用テスト版リポジトリ"
-
-msgid "Testing repository for Mono"
-msgstr "Mono用テスト版リポジトリ"
-
-msgid "Type"
-msgstr "タイプ"
-
 msgid "Update"
 msgstr "アップデート"
-
-msgid "User"
-msgstr "ユーザー"
-
-msgid "Utilities"
-msgstr "ユーティリティ"
-
-msgid "Version"
-msgstr "バージョン"
-
-msgid "Virtualization"
-msgstr "仮想化"
-
-msgid "Wait"
-msgstr "ウェイト"
-
-msgid "ZFS"
-msgstr "ZFS"
-
-msgid "ZFS Testing"
-msgstr "ZFSテスト版"
-
-msgid "Zombie"
-msgstr "ゾンビ"

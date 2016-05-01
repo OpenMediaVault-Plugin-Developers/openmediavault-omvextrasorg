@@ -3,7 +3,7 @@
  * @author    Volker Theile <volker.theile@openmediavault.org>
  * @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
  * @copyright Copyright (c) 2009-2013 Volker Theile
- * @copyright Copyright (c) 2013-2015 OpenMediaVault Plugin Developers
+ * @copyright Copyright (c) 2013-2016 OpenMediaVault Plugin Developers
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,39 +20,19 @@
  */
 // require("js/omv/WorkspaceManager.js")
 // require("js/omv/workspace/form/Panel.js")
+// require("js/omv/Rpc.js")
 // require("js/omv/data/Store.js")
 // require("js/omv/data/Model.js")
+// require("js/omv/data/proxy/Rpc.js")
 // require("js/omv/window/MessageBox.js")
 
-Ext.define("OMV.module.admin.system.omvextrasorg.Kernel", {
+Ext.define("OMV.module.admin.system.omvextras.Kernel", {
     extend : "OMV.workspace.form.Panel",
 
-    rpcService   : "OmvExtrasOrg",
+    rpcService   : "OmvExtras",
     rpcGetMethod : "getKernel",
-    rpcSetMethod : "setKernel",
 
-    getButtonItems : function() {
-        var me = this;
-        var items = me.callParent(arguments);
-        items.push({
-            id       : me.getId() + "-backports",
-            xtype    : "button",
-            text     : _("Install Backports kernel"),
-            icon     : "images/add.png",
-            iconCls  : Ext.baseCSSPrefix + "btn-icon-16x16",
-            scope    : me,
-            handler  : Ext.Function.bind(me.onCommandButton, me, [ "installbackports" ])
-        },{
-            id       : me.getId() + "-headers",
-            xtype    : "button",
-            text     : _("Install kernel headers"),
-            icon     : "images/add.png",
-            iconCls  : Ext.baseCSSPrefix + "btn-icon-16x16",
-            scope    : me,
-            handler  : Ext.Function.bind(me.onCommandButton, me, [ "installheaders" ])
-        });
-        return items;
-    },
+    hideTopToolbar: true,
 
     getFormItems : function() {
         var me = this;
@@ -83,7 +63,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Kernel", {
                     proxy : {
                         type    : "rpc",
                         rpcData : {
-                            service : "OmvExtrasOrg",
+                            service : "OmvExtras",
                             method  : "getKernelList"
                         }
                     }
@@ -95,6 +75,13 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Kernel", {
                 scope   : this,
                 handler : Ext.Function.bind(me.onSetBootButton, me, [ me ]),
                 margin  : "5 0 8 0"
+            },{
+                xtype   : "button",
+                name    : "backports",
+                text    : _("Install Backports kernel"),
+                scope   : this,
+                handler : Ext.Function.bind(me.onCommandButton, me, [ me ]),
+                margin  : "5 0 8 10"
             }]
         },{
             xtype         : "fieldset",
@@ -110,58 +97,17 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Kernel", {
                            "<li>" + _("If the system does not boot using the backports kernel, the boot menu will still have the option to boot the standard kernel.") + "</li>" +
                          "</ul>"
             }]
-        },{
-            xtype         : "fieldset",
-            title         : _("Information"),
-            fieldDefaults : {
-                labelSeparator : ""
-            },
-            items         : [{
-                xtype       : "textfield",
-                name        : "version",
-                fieldLabel  : _("Version"),
-                submitValue : false,
-                readOnly    : true
-            },{
-                xtype       : "textfield",
-                name        : "versionname",
-                fieldLabel  : _("Distribution"),
-                submitValue : false,
-                readOnly    : true
-            },{
-                xtype       : "textfield",
-                name        : "kernel",
-                fieldLabel  : _("Kernel"),
-                submitValue : false,
-                readOnly    : true
-            },{
-                xtype       : "textfield",
-                name        : "arch",
-                fieldLabel  : _("Architecture"),
-                submitValue : false,
-                readOnly    : true
-            },{
-                xtype      : "textfield",
-                name       : "developer",
-                fieldLabel : _("Developer"),
-                allowBlank : true
-            }]
         }];
     },
 
-    onCommandButton : function(cmd) {
+    onCommandButton : function() {
         var me = this;
-        if(cmd == "backports") {
-            title = _("Install Backports kernel ...");
-        } else {
-            title = _("Install kernel headers ...");
-        }
         Ext.create("OMV.window.Execute", {
-            title          : title,
-            rpcService     : "OmvExtrasOrg",
+            title          : _("Install Backports kernel ..."),
+            rpcService     : "OmvExtras",
             rpcMethod      : "doCommand",
             rpcParams      : {
-                "command" : cmd
+                "command" : "installbackports"
             },
             hideStopButton : true,
             listeners      : {
@@ -181,7 +127,7 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Kernel", {
             scope       : me,
             relayErrors : false,
             rpcData     : {
-                service  : "OmvExtrasOrg",
+                service  : "OmvExtras",
                 method   : "setBootKernel",
                 params   : {
                     key : key
@@ -197,8 +143,8 @@ Ext.define("OMV.module.admin.system.omvextrasorg.Kernel", {
 
 OMV.WorkspaceManager.registerPanel({
     id        : "kernel",
-    path      : "/system/omvextrasorg",
+    path      : "/system/omvextras",
     text      : _("Kernel"),
-    position  : 30,
-    className : "OMV.module.admin.system.omvextrasorg.Kernel"
+    position  : 20,
+    className : "OMV.module.admin.system.omvextras.Kernel"
 });

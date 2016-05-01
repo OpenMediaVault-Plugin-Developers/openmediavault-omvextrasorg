@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-06 15:33-0600\n"
-"PO-Revision-Date: 2016-03-06 21:33+0000\n"
+"POT-Creation-Date: 2016-05-01 18:37-0500\n"
+"PO-Revision-Date: 2016-05-01 23:38+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -20,116 +20,11 @@ msgstr ""
 "Language: ru\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-msgid "% CPU"
-msgstr ""
-
-msgid "% MEM"
-msgstr ""
-
-msgid "00 Debian Version"
-msgstr "00 Debian Версия"
-
-msgid "00 OMV Version"
-msgstr "00 OMV Версия"
-
-msgid "10 Date"
-msgstr "10 Дата"
-
-msgid "10 Hostname"
-msgstr "10 Имя хоста"
-
-msgid "10 Locale"
-msgstr "10 Язык"
-
-msgid "10 Uptime"
-msgstr ""
-
-msgid "10 uname"
-msgstr ""
-
-msgid "20 Interfaces"
-msgstr "20 Интерфейсы"
-
-msgid "20 Route"
-msgstr ""
-
-msgid "20 iptables"
-msgstr ""
-
-msgid "20 netstat"
-msgstr ""
-
-msgid "30 mdadm"
-msgstr ""
-
-msgid "30 monit"
-msgstr ""
-
-msgid "31 hpraid"
-msgstr ""
-
-msgid "40 Mount Info"
-msgstr ""
-
-msgid "40 Partitions"
-msgstr ""
-
-msgid "40 blkid"
-msgstr ""
-
-msgid "40 df"
-msgstr ""
-
-msgid "40 fstab"
-msgstr ""
-
-msgid "50 OMV Plugins"
-msgstr ""
-
-msgid "50 apt sources"
-msgstr ""
-
-msgid "50 dpkg"
-msgstr ""
-
-msgid "61 lsmod"
-msgstr ""
-
-msgid "Add custom repo"
-msgstr "Добавить пользовательский репозиторий"
-
-msgid "Administrator: read/write, Users: no access, Others: no access"
-msgstr "Администратор: чтения / записи, Пользователи: нет доступа, Другие: нет доступа"
-
-msgid "Administrator: read/write, Users: read-only, Others: no access"
-msgstr "Администратор: не чтение / запись, Пользователи: только для чтения, Другие: нет доступа"
-
-msgid "Administrator: read/write, Users: read-only, Others: read-only"
-msgstr "Администратор: чтение / запись, Пользователи: только для чтения, Другие: только для чтения"
-
-msgid "Administrator: read/write, Users: read/write, Others: no access"
-msgstr "Администратор: чтения / записи, Пользователи: чтения / записи, Другие: нет доступа"
-
-msgid "Administrator: read/write, Users: read/write, Others: read-only"
-msgstr "Администратор: чтение / запись, Пользователи: чтение / запись, Другие: только для чтения"
-
-msgid "All"
+msgid "Add repo"
 msgstr ""
 
 msgid "Apt Clean"
 msgstr "Очистить кеш пакетов APT"
-
-msgid "Architecture"
-msgstr "Архитектура"
-
-msgid "Backup"
-msgstr ""
-
-msgid "Beta"
-msgstr "Бета"
-
-msgid "Beta repository"
-msgstr "Бета хранилище"
 
 msgid "Cancel"
 msgstr "Отмена"
@@ -140,98 +35,31 @@ msgstr "Проверка обновлений ..."
 msgid "Cleaning Apt Files and Lists..."
 msgstr "Очистка Apt файлов и списков ..."
 
-msgid "Clear ACLs"
-msgstr "Очистить ACLs"
-
-msgid "Clear all ACLs."
-msgstr "Очистить все ACLs."
-
-msgid "Command"
-msgstr "Команда"
-
 msgid "Comment"
 msgstr "Комментарий"
-
-msgid "Custom Repos"
-msgstr "Пользовательские репозитории"
-
-msgid "Degraded Array Info"
-msgstr ""
-
-msgid "Description"
-msgstr "Описание"
-
-msgid "Developer"
-msgstr "Разработчик"
-
-msgid "Distribution"
-msgstr ""
-
-msgid ""
-"Do not enable this repository unless you are using the ZFS filesystem "
-"(uncommon)"
-msgstr "Не включайте этот репозиторий, если вы не используете файловую систему ZFS (редко)"
-
-msgid ""
-"Do not enable this testing repository unless you are using the ZFS "
-"filesystem (uncommon)"
-msgstr "Не включайте этот тестовый репозиторий, если вы не используете файловую систему ZFS (редко)"
-
-msgid "Docker"
-msgstr ""
-
-msgid "Docker Testing"
-msgstr ""
-
-msgid "Docker repository"
-msgstr ""
 
 msgid "Done..."
 msgstr "Готово..."
 
-msgid "Edit custom repo"
-msgstr "Редактировать пользовательский репозиторий"
+msgid "Edit repo"
+msgstr ""
 
 msgid "Enable"
 msgstr "Включить"
 
-msgid "Everyone: read/write"
-msgstr "Все: чтение / запись"
-
-msgid "Filesystems"
+msgid "Enabled"
 msgstr ""
-
-msgid "Greyhole"
-msgstr "Greyhole"
-
-msgid "Greyhole repository"
-msgstr "Greyhole репозиторий"
-
-msgid "HWRaid"
-msgstr "HWRaid"
 
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
 "still have the option to boot the standard kernel."
 msgstr "Если система не загружается, используя ядро из Backports, меню загрузки будет по-прежнему доступно для загрузки стандартного ядра."
 
-msgid "In Use By"
-msgstr "Используется"
-
-msgid "Information"
-msgstr "Информация"
-
 msgid "Install Backports kernel"
 msgstr ""
 
 msgid "Install Backports kernel ..."
 msgstr ""
-
-msgid "Install kernel headers"
-msgstr "Устанавливаем заголовки ядра"
-
-msgid "Install kernel headers ..."
-msgstr "Устанавливаются заголовки ядра ..."
 
 msgid "Installed Kernels"
 msgstr "Установленные ядра"
@@ -249,27 +77,6 @@ msgstr "Ядра"
 msgid "Key"
 msgstr "Ключ"
 
-msgid "Main package repository"
-msgstr "Главный репозиторий пакетов"
-
-msgid "Modules"
-msgstr "Модули"
-
-msgid "Modules for different hardware raid controllers"
-msgstr "Модули для различных аппаратных контроллеров raid"
-
-msgid "Mono"
-msgstr "Mono"
-
-msgid "Mono Testing"
-msgstr "Mono тестовое"
-
-msgid "Mono and mono-project.com"
-msgstr "Mono и mono-project.com"
-
-msgid "Multimedia"
-msgstr ""
-
 msgid "Name"
 msgstr "Имя"
 
@@ -279,65 +86,38 @@ msgstr "Примечание"
 msgid "OK"
 msgstr ""
 
-msgid "OMV-Extras.org"
-msgstr "OMV-Extras.org"
-
-msgid "OMV-Extras.org Testing"
-msgstr "OMV-Extras.org Тестовый"
-
-msgid "PID"
-msgstr "PID"
-
-msgid "Paused"
+msgid "OMV-Extras"
 msgstr ""
 
-msgid "Permissions"
-msgstr "Разрешения"
+msgid "Package"
+msgstr ""
 
-msgid "Please select a shared folder."
-msgstr "Пожалуйста, выберите общую папку."
+msgid "Permanent"
+msgstr ""
 
-msgid "Plex"
-msgstr "Plex"
+msgid "Pin"
+msgstr ""
 
-msgid "Plex Media Server repository"
-msgstr "Plex Media Server репозиторий"
-
-msgid "Process List"
-msgstr "Список процессов"
-
-msgid "Release candidates"
-msgstr "Релиз кандидат"
+msgid "Priority"
+msgstr ""
 
 msgid "Repo"
+msgstr ""
+
+msgid "Repo #1"
+msgstr ""
+
+msgid "Repo #2"
+msgstr ""
+
+msgid "Repo #3"
 msgstr ""
 
 msgid "Repos"
 msgstr ""
 
-msgid "Repository"
-msgstr "Хранилище"
-
-msgid "Reset Permissions"
-msgstr "Сброс разрешений"
-
-msgid "Reset folders and files to this file mode."
-msgstr ""
-
-msgid "Reset permissions ..."
-msgstr "Сброс разрешений ..."
-
-msgid "Running"
-msgstr ""
-
 msgid "Select a directory"
 msgstr "Выбрать каталог"
-
-msgid "Send"
-msgstr "Отправить"
-
-msgid "Send Support Info"
-msgstr ""
 
 msgid "Set as default boot kernel"
 msgstr "Установить как ядро загрузки по умолчанию"
@@ -351,77 +131,5 @@ msgid ""
 "kernel."
 msgstr "Выбор неправильного ядра загрузки по умолчанию может привести к недоступности системы. Меню загрузки все еще будут доступно для выбора другого ядра."
 
-msgid "Shared Folder"
-msgstr ""
-
-msgid "Shared Folder In Use"
-msgstr ""
-
-msgid "Sleeping"
-msgstr ""
-
-msgid "State"
-msgstr "Состояние"
-
-msgid "Style #1"
-msgstr ""
-
-msgid "Style #2"
-msgstr ""
-
-msgid "Support Info"
-msgstr ""
-
-msgid "Support Info Module Selection"
-msgstr ""
-
-msgid "Sync"
-msgstr ""
-
-msgid "Sync repository"
-msgstr ""
-
-msgid "System - iface"
-msgstr ""
-
-msgid "System - mntent"
-msgstr ""
-
-msgid "System - sharedfolder"
-msgstr ""
-
-msgid "Testing repository for Docker"
-msgstr "Тестовое хранилище Docker"
-
-msgid "Testing repository for Mono"
-msgstr "Тестовое хранилище Mono"
-
-msgid "Type"
-msgstr "Тип"
-
 msgid "Update"
 msgstr "Обновить"
-
-msgid "User"
-msgstr "Пользователь"
-
-msgid "Utilities"
-msgstr ""
-
-msgid "Version"
-msgstr "Версия"
-
-msgid "Virtualization"
-msgstr ""
-
-msgid "Wait"
-msgstr ""
-
-msgid "ZFS"
-msgstr "ZFS"
-
-msgid "ZFS Testing"
-msgstr "ZFS Тестовый"
-
-msgid "Zombie"
-msgstr ""

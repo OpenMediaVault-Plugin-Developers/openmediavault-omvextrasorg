@@ -1,0 +1,217 @@
+#!/bin/sh
+#
+# @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
+# @author    Volker Theile <volker.theile@openmediavault.org>
+# @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
+# @copyright Copyright (c) 2009-2013 Volker Theile
+# @copyright Copyright (c) 2013-2016 OpenMediaVault Plugin Developers
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+set -e
+
+. /etc/default/openmediavault
+. /usr/share/openmediavault/scripts/helper-functions
+
+BACKPORTS_REPO="/etc/apt/sources.list.d/backports.list"
+XPATH="/config/system/omvextras/repos/repo"
+
+SKIP=false
+AMD64=false
+package=""
+
+conf=$2
+
+update()
+{
+    export LANG=C
+    export LC_ALL=C
+
+    OMVEXTRASREPOFILE="/etc/apt/sources.list.d/omv-extras-org.list"
+    OMVEXTRASAPTPREFS="/etc/apt/preferences.d/99omv-extras-org"
+
+    KEYSERVER="hkp://keyserver.ubuntu.com:80"
+
+    /bin/rm -f ${OMVEXTRASREPOFILE}
+    /bin/rm -f ${OMVEXTRASAPTPREFS}
+    /bin/rm -f /etc/apt/sources.list.d/omv-extras-org*.list
+
+    cat <<EOF > ${OMVEXTRASAPTPREFS}
+Package: *
+Pin: release n=${OMVVERSION}-backports, origin ${BINTRAY_REPO_LOCATION}
+Pin-Priority: 995
+
+Package: virtualbox virtualbox-dkms virtualbox-qt minidlna
+Pin: release a=jessie-backports
+Pin-Priority: 500
+
+EOF
+
+    # Process repos
+    echo "# This is file is generated." > ${OMVEXTRASREPOFILE}
+    echo "# OMV-Extras repos" >> ${OMVEXTRASREPOFILE}
+
+    count=$(omv_config_get_count "${XPATH}")
+    index=0
+    while [ ${index} -le ${count} ]; do
+        enable=$(omv_config_get "${XPATH}[position()=${index}]/enable")
+        name=$(omv_config_get "${XPATH}[position()=${index}]/name")
+
+        if [ "${enable}" != "0" ]; then
+            echo "# ${name}" >> ${OMVEXTRASREPOFILE}
+
+            for i in `seq 1 3`;
+            do
+                repo=$(omv_config_get "${XPATH}[position()=${index}]/repo${i}")
+                if [ "${repo}" != "" ]; then
+                    key=$(omv_config_get "${XPATH}[position()=${index}]/key${i}")
+
+                    echo "deb ${repo}" >> ${OMVEXTRASREPOFILE}
+
+                    if [ "${key}" != "" ]; then
+                        apt-key adv --keyserver ${KEYSERVER} --recv-keys "${key}"
+                    fi
+
+                    package=$(omv_config_get "${XPATH}[position()=${index}]/package${i}")
+                    pin=$(omv_config_get "${XPATH}[position()=${index}]/pin${i}")
+                    priority=$(omv_config_get "${XPATH}[position()=${index}]/priority${i}")
+
+                    if [ "${package}" != "" ]; then
+                        echo "Package: ${package}" >> ${OMVEXTRASAPTPREFS}
+                        echo "Pin: ${pin}" >> ${OMVEXTRASAPTPREFS}
+                        echo "Pin-Priority: ${priority}" >> ${OMVEXTRASAPTPREFS}
+                        echo "" >> ${OMVEXTRASAPTPREFS}
+                    fi
+
+                fi
+            done
+        fi
+
+        index=$(( ${index} + 1 ))
+    done
+
+    chmod 644 ${OMVEXTRASAPTPREFS}
+
+    if [ -f "${BACKPORTS_REPO}" ]; then
+        createBackportsFile
+    fi
+}
+
+backports()
+{
+    export LANG=C
+    export DEBIAN_FRONTEND=noninteractive
+
+    getArch
+
+    if $SKIP; then
+        echo "Unsupported kernel and/or processor"
+    else
+        createBackportsFile
+
+        echo "Updating..."
+        apt-get --quiet update > /dev/null 2>&1
+
+        echo "Install backports 4.5 kernel and headers"
+        apt-get -t jessie-backports --yes --force-yes --fix-missing install \
+            linux-image-4.5.0-0.bpo.1-${package} \
+            linux-headers-4.5.0-0.bpo.1-${package} \
+            firmware-linux \
+            firmware-linux-free
+
+        disablesubmenu
+        echo "..."
+        echo "Please reboot to use new kernel"
+    fi
+}
+
+createBackportsFile()
+{
+    echo "deb http://httpredir.debian.org/debian jessie-backports main contrib non-free" > $BACKPORTS_REPO
+}
+
+getArch()
+{
+    ARCH="`/bin/uname -m`"
+
+    case "$ARCH" in
+        *amd64*)
+            AMD64=true
+            package="amd64"
+        ;;
+        *x86_64*)
+            AMD64=true
+            package="amd64"
+        ;;
+        *486*)
+            AMD64=false
+            package="586"
+        ;;
+        *586*)
+            AMD64=false
+            package="586"
+        ;;
+        *686*)
+            AMD64=false
+            package="586"
+        ;;
+        *)
+            SKIP=true
+            package=""
+        ;;
+    esac
+}
+
+disablesubmenu()
+{
+    GRUB="/etc/default/grub"
+
+    if ! grep -q 'GRUB_DISABLE_SUBMENU' ${GRUB}; then
+        echo "GRUB_DISABLE_SUBMENU=y" >> ${GRUB}
+        update-grub
+    fi
+}
+
+case $2 in
+    update)
+        OMVVERSION="stoneburner"
+        RELEASE="jessie"
+
+        update
+    ;;
+
+    aptclean)
+        update
+        /usr/sbin/omv-aptclean
+    ;;
+
+    installbackports)
+        backports
+    ;;
+
+    disablesubmenu)
+        disablesubmenu
+    ;;
+
+    *)
+        update
+        case ${conf} in
+            configure) ;;
+            *)  apt-get update || : ;;
+        esac
+
+    ;;
+esac
+
+exit 0

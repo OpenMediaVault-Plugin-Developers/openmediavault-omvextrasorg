@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-06 15:33-0600\n"
-"PO-Revision-Date: 2016-03-28 09:21+0000\n"
-"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
+"POT-Creation-Date: 2016-05-01 18:37-0500\n"
+"PO-Revision-Date: 2016-05-01 23:38+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,116 +19,11 @@ msgstr ""
 "Language: cs_CZ\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-msgid "% CPU"
-msgstr "% procesoru"
-
-msgid "% MEM"
-msgstr "% oper. paměti"
-
-msgid "00 Debian Version"
-msgstr "00 verze systému Debian"
-
-msgid "00 OMV Version"
-msgstr "00 verze nadstavby OMV"
-
-msgid "10 Date"
-msgstr "10 datum"
-
-msgid "10 Hostname"
-msgstr "10 název stroje"
-
-msgid "10 Locale"
-msgstr "10 místní a jazyková nastavení"
-
-msgid "10 Uptime"
-msgstr "10 doba chodu"
-
-msgid "10 uname"
-msgstr "10 systém (uname)"
-
-msgid "20 Interfaces"
-msgstr "20 sítová rozhraní"
-
-msgid "20 Route"
-msgstr "20 směrování"
-
-msgid "20 iptables"
-msgstr "20 pravidla brány firewall"
-
-msgid "20 netstat"
-msgstr "20 síť. spojení (netstat)"
-
-msgid "30 mdadm"
-msgstr "30 sw raid (mdadm)"
-
-msgid "30 monit"
-msgstr "30 stav služeb (monit)"
-
-msgid "31 hpraid"
-msgstr "31 hpraid"
-
-msgid "40 Mount Info"
-msgstr "40 připojené soubor. systémy"
-
-msgid "40 Partitions"
-msgstr "40 oddíly dat. úložišť"
-
-msgid "40 blkid"
-msgstr "40 bloková zař. (blkid)"
-
-msgid "40 df"
-msgstr "40 využití disků"
-
-msgid "40 fstab"
-msgstr "40 přípojné body (fstab)"
-
-msgid "50 OMV Plugins"
-msgstr "50 zásuvné moduly pro OMV"
-
-msgid "50 apt sources"
-msgstr "50 zdroje balíčků (apt)"
-
-msgid "50 dpkg"
-msgstr "50 správa balíčků (dpkg)"
-
-msgid "61 lsmod"
-msgstr "61 používané moduly jádra (lsmod)"
-
-msgid "Add custom repo"
-msgstr "Přidat vlastní repozitář"
-
-msgid "Administrator: read/write, Users: no access, Others: no access"
-msgstr "Správce: číst/zapisovat, uživatelé: žádný přístup, ostatní: žádný přístup"
-
-msgid "Administrator: read/write, Users: read-only, Others: no access"
-msgstr "Správce: číst/zapisovat, uživatelé: pouze číst, ostatní: žádný přístup"
-
-msgid "Administrator: read/write, Users: read-only, Others: read-only"
-msgstr "Správce: číst/zapisovat, uživatelé: pouze číst, ostatní: pouze číst"
-
-msgid "Administrator: read/write, Users: read/write, Others: no access"
-msgstr "Správce: číst/zapisovat, uživatelé: číst/zapisovat, ostatní: žádný přístup"
-
-msgid "Administrator: read/write, Users: read/write, Others: read-only"
-msgstr "Správce: číst/zapisovat, uživatelé: číst/zapisovat, ostatní: pouze číst"
-
-msgid "All"
-msgstr "Vše"
+msgid "Add repo"
+msgstr ""
 
 msgid "Apt Clean"
 msgstr "Vyčistit mezipaměť balíčků"
-
-msgid "Architecture"
-msgstr "Architektura"
-
-msgid "Backup"
-msgstr "Záloha"
-
-msgid "Beta"
-msgstr "Vývojové (beta)"
-
-msgid "Beta repository"
-msgstr "Vývojové (beta) verze"
 
 msgid "Cancel"
 msgstr "Zrušit"
@@ -139,98 +34,31 @@ msgstr "Kontrola dostupnosti aktualizací…"
 msgid "Cleaning Apt Files and Lists..."
 msgstr "Čistění souborů a seznamů Apt…"
 
-msgid "Clear ACLs"
-msgstr "Smazat seznamy řízení přístupu (ACL)"
-
-msgid "Clear all ACLs."
-msgstr "Smazat veškeré seznamy řízení přistupu"
-
-msgid "Command"
-msgstr "Příkaz"
-
 msgid "Comment"
 msgstr "Komentář"
-
-msgid "Custom Repos"
-msgstr "Vlastní repozitáře"
-
-msgid "Degraded Array Info"
-msgstr "Informace o degradovaném RAID poli"
-
-msgid "Description"
-msgstr "Popis"
-
-msgid "Developer"
-msgstr "Vývojář"
-
-msgid "Distribution"
-msgstr "Vydání"
-
-msgid ""
-"Do not enable this repository unless you are using the ZFS filesystem "
-"(uncommon)"
-msgstr "Součásti pro podporu souborového systému ZFS (nepříliš obvyklý) – používejte pouze v případě, že ZFS opravdu provozujete"
-
-msgid ""
-"Do not enable this testing repository unless you are using the ZFS "
-"filesystem (uncommon)"
-msgstr "Vývojové verze součástí pro podporu souborového systému ZFS (nepříliš obvyklý) – používejte pouze v případě, že ZFS opravdu provozujete"
-
-msgid "Docker"
-msgstr "Docker"
-
-msgid "Docker Testing"
-msgstr "Docker – testovací"
-
-msgid "Docker repository"
-msgstr "Platforma aplikačních kontejnerů Docker"
 
 msgid "Done..."
 msgstr "Hotovo…"
 
-msgid "Edit custom repo"
-msgstr "Upravit vlastní repozitář"
+msgid "Edit repo"
+msgstr ""
 
 msgid "Enable"
 msgstr "Používat"
 
-msgid "Everyone: read/write"
-msgstr "Všichni: číst/zapisovat"
-
-msgid "Filesystems"
-msgstr "Souborové systémy"
-
-msgid "Greyhole"
-msgstr "Greyhole"
-
-msgid "Greyhole repository"
-msgstr "Systém distribuovaného ukládání souborů Greyhole"
-
-msgid "HWRaid"
-msgstr "Hardware RAID"
+msgid "Enabled"
+msgstr ""
 
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
 "still have the option to boot the standard kernel."
 msgstr "Pro případ, že systém nebude schopen startu s jádrem z novější verze, v nabídce zavádění stále bude možnost použití standardního jádra."
 
-msgid "In Use By"
-msgstr "Používáno"
-
-msgid "Information"
-msgstr "Informace"
-
 msgid "Install Backports kernel"
 msgstr "Nainstalovat zpětně přenesené (backport) jádro systému"
 
 msgid "Install Backports kernel ..."
 msgstr "Nainstalovat zpětně přenesené (backport) jádro systému…"
-
-msgid "Install kernel headers"
-msgstr "Nainstalovat hlavičkové soubory k jádru"
-
-msgid "Install kernel headers ..."
-msgstr "Instalace hlavičkových souborů k jádru…"
 
 msgid "Installed Kernels"
 msgstr "Nainstalovaná jádra operačního systému:"
@@ -248,27 +76,6 @@ msgstr "Jádra"
 msgid "Key"
 msgstr "Podpisový klíč balíčků:"
 
-msgid "Main package repository"
-msgstr "Hlavní balíčky"
-
-msgid "Modules"
-msgstr "Moduly"
-
-msgid "Modules for different hardware raid controllers"
-msgstr "Ovladače pro nejrůznější hardwarové řadiče RAID polí"
-
-msgid "Mono"
-msgstr "Mono"
-
-msgid "Mono Testing"
-msgstr "Mono – testovací"
-
-msgid "Mono and mono-project.com"
-msgstr "Běhové/vývojové prostředí Mono (mono-project.com)"
-
-msgid "Multimedia"
-msgstr "Multimédia"
-
 msgid "Name"
 msgstr "Název"
 
@@ -278,65 +85,38 @@ msgstr "Poznámky"
 msgid "OK"
 msgstr "OK"
 
-msgid "OMV-Extras.org"
-msgstr "OMV-Extras.org"
+msgid "OMV-Extras"
+msgstr ""
 
-msgid "OMV-Extras.org Testing"
-msgstr "OMV-Extras.org – testovací"
+msgid "Package"
+msgstr ""
 
-msgid "PID"
-msgstr "Identifikátor procesu (PID)"
+msgid "Permanent"
+msgstr ""
 
-msgid "Paused"
-msgstr "Pozastaveno"
+msgid "Pin"
+msgstr ""
 
-msgid "Permissions"
-msgstr "Oprávnění"
-
-msgid "Please select a shared folder."
-msgstr "Vyberte sdílenou složku."
-
-msgid "Plex"
-msgstr "Plex"
-
-msgid "Plex Media Server repository"
-msgstr "Multimediální centrum Plex Media Server"
-
-msgid "Process List"
-msgstr "Seznam procesů"
-
-msgid "Release candidates"
-msgstr "Verze pro testování před vydáním"
+msgid "Priority"
+msgstr ""
 
 msgid "Repo"
 msgstr "URL adresa repozitáře"
 
+msgid "Repo #1"
+msgstr ""
+
+msgid "Repo #2"
+msgstr ""
+
+msgid "Repo #3"
+msgstr ""
+
 msgid "Repos"
 msgstr "Repozitáře"
 
-msgid "Repository"
-msgstr "Repozitář"
-
-msgid "Reset Permissions"
-msgstr "Vrátit oprávnění na výchozí hodnoty"
-
-msgid "Reset folders and files to this file mode."
-msgstr "Vrátit režim přístupu (mode) souborů a složek na tento."
-
-msgid "Reset permissions ..."
-msgstr "Vrátit přístupová oprávnění na výchozí hodnoty…"
-
-msgid "Running"
-msgstr "Spuštěné"
-
 msgid "Select a directory"
 msgstr "Vyberte složku"
-
-msgid "Send"
-msgstr "Odeslat"
-
-msgid "Send Support Info"
-msgstr "Odeslat informace pro podporu"
 
 msgid "Set as default boot kernel"
 msgstr "Nastavit jako výchozí jádro k zavádění"
@@ -350,77 +130,5 @@ msgid ""
 "kernel."
 msgstr "Nastavení nefungujícího výchozího jádra může způsobit nedostupnost systému. V nabídce zavaděče bude ovšem stále možné zvolit jiné jádro."
 
-msgid "Shared Folder"
-msgstr "Sdílená složka"
-
-msgid "Shared Folder In Use"
-msgstr "Právě používaná sdílená složka"
-
-msgid "Sleeping"
-msgstr "Uspané"
-
-msgid "State"
-msgstr "Stav"
-
-msgid "Style #1"
-msgstr "Styl č. 1"
-
-msgid "Style #2"
-msgstr "Styl č. 2"
-
-msgid "Support Info"
-msgstr "Informace pro technickou podporu"
-
-msgid "Support Info Module Selection"
-msgstr "Výběr oblastí informací pro podporu"
-
-msgid "Sync"
-msgstr "Synchronizace"
-
-msgid "Sync repository"
-msgstr "Synchronizovat repozitář"
-
-msgid "System - iface"
-msgstr "Systém – síťová rozhraní"
-
-msgid "System - mntent"
-msgstr "Systém – položka připojování (mntent)"
-
-msgid "System - sharedfolder"
-msgstr "Systém – sdílená složka"
-
-msgid "Testing repository for Docker"
-msgstr "Vývojové verze platformy Docker"
-
-msgid "Testing repository for Mono"
-msgstr "Vývojové verze prostředí Mono"
-
-msgid "Type"
-msgstr "Typ"
-
 msgid "Update"
 msgstr "Aktualizovat"
-
-msgid "User"
-msgstr "Uživatel"
-
-msgid "Utilities"
-msgstr "Nástroje"
-
-msgid "Version"
-msgstr "Verze"
-
-msgid "Virtualization"
-msgstr "Virtualizace"
-
-msgid "Wait"
-msgstr "Čekat"
-
-msgid "ZFS"
-msgstr "ZFS"
-
-msgid "ZFS Testing"
-msgstr "ZFS – testovací"
-
-msgid "Zombie"
-msgstr "Nefunkční („zombie“) proces"

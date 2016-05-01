@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-06 15:33-0600\n"
-"PO-Revision-Date: 2016-03-07 11:07+0000\n"
-"Last-Translator: Stefan Thrane Overby <stoverby@gmail.com>\n"
+"POT-Creation-Date: 2016-05-01 18:37-0500\n"
+"PO-Revision-Date: 2016-05-01 23:38+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Danish (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,116 +18,11 @@ msgstr ""
 "Language: da\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "% CPU"
-msgstr "% CPU"
-
-msgid "% MEM"
-msgstr "% MEM"
-
-msgid "00 Debian Version"
-msgstr "00 Debian Version"
-
-msgid "00 OMV Version"
-msgstr "00 OMV Version"
-
-msgid "10 Date"
-msgstr "10 Dato"
-
-msgid "10 Hostname"
-msgstr "10 Værtsnavn"
-
-msgid "10 Locale"
-msgstr "10 Lokal"
-
-msgid "10 Uptime"
-msgstr "10 Oppetid"
-
-msgid "10 uname"
-msgstr "10 unavn"
-
-msgid "20 Interfaces"
-msgstr "20 Interfacer"
-
-msgid "20 Route"
-msgstr "20 Route"
-
-msgid "20 iptables"
-msgstr "20 iptabler"
-
-msgid "20 netstat"
-msgstr "20 netstat"
-
-msgid "30 mdadm"
-msgstr "30 mdadm"
-
-msgid "30 monit"
-msgstr "30 monit"
-
-msgid "31 hpraid"
-msgstr "31 hpraid"
-
-msgid "40 Mount Info"
-msgstr "40 Monterings Oplysning"
-
-msgid "40 Partitions"
-msgstr "40 Partitioner"
-
-msgid "40 blkid"
-msgstr "40 blkid"
-
-msgid "40 df"
-msgstr "40 df"
-
-msgid "40 fstab"
-msgstr "40 fstab"
-
-msgid "50 OMV Plugins"
-msgstr "50 OMV Plugins"
-
-msgid "50 apt sources"
-msgstr "50 apt kilder"
-
-msgid "50 dpkg"
-msgstr "50 dpkg"
-
-msgid "61 lsmod"
-msgstr "61 lsmod"
-
-msgid "Add custom repo"
-msgstr "Tilføj brugerdefineret arkiv"
-
-msgid "Administrator: read/write, Users: no access, Others: no access"
-msgstr "Administrator: læse/skrive, Brugere: ingen adgang, Andre: ingen adgang"
-
-msgid "Administrator: read/write, Users: read-only, Others: no access"
-msgstr "Administrator: læse/skrive, Brugere: skrivebeskyttet, Andre: ingen adgang"
-
-msgid "Administrator: read/write, Users: read-only, Others: read-only"
-msgstr "Administrator: læse/skrive, Brugere: skrivebeskyttet, Andre: skrivebeskyttet"
-
-msgid "Administrator: read/write, Users: read/write, Others: no access"
-msgstr "Administrator: læse/skrive, Brugere: læse/skrive, Andre: ingen adgang"
-
-msgid "Administrator: read/write, Users: read/write, Others: read-only"
-msgstr "Administrator: læse/skrive, Brugere: læse/skrive, Andre: skrivebeskyttet"
-
-msgid "All"
-msgstr "Alle"
+msgid "Add repo"
+msgstr ""
 
 msgid "Apt Clean"
 msgstr "Apt Oprydning"
-
-msgid "Architecture"
-msgstr "Arkitektur"
-
-msgid "Backup"
-msgstr "Backup"
-
-msgid "Beta"
-msgstr "Beta"
-
-msgid "Beta repository"
-msgstr "Beta arkiv"
 
 msgid "Cancel"
 msgstr "Annuller"
@@ -138,98 +33,31 @@ msgstr "Kontroller efter nye opdateringer ..."
 msgid "Cleaning Apt Files and Lists..."
 msgstr "Rydder op i Apt Filer og Lister.."
 
-msgid "Clear ACLs"
-msgstr "Slet ALCér"
-
-msgid "Clear all ACLs."
-msgstr "Slet alle ALCér."
-
-msgid "Command"
-msgstr "Kommando"
-
 msgid "Comment"
 msgstr "Kommentar"
-
-msgid "Custom Repos"
-msgstr "Brugerdefineret Arkiver"
-
-msgid "Degraded Array Info"
-msgstr "Nedgraderet Array Oplysning"
-
-msgid "Description"
-msgstr "Beskrivelse"
-
-msgid "Developer"
-msgstr "Udvikler"
-
-msgid "Distribution"
-msgstr "Distribution"
-
-msgid ""
-"Do not enable this repository unless you are using the ZFS filesystem "
-"(uncommon)"
-msgstr "Aktiver ikke dette arkiv medmindre du bruger ZFS filsystemet (ikke almindeligt)"
-
-msgid ""
-"Do not enable this testing repository unless you are using the ZFS "
-"filesystem (uncommon)"
-msgstr "Aktiver ikke dette test arkiv medmindre du bruger ZFS filsystemet (ikke almindeligt)"
-
-msgid "Docker"
-msgstr "Docker"
-
-msgid "Docker Testing"
-msgstr "Docker Test"
-
-msgid "Docker repository"
-msgstr "Docker arkiv"
 
 msgid "Done..."
 msgstr "Færdig..."
 
-msgid "Edit custom repo"
-msgstr "Rediger brugerdefineret arkiv"
+msgid "Edit repo"
+msgstr ""
 
 msgid "Enable"
 msgstr "Aktiver"
 
-msgid "Everyone: read/write"
-msgstr "Alle: læse/skrive"
-
-msgid "Filesystems"
-msgstr "Filsystemer"
-
-msgid "Greyhole"
-msgstr "Greyhole"
-
-msgid "Greyhole repository"
-msgstr "Greyhole arkiv"
-
-msgid "HWRaid"
-msgstr "HWRaid"
+msgid "Enabled"
+msgstr ""
 
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
 "still have the option to boot the standard kernel."
 msgstr "Hvis systemet ikke kan boote ved brug af backports kernen, vil boot menuen stadig have mulighed for at boote standard kernen."
 
-msgid "In Use By"
-msgstr "I Brug Af"
-
-msgid "Information"
-msgstr "Oplysninger"
-
 msgid "Install Backports kernel"
 msgstr "Installer Backports Kerne"
 
 msgid "Install Backports kernel ..."
 msgstr "Installer Backports kerne ..."
-
-msgid "Install kernel headers"
-msgstr "Installer kerne headers"
-
-msgid "Install kernel headers ..."
-msgstr "Installer kerne headers ..."
 
 msgid "Installed Kernels"
 msgstr "Installeret Kerner"
@@ -247,27 +75,6 @@ msgstr "Kerner"
 msgid "Key"
 msgstr "Nøgle"
 
-msgid "Main package repository"
-msgstr "Hoved pakke arkiv"
-
-msgid "Modules"
-msgstr "Moduler"
-
-msgid "Modules for different hardware raid controllers"
-msgstr "Moduler til forskellige hardware raid kontroller"
-
-msgid "Mono"
-msgstr "Mono"
-
-msgid "Mono Testing"
-msgstr "Mono Test"
-
-msgid "Mono and mono-project.com"
-msgstr "Mono og mono-project.com"
-
-msgid "Multimedia"
-msgstr "Multimedia"
-
 msgid "Name"
 msgstr "Navn"
 
@@ -277,65 +84,38 @@ msgstr "Noter"
 msgid "OK"
 msgstr "Ok"
 
-msgid "OMV-Extras.org"
-msgstr "OMV-Extras.org"
+msgid "OMV-Extras"
+msgstr ""
 
-msgid "OMV-Extras.org Testing"
-msgstr "OMV-Extras.org Test"
+msgid "Package"
+msgstr ""
 
-msgid "PID"
-msgstr "PID"
+msgid "Permanent"
+msgstr ""
 
-msgid "Paused"
-msgstr "Pauset"
+msgid "Pin"
+msgstr ""
 
-msgid "Permissions"
-msgstr "Rettigheder"
-
-msgid "Please select a shared folder."
-msgstr "Vælg venligst en delt mappe."
-
-msgid "Plex"
-msgstr "Plex"
-
-msgid "Plex Media Server repository"
-msgstr "Plex Media Server arkiv"
-
-msgid "Process List"
-msgstr "Proces Liste"
-
-msgid "Release candidates"
-msgstr "Udgivelses kandidater"
+msgid "Priority"
+msgstr ""
 
 msgid "Repo"
 msgstr "Arkiv"
 
+msgid "Repo #1"
+msgstr ""
+
+msgid "Repo #2"
+msgstr ""
+
+msgid "Repo #3"
+msgstr ""
+
 msgid "Repos"
 msgstr "Arkiver"
 
-msgid "Repository"
-msgstr "Arkiv"
-
-msgid "Reset Permissions"
-msgstr "Nulstil Rettigheder "
-
-msgid "Reset folders and files to this file mode."
-msgstr "Nulstil mapper og filer til denne fil tilstand."
-
-msgid "Reset permissions ..."
-msgstr "Nulstil rettigheder ..."
-
-msgid "Running"
-msgstr "Kører"
-
 msgid "Select a directory"
 msgstr "Vælg et bibliotek"
-
-msgid "Send"
-msgstr "Send"
-
-msgid "Send Support Info"
-msgstr "Send Support Oplysning"
 
 msgid "Set as default boot kernel"
 msgstr "Indstil som standard boot kerne"
@@ -349,77 +129,5 @@ msgid ""
 "kernel."
 msgstr "Indstilling af forkert standard boot kerne kan gøre systemet utilgængeligt. Boot menuen vil stadig være tilgængelig til at vælge en anden kerne."
 
-msgid "Shared Folder"
-msgstr "Delt Mappe"
-
-msgid "Shared Folder In Use"
-msgstr "Delt Mappe I Brug"
-
-msgid "Sleeping"
-msgstr "Dvale"
-
-msgid "State"
-msgstr "Tilstand"
-
-msgid "Style #1"
-msgstr "Stil #1"
-
-msgid "Style #2"
-msgstr "Stil #2"
-
-msgid "Support Info"
-msgstr "Support Oplysning"
-
-msgid "Support Info Module Selection"
-msgstr "Understøt Oplysning Modul Valg"
-
-msgid "Sync"
-msgstr "Synk"
-
-msgid "Sync repository"
-msgstr "Synk arkiv"
-
-msgid "System - iface"
-msgstr "System - iface"
-
-msgid "System - mntent"
-msgstr "System - mntent"
-
-msgid "System - sharedfolder"
-msgstr "System - delt mappe"
-
-msgid "Testing repository for Docker"
-msgstr "Test arkiv til Docker"
-
-msgid "Testing repository for Mono"
-msgstr "Test aktiv til Mono"
-
-msgid "Type"
-msgstr "Type"
-
 msgid "Update"
 msgstr "Opdater"
-
-msgid "User"
-msgstr "Bruger"
-
-msgid "Utilities"
-msgstr "Værktøjer"
-
-msgid "Version"
-msgstr "Version"
-
-msgid "Virtualization"
-msgstr "Virtualisering"
-
-msgid "Wait"
-msgstr "Vent"
-
-msgid "ZFS"
-msgstr "ZFS"
-
-msgid "ZFS Testing"
-msgstr "ZFS Test"
-
-msgid "Zombie"
-msgstr "Zombie"

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-06 15:33-0600\n"
-"PO-Revision-Date: 2016-03-06 21:33+0000\n"
+"POT-Creation-Date: 2016-05-01 18:37-0500\n"
+"PO-Revision-Date: 2016-05-01 23:38+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -18,116 +18,11 @@ msgstr ""
 "Language: hu_HU\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "% CPU"
-msgstr "% CPU"
-
-msgid "% MEM"
-msgstr "% MEM"
-
-msgid "00 Debian Version"
-msgstr "00 Debian verzió"
-
-msgid "00 OMV Version"
-msgstr "00 OMV verzió"
-
-msgid "10 Date"
-msgstr "10 Dátum"
-
-msgid "10 Hostname"
-msgstr "10 Hostnév"
-
-msgid "10 Locale"
-msgstr "10 Helyszín"
-
-msgid "10 Uptime"
-msgstr "10 Üzemidő"
-
-msgid "10 uname"
-msgstr "10 unév"
-
-msgid "20 Interfaces"
-msgstr "20 Felületek"
-
-msgid "20 Route"
-msgstr "20 Útvonal"
-
-msgid "20 iptables"
-msgstr "20 iptáblák"
-
-msgid "20 netstat"
-msgstr "20 netstat"
-
-msgid "30 mdadm"
-msgstr "30 mdadm"
-
-msgid "30 monit"
-msgstr "30 monit"
-
-msgid "31 hpraid"
-msgstr "31 hpraid"
-
-msgid "40 Mount Info"
-msgstr "40 Tár infó"
-
-msgid "40 Partitions"
-msgstr "40 Particiók"
-
-msgid "40 blkid"
-msgstr "40 blkid"
-
-msgid "40 df"
-msgstr "40 df"
-
-msgid "40 fstab"
-msgstr "40 fstab"
-
-msgid "50 OMV Plugins"
-msgstr "50 OMV pluginok"
-
-msgid "50 apt sources"
-msgstr "50 apt források"
-
-msgid "50 dpkg"
-msgstr "50 dpkg"
-
-msgid "61 lsmod"
-msgstr "61 lsmod"
-
-msgid "Add custom repo"
-msgstr "Egyedi tár hozzáadás"
-
-msgid "Administrator: read/write, Users: no access, Others: no access"
-msgstr "Adminisztrátor: olvasás/írás, Felhasználók: nincs hozzáférés, Mások: nincs hozzáférés"
-
-msgid "Administrator: read/write, Users: read-only, Others: no access"
-msgstr "Adminisztrátor: olvasás/írás, Felhasználók: csak olvasás, Mások: nincs hozzáférés"
-
-msgid "Administrator: read/write, Users: read-only, Others: read-only"
-msgstr "Adminisztrátor: olvasás/írás, Felhasználók: csak olvasás, Mások: csak olvasás"
-
-msgid "Administrator: read/write, Users: read/write, Others: no access"
-msgstr "Adminisztrátor: olvasás/írás, Felhasználók: olvasás/írás, Mások: nincs hozzáférés"
-
-msgid "Administrator: read/write, Users: read/write, Others: read-only"
-msgstr "Adminisztrátor: olvasás/írás, Felhasználók: olvasás/írás, Mások: csak olvasás"
-
-msgid "All"
+msgid "Add repo"
 msgstr ""
 
 msgid "Apt Clean"
 msgstr "Apt törlés"
-
-msgid "Architecture"
-msgstr "Architektúra"
-
-msgid "Backup"
-msgstr ""
-
-msgid "Beta"
-msgstr "Béta"
-
-msgid "Beta repository"
-msgstr "Beta tároló"
 
 msgid "Cancel"
 msgstr ""
@@ -138,98 +33,31 @@ msgstr "Új frissítések keresése ..."
 msgid "Cleaning Apt Files and Lists..."
 msgstr "Apt fájlok és listák ürítése..."
 
-msgid "Clear ACLs"
-msgstr "ACL-ek tisztítása"
-
-msgid "Clear all ACLs."
-msgstr "Összes ACL tisztítása."
-
-msgid "Command"
-msgstr "Parancs"
-
 msgid "Comment"
 msgstr "Megjegyzés"
-
-msgid "Custom Repos"
-msgstr "Egyedi tárak"
-
-msgid "Degraded Array Info"
-msgstr "Lecsökkentett info sor"
-
-msgid "Description"
-msgstr "Leírás"
-
-msgid "Developer"
-msgstr "Fejlesztő"
-
-msgid "Distribution"
-msgstr "Kódnév"
-
-msgid ""
-"Do not enable this repository unless you are using the ZFS filesystem "
-"(uncommon)"
-msgstr "Ne engedélyezd ezt a tárolót, ha nem használsz ZFS fájlrendszert (ritka)"
-
-msgid ""
-"Do not enable this testing repository unless you are using the ZFS "
-"filesystem (uncommon)"
-msgstr "Ne engedélyezd ezt az opciót, ha nem használsz ZFS fájlrendszert (ritka)"
-
-msgid "Docker"
-msgstr "Docker"
-
-msgid "Docker Testing"
-msgstr "Docker tesztelés"
-
-msgid "Docker repository"
-msgstr "Docker tároló"
 
 msgid "Done..."
 msgstr "Kész..."
 
-msgid "Edit custom repo"
-msgstr "Egyedi tár szerkesztése"
+msgid "Edit repo"
+msgstr ""
 
 msgid "Enable"
 msgstr "Bekapcsol"
 
-msgid "Everyone: read/write"
-msgstr "Mindenki: olvasás/írás"
-
-msgid "Filesystems"
+msgid "Enabled"
 msgstr ""
-
-msgid "Greyhole"
-msgstr "Greyhole"
-
-msgid "Greyhole repository"
-msgstr "Greyhole tároló"
-
-msgid "HWRaid"
-msgstr "HWRaid"
 
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
 "still have the option to boot the standard kernel."
 msgstr "Ha a rendszer nem indul el a 'Backports' kernellel, akkor a boot menüben lehetőséged van az eredeti kernellel indítnai a rendszert."
 
-msgid "In Use By"
-msgstr ""
-
-msgid "Information"
-msgstr "Információ"
-
 msgid "Install Backports kernel"
 msgstr ""
 
 msgid "Install Backports kernel ..."
 msgstr ""
-
-msgid "Install kernel headers"
-msgstr "Kernel fejlécek telepítése"
-
-msgid "Install kernel headers ..."
-msgstr "Kernel fejlécek telepítése ..."
 
 msgid "Installed Kernels"
 msgstr "Telepített kernelek"
@@ -247,27 +75,6 @@ msgstr "Kernelek"
 msgid "Key"
 msgstr "Kulcs"
 
-msgid "Main package repository"
-msgstr "Fő csomag tároló"
-
-msgid "Modules"
-msgstr "Modulok"
-
-msgid "Modules for different hardware raid controllers"
-msgstr "Különböző hardveres RAID vezérlőmodulok"
-
-msgid "Mono"
-msgstr "Mono"
-
-msgid "Mono Testing"
-msgstr "Mono tesztelés"
-
-msgid "Mono and mono-project.com"
-msgstr "Mono és mono-project.com"
-
-msgid "Multimedia"
-msgstr ""
-
 msgid "Name"
 msgstr "Név"
 
@@ -277,65 +84,38 @@ msgstr "Megjegyzések"
 msgid "OK"
 msgstr ""
 
-msgid "OMV-Extras.org"
-msgstr "OMV-Extrák"
-
-msgid "OMV-Extras.org Testing"
-msgstr "OMV-Extras.org tesztelés"
-
-msgid "PID"
-msgstr "PID"
-
-msgid "Paused"
+msgid "OMV-Extras"
 msgstr ""
 
-msgid "Permissions"
-msgstr "Engedélyek"
+msgid "Package"
+msgstr ""
 
-msgid "Please select a shared folder."
-msgstr "Válaszd ki a megosztott mappát."
+msgid "Permanent"
+msgstr ""
 
-msgid "Plex"
-msgstr "Plex"
+msgid "Pin"
+msgstr ""
 
-msgid "Plex Media Server repository"
-msgstr "Plex médiaszerver tároló"
-
-msgid "Process List"
-msgstr "Folyamat lista"
-
-msgid "Release candidates"
-msgstr "Kiadásra szánt"
+msgid "Priority"
+msgstr ""
 
 msgid "Repo"
 msgstr "Tár"
 
+msgid "Repo #1"
+msgstr ""
+
+msgid "Repo #2"
+msgstr ""
+
+msgid "Repo #3"
+msgstr ""
+
 msgid "Repos"
 msgstr "Tárak"
 
-msgid "Repository"
-msgstr "Tároló"
-
-msgid "Reset Permissions"
-msgstr "Engedélyek visszaállítása"
-
-msgid "Reset folders and files to this file mode."
-msgstr "Fájlok és mappák visszaállítása."
-
-msgid "Reset permissions ..."
-msgstr "Engedélyek visszaállítása ..."
-
-msgid "Running"
-msgstr ""
-
 msgid "Select a directory"
 msgstr ""
-
-msgid "Send"
-msgstr "Küld"
-
-msgid "Send Support Info"
-msgstr "Támogatási infó küldés"
 
 msgid "Set as default boot kernel"
 msgstr "Alap rendszerindító kernel beállítása"
@@ -349,77 +129,5 @@ msgid ""
 "kernel."
 msgstr "A rosszul alapértelmezettként beállított kernel miatt a rendszer elérhetetlenné válhat. A boot menüben továbbra is kiválasztható lesz egy másik kernel. "
 
-msgid "Shared Folder"
-msgstr "Megosztott mappa"
-
-msgid "Shared Folder In Use"
-msgstr ""
-
-msgid "Sleeping"
-msgstr ""
-
-msgid "State"
-msgstr "Állapot"
-
-msgid "Style #1"
-msgstr "#1 stílus"
-
-msgid "Style #2"
-msgstr "#2 stílus"
-
-msgid "Support Info"
-msgstr "Támogatási infó"
-
-msgid "Support Info Module Selection"
-msgstr "Támogatási infó modul kiválasztása"
-
-msgid "Sync"
-msgstr ""
-
-msgid "Sync repository"
-msgstr ""
-
-msgid "System - iface"
-msgstr "Rendszer - iface"
-
-msgid "System - mntent"
-msgstr "Rendszer - mntent"
-
-msgid "System - sharedfolder"
-msgstr "Rendszer - osztottmappa"
-
-msgid "Testing repository for Docker"
-msgstr "Docker tároló tesztelés"
-
-msgid "Testing repository for Mono"
-msgstr "Mono tároló tesztelés"
-
-msgid "Type"
-msgstr "Típus"
-
 msgid "Update"
 msgstr "Frissítés"
-
-msgid "User"
-msgstr "Felhasználó"
-
-msgid "Utilities"
-msgstr ""
-
-msgid "Version"
-msgstr "Verzió"
-
-msgid "Virtualization"
-msgstr ""
-
-msgid "Wait"
-msgstr ""
-
-msgid "ZFS"
-msgstr "ZFS"
-
-msgid "ZFS Testing"
-msgstr "ZFS tesztelés"
-
-msgid "Zombie"
-msgstr ""

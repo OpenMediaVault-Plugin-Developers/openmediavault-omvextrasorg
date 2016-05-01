@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-06 15:33-0600\n"
-"PO-Revision-Date: 2016-03-08 14:55+0000\n"
-"Last-Translator: Andi Chandler <andi@gowling.com>\n"
+"POT-Creation-Date: 2016-05-01 18:37-0500\n"
+"PO-Revision-Date: 2016-05-01 23:38+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: English (United Kingdom) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/en_GB/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,116 +18,11 @@ msgstr ""
 "Language: en_GB\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "% CPU"
-msgstr "% CPU"
-
-msgid "% MEM"
-msgstr "% MEM"
-
-msgid "00 Debian Version"
-msgstr "00 Debian Version"
-
-msgid "00 OMV Version"
-msgstr "00 OMV Version"
-
-msgid "10 Date"
-msgstr "10 Date"
-
-msgid "10 Hostname"
-msgstr "10 Hostname"
-
-msgid "10 Locale"
-msgstr "10 Locale"
-
-msgid "10 Uptime"
-msgstr "10 Uptime"
-
-msgid "10 uname"
-msgstr "10 uname"
-
-msgid "20 Interfaces"
-msgstr "20 Interfaces"
-
-msgid "20 Route"
-msgstr "20 Route"
-
-msgid "20 iptables"
-msgstr "20 iptables"
-
-msgid "20 netstat"
-msgstr "20 netstat"
-
-msgid "30 mdadm"
-msgstr "30 mdadm"
-
-msgid "30 monit"
-msgstr "30 monit"
-
-msgid "31 hpraid"
-msgstr "31 hpraid"
-
-msgid "40 Mount Info"
-msgstr "40 Mount Info"
-
-msgid "40 Partitions"
-msgstr "40 Partitions"
-
-msgid "40 blkid"
-msgstr "40 blkid"
-
-msgid "40 df"
-msgstr "40 df"
-
-msgid "40 fstab"
-msgstr "40 fstab"
-
-msgid "50 OMV Plugins"
-msgstr "50 OMV Plugins"
-
-msgid "50 apt sources"
-msgstr "50 apt sources"
-
-msgid "50 dpkg"
-msgstr "50 dpkg"
-
-msgid "61 lsmod"
-msgstr "61 lsmod"
-
-msgid "Add custom repo"
-msgstr "Add custom repo"
-
-msgid "Administrator: read/write, Users: no access, Others: no access"
-msgstr "Administrator: read/write, Users: no access, Others: no access"
-
-msgid "Administrator: read/write, Users: read-only, Others: no access"
-msgstr "Administrator: read/write, Users: read-only, Others: no access"
-
-msgid "Administrator: read/write, Users: read-only, Others: read-only"
-msgstr "Administrator: read/write, Users: read-only, Others: read-only"
-
-msgid "Administrator: read/write, Users: read/write, Others: no access"
-msgstr "Administrator: read/write, Users: read/write, Others: no access"
-
-msgid "Administrator: read/write, Users: read/write, Others: read-only"
-msgstr "Administrator: read/write, Users: read/write, Others: read-only"
-
-msgid "All"
-msgstr "All"
+msgid "Add repo"
+msgstr ""
 
 msgid "Apt Clean"
 msgstr "Apt Clean"
-
-msgid "Architecture"
-msgstr "Architecture"
-
-msgid "Backup"
-msgstr "Backup"
-
-msgid "Beta"
-msgstr "Beta"
-
-msgid "Beta repository"
-msgstr "Beta repository"
 
 msgid "Cancel"
 msgstr "Cancel"
@@ -138,98 +33,31 @@ msgstr "Checking for new updates ..."
 msgid "Cleaning Apt Files and Lists..."
 msgstr "Cleaning Apt Files and Lists..."
 
-msgid "Clear ACLs"
-msgstr "Clear ACLs"
-
-msgid "Clear all ACLs."
-msgstr "Clear all ACLs."
-
-msgid "Command"
-msgstr "Command"
-
 msgid "Comment"
 msgstr "Comment"
-
-msgid "Custom Repos"
-msgstr "Custom Repos"
-
-msgid "Degraded Array Info"
-msgstr "Degraded Array Info"
-
-msgid "Description"
-msgstr "Description"
-
-msgid "Developer"
-msgstr "Developer"
-
-msgid "Distribution"
-msgstr "Distribution"
-
-msgid ""
-"Do not enable this repository unless you are using the ZFS filesystem "
-"(uncommon)"
-msgstr "Do not enable this repository unless you are using the ZFS filesystem (uncommon)"
-
-msgid ""
-"Do not enable this testing repository unless you are using the ZFS "
-"filesystem (uncommon)"
-msgstr "Do not enable this testing repository unless you are using the ZFS filesystem (uncommon)"
-
-msgid "Docker"
-msgstr "Docker"
-
-msgid "Docker Testing"
-msgstr "Docker Testing"
-
-msgid "Docker repository"
-msgstr "Docker repository"
 
 msgid "Done..."
 msgstr "Done..."
 
-msgid "Edit custom repo"
-msgstr "Edit custom repo"
+msgid "Edit repo"
+msgstr ""
 
 msgid "Enable"
 msgstr "Enable"
 
-msgid "Everyone: read/write"
-msgstr "Everyone: read/write"
-
-msgid "Filesystems"
-msgstr "Filesystems"
-
-msgid "Greyhole"
-msgstr "Greyhole"
-
-msgid "Greyhole repository"
-msgstr "Greyhole repository"
-
-msgid "HWRaid"
-msgstr "HWRaid"
+msgid "Enabled"
+msgstr ""
 
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
 "still have the option to boot the standard kernel."
 msgstr "If the system does not boot using the backports kernel, the boot menu will still have the option to boot the standard kernel."
 
-msgid "In Use By"
-msgstr "In Use By"
-
-msgid "Information"
-msgstr "Information"
-
 msgid "Install Backports kernel"
 msgstr "Install Backports kernel"
 
 msgid "Install Backports kernel ..."
 msgstr "Install Backports kernel ..."
-
-msgid "Install kernel headers"
-msgstr "Install kernel headers"
-
-msgid "Install kernel headers ..."
-msgstr "Install kernel headers ..."
 
 msgid "Installed Kernels"
 msgstr "Installed Kernels"
@@ -247,27 +75,6 @@ msgstr "Kernels"
 msgid "Key"
 msgstr "Key"
 
-msgid "Main package repository"
-msgstr "Main package repository"
-
-msgid "Modules"
-msgstr "Modules"
-
-msgid "Modules for different hardware raid controllers"
-msgstr "Modules for different hardware raid controllers"
-
-msgid "Mono"
-msgstr "Mono"
-
-msgid "Mono Testing"
-msgstr "Mono Testing"
-
-msgid "Mono and mono-project.com"
-msgstr "Mono and mono-project.com"
-
-msgid "Multimedia"
-msgstr "Multimedia"
-
 msgid "Name"
 msgstr "Name"
 
@@ -277,65 +84,38 @@ msgstr "Notes"
 msgid "OK"
 msgstr "OK"
 
-msgid "OMV-Extras.org"
-msgstr "OMV-Extras.org"
+msgid "OMV-Extras"
+msgstr ""
 
-msgid "OMV-Extras.org Testing"
-msgstr "OMV-Extras.org Testing"
+msgid "Package"
+msgstr ""
 
-msgid "PID"
-msgstr "PID"
+msgid "Permanent"
+msgstr ""
 
-msgid "Paused"
-msgstr "Paused"
+msgid "Pin"
+msgstr ""
 
-msgid "Permissions"
-msgstr "Permissions"
-
-msgid "Please select a shared folder."
-msgstr "Please select a shared folder."
-
-msgid "Plex"
-msgstr "Plex"
-
-msgid "Plex Media Server repository"
-msgstr "Plex Media Server repository"
-
-msgid "Process List"
-msgstr "Process List"
-
-msgid "Release candidates"
-msgstr "Release candidates"
+msgid "Priority"
+msgstr ""
 
 msgid "Repo"
 msgstr "Repo"
 
+msgid "Repo #1"
+msgstr ""
+
+msgid "Repo #2"
+msgstr ""
+
+msgid "Repo #3"
+msgstr ""
+
 msgid "Repos"
 msgstr "Repos"
 
-msgid "Repository"
-msgstr "Repository"
-
-msgid "Reset Permissions"
-msgstr "Reset Permissions"
-
-msgid "Reset folders and files to this file mode."
-msgstr "Reset folders and files to this file mode."
-
-msgid "Reset permissions ..."
-msgstr "Reset permissions ..."
-
-msgid "Running"
-msgstr "Running"
-
 msgid "Select a directory"
 msgstr "Select a directory"
-
-msgid "Send"
-msgstr "Send"
-
-msgid "Send Support Info"
-msgstr "Send Support Info"
 
 msgid "Set as default boot kernel"
 msgstr "Set as default boot kernel"
@@ -349,77 +129,5 @@ msgid ""
 "kernel."
 msgstr "Setting the wrong default boot kernel may cause the system to be inaccessible.  The boot menu will still be available to select a different kernel."
 
-msgid "Shared Folder"
-msgstr "Shared Folder"
-
-msgid "Shared Folder In Use"
-msgstr "Shared Folder In Use"
-
-msgid "Sleeping"
-msgstr "Sleeping"
-
-msgid "State"
-msgstr "State"
-
-msgid "Style #1"
-msgstr "Style #1"
-
-msgid "Style #2"
-msgstr "Style #2"
-
-msgid "Support Info"
-msgstr "Support Info"
-
-msgid "Support Info Module Selection"
-msgstr "Support Info Module Selection"
-
-msgid "Sync"
-msgstr "Sync"
-
-msgid "Sync repository"
-msgstr "Sync repository"
-
-msgid "System - iface"
-msgstr "System - iface"
-
-msgid "System - mntent"
-msgstr "System - mntent"
-
-msgid "System - sharedfolder"
-msgstr "System - sharedfolder"
-
-msgid "Testing repository for Docker"
-msgstr "Testing repository for Docker"
-
-msgid "Testing repository for Mono"
-msgstr "Testing repository for Mono"
-
-msgid "Type"
-msgstr "Type"
-
 msgid "Update"
 msgstr "Update"
-
-msgid "User"
-msgstr "User"
-
-msgid "Utilities"
-msgstr "Utilities"
-
-msgid "Version"
-msgstr "Version"
-
-msgid "Virtualization"
-msgstr "Virtualisation"
-
-msgid "Wait"
-msgstr "Wait"
-
-msgid "ZFS"
-msgstr "ZFS"
-
-msgid "ZFS Testing"
-msgstr "ZFS Testing"
-
-msgid "Zombie"
-msgstr "Zombie"

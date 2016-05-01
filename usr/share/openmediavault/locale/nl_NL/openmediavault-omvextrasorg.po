@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-06 15:33-0600\n"
-"PO-Revision-Date: 2016-03-06 21:33+0000\n"
+"POT-Creation-Date: 2016-05-01 18:37-0500\n"
+"PO-Revision-Date: 2016-05-01 23:38+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -18,116 +18,11 @@ msgstr ""
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "% CPU"
-msgstr "% CPU"
-
-msgid "% MEM"
-msgstr "% MEM"
-
-msgid "00 Debian Version"
-msgstr "00 Debian Versie"
-
-msgid "00 OMV Version"
-msgstr "00 OMV Versie"
-
-msgid "10 Date"
-msgstr "10 Datum"
-
-msgid "10 Hostname"
-msgstr "10 Hostname"
-
-msgid "10 Locale"
-msgstr "10 Landinstelling"
-
-msgid "10 Uptime"
-msgstr "10 Uptime"
-
-msgid "10 uname"
-msgstr "10 uname"
-
-msgid "20 Interfaces"
-msgstr "20 Interfaces"
-
-msgid "20 Route"
-msgstr "20 Route"
-
-msgid "20 iptables"
-msgstr "20 ip-tabellen"
-
-msgid "20 netstat"
-msgstr "20 netstat"
-
-msgid "30 mdadm"
-msgstr "30 mdadm"
-
-msgid "30 monit"
-msgstr "30 monit"
-
-msgid "31 hpraid"
-msgstr "31 hpraid"
-
-msgid "40 Mount Info"
-msgstr "40 Mount Info"
-
-msgid "40 Partitions"
-msgstr "40 Partities"
-
-msgid "40 blkid"
-msgstr "40 blkid"
-
-msgid "40 df"
-msgstr "40 df"
-
-msgid "40 fstab"
-msgstr "40 fstab"
-
-msgid "50 OMV Plugins"
-msgstr "50 OMV Plugins"
-
-msgid "50 apt sources"
-msgstr "50 apt sources"
-
-msgid "50 dpkg"
-msgstr "50 dpkg"
-
-msgid "61 lsmod"
-msgstr "61 lsmod"
-
-msgid "Add custom repo"
-msgstr "Voeg een op maat repository toe"
-
-msgid "Administrator: read/write, Users: no access, Others: no access"
-msgstr "Administrator: lezen/schrijven, Gebruikers: geen toegang, Anderen: geen toegang"
-
-msgid "Administrator: read/write, Users: read-only, Others: no access"
-msgstr "Administrator: lezen/schrijven, Gebruikers: alleen-lezen, Anderen: geen toegang"
-
-msgid "Administrator: read/write, Users: read-only, Others: read-only"
-msgstr "Administrator: lezen/schrijven, Gebruikers: alleen-lezen, Anderen: alleen lezen"
-
-msgid "Administrator: read/write, Users: read/write, Others: no access"
-msgstr "Administrator: lezen/schrijven, Gebruikers: lezen/schrijven, Anderen: geen toegang"
-
-msgid "Administrator: read/write, Users: read/write, Others: read-only"
-msgstr "Administrator: lezen/schrijven, Gebruikers: lezen/schrijven, Anderen: geen toegang"
-
-msgid "All"
+msgid "Add repo"
 msgstr ""
 
 msgid "Apt Clean"
 msgstr "Apt Schoonmaken"
-
-msgid "Architecture"
-msgstr "Architectuur"
-
-msgid "Backup"
-msgstr ""
-
-msgid "Beta"
-msgstr "Beta"
-
-msgid "Beta repository"
-msgstr "Beta repository"
 
 msgid "Cancel"
 msgstr "Cancel"
@@ -138,98 +33,31 @@ msgstr "Aan het kijken of er nog nieuwe updates zijn..."
 msgid "Cleaning Apt Files and Lists..."
 msgstr "Apt Files and Lijsten schoonmaken..."
 
-msgid "Clear ACLs"
-msgstr "Wis ACLs"
-
-msgid "Clear all ACLs."
-msgstr "Wis alle ACLs"
-
-msgid "Command"
-msgstr "Opdracht"
-
 msgid "Comment"
 msgstr "Opmerking"
-
-msgid "Custom Repos"
-msgstr "Aangepaste Repositories"
-
-msgid "Degraded Array Info"
-msgstr "Beschadigde Array Info"
-
-msgid "Description"
-msgstr "Beschrijving"
-
-msgid "Developer"
-msgstr "Ontwikkelaar"
-
-msgid "Distribution"
-msgstr "Distributie"
-
-msgid ""
-"Do not enable this repository unless you are using the ZFS filesystem "
-"(uncommon)"
-msgstr "et deze repositorie niet aan tenzij je het ZFS file systeem gebruikt (ongebruikelijke instelling)"
-
-msgid ""
-"Do not enable this testing repository unless you are using the ZFS "
-"filesystem (uncommon)"
-msgstr "Zet deze test repository niet aan tenzij je het ZFS filesysteem gebruikt  (ongebruikelijk)"
-
-msgid "Docker"
-msgstr "Docker"
-
-msgid "Docker Testing"
-msgstr "Docker Testen"
-
-msgid "Docker repository"
-msgstr "Docker repository"
 
 msgid "Done..."
 msgstr "Klaar..."
 
-msgid "Edit custom repo"
-msgstr "Aanpassen van de aangepast repository"
+msgid "Edit repo"
+msgstr ""
 
 msgid "Enable"
 msgstr "Inschakelen"
 
-msgid "Everyone: read/write"
-msgstr "Allen: lezen/schrijven"
-
-msgid "Filesystems"
+msgid "Enabled"
 msgstr ""
-
-msgid "Greyhole"
-msgstr "Greyhole"
-
-msgid "Greyhole repository"
-msgstr "Greyhole repository"
-
-msgid "HWRaid"
-msgstr "HWRaid"
 
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
 "still have the option to boot the standard kernel."
 msgstr "Als het systeem niet start als de back ports kernel is ingesteld, zal het boot menu je instaat stellen om met de standaard kernel op te starten"
 
-msgid "In Use By"
-msgstr "In gebruik door"
-
-msgid "Information"
-msgstr "Informatie"
-
 msgid "Install Backports kernel"
 msgstr ""
 
 msgid "Install Backports kernel ..."
 msgstr ""
-
-msgid "Install kernel headers"
-msgstr "Kernel headers installeren"
-
-msgid "Install kernel headers ..."
-msgstr "Kernel headers installeren..."
 
 msgid "Installed Kernels"
 msgstr "Geinstalleerde Kernels"
@@ -247,27 +75,6 @@ msgstr "Kernels"
 msgid "Key"
 msgstr "Sleutel"
 
-msgid "Main package repository"
-msgstr "Main package repository"
-
-msgid "Modules"
-msgstr "Modules"
-
-msgid "Modules for different hardware raid controllers"
-msgstr "Modules voor verschillende hardware raid controllers"
-
-msgid "Mono"
-msgstr "Mono"
-
-msgid "Mono Testing"
-msgstr "Mono Testen"
-
-msgid "Mono and mono-project.com"
-msgstr "Mono en mono-project.com"
-
-msgid "Multimedia"
-msgstr ""
-
 msgid "Name"
 msgstr "Naam"
 
@@ -277,65 +84,38 @@ msgstr "Aantekeningen"
 msgid "OK"
 msgstr "OK"
 
-msgid "OMV-Extras.org"
-msgstr "OMV-Extras.org"
-
-msgid "OMV-Extras.org Testing"
-msgstr "OMV-Extras.org Testen"
-
-msgid "PID"
-msgstr "PID"
-
-msgid "Paused"
+msgid "OMV-Extras"
 msgstr ""
 
-msgid "Permissions"
-msgstr "Permissies"
+msgid "Package"
+msgstr ""
 
-msgid "Please select a shared folder."
-msgstr "Selecteer alsjeblieft een te delen folder"
+msgid "Permanent"
+msgstr ""
 
-msgid "Plex"
-msgstr "Plex"
+msgid "Pin"
+msgstr ""
 
-msgid "Plex Media Server repository"
-msgstr "Plex Media Server repository"
-
-msgid "Process List"
-msgstr "Lijst van processen"
-
-msgid "Release candidates"
-msgstr "Release kandidaten"
+msgid "Priority"
+msgstr ""
 
 msgid "Repo"
 msgstr "Repository"
 
+msgid "Repo #1"
+msgstr ""
+
+msgid "Repo #2"
+msgstr ""
+
+msgid "Repo #3"
+msgstr ""
+
 msgid "Repos"
 msgstr "Repositories"
 
-msgid "Repository"
-msgstr "Repository"
-
-msgid "Reset Permissions"
-msgstr "Resetten van Permissies"
-
-msgid "Reset folders and files to this file mode."
-msgstr "Reset folders en files naar deze file mode."
-
-msgid "Reset permissions ..."
-msgstr "Resetten van Permissies..."
-
-msgid "Running"
-msgstr ""
-
 msgid "Select a directory"
 msgstr "Selecteer een directory"
-
-msgid "Send"
-msgstr "Stuur"
-
-msgid "Send Support Info"
-msgstr "Stuur Support Info per email"
 
 msgid "Set as default boot kernel"
 msgstr "Als default boot kernel instellen"
@@ -349,77 +129,5 @@ msgid ""
 "kernel."
 msgstr "Het instellen van de verkeerde boot kernel kan het niet meer opstarten van het systeem veroorzaken. Het boot menu zal wel bereikbaar blijven zodat een andere boot kernel kan worden gekozen inden beschikbaar"
 
-msgid "Shared Folder"
-msgstr "Gedeelde Folder"
-
-msgid "Shared Folder In Use"
-msgstr "In gebruik zijn gedeelde folder"
-
-msgid "Sleeping"
-msgstr ""
-
-msgid "State"
-msgstr "State"
-
-msgid "Style #1"
-msgstr "Style #1"
-
-msgid "Style #2"
-msgstr "Style #2"
-
-msgid "Support Info"
-msgstr "Support Info"
-
-msgid "Support Info Module Selection"
-msgstr "Support Info Module Selectie"
-
-msgid "Sync"
-msgstr ""
-
-msgid "Sync repository"
-msgstr ""
-
-msgid "System - iface"
-msgstr "System - iface"
-
-msgid "System - mntent"
-msgstr "System - mntent"
-
-msgid "System - sharedfolder"
-msgstr "System - gedeelde folder"
-
-msgid "Testing repository for Docker"
-msgstr "De repository voor Docker aan het testen"
-
-msgid "Testing repository for Mono"
-msgstr "De repository testen voor het beschikbaar zijn van Mono"
-
-msgid "Type"
-msgstr "Type"
-
 msgid "Update"
 msgstr "Update"
-
-msgid "User"
-msgstr "Gebruiker"
-
-msgid "Utilities"
-msgstr ""
-
-msgid "Version"
-msgstr "Versie"
-
-msgid "Virtualization"
-msgstr ""
-
-msgid "Wait"
-msgstr ""
-
-msgid "ZFS"
-msgstr "ZFS"
-
-msgid "ZFS Testing"
-msgstr "ZFS Testing"
-
-msgid "Zombie"
-msgstr ""

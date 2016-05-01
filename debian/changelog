@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (3.0.13) UNRELEASED; urgency=medium
+
+  * Update for datamodels
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 29 Apr 2016 14:11:37 -0500
+
 openmediavault-omvextrasorg (3.0.12) stable; urgency=low
 
   * Changed dependency of OMV Package to = 3.0.13 to avoid accidental

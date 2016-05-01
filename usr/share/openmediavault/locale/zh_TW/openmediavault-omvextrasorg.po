@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# kochin <kochinc@outlook.com>, 2014-2015
+# kochin <kochinc@outlook.com>, 2014-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-06 15:33-0600\n"
-"PO-Revision-Date: 2016-03-06 21:33+0000\n"
+"POT-Creation-Date: 2016-05-01 18:37-0500\n"
+"PO-Revision-Date: 2016-05-01 23:38+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -18,116 +18,11 @@ msgstr ""
 "Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-msgid "% CPU"
-msgstr "% 處理器"
-
-msgid "% MEM"
-msgstr "% 記憶體"
-
-msgid "00 Debian Version"
-msgstr "00 Debian 版本"
-
-msgid "00 OMV Version"
-msgstr "00 OMV 版本"
-
-msgid "10 Date"
-msgstr "10 日期"
-
-msgid "10 Hostname"
-msgstr "10 主機名稱"
-
-msgid "10 Locale"
-msgstr "10 區域"
-
-msgid "10 Uptime"
-msgstr "10 運行時間"
-
-msgid "10 uname"
-msgstr "10 uname"
-
-msgid "20 Interfaces"
-msgstr "20 介面"
-
-msgid "20 Route"
-msgstr "20 路線"
-
-msgid "20 iptables"
-msgstr "20 iptables"
-
-msgid "20 netstat"
-msgstr "20 netstat"
-
-msgid "30 mdadm"
-msgstr "30 mdadm"
-
-msgid "30 monit"
-msgstr "30 monit"
-
-msgid "31 hpraid"
-msgstr "31 hpraid"
-
-msgid "40 Mount Info"
-msgstr "40 掛載資訊"
-
-msgid "40 Partitions"
-msgstr "40 磁碟分割"
-
-msgid "40 blkid"
-msgstr "40 blkid"
-
-msgid "40 df"
-msgstr "40 df"
-
-msgid "40 fstab"
-msgstr "40 fstab"
-
-msgid "50 OMV Plugins"
-msgstr "50 OMV 插件"
-
-msgid "50 apt sources"
-msgstr "50 apt 來源"
-
-msgid "50 dpkg"
-msgstr "50 dpkg"
-
-msgid "61 lsmod"
-msgstr "61 lsmod"
-
-msgid "Add custom repo"
-msgstr "新增客製套件庫"
-
-msgid "Administrator: read/write, Users: no access, Others: no access"
-msgstr "管理員：讀/寫，用戶：不能存取，其他：不能存取"
-
-msgid "Administrator: read/write, Users: read-only, Others: no access"
-msgstr "管理員：讀/寫，用戶：只能讀取，其他：不能存取"
-
-msgid "Administrator: read/write, Users: read-only, Others: read-only"
-msgstr "管理員：讀/寫，用戶：只能讀取，其他：只能讀取"
-
-msgid "Administrator: read/write, Users: read/write, Others: no access"
-msgstr "管理員：讀/寫，用戶：讀/寫，其他：不能存取"
-
-msgid "Administrator: read/write, Users: read/write, Others: read-only"
-msgstr "管理員：讀/寫，用戶：讀/寫，其他：只能讀取"
-
-msgid "All"
+msgid "Add repo"
 msgstr ""
 
 msgid "Apt Clean"
 msgstr "Apt 清理"
-
-msgid "Architecture"
-msgstr "架構"
-
-msgid "Backup"
-msgstr ""
-
-msgid "Beta"
-msgstr "Beta"
-
-msgid "Beta repository"
-msgstr "Beta 套件庫"
 
 msgid "Cancel"
 msgstr "取消"
@@ -138,98 +33,31 @@ msgstr "檢查新的更新 ..."
 msgid "Cleaning Apt Files and Lists..."
 msgstr "清理 Apt 檔案和列表 ..."
 
-msgid "Clear ACLs"
-msgstr "清除 ACLs"
-
-msgid "Clear all ACLs."
-msgstr "清除全部 ACLs"
-
-msgid "Command"
-msgstr "指令"
-
 msgid "Comment"
 msgstr "註釋"
-
-msgid "Custom Repos"
-msgstr "客製套件庫"
-
-msgid "Degraded Array Info"
-msgstr "降級陣列資訊"
-
-msgid "Description"
-msgstr "敘述"
-
-msgid "Developer"
-msgstr "開發者"
-
-msgid "Distribution"
-msgstr "發行版"
-
-msgid ""
-"Do not enable this repository unless you are using the ZFS filesystem "
-"(uncommon)"
-msgstr "不要啟用這個套件庫，除非你使用了 ZFS 檔案系統 (罕見)"
-
-msgid ""
-"Do not enable this testing repository unless you are using the ZFS "
-"filesystem (uncommon)"
-msgstr "不要啟用此測試套件庫，除非您在使用 ZFS 檔案系統 (不常用)"
-
-msgid "Docker"
-msgstr "Docker"
-
-msgid "Docker Testing"
-msgstr "Docker 測試"
-
-msgid "Docker repository"
-msgstr "Docker 套件庫"
 
 msgid "Done..."
 msgstr "完成 ..."
 
-msgid "Edit custom repo"
-msgstr "編輯客製套件庫"
+msgid "Edit repo"
+msgstr ""
 
 msgid "Enable"
 msgstr "啟用"
 
-msgid "Everyone: read/write"
-msgstr "每個人：讀/寫"
-
-msgid "Filesystems"
+msgid "Enabled"
 msgstr ""
-
-msgid "Greyhole"
-msgstr "Greyhole"
-
-msgid "Greyhole repository"
-msgstr "Greyhole 套件庫"
-
-msgid "HWRaid"
-msgstr "HWRaid"
 
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
 "still have the option to boot the standard kernel."
 msgstr "如果系統無法使用向後移植(backports)核心啟動，啟動選單仍會有選項可啟動標準核心。"
 
-msgid "In Use By"
-msgstr "使用者"
-
-msgid "Information"
-msgstr "資訊"
-
 msgid "Install Backports kernel"
-msgstr ""
+msgstr "安裝 Backports 核心"
 
 msgid "Install Backports kernel ..."
-msgstr ""
-
-msgid "Install kernel headers"
-msgstr "安裝核心標頭檔案"
-
-msgid "Install kernel headers ..."
-msgstr "安裝核心標頭檔案 ..."
+msgstr "安裝 Backports 核心 ..."
 
 msgid "Installed Kernels"
 msgstr "已安裝的核心"
@@ -247,27 +75,6 @@ msgstr "核心"
 msgid "Key"
 msgstr "密鑰"
 
-msgid "Main package repository"
-msgstr "主套件庫"
-
-msgid "Modules"
-msgstr "模組"
-
-msgid "Modules for different hardware raid controllers"
-msgstr "用於不同硬體 raid 控制器的模組"
-
-msgid "Mono"
-msgstr "Mono"
-
-msgid "Mono Testing"
-msgstr "Mono 測試"
-
-msgid "Mono and mono-project.com"
-msgstr "Mono 和 mono-project.com"
-
-msgid "Multimedia"
-msgstr ""
-
 msgid "Name"
 msgstr "名稱"
 
@@ -277,65 +84,38 @@ msgstr "附註"
 msgid "OK"
 msgstr "OK"
 
-msgid "OMV-Extras.org"
-msgstr "OMV-Extras.org"
-
-msgid "OMV-Extras.org Testing"
-msgstr "OMV-Extras.org 測試"
-
-msgid "PID"
-msgstr "PID"
-
-msgid "Paused"
+msgid "OMV-Extras"
 msgstr ""
 
-msgid "Permissions"
-msgstr "權限"
+msgid "Package"
+msgstr ""
 
-msgid "Please select a shared folder."
-msgstr "請選擇一個共享檔案夾。"
+msgid "Permanent"
+msgstr ""
 
-msgid "Plex"
-msgstr "Plex"
+msgid "Pin"
+msgstr ""
 
-msgid "Plex Media Server repository"
-msgstr "Plex Media Server 套件庫"
-
-msgid "Process List"
-msgstr "程序列表"
-
-msgid "Release candidates"
-msgstr "發佈候選"
+msgid "Priority"
+msgstr ""
 
 msgid "Repo"
 msgstr "套件庫"
 
+msgid "Repo #1"
+msgstr ""
+
+msgid "Repo #2"
+msgstr ""
+
+msgid "Repo #3"
+msgstr ""
+
 msgid "Repos"
 msgstr "套件庫"
 
-msgid "Repository"
-msgstr "套件庫"
-
-msgid "Reset Permissions"
-msgstr "重設權限"
-
-msgid "Reset folders and files to this file mode."
-msgstr "將檔案夾及檔案重設成此檔案模式。"
-
-msgid "Reset permissions ..."
-msgstr "重設權限 ..."
-
-msgid "Running"
-msgstr ""
-
 msgid "Select a directory"
 msgstr "選擇一個目錄"
-
-msgid "Send"
-msgstr "發送"
-
-msgid "Send Support Info"
-msgstr "發送支援資訊"
 
 msgid "Set as default boot kernel"
 msgstr "設定為預設啟動核心"
@@ -349,77 +129,5 @@ msgid ""
 "kernel."
 msgstr "設定錯誤的啟動核心可能造成系統無法取用。啟動選單仍將可用來選用不同的核心。"
 
-msgid "Shared Folder"
-msgstr "共享檔案夾"
-
-msgid "Shared Folder In Use"
-msgstr "共享檔案夾被使用中"
-
-msgid "Sleeping"
-msgstr ""
-
-msgid "State"
-msgstr "狀態"
-
-msgid "Style #1"
-msgstr "樣式 #1"
-
-msgid "Style #2"
-msgstr "樣式 #2"
-
-msgid "Support Info"
-msgstr "支援資訊"
-
-msgid "Support Info Module Selection"
-msgstr "支援資訊模組選擇"
-
-msgid "Sync"
-msgstr ""
-
-msgid "Sync repository"
-msgstr ""
-
-msgid "System - iface"
-msgstr "系統 - iface"
-
-msgid "System - mntent"
-msgstr "系統 - mntent"
-
-msgid "System - sharedfolder"
-msgstr "系統 - sharedfolder"
-
-msgid "Testing repository for Docker"
-msgstr "Docker 的測試套件庫"
-
-msgid "Testing repository for Mono"
-msgstr "Mono 的測試套件庫"
-
-msgid "Type"
-msgstr "型式"
-
 msgid "Update"
 msgstr "更新"
-
-msgid "User"
-msgstr "用戶"
-
-msgid "Utilities"
-msgstr ""
-
-msgid "Version"
-msgstr "版本"
-
-msgid "Virtualization"
-msgstr ""
-
-msgid "Wait"
-msgstr ""
-
-msgid "ZFS"
-msgstr "ZFS"
-
-msgid "ZFS Testing"
-msgstr "ZFS 測試"
-
-msgid "Zombie"
-msgstr ""
