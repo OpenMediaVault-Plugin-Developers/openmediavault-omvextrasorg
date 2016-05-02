@@ -1,8 +1,9 @@
-openmediavault-omvextrasorg (3.0.13) UNRELEASED; urgency=medium
+openmediavault-omvextrasorg (3.1) stable; urgency=low
 
   * Update for datamodels
+  * Update locales
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 29 Apr 2016 14:11:37 -0500
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 02 May 2016 17:28:43 -0500
 
 openmediavault-omvextrasorg (3.0.12) stable; urgency=low
 

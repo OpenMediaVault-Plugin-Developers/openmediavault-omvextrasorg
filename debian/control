@@ -5,11 +5,13 @@ Priority: optional
 Maintainer: OpenMediaVault Plugin Developers <plugins@omv-extras.org>
 Build-Depends: debhelper (>= 9 )
 Standards-Version: 3.9.6
-Homepage: http://omv-extras.org/simple/index.php?id=how-to-install-omv-extras-plugin
+Homepage: http://omv-extras.org/
 
 Package: openmediavault-omvextrasorg
 Architecture: all
-Depends: ${misc:Depends}, openmediavault (>= 2.1.11) | openmediavault (<= 3.0.13), apt-transport-https
+Depends: apt-transport-https,
+         openmediavault (>= 3.0.15),
+         ${misc:Depends}
 Description: OMV-Extras.org Package Repositories for OpenMediaVault
  Allows enabling of multiple repositories hosted by omv-extras.org.
  .
@@ -18,7 +20,3 @@ Description: OMV-Extras.org Package Repositories for OpenMediaVault
  .
  An apt cleaning function is also available for fixing repository cache
  problems and saving hard drive space in some instances.
- .
- Allows viewing and sending support information.
- .
- Allows viewing of the process list.
