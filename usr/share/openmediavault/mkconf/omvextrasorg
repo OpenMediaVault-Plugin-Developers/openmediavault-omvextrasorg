@@ -191,13 +191,6 @@ EOF
         echo "# syncthing repo" >> ${OMVEXTRASREPOFILE}
         echo "deb http://apt.syncthing.net/ syncthing release" >> ${OMVEXTRASREPOFILE}
 
-        getArch
-
-        if ! $SKIP; then
-            echo "# spideroak repo" >> ${OMVEXTRASREPOFILE}
-            echo "deb http://apt.spideroak.com/ubuntu-spideroak-hardy/ release restricted" >> ${OMVEXTRASREPOFILE}
-        fi
-
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-sync, origin ${BINTRAY_REPO_LOCATION}
