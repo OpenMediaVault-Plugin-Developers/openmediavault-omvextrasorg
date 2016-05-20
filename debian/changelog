@@ -1,6 +1,7 @@
 openmediavault-omvextrasorg (3.2) stable; urgency=low
 
   * Update backports kernel version
+  * Update locales
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 20 May 2016 07:53:07 -0500
 
