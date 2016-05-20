@@ -27,10 +27,6 @@ set -e
 BACKPORTS_REPO="/etc/apt/sources.list.d/backports.list"
 XPATH="/config/system/omvextras/repos/repo"
 
-SKIP=false
-AMD64=false
-package=""
-
 conf=$2
 
 update()
@@ -113,9 +109,19 @@ backports()
     export LANG=C
     export DEBIAN_FRONTEND=noninteractive
 
-    getArch
+    ARCH="`/bin/uname -m`"
+    package=""
 
-    if $SKIP; then
+    case "$ARCH" in
+        *amd64*|*x86_64*)
+            package="amd64"
+        ;;
+        *486*|*586*|*686*)
+            package="586"
+        ;;
+    esac
+
+    if [ -z ${package} ]; then
         echo "Unsupported kernel and/or processor"
     else
         createBackportsFile
@@ -125,8 +131,8 @@ backports()
 
         echo "Install backports 4.5 kernel and headers"
         apt-get -t jessie-backports --yes --force-yes --fix-missing install \
-            linux-image-4.5.0-0.bpo.1-${package} \
-            linux-headers-4.5.0-0.bpo.1-${package} \
+            linux-image-4.5.0-0.bpo.2-${package} \
+            linux-headers-4.5.0-0.bpo.2-${package} \
             firmware-linux \
             firmware-linux-free
 
@@ -139,38 +145,6 @@ backports()
 createBackportsFile()
 {
     echo "deb http://httpredir.debian.org/debian jessie-backports main contrib non-free" > $BACKPORTS_REPO
-}
-
-getArch()
-{
-    ARCH="`/bin/uname -m`"
-
-    case "$ARCH" in
-        *amd64*)
-            AMD64=true
-            package="amd64"
-        ;;
-        *x86_64*)
-            AMD64=true
-            package="amd64"
-        ;;
-        *486*)
-            AMD64=false
-            package="586"
-        ;;
-        *586*)
-            AMD64=false
-            package="586"
-        ;;
-        *686*)
-            AMD64=false
-            package="586"
-        ;;
-        *)
-            SKIP=true
-            package=""
-        ;;
-    esac
 }
 
 disablesubmenu()
