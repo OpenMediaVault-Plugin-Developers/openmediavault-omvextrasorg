@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (3.3) UNRELEASED; urgency=medium
+
+  * Add ISO installation and reboot for Clonezilla, GParted Live,
+    SystemRescueCD
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 23 May 2016 10:00:53 -0500
+
 openmediavault-omvextrasorg (3.2) stable; urgency=low
 
   * Update backports kernel version

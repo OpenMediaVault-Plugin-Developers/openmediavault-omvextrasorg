@@ -80,16 +80,9 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                 name    : "backports",
                 text    : _("Install Backports kernel"),
                 scope   : this,
-                handler : Ext.Function.bind(me.onCommandButton, me, [ me ]),
+                handler : Ext.Function.bind(me.onCommandButton, me, [ "installbackports" ]),
                 margin  : "5 0 8 10"
-            }]
-        },{
-            xtype         : "fieldset",
-            title         : _("Notes"),
-            fieldDefaults : {
-                labelSeparator : ""
-            },
-            items         : [{
+            },{
                 border : false,
                 html   : "<ul>" +
                            "<li>" + _("Setting the wrong default boot kernel may cause the system to be inaccessible.  The boot menu will still be available to select a different kernel.") + "</li>" +
@@ -97,17 +90,143 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                            "<li>" + _("If the system does not boot using the backports kernel, the boot menu will still have the option to boot the standard kernel.") + "</li>" +
                          "</ul>"
             }]
+        },{
+            xtype         : "fieldset",
+            title         : _("Clonezilla"),
+            fieldDefaults : {
+                labelSeparator : ""
+            },
+            items         : [{
+                xtype   : "button",
+                name    : "installcz",
+                text    : _("Install Clonezilla"),
+                scope   : this,
+                handler : Ext.Function.bind(me.onCommandButton, me, [ "installcz" ]),
+                margin  : "5 0 0 10"
+            },{
+                border : false,
+                html   : "<ul>" +
+                             "<li>" + _("Downloads Clonezilla ISO and configures grub bootloader to allow booting from ISO.") + "</li>" +
+                             "<li>" + _("SSH server is enabled by default.  Login with username: <b>user</b> and password: <b>live</b>") + "</li>" +
+                             "<li>" + _("When connecting via ssh, the ssh key will be different than the OpenMediaVault ssh key and need to be updated on the client system.") + "</li>" +
+                             "<li>" + _("IP Address will be set by DHCP.  Using static DHCP is recommended for headless servers.") + "</li>" +
+                             "<li>" + _("When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>") + "</li>" +
+                             "<li>" + _("ISO uses approximately 139 Mb in /boot directory on OS drive.") + "</li>" +
+                         "</ul>"
+            },{
+                xtype   : "button",
+                name    : "rebootcz",
+                text    : _("Reboot to Clonezilla Once"),
+                scope   : this,
+                handler : Ext.Function.bind(me.onCommandButton, me, [ "rebootcz" ]),
+                margin  : "0 0 0 10"
+            },{
+                border : false,
+                html   : "<ul><li>" + _("Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time.") + "</li></ul>"
+            }]
+        },{
+            xtype         : "fieldset",
+            title         : _("GParted Live"),
+            fieldDefaults : {
+                labelSeparator : ""
+            },
+            items         : [{
+                xtype   : "button",
+                name    : "installgp",
+                text    : _("Install GParted Live"),
+                scope   : this,
+                handler : Ext.Function.bind(me.onCommandButton, me, [ "installgp" ]),
+                margin  : "5 0 0 10"
+            },{
+                border : false,
+                html   : "<ul>" +
+                             "<li>" + _("Downloads GParted Live ISO and configures grub bootloader to allow booting from ISO.") + "</li>" +
+                             "<li>" + _("Not recommended for headless servers.  SSH is not enabled by default.") + "</li>" +
+                             "<li>" + _("Default username: <b>user</b> and password: <b>live</b>") + "</li>" +
+                             "<li>" + _("IP Address will be set by DHCP.") + "</li>" +
+                             "<li>" + _("ISO uses approximately 219 Mb in /boot directory on OS drive.") + "</li>" +
+                         "</ul>"
+            },{
+                xtype   : "button",
+                name    : "rebootgp",
+                text    : _("Reboot to GParted Live Once"),
+                scope   : this,
+                handler : Ext.Function.bind(me.onCommandButton, me, [ "rebootgp" ]),
+                margin  : "0 0 0 10"
+            },{
+                border : false,
+                html   : "<ul><li>" + _("Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time.") + "</li></ul>"
+            }]
+        },{
+            xtype         : "fieldset",
+            title         : _("SystemRescueCD"),
+            fieldDefaults : {
+                labelSeparator : ""
+            },
+            items         : [{
+                xtype   : "button",
+                name    : "installsys",
+                text    : _("Install SystemRescueCD"),
+                scope   : this,
+                handler : Ext.Function.bind(me.onCommandButton, me, [ "installsys" ]),
+                margin  : "5 0 0 10"
+            },{
+                border : false,
+                html   : "<ul>" +
+                             "<li>" + _("Downloads SystemRescuecd ISO and configures grub bootloader to allow booting from ISO.") + "</li>" +
+                             "<li>" + _("SSH server is enabled by default.  Login with username: <b>root</b> and password: <b>openmediavault</b>") + "</li>" +
+                             "<li>" + _("When connecting via ssh, the ssh key will be different than the OpenMediaVault ssh key and need to be updated on the client system.") + "</li>" +
+                             "<li>" + _("IP Address will be set by DHCP.  Using static DHCP is recommended for headless servers.") + "</li>" +
+                             "<li>" + _("ISO uses approximately 381 Mb in /boot directory on OS drive.") + "</li>" +
+                         "</ul>"
+            },{
+                xtype   : "button",
+                name    : "rebootsys",
+                text    : _("Reboot to SystemRescueCD Once"),
+                scope   : this,
+                handler : Ext.Function.bind(me.onCommandButton, me, [ "rebootsys" ]),
+                margin  : "0 0 0 10"
+            },{
+                border : false,
+                html   : "<ul><li>" + _("Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time.") + "</li></ul>"
+            }]
         }];
     },
 
-    onCommandButton : function() {
+    onCommandButton : function(cmd) {
         var me = this;
+        switch(cmd) {
+            case "installbackports":
+                title = _("Install Backports kernel ...");
+                break;
+            case "installcz":
+                title = _("Install Clonezilla ISO ...");
+                break;
+            case "installgp":
+                title = _("Install GParted Live ISO ...");
+                break;
+            case "installsys":
+                title = _("Install SystemRescueCD ISO ...");
+                break;
+            case "rebootcz":
+                title = _("Reboot to Clonezilla ...");
+                break;
+            case "rebootgp":
+                title = _("Reboot to GParted Live ...");
+                break;
+            case "rebootsys":
+                title = _("Reboot to SystemRescueCD ...");
+                break;
+            default:
+                title = _("Cleaning Apt Files and Lists...");
+                cmb = "aptclean";
+        }
         Ext.create("OMV.window.Execute", {
-            title          : _("Install Backports kernel ..."),
+            title          : title,
             rpcService     : "OmvExtras",
             rpcMethod      : "doCommand",
             rpcParams      : {
-                "command" : "installbackports"
+                "command" : cmd
             },
             hideStopButton : true,
             listeners      : {

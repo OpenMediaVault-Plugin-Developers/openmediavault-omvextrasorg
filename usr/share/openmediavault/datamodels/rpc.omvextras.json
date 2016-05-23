@@ -96,7 +96,14 @@
 			"command": {
 				"type": "string",
 				"enum": [
-					"aptclean","installbackports"
+					"aptclean",
+					"installbackports",
+					"installcz",
+					"installgp",
+					"installsys",
+					"rebootcz",
+					"rebootgp",
+					"rebootsys"
 				],
 				"required": true
 			}
