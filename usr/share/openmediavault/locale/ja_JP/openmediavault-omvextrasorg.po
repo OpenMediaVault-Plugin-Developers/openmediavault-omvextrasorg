@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-20 09:01-0500\n"
-"PO-Revision-Date: 2016-05-02 04:43+0000\n"
-"Last-Translator: Toshihiro Kan <kansuke4649@gmail.com>\n"
+"POT-Creation-Date: 2016-05-23 12:36-0500\n"
+"PO-Revision-Date: 2016-05-23 17:36+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,11 +33,32 @@ msgstr "新しいアップデートを確認しています ..."
 msgid "Cleaning Apt Files and Lists..."
 msgstr "APTファイルとリストをクリーニングしています..."
 
+msgid "Clonezilla"
+msgstr ""
+
 msgid "Comment"
 msgstr "コメント"
 
+msgid "Default username: <b>user</b> and password: <b>live</b>"
+msgstr ""
+
 msgid "Done..."
 msgstr "完了"
+
+msgid ""
+"Downloads Clonezilla ISO and configures grub bootloader to allow booting "
+"from ISO."
+msgstr ""
+
+msgid ""
+"Downloads GParted Live ISO and configures grub bootloader to allow booting "
+"from ISO."
+msgstr ""
+
+msgid ""
+"Downloads SystemRescuecd ISO and configures grub bootloader to allow booting"
+" from ISO."
+msgstr ""
 
 msgid "Edit repo"
 msgstr "リポジトリの編集"
@@ -47,6 +68,26 @@ msgstr "有効化"
 
 msgid "Enabled"
 msgstr "有効化済"
+
+msgid "GParted Live"
+msgstr ""
+
+msgid "IP Address will be set by DHCP."
+msgstr ""
+
+msgid ""
+"IP Address will be set by DHCP.  Using static DHCP is recommended for "
+"headless servers."
+msgstr ""
+
+msgid "ISO uses approximately 139 Mb in /boot directory on OS drive."
+msgstr ""
+
+msgid "ISO uses approximately 219 Mb in /boot directory on OS drive."
+msgstr ""
+
+msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
+msgstr ""
 
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
@@ -58,6 +99,24 @@ msgstr "バックポートカーネルのインストール"
 
 msgid "Install Backports kernel ..."
 msgstr "バックポートカーネルをインストールしています ..."
+
+msgid "Install Clonezilla"
+msgstr ""
+
+msgid "Install Clonezilla ISO ..."
+msgstr ""
+
+msgid "Install GParted Live"
+msgstr ""
+
+msgid "Install GParted Live ISO ..."
+msgstr ""
+
+msgid "Install SystemRescueCD"
+msgstr ""
+
+msgid "Install SystemRescueCD ISO ..."
+msgstr ""
 
 msgid "Installed Kernels"
 msgstr "インストールされているカーネル"
@@ -78,8 +137,8 @@ msgstr "キー"
 msgid "Name"
 msgstr "名前"
 
-msgid "Notes"
-msgstr "注意"
+msgid "Not recommended for headless servers.  SSH is not enabled by default."
+msgstr ""
 
 msgid "OK"
 msgstr "OK"
@@ -99,6 +158,24 @@ msgstr "ピン"
 msgid "Priority"
 msgstr "優先度"
 
+msgid "Reboot to Clonezilla ..."
+msgstr ""
+
+msgid "Reboot to Clonezilla Once"
+msgstr ""
+
+msgid "Reboot to GParted Live ..."
+msgstr ""
+
+msgid "Reboot to GParted Live Once"
+msgstr ""
+
+msgid "Reboot to SystemRescueCD ..."
+msgstr ""
+
+msgid "Reboot to SystemRescueCD Once"
+msgstr ""
+
 msgid "Repo"
 msgstr "リポジトリ"
 
@@ -114,11 +191,27 @@ msgstr "リポジトリ #3"
 msgid "Repos"
 msgstr "リポジトリ"
 
+msgid ""
+"SSH server is enabled by default.  Login with username: <b>root</b> and "
+"password: <b>openmediavault</b>"
+msgstr ""
+
+msgid ""
+"SSH server is enabled by default.  Login with username: <b>user</b> and "
+"password: <b>live</b>"
+msgstr ""
+
 msgid "Select a directory"
 msgstr "ディレクトリを選択"
 
 msgid "Set as default boot kernel"
 msgstr "デフォルトの起動カーネルをセット"
+
+msgid "Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time."
+msgstr ""
+
+msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
+msgstr ""
 
 msgid "Setting boot kernel ..."
 msgstr "起動カーネルを設定しています ..."
@@ -129,5 +222,17 @@ msgid ""
 "kernel."
 msgstr "間違ったデフォルトの起動カーネルを設定すると、システムにアクセスできなくなることがあります。　別のカーネルを選択するためにブートメニューが利用可能となります。"
 
+msgid "SystemRescueCD"
+msgstr ""
+
 msgid "Update"
 msgstr "アップデート"
+
+msgid ""
+"When connecting via ssh, the ssh key will be different than the "
+"OpenMediaVault ssh key and need to be updated on the client system."
+msgstr ""
+
+msgid ""
+"When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
+msgstr ""

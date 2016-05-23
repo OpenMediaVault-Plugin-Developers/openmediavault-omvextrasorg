@@ -1,9 +1,9 @@
-openmediavault-omvextrasorg (3.3) UNRELEASED; urgency=medium
+openmediavault-omvextrasorg (3.3) stable; urgency=low
 
   * Add ISO installation and reboot for Clonezilla, GParted Live,
     SystemRescueCD
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 23 May 2016 10:00:53 -0500
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 23 May 2016 14:19:01 -0500
 
 openmediavault-omvextrasorg (3.2) stable; urgency=low
 
