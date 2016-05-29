@@ -91,7 +91,11 @@ EOF
                 if [ "${repo}" != "" ]; then
                     key=$(omv_config_get "${XPATH}[position()=${index}]/key${i}")
 
-                    echo "deb ${repo}" >> ${OMVEXTRASREPOFILE}
+                    if [[ ${repo} == "deb *" ]]; then
+                        echo "${repo}" >> ${OMVEXTRASREPOFILE}
+                    else
+                        echo "deb ${repo}" >> ${OMVEXTRASREPOFILE}
+                    fi
 
                     if [ "${key}" != "" ]; then
                         apt-key adv --keyserver ${KEYSERVER} --recv-keys "${key}"

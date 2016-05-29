@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (3.3.1) stable; urgency=low
+
+  * Fix github issue #12
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 29 May 2016 09:08:55 -0500
+
 openmediavault-omvextrasorg (3.3) stable; urgency=low
 
   * Add ISO installation and reboot for Clonezilla, GParted Live,
