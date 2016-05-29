@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
 # @author    Volker Theile <volker.theile@openmediavault.org>
@@ -91,7 +91,7 @@ EOF
                 if [ "${repo}" != "" ]; then
                     key=$(omv_config_get "${XPATH}[position()=${index}]/key${i}")
 
-                    if [[ ${repo} == "deb *" ]]; then
+                    if [[ ${repo} == deb* ]]; then
                         echo "${repo}" >> ${OMVEXTRASREPOFILE}
                     else
                         echo "deb ${repo}" >> ${OMVEXTRASREPOFILE}
