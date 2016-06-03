@@ -91,17 +91,8 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $object->setAssoc($params);
 
         // Set the configuration object.
-        $isNew = $object->isNew();
         $db = \OMV\Config\Database::getInstance();
         $db->set($object);
-
-        // Notify configuration changes.
-        $dispatcher = \OMV\Engine\Notify\Dispatcher::getInstance();
-        $dispatcher->notify(
-            $isNew ? OMV_NOTIFY_CREATE : OMV_NOTIFY_MODIFY,
-            'org.openmediavault.conf.omvextras',
-            $object->getAssoc()
-        );
 
           // Return the configuration object.
         return $object->getAssoc();
@@ -116,11 +107,12 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $this->validateMethodParams($params, 'rpc.common.objectuuid');
 
         // Delete the configuration object.
-        return $this->deleteConfigObjectByUuid(
-            'conf.system.omvextras',
-            $params['uuid'],
-            'org.openmediavault.conf.omvextras'
-        );
+        $db = \OMV\Config\Database::getInstance();
+        $object = $db->get("conf.system.omvextras", $params['uuid']);
+        $db->delete($object);
+
+        // Return the deleted configuration object.
+        return $object->getAssoc();
     }
 
     public function getArch($params, $context)
