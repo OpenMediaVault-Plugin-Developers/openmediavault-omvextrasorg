@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-23 12:36-0500\n"
-"PO-Revision-Date: 2016-05-23 17:36+0000\n"
+"POT-Creation-Date: 2016-06-07 13:27-0500\n"
+"PO-Revision-Date: 2016-06-07 23:27+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -23,9 +23,6 @@ msgstr ""
 
 msgid "Apt Clean"
 msgstr ""
-
-msgid "Cancel"
-msgstr "Annuler"
 
 msgid "Checking for new updates ..."
 msgstr "Recherche de mises à jour..."
@@ -140,9 +137,6 @@ msgstr "Nom"
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr ""
 
-msgid "OK"
-msgstr "OK"
-
 msgid "OMV-Extras"
 msgstr ""
 
@@ -200,9 +194,6 @@ msgid ""
 "SSH server is enabled by default.  Login with username: <b>user</b> and "
 "password: <b>live</b>"
 msgstr ""
-
-msgid "Select a directory"
-msgstr "Séléctionner un dossier"
 
 msgid "Set as default boot kernel"
 msgstr ""

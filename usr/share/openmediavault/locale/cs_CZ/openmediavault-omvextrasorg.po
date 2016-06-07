@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-23 12:36-0500\n"
-"PO-Revision-Date: 2016-05-23 17:36+0000\n"
+"POT-Creation-Date: 2016-06-07 13:27-0500\n"
+"PO-Revision-Date: 2016-06-07 23:27+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -25,9 +25,6 @@ msgstr "Přidat repozitář"
 msgid "Apt Clean"
 msgstr "Vyčistit mezipaměť balíčků"
 
-msgid "Cancel"
-msgstr "Zrušit"
-
 msgid "Checking for new updates ..."
 msgstr "Kontrola dostupnosti aktualizací…"
 
@@ -35,13 +32,13 @@ msgid "Cleaning Apt Files and Lists..."
 msgstr "Čistění souborů a seznamů Apt…"
 
 msgid "Clonezilla"
-msgstr ""
+msgstr "Clonezilla"
 
 msgid "Comment"
 msgstr "Komentář"
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
-msgstr ""
+msgstr "Výchozí uživatelské jméno: <b>user</b> a heslo: <b>live</b>"
 
 msgid "Done..."
 msgstr "Hotovo…"
@@ -49,17 +46,17 @@ msgstr "Hotovo…"
 msgid ""
 "Downloads Clonezilla ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr ""
+msgstr "Stáhne ISO obraz systému Clonezilla a nastaví zavaděč grub, aby z tohoto ISO bylo možné spustit systém."
 
 msgid ""
 "Downloads GParted Live ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr ""
+msgstr "Stáhne ISO obraz systému GParted Live a nastaví zavaděč grub, aby z tohoto ISO bylo možné spustit systém."
 
 msgid ""
 "Downloads SystemRescuecd ISO and configures grub bootloader to allow booting"
 " from ISO."
-msgstr ""
+msgstr "Stáhne ISO obraz systému SystemRescueCD a nastaví zavaděč grub, aby z tohoto ISO bylo možné spustit systém."
 
 msgid "Edit repo"
 msgstr "Upravit repozitář"
@@ -71,24 +68,24 @@ msgid "Enabled"
 msgstr "Zapnuto"
 
 msgid "GParted Live"
-msgstr ""
+msgstr "GParted Live"
 
 msgid "IP Address will be set by DHCP."
-msgstr ""
+msgstr "IP adresa bude přiřazena automaticky prostřednictvím protokolu DHCP."
 
 msgid ""
 "IP Address will be set by DHCP.  Using static DHCP is recommended for "
 "headless servers."
-msgstr ""
+msgstr "IP adresa bude nastavena automaticky protokolem DHCP. Pro stroje bez připojeného monitoru je dobré nastavit statickou zápůjčku na DHCP serveru."
 
 msgid "ISO uses approximately 139 Mb in /boot directory on OS drive."
-msgstr ""
+msgstr "ISO soubor zabere přibližně 139 MB ve složce /boot na jednotce datového úložiště s operačním systémem."
 
 msgid "ISO uses approximately 219 Mb in /boot directory on OS drive."
-msgstr ""
+msgstr "ISO soubor zabere přibližně 219 MB ve složce /boot na jednotce datového úložiště s operačním systémem."
 
 msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
-msgstr ""
+msgstr "ISO soubor zabere přibližně 381 MB ve složce /boot na jednotce datového úložiště s operačním systémem."
 
 msgid ""
 "If the system does not boot using the backports kernel, the boot menu will "
@@ -102,22 +99,22 @@ msgid "Install Backports kernel ..."
 msgstr "Nainstalovat zpětně přenesené (backport) jádro systému…"
 
 msgid "Install Clonezilla"
-msgstr ""
+msgstr "Připravit systém Clonezilla"
 
 msgid "Install Clonezilla ISO ..."
-msgstr ""
+msgstr "Příprava systému Clonezilla…"
 
 msgid "Install GParted Live"
-msgstr ""
+msgstr "Připravit systém GParted Live"
 
 msgid "Install GParted Live ISO ..."
-msgstr ""
+msgstr "Příprava systému GParted Live…"
 
 msgid "Install SystemRescueCD"
-msgstr ""
+msgstr "Připravit systém SystemRescueCD"
 
 msgid "Install SystemRescueCD ISO ..."
-msgstr ""
+msgstr "Připravit sem ISO soubor s obrazem systému SystemRescueCD…"
 
 msgid "Installed Kernels"
 msgstr "Nainstalovaná jádra operačního systému:"
@@ -139,10 +136,7 @@ msgid "Name"
 msgstr "Název"
 
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
-msgstr ""
-
-msgid "OK"
-msgstr "OK"
+msgstr "Není vhodné pro stroje, ke kterým není připojený monitor. Ve výchozím stavu totiž není dostupné přes SSH."
 
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
@@ -160,22 +154,22 @@ msgid "Priority"
 msgstr "Priorita"
 
 msgid "Reboot to Clonezilla ..."
-msgstr ""
+msgstr "Restartovat do systému Clonezilla…"
 
 msgid "Reboot to Clonezilla Once"
-msgstr ""
+msgstr "Jednorázově restartovat do systému Clonezilla"
 
 msgid "Reboot to GParted Live ..."
-msgstr ""
+msgstr "Restartovat do systému Gparted Live…"
 
 msgid "Reboot to GParted Live Once"
-msgstr ""
+msgstr "Jednorázově restartovat do systému Clonezilla"
 
 msgid "Reboot to SystemRescueCD ..."
-msgstr ""
+msgstr "Restartovat do systému SystemRescueCD…"
 
 msgid "Reboot to SystemRescueCD Once"
-msgstr ""
+msgstr "Jednorázově restartovat do systému SystemRescueCD"
 
 msgid "Repo"
 msgstr "URL adresa repozitáře"
@@ -195,24 +189,21 @@ msgstr "Repozitáře"
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
 "password: <b>openmediavault</b>"
-msgstr ""
+msgstr "Přístup přes SSH je ve výchozím stavu zapnutý. Přihlašovací údaje jsou – uživatelské jméno: <b>root</b> a heslo: <b>openmediavault</b>"
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>user</b> and "
 "password: <b>live</b>"
-msgstr ""
-
-msgid "Select a directory"
-msgstr "Vyberte složku"
+msgstr "Přístup přes SSH je ve výchozím stavu zapnutý. Přihlašovací údaje jsou – uživatelské jméno: <b>user</b> a heslo: <b>live</b>"
 
 msgid "Set as default boot kernel"
 msgstr "Nastavit jako výchozí jádro k zavádění"
 
 msgid "Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time."
-msgstr ""
+msgstr "Nastaví zavaděč grub tak, aby <b>JEDNORÁZOVĚ</b> spustil systém Clonezilla."
 
 msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
-msgstr ""
+msgstr "Nastaví zavaděč grub tak, aby <b>JEDNORÁZOVĚ</b> spustil systém GParted Live."
 
 msgid "Setting boot kernel ..."
 msgstr "Nastavení jádra k zavádění…"
@@ -224,7 +215,7 @@ msgid ""
 msgstr "Nastavení nefungujícího výchozího jádra může způsobit nedostupnost systému. V nabídce zavaděče bude ovšem stále možné zvolit jiné jádro."
 
 msgid "SystemRescueCD"
-msgstr ""
+msgstr "SystemRescueCD"
 
 msgid "Update"
 msgstr "Aktualizovat"
@@ -232,8 +223,8 @@ msgstr "Aktualizovat"
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
 "OpenMediaVault ssh key and need to be updated on the client system."
-msgstr ""
+msgstr "V případě, že se k systému přihlásíte na dálku, pamatujte, že otisk ssh klíče systému se bude lišit od toho, jaký má vaše instalace OpenMediavault, což bude třeba odsouhlasit ve vašem ssh klientovi."
 
 msgid ""
 "When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
-msgstr ""
+msgstr "V případě, že se k systému přihlásíte na dálku, spusťte nástroj clonezilla takto:  <b>sudo clonezilla</b>"
