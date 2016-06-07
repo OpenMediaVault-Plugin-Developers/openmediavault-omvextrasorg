@@ -2,5 +2,4 @@ etc/omvextras/*             etc/omvextras
 usr/sbin/*                  usr/sbin
 usr/share/keyrings/*        usr/share/keyrings
 usr/share/openmediavault/*  usr/share/openmediavault
-usr/share/php/*             usr/share/php
 var/www/openmediavault/*    var/www/openmediavault

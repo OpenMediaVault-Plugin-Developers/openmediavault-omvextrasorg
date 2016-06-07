@@ -44,7 +44,6 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $this->registerMethod('setBootKernel');
 
         $this->registerMethod('doCommand');
-        $this->registerMethod('getRootFolders');
     }
 
     public function getRepoList($params, $context)
@@ -238,26 +237,5 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
             $this->finalizeBgProcStatus($bgStatusFilename, '', $e);
             exit(1);
         }
-    }
-
-    public function getRootFolders($params, $context)
-    {
-        // Validate the RPC caller context.
-        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
-
-        // List the directory contents.
-        $result = [];
-        $path = sprintf('/%s', rtrim($params['path'], '/'));
-        if ( strlen($path) == 0 ) {
-            $path = '/';
-        }
-        foreach (new DirectoryIterator($path) as $item) {
-            if ($item->isDot())
-                continue;
-            if (!$item->isDir())
-                continue;
-            $result[] = $item->getFilename();
-        }
-        return $result;
     }
 }
