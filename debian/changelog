@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (3.3.3) stable; urgency=low
+
+  * Fix notification typo
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 11 Jun 2016 10:19:55 -0500
+
 openmediavault-omvextrasorg (3.3.2) stable; urgency=low
 
   * Modify for auto-notification of configuration

@@ -37,7 +37,7 @@ class OMVModuleOmvExtras extends \OMV\Engine\Module\ServiceAbstract
     function bindListeners(\OMV\Engine\Notify\Dispatcher $dispatcher) {
         $dispatcher->addListener(
             OMV_NOTIFY_CREATE | OMV_NOTIFY_MODIFY | OMV_NOTIFY_DELETE,
-            "org.openmediavault.conf.omvextras",
+            "org.openmediavault.conf.system.omvextras",
             [ $this, "setDirty" ]
         );
     }
