@@ -151,10 +151,10 @@ backports()
         echo "Updating..."
         apt-get --quiet update > /dev/null 2>&1
 
-        echo "Install backports 4.5 kernel and headers"
+        echo "Install backports 4.6 kernel and headers"
         apt-get -t jessie-backports --yes --force-yes --fix-missing install \
-            linux-image-4.5.0-0.bpo.2-${package} \
-            linux-headers-4.5.0-0.bpo.2-${package} \
+            linux-image-4.6.0-0.bpo.1-${package} \
+            linux-headers-4.6.0-0.bpo.1-${package} \
             firmware-linux \
             firmware-linux-free
 
