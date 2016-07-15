@@ -29,15 +29,15 @@ XPATH="/config/system/omvextras/repos/repo"
 
 ISO_PATH="/boot"
 GRUB_CLONEZILLA="/etc/grub.d/42_clonezilla"
-CLONEZILLA_VERSION="2.4.6-25"
+CLONEZILLA_VERSION="2.4.7-8"
 CLONEZILLA_ISO="clonezilla-live-${CLONEZILLA_VERSION}-i686-pae.iso"
 
 GRUB_SYSRESCCD="/etc/grub.d/42_sysresccd"
-SYSRESCCD_VERSION="4.7.3"
+SYSRESCCD_VERSION="4.8.0"
 SYSRESCCD_ISO="systemrescuecd-x86-${SYSRESCCD_VERSION}.iso"
 
 GRUB_GPARTEDLIVE="/etc/grub.d/42_gpartedlive"
-GPARTEDLIVE_VERSION="0.26.0-2"
+GPARTEDLIVE_VERSION="0.26.1-1"
 GPARTEDLIVE_ISO="gparted-live-${GPARTEDLIVE_VERSION}-i686.iso"
 
 GRUB="/etc/default/grub"
@@ -45,7 +45,9 @@ GRUB_BACKUP="grub.bak"
 GRUB_CFG="/boot/grub/grub.cfg"
 TFILE="/tmp/grub"
 
-conf=$2
+if [ "$1" == "omvextras" ] || [ "$1" == "mkconf" ]; then
+    shift
+fi
 
 update()
 {
@@ -331,7 +333,7 @@ disablesubmenu()
     fi
 }
 
-case $2 in
+case $1 in
     update)
         OMVVERSION="stoneburner"
         RELEASE="jessie"
@@ -376,13 +378,13 @@ case $2 in
         installsysresccd
     ;;
 
+    configure)
+        update
+    ;;
+
     *)
         update
-        case ${conf} in
-            configure) ;;
-            *)  apt-get update || : ;;
-        esac
-
+        apt-get update || :
     ;;
 esac
 
