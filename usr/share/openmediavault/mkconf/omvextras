@@ -184,7 +184,7 @@ exec tail -n +3 \$0
 menuentry 'Clonezilla Live' {
   set isofile="${ISO_PATH}/${CLONEZILLA_ISO}"
   loopback loop \$isofile
-  linux (loop)/live/vmlinuz boot=live live-config noswap nolocales edd=on nomodeset ocs_live_run="ocs-live-general" ocs_live_extra_param="" keyboard-layouts="" ocs_live_batch="no" locales="" ocs_daemonon="ssh" vga=788 nosplash toram=filesystem.squashfs findiso=\$isofile
+  linux (loop)/live/vmlinuz boot=live union=overlay username=user config components quiet noswap edd=on nomodeset nodmraid noeject locales= keyboard-layouts= ocs_live_run="ocs-live-general" ocs_live_extra_param="" ocs_daemonon="ssh" ocs_live_batch=no ip=  nosplash i915.blacklist=yes radeonhd.blacklist=yes nouveau.blacklist=yes vmwgfx.enable_fbdev=1 findiso=\$isofile
   initrd (loop)/live/initrd.img
 }
 EOF
@@ -238,7 +238,7 @@ exec tail -n +3 \$0
 menuentry 'GParted Live' {
   set isofile="${ISO_PATH}/${GPARTEDLIVE_ISO}"
   loopback loop \$isofile
-  linux (loop)/live/vmlinuz boot=live config union=aufs noswap noprompt nolocales edd=on gl_batch keyboard-layouts="" locales="" vga=788 ip=frommedia toram=filesystem.squashfs findiso=\$isofile
+  linux (loop)/live/vmlinuz boot=live  union=overlay username=user config noswap noprompt nolocales noeject edd=on gl_batch keyboard-layouts="" locales="" vga=788 ip=frommedia toram=filesystem.squashfs findiso=\$isofile
   initrd (loop)/live/initrd.img
 }
 EOF
