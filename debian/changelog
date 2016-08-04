@@ -1,6 +1,7 @@
 openmediavault-omvextrasorg (3.3.6) stable; urgency=low
 
   * Fix ISO boot
+  * Update locales
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 04 Aug 2016 16:53:05 -0500
 
