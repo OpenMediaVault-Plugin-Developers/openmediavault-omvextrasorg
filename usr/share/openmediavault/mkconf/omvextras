@@ -238,7 +238,7 @@ exec tail -n +3 \$0
 menuentry 'GParted Live' {
   set isofile="${ISO_PATH}/${GPARTEDLIVE_ISO}"
   loopback loop \$isofile
-  linux (loop)/live/vmlinuz boot=live  union=overlay username=user config noswap noprompt nolocales noeject edd=on gl_batch keyboard-layouts="" locales="" vga=788 ip=frommedia toram=filesystem.squashfs findiso=\$isofile
+  linux (loop)/live/vmlinuz boot='live' union='overlay' username='user' config components noswap noeject toram='filesystem.squashfs' ip='' nosplash findiso=\$isofile
   initrd (loop)/live/initrd.img
 }
 EOF
