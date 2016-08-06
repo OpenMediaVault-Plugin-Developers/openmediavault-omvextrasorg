@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (3.3.7) stable; urgency=medium
+
+  * Load Clonezilla to ram
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 06 Aug 2016 11:07:45 -0500
+
 openmediavault-omvextrasorg (3.3.6) stable; urgency=low
 
   * Fix ISO boot
