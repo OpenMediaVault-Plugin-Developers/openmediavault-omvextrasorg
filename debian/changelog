@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (3.3.8) stable; urgency=low
+
+  * Add noprompt option for Clonezilla
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 16 Aug 2016 06:23:25 -0500
+
 openmediavault-omvextrasorg (3.3.7) stable; urgency=medium
 
   * Load Clonezilla to ram
