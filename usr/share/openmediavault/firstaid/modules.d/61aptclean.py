@@ -26,14 +26,7 @@ class Module:
 
 	def execute(self):
 		try:
-			print("Cleaning apt.  Please wait ...")
-			subprocess.call([ "apt-get", "clean" ])
-			subprocess.call([ "dpkg", "--clear-avail" ])
-			subprocess.call([ "rm", "-rfv", "/var/lib/apt/lists/*" ])
-			#subprocess.call([ "omv_purge_internal_cache" ])
-			subprocess.call([ "rm", "-fv", "/var/cache/openmediavault/archives/*" ])
-			subprocess.call([ "touch", "/var/cache/openmediavault/archives/Packages" ])
-			subprocess.call([ "apt-get", "update" ])
+			subprocess.call([ "omv-aptclean" ])
 		except Exception as e:
 			omv.log.error(str(e))
 			return 1

@@ -26,7 +26,7 @@ class Module:
 
 	def execute(self):
 		try:
-			print("Install backports kernel.  Please wait ...")
+			print("Installing backports kernel.  Please wait ...")
 			subprocess.call([ "/usr/share/openmediavault/mkconf/omvextras", "installbackports" ])
 		except Exception as e:
 			omv.log.error(str(e))

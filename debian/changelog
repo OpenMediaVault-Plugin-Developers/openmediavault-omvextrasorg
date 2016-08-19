@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (3.3.9) stable; urgency=low
+
+  * Add omv-firstaid plugins
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 18 Aug 2016 11:25:38 -0500
+
 openmediavault-omvextrasorg (3.3.8) stable; urgency=low
 
   * Add noprompt option for Clonezilla
