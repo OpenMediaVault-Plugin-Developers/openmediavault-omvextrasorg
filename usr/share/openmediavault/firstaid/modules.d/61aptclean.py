@@ -25,11 +25,7 @@ class Module:
 		return "Clean apt"
 
 	def execute(self):
-		try:
-			subprocess.call([ "omv-aptclean" ])
-		except Exception as e:
-			omv.log.error(str(e))
-			return 1
+		omv.subprocess.call([ "omv-aptclean" ])
 		return 0
 
 if __name__ == "__main__":
