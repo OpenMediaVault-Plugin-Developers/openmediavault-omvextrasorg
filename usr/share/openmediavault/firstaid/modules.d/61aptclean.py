@@ -21,7 +21,8 @@ import subprocess
 import openmediavault as omv
 
 class Module:
-	def get_description(self):
+	@property
+	def description(self):
 		return "Clean apt"
 
 	def execute(self):
