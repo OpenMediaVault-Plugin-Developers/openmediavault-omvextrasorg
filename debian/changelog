@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (2.13.3) stable; urgency=low
+
+  * Add new omv-extras developer package signing key
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 28 Aug 2016 13:56:33 -0500
+
 openmediavault-omvextrasorg (2.13.2) stable; urgency=low
 
   * Remove spideroak repo
