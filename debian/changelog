@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (3.3.11) stable; urgency=low
+
+  * Add new omv-extras signing key
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 28 Aug 2016 12:40:00 -0500
+
 openmediavault-omvextrasorg (3.3.10) stable; urgency=low
 
   * increment version

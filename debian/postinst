@@ -39,6 +39,7 @@ case "$1" in
             KEYRING_LOCATION="/usr/share/keyrings/"
             apt-key add ${KEYRING_LOCATION}omvextrasorg-keyring.gpg
             apt-key add ${KEYRING_LOCATION}omvplugindevs.gpg
+			apt-key add ${KEYRING_LOCATION}omvextrasdevs.key
             apt-key add ${KEYRING_LOCATION}greyhole-debsig.asc
             apt-key add ${KEYRING_LOCATION}zfsonlinux.gpg
             apt-key add ${KEYRING_LOCATION}xamarin.gpg
