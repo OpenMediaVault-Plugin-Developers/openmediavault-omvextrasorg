@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (3.3.13) stable; urgency=low
+
+  * Use execBgProc
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 10 Sep 2016 09:03:28 -0500
+
 openmediavault-omvextrasorg (3.3.12) stable; urgency=low
 
   * Fix omv-firstaid modues for OMV 3.0.33

@@ -216,26 +216,16 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         // Validate the parameters of the RPC service method.
         $this->validateMethodParams($params, 'rpc.omvextras.docommand');
 
-        // Create a background process.
-        $bgStatusFilename = $this->createBgProcStatus();
-        $pid = $this->fork();
-        if ($pid > 0) { // Parent process.
-            $this->initializeBgProcStatus($bgStatusFilename, $pid);
-            return $bgStatusFilename;
-        }
-        // Child process.
-        try {
-            $bgOutputFilename = $this->createBgProcOutput();
-            $this->updateBgProcStatus($bgStatusFilename, 'outputfilename', $bgOutputFilename);
-            // Execute command.
-            $cmd = sprintf('export LANG=C; omv-mkconf omvextras %s 2>&1', $params['command']);
-            $this->exec($cmd, $output, $bgOutputFilename);
-            // Finalize the background process.
-            $this->finalizeBgProcStatus($bgStatusFilename, $output);
-            exit(0);
-        } catch(\Exception $e) {
-            $this->finalizeBgProcStatus($bgStatusFilename, '', $e);
-            exit(1);
-        }
+        // Create the background process.
+        return $this->execBgProc(function($bgStatusFilename, $bgOutputFilename)
+            use ($params) {
+                $cmd = new \OMV\System\Process("omv-mkconf", "omvextras", $params['command']);
+                $cmd->setRedirect2to1(true);
+                $cmdLine = $cmd->getCommandLine();
+                if (0 !== $this->exec($cmdLine, $output, $bgOutputFilename))
+                    throw new \OMV\ExecException($cmdLine, $output);
+                return $output;
+            }
+        );
     }
 }
