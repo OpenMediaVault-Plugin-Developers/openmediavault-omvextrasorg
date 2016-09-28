@@ -26,7 +26,7 @@ case "$1" in
         if ! omv_config_exists "/config/system/omvextras"; then
             echo "Initialize configuration"
             default_repos=$(cat /etc/omvextras/default_repos.xml | sed -e 's/^[ \t]*//' | tr '\n' ' ')
-            omv_config_add_element "/config/system" "omvextras" "${default_repos}" true
+			omv_config_add_node_data "/config/system" "omvextras" "${default_repos}"
         fi
 
         if [ ! -f /usr/share/openmediavault/mkconf/omvextrasorg ]; then

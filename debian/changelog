@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (3.3.14) stable; urgency=low
+
+  * Update for OMV 3.0.40
+  * Use backports 4.7 kernel
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 27 Sep 2016 20:05:08 -0500
+
 openmediavault-omvextrasorg (3.3.13) stable; urgency=low
 
   * Use execBgProc
