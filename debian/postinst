@@ -26,7 +26,7 @@ case "$1" in
         if ! omv_config_exists "/config/system/omvextras"; then
             echo "Initialize configuration"
             default_repos=$(cat /etc/omvextras/default_repos.xml | sed -e 's/^[ \t]*//' | tr '\n' ' ')
-			omv_config_add_node_data "/config/system" "omvextras" "${default_repos}"
+            omv_config_add_node_data "/config/system" "omvextras" "${default_repos}"
         fi
 
         if [ ! -f /usr/share/openmediavault/mkconf/omvextrasorg ]; then
@@ -39,7 +39,7 @@ case "$1" in
             KEYRING_LOCATION="/usr/share/keyrings/"
             apt-key add ${KEYRING_LOCATION}omvextrasorg-keyring.gpg
             apt-key add ${KEYRING_LOCATION}omvplugindevs.gpg
-			apt-key add ${KEYRING_LOCATION}omvextrasdevs.key
+            apt-key add ${KEYRING_LOCATION}omvextrasdevs.key
             apt-key add ${KEYRING_LOCATION}greyhole-debsig.asc
             apt-key add ${KEYRING_LOCATION}zfsonlinux.gpg
             apt-key add ${KEYRING_LOCATION}xamarin.gpg
