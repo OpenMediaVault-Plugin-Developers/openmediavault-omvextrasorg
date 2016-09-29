@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (3.3.15) stable; urgency=low
+
+  * Add button to install Proxmox 4.x kernel
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 29 Sep 2016 16:55:17 -0500
+
 openmediavault-omvextrasorg (3.3.14) stable; urgency=low
 
   * Update for OMV 3.0.40

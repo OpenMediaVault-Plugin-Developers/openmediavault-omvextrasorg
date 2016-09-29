@@ -220,7 +220,7 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         return $this->execBgProc(function($bgStatusFilename, $bgOutputFilename)
             use ($params) {
                 $cmd = new \OMV\System\Process("omv-mkconf", "omvextras", $params['command']);
-                $cmd->setRedirect2to1(true);
+                //$cmd->setRedirect2to1(true);
                 $cmdLine = $cmd->getCommandLine();
                 if (0 !== $this->exec($cmdLine, $output, $bgOutputFilename))
                     throw new \OMV\ExecException($cmdLine, $output);

@@ -83,10 +83,18 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                 handler : Ext.Function.bind(me.onCommandButton, me, [ "installbackports" ]),
                 margin  : "5 0 8 10"
             },{
+                xtype   : "button",
+                name    : "backports",
+                text    : _("Install Proxmox kernel"),
+                scope   : this,
+                handler : Ext.Function.bind(me.onCommandButton, me, [ "installpvekernel" ]),
+                margin  : "5 0 8 10"
+            },{
                 border : false,
                 html   : "<ul>" +
                            "<li>" + _("Setting the wrong default boot kernel may cause the system to be inaccessible.  The boot menu will still be available to select a different kernel.") + "</li>" +
                            "<li>" + _("Installing the backports kernel with not uninstall the standard kernel.") + "</li>" +
+                           "<li>" + _("Installing the backports kernel and Proxmox kernel on the same system may cause problems.") + "</li>" +
                            "<li>" + _("If the system does not boot using the backports kernel, the boot menu will still have the option to boot the standard kernel.") + "</li>" +
                          "</ul>"
             }]
@@ -198,6 +206,9 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
         switch(cmd) {
             case "installbackports":
                 title = _("Install Backports kernel ...");
+                break;
+            case "installpvekernel":
+                title = _("Install Proxmox kernel ...");
                 break;
             case "installcz":
                 title = _("Install Clonezilla ISO ...");

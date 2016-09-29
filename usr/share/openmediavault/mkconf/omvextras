@@ -25,6 +25,7 @@ set -e
 . /usr/share/openmediavault/scripts/helper-functions
 
 BACKPORTS_REPO="/etc/apt/sources.list.d/backports.list"
+KEYSERVER="hkp://keyserver.ubuntu.com:80"
 XPATH="/config/system/omvextras/repos/repo"
 
 ISO_PATH="/boot"
@@ -56,8 +57,6 @@ update()
 
     OMVEXTRASREPOFILE="/etc/apt/sources.list.d/omv-extras-org.list"
     OMVEXTRASAPTPREFS="/etc/apt/preferences.d/99omv-extras-org"
-
-    KEYSERVER="hkp://keyserver.ubuntu.com:80"
 
     /bin/rm -f ${OMVEXTRASREPOFILE}
     /bin/rm -f ${OMVEXTRASAPTPREFS}
@@ -133,10 +132,9 @@ backports()
     export LANG=C
     export DEBIAN_FRONTEND=noninteractive
 
-    ARCH="`/bin/uname -m`"
     package=""
 
-    case "$ARCH" in
+    case "$(/usr/bin/arch)" in
         *amd64*|*x86_64*)
             package="amd64"
         ;;
@@ -153,7 +151,7 @@ backports()
         echo "Updating..."
         apt-get --quiet update > /dev/null 2>&1
 
-        echo "Install backports 4.6 kernel and headers"
+        echo "Install backports 4.7 kernel and headers"
         apt-get -t jessie-backports --yes --force-yes --fix-missing install \
             linux-image-4.7.0-0.bpo.1-${package}-unsigned \
             linux-headers-4.7.0-0.bpo.1-${package} \
@@ -169,6 +167,48 @@ backports()
 createBackportsFile()
 {
     echo "deb http://httpredir.debian.org/debian jessie-backports main contrib non-free" > $BACKPORTS_REPO
+}
+
+pvekernel()
+{
+    export LANG=C
+    export DEBIAN_FRONTEND=noninteractive
+
+    case "$(/usr/bin/arch)" in
+        *amd64*|*x86_64*)
+
+            pverepo="/etc/apt/sources.list.d/pvekernel.list"
+            echo "deb http://download.proxmox.com/debian jessie pve-no-subscription" > ${pverepo}
+
+            echo "Adding Proxmox repo key..."
+            apt-key adv --keyserver ${KEYSERVER} --recv "C23AC7F49887F95A"
+
+            echo "Updating..."
+            apt-get update
+
+            kernel=$(apt-cache search pve-kernel-4 | sort --version-sort | tail -n1 | cut -d" " -f1)
+
+            if [ "${kernel}" != "" ]; then
+                echo "Install Proxmox kernel and headers"
+                apt-get --yes --force-yes purge firmware-ti-connectivity firmware-amd-graphics
+                apt-get --yes --force-yes --fix-missing install ${kernel} pve-headers pve-firmware
+            else
+                echo "No Proxmox kernel found."
+            fi
+
+            disablesubmenu
+
+            echo "Removing Proxmox repo to prevent other packages from being updated..."
+            rm -f ${pverepo}
+            apt-get update
+
+            echo "..."
+            echo "Please reboot to use new kernel"
+            ;;
+        *)
+            echo "Unsupported kernel and/or processor"
+            ;;
+    esac
 }
 
 installclonezilla()
@@ -348,6 +388,10 @@ case $1 in
 
     installbackports)
         backports
+    ;;
+
+    installpvekernel)
+        pvekernel
     ;;
 
     disablesubmenu)

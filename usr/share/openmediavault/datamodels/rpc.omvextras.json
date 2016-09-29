@@ -98,6 +98,7 @@
 				"enum": [
 					"aptclean",
 					"installbackports",
+					"installpvekernel",
 					"installcz",
 					"installgp",
 					"installsys",
