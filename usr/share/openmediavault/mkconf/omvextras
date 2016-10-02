@@ -153,7 +153,7 @@ backports()
 
         echo "Install backports 4.7 kernel and headers"
         apt-get -t jessie-backports --yes --force-yes --fix-missing install \
-            linux-image-4.7.0-0.bpo.1-${package}-unsigned \
+            linux-image-4.7.0-0.bpo.1-${package} \
             linux-headers-4.7.0-0.bpo.1-${package} \
             firmware-linux \
             firmware-linux-free
