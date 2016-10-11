@@ -122,7 +122,7 @@ EOF
 
     chmod 644 ${OMVEXTRASAPTPREFS}
 
-    if [ -f "${BACKPORTS_REPO}" ]; then
+    if [ ! -f "${BACKPORTS_REPO}" ]; then
         createBackportsFile
     fi
 }

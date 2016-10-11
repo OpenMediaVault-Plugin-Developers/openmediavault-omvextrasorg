@@ -230,7 +230,7 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                 break;
             default:
                 title = _("Cleaning Apt Files and Lists...");
-                cmb = "aptclean";
+                cmd = "aptclean";
         }
         Ext.create("OMV.window.Execute", {
             title          : title,
