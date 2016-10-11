@@ -1,6 +1,5 @@
 openmediavault-omvextrasorg (3.3.17) stable; urgency=low
 
-  * Fix bug in mkconf
   * Fix typo in Kernel.js
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 11 Oct 2016 22:01:03 +0900
