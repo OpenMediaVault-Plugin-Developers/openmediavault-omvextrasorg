@@ -35,6 +35,7 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $this->registerMethod('getRepo');
         $this->registerMethod('setRepo');
         $this->registerMethod('deleteRepo');
+		$this->registerMethod('doUpdate');
 
         $this->registerMethod('getArch');
 
@@ -112,6 +113,20 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
 
         // Return the deleted configuration object.
         return $object->getAssoc();
+    }
+
+    public function doUpdate($params, $context)
+    {
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, [
+            'role' => OMV_ROLE_ADMINISTRATOR
+        ]);
+        // Check if the module is marked as dirty. Abort this RPC
+        // immediatelly in this case, otherwise the added/removed
+        // repositories will not be included/excluded.
+        if ($this->isModuleDirty("omvextras"))
+            throw new \OMV\Config\ConfigDirtyException();
+        return \OMV\Rpc\Rpc::call("Apt", "update", NULL, $context);
     }
 
     public function getArch($params, $context)

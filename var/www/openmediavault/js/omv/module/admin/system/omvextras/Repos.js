@@ -367,8 +367,8 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
         var me = this;
         var wnd = Ext.create("OMV.window.Execute", {
             title           : _("Checking for new updates ..."),
-            rpcService      : "Apt",
-            rpcMethod       : "update",
+            rpcService      : "omvextras",
+            rpcMethod       : "doUpdate",
             rpcIgnoreErrors : true,
             hideStartButton : true,
             hideStopButton  : true,
