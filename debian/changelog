@@ -1,3 +1,12 @@
+openmediavault-omvextrasorg (3.4) stable; urgency=low
+
+  * Add Jessie-backports repo to list and enable by default
+  * Fix apt pin bugs
+  * Add certbot and related packages to pin file
+  * Update ISO versions
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 18 Oct 2016 12:38:12 -0500
+
 openmediavault-omvextrasorg (3.3.17) stable; urgency=low
 
   * Fix typo in Kernel.js
@@ -529,7 +538,7 @@ openmediavault-omvextrasorg (1.1.2) stable; urgency=low
 
   * Add mono testing repo
   * Update locales
-  
+
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 22 Nov 2014 19:28:57 -0600
 
 openmediavault-omvextrasorg (1.1.1) stable; urgency=low
@@ -819,7 +828,7 @@ openmediavault-omvextrasorg (0.6.16) stable; urgency=low
 
   * Fix dotdeb apt preferences
   * Update locales
-  
+
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 10 Apr 2014 17:55:27 -0500
 
 openmediavault-omvextrasorg (0.6.15) stable; urgency=low

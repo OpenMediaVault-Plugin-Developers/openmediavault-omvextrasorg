@@ -29,6 +29,12 @@ case "$1" in
             omv_config_add_node_data "/config/system" "omvextras" "${default_repos}"
         fi
 
+        if dpkg --compare-versions "$2" lt-nl "3.4"; then
+            rm -f /etc/apt/sources.list.d/backports.list
+            update_repo=$(cat /etc/omvextras/update1.xml | sed -e 's/^[ \t]*//' | tr '\n' ' ')
+            omv_config_add_node_data "/config/system/omvextras/repos" "repo" "${update_repo}"
+        fi
+
         if [ ! -f /usr/share/openmediavault/mkconf/omvextrasorg ]; then
             ln -s /usr/share/openmediavault/mkconf/omvextras /usr/share/openmediavault/mkconf/omvextrasorg
         fi

@@ -34,11 +34,11 @@ CLONEZILLA_VERSION="2.4.7-8"
 CLONEZILLA_ISO="clonezilla-live-${CLONEZILLA_VERSION}-i686-pae.iso"
 
 GRUB_SYSRESCCD="/etc/grub.d/42_sysresccd"
-SYSRESCCD_VERSION="4.8.1"
+SYSRESCCD_VERSION="4.8.3"
 SYSRESCCD_ISO="systemrescuecd-x86-${SYSRESCCD_VERSION}.iso"
 
 GRUB_GPARTEDLIVE="/etc/grub.d/42_gpartedlive"
-GPARTEDLIVE_VERSION="0.26.1-1"
+GPARTEDLIVE_VERSION="0.26.1-5"
 GPARTEDLIVE_ISO="gparted-live-${GPARTEDLIVE_VERSION}-i686.iso"
 
 GRUB="/etc/default/grub"
@@ -64,10 +64,16 @@ update()
 
     cat <<EOF > ${OMVEXTRASAPTPREFS}
 Package: *
-Pin: release n=${OMVVERSION}-backports, origin ${BINTRAY_REPO_LOCATION}
+Pin: release n=erasmus-backports, origin dl.bintray.com
 Pin-Priority: 995
 
 Package: virtualbox virtualbox-dkms virtualbox-qt minidlna borgbackup python3-msgpack
+  certbot python-acme python-certbot python-cffi-backend python-chardet
+  python-configargparse python-configobj python-cryptography python-dialog python-enum34
+  python-funcsigs python-idna python-ipaddress python-mock python-ndg-httpsclient
+  python-openssl python-parsedatetime python-pbr python-pkg-resources python-psutil
+  python-pyasn1 python-requests python-rfc3339 python-setuptools python-six python-tz
+  python-urllib3 python-zope.component python-zope.event python-zope.interface
 Pin: release a=jessie-backports
 Pin-Priority: 500
 
@@ -86,7 +92,7 @@ EOF
         if [ "${enable}" != "0" ]; then
             echo "# ${name}" >> ${OMVEXTRASREPOFILE}
 
-            for i in `seq 1 3`;
+            for i in $(seq 1 3);
             do
                 repo=$(omv_config_get "${XPATH}[position()=${index}]/repo${i}")
                 if [ "${repo}" != "" ]; then
@@ -121,10 +127,6 @@ EOF
     done
 
     chmod 644 ${OMVEXTRASAPTPREFS}
-
-    if [ -f "${BACKPORTS_REPO}" ]; then
-        createBackportsFile
-    fi
 }
 
 backports()
@@ -146,11 +148,6 @@ backports()
     if [ -z ${package} ]; then
         echo "Unsupported kernel and/or processor"
     else
-        createBackportsFile
-
-        echo "Updating..."
-        apt-get --quiet update > /dev/null 2>&1
-
         echo "Install backports 4.7 kernel and headers"
         apt-get -t jessie-backports --yes --force-yes --fix-missing install \
             linux-image-4.7.0-0.bpo.1-${package} \
@@ -162,11 +159,6 @@ backports()
         echo "..."
         echo "Please reboot to use new kernel"
     fi
-}
-
-createBackportsFile()
-{
-    echo "deb http://httpredir.debian.org/debian jessie-backports main contrib non-free" > $BACKPORTS_REPO
 }
 
 pvekernel()
@@ -240,7 +232,7 @@ installsysresccd()
         wget "https://sourceforge.net/projects/systemrescuecd/files/sysresccd-x86/${SYSRESCCD_VERSION}/${SYSRESCCD_ISO}/download" -O ${ISO_PATH}/${SYSRESCCD_ISO}
     fi
 
-    ARCH="`/bin/uname -m`"
+    ARCH="$(bin/uname -m)"
     case "$ARCH" in
         x86_64)
             rescue="64"
@@ -375,9 +367,6 @@ disablesubmenu()
 
 case $1 in
     update)
-        OMVVERSION="stoneburner"
-        RELEASE="jessie"
-
         update
     ;;
 
