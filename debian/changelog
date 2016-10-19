@@ -3,7 +3,10 @@ openmediavault-omvextrasorg (3.4) stable; urgency=low
   * Add Jessie-backports repo to list and enable by default
   * Fix apt pin bugs
   * Add certbot and related packages to pin file
-  * Update ISO versions
+  * Update ISO versions of SystemRescueCD and GParted-Live
+  * Use older version of Clonezilla that uses DHCP on boot for headless
+    systems
+  * Fix output during ISO downloads
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 18 Oct 2016 12:38:12 -0500
 
