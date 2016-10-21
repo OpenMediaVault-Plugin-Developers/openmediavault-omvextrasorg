@@ -182,7 +182,7 @@ pvekernel()
 
             if [ "${kernel}" != "" ]; then
                 echo "Install Proxmox kernel and headers"
-                apt-get --yes --force-yes purge firmware-ti-connectivity firmware-amd-graphics
+                apt-get --yes --force-yes purge firmware-ti-connectivity firmware-amd-graphics || :
                 apt-get --yes --force-yes --fix-missing install ${kernel} pve-headers pve-firmware
             else
                 echo "No Proxmox kernel found."
