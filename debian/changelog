@@ -1,6 +1,7 @@
 openmediavault-omvextrasorg (3.4.1) stable; urgency=low
 
   * Fix proxmox kernel installation
+  * Update locales
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 21 Oct 2016 06:57:17 -0500
 

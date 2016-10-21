@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Damtux, 2013
-# Paolo Velati <paolo.velati@gmail.com>, 2014-2015
+# Paolo Velati <paolo.velati@gmail.com>, 2014-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-07 13:27-0500\n"
-"PO-Revision-Date: 2016-06-07 23:27+0000\n"
+"POT-Creation-Date: 2016-10-21 06:58-0500\n"
+"PO-Revision-Date: 2016-10-21 11:58+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Add repo"
-msgstr ""
+msgstr "Aggiungi repository"
 
 msgid "Apt Clean"
 msgstr "Apt Clean"
@@ -32,13 +32,13 @@ msgid "Cleaning Apt Files and Lists..."
 msgstr "Pulizia Apt File e Liste..."
 
 msgid "Clonezilla"
-msgstr ""
+msgstr "Clonezilla"
 
 msgid "Comment"
 msgstr "Commenta"
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
-msgstr ""
+msgstr "Utente: <b>user</b> e password: <b>live</b> predefiniti"
 
 msgid "Done..."
 msgstr "Fatto..."
@@ -59,16 +59,16 @@ msgid ""
 msgstr ""
 
 msgid "Edit repo"
-msgstr ""
+msgstr "Modifica repository"
 
 msgid "Enable"
 msgstr "Abilita"
 
 msgid "Enabled"
-msgstr ""
+msgstr "Abilitato"
 
 msgid "GParted Live"
-msgstr ""
+msgstr "GParted Live"
 
 msgid "IP Address will be set by DHCP."
 msgstr ""
@@ -93,30 +93,41 @@ msgid ""
 msgstr "Se il sistema non parte usando il kernel backport, il menu di boot avrà comunque l'opzione di avviare il kernel standard."
 
 msgid "Install Backports kernel"
-msgstr ""
+msgstr "Installa kernel backport"
 
 msgid "Install Backports kernel ..."
-msgstr ""
+msgstr "Installa kernel backport ..."
 
 msgid "Install Clonezilla"
-msgstr ""
+msgstr "Installa Clonezilla"
 
 msgid "Install Clonezilla ISO ..."
 msgstr ""
 
 msgid "Install GParted Live"
-msgstr ""
+msgstr "Installa GParted Live"
 
 msgid "Install GParted Live ISO ..."
 msgstr ""
 
-msgid "Install SystemRescueCD"
+msgid "Install Proxmox kernel"
 msgstr ""
+
+msgid "Install Proxmox kernel ..."
+msgstr ""
+
+msgid "Install SystemRescueCD"
+msgstr "Installa SystemRescueCD"
 
 msgid "Install SystemRescueCD ISO ..."
 msgstr ""
 
 msgid "Installed Kernels"
+msgstr "Kernel installati"
+
+msgid ""
+"Installing the backports kernel and Proxmox kernel on the same system may "
+"cause problems."
 msgstr ""
 
 msgid ""
@@ -130,7 +141,7 @@ msgid "Kernels"
 msgstr "Kernel"
 
 msgid "Key"
-msgstr ""
+msgstr "Chiave"
 
 msgid "Name"
 msgstr "Nome"
@@ -139,19 +150,19 @@ msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr ""
 
 msgid "OMV-Extras"
-msgstr ""
+msgstr "OMV-Extras"
 
 msgid "Package"
-msgstr ""
+msgstr "Pacchetto"
 
 msgid "Permanent"
-msgstr ""
+msgstr "Permanente"
 
 msgid "Pin"
 msgstr ""
 
 msgid "Priority"
-msgstr ""
+msgstr "Priorità"
 
 msgid "Reboot to Clonezilla ..."
 msgstr ""
@@ -175,13 +186,13 @@ msgid "Repo"
 msgstr "Repository"
 
 msgid "Repo #1"
-msgstr ""
+msgstr "Repository #1"
 
 msgid "Repo #2"
-msgstr ""
+msgstr "Repository #2"
 
 msgid "Repo #3"
-msgstr ""
+msgstr "Repository #3"
 
 msgid "Repos"
 msgstr "Repository"
@@ -197,7 +208,7 @@ msgid ""
 msgstr ""
 
 msgid "Set as default boot kernel"
-msgstr ""
+msgstr "Imposta come kernel di avvio predefinito"
 
 msgid "Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time."
 msgstr ""
@@ -206,7 +217,7 @@ msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr ""
 
 msgid "Setting boot kernel ..."
-msgstr ""
+msgstr "Impostazione kernel di avvio ..."
 
 msgid ""
 "Setting the wrong default boot kernel may cause the system to be "
@@ -215,7 +226,7 @@ msgid ""
 msgstr ""
 
 msgid "SystemRescueCD"
-msgstr ""
+msgstr "SystemRescueCD"
 
 msgid "Update"
 msgstr "Aggiorna"

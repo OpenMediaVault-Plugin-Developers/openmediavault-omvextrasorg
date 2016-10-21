@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-07 13:27-0500\n"
-"PO-Revision-Date: 2016-06-07 23:27+0000\n"
+"POT-Creation-Date: 2016-10-21 06:58-0500\n"
+"PO-Revision-Date: 2016-10-21 11:58+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -109,6 +109,12 @@ msgstr ""
 msgid "Install GParted Live ISO ..."
 msgstr ""
 
+msgid "Install Proxmox kernel"
+msgstr ""
+
+msgid "Install Proxmox kernel ..."
+msgstr ""
+
 msgid "Install SystemRescueCD"
 msgstr ""
 
@@ -116,6 +122,11 @@ msgid "Install SystemRescueCD ISO ..."
 msgstr ""
 
 msgid "Installed Kernels"
+msgstr ""
+
+msgid ""
+"Installing the backports kernel and Proxmox kernel on the same system may "
+"cause problems."
 msgstr ""
 
 msgid ""

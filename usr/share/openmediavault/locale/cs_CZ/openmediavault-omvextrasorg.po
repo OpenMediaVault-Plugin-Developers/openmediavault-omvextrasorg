@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-07 13:27-0500\n"
-"PO-Revision-Date: 2016-06-07 23:27+0000\n"
+"POT-Creation-Date: 2016-10-21 06:58-0500\n"
+"PO-Revision-Date: 2016-10-21 11:58+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -110,6 +110,12 @@ msgstr "Připravit systém GParted Live"
 msgid "Install GParted Live ISO ..."
 msgstr "Příprava systému GParted Live…"
 
+msgid "Install Proxmox kernel"
+msgstr ""
+
+msgid "Install Proxmox kernel ..."
+msgstr ""
+
 msgid "Install SystemRescueCD"
 msgstr "Připravit systém SystemRescueCD"
 
@@ -118,6 +124,11 @@ msgstr "Připravit sem ISO soubor s obrazem systému SystemRescueCD…"
 
 msgid "Installed Kernels"
 msgstr "Nainstalovaná jádra operačního systému:"
+
+msgid ""
+"Installing the backports kernel and Proxmox kernel on the same system may "
+"cause problems."
+msgstr ""
 
 msgid ""
 "Installing the backports kernel with not uninstall the standard kernel."
@@ -139,7 +150,7 @@ msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr "Není vhodné pro stroje, ke kterým není připojený monitor. Ve výchozím stavu totiž není dostupné přes SSH."
 
 msgid "OMV-Extras"
-msgstr "OMV-Extras"
+msgstr "Zdroje přídavných funkcí"
 
 msgid "Package"
 msgstr "Balíček"
