@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (3.4.3) stable; urgency=low
+
+  * Improve proxmox kernel re-installation/update
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 24 Oct 2016 06:01:05 -0500
+
 openmediavault-omvextrasorg (3.4.2) stable; urgency=low
 
   * Update gparted-live version to 0.27.0-1
