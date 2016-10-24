@@ -1,8 +1,8 @@
-openmediavault-omvextrasorg (3.4.2) UNRELEASED; urgency=medium
+openmediavault-omvextrasorg (3.4.2) stable; urgency=low
 
   * Update gparted-live version to 0.27.0-1
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 21 Oct 2016 10:17:57 -0500
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 24 Oct 2016 05:38:39 -0500
 
 openmediavault-omvextrasorg (3.4.1) stable; urgency=low
 
