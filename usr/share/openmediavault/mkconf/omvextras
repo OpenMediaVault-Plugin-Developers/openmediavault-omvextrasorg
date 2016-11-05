@@ -414,7 +414,7 @@ case $1 in
     ;;
 
     rebootsys)
-        installsysresccd
+        rebootsysresccd
     ;;
 
     configure)
