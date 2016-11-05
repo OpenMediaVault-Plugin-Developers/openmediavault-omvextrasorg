@@ -141,7 +141,7 @@ backports()
             package="amd64"
         ;;
         *486*|*586*|*686*)
-            package="586"
+            package="686"
         ;;
     esac
 

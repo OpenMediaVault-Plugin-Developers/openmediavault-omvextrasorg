@@ -1,3 +1,15 @@
+openmediavault-omvextrasorg (3.4.5) stable; urgency=low
+
+  * Fix postinst file
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 05 Nov 2016 09:55:27 -0500
+
+openmediavault-omvextrasorg (3.4.4) stable; urgency=low
+
+  * Fix for backports kernel - 586 to 686 
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 28 Oct 2016 08:22:47 -0500
+
 openmediavault-omvextrasorg (3.4.3) stable; urgency=low
 
   * Improve proxmox kernel re-installation/update
