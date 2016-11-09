@@ -35,6 +35,11 @@ case "$1" in
             omv_config_add_node_data "/config/system/omvextras/repos" "repo" "${update_repo}"
         fi
 
+        if dpkg --compare-versions "$2" lt-nl "3.4.6"; then
+            omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafd86e8-0e48-11e6-97de-000c290ea003']"
+            omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafd9e1c-0e48-11e6-ab72-000c290ea003']"
+        fi
+
         if [ ! -f /usr/share/openmediavault/mkconf/omvextrasorg ]; then
             ln -s /usr/share/openmediavault/mkconf/omvextras /usr/share/openmediavault/mkconf/omvextrasorg
         fi

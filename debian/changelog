@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (3.4.6) stable; urgency=low
+
+  * Remove zfs repos
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 08 Nov 2016 13:18:11 -0600
+
 openmediavault-omvextrasorg (3.4.5) stable; urgency=low
 
   * Fix postinst file

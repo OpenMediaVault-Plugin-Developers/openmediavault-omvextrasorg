@@ -80,38 +80,6 @@
     <permanent>1</permanent>
   </repo>
   <repo>
-    <uuid>eafd86e8-0e48-11e6-97de-000c290ea003</uuid>
-    <enable>0</enable>
-    <name>ZFS</name>
-    <repo1>https://dl.bintray.com/openmediavault-plugin-developers/erasmus-zfs jessie main</repo1>
-    <repo2>http://archive.zfsonlinux.org/debian jessie main</repo2>
-    <repo3></repo3>
-    <key1>4D5843EA</key1>
-    <key2>8E234FB17DFFA34D</key2>
-    <key3></key3>
-    <comment>ZFS repo</comment>
-    <package1>*</package1><pin1>release n=erasmus-zfs, origin dl.bintray.com</pin1><priority1>996</priority1>
-    <package2>*</package2><pin2>release n=jessie, origin archive.zfsonlinux.org</pin2><priority2>400</priority2>
-    <package3></package3><pin3></pin3><priority3></priority3>
-    <permanent>1</permanent>
-  </repo>
-  <repo>
-    <uuid>eafd9e1c-0e48-11e6-ab72-000c290ea003</uuid>
-    <enable>0</enable>
-    <name>ZFS Testing</name>
-    <repo1>https://dl.bintray.com/openmediavault-plugin-developers/erasmus-zfstesting jessie main</repo1>
-    <repo2></repo2>
-    <repo3></repo3>
-    <key1></key1>
-    <key2></key2>
-    <key3></key3>
-    <comment>ZFS Testing repo</comment>
-    <package1>*</package1><pin1>release n=erasmus-zfstesting, origin dl.bintray.com</pin1><priority1>997</priority1>
-    <package2></package2><pin2></pin2><priority2></priority2>
-    <package3></package3><pin3></pin3><priority3></priority3>
-    <permanent>1</permanent>
-  </repo>
-  <repo>
     <uuid>eafdb488-0e48-11e6-a13f-000c290ea003</uuid>
     <enable>0</enable>
     <name>Mono</name>
