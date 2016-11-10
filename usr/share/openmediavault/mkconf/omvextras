@@ -107,7 +107,7 @@ EOF
                     if [ "${key}" != "" ]; then
                         key=${key,,}
                         if [ ${key:0:4} = "http" ]; then
-                            wget -qO - ${key} | apt-key add -
+                            wget -qO - "${key}" -4 2>/dev/null | apt-key add -
                         else
                             apt-key adv --keyserver ${KEYSERVER} --recv-keys "${key}"
                         fi
