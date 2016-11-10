@@ -34,7 +34,7 @@ CLONEZILLA_VERSION="2.3.2-22"
 CLONEZILLA_ISO="clonezilla-live-${CLONEZILLA_VERSION}-i686-pae.iso"
 
 GRUB_SYSRESCCD="/etc/grub.d/42_sysresccd"
-SYSRESCCD_VERSION="4.8.3"
+SYSRESCCD_VERSION="4.9.0"
 SYSRESCCD_ISO="systemrescuecd-x86-${SYSRESCCD_VERSION}.iso"
 
 GRUB_GPARTEDLIVE="/etc/grub.d/42_gpartedlive"
@@ -105,7 +105,12 @@ EOF
                     fi
 
                     if [ "${key}" != "" ]; then
-                        apt-key adv --keyserver ${KEYSERVER} --recv-keys "${key}"
+                        key=${key,,}
+                        if [ ${key:0:4} = "http" ]; then
+                            wget -qO - ${key} | apt-key add -
+                        else
+                            apt-key adv --keyserver ${KEYSERVER} --recv-keys "${key}"
+                        fi
                     fi
 
                     package=$(omv_config_get "${XPATH}[position()=${index}]/package${i}")

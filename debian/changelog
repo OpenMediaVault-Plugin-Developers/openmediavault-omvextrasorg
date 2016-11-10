@@ -1,6 +1,7 @@
 openmediavault-omvextrasorg (3.4.6) stable; urgency=low
 
   * Remove zfs repos
+  * Allow downloading repo key from web site
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 08 Nov 2016 13:18:11 -0600
 
