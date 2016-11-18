@@ -189,7 +189,7 @@ EOF
         echo "deb ${BINTRAY_REPO}/${OMVVERSION}-sync ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         echo "deb http://debian.yeasoft.net/btsync14 ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         echo "# syncthing repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb http://apt.syncthing.net/ syncthing release" >> ${OMVEXTRASREPOFILE}
+        echo "deb https://apt.syncthing.net/ syncthing release" >> ${OMVEXTRASREPOFILE}
 
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
