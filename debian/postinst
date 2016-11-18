@@ -40,6 +40,11 @@ case "$1" in
             omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafd9e1c-0e48-11e6-ab72-000c290ea003']"
         fi
 
+        if dpkg --compare-versions "$2" lt-nl "3.4.7"; then
+            omv_config_update "/config/system/omvextras/repos/repo[uuid='eafd7090-0e48-11e6-9ce2-000c290ea003']/repo2" \
+                "https://apt.syncthing.net/ syncthing release"
+        fi
+
         if [ ! -f /usr/share/openmediavault/mkconf/omvextrasorg ]; then
             ln -s /usr/share/openmediavault/mkconf/omvextras /usr/share/openmediavault/mkconf/omvextrasorg
         fi

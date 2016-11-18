@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (3.4.7) stable; urgency=low
+
+  * Update syncthing repo
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 18 Nov 2016 12:24:36 -0600
+
 openmediavault-omvextrasorg (3.4.6) stable; urgency=low
 
   * Remove zfs repos

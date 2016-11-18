@@ -68,7 +68,7 @@
     <enable>0</enable>
     <name>Sync</name>
     <repo1>https://dl.bintray.com/openmediavault-plugin-developers/erasmus-sync jessie main</repo1>
-    <repo2>http://apt.syncthing.net/ syncthing release</repo2>
+    <repo2>https://apt.syncthing.net/ syncthing release</repo2>
     <repo3></repo3>
     <key1></key1>
     <key2></key2>
