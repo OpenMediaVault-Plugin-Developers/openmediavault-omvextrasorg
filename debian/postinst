@@ -29,10 +29,15 @@ case "$1" in
             omv_config_add_node_data "/config/system" "omvextras" "${default_repos}"
         fi
 
-        if dpkg --compare-versions "$2" lt-nl "3.4"; then
+        if [ -f /etc/apt/sources.list.d/backports.list ]; then
             rm -f /etc/apt/sources.list.d/backports.list
-            update_repo=$(cat /etc/omvextras/update1.xml | sed -e 's/^[ \t]*//' | tr '\n' ' ')
-            omv_config_add_node_data "/config/system/omvextras/repos" "repo" "${update_repo}"
+        fi
+
+        if dpkg --compare-versions "$2" lt-nl "3.4"; then
+            if ! omv_config_exists "/config/system/omvextras/repos/repo[uuid='4ba89ec0-955c-11e6-aaec-735e663312aa']"; then
+                update_repo=$(cat /etc/omvextras/update1.xml | sed -e 's/^[ \t]*//' | tr '\n' ' ')
+                omv_config_add_node_data "/config/system/omvextras/repos" "repo" "${update_repo}"
+            fi
         fi
 
         if dpkg --compare-versions "$2" lt-nl "3.4.6"; then

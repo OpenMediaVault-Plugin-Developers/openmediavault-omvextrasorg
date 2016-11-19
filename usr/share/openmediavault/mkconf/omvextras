@@ -98,32 +98,33 @@ EOF
                 if [ "${repo}" != "" ]; then
                     key=$(omv_config_get "${XPATH}[position()=${index}]/key${i}")
 
-                    if [[ ${repo} == deb* ]]; then
-                        echo "${repo}" >> ${OMVEXTRASREPOFILE}
-                    else
-                        echo "deb ${repo}" >> ${OMVEXTRASREPOFILE}
-                    fi
-
-                    if [ "${key}" != "" ]; then
-                        key=${key,,}
-                        if [ ${key:0:4} = "http" ]; then
-                            wget -qO - "${key}" -4 2>/dev/null | apt-key add -
+                    if ! grep -lq "${repo}" ${OMVEXTRASREPOFILE}; then
+                        if [[ ${repo} == deb* ]]; then
+                            echo "${repo}" >> ${OMVEXTRASREPOFILE}
                         else
-                            apt-key adv --keyserver ${KEYSERVER} --recv-keys "${key}"
+                            echo "deb ${repo}" >> ${OMVEXTRASREPOFILE}
+                        fi
+
+                        if [ "${key}" != "" ]; then
+                            key=${key,,}
+                            if [ ${key:0:4} = "http" ]; then
+                                wget -qO - "${key}" -4 2>/dev/null | apt-key add -
+                            else
+                                apt-key adv --keyserver ${KEYSERVER} --recv-keys "${key}"
+                            fi
+                        fi
+
+                        package=$(omv_config_get "${XPATH}[position()=${index}]/package${i}")
+                        pin=$(omv_config_get "${XPATH}[position()=${index}]/pin${i}")
+                        priority=$(omv_config_get "${XPATH}[position()=${index}]/priority${i}")
+
+                        if [ "${package}" != "" ]; then
+                            echo "Package: ${package}" >> ${OMVEXTRASAPTPREFS}
+                            echo "Pin: ${pin}" >> ${OMVEXTRASAPTPREFS}
+                            echo "Pin-Priority: ${priority}" >> ${OMVEXTRASAPTPREFS}
+                            echo "" >> ${OMVEXTRASAPTPREFS}
                         fi
                     fi
-
-                    package=$(omv_config_get "${XPATH}[position()=${index}]/package${i}")
-                    pin=$(omv_config_get "${XPATH}[position()=${index}]/pin${i}")
-                    priority=$(omv_config_get "${XPATH}[position()=${index}]/priority${i}")
-
-                    if [ "${package}" != "" ]; then
-                        echo "Package: ${package}" >> ${OMVEXTRASAPTPREFS}
-                        echo "Pin: ${pin}" >> ${OMVEXTRASAPTPREFS}
-                        echo "Pin-Priority: ${priority}" >> ${OMVEXTRASAPTPREFS}
-                        echo "" >> ${OMVEXTRASAPTPREFS}
-                    fi
-
                 fi
             done
         fi
