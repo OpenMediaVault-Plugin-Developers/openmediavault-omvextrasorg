@@ -45,6 +45,10 @@ case "$1" in
                 "https://apt.syncthing.net/ syncthing release"
         fi
 
+        if omv_config_exists "/config/system/omvextrasorg"; then
+            omv_config_delete "/config/system/omvextrasorg"
+        fi
+
         if [ ! -f /usr/share/openmediavault/mkconf/omvextrasorg ]; then
             ln -s /usr/share/openmediavault/mkconf/omvextras /usr/share/openmediavault/mkconf/omvextrasorg
         fi
