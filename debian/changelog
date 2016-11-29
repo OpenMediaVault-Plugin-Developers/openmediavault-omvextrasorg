@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (3.4.9) stable; urgency=low
+
+  * Add utility to enable/disable repos from command line
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 29 Nov 2016 07:42:01 -0600
+
 openmediavault-omvextrasorg (3.4.8) stable; urgency=low
 
   * Remove old config
