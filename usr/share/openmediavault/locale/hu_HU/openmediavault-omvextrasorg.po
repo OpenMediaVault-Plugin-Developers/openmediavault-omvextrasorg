@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Grawens <szabolcs.szanyi@gmail.com>, 2014-2015
+# Grawens <szabolcs.szanyi@gmail.com>, 2014-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-21 06:58-0500\n"
-"PO-Revision-Date: 2016-10-21 11:58+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2016-12-13 07:25+0000\n"
+"Last-Translator: Grawens <szabolcs.szanyi@gmail.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Add repo"
-msgstr ""
+msgstr "Tár hozzáadása"
 
 msgid "Apt Clean"
 msgstr "Apt törlés"
@@ -31,13 +31,13 @@ msgid "Cleaning Apt Files and Lists..."
 msgstr "Apt fájlok és listák ürítése..."
 
 msgid "Clonezilla"
-msgstr ""
+msgstr "Clonezilla"
 
 msgid "Comment"
 msgstr "Megjegyzés"
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
-msgstr ""
+msgstr "Alapértelmezett felhasználónév: <b>felhasználó</b> és jelszó: <b>élő</b>"
 
 msgid "Done..."
 msgstr "Kész..."
@@ -58,16 +58,16 @@ msgid ""
 msgstr ""
 
 msgid "Edit repo"
-msgstr ""
+msgstr "Tár módosítás"
 
 msgid "Enable"
 msgstr "Bekapcsol"
 
 msgid "Enabled"
-msgstr ""
+msgstr "Bekapcsolva"
 
 msgid "GParted Live"
-msgstr ""
+msgstr "GParted Live"
 
 msgid "IP Address will be set by DHCP."
 msgstr ""
@@ -92,34 +92,34 @@ msgid ""
 msgstr "Ha a rendszer nem indul el a 'Backports' kernellel, akkor a boot menüben lehetőséged van az eredeti kernellel indítnai a rendszert."
 
 msgid "Install Backports kernel"
-msgstr ""
+msgstr "Backports kernel telepítése"
 
 msgid "Install Backports kernel ..."
-msgstr ""
+msgstr "Backports kernel telepítése ..."
 
 msgid "Install Clonezilla"
-msgstr ""
+msgstr "Clonezilla telepítése"
 
 msgid "Install Clonezilla ISO ..."
-msgstr ""
+msgstr "Clonezilla ISO telepítése ..."
 
 msgid "Install GParted Live"
-msgstr ""
+msgstr "GParted Live telepítése"
 
 msgid "Install GParted Live ISO ..."
-msgstr ""
+msgstr "GParted Live ISO telepítése ..."
 
 msgid "Install Proxmox kernel"
-msgstr ""
+msgstr "Proxmox kernel telepítése"
 
 msgid "Install Proxmox kernel ..."
-msgstr ""
+msgstr "Proxmox kernel telepítése ..."
 
 msgid "Install SystemRescueCD"
-msgstr ""
+msgstr "SystemRescueCD telepítése"
 
 msgid "Install SystemRescueCD ISO ..."
-msgstr ""
+msgstr "SystemRescueCD ISO telepítése ..."
 
 msgid "Installed Kernels"
 msgstr "Telepített kernelek"
@@ -149,19 +149,19 @@ msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr ""
 
 msgid "OMV-Extras"
-msgstr ""
+msgstr "OMV-Extrák"
 
 msgid "Package"
-msgstr ""
+msgstr "Csomag"
 
 msgid "Permanent"
-msgstr ""
+msgstr "Állandó"
 
 msgid "Pin"
-msgstr ""
+msgstr "Pin"
 
 msgid "Priority"
-msgstr ""
+msgstr "Prioritás"
 
 msgid "Reboot to Clonezilla ..."
 msgstr ""
@@ -185,13 +185,13 @@ msgid "Repo"
 msgstr "Tár"
 
 msgid "Repo #1"
-msgstr ""
+msgstr "Tár #1"
 
 msgid "Repo #2"
-msgstr ""
+msgstr "Tár #2"
 
 msgid "Repo #3"
-msgstr ""
+msgstr "Tár #3"
 
 msgid "Repos"
 msgstr "Tárak"
@@ -225,7 +225,7 @@ msgid ""
 msgstr "A rosszul alapértelmezettként beállított kernel miatt a rendszer elérhetetlenné válhat. A boot menüben továbbra is kiválasztható lesz egy másik kernel. "
 
 msgid "SystemRescueCD"
-msgstr ""
+msgstr "SystemRescueCD"
 
 msgid "Update"
 msgstr "Frissítés"
