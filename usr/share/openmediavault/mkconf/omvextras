@@ -24,7 +24,7 @@ set -e
 . /etc/default/openmediavault
 . /usr/share/openmediavault/scripts/helper-functions
 
-BACKPORTS_REPO="/etc/apt/sources.list.d/backports.list"
+OMVEXTRASREPOFILE="/etc/apt/sources.list.d/omv-extras-org.list"
 KEYSERVER="hkp://keyserver.ubuntu.com:80"
 XPATH="/config/system/omvextras/repos/repo"
 
@@ -55,7 +55,6 @@ update()
     export LANG=C
     export LC_ALL=C
 
-    OMVEXTRASREPOFILE="/etc/apt/sources.list.d/omv-extras-org.list"
     OMVEXTRASAPTPREFS="/etc/apt/preferences.d/99omv-extras-org"
 
     /bin/rm -f ${OMVEXTRASREPOFILE}
@@ -154,12 +153,15 @@ backports()
     if [ -z ${package} ]; then
         echo "Unsupported kernel and/or processor"
     else
-        echo "Install backports 4.7 kernel and headers"
-        apt-get -t jessie-backports --yes --force-yes --fix-missing install \
-            linux-image-4.7.0-0.bpo.1-${package} \
-            linux-headers-4.7.0-0.bpo.1-${package} \
-            firmware-linux \
-            firmware-linux-free
+        kversion="4.7.0-0.bpo.1"
+        packages="linux-image-${kversion}-${package} linux-headers-${kversion}-${package} firmware-linux"
+
+        echo "Install backports ${kversion} kernel and headers"
+
+        if grep -qE "jessie-backports.*non-free" ${OMVEXTRASREPOFILE}; then
+            packages="${packages} firmware-linux-free"
+        fi
+        apt-get -t jessie-backports --yes --force-yes --fix-missing install ${packages}
 
         disablesubmenu
         echo "..."
