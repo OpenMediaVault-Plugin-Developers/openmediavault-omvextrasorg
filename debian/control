@@ -12,6 +12,7 @@ Architecture: all
 Depends: apt-transport-https,
          openmediavault (>= 3.0.47),
          ${misc:Depends}
+Breaks: openmediavault (< 3.0.13)
 Description: OMV-Extras.org Package Repositories for OpenMediaVault
  Allows enabling of multiple repositories hosted by omv-extras.org.
  .
