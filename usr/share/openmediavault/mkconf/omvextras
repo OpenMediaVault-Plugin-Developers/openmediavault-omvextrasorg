@@ -153,13 +153,13 @@ backports()
     if [ -z ${package} ]; then
         echo "Unsupported kernel and/or processor"
     else
-        kversion="4.7.0-0.bpo.1"
-        packages="linux-image-${kversion}-${package} linux-headers-${kversion}-${package} firmware-linux"
+        kversion="4.8.0-0.bpo.2"
+        packages="linux-image-${kversion}-${package} linux-headers-${kversion}-${package} firmware-linux-free"
 
         echo "Install backports ${kversion} kernel and headers"
 
         if grep -qE "jessie-backports.*non-free" ${OMVEXTRASREPOFILE}; then
-            packages="${packages} firmware-linux-free"
+            packages="${packages} firmware-linux"
         fi
         apt-get -t jessie-backports --yes --force-yes --fix-missing install ${packages}
 
