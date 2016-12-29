@@ -97,7 +97,12 @@ EOF
                 if [ "${repo}" != "" ]; then
                     key=$(omv_config_get "${XPATH}[position()=${index}]/key${i}")
 
-                    if ! grep -lq "${repo}" ${OMVEXTRASREPOFILE}; then
+                    if [[ ${repo} == deb* ]]; then
+                        repopart=$(echo ${repo} | awk '{print $2 " " $3}')
+                    else
+                        repopart=$(echo ${repo} | awk '{print $1 " " $2}')
+                    fi
+                    if ! grep -lq "${repopart}" /etc/apt/sources.list.d/*.list; then
                         if [[ ${repo} == deb* ]]; then
                             echo "${repo}" >> ${OMVEXTRASREPOFILE}
                         else
@@ -123,6 +128,8 @@ EOF
                             echo "Pin-Priority: ${priority}" >> ${OMVEXTRASAPTPREFS}
                             echo "" >> ${OMVEXTRASAPTPREFS}
                         fi
+                    else
+                        echo "# repo already exists in another .list file" >> ${OMVEXTRASREPOFILE}
                     fi
                 fi
             done

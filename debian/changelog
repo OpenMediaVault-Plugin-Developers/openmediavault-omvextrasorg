@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (3.4.13) stable; urgency=low
+
+  * Prevent adding duplicate repos
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 28 Dec 2016 18:47:44 -0600
+
 openmediavault-omvextrasorg (3.4.12) stable; urgency=low
 
   * Update backports kernel install to 4.8
