@@ -40,5 +40,10 @@ class OMVModuleOmvExtras extends \OMV\Engine\Module\ServiceAbstract
             "org.openmediavault.conf.system.omvextras",
             [ $this, "setDirty" ]
         );
+        $dispatcher->addListener(
+            OMV_NOTIFY_MODIFY,
+            "org.openmediavault.conf.system.apt.distribution",
+            [ $this, "setDirty" ]
+        );
     }
 }
