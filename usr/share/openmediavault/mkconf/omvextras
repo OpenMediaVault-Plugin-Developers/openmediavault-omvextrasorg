@@ -72,7 +72,7 @@ Package: virtualbox virtualbox-dkms virtualbox-qt minidlna borgbackup python3-ms
   python-funcsigs python-idna python-ipaddress python-mock python-ndg-httpsclient
   python-openssl python-parsedatetime python-pbr python-pkg-resources python-psutil
   python-pyasn1 python-requests python-rfc3339 python-setuptools python-six python-tz
-  python-urllib3 python-zope.component python-zope.event python-zope.interface
+  python-urllib3 python-zope.component python-zope.event python-zope.interface dkms
 Pin: release a=jessie-backports
 Pin-Priority: 500
 

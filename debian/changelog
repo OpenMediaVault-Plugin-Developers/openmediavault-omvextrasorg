@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (3.4.15) stable; urgency=low
+
+  * Pin dkms
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 21 Jan 2017 10:51:26 -0600
+
 openmediavault-omvextrasorg (3.4.14) stable; urgency=low
 
   * Add listener for apt
