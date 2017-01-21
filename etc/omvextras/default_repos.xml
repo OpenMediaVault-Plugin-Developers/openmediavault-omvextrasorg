@@ -159,20 +159,4 @@
     <package3></package3><pin3></pin3><priority3></priority3>
     <permanent>1</permanent>
   </repo>
-  <repo>
-    <uuid>4ba89ec0-955c-11e6-aaec-735e663312aa</uuid>
-    <enable>1</enable>
-    <name>Debian Backports</name>
-    <repo1>deb http://httpredir.debian.org/debian jessie-backports main contrib</repo1>
-    <repo2></repo2>
-    <repo3></repo3>
-    <key1></key1>
-    <key2></key2>
-    <key3></key3>
-    <comment>Debian Jessie-backports repo</comment>
-    <package1></package1><pin1></pin1><priority1></priority1>
-    <package2></package2><pin2></pin2><priority2></priority2>
-    <package3></package3><pin3></pin3><priority3></priority3>
-    <permanent>0</permanent>
-  </repo>
 </repos>

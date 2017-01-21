@@ -1,6 +1,8 @@
 openmediavault-omvextrasorg (3.4.15) stable; urgency=low
 
   * Pin dkms
+  * Stop adding backports repo since it is included in omv core
+  * Change syncthing back from https to http
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 21 Jan 2017 10:51:26 -0600
 

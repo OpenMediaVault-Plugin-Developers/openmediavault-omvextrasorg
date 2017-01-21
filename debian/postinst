@@ -33,21 +33,14 @@ case "$1" in
             rm -f /etc/apt/sources.list.d/backports.list
         fi
 
-        if dpkg --compare-versions "$2" lt-nl "3.4"; then
-            if ! omv_config_exists "/config/system/omvextras/repos/repo[uuid='4ba89ec0-955c-11e6-aaec-735e663312aa']"; then
-                update_repo=$(cat /etc/omvextras/update1.xml | sed -e 's/^[ \t]*//' | tr '\n' ' ')
-                omv_config_add_node_data "/config/system/omvextras/repos" "repo" "${update_repo}"
-            fi
-        fi
-
         if dpkg --compare-versions "$2" lt-nl "3.4.6"; then
             omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafd86e8-0e48-11e6-97de-000c290ea003']"
             omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafd9e1c-0e48-11e6-ab72-000c290ea003']"
         fi
 
-        if dpkg --compare-versions "$2" lt-nl "3.4.7"; then
+        if dpkg --compare-versions "$2" lt-nl "3.4.15"; then
             omv_config_update "/config/system/omvextras/repos/repo[uuid='eafd7090-0e48-11e6-9ce2-000c290ea003']/repo2" \
-                "https://apt.syncthing.net/ syncthing release"
+                "http://apt.syncthing.net/ syncthing release"
         fi
 
         if omv_config_exists "/config/system/omvextrasorg"; then
