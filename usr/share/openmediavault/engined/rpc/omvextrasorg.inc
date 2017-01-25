@@ -35,7 +35,7 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $this->registerMethod('getRepo');
         $this->registerMethod('setRepo');
         $this->registerMethod('deleteRepo');
-		$this->registerMethod('doUpdate');
+        $this->registerMethod('doUpdate');
 
         $this->registerMethod('getArch');
 
@@ -108,7 +108,7 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
 
         // Delete the configuration object.
         $db = \OMV\Config\Database::getInstance();
-        $object = $db->get("conf.system.omvextras", $params['uuid']);
+        $object = $db->get('conf.system.omvextras', $params['uuid']);
         $db->delete($object);
 
         // Return the deleted configuration object.
@@ -124,9 +124,9 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         // Check if the module is marked as dirty. Abort this RPC
         // immediatelly in this case, otherwise the added/removed
         // repositories will not be included/excluded.
-        if ($this->isModuleDirty("omvextras"))
+        if ($this->isModuleDirty('omvextras'))
             throw new \OMV\Config\ConfigDirtyException();
-        return \OMV\Rpc\Rpc::call("Apt", "update", NULL, $context);
+        return \OMV\Rpc\Rpc::call('Apt', 'update', NULL, $context);
     }
 
     public function getArch($params, $context)
@@ -202,19 +202,8 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
 
         // Set boot kernel
-        $grub = '/etc/default/grub';
-        $line = 'GRUB_DEFAULT=';
-        $contents = file($grub);
-        $newdata = [];
-        $new = sprintf('%s%s\n', $line, $params['key']);
-
-        foreach ($contents as $filerow) {
-            if (strstr($filerow, $line) !== false) {
-                $filerow = $new;
-            }
-            $newdata[] = $filerow;
-        }
-        file_put_contents($grub, implode($newdata));
+        $cmd = sprintf('export LANG=C; perl -p -i -e "s/GRUB_DEFAULT=.*/GRUB_DEFAULT=%s/g" /etc/default/grub', $params['key']);
+        exec($cmd, $output);
 
         $cmd = sprintf('export LANG=C; grub-set-default %s', $params['key']);
         exec($cmd, $output);
@@ -234,7 +223,7 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         // Create the background process.
         return $this->execBgProc(function($bgStatusFilename, $bgOutputFilename)
             use ($params) {
-                $cmd = new \OMV\System\Process("omv-mkconf", "omvextras", $params['command']);
+                $cmd = new \OMV\System\Process('omv-mkconf', 'omvextras', $params['command']);
                 //$cmd->setRedirect2to1(true);
                 $cmdLine = $cmd->getCommandLine();
                 if (0 !== $this->exec($cmdLine, $output, $bgOutputFilename))
