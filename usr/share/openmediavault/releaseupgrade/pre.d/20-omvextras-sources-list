@@ -127,35 +127,6 @@ Pin-Priority: 995
 EOF
 fi
 
-# omv-extras zfs
-if [ "$(omv_config_get "${XPATH}zfs")" = "1" ]; then
-    echo "# ZFS repo" >> ${OMVEXTRASREPOFILE}
-    echo "deb ${BINTRAY_REPO}/${OMVVERSION}-zfs ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-    echo "deb http://archive.zfsonlinux.org/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-    cat <<EOF >> ${OMVEXTRASAPTPREFS}
-Package: *
-Pin: release n=${RELEASE}, origin archive.zfsonlinux.org
-Pin-Priority: 400
-
-Package: *
-Pin: release n=${OMVVERSION}-zfs, origin ${BINTRAY_REPO_LOCATION}
-Pin-Priority: 996
-
-EOF
-fi
-
-# omv-extras zfs testing
-if [ "$(omv_config_get "${XPATH}zfstesting")" = "1" ]; then
-    echo "# ZFS testing repo" >> ${OMVEXTRASREPOFILE}
-    echo "deb ${BINTRAY_REPO}/${OMVVERSION}-zfstesting ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-    cat <<EOF >> ${OMVEXTRASAPTPREFS}
-Package: *
-Pin: release n=${OMVVERSION}-zfs-testing, origin ${BINTRAY_REPO_LOCATION}
-Pin-Priority: 997
-
-EOF
-fi
-
 # omv-extras mono
 if [ "$(omv_config_get "${XPATH}mono")" = "1" ]; then
     echo "# mono-project repo" >> ${OMVEXTRASREPOFILE}

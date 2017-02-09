@@ -227,61 +227,6 @@ Pin-Priority: 995
 EOF
     fi
 
-    # omv-extras zfs
-    if [ "$(omv_config_get "${XPATH}zfs")" = "1" ]; then
-        # add large zfsonlinux key and linux-headers necessary for zfs module compilation
-        apt-key adv --keyserver ${KEYSERVER} --recv-keys "4D5843EA"
-        apt-key adv --keyserver ${KEYSERVER} --recv-keys "8E234FB17DFFA34D"
-        case ${conf} in
-            configure) ;;
-            *)  apt-get --yes --force-yes --fix-missing install linux-headers-$(uname -r) || : ;;
-        esac
-        echo "# ZFS repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${BINTRAY_REPO}/${OMVVERSION}-zfs ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-        #echo "deb ${REPO_URL} ${OMVVERSION}-zfs main" >> ${OMVEXTRASREPOFILE}
-        echo "deb http://archive.zfsonlinux.org/debian ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-        cat <<EOF >> ${OMVEXTRASAPTPREFS}
-Package: *
-Pin: release n=${RELEASE}, origin archive.zfsonlinux.org
-Pin-Priority: 400
-
-Package: *
-Pin: release n=${OMVVERSION}-zfs, origin ${REPO_LOCATION}
-Pin-Priority: 996
-
-EOF
-    fi
-
-    # omv-extras zfs testing
-    if [ "$(omv_config_get "${XPATH}zfstesting")" = "1" ]; then
-        echo "# ZFS testing repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${BINTRAY_REPO}/${OMVVERSION}-zfstesting ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-        #echo "deb ${REPO_URL} ${OMVVERSION}-zfs-testing main" >> ${OMVEXTRASREPOFILE}
-        cat <<EOF >> ${OMVEXTRASAPTPREFS}
-Package: *
-Pin: release n=${OMVVERSION}-zfs-testing, origin ${REPO_LOCATION}
-Pin-Priority: 997
-
-EOF
-    fi
-
-    # omv-extras gluster
-    if [ "$(omv_config_get "${XPATH}gluster")" = "1" ]; then
-        echo "# Gluster repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb ${REPO_URL} ${OMVVERSION}-gluster main" >> ${OMVEXTRASREPOFILE}
-        echo "deb http://download.gluster.org/pub/gluster/glusterfs/3.5/3.5.2/Debian/${RELEASE}/apt ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-        cat <<EOF >> ${OMVEXTRASAPTPREFS}
-Package: *
-Pin: release n=${OMVVERSION}-gluster, origin ${REPO_LOCATION}
-Pin-Priority: 996
-
-Package: *
-Pin: release o=download.gluster.org
-Pin-Priority: 1001
-
-EOF
-    fi
-
     # omv-extras mono
     if [ "$(omv_config_get "${XPATH}mono")" = "1" ]; then
         # add NzbDrone repository key

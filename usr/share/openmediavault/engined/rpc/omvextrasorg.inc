@@ -198,18 +198,6 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "description" => gettext("BTSync repository")
         );
 
-        // must be amd64
-        if ( $arch > 3 )
-        {
-            $result[] = array(
-                "id"          => "gluster",
-                "type"        => gettext("Filesystems"),
-                "enable"      => $object['gluster'],
-                "repo"        => gettext("GlusterFS"),
-                "description" => gettext("Do not enable this repository unless you are using the GlusterFS filesystem (uncommon)")
-            );
-        }
-
         $result[] = array(
             "id"          => "greyhole",
             "type"        => gettext("Filesystems"),
@@ -346,26 +334,6 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             );
         }
 
-        // amd64 only
-        if ( $arch > 3 )
-        {
-            $result[] = array(
-                "id"          => "zfs",
-                "type"        => gettext("Filesystems"),
-                "enable"      => $object['zfs'],
-                "repo"        => gettext("ZFS"),
-                "description" => gettext("Do not enable this repository unless you are using the ZFS filesystem (uncommon)")
-            );
-
-            $result[] = array(
-                "id"          => "zfstesting",
-                "type"        => gettext("Filesystems"),
-                "enable"      => $object['zfstesting'],
-                "repo"        => gettext("ZFS Testing"),
-                "description" => gettext("Do not enable this testing repository unless you are using the ZFS filesystem (uncommon)")
-            );
-        }
-
         if ( $object['developer'] == "0827" )
         {
             $result[] = array(
@@ -416,17 +384,6 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
         if ( boolval($repos['dockertesting']) === true )
             $repos['docker'] = true;
 
-        if ( boolval($repos['zfstesting']) === true )
-            $repos['zfs'] = true;
-
-        $uname = php_uname();
-        if ( strpos($uname, "amd64") === false )
-        {
-            $repos['zfs'] = false;
-            $repos['zfstesting'] = false;
-            $repos['gluster'] = false;
-        }
-
         // Get the existing configuration object.
         $oldObject = $xmlConfig->get( $this->getXPath() );
         if (is_null($oldObject))
@@ -449,9 +406,6 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "millertesting" => array_boolval($repos, 'millertesting'),
             "btsync"        => array_boolval($repos, 'btsync'),
             "vpn"           => array_boolval($repos, 'vpn'),
-            "zfs"           => array_boolval($repos, 'zfs'),
-            "zfstesting"    => array_boolval($repos, 'zfstesting'),
-            "gluster"       => array_boolval($repos, 'gluster'),
             "mono"          => array_boolval($repos, 'mono'),
             "monotesting"   => array_boolval($repos, 'monotesting'),
             "docker"        => array_boolval($repos, 'docker'),
@@ -1081,9 +1035,6 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "millertesting" => array_boolval($oldObject, 'millertesting'),
             "btsync"        => array_boolval($oldObject, 'btsync'),
             "vpn"           => array_boolval($oldObject, 'vpn'),
-            "zfs"           => array_boolval($oldObject, 'zfs'),
-            "zfstesting"    => array_boolval($oldObject, 'zfstesting'),
-            "gluster"       => array_boolval($oldObject, 'gluster'),
             "mono"          => array_boolval($oldObject, 'mono'),
             "monotesting"   => array_boolval($oldObject, 'monotesting'),
             "docker"        => array_boolval($oldObject, 'docker'),

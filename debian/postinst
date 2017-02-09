@@ -60,14 +60,6 @@ case "$1" in
             omv_config_add_element "${SERVICE_XPATH}" "vpn" "0"
         fi
 
-        if ! omv_config_exists "${SERVICE_XPATH}/zfs"; then
-            omv_config_add_element "${SERVICE_XPATH}" "zfs" "0"
-        fi
-
-        if ! omv_config_exists "${SERVICE_XPATH}/gluster"; then
-            omv_config_add_element "${SERVICE_XPATH}" "gluster" "0"
-        fi
-
         if ! omv_config_exists "${SERVICE_XPATH}/mono"; then
             omv_config_add_element "${SERVICE_XPATH}" "mono" "0"
         fi
@@ -141,14 +133,11 @@ case "$1" in
             apt-key add ${KEYRING_LOCATION}greyhole-debsig.asc
             apt-key add ${KEYRING_LOCATION}e-tobi-keyring.gpg
             apt-key add ${KEYRING_LOCATION}btsync.gpg
-            apt-key add ${KEYRING_LOCATION}zfsonlinux.gpg
-            apt-key add ${KEYRING_LOCATION}gluster.gpg
             apt-key add ${KEYRING_LOCATION}xamarin.gpg
             apt-key add ${KEYRING_LOCATION}deluge.key
             apt-key add ${KEYRING_LOCATION}hwraid.le-vert.net.gpg.key
             apt-key add ${KEYRING_LOCATION}docker.gpg
             apt-key add ${KEYRING_LOCATION}syncthing.key
-            apt-key add ${KEYRING_LOCATION}spideroak-apt-2013.asc
         fi
 
         dpkg-trigger update-fixperms

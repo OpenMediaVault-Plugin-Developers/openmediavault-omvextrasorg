@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (2.13.7) stable; urgency=low
+
+  * Remove zfs repo since it does not exist and wheezy is not supported
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 09 Feb 2017 06:42:26 -0600
+
 openmediavault-omvextrasorg (2.13.6) stable; urgency=low
 
   * Fix dependency
