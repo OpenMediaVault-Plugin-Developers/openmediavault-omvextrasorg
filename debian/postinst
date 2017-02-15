@@ -67,6 +67,10 @@ case "$1" in
             apt-key add ${KEYRING_LOCATION}syncthing.key
         fi
 
+        if [ -f /usr/sbin/update-grub ]; then
+            omv-mkconf omvextras disablesubmenu
+        fi
+
         dpkg-trigger update-fixperms
         dpkg-trigger update-locale
     ;;
