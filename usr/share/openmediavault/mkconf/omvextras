@@ -34,7 +34,7 @@ CLONEZILLA_VERSION="2.3.2-22"
 CLONEZILLA_ISO="clonezilla-live-${CLONEZILLA_VERSION}-i686-pae.iso"
 
 GRUB_SYSRESCCD="/etc/grub.d/42_sysresccd"
-SYSRESCCD_VERSION="4.9.0"
+SYSRESCCD_VERSION="4.9.2"
 SYSRESCCD_ISO="systemrescuecd-x86-${SYSRESCCD_VERSION}.iso"
 
 GRUB_GPARTEDLIVE="/etc/grub.d/42_gpartedlive"
@@ -139,41 +139,6 @@ EOF
     done
 
     chmod 644 ${OMVEXTRASAPTPREFS}
-}
-
-backports()
-{
-    export LANG=C
-    export DEBIAN_FRONTEND=noninteractive
-
-    package=""
-
-    case "$(/usr/bin/arch)" in
-        *amd64*|*x86_64*)
-            package="amd64"
-        ;;
-        *486*|*586*|*686*)
-            package="686"
-        ;;
-    esac
-
-    if [ -z ${package} ]; then
-        echo "Unsupported kernel and/or processor"
-    else
-        kversion="4.8.0-0.bpo.2"
-        packages="linux-image-${kversion}-${package} linux-headers-${kversion}-${package} firmware-linux-free"
-
-        echo "Install backports ${kversion} kernel and headers"
-
-        if grep -qE "jessie-backports.*non-free" ${OMVEXTRASREPOFILE}; then
-            packages="${packages} firmware-linux"
-        fi
-        apt-get -t jessie-backports --yes --force-yes --fix-missing install ${packages}
-
-        disablesubmenu
-        echo "..."
-        echo "Please reboot to use new kernel"
-    fi
 }
 
 pvekernel()
@@ -388,10 +353,6 @@ case $1 in
     aptclean)
         update
         /usr/sbin/omv-aptclean
-    ;;
-
-    installbackports)
-        backports
     ;;
 
     installpvekernel)

@@ -78,13 +78,6 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
             },{
                 xtype   : "button",
                 name    : "backports",
-                text    : _("Install Backports kernel"),
-                scope   : this,
-                handler : Ext.Function.bind(me.onCommandButton, me, [ "installbackports" ]),
-                margin  : "5 0 8 10"
-            },{
-                xtype   : "button",
-                name    : "backports",
                 text    : _("Install Proxmox kernel"),
                 scope   : this,
                 handler : Ext.Function.bind(me.onCommandButton, me, [ "installpvekernel" ]),
@@ -93,9 +86,9 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                 border : false,
                 html   : "<ul>" +
                            "<li>" + _("Setting the wrong default boot kernel may cause the system to be inaccessible.  The boot menu will still be available to select a different kernel.") + "</li>" +
-                           "<li>" + _("Installing the backports kernel with not uninstall the standard kernel.") + "</li>" +
-                           "<li>" + _("Installing the backports kernel and Proxmox kernel on the same system may cause problems.") + "</li>" +
-                           "<li>" + _("If the system does not boot using the backports kernel, the boot menu will still have the option to boot the standard kernel.") + "</li>" +
+                           "<li>" + _("Installing the Proxmox kernel will not uninstall other kernels.") + "</li>" +
+                           "<li>" + _("Installing the Proxmox kernel on some systems may cause problems.") + "</li>" +
+                           "<li>" + _("If the system does not boot using the Proxmox kernel, the boot menu will still have the option to boot other kernels.") + "</li>" +
                          "</ul>"
             }]
         },{
@@ -204,9 +197,6 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
     onCommandButton : function(cmd) {
         var me = this;
         switch(cmd) {
-            case "installbackports":
-                title = _("Install Backports kernel ...");
-                break;
             case "installpvekernel":
                 title = _("Install Proxmox kernel ...");
                 break;

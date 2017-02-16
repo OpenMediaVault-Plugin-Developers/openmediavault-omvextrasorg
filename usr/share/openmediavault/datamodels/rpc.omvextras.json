@@ -97,7 +97,6 @@
 				"type": "string",
 				"enum": [
 					"aptclean",
-					"installbackports",
 					"installpvekernel",
 					"installcz",
 					"installgp",
