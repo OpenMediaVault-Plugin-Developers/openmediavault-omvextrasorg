@@ -43,6 +43,11 @@ case "$1" in
                 "http://apt.syncthing.net/ syncthing release"
         fi
 
+        if dpkg --compare-versions "$2" lt-nl "3.4.17"; then
+            omv_config_update "/config/system/omvextras/repos/repo[uuid='eafd450c-0e48-11e6-8349-000c290ea003']/repo2" \
+                "https://downloads.plex.tv/repo/deb/ public main"
+        fi
+
         if omv_config_exists "/config/system/omvextrasorg"; then
             omv_config_delete "/config/system/omvextrasorg"
         fi

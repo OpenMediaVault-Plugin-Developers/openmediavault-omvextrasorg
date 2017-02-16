@@ -102,7 +102,7 @@ EOF
                     else
                         repopart=$(echo ${repo} | awk '{print $1 " " $2}')
                     fi
-                    if ! grep -lq "${repopart}" /etc/apt/sources.list.d/*.list; then
+                    if ! grep -lq "^[^#].*${repopart}" /etc/apt/sources.list.d/*.list; then
                         if [[ ${repo} == deb* ]]; then
                             echo "${repo}" >> ${OMVEXTRASREPOFILE}
                         else
