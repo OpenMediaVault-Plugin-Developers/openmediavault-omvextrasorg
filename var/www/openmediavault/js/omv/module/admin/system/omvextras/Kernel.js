@@ -87,8 +87,6 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                 html   : "<ul>" +
                            "<li>" + _("Setting the wrong default boot kernel may cause the system to be inaccessible.  The boot menu will still be available to select a different kernel.") + "</li>" +
                            "<li>" + _("Installing the Proxmox kernel will not uninstall other kernels.") + "</li>" +
-                           "<li>" + _("Installing the Proxmox kernel on some systems may cause problems.") + "</li>" +
-                           "<li>" + _("If the system does not boot using the Proxmox kernel, the boot menu will still have the option to boot other kernels.") + "</li>" +
                          "</ul>"
             }]
         },{

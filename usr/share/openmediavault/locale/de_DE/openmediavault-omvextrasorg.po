@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-16 17:16-0600\n"
-"PO-Revision-Date: 2017-02-16 23:16+0000\n"
+"POT-Creation-Date: 2017-02-16 17:25-0600\n"
+"PO-Revision-Date: 2017-02-16 23:25+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -91,11 +91,6 @@ msgstr "ISO belegt ungefähr 219 MB im Verzeichnis /boot auf dem BS-Laufwerk."
 msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
 msgstr "ISO belegt ungefähr 381 MB im Verzeichnis /boot auf dem BS-Laufwerk."
 
-msgid ""
-"If the system does not boot using the Proxmox kernel, the boot menu will "
-"still have the option to boot other kernels."
-msgstr ""
-
 msgid "Install Clonezilla"
 msgstr "Clonezilla installieren"
 
@@ -122,9 +117,6 @@ msgstr "SystemRescueCD ISO installieren ..."
 
 msgid "Installed Kernels"
 msgstr "Installierte Kernel"
-
-msgid "Installing the Proxmox kernel on some systems may cause problems."
-msgstr ""
 
 msgid "Installing the Proxmox kernel will not uninstall other kernels."
 msgstr ""

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-16 17:16-0600\n"
-"PO-Revision-Date: 2017-02-16 23:16+0000\n"
+"POT-Creation-Date: 2017-02-16 17:25-0600\n"
+"PO-Revision-Date: 2017-02-16 23:25+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -86,11 +86,6 @@ msgstr "ISO 镜像大约占用系统盘 /boot 目录 219Mb 空间。"
 msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
 msgstr "ISO 镜像大约占用系统盘 /boot 目录 381Mb 空间。"
 
-msgid ""
-"If the system does not boot using the Proxmox kernel, the boot menu will "
-"still have the option to boot other kernels."
-msgstr ""
-
 msgid "Install Clonezilla"
 msgstr "安装再生龙 Clonezilla"
 
@@ -117,9 +112,6 @@ msgstr "安装 SystemRescueCD ISO ..."
 
 msgid "Installed Kernels"
 msgstr "安装内核"
-
-msgid "Installing the Proxmox kernel on some systems may cause problems."
-msgstr ""
 
 msgid "Installing the Proxmox kernel will not uninstall other kernels."
 msgstr ""
