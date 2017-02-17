@@ -42,6 +42,10 @@ case "$1" in
             omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafd9e1c-0e48-11e6-ab72-000c290ea003']"
         fi
 
+        if dpkg --compare-versions "$2" lt-nl "3.4.18"; then
+            omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafd5b32-0e48-11e6-98d2-000c290ea003']"
+        fi
+
         if omv_config_exists "/config/system/omvextrasorg"; then
             omv_config_delete "/config/system/omvextrasorg"
         fi

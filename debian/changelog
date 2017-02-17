@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (3.4.18) stable; urgency=low
+
+  * Remove greyhole repo
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 17 Feb 2017 06:06:14 -0600
+
 openmediavault-omvextrasorg (3.4.17) stable; urgency=low
 
   * Disable grub submenu at install time
