@@ -33,8 +33,13 @@ case "$1" in
         omv_config_update "/config/system/omvextras/repos/repo[uuid='eafd7090-0e48-11e6-9ce2-000c290ea003']/repo2" \
             "http://apt.syncthing.net/ syncthing release"
 
-        omv_config_update "/config/system/omvextras/repos/repo[uuid='eafd450c-0e48-11e6-8349-000c290ea003']/repo2" \
-            "https://downloads.plex.tv/repo/deb/ public main"
+        # change plex repo based on architecture
+        if [[ $(arch) == arm* ]]; then
+            plex_repo=""
+        else
+            plex_repo="https://downloads.plex.tv/repo/deb/ public main"
+        fi
+        omv_config_update "/config/system/omvextras/repos/repo[uuid='eafd450c-0e48-11e6-8349-000c290ea003']/repo2" ${plex_repo}
 
         # delete old configs
         if dpkg --compare-versions "$2" lt-nl "3.4.6"; then
