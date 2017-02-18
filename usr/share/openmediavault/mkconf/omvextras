@@ -91,8 +91,7 @@ EOF
         if [ "${enable}" != "0" ]; then
             echo "# ${name}" >> ${OMVEXTRASREPOFILE}
 
-            for i in $(seq 1 3);
-            do
+            for i in $(seq 1 3); do
                 repo=$(omv_config_get "${XPATH}[position()=${index}]/repo${i}")
                 if [ "${repo}" != "" ]; then
                     key=$(omv_config_get "${XPATH}[position()=${index}]/key${i}")
