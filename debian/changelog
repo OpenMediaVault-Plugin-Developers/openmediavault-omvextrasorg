@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (4.0.0) stable; urgency=low
+
+  * Adapt for OMV 4.x
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 25 Feb 2017 15:54:20 -0600
+
 openmediavault-omvextrasorg (3.4.21) stable; urgency=low
 
   * Fix bad repo
