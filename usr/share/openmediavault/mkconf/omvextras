@@ -66,6 +66,10 @@ Package: *
 Pin: release n=erasmus-backports, origin dl.bintray.com
 Pin-Priority: 995
 
+Package: virtualbox virtualbox-dkms
+Pin: release a=erasmus, origin dl.bintray.com
+Pin-Priority: 995
+
 Package: virtualbox virtualbox-dkms virtualbox-qt minidlna borgbackup python3-msgpack
   certbot python-acme python-certbot python-cffi python-cffi-backend python-chardet
   python-configargparse python-configobj python-cryptography python-dialog python-enum34
