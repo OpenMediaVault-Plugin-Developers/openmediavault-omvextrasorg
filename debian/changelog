@@ -1,6 +1,12 @@
+openmediavault-omvextrasorg (3.4.23) stable; urgency=low
+
+  * Add old key back to suppress warnings
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 08 Mar 2017 10:59:31 -0600
+
 openmediavault-omvextrasorg (3.4.22) stable; urgency=low
 
-  * Ping virtualbox higher
+  * Pin virtualbox higher
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 05 Mar 2017 18:58:00 -0600
 

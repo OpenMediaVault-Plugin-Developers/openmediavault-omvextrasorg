@@ -64,6 +64,7 @@ case "$1" in
         if [ -x /usr/bin/apt-key ]; then
             KEYRING_LOCATION="/usr/share/keyrings/"
             apt-key add ${KEYRING_LOCATION}omvextrasdevs.key
+            apt-key add ${KEYRING_LOCATION}omvplugindevs.gpg
             apt-key add ${KEYRING_LOCATION}xamarin.gpg
             apt-key add ${KEYRING_LOCATION}deluge.key
             apt-key add ${KEYRING_LOCATION}hwraid.le-vert.net.gpg.key
