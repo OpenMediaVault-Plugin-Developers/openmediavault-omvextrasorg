@@ -194,8 +194,8 @@ class OMVRpcServiceOmvExtrasOrg extends OMVRpcServiceAbstract
             "id"          => "btsync",
             "type"        => gettext("Backup"),
             "enable"      => $object['btsync'],
-            "repo"        => gettext("BTSync"),
-            "description" => gettext("BTSync repository")
+            "repo"        => gettext("Sync"),
+            "description" => gettext("Sync repository")
         );
 
         $result[] = array(

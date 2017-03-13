@@ -30,8 +30,6 @@ OMVVERSION=$(xmlstarlet sel -t -v "//distribution" ${OMV_PRODUCTINFO_FILE} | xml
 case $(cat /etc/debian_version) in
   6*) RELEASE="squeeze" ;;
   7*) RELEASE="wheezy"  ;;
-  8*) RELEASE="jessie"  ;;
-  9*) RELEASE="stretch" ;;
   *)  exit 1            ;;
 esac
 
@@ -183,13 +181,13 @@ Pin-Priority: 995
 EOF
     fi
 
-    # omv-extras btsync
+    # omv-extras sync
     if [ "$(omv_config_get "${XPATH}btsync")" = "1" ]; then
-        echo "# btsync repo" >> ${OMVEXTRASREPOFILE}
+        echo "# sync repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${BINTRAY_REPO}/${OMVVERSION}-sync ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-        echo "deb http://debian.yeasoft.net/btsync14 ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
+        echo "deb https://debian.yeasoft.net/btsync14 ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         echo "# syncthing repo" >> ${OMVEXTRASREPOFILE}
-        echo "deb https://apt.syncthing.net/ syncthing release" >> ${OMVEXTRASREPOFILE}
+        echo "deb http://apt.syncthing.net/ syncthing release" >> ${OMVEXTRASREPOFILE}
 
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *

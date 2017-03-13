@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (2.13.8) stable; urgency=low
+
+  * Change btsync repo from http to https
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 13 Mar 2017 08:42:01 -0500
+
 openmediavault-omvextrasorg (2.13.7) stable; urgency=low
 
   * Remove zfs repo since it does not exist and wheezy is not supported
