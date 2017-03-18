@@ -210,11 +210,13 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
         resizable : false,
         iconCls   :  Ext.baseCSSPrefix + "grid-cell-booleaniconcolumn-switch"
     },{
+        xtype     : "textcolumn",
         text      : _("Name"),
         sortable  : true,
         dataIndex : "name",
         stateId   : "name"
     },{
+        xtype     : "textcolumn",
         text      : _("Comment"),
         sortable  : true,
         dataIndex : "comment",
