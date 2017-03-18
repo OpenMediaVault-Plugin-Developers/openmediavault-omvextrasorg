@@ -46,8 +46,8 @@ update()
     export LANG=C
     export LC_ALL=C
 
-    OMVEXTRASREPOFILE="/etc/apt/sources.list.d/omv-extras-org-${OMVVERSION}.list"
     OMVEXTRASCUSTOMREPOFILE="/etc/apt/sources.list.d/omv-extras-org-custom.list"
+    OMVEXTRASREPOFILE="/etc/apt/sources.list.d/omv-extras-org-${OMVVERSION}.list"
     OMVEXTRASAPTPREFS="/etc/apt/preferences.d/99omv-extras-org"
 
     REPO_LOCATION="packages.omv-extras.org"
@@ -185,17 +185,12 @@ EOF
     if [ "$(omv_config_get "${XPATH}btsync")" = "1" ]; then
         echo "# sync repo" >> ${OMVEXTRASREPOFILE}
         echo "deb ${BINTRAY_REPO}/${OMVVERSION}-sync ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
-        echo "deb https://debian.yeasoft.net/btsync14 ${RELEASE} main" >> ${OMVEXTRASREPOFILE}
         echo "# syncthing repo" >> ${OMVEXTRASREPOFILE}
         echo "deb http://apt.syncthing.net/ syncthing release" >> ${OMVEXTRASREPOFILE}
 
         cat <<EOF >> ${OMVEXTRASAPTPREFS}
 Package: *
 Pin: release n=${OMVVERSION}-sync, origin ${BINTRAY_REPO_LOCATION}
-Pin-Priority: 995
-
-Package: *
-Pin: release n=${RELEASE}, origin debian.yeasoft.net
 Pin-Priority: 995
 
 EOF
