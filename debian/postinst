@@ -42,18 +42,13 @@ case "$1" in
         omv_config_update "/config/system/omvextras/repos/repo[uuid='eafd450c-0e48-11e6-8349-000c290ea003']/repo2" "${plex_repo}"
 
         # delete old configs
-        if dpkg --compare-versions "$2" lt-nl "3.4.6"; then
-            omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafd86e8-0e48-11e6-97de-000c290ea003']"
-            omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafd9e1c-0e48-11e6-ab72-000c290ea003']"
-        fi
-
-        if dpkg --compare-versions "$2" lt-nl "3.4.18"; then
-            omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafd5b32-0e48-11e6-98d2-000c290ea003']"
-        fi
-
-        if omv_config_exists "/config/system/omvextrasorg"; then
-            omv_config_delete "/config/system/omvextrasorg"
-        fi
+        omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafd86e8-0e48-11e6-97de-000c290ea003']"
+        omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafd9e1c-0e48-11e6-ab72-000c290ea003']"
+        omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafd5b32-0e48-11e6-98d2-000c290ea003']"
+        omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafdb488-0e48-11e6-a13f-000c290ea003']"
+        omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafdcad6-0e48-11e6-9e11-000c290ea003']"
+        omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafdcad6-0e48-11e6-9e23-000c290ea003']"
+        omv_config_delete "/config/system/omvextrasorg"
 
         # delete unneeded file
         if [ -f /etc/apt/sources.list.d/backports.list ]; then
