@@ -68,14 +68,14 @@
     <enable>0</enable>
     <name>Docker</name>
     <repo1>https://dl.bintray.com/openmediavault-plugin-developers/erasmus-docker jessie main</repo1>
-    <repo2>https://apt.dockerproject.org/repo debian-jessie main</repo2>
+    <repo2>https://download.docker.com/linux/debian jessie stable</repo2>
     <repo3></repo3>
-    <key1>58118E89F3A912897C070ADBF76221572C52609D</key1>
+    <key1>9DC858229FC7DD38854AE2D88D81803C0EBFCD88</key1>
     <key2></key2>
     <key3></key3>
     <comment>Docker repo</comment>
     <package1>*</package1><pin1>release n=erasmus-docker, origin dl.bintray.com</pin1><priority1>996</priority1>
-    <package2>*</package2><pin2>release o=apt.dockerproject.org</pin2><priority2>1001</priority2>
+    <package2></package2><pin2></pin2><priority2></priority2>
     <package3></package3><pin3></pin3><priority3></priority3>
     <permanent>1</permanent>
   </repo>

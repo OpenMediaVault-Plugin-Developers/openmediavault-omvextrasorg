@@ -33,6 +33,16 @@ case "$1" in
         omv_config_update "/config/system/omvextras/repos/repo[uuid='eafd7090-0e48-11e6-9ce2-000c290ea003']/repo2" \
             "http://apt.syncthing.net/ syncthing release"
 
+        omv_config_update "/config/system/omvextras/repos/repo[uuid='eafdcad6-0e48-11e6-9e19-000c290ea003']/repo2" \
+            "https://download.docker.com/linux/debian jessie stable"
+
+        omv_config_update "/config/system/omvextras/repos/repo[uuid='eafdcad6-0e48-11e6-9e19-000c290ea003']/key1" \
+            "9DC858229FC7DD38854AE2D88D81803C0EBFCD88"
+
+        omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafdcad6-0e48-11e6-9e19-000c290ea003']/package2"
+        omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafdcad6-0e48-11e6-9e19-000c290ea003']/pin2"
+        omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafdcad6-0e48-11e6-9e19-000c290ea003']/priority2"
+
         # change plex repo based on architecture
         if [[ $(arch) == arm* ]]; then
             plex_repo=""
@@ -66,6 +76,9 @@ case "$1" in
             apt-key add ${KEYRING_LOCATION}docker.gpg
             apt-key add ${KEYRING_LOCATION}syncthing.key
             apt-key add ${KEYRING_LOCATION}PlexSign.key
+
+            # Remove old Docker key
+            apt-key del 58118E89F3A912897C070ADBF76221572C52609D
         fi
 
         # disable grub submenus on systems that use grub
