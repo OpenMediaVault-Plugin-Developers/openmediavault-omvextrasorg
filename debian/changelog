@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (3.4.26) stable; urgency=low
+
+  * Update Plex repo entry
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 16 Jul 2017 13:04:26 -0500
+
 openmediavault-omvextrasorg (3.4.25) stable; urgency=low
 
   * Remove mono repo
