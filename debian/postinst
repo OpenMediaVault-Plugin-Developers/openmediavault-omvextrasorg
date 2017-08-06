@@ -66,6 +66,7 @@ case "$1" in
             apt-key add ${KEYRING_LOCATION}docker.gpg
             apt-key add ${KEYRING_LOCATION}syncthing.key
             apt-key add ${KEYRING_LOCATION}PlexSign.key
+            apt-key add ${KEYRING_LOCATION}docker-ce.gpg
         fi
 
         # disable grub submenus on systems that use grub

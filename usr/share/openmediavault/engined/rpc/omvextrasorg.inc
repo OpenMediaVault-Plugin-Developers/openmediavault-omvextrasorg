@@ -44,6 +44,8 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $this->registerMethod('getKernelList');
         $this->registerMethod('setBootKernel');
 
+        $this->registerMethod('validateDockerCERepo');
+
         $this->registerMethod('doCommand');
     }
 
@@ -89,6 +91,9 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         // Prepare the configuration object.
         $object = new \OMV\Config\ConfigObject('conf.system.omvextras');
         $object->setAssoc($params);
+
+        //Validate Docker repo
+        $this->validateDockerCERepo($params);
 
         // Set the configuration object.
         $db = \OMV\Config\Database::getInstance();
@@ -210,6 +215,25 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
 
         $cmd = 'export LANG=C; update-grub';
         exec($cmd, $output);
+    }
+
+    public function validateDockerCERepo($params)
+    {
+        //Docker CE repo UUID
+        $repoUUID = "07f6f64f-8dd8-4d19-8832-bd9608d2476f";
+        //Version of docker plugin required to enable the Docker CE repo
+        $version = 319;
+        //Check if it's the Docker CE repo that is being enabled
+        if ($params['uuid'] == $repoUUID && $params['enable'] == 1)
+        {
+            $cmd = "dpkg-query --showformat='\${Version}' --show openmediavault-docker-gui 2>/dev/null | sed -e 's/\.//g'";
+            exec($cmd, $output);
+            if (is_numeric($output[0]) && $output[0] < $version)
+            {
+                throw new Exception("Failed to enable Docker CE repo." .
+                    "Please upgrade the openmediavault-docker-gui plugin to version 3.1.9 and then retry.");            
+            }
+        }
     }
 
     public function doCommand($params, $context)
