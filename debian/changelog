@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (3.4.27) stable; urgency=low
+
+  * Add teamviewer host repo
+  * add docker-ce repo
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 16 Aug 2017 18:28:21 -0500
+
 openmediavault-omvextrasorg (3.4.26) stable; urgency=low
 
   * Update Plex repo entry
