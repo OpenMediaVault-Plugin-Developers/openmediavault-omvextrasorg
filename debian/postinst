@@ -41,6 +41,13 @@ case "$1" in
         fi
         omv_config_update "/config/system/omvextras/repos/repo[uuid='eafd450c-0e48-11e6-8349-000c290ea003']/repo2" "${plex_repo}"
 
+        if dpkg --compare-versions "$2" lt-nl "3.4.27"; then
+            if ! omv_config_exists "/config/system/omvextras/repos/repo[uuid='9b49b9a4-82d8-11e7-b73c-c7a588ae65a8']"; then
+                update_repo=$(cat /etc/omvextras/update2.xml | sed -e 's/^[ \t]*//' | tr '\n' ' ')
+                omv_config_add_node_data "/config/system/omvextras/repos" "repo" "${update_repo}"
+            fi
+        fi
+
         # delete old configs
         omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafd86e8-0e48-11e6-97de-000c290ea003']"
         omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafd9e1c-0e48-11e6-ab72-000c290ea003']"
@@ -67,6 +74,7 @@ case "$1" in
             apt-key add ${KEYRING_LOCATION}syncthing.key
             apt-key add ${KEYRING_LOCATION}PlexSign.key
             apt-key add ${KEYRING_LOCATION}docker-ce.gpg
+            apt-key add ${KEYRING_LOCATION}TeamViewer2017.asc
         fi
 
         # disable grub submenus on systems that use grub
