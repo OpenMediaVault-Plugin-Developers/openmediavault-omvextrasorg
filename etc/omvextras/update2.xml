@@ -10,7 +10,7 @@
   <key3></key3>
   <comment>Teamviewer repo</comment>
   <package1></package1><pin1></pin1><priority1></priority1>
-  <package2>package2><pin2></pin2><priority2></priority2>
+  <package2></package2><pin2></pin2><priority2></priority2>
   <package3></package3><pin3></pin3><priority3></priority3>
   <permanent>1</permanent>
 </repo>
