@@ -45,6 +45,8 @@ case "$1" in
             if ! omv_config_exists "/config/system/omvextras/repos/repo[uuid='9b49b9a4-82d8-11e7-b73c-c7a588ae65a8']"; then
                 update_repo=$(cat /etc/omvextras/update2.xml | sed -e 's/^[ \t]*//' | tr '\n' ' ')
                 omv_config_add_node_data "/config/system/omvextras/repos" "repo" "${update_repo}"
+                update_repo=$(cat /etc/omvextras/update3.xml | sed -e 's/^[ \t]*//' | tr '\n' ' ')
+                omv_config_add_node_data "/config/system/omvextras/repos" "repo" "${update_repo}"
             fi
         fi
 
