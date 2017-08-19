@@ -2,7 +2,7 @@
 <enable>0</enable>
 <name>Teamviewer</name>
 <repo1>deb http://linux.teamviewer.com/deb stable tv12</repo1>
-<repo2></repo2>
+<repo2>https://dl.bintray.com/openmediavault-plugin-developers/erasmus-teamviewer jessie main</repo2>
 <repo3></repo3>
 <key1></key1>
 <key2></key2>
