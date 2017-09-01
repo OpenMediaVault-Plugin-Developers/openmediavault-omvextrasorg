@@ -29,10 +29,6 @@ case "$1" in
             omv_config_add_node_data "/config/system" "omvextras" "${default_repos}"
         fi
 
-        # edit configs
-        omv_config_update "/config/system/omvextras/repos/repo[uuid='eafd7090-0e48-11e6-9ce2-000c290ea003']/repo2" \
-            "http://apt.syncthing.net/ syncthing release"
-
         # change plex repo based on architecture
         if [[ $(arch) == arm* ]]; then
             plex_repo=""
@@ -40,29 +36,6 @@ case "$1" in
             plex_repo="https://downloads.plex.tv/repo/deb/ ./public main"
         fi
         omv_config_update "/config/system/omvextras/repos/repo[uuid='eafd450c-0e48-11e6-8349-000c290ea003']/repo2" "${plex_repo}"
-
-        if dpkg --compare-versions "$2" lt-nl "3.4.27"; then
-            if ! omv_config_exists "/config/system/omvextras/repos/repo[uuid='9b49b9a4-82d8-11e7-b73c-c7a588ae65a8']"; then
-                update_repo=$(cat /etc/omvextras/update2.xml | sed -e 's/^[ \t]*//' | tr '\n' ' ')
-                omv_config_add_node_data "/config/system/omvextras/repos" "repo" "${update_repo}"
-                update_repo=$(cat /etc/omvextras/update3.xml | sed -e 's/^[ \t]*//' | tr '\n' ' ')
-                omv_config_add_node_data "/config/system/omvextras/repos" "repo" "${update_repo}"
-            fi
-        fi
-
-        # delete old configs
-        omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafd86e8-0e48-11e6-97de-000c290ea003']"
-        omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafd9e1c-0e48-11e6-ab72-000c290ea003']"
-        omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafd5b32-0e48-11e6-98d2-000c290ea003']"
-        omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafdb488-0e48-11e6-a13f-000c290ea003']"
-        omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafdcad6-0e48-11e6-9e11-000c290ea003']"
-        omv_config_delete "/config/system/omvextras/repos/repo[uuid='eafdcad6-0e48-11e6-9e23-000c290ea003']"
-        omv_config_delete "/config/system/omvextrasorg"
-
-        # delete unneeded file
-        if [ -f /etc/apt/sources.list.d/backports.list ]; then
-            rm -f /etc/apt/sources.list.d/backports.list
-        fi
 
         # install keys
         if [ -x /usr/bin/apt-key ]; then

@@ -76,17 +76,9 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                 handler : Ext.Function.bind(me.onSetBootButton, me, [ me ]),
                 margin  : "5 0 8 0"
             },{
-                xtype   : "button",
-                name    : "backports",
-                text    : _("Install Proxmox kernel"),
-                scope   : this,
-                handler : Ext.Function.bind(me.onCommandButton, me, [ "installpvekernel" ]),
-                margin  : "5 0 8 10"
-            },{
                 border : false,
                 html   : "<ul>" +
                            "<li>" + _("Setting the wrong default boot kernel may cause the system to be inaccessible.  The boot menu will still be available to select a different kernel.") + "</li>" +
-                           "<li>" + _("Installing the Proxmox kernel will not uninstall other kernels.") + "</li>" +
                          "</ul>"
             }]
         },{
@@ -195,9 +187,6 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
     onCommandButton : function(cmd) {
         var me = this;
         switch(cmd) {
-            case "installpvekernel":
-                title = _("Install Proxmox kernel ...");
-                break;
             case "installcz":
                 title = _("Install Clonezilla ISO ...");
                 break;
