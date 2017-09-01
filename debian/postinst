@@ -33,7 +33,7 @@ case "$1" in
         if [[ $(arch) == arm* ]]; then
             plex_repo=""
         else
-            plex_repo="https://downloads.plex.tv/repo/deb/ public main"
+            plex_repo="https://downloads.plex.tv/repo/deb/ ./public main"
         fi
         omv_config_update "/config/system/omvextras/repos/repo[uuid='eafd450c-0e48-11e6-8349-000c290ea003']/repo2" "${plex_repo}"
 
@@ -41,12 +41,15 @@ case "$1" in
         if [ -x /usr/bin/apt-key ]; then
             KEYRING_LOCATION="/usr/share/keyrings/"
             apt-key add ${KEYRING_LOCATION}omvextrasdevs.key
+            apt-key add ${KEYRING_LOCATION}omvplugindevs.gpg
             apt-key add ${KEYRING_LOCATION}xamarin.gpg
             apt-key add ${KEYRING_LOCATION}deluge.key
             apt-key add ${KEYRING_LOCATION}hwraid.le-vert.net.gpg.key
             apt-key add ${KEYRING_LOCATION}docker.gpg
             apt-key add ${KEYRING_LOCATION}syncthing.key
             apt-key add ${KEYRING_LOCATION}PlexSign.key
+            apt-key add ${KEYRING_LOCATION}docker-ce.gpg
+            apt-key add ${KEYRING_LOCATION}TeamViewer2017.asc
         fi
 
         # disable grub submenus on systems that use grub

@@ -36,7 +36,7 @@
     <enable>0</enable>
     <name>Plexmediaserver</name>
     <repo1>https://dl.bintray.com/openmediavault-plugin-developers/arrakis-plex stretch main</repo1>
-    <repo2>https://downloads.plex.tv/repo/deb/ public main</repo2>
+    <repo2>https://downloads.plex.tv/repo/deb/ ./public main</repo2>
     <repo3></repo3>
     <key1></key1>
     <key2></key2>
@@ -64,38 +64,6 @@
     <permanent>1</permanent>
   </repo>
   <repo>
-    <uuid>eafdb488-0e48-11e6-a13f-000c290ea003</uuid>
-    <enable>0</enable>
-    <name>Mono</name>
-    <repo1>https://dl.bintray.com/openmediavault-plugin-developers/arrakis-mono stretch main</repo1>
-    <repo2>http://download.mono-project.com/repo/debian wheezy main</repo2>
-    <repo3>http://download.mono-project.com/repo/debian wheezy-libjpeg62-compat main</repo3>
-    <key1>FDA5DFFC</key1>
-    <key2></key2>
-    <key3></key3>
-    <comment>Mono repo</comment>
-    <package1>*</package1><pin1>release n=arrakis-mono, origin dl.bintray.com</pin1><priority1>996</priority1>
-    <package2>*</package2><pin2>release o=download.mono-project.com</pin2><priority2>1001</priority2>
-    <package3></package3><pin3></pin3><priority3></priority3>
-    <permanent>1</permanent>
-  </repo>
-  <repo>
-    <uuid>eafdcad6-0e48-11e6-9e11-000c290ea003</uuid>
-    <enable>0</enable>
-    <name>Mono Testing</name>
-    <repo1>https://dl.bintray.com/openmediavault-plugin-developers/arrakis-monotesting stretch main</repo1>
-    <repo2></repo2>
-    <repo3></repo3>
-    <key1></key1>
-    <key2></key2>
-    <key3></key3>
-    <comment>Mono Testing repo</comment>
-    <package1>*</package1><pin1>release n=arrakis-mono-testing, origin dl.bintray.com</pin1><priority1>997</priority1>
-    <package2></package2><pin2></pin2><priority2></priority2>
-    <package3></package3><pin3></pin3><priority3></priority3>
-    <permanent>1</permanent>
-  </repo>
-  <repo>
     <uuid>eafdcad6-0e48-11e6-9e19-000c290ea003</uuid>
     <enable>0</enable>
     <name>Docker</name>
@@ -112,33 +80,49 @@
     <permanent>1</permanent>
   </repo>
   <repo>
-    <uuid>eafdcad6-0e48-11e6-9e23-000c290ea003</uuid>
-    <enable>0</enable>
-    <name>Docker Testing</name>
-    <repo1>https://dl.bintray.com/openmediavault-plugin-developers/arrakis-docker2 stretch main</repo1>
-    <repo2></repo2>
-    <repo3></repo3>
-    <key1></key1>
-    <key2></key2>
-    <key3></key3>
-    <comment>Docker testing repo</comment>
-    <package1>*</package1><pin1>release n=arrakis-docker2, origin dl.bintray.com</pin1><priority1>997</priority1>
-    <package2></package2><pin2></pin2><priority2></priority2>
-    <package3></package3><pin3></pin3><priority3></priority3>
-    <permanent>1</permanent>
-  </repo>
-  <repo>
     <uuid>eafdcad6-0e48-11e6-9e31-000c290ea003</uuid>
     <enable>0</enable>
     <name>HWRaid</name>
-    <repo1>https://dl.bintray.com/openmediavault-plugin-developers/arrakis-hwraid stretch main</repo1>
-    <repo2>http://hwraid.le-vert.net/debian stretch main</repo2>
+    <repo1>https://dl.bintray.com/openmediavault-plugin-developers/arrakis-hwraid jessie main</repo1>
+    <repo2>http://hwraid.le-vert.net/debian jessie main</repo2>
     <repo3></repo3>
     <key1></key1>
     <key2></key2>
     <key3></key3>
     <comment>HWRaid repo</comment>
     <package1>*</package1><pin1>release n=arrakis-hwraid, origin dl.bintray.com</pin1><priority1>996</priority1>
+    <package2></package2><pin2></pin2><priority2></priority2>
+    <package3></package3><pin3></pin3><priority3></priority3>
+    <permanent>1</permanent>
+  </repo>
+  <repo>
+    <uuid>07f6f64f-8dd8-4d19-8832-bd9608d2476f</uuid>
+    <enable>0</enable>
+    <name>Docker CE</name>
+    <repo1>https://dl.bintray.com/openmediavault-plugin-developers/arrakis-docker jessie main</repo1>
+    <repo2>https://download.docker.com/linux/debian jessie stable</repo2>
+    <repo3></repo3>
+    <key1>9DC858229FC7DD38854AE2D88D81803C0EBFCD88</key1>
+    <key2></key2>
+    <key3></key3>
+    <comment>Docker CE repo.</comment>
+    <package1>*</package1><pin1>release n=arrakis-docker, origin dl.bintray.com</pin1><priority1>996</priority1>
+    <package2>*</package2><pin2>release o=download.docker.com</pin2><priority2>1001</priority2>
+    <package3></package3><pin3></pin3><priority3></priority3>
+    <permanent>1</permanent>
+  </repo>
+  <repo>
+    <uuid>9b49b9a4-82d8-11e7-b73c-c7a588ae65a8</uuid>
+    <enable>0</enable>
+    <name>Teamviewer</name>
+    <repo1>deb http://linux.teamviewer.com/deb stable tv12</repo1>
+    <repo2>https://dl.bintray.com/openmediavault-plugin-developers/arrakis-teamviewer jessie main</repo2>
+    <repo3></repo3>
+    <key1></key1>
+    <key2></key2>
+    <key3></key3>
+    <comment>Teamviewer repo</comment>
+    <package1></package1><pin1></pin1><priority1></priority1>
     <package2></package2><pin2></pin2><priority2></priority2>
     <package3></package3><pin3></pin3><priority3></priority3>
     <permanent>1</permanent>

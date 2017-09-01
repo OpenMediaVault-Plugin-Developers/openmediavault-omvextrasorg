@@ -4,6 +4,45 @@ openmediavault-omvextrasorg (4.0.0) stable; urgency=low
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 25 Feb 2017 15:54:20 -0600
 
+openmediavault-omvextrasorg (3.4.27) stable; urgency=low
+
+  * Add teamviewer host repo
+  * add docker-ce repo
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 16 Aug 2017 18:28:21 -0500
+
+openmediavault-omvextrasorg (3.4.26) stable; urgency=low
+
+  * Update Plex repo entry
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 16 Jul 2017 13:04:26 -0500
+
+openmediavault-omvextrasorg (3.4.25) stable; urgency=low
+
+  * Remove mono repo
+  * Remove mono testing repo
+  * Remove docker testing repo
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 28 Mar 2017 13:06:20 -0500
+
+openmediavault-omvextrasorg (3.4.24) stable; urgency=low
+
+  * Improve foreign content handling.
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 18 Mar 2017 09:11:48 -0500
+
+openmediavault-omvextrasorg (3.4.23) stable; urgency=low
+
+  * Add old key back to suppress warnings
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 08 Mar 2017 10:59:31 -0600
+
+openmediavault-omvextrasorg (3.4.22) stable; urgency=low
+
+  * Pin virtualbox higher
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 05 Mar 2017 18:58:00 -0600
+
 openmediavault-omvextrasorg (3.4.21) stable; urgency=low
 
   * Fix bad repo
@@ -111,7 +150,7 @@ openmediavault-omvextrasorg (3.4.5) stable; urgency=low
 
 openmediavault-omvextrasorg (3.4.4) stable; urgency=low
 
-  * Fix for backports kernel - 586 to 686 
+  * Fix for backports kernel - 586 to 686
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 28 Oct 2016 08:22:47 -0500
 
