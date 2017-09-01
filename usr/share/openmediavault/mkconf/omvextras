@@ -58,6 +58,7 @@ update()
     OMVEXTRASAPTPREFS="/etc/apt/preferences.d/99omv-extras-org"
 
     /bin/rm -f ${OMVEXTRASAPTPREFS}
+    /bin/rm -f ${OMVEXTRASREPOFILE}
 
     # Process repos
     echo "# This is file is generated." > ${OMVEXTRASREPOFILE}

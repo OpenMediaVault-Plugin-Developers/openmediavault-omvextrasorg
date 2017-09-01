@@ -11,7 +11,7 @@ Package: openmediavault-omvextrasorg
 Architecture: all
 Depends: apt-transport-https,
          gnupg,
-         openmediavault (>= 4.0.4),
+         openmediavault (>= 4.0.2),
          ${misc:Depends}
 Breaks: openmediavault (<< 4.0)
 Description: OMV-Extras.org Package Repositories for OpenMediaVault
