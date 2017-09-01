@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
-# @author   OpenMediaVault Plugin Developers <plugins@omv-extras.org>
+# @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
 # @copyright Copyright (c) 2013-2017 OpenMediaVault Plugin Developers
 #
 # This program is free software: you can redistribute it and/or modify
@@ -28,7 +28,6 @@ case "$1" in
         omv_config_delete "/config/system/omvextras"
         /bin/rm -f /etc/apt/preferences.d/99omv-extras-org*
         /bin/rm -f /etc/apt/sources.list.d/omv-extras-org*.list
-        /bin/rm -f /usr/share/openmediavault/mkconf/omvextrasorg
     ;;
 
     upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)

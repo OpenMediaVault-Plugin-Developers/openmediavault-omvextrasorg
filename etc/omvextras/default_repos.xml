@@ -64,27 +64,11 @@
     <permanent>1</permanent>
   </repo>
   <repo>
-    <uuid>eafdcad6-0e48-11e6-9e19-000c290ea003</uuid>
-    <enable>0</enable>
-    <name>Docker</name>
-    <repo1>https://dl.bintray.com/openmediavault-plugin-developers/arrakis-docker stretch main</repo1>
-    <repo2>https://apt.dockerproject.org/repo debian-stretch main</repo2>
-    <repo3></repo3>
-    <key1>58118E89F3A912897C070ADBF76221572C52609D</key1>
-    <key2></key2>
-    <key3></key3>
-    <comment>Docker repo</comment>
-    <package1>*</package1><pin1>release n=arrakis-docker, origin dl.bintray.com</pin1><priority1>996</priority1>
-    <package2>*</package2><pin2>release o=apt.dockerproject.org</pin2><priority2>1001</priority2>
-    <package3></package3><pin3></pin3><priority3></priority3>
-    <permanent>1</permanent>
-  </repo>
-  <repo>
     <uuid>eafdcad6-0e48-11e6-9e31-000c290ea003</uuid>
     <enable>0</enable>
     <name>HWRaid</name>
-    <repo1>https://dl.bintray.com/openmediavault-plugin-developers/arrakis-hwraid jessie main</repo1>
-    <repo2>http://hwraid.le-vert.net/debian jessie main</repo2>
+    <repo1>https://dl.bintray.com/openmediavault-plugin-developers/arrakis-hwraid stretch main</repo1>
+    <repo2>http://hwraid.le-vert.net/debian stretch main</repo2>
     <repo3></repo3>
     <key1></key1>
     <key2></key2>
@@ -99,13 +83,13 @@
     <uuid>07f6f64f-8dd8-4d19-8832-bd9608d2476f</uuid>
     <enable>0</enable>
     <name>Docker CE</name>
-    <repo1>https://dl.bintray.com/openmediavault-plugin-developers/arrakis-docker jessie main</repo1>
-    <repo2>https://download.docker.com/linux/debian jessie stable</repo2>
+    <repo1>https://dl.bintray.com/openmediavault-plugin-developers/arrakis-docker stretch main</repo1>
+    <repo2>https://download.docker.com/linux/debian stretch stable</repo2>
     <repo3></repo3>
     <key1>9DC858229FC7DD38854AE2D88D81803C0EBFCD88</key1>
     <key2></key2>
     <key3></key3>
-    <comment>Docker CE repo.</comment>
+    <comment>Docker CE repo</comment>
     <package1>*</package1><pin1>release n=arrakis-docker, origin dl.bintray.com</pin1><priority1>996</priority1>
     <package2>*</package2><pin2>release o=download.docker.com</pin2><priority2>1001</priority2>
     <package3></package3><pin3></pin3><priority3></priority3>
@@ -116,7 +100,7 @@
     <enable>0</enable>
     <name>Teamviewer</name>
     <repo1>deb http://linux.teamviewer.com/deb stable tv12</repo1>
-    <repo2>https://dl.bintray.com/openmediavault-plugin-developers/arrakis-teamviewer jessie main</repo2>
+    <repo2>https://dl.bintray.com/openmediavault-plugin-developers/arrakis-teamviewer stretch main</repo2>
     <repo3></repo3>
     <key1></key1>
     <key2></key2>

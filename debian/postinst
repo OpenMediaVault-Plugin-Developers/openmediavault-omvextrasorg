@@ -23,6 +23,12 @@ set -e
 
 case "$1" in
     configure)
+        if dpkg --compare-versions "$2" lt-nl "4.0.1"; then
+            if omv_config_exists "/config/system/omvextras"; then
+                omv_config_delete "/config/system/omvextras"
+            fi
+        fi
+
         if ! omv_config_exists "/config/system/omvextras"; then
             echo "Initialize configuration"
             default_repos=$(cat /etc/omvextras/default_repos.xml | sed -e 's/^[ \t]*//' | tr '\n' ' ')
@@ -42,10 +48,8 @@ case "$1" in
             KEYRING_LOCATION="/usr/share/keyrings/"
             apt-key add ${KEYRING_LOCATION}omvextrasdevs.key
             apt-key add ${KEYRING_LOCATION}omvplugindevs.gpg
-            apt-key add ${KEYRING_LOCATION}xamarin.gpg
             apt-key add ${KEYRING_LOCATION}deluge.key
             apt-key add ${KEYRING_LOCATION}hwraid.le-vert.net.gpg.key
-            apt-key add ${KEYRING_LOCATION}docker.gpg
             apt-key add ${KEYRING_LOCATION}syncthing.key
             apt-key add ${KEYRING_LOCATION}PlexSign.key
             apt-key add ${KEYRING_LOCATION}docker-ce.gpg
