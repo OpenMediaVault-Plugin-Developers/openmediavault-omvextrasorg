@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (4.0.2) stable; urgency=low
+
+  * Install repo keys to /etc/apt/trusted.gpg.d/
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 02 Sep 2017 11:00:24 -0500
+
 openmediavault-omvextrasorg (4.0.1) stable; urgency=low
 
   * Merge changes from 3.x
