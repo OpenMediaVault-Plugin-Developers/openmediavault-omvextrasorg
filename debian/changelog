@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (3.4.28) stable; urgency=low
+
+  * Add releaseupgrade file
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 20 Sep 2017 10:49:01 -0500
+
 openmediavault-omvextrasorg (3.4.27) stable; urgency=low
 
   * Add teamviewer host repo
