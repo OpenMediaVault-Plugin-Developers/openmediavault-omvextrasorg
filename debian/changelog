@@ -1,8 +1,8 @@
-openmediavault-omvextrasorg (4.0.4) UNRELEASED; urgency=medium
+openmediavault-omvextrasorg (4.0.4) stable; urgency=low
 
   * Add dirmngr package dependency
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 23 Sep 2017 14:44:43 -0500
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 23 Sep 2017 16:30:43 -0500
 
 openmediavault-omvextrasorg (4.0.3) stable; urgency=low
 
