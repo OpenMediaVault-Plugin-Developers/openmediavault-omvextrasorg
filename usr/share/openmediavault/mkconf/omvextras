@@ -55,11 +55,38 @@ update()
     export LANG=C
     export LC_ALL=C
 
-    OMVEXTRASAPTPREFS="/etc/apt/preferences.d/99omv-extras-org"
+    OMVEXTRASAPTPREFS="/etc/apt/preferences.d/omv-extras-org"
 
     /bin/rm -f ${OMVEXTRASAPTPREFS}
 
-    # Process repos
+    cat <<EOF > ${OMVEXTRASAPTPREFS}
+Package: zfs*
+Pin: release a=stretch-backports
+Pin-Priority: 500
+
+Package: spl-dkms
+Pin: release a=stretch-backports
+Pin-Priority: 500
+
+Package: libnvpair1linux
+Pin: release a=stretch-backports
+Pin-Priority: 500
+
+Package: libzfs2linux
+Pin: release a=stretch-backports
+Pin-Priority: 500
+
+Package: libzpool2linux
+Pin: release a=stretch-backports
+Pin-Priority: 500
+
+Package: libuutil1linux
+Pin: release a=stretch-backports
+Pin-Priority: 500
+
+EOF
+
+   # Process repos
     echo "# This is file is generated." > ${OMVEXTRASREPOFILE}
     echo "# OMV-Extras repos" >> ${OMVEXTRASREPOFILE}
 

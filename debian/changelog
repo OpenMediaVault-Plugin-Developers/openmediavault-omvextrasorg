@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (4.0.3) stable; urgency=low
+
+  * Add pinning for zfs packages
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 23 Sep 2017 11:55:36 -0500
+
 openmediavault-omvextrasorg (4.0.2) stable; urgency=low
 
   * Install repo keys to /etc/apt/trusted.gpg.d/
