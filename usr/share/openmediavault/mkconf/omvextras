@@ -60,6 +60,10 @@ update()
     /bin/rm -f ${OMVEXTRASAPTPREFS}
 
     cat <<EOF > ${OMVEXTRASAPTPREFS}
+Package: virtualbox*
+Pin: release a=stretch-backports
+Pin-Priority: 500
+
 Package: zfs*
 Pin: release a=stretch-backports
 Pin-Priority: 500
