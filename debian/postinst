@@ -23,36 +23,22 @@ set -e
 
 case "$1" in
     configure)
+        # Activate package triggers.
+        dpkg-trigger update-fixperms
+        dpkg-trigger update-locale
+
         if dpkg --compare-versions "$2" lt-nl "4.0.1"; then
             if omv_config_exists "/config/system/omvextras"; then
                 omv_config_delete "/config/system/omvextras"
             fi
         fi
 
-        if ! omv_config_exists "/config/system/omvextras"; then
-            echo "Initialize configuration"
-            default_repos=$(cat /etc/omvextras/default_repos.xml | sed -e 's/^[ \t]*//' | tr '\n' ' ')
-            omv_config_add_node_data "/config/system" "omvextras" "${default_repos}"
+        # Initialize and migrate configuration database.
+        echo "Updating configuration database ..."
+        omv-confdbadm create "conf.system.omvextras"
+        if [ -n "$2" ]; then
+            omv-confdbadm migrate "conf.system.omvextras" "${2}"
         fi
-
-        # change plex repo based on architecture
-        if [[ $(arch) == arm* ]]; then
-            plex_repo=""
-        else
-            plex_repo="https://downloads.plex.tv/repo/deb/ ./public main"
-        fi
-        omv_config_update "/config/system/omvextras/repos/repo[uuid='eafd450c-0e48-11e6-8349-000c290ea003']/repo2" "${plex_repo}"
-
-        # disable grub submenus on systems that use grub
-        if [ -f /usr/sbin/update-grub ]; then
-            omv-mkconf omvextras disablesubmenu
-        fi
-
-        # rewrite omv-extras .list file
-        omv-mkconf omvextras update
-
-        dpkg-trigger update-fixperms
-        dpkg-trigger update-locale
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

@@ -1,0 +1,225 @@
+#!/bin/bash
+#
+# @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
+# @author    Volker Theile <volker.theile@openmediavault.org>
+# @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
+# @copyright Copyright (c) 2009-2013 Volker Theile
+# @copyright Copyright (c) 2013-2017 OpenMediaVault Plugin Developers
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+set -e
+
+ISO_PATH="/boot"
+GRUB_CLONEZILLA="/etc/grub.d/42_clonezilla"
+CLONEZILLA_VERSION="2.3.2-22"
+CLONEZILLA_ISO="clonezilla-live-${CLONEZILLA_VERSION}-i686-pae.iso"
+
+GRUB_SYSRESCCD="/etc/grub.d/42_sysresccd"
+SYSRESCCD_VERSION="5.1.0"
+SYSRESCCD_ISO="systemrescuecd-x86-${SYSRESCCD_VERSION}.iso"
+
+GRUB_GPARTEDLIVE="/etc/grub.d/42_gpartedlive"
+GPARTEDLIVE_VERSION="0.29.0-1"
+GPARTEDLIVE_ISO="gparted-live-${GPARTEDLIVE_VERSION}-i686.iso"
+
+GRUB="/etc/default/grub"
+GRUB_BACKUP="grub.bak"
+GRUB_CFG="/boot/grub/grub.cfg"
+TFILE="/tmp/grub"
+
+installclonezilla()
+{
+    echo "Installing Clonezilla..."
+    if [ ! -f "${ISO_PATH}/${CLONEZILLA_ISO}" ]; then
+        rm -f ${ISO_PATH}/clonezilla*.iso
+        wget "https://downloads.sourceforge.net/project/clonezilla/clonezilla_live_stable/${CLONEZILLA_VERSION}/${CLONEZILLA_ISO}" -O ${ISO_PATH}/${CLONEZILLA_ISO} 2>&1
+    fi
+
+    cat <<EOF > ${GRUB_CLONEZILLA}
+#!/bin/sh
+exec tail -n +3 \$0
+menuentry 'Clonezilla Live' {
+  set isofile="${ISO_PATH}/${CLONEZILLA_ISO}"
+  loopback loop \$isofile
+  linux (loop)/live/vmlinuz boot=live live-config noswap nolocales edd=on nomodeset ocs_live_run="ocs-live-general" ocs_live_extra_param="" keyboard-layouts="" ocs_live_batch="no" locales="" ocs_daemonon="ssh" vga=788 nosplash toram=filesystem.squashfs findiso=\$isofile
+  initrd (loop)/live/initrd.img
+}
+EOF
+
+    chmod 755 ${GRUB_CLONEZILLA}
+    update-grub
+}
+
+installsysresccd()
+{
+    if [ ! -f "${ISO_PATH}/${SYSRESCCD_ISO}" ]; then
+        rm -f ${ISO_PATH}/systemrescuecd*.iso
+        wget "https://sourceforge.net/projects/systemrescuecd/files/sysresccd-x86/${SYSRESCCD_VERSION}/${SYSRESCCD_ISO}/download" -O ${ISO_PATH}/${SYSRESCCD_ISO} 2>&1
+    fi
+
+    if [[ $(arch) == x86_64* ]]; then
+        rescue="64"
+    else
+        rescue="32"
+    fi
+
+    cat <<EOF > ${GRUB_SYSRESCCD}
+#!/bin/sh
+exec tail -n +3 \$0
+menuentry 'SystemRescueCD' {
+  set isofile="${ISO_PATH}/${SYSRESCCD_ISO}"
+  loopback loop \$isofile
+  linux (loop)/isolinux/rescue${rescue} nomodeset setkmap=us rootpass=openmediavault docache isoloop=\$isofile
+  initrd (loop)/isolinux/initram.igz
+}
+EOF
+
+    chmod 755 ${GRUB_SYSRESCCD}
+    update-grub
+}
+
+installgpartedlive()
+{
+    if [ ! -f "${ISO_PATH}/${GPARTEDLIVE_ISO}" ]; then
+        rm -f ${ISO_PATH}/gparted-live*.iso
+        wget "https://downloads.sourceforge.net/gparted/${GPARTEDLIVE_ISO}" -O ${ISO_PATH}/${GPARTEDLIVE_ISO} 2>&1
+    fi
+
+    cat <<EOF > ${GRUB_GPARTEDLIVE}
+#!/bin/sh
+exec tail -n +3 \$0
+menuentry 'GParted Live' {
+  set isofile="${ISO_PATH}/${GPARTEDLIVE_ISO}"
+  loopback loop \$isofile
+  linux (loop)/live/vmlinuz boot='live' union='overlay' username='user' config components noswap noeject toram='filesystem.squashfs' ip='' nosplash findiso=\$isofile
+  initrd (loop)/live/initrd.img
+}
+EOF
+
+    chmod 755 ${GRUB_GPARTEDLIVE}
+    update-grub
+}
+
+rebootclonezilla()
+{
+    if [ ! -f "${ISO_PATH}/${CLONEZILLA_ISO}" ]; then
+        echo "Please click on Install button."
+    else
+        DEFAULT=$(cat ${GRUB} | grep GRUB_DEFAULT | cut -d= -f2)
+
+        disablesubmenu
+
+        if grep -q 'submenu' ${GRUB_CFG}; then
+            ENTRY=$(cat ${GRUB_CFG} | grep '^menuentry ' | grep -n Clonezilla | cut -f1 -d:)
+        else
+            ENTRY=$(($(cat ${GRUB_CFG} | grep 'menuentry ' | grep -n Clonezilla | cut -f1 -d:)-1))
+        fi
+
+        echo "Configuring grub to boot once from Clonezilla iso...  ${ENTRY}"
+
+        perl -p -i -e "s/GRUB_DEFAULT=.*/GRUB_DEFAULT=saved/g" ${GRUB}
+        grub-set-default ${DEFAULT}
+        update-grub
+        grub-reboot ${ENTRY}
+    fi
+}
+
+rebootsysresccd()
+{
+    if [ ! -f "${ISO_PATH}/${SYSRESCCD_ISO}" ]; then
+        echo "Please click on Install button."
+    else
+        DEFAULT=$(cat ${GRUB} | grep GRUB_DEFAULT | cut -d= -f2)
+
+        disablesubmenu
+
+        if grep -q 'submenu' ${GRUB_CFG}; then
+            ENTRY=$(cat ${GRUB_CFG} | grep '^menuentry ' | grep -n SystemRescueCD | cut -f1 -d:)
+        else
+            ENTRY=$(($(cat ${GRUB_CFG} | grep 'menuentry ' | grep -n SystemRescueCD | cut -f1 -d:)-1))
+        fi
+
+        echo "Configuring grub to boot once from SystemRescueCD iso...  ${ENTRY}"
+
+        perl -p -i -e "s/GRUB_DEFAULT=.*/GRUB_DEFAULT=saved/g" ${GRUB}
+        grub-set-default ${DEFAULT}
+        update-grub
+        grub-reboot ${ENTRY}
+    fi
+}
+
+rebootgpartedlive()
+{
+    if [ ! -f "${ISO_PATH}/${GPARTEDLIVE_ISO}" ]; then
+        echo "Please click on Install button."
+    else
+        DEFAULT=$(cat ${GRUB} | grep GRUB_DEFAULT | cut -d= -f2)
+
+        disablesubmenu
+
+        if grep -q 'submenu' ${GRUB_CFG}; then
+            ENTRY=$(cat ${GRUB_CFG} | grep '^menuentry ' | grep -n GParted | cut -f1 -d:)
+        else
+            ENTRY=$(($(cat ${GRUB_CFG} | grep 'menuentry ' | grep -n GParted | cut -f1 -d:)-1))
+        fi
+
+        echo "Configuring grub to boot once from GParted Live iso...  ${ENTRY}"
+
+        perl -p -i -e "s/GRUB_DEFAULT=.*/GRUB_DEFAULT=saved/g" ${GRUB}
+        grub-set-default ${DEFAULT}
+        update-grub
+        grub-reboot ${ENTRY}
+    fi
+}
+
+disablesubmenu()
+{
+    if ! grep -q 'GRUB_DISABLE_SUBMENU' ${GRUB}; then
+        echo "GRUB_DISABLE_SUBMENU=y" >> ${GRUB}
+        update-grub
+    fi
+}
+
+case $1 in
+    disablesubmenu)
+        disablesubmenu
+    ;;
+
+    installcz)
+        installclonezilla
+    ;;
+
+    installgp)
+        installgpartedlive
+    ;;
+
+    installsys)
+        installsysresccd
+    ;;
+
+    rebootcz)
+        rebootclonezilla
+    ;;
+
+    rebootgp)
+        rebootgpartedlive
+    ;;
+
+    rebootsys)
+        rebootsysresccd
+    ;;
+esac
+
+exit 0

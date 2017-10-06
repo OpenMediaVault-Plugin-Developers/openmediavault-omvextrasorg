@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# @license  http://www.gnu.org/licenses/gpl.html GPL Version 3
-# @author   OpenMediaVault Plugin Developers <plugins@omv-extras.org>
-# @author   Volker Theile <volker.theile@openmediavault.org>
-# @copyright Copyright (c) 2013-2015 OpenMediaVault Plugin Developers
+# @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
+# @author    Volker Theile <volker.theile@openmediavault.org>
+# @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
 # @copyright Copyright (c) 2009-2013 Volker Theile
+# @copyright Copyright (c) 2013-2017 OpenMediaVault Plugin Developers
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -21,10 +21,9 @@
 
 set -e
 
-if [ "$1" = "purge" ]; then
-    if [ -x /usr/bin/apt-key ]; then
-        apt-key del 30B2308A
-    fi
-fi
+. /usr/share/openmediavault/scripts/helper-functions
+
+# make config file
+omv-mkconf apt
 
 exit 0

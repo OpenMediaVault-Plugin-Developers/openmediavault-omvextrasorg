@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (4.1.0) stable; urgency=low
+
+  * Move sources list creation to apt module
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 05 Oct 2017 19:34:24 -0500
+
 openmediavault-omvextrasorg (4.0.5) stable; urgency=low
 
   * Pin virtualbox

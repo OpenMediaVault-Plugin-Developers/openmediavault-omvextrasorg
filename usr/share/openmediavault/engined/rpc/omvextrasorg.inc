@@ -94,6 +94,19 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $db = \OMV\Config\Database::getInstance();
         $db->set($object);
 
+        // Set apt module to dirty
+        $dispatcher = \OMV\Engine\Notify\Dispatcher::getInstance();
+        $dispatcher->notify(OMV_NOTIFY_MODIFY,
+            'org.openmediavault.conf.system.apt.distribution');
+
+        // Apply the changes immediatelly (no user interaction is wanted).
+        \OMV\Rpc\Rpc::call("Config", "applyChanges", [
+            "modules" => [ "apt" ],
+            "force" => TRUE
+        ], $context);
+
+        \OMV\Rpc\Rpc::call('Apt', 'update', NULL, $context);
+
           // Return the configuration object.
         return $object->getAssoc();
     }
@@ -122,7 +135,7 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         // Check if the module is marked as dirty. Abort this RPC
         // immediatelly in this case, otherwise the added/removed
         // repositories will not be included/excluded.
-        if ($this->isModuleDirty('omvextras'))
+        if ($this->isModuleDirty('apt'))
             throw new \OMV\Config\ConfigDirtyException();
         return \OMV\Rpc\Rpc::call('Apt', 'update', NULL, $context);
     }
@@ -134,8 +147,9 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
 
         // Get architecture
         $object = [];
-        $cmd = 'export LANG=C; dpkg --print-architecture';
-        exec($cmd, $output);
+        $cmd = new \OMV\System\Process('dpkg --print-architecture');
+        $cmd->execute($output);
+
         $object['arch'] = strtolower($output[0]);
 
         return $object;
@@ -150,8 +164,10 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $grub_default = '/etc/default/grub';
         $line_grub = 'GRUB_DEFAULT=';
 
-        $cmd = sprintf('export LANG=C; cat %s | grep %s', $grub_default, $line_grub);
-        exec($cmd, $output);
+        $cmd2 = sprintf('cat %s | grep %s', $grub_default, $line_grub);
+        $cmd = new \OMV\System\Process($cmd2);
+        $cmd->execute($output);
+
         $object['kernels'] = intval(str_replace($line_grub, '', $output[0]));
 
         return $object;
@@ -172,8 +188,8 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $this->validateMethodParams($params, 'rpc.common.getlist');
 
         // Get configuration data.
-        $cmd = 'export LANG=C; cat /boot/grub/grub.cfg | grep ^menuentry';
-        exec($cmd, $output);
+        $cmd = new \OMV\System\Process('cat /boot/grub/grub.cfg | grep ^menuentry');
+        $cmd->execute($output);
 
         $kernels = [];
         foreach ($output as $kernelk => $kernelv) {
@@ -200,14 +216,15 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
 
         // Set boot kernel
-        $cmd = sprintf('export LANG=C; perl -p -i -e "s/GRUB_DEFAULT=.*/GRUB_DEFAULT=%s/g" /etc/default/grub', $params['key']);
-        exec($cmd, $output);
+        $cmdArgs = sprintf('-p -i -e "s/GRUB_DEFAULT=.*/GRUB_DEFAULT=%s/g" /etc/default/grub', $params['key']);
+        $cmd = new \OMV\System\Process('perl', $cmdArgs);
+        $cmd->execute($output);
 
-        $cmd = sprintf('export LANG=C; grub-set-default %s', $params['key']);
-        exec($cmd, $output);
+        $cmd = new \OMV\System\Process('grub-set-default', $params['key']);
+        $cmd->execute($output);
 
-        $cmd = 'export LANG=C; update-grub';
-        exec($cmd, $output);
+        $cmd = new \OMV\System\Process('update-grub');
+        $cmd->execute($output);
     }
 
     public function doCommand($params, $context)
@@ -221,8 +238,12 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         // Create the background process.
         return $this->execBgProc(function($bgStatusFilename, $bgOutputFilename)
             use ($params) {
-                $cmd = new \OMV\System\Process('omv-mkconf', 'omvextras', $params['command']);
-                //$cmd->setRedirect2to1(true);
+                if ($params['command'] == 'aptclean') {
+                    $cmdBin = 'omv-aptclean';
+                } else {
+                    $cmdBin = 'omv-grubiso';
+                }
+                $cmd = new \OMV\System\Process($cmdBin, $params['command']);
                 $cmdLine = $cmd->getCommandLine();
                 if (0 !== $this->exec($cmdLine, $output, $bgOutputFilename))
                     throw new \OMV\ExecException($cmdLine, $output);

@@ -97,7 +97,6 @@
 				"type": "string",
 				"enum": [
 					"aptclean",
-					"installpvekernel",
 					"installcz",
 					"installgp",
 					"installsys",

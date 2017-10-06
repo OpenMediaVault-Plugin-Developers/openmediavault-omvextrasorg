@@ -1,7 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 #
 # @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
+# @author    Volker Theile <volker.theile@openmediavault.org>
 # @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
+# @copyright Copyright (c) 2009-2013 Volker Theile
 # @copyright Copyright (c) 2013-2017 OpenMediaVault Plugin Developers
 #
 # This program is free software: you can redistribute it and/or modify
@@ -21,27 +23,26 @@ set -e
 
 . /usr/share/openmediavault/scripts/helper-functions
 
-rm -f /etc/apt/preferences.d/99omv-extras-org*
-rm -f /etc/apt/sources.list.d/omv-extras-org*.list
+if ! omv_config_exists "/config/system/omvextras"; then
+    echo "Initialize configuration"
+    default_repos=$(cat /etc/omvextras/default_repos.xml | sed -e 's/^[ \t]*//' | tr '\n' ' ')
+    omv_config_add_node_data "/config/system" "omvextras" "${default_repos}"
+fi
 
-case "$1" in
-	purge)
-        # Remove the configuration data.
-		echo "Cleaning up configuration database ..."
-        if omv_config_exists "/config/system/omvextras"; then
-            omv_config_delete "/config/system/omvextras"
-        fi
+# change plex repo based on architecture
+if [[ $(arch) == arm* ]]; then
+    plex_repo=""
+else
+    plex_repo="https://downloads.plex.tv/repo/deb/ ./public main"
+fi
+omv_config_update "/config/system/omvextras/repos/repo[uuid='eafd450c-0e48-11e6-8349-000c290ea003']/repo2" "${plex_repo}"
 
-        omv-mkconf apt
-	;;
+# disable grub submenus on systems that use grub
+if [ -f /usr/sbin/update-grub ]; then
+    omv-grubiso disablesubmenu
+fi
 
-	remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
-	;;
-
-	*)
-		echo "postrm called with unknown argument '$1'" >&2
-		exit 1
-	;;
-esac
+# write list file
+omv-mkconf apt
 
 exit 0
