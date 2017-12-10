@@ -99,7 +99,7 @@
     <uuid>9b49b9a4-82d8-11e7-b73c-c7a588ae65a8</uuid>
     <enable>0</enable>
     <name>Teamviewer</name>
-    <repo1>deb http://linux.teamviewer.com/deb stable tv12</repo1>
+    <repo1>deb http://linux.teamviewer.com/deb stable main</repo1>
     <repo2>https://dl.bintray.com/openmediavault-plugin-developers/arrakis-teamviewer stretch main</repo2>
     <repo3></repo3>
     <key1></key1>
