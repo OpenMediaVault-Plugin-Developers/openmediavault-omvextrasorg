@@ -6,13 +6,14 @@
 # Alexander Savchenko, 2013
 # Alexander Savchenko, 2014-2015
 # Артур Мудрых <arturmon82@gmail.com>, 2013,2015-2016
+# Артур Мудрых <arturmon82@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-16 17:25-0600\n"
-"PO-Revision-Date: 2017-02-16 23:25+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2017-09-19 20:49+0000\n"
+"Last-Translator: Артур Мудрых <arturmon82@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,13 +34,13 @@ msgid "Cleaning Apt Files and Lists..."
 msgstr "Очистка Apt файлов и списков ..."
 
 msgid "Clonezilla"
-msgstr ""
+msgstr "Clonezilla"
 
 msgid "Comment"
 msgstr "Комментарий"
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
-msgstr ""
+msgstr "По умолчанию имя пользователя: <b>user</b> и пароль: <b>live</b>"
 
 msgid "Done..."
 msgstr "Готово..."
@@ -47,17 +48,17 @@ msgstr "Готово..."
 msgid ""
 "Downloads Clonezilla ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr ""
+msgstr "Загружает Clonezilla ISO и настраивает загрузчик grub, чтобы разрешить загрузку с ISO."
 
 msgid ""
 "Downloads GParted Live ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr ""
+msgstr "Загружает GParted Live ISO и настраивает загрузчик grub, чтобы разрешить загрузку с ISO."
 
 msgid ""
 "Downloads SystemRescuecd ISO and configures grub bootloader to allow booting"
 " from ISO."
-msgstr ""
+msgstr "Загружает SystemRescuecd ISO и настраивает загрузчик grub, чтобы разрешить загрузку с ISO."
 
 msgid "Edit repo"
 msgstr "Редактировать репозиторий"
@@ -69,54 +70,54 @@ msgid "Enabled"
 msgstr "Включенно"
 
 msgid "GParted Live"
-msgstr ""
+msgstr "GParted Live"
 
 msgid "IP Address will be set by DHCP."
-msgstr ""
+msgstr "IP-адрес будет установлен DHCP."
 
 msgid ""
 "IP Address will be set by DHCP.  Using static DHCP is recommended for "
 "headless servers."
-msgstr ""
+msgstr "IP-адрес будет получен по DHCP. Использование статического DHCP рекомендуется для серверов без основы."
 
 msgid "ISO uses approximately 139 Mb in /boot directory on OS drive."
-msgstr ""
+msgstr "ISO использует примерно 139 МБ в /boot каталог на диске ОС."
 
 msgid "ISO uses approximately 219 Mb in /boot directory on OS drive."
-msgstr ""
+msgstr "ISO использует примерно 219 МБ в /boot каталог на диске ОС."
 
 msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
-msgstr ""
+msgstr "ISO использует примерно 381 МБ в /boot каталог на диске ОС."
 
 msgid "Install Clonezilla"
-msgstr ""
+msgstr "Установить Clonezilla"
 
 msgid "Install Clonezilla ISO ..."
-msgstr ""
+msgstr "Установка Clonezilla ISO ..."
 
 msgid "Install GParted Live"
-msgstr ""
+msgstr "Установить GParted Live"
 
 msgid "Install GParted Live ISO ..."
-msgstr ""
+msgstr "Установка GParted Live ISO ..."
 
 msgid "Install Proxmox kernel"
-msgstr ""
+msgstr "Установить Proxmox kernel"
 
 msgid "Install Proxmox kernel ..."
-msgstr ""
+msgstr "Установка Proxmox kernel ..."
 
 msgid "Install SystemRescueCD"
-msgstr ""
+msgstr "Установить SystemRescueCD"
 
 msgid "Install SystemRescueCD ISO ..."
-msgstr ""
+msgstr "Установка SystemRescueCD ISO ..."
 
 msgid "Installed Kernels"
 msgstr "Установленные ядра"
 
 msgid "Installing the Proxmox kernel will not uninstall other kernels."
-msgstr ""
+msgstr "Установка ядра Proxmox не приведет к удалению других ядер."
 
 msgid "Kernel"
 msgstr "Ядро"
@@ -131,74 +132,74 @@ msgid "Name"
 msgstr "Имя"
 
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
-msgstr ""
+msgstr "Не рекомендуется для серверов без головы. По умолчанию SSH не включен."
 
 msgid "OMV-Extras"
-msgstr ""
+msgstr "OMV-Extras"
 
 msgid "Package"
-msgstr ""
+msgstr "Пакет"
 
 msgid "Permanent"
-msgstr ""
+msgstr "Постоянный"
 
 msgid "Pin"
-msgstr ""
+msgstr "Пин"
 
 msgid "Priority"
-msgstr ""
+msgstr "Приоритет"
 
 msgid "Reboot to Clonezilla ..."
-msgstr ""
+msgstr "Перезагрузиться в Clonezilla ..."
 
 msgid "Reboot to Clonezilla Once"
-msgstr ""
+msgstr "Перезагрузиться в Clonezilla Once"
 
 msgid "Reboot to GParted Live ..."
-msgstr ""
+msgstr "Перезагрузиться в GParted Live ..."
 
 msgid "Reboot to GParted Live Once"
-msgstr ""
+msgstr "Перезагрузиться в GParted Live Once"
 
 msgid "Reboot to SystemRescueCD ..."
-msgstr ""
+msgstr "Перезагрузиться в SystemRescueCD ..."
 
 msgid "Reboot to SystemRescueCD Once"
-msgstr ""
+msgstr "Перезагрузиться в SystemRescueCD Once"
 
 msgid "Repo"
-msgstr ""
+msgstr "Репозиторий"
 
 msgid "Repo #1"
-msgstr ""
+msgstr "Репозиторий #1"
 
 msgid "Repo #2"
-msgstr ""
+msgstr "Репозиторий #2"
 
 msgid "Repo #3"
-msgstr ""
+msgstr "Репозиторий #3"
 
 msgid "Repos"
-msgstr ""
+msgstr "Репозитории"
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
 "password: <b>openmediavault</b>"
-msgstr ""
+msgstr "Сервер SSH включен по умолчанию. Войти с именем пользователя: <b>root</ b> и пароль: <b>openmediavault</ b>"
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>user</b> and "
 "password: <b>live</b>"
-msgstr ""
+msgstr "Сервер SSH включен по умолчанию. Войти с логином: <b>пользователь</ b> и пароль: <b>live</ b>"
 
 msgid "Set as default boot kernel"
 msgstr "Установить как ядро загрузки по умолчанию"
 
 msgid "Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time."
-msgstr ""
+msgstr "Устанавливает загрузчик grub для загрузки из Clonezilla ISO <b>ONE</ b>."
 
 msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
-msgstr ""
+msgstr "Устанавливает загрузчик grub для загрузки GParted Live ISO <b>ONE</ b>."
 
 msgid "Setting boot kernel ..."
 msgstr "Выбор загружаемого ядра ..."
@@ -210,7 +211,7 @@ msgid ""
 msgstr "Выбор неправильного ядра загрузки по умолчанию может привести к недоступности системы. Меню загрузки все еще будут доступно для выбора другого ядра."
 
 msgid "SystemRescueCD"
-msgstr ""
+msgstr "SystemRescueCD"
 
 msgid "Update"
 msgstr "Обновить"
@@ -218,8 +219,8 @@ msgstr "Обновить"
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
 "OpenMediaVault ssh key and need to be updated on the client system."
-msgstr ""
+msgstr "При подключении через SSH, ключ SSH будет отличаться от ключа SSH OpenMediaVault и должны быть обновлены на клиентской системе."
 
 msgid ""
 "When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
-msgstr ""
+msgstr "При удаленном входе в систему запустите clonezilla с помощью: <b>sudo clonezilla</ b>"

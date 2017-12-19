@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Damtux, 2013
-# Paolo Velati <paolo.velati@gmail.com>, 2014-2016
+# Paolo Velati <paolo.velati@gmail.com>, 2014-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-16 17:25-0600\n"
-"PO-Revision-Date: 2017-02-16 23:25+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2017-09-23 19:31+0000\n"
+"Last-Translator: Paolo Velati <paolo.velati@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,17 +46,17 @@ msgstr "Fatto..."
 msgid ""
 "Downloads Clonezilla ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr ""
+msgstr "Scarica ISO di Clonezilla e configura il bootloader grub per consentire l'avvio da ISO."
 
 msgid ""
 "Downloads GParted Live ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr ""
+msgstr "Scarica ISO di GParted Live e configura il bootloader grub per consentire l'avvio da ISO."
 
 msgid ""
 "Downloads SystemRescuecd ISO and configures grub bootloader to allow booting"
 " from ISO."
-msgstr ""
+msgstr "Scarica ISO di SystemRescuecd e configura il bootloader grub per consentire l'avvio da ISO."
 
 msgid "Edit repo"
 msgstr "Modifica repository"
@@ -71,51 +71,51 @@ msgid "GParted Live"
 msgstr "GParted Live"
 
 msgid "IP Address will be set by DHCP."
-msgstr ""
+msgstr "L'indirizzo IP sarà impostato da DHCP."
 
 msgid ""
 "IP Address will be set by DHCP.  Using static DHCP is recommended for "
 "headless servers."
-msgstr ""
+msgstr "L'indirizzo IP sarà impostato da DHCP. L'utilizzo di DHCP statico è consigliato per i server headless."
 
 msgid "ISO uses approximately 139 Mb in /boot directory on OS drive."
-msgstr ""
+msgstr "La ISO utilizza circa 139 MB nella directory /boot sul disco di sistema."
 
 msgid "ISO uses approximately 219 Mb in /boot directory on OS drive."
-msgstr ""
+msgstr "La ISO utilizza circa 219 MB nella directory /boot sul disco di sistema."
 
 msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
-msgstr ""
+msgstr "La ISO utilizza circa 381 MB nella directory /boot sul disco di sistema."
 
 msgid "Install Clonezilla"
 msgstr "Installa Clonezilla"
 
 msgid "Install Clonezilla ISO ..."
-msgstr ""
+msgstr "Installa ISO di Clonezilla ..."
 
 msgid "Install GParted Live"
 msgstr "Installa GParted Live"
 
 msgid "Install GParted Live ISO ..."
-msgstr ""
+msgstr "Installa ISO di GParted Live"
 
 msgid "Install Proxmox kernel"
-msgstr ""
+msgstr "Installa kernel Proxmox"
 
 msgid "Install Proxmox kernel ..."
-msgstr ""
+msgstr "Installa kernel Proxmox ..."
 
 msgid "Install SystemRescueCD"
 msgstr "Installa SystemRescueCD"
 
 msgid "Install SystemRescueCD ISO ..."
-msgstr ""
+msgstr "Installa ISO di SystemRescueCD ..."
 
 msgid "Installed Kernels"
 msgstr "Kernel installati"
 
 msgid "Installing the Proxmox kernel will not uninstall other kernels."
-msgstr ""
+msgstr "Installare il kernel Proxmox non disinstallerà gli altri kernel."
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -130,7 +130,7 @@ msgid "Name"
 msgstr "Nome"
 
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
-msgstr ""
+msgstr "Non consigliato per i server headless. SSH non è abilitato per impostazione predefinita."
 
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
@@ -142,28 +142,28 @@ msgid "Permanent"
 msgstr "Permanente"
 
 msgid "Pin"
-msgstr ""
+msgstr "Blocca"
 
 msgid "Priority"
 msgstr "Priorità"
 
 msgid "Reboot to Clonezilla ..."
-msgstr ""
+msgstr "Riavvia su Clonezilla ..."
 
 msgid "Reboot to Clonezilla Once"
-msgstr ""
+msgstr "Riavvia su Clonezilla una volta sola"
 
 msgid "Reboot to GParted Live ..."
-msgstr ""
+msgstr "Riavvia su GParted Live ..."
 
 msgid "Reboot to GParted Live Once"
-msgstr ""
+msgstr "Riavvia su GParted Live una volta sola"
 
 msgid "Reboot to SystemRescueCD ..."
-msgstr ""
+msgstr "Riavvia su SystemRescueCD ..."
 
 msgid "Reboot to SystemRescueCD Once"
-msgstr ""
+msgstr "Riavvia su SystemRescueCD una volta sola"
 
 msgid "Repo"
 msgstr "Repository"
@@ -183,21 +183,21 @@ msgstr "Repository"
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
 "password: <b>openmediavault</b>"
-msgstr ""
+msgstr "Il server SSH è abilitato per impostazione predefinita. Accedi con username: <b>root</b> e password: <b>openmediavault</b>"
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>user</b> and "
 "password: <b>live</b>"
-msgstr ""
+msgstr "Il server SSH è abilitato per impostazione predefinita. Accedi con username: <b>user</b> e password: <b>live</b>"
 
 msgid "Set as default boot kernel"
 msgstr "Imposta come kernel di avvio predefinito"
 
 msgid "Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time."
-msgstr ""
+msgstr "Imposta il bootloader di grub per l'avvio da Clonezilla <b>UNA</b> volta."
 
 msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
-msgstr ""
+msgstr "Imposta il bootloader di grub per l'avvio da GParted Live <b>UNA</b> volta."
 
 msgid "Setting boot kernel ..."
 msgstr "Impostazione kernel di avvio ..."
@@ -206,7 +206,7 @@ msgid ""
 "Setting the wrong default boot kernel may cause the system to be "
 "inaccessible.  The boot menu will still be available to select a different "
 "kernel."
-msgstr ""
+msgstr "L'impostazione errata del kernel di avvio può rendere non accessibile il sistema. Il menu di avvio sarà ancora disponibile per selezionare un kernel diverso."
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
@@ -217,8 +217,8 @@ msgstr "Aggiorna"
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
 "OpenMediaVault ssh key and need to be updated on the client system."
-msgstr ""
+msgstr "Quando ci si connette tramite ssh, la chiave ssh sarà diversa dalla chiave di OpenMediaVault e deve essere aggiornato sul sistema client."
 
 msgid ""
 "When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
-msgstr ""
+msgstr "Quando si accede in remoto, avviare clonazilla con: <b>sudo clonezilla</b>"

@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Axel Cantenys <clexanis@gmail.com>, 2017
 # Zacharie ARNAISE <spacebrain.damage@gmail.com>, 2013,2015
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-16 17:25-0600\n"
-"PO-Revision-Date: 2017-02-16 23:25+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2017-11-04 18:50+0000\n"
+"Last-Translator: Axel Cantenys <clexanis@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,25 +20,25 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 msgid "Add repo"
-msgstr ""
+msgstr "Ajouter un dépôt"
 
 msgid "Apt Clean"
-msgstr ""
+msgstr "Nettoyer APT"
 
 msgid "Checking for new updates ..."
 msgstr "Recherche de mises à jour..."
 
 msgid "Cleaning Apt Files and Lists..."
-msgstr ""
+msgstr "Nettoyage des fichiers d'APT et des listes ..."
 
 msgid "Clonezilla"
-msgstr ""
+msgstr "Clonezilla"
 
 msgid "Comment"
 msgstr "Commentaire"
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
-msgstr ""
+msgstr "Nom d'utilisateur par défaut : «<b>user</b>», et mot de passe : «<b>live</b>»."
 
 msgid "Done..."
 msgstr "Terminé..."
@@ -45,82 +46,82 @@ msgstr "Terminé..."
 msgid ""
 "Downloads Clonezilla ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr ""
+msgstr "Télécharge l'ISO de Clonezilla et configure le gestionnaire de démarrage GRUB pour permettre le démarrage à partir de l'ISO."
 
 msgid ""
 "Downloads GParted Live ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr ""
+msgstr "Télécharge l'ISO de GParted Live et configure le gestionnaire de démarrage GRUB pour permettre le démarrage à partir de l'ISO."
 
 msgid ""
 "Downloads SystemRescuecd ISO and configures grub bootloader to allow booting"
 " from ISO."
-msgstr ""
+msgstr "Télécharge l'ISO de SystemRescueCd et configure le gestionnaire de démarrage GRUB pour permettre le démarrage à partir de l'ISO."
 
 msgid "Edit repo"
-msgstr ""
+msgstr "Éditer un dépôt"
 
 msgid "Enable"
 msgstr "Activer"
 
 msgid "Enabled"
-msgstr ""
+msgstr "Activé"
 
 msgid "GParted Live"
-msgstr ""
+msgstr "GParted Live"
 
 msgid "IP Address will be set by DHCP."
-msgstr ""
+msgstr "L'adresse IP sera définie par DHCP."
 
 msgid ""
 "IP Address will be set by DHCP.  Using static DHCP is recommended for "
 "headless servers."
-msgstr ""
+msgstr "L'utilisation de DHCP statique est recommandée pour les serveurs sans affichage."
 
 msgid "ISO uses approximately 139 Mb in /boot directory on OS drive."
-msgstr ""
+msgstr "L'ISO utilise environ 139 Mo dans le répertoire /boot sur le lecteur de système d'exploitation."
 
 msgid "ISO uses approximately 219 Mb in /boot directory on OS drive."
-msgstr ""
+msgstr "L'ISO utilise environ 219 Mo dans le répertoire /boot sur le lecteur de système d'exploitation."
 
 msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
-msgstr ""
+msgstr "L'ISO utilise environ 381 Mo dans le répertoire /boot sur le lecteur de système d'exploitation."
 
 msgid "Install Clonezilla"
-msgstr ""
+msgstr "Installer Clonezilla"
 
 msgid "Install Clonezilla ISO ..."
-msgstr ""
+msgstr "Installation de l'ISO de Clonezilla ..."
 
 msgid "Install GParted Live"
-msgstr ""
+msgstr "Installer GParted Live"
 
 msgid "Install GParted Live ISO ..."
-msgstr ""
+msgstr "Installation de l'ISO de GParted Live ..."
 
 msgid "Install Proxmox kernel"
-msgstr ""
+msgstr "Installer le noyau de Proxmod"
 
 msgid "Install Proxmox kernel ..."
-msgstr ""
+msgstr "Installation du noyau de Proxmod ..."
 
 msgid "Install SystemRescueCD"
-msgstr ""
+msgstr "Installer SystemRescueCd"
 
 msgid "Install SystemRescueCD ISO ..."
-msgstr ""
+msgstr "Installation de l'ISO de SystemRescueCd ..."
 
 msgid "Installed Kernels"
-msgstr ""
+msgstr "Noyaux installés"
 
 msgid "Installing the Proxmox kernel will not uninstall other kernels."
-msgstr ""
+msgstr "L'installation du noyau de Proxmox ne désinstalle pas les autres noyaux."
 
 msgid "Kernel"
-msgstr "Kernel"
+msgstr "Noyau"
 
 msgid "Kernels"
-msgstr "Kernels"
+msgstr "Noyaux"
 
 msgid "Key"
 msgstr "Clé"
@@ -129,86 +130,86 @@ msgid "Name"
 msgstr "Nom"
 
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
-msgstr ""
+msgstr "Non recommandé pour les serveurs sans affichage. SSH n'est pas activé par défaut."
 
 msgid "OMV-Extras"
-msgstr ""
+msgstr "OMV-Extras"
 
 msgid "Package"
-msgstr ""
+msgstr "Paquet"
 
 msgid "Permanent"
-msgstr ""
+msgstr "Permanent"
 
 msgid "Pin"
-msgstr ""
+msgstr "Épingle"
 
 msgid "Priority"
-msgstr ""
+msgstr "Priorité"
 
 msgid "Reboot to Clonezilla ..."
-msgstr ""
+msgstr "Redémarrage vers Clonezilla ..."
 
 msgid "Reboot to Clonezilla Once"
-msgstr ""
+msgstr "Redémarrer une fois vers Clonezilla."
 
 msgid "Reboot to GParted Live ..."
-msgstr ""
+msgstr "Redémarrage vers GParted Live ..."
 
 msgid "Reboot to GParted Live Once"
-msgstr ""
+msgstr "Redémarrer une fois vers GParted Live."
 
 msgid "Reboot to SystemRescueCD ..."
-msgstr ""
+msgstr "Redémarrage vers SystemRescueCd ..."
 
 msgid "Reboot to SystemRescueCD Once"
-msgstr ""
+msgstr "Redémarrer une fois vers SystemRescueCd."
 
 msgid "Repo"
-msgstr ""
+msgstr "Dépôt"
 
 msgid "Repo #1"
-msgstr ""
+msgstr "Dépôt #1"
 
 msgid "Repo #2"
-msgstr ""
+msgstr "Dépôt #2"
 
 msgid "Repo #3"
-msgstr ""
+msgstr "Dépôt #3"
 
 msgid "Repos"
-msgstr ""
+msgstr "Dépôts"
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
 "password: <b>openmediavault</b>"
-msgstr ""
+msgstr "Le serveur SSH est activé par défaut. Connectez-vous avec le nom d'utilisateur : «<b>root</b>», et le mot de passe : «<b>openmediavault</b>»."
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>user</b> and "
 "password: <b>live</b>"
-msgstr ""
+msgstr "Le serveur SSH est activé par défaut. Connectez-vous avec le nom d'utilisateur : «<b>user</b>», et le mot de passe : «<b>live</b>»."
 
 msgid "Set as default boot kernel"
-msgstr ""
+msgstr "Définir comme noyau de démarrage par défaut"
 
 msgid "Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time."
-msgstr ""
+msgstr "Définit le gestionnaire de démarrage GRUB pour démarrer à partir de l'ISO de Clonezilla <b>ONE</b> fois."
 
 msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
-msgstr ""
+msgstr "Définit le gestionnaire de démarrage GRUB pour démarrer à partir de l'ISO de GParted Live <b>ONE</b> fois."
 
 msgid "Setting boot kernel ..."
-msgstr ""
+msgstr "Définition du noyau de démarrage ..."
 
 msgid ""
 "Setting the wrong default boot kernel may cause the system to be "
 "inaccessible.  The boot menu will still be available to select a different "
 "kernel."
-msgstr ""
+msgstr "Définir le mauvais noyau de démarrage par défaut peut rendre le système inaccessible. Le menu de démarrage sera toujours disponible pour sélectionner un noyau différent."
 
 msgid "SystemRescueCD"
-msgstr ""
+msgstr "SystemRescueCd"
 
 msgid "Update"
 msgstr "Mise à jour"
@@ -216,8 +217,8 @@ msgstr "Mise à jour"
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
 "OpenMediaVault ssh key and need to be updated on the client system."
-msgstr ""
+msgstr "Lors de la connexion via SSH, la clé SSH sera différente de la clé SSH d'OpenMediaVault et devra être mise à jour sur le système client."
 
 msgid ""
 "When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
-msgstr ""
+msgstr "Lorsque vous vous connectez à distance, démarrez clonezilla avec : «<b>sudo clonezilla</b>»."

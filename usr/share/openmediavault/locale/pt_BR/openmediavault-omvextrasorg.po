@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Marcelo Esteves <marcelopge@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-16 17:25-0600\n"
-"PO-Revision-Date: 2017-02-16 23:25+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2017-11-29 13:58+0000\n"
+"Last-Translator: Marcelo Esteves <marcelopge@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,13 +25,13 @@ msgid "Apt Clean"
 msgstr ""
 
 msgid "Checking for new updates ..."
-msgstr ""
+msgstr "Procurar novas atualizações ..."
 
 msgid "Cleaning Apt Files and Lists..."
 msgstr ""
 
 msgid "Clonezilla"
-msgstr ""
+msgstr "Clonezilla"
 
 msgid "Comment"
 msgstr ""
@@ -39,37 +40,37 @@ msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr ""
 
 msgid "Done..."
-msgstr ""
+msgstr "Feito..."
 
 msgid ""
 "Downloads Clonezilla ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr ""
+msgstr "Baixar a imagem ISO do Clonezilla e configurar o bootloader grub para iniciar a partir dessa imagem.."
 
 msgid ""
 "Downloads GParted Live ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr ""
+msgstr "Baixar a imagem ISO do GParted Live e configurar o bootloader grub para iniciar a partir dessa imagem.."
 
 msgid ""
 "Downloads SystemRescuecd ISO and configures grub bootloader to allow booting"
 " from ISO."
-msgstr ""
+msgstr "Baixar a imagem ISO do SystemRescuecd e configurar o bootloader grub para iniciar a partir dessa imagem.."
 
 msgid "Edit repo"
 msgstr ""
 
 msgid "Enable"
-msgstr ""
+msgstr "Habilitar"
 
 msgid "Enabled"
-msgstr ""
+msgstr "Ativo"
 
 msgid "GParted Live"
-msgstr ""
+msgstr "GParted Live"
 
 msgid "IP Address will be set by DHCP."
-msgstr ""
+msgstr "O endereço IP será configurado por DHCP."
 
 msgid ""
 "IP Address will be set by DHCP.  Using static DHCP is recommended for "
@@ -77,7 +78,7 @@ msgid ""
 msgstr ""
 
 msgid "ISO uses approximately 139 Mb in /boot directory on OS drive."
-msgstr ""
+msgstr "A imagem ISO usa aproximadamente 139 MB do diretório /boot do sistema."
 
 msgid "ISO uses approximately 219 Mb in /boot directory on OS drive."
 msgstr ""
@@ -86,58 +87,58 @@ msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
 msgstr ""
 
 msgid "Install Clonezilla"
-msgstr ""
+msgstr "Instalar Clonezilla"
 
 msgid "Install Clonezilla ISO ..."
-msgstr ""
+msgstr "Instalar ISO do Clonezilla ..."
 
 msgid "Install GParted Live"
-msgstr ""
+msgstr "Instalar GParted Live"
 
 msgid "Install GParted Live ISO ..."
-msgstr ""
+msgstr "Instalar ISO do GParted Live ..."
 
 msgid "Install Proxmox kernel"
-msgstr ""
+msgstr "Instalar kernel Proxmox"
 
 msgid "Install Proxmox kernel ..."
-msgstr ""
+msgstr "Instalar kernel Proxmox ..."
 
 msgid "Install SystemRescueCD"
-msgstr ""
+msgstr "Instalar SystemRescueCD"
 
 msgid "Install SystemRescueCD ISO ..."
-msgstr ""
+msgstr "Instalar ISO do SystemRescueCD ..."
 
 msgid "Installed Kernels"
-msgstr ""
+msgstr "Kernels instalados"
 
 msgid "Installing the Proxmox kernel will not uninstall other kernels."
 msgstr ""
 
 msgid "Kernel"
-msgstr ""
+msgstr "Kernel"
 
 msgid "Kernels"
-msgstr ""
+msgstr "Kernels"
 
 msgid "Key"
 msgstr ""
 
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr ""
 
 msgid "OMV-Extras"
-msgstr ""
+msgstr "OMV-Extras"
 
 msgid "Package"
-msgstr ""
+msgstr "Pacote"
 
 msgid "Permanent"
-msgstr ""
+msgstr "Permanente"
 
 msgid "Pin"
 msgstr ""
@@ -146,37 +147,37 @@ msgid "Priority"
 msgstr ""
 
 msgid "Reboot to Clonezilla ..."
-msgstr ""
+msgstr "Reiniciar com Clonezilla ..."
 
 msgid "Reboot to Clonezilla Once"
 msgstr ""
 
 msgid "Reboot to GParted Live ..."
-msgstr ""
+msgstr "Reiniciar com GParted Live ..."
 
 msgid "Reboot to GParted Live Once"
 msgstr ""
 
 msgid "Reboot to SystemRescueCD ..."
-msgstr ""
+msgstr "Reiniciar com SystemRescueCD ..."
 
 msgid "Reboot to SystemRescueCD Once"
 msgstr ""
 
 msgid "Repo"
-msgstr ""
+msgstr "Repositório"
 
 msgid "Repo #1"
-msgstr ""
+msgstr "Repositório #1"
 
 msgid "Repo #2"
-msgstr ""
+msgstr "Repositório #2"
 
 msgid "Repo #3"
-msgstr ""
+msgstr "Repositório #3"
 
 msgid "Repos"
-msgstr ""
+msgstr "Repositórios"
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
@@ -189,7 +190,7 @@ msgid ""
 msgstr ""
 
 msgid "Set as default boot kernel"
-msgstr ""
+msgstr "Configurar como kernel padrão de inicialização"
 
 msgid "Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time."
 msgstr ""
@@ -198,7 +199,7 @@ msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr ""
 
 msgid "Setting boot kernel ..."
-msgstr ""
+msgstr "Configurando kernel de inicialização ..."
 
 msgid ""
 "Setting the wrong default boot kernel may cause the system to be "
@@ -207,10 +208,10 @@ msgid ""
 msgstr ""
 
 msgid "SystemRescueCD"
-msgstr ""
+msgstr "SystemRescueCD"
 
 msgid "Update"
-msgstr ""
+msgstr "Atualizar"
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "

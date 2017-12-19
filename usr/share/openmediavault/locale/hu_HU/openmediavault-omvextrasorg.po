@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Gyuris Gellért <bubu@ujevangelizacio.hu>, 2017
 # Grawens <szabolcs.szanyi@gmail.com>, 2014-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-16 17:25-0600\n"
-"PO-Revision-Date: 2017-02-16 23:25+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2017-09-20 00:58+0000\n"
+"Last-Translator: Gyuris Gellért <bubu@ujevangelizacio.hu>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,16 +20,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Add repo"
-msgstr "Tár hozzáadása"
+msgstr "Tároló hozzáadása"
 
 msgid "Apt Clean"
 msgstr "Apt törlés"
 
 msgid "Checking for new updates ..."
-msgstr "Új frissítések keresése ..."
+msgstr "Új frissítések keresése…"
 
 msgid "Cleaning Apt Files and Lists..."
-msgstr "Apt fájlok és listák ürítése..."
+msgstr "Apt fájlok és listák ürítése…"
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
@@ -40,81 +41,81 @@ msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Alapértelmezett felhasználónév: <b>felhasználó</b> és jelszó: <b>élő</b>"
 
 msgid "Done..."
-msgstr "Kész..."
+msgstr "Kész…"
 
 msgid ""
 "Downloads Clonezilla ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr ""
+msgstr "Clonezilla ISO-t letöltése és a GRUB rendszerbetöltő konfigurálása, hogy lehessen rendszert indítani az ISO-ról."
 
 msgid ""
 "Downloads GParted Live ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr ""
+msgstr "GParted Live ISO-t letöltése és a GRUB rendszerbetöltő konfigurálása, hogy lehessen rendszert indítani az ISO-ról."
 
 msgid ""
 "Downloads SystemRescuecd ISO and configures grub bootloader to allow booting"
 " from ISO."
-msgstr ""
+msgstr "SystemRescuecd ISO-t letöltése és a GRUB rendszerbetöltő konfigurálása, hogy lehessen rendszert indítani az ISO-ról."
 
 msgid "Edit repo"
-msgstr "Tár módosítás"
+msgstr "Tároló módosítás"
 
 msgid "Enable"
-msgstr "Bekapcsol"
+msgstr "Engedélyezés"
 
 msgid "Enabled"
-msgstr "Bekapcsolva"
+msgstr "Engedélyezve"
 
 msgid "GParted Live"
 msgstr "GParted Live"
 
 msgid "IP Address will be set by DHCP."
-msgstr ""
+msgstr "Az IP címet a DHCP fogja kiosztani."
 
 msgid ""
 "IP Address will be set by DHCP.  Using static DHCP is recommended for "
 "headless servers."
-msgstr ""
+msgstr "Az IP címet a DHCP fogja kiosztani. Statikus DHCP alkalmazása periféria nélküli kiszolgálóknál javasolt. "
 
 msgid "ISO uses approximately 139 Mb in /boot directory on OS drive."
-msgstr ""
+msgstr "Az ISO fájl kb. 139 Mb-ot foglal el az operációs rendszer /boot mappájában."
 
 msgid "ISO uses approximately 219 Mb in /boot directory on OS drive."
-msgstr ""
+msgstr "Az ISO fájl kb. 219 Mb-ot foglal el az operációs rendszer /boot mappájában."
 
 msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
-msgstr ""
+msgstr "Az ISO fájl kb. 381 Mb-ot foglal el az operációs rendszer /boot mappájában."
 
 msgid "Install Clonezilla"
 msgstr "Clonezilla telepítése"
 
 msgid "Install Clonezilla ISO ..."
-msgstr "Clonezilla ISO telepítése ..."
+msgstr "Clonezilla ISO telepítése…"
 
 msgid "Install GParted Live"
 msgstr "GParted Live telepítése"
 
 msgid "Install GParted Live ISO ..."
-msgstr "GParted Live ISO telepítése ..."
+msgstr "GParted Live ISO telepítése…"
 
 msgid "Install Proxmox kernel"
 msgstr "Proxmox kernel telepítése"
 
 msgid "Install Proxmox kernel ..."
-msgstr "Proxmox kernel telepítése ..."
+msgstr "Proxmox kernel telepítése…"
 
 msgid "Install SystemRescueCD"
 msgstr "SystemRescueCD telepítése"
 
 msgid "Install SystemRescueCD ISO ..."
-msgstr "SystemRescueCD ISO telepítése ..."
+msgstr "SystemRescueCD ISO telepítése…"
 
 msgid "Installed Kernels"
 msgstr "Telepített kernelek"
 
 msgid "Installing the Proxmox kernel will not uninstall other kernels."
-msgstr ""
+msgstr "A Proxmox kernel telepítése nem fog más kerneleket törölni."
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -129,7 +130,7 @@ msgid "Name"
 msgstr "Név"
 
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
-msgstr ""
+msgstr "Nem tanácsolt periféria nélküli kiszolgálókra. Az SSH nincs engedélyezve alapértelmezetten."
 
 msgid "OMV-Extras"
 msgstr "OMV-Extrák"
@@ -147,34 +148,34 @@ msgid "Priority"
 msgstr "Prioritás"
 
 msgid "Reboot to Clonezilla ..."
-msgstr ""
+msgstr "Újraindítás a Clonezillával…"
 
 msgid "Reboot to Clonezilla Once"
-msgstr ""
+msgstr "Újraindítás egyszer a Clonezillával"
 
 msgid "Reboot to GParted Live ..."
-msgstr ""
+msgstr "Újraindítás a GParted Live-val…"
 
 msgid "Reboot to GParted Live Once"
-msgstr ""
+msgstr "Újraindítás egyszer a GParted Live-val"
 
 msgid "Reboot to SystemRescueCD ..."
-msgstr ""
+msgstr "Újraindítás a SystemRescueCD-vel…"
 
 msgid "Reboot to SystemRescueCD Once"
-msgstr ""
+msgstr "Újraindítás egyszer a SystemRescueCD-vel"
 
 msgid "Repo"
-msgstr "Tár"
+msgstr "Tároló"
 
 msgid "Repo #1"
-msgstr "Tár #1"
+msgstr "Tároló #1"
 
 msgid "Repo #2"
-msgstr "Tár #2"
+msgstr "Tároló #2"
 
 msgid "Repo #3"
-msgstr "Tár #3"
+msgstr "Tároló #3"
 
 msgid "Repos"
 msgstr "Tárak"
@@ -182,24 +183,24 @@ msgstr "Tárak"
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
 "password: <b>openmediavault</b>"
-msgstr ""
+msgstr "Az SSH szerver alapértelmezett engedélyezve van. Felhasználói név a belépéshez: <b>root</b>, valamint a jelszó: <b>openmediavault</b>"
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>user</b> and "
 "password: <b>live</b>"
-msgstr ""
+msgstr "Az SSH szerver alapértelmezett engedélyezve van. Felhasználói név a belépéshez: <b>user</b>, valamint a jelszó: <b>live</b>"
 
 msgid "Set as default boot kernel"
 msgstr "Alap rendszerindító kernel beállítása"
 
 msgid "Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time."
-msgstr ""
+msgstr "Beállítja a GRUB rendszerbetöltőt, hogy a Clonezilla ISO-ról induljon a rendszer <b>EGY</b> alkalommal."
 
 msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
-msgstr ""
+msgstr "Beállítja a GRUB rendszerbetöltőt, hogy a GParted Live ISO-ról induljon a rendszer <b>EGY</b> alkalommal."
 
 msgid "Setting boot kernel ..."
-msgstr "Rendszerindító kernel beállítás ..."
+msgstr "Rendszerindító kernel beállítása…"
 
 msgid ""
 "Setting the wrong default boot kernel may cause the system to be "
@@ -216,8 +217,8 @@ msgstr "Frissítés"
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
 "OpenMediaVault ssh key and need to be updated on the client system."
-msgstr ""
+msgstr "SSH kapcsolódás esetén az SSH-kulcs eltérő lesz a OpenMediaVault SSH-kulcsától és frissíteni kell a kliens rendszeren."
 
 msgid ""
 "When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
-msgstr ""
+msgstr "Távoli belépés esetén a Clonezilla így indítható: <b>sudo clonezilla</b>"

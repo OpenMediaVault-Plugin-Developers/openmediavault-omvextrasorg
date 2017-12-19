@@ -3,221 +3,220 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# songming <by@songming.me>, 2013-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-16 17:25-0600\n"
-"PO-Revision-Date: 2017-09-23 19:27+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_CN/)\n"
+"PO-Revision-Date: 2013-10-28 11:35+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Swedish (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_CN\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Add repo"
-msgstr "添加源"
+msgstr ""
 
 msgid "Apt Clean"
-msgstr "清除 APT 缓存"
+msgstr ""
 
 msgid "Checking for new updates ..."
-msgstr "检查更新中..."
+msgstr ""
 
 msgid "Cleaning Apt Files and Lists..."
-msgstr "清除 Apt 文件及列表"
+msgstr ""
 
 msgid "Clonezilla"
-msgstr "再生龙 Clonezilla"
+msgstr ""
 
 msgid "Comment"
-msgstr "注释"
+msgstr ""
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
-msgstr "默认用户名 <b>user</b>  默认密码: <b>live</b>"
+msgstr ""
 
 msgid "Done..."
-msgstr "完成..."
+msgstr ""
 
 msgid ""
 "Downloads Clonezilla ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr "下载再生龙 Clonezilla ISO 镜像，配置 grub 引导允许从该 ISO 镜像启动。"
+msgstr ""
 
 msgid ""
 "Downloads GParted Live ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr "下载 GParted Live ISO 镜像，配置 grub 引导允许从该 ISO 镜像启动。"
+msgstr ""
 
 msgid ""
 "Downloads SystemRescuecd ISO and configures grub bootloader to allow booting"
 " from ISO."
-msgstr "下载 SystemRescuecd ISO 镜像，配置 grub 引导允许从该 ISO 镜像启动。"
+msgstr ""
 
 msgid "Edit repo"
-msgstr "编辑源"
+msgstr ""
 
 msgid "Enable"
-msgstr "启用"
+msgstr ""
 
 msgid "Enabled"
-msgstr "启用"
+msgstr ""
 
 msgid "GParted Live"
-msgstr "GParted Live"
+msgstr ""
 
 msgid "IP Address will be set by DHCP."
-msgstr "IP 地址设为 DHCP 自动获取。"
+msgstr ""
 
 msgid ""
 "IP Address will be set by DHCP.  Using static DHCP is recommended for "
 "headless servers."
-msgstr "IP 地址设为 DHCP 自动获取，若是缺省服务器建议使用静态 IP。"
+msgstr ""
 
 msgid "ISO uses approximately 139 Mb in /boot directory on OS drive."
-msgstr "ISO 镜像大约占用系统盘 /boot 目录 139Mb 空间。"
+msgstr ""
 
 msgid "ISO uses approximately 219 Mb in /boot directory on OS drive."
-msgstr "ISO 镜像大约占用系统盘 /boot 目录 219Mb 空间。"
+msgstr ""
 
 msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
-msgstr "ISO 镜像大约占用系统盘 /boot 目录 381Mb 空间。"
+msgstr ""
 
 msgid "Install Clonezilla"
-msgstr "安装再生龙 Clonezilla"
+msgstr ""
 
 msgid "Install Clonezilla ISO ..."
-msgstr "安装再生龙 Clonezilla ISO ..."
+msgstr ""
 
 msgid "Install GParted Live"
-msgstr "安装 GParted Live"
+msgstr ""
 
 msgid "Install GParted Live ISO ..."
-msgstr "安装 GParted Live ISO ..."
+msgstr ""
 
 msgid "Install Proxmox kernel"
-msgstr "安装 Proxmox 内核"
+msgstr ""
 
 msgid "Install Proxmox kernel ..."
-msgstr "安装 Proxmox 内核中 ..."
+msgstr ""
 
 msgid "Install SystemRescueCD"
-msgstr "安装 SystemRescueCD"
+msgstr ""
 
 msgid "Install SystemRescueCD ISO ..."
-msgstr "安装 SystemRescueCD ISO ..."
+msgstr ""
 
 msgid "Installed Kernels"
-msgstr "安装内核"
+msgstr ""
 
 msgid "Installing the Proxmox kernel will not uninstall other kernels."
 msgstr ""
 
 msgid "Kernel"
-msgstr "内核"
+msgstr ""
 
 msgid "Kernels"
-msgstr "内核"
+msgstr ""
 
 msgid "Key"
-msgstr "密钥"
+msgstr ""
 
 msgid "Name"
-msgstr "名称"
+msgstr ""
 
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
-msgstr "不建议使用缺省服务器，因为默认 SSH 没有开启。"
+msgstr ""
 
 msgid "OMV-Extras"
-msgstr "OMV-Extras"
+msgstr ""
 
 msgid "Package"
-msgstr "包"
+msgstr ""
 
 msgid "Permanent"
-msgstr "固定的"
+msgstr ""
 
 msgid "Pin"
-msgstr "Pin"
+msgstr ""
 
 msgid "Priority"
-msgstr "优先级"
+msgstr ""
 
 msgid "Reboot to Clonezilla ..."
-msgstr "从再生龙 Clonezilla 启动 ..."
+msgstr ""
 
 msgid "Reboot to Clonezilla Once"
-msgstr "从再生龙 Clonezilla 启动一次"
+msgstr ""
 
 msgid "Reboot to GParted Live ..."
-msgstr "从 GParted Live 启动 ..."
+msgstr ""
 
 msgid "Reboot to GParted Live Once"
-msgstr "从 GParted Live 启动一次"
+msgstr ""
 
 msgid "Reboot to SystemRescueCD ..."
-msgstr "从 SystemRescueCD 启动 ..."
+msgstr ""
 
 msgid "Reboot to SystemRescueCD Once"
-msgstr "从 SystemRescueCD 启动一次"
+msgstr ""
 
 msgid "Repo"
-msgstr "源"
+msgstr ""
 
 msgid "Repo #1"
-msgstr "源 #1"
+msgstr ""
 
 msgid "Repo #2"
-msgstr "源 #2"
+msgstr ""
 
 msgid "Repo #3"
-msgstr "源 #3"
+msgstr ""
 
 msgid "Repos"
-msgstr "源"
+msgstr ""
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
 "password: <b>openmediavault</b>"
-msgstr "默认开启 SSH 服务，登录用户名: <b>root</b>， 密码: <b>openmediavault</b>"
+msgstr ""
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>user</b> and "
 "password: <b>live</b>"
-msgstr "默认开启 SSH 服务，登录用户名: <b>user</b>，密码: <b>live</b>"
+msgstr ""
 
 msgid "Set as default boot kernel"
-msgstr "设置默认启动内核"
+msgstr ""
 
 msgid "Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time."
-msgstr "设置 grub 引导从再生龙 Clonezilla ISO 镜像启动<b> 1 </b> 次。"
+msgstr ""
 
 msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
-msgstr "设置 grub 引导从 GParted Live ISO 镜像启动<b> 1 </b> 次。"
+msgstr ""
 
 msgid "Setting boot kernel ..."
-msgstr "设置启动内核 ..."
+msgstr ""
 
 msgid ""
 "Setting the wrong default boot kernel may cause the system to be "
 "inaccessible.  The boot menu will still be available to select a different "
 "kernel."
-msgstr "如果设置的默认启动内核错误而不能启动系统，可以通过终端在启动菜单选择不同的内核来启动。"
+msgstr ""
 
 msgid "SystemRescueCD"
-msgstr "SystemRescueCD"
+msgstr ""
 
 msgid "Update"
-msgstr "更新"
+msgstr ""
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
 "OpenMediaVault ssh key and need to be updated on the client system."
-msgstr "当使用 SSH 链接时，SSH 密钥和 OpenMediaVault 系统 SSH 密钥不同，客户端需要更新 SSH 密钥。"
+msgstr ""
 
 msgid ""
 "When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
-msgstr "当远程登录时，启动再生龙 clonezilla 命令是: <b>sudo clonezilla</b>"
+msgstr ""
