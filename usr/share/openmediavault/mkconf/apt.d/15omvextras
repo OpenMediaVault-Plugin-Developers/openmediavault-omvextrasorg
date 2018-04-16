@@ -4,7 +4,7 @@
 # @author    Volker Theile <volker.theile@openmediavault.org>
 # @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
 # @copyright Copyright (c) 2009-2013 Volker Theile
-# @copyright Copyright (c) 2013-2017 OpenMediaVault Plugin Developers
+# @copyright Copyright (c) 2013-2018 OpenMediaVault Plugin Developers
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -32,12 +32,17 @@ OMVEXTRASAPTPREFS="/etc/apt/preferences.d/omv-extras-org"
 
 rm -f ${OMVEXTRASAPTPREFS}
 
-cat <<EOF > ${OMVEXTRASAPTPREFS}
+if ! omv_checkyesno "${OMV_APT_USE_KERNEL_BACKPORTS}"; then
+    cat <<EOF > ${OMVEXTRASAPTPREFS}
 Package: virtualbox*
 Pin: release a=stretch-backports
 Pin-Priority: 500
 
 Package: zfs*
+Pin: release a=stretch-backports
+Pin-Priority: 500
+
+Package: spl
 Pin: release a=stretch-backports
 Pin-Priority: 500
 
@@ -61,7 +66,12 @@ Package: libuutil1linux
 Pin: release a=stretch-backports
 Pin-Priority: 500
 
+Package: linux-compiler-gcc-6-x86
+Pin: release a=stretch-backports
+Pin-Priority: 500
+
 EOF
+fi
 
 # Process repos
 echo "# This is file is generated." > ${OMVEXTRASREPOFILE}
