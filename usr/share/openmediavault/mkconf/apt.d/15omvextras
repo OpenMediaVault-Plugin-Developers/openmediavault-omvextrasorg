@@ -70,6 +70,10 @@ Package: linux-compiler-gcc-6-x86
 Pin: release a=stretch-backports
 Pin-Priority: 500
 
+Package: xrdp
+Pin: release a=stretch-backports
+Pin-Priority: 500
+
 EOF
 fi
 
