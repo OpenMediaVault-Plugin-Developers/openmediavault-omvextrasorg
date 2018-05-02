@@ -74,6 +74,10 @@ Package: xrdp
 Pin: release a=stretch-backports
 Pin-Priority: 500
 
+Package: certbot
+Pin: release a=stretch-backports
+Pin-Priority: 500
+
 EOF
 fi
 
