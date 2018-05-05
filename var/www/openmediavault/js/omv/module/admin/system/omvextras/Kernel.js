@@ -3,7 +3,7 @@
  * @author    Volker Theile <volker.theile@openmediavault.org>
  * @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
  * @copyright Copyright (c) 2009-2013 Volker Theile
- * @copyright Copyright (c) 2013-2017 OpenMediaVault Plugin Developers
+ * @copyright Copyright (c) 2013-2018 OpenMediaVault Plugin Developers
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -179,7 +179,7 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                 margin  : "0 0 0 10"
             },{
                 border : false,
-                html   : "<ul><li>" + _("Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time.") + "</li></ul>"
+                html   : "<ul><li>" + _("Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time.") + "</li></ul>"
             }]
         }];
     },
