@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (3.4.30) stable; urgency=low
+
+  * Improve omv-release-upgrade for arm devices
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 09 May 2018 07:04:42 -0500
+
 openmediavault-omvextrasorg (3.4.29) stable; urgency=low
 
   * fix docker-ce repo

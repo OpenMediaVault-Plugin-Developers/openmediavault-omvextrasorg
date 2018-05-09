@@ -4,11 +4,16 @@ export LANG=C
 export LC_ALL=C
 
 list="/etc/apt/sources.list.d/omv-extras-org.list"
+armbian="/etc/apt/sources.list.d/armbian.list"
 
 if [ -f "${list}" ]; then
   sed -i "s/jessie/stretch/g" ${list}
   sed -i "s/erasmus/arrakis/g" ${list}
   sed -i "s/ce-docker/docker/g" ${list}
+fi
+
+if [ -f "${armbian}" ]; then
+  sed -i "s/jessie/stretch/g" ${armbian}
 fi
 
 exit 0
