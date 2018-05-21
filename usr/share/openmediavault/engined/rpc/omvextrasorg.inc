@@ -19,8 +19,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-require_once('openmediavault/globals.inc');
-require_once('openmediavault/functions.inc');
 
 class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
 {
@@ -102,9 +100,9 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
             'org.openmediavault.conf.system.apt.distribution');
 
         // Apply the changes immediatelly (no user interaction is wanted).
-        \OMV\Rpc\Rpc::call("Config", "applyChanges", [
-            "modules" => [ "apt" ],
-            "force" => TRUE
+        \OMV\Rpc\Rpc::call('Config', 'applyChanges', [
+            'modules' => [ 'apt' ],
+            'force' => TRUE
         ], $context);
 
         \OMV\Rpc\Rpc::call('Apt', 'update', NULL, $context);
@@ -267,7 +265,7 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $this->validateMethodParams($params, 'rpc.omvextras.dohold');
 
         // Execute command
-        $arch = $this->getArch();
+        $arch = $this->getArch([], $context);
         $packages = sprintf('linux-image-%s linux-headers-%s', $arch['arch'], $arch['arch']);
         $cmd = new \OMV\System\Process('apt-mark', $params['cmd'], $packages);
         $cmd->execute($output);
