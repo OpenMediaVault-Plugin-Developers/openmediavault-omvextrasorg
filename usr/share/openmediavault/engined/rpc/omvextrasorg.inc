@@ -4,7 +4,7 @@
  * @author    Volker Theile <volker.theile@openmediavault.org>
  * @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
  * @copyright Copyright (c) 2009-2013 Volker Theile
- * @copyright Copyright (c) 2013-2017 OpenMediaVault Plugin Developers
+ * @copyright Copyright (c) 2013-2018 OpenMediaVault Plugin Developers
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -45,6 +45,8 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $this->registerMethod('setBootKernel');
 
         $this->registerMethod('doCommand');
+        $this->registerMethod('doHold');
+        $this->registerMethod('doBackports');
     }
 
     public function getRepoList($params, $context)
@@ -254,5 +256,33 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
                 return $output;
             }
         );
+    }
+
+    public function doHold($params, $context)
+    {
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
+
+        // Validate the parameters of the RPC service method.
+        $this->validateMethodParams($params, 'rpc.omvextras.dohold');
+
+        // Execute command
+        $arch = $this->getArch();
+        $packages = sprintf('linux-image-%s linux-headers-%s', $arch['arch'], $arch['arch']);
+        $cmd = new \OMV\System\Process('apt-mark', $params['cmd'], $packages);
+        $cmd->execute($output);
+    }
+
+    public function doBackports($params, $context)
+    {
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
+
+        // Validate the parameters of the RPC service method.
+        $this->validateMethodParams($params, 'rpc.omvextras.dobackports');
+
+        // Execute command
+        $cmd = new \OMV\System\Process('omv-changebackports', $params['cmd']);
+        $cmd->execute($output);
     }
 }

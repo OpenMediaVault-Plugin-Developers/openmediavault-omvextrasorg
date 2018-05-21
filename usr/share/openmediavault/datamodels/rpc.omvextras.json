@@ -108,4 +108,30 @@
 			}
 		}
 	}
+},{
+		"type": "rpc",
+		"id": "rpc.omvextras.dohold",
+		"params": {
+				"type": "object",
+				"properties": {
+						"cmd": {
+								"type": "string",
+								"enum": [ "hold", "unhold" ],
+								"required": true
+						}
+				}
+		}
+},{
+		"type": "rpc",
+		"id": "rpc.omvextras.dobackports",
+		"params": {
+				"type": "object",
+				"properties": {
+						"cmd": {
+								"type": "string",
+								"enum": [ "NO", "YES" ],
+								"required": true
+						}
+				}
+		}
 }]

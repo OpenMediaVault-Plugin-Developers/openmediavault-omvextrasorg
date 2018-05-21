@@ -1,0 +1,21 @@
+#!/bin/bash
+
+DEFAULT_FILE="/etc/default/openmediavault"
+BACKPORTS="OMV_APT_USE_KERNEL_BACKPORTS"
+
+status=$1
+
+if [ ! "${status}" = "NO" ] && [ ! "${status}" = "YES" ]; then
+  status="YES"
+fi
+
+if grep -q "${BACKPORTS}" ${DEFAULT_FILE}; then
+    sed -i "s/${BACKPORTS}=.*/${BACKPORTS}=\"${status}\"/" ${DEFAULT_FILE}
+else
+    echo "${BACKPORTS}=\"${status}\"" >> ${DEFAULT_FILE}
+fi
+
+omv-mkconf apt
+omv-aptclean
+
+exit 0
