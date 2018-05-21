@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
 # Axel Cantenys <clexanis@gmail.com>, 2017
@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-16 17:25-0600\n"
-"PO-Revision-Date: 2017-11-04 18:50+0000\n"
-"Last-Translator: Axel Cantenys <clexanis@gmail.com>\n"
+"POT-Creation-Date: 2018-05-21 07:40-0500\n"
+"PO-Revision-Date: 2018-05-21 12:40+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,6 +24,9 @@ msgstr "Ajouter un dépôt"
 
 msgid "Apt Clean"
 msgstr "Nettoyer APT"
+
+msgid "Backports"
+msgstr ""
 
 msgid "Checking for new updates ..."
 msgstr "Recherche de mises à jour..."
@@ -40,6 +43,12 @@ msgstr "Commentaire"
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Nom d'utilisateur par défaut : «<b>user</b>», et mot de passe : «<b>live</b>»."
 
+msgid "Disable Backports"
+msgstr ""
+
+msgid "Disabling backports repo ..."
+msgstr ""
+
 msgid "Done..."
 msgstr "Terminé..."
 
@@ -54,9 +63,9 @@ msgid ""
 msgstr "Télécharge l'ISO de GParted Live et configure le gestionnaire de démarrage GRUB pour permettre le démarrage à partir de l'ISO."
 
 msgid ""
-"Downloads SystemRescuecd ISO and configures grub bootloader to allow booting"
+"Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
 " from ISO."
-msgstr "Télécharge l'ISO de SystemRescueCd et configure le gestionnaire de démarrage GRUB pour permettre le démarrage à partir de l'ISO."
+msgstr ""
 
 msgid "Edit repo"
 msgstr "Éditer un dépôt"
@@ -64,11 +73,23 @@ msgstr "Éditer un dépôt"
 msgid "Enable"
 msgstr "Activer"
 
+msgid "Enable Backports"
+msgstr ""
+
 msgid "Enabled"
 msgstr "Activé"
 
+msgid "Enabling backports repo ..."
+msgstr ""
+
 msgid "GParted Live"
 msgstr "GParted Live"
+
+msgid "Hold Current Kernel"
+msgstr ""
+
+msgid "Holding current kernel ..."
+msgstr ""
 
 msgid "IP Address will be set by DHCP."
 msgstr "L'adresse IP sera définie par DHCP."
@@ -99,12 +120,6 @@ msgstr "Installer GParted Live"
 msgid "Install GParted Live ISO ..."
 msgstr "Installation de l'ISO de GParted Live ..."
 
-msgid "Install Proxmox kernel"
-msgstr "Installer le noyau de Proxmod"
-
-msgid "Install Proxmox kernel ..."
-msgstr "Installation du noyau de Proxmod ..."
-
 msgid "Install SystemRescueCD"
 msgstr "Installer SystemRescueCd"
 
@@ -113,9 +128,6 @@ msgstr "Installation de l'ISO de SystemRescueCd ..."
 
 msgid "Installed Kernels"
 msgstr "Noyaux installés"
-
-msgid "Installing the Proxmox kernel will not uninstall other kernels."
-msgstr "L'installation du noyau de Proxmox ne désinstalle pas les autres noyaux."
 
 msgid "Kernel"
 msgstr "Noyau"
@@ -199,6 +211,9 @@ msgstr "Définit le gestionnaire de démarrage GRUB pour démarrer à partir de 
 msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr "Définit le gestionnaire de démarrage GRUB pour démarrer à partir de l'ISO de GParted Live <b>ONE</b> fois."
 
+msgid "Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time."
+msgstr ""
+
 msgid "Setting boot kernel ..."
 msgstr "Définition du noyau de démarrage ..."
 
@@ -210,6 +225,12 @@ msgstr "Définir le mauvais noyau de démarrage par défaut peut rendre le syst�
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCd"
+
+msgid "Unhold Current Kernel"
+msgstr ""
+
+msgid "Unholding current kernel ..."
+msgstr ""
 
 msgid "Update"
 msgstr "Mise à jour"

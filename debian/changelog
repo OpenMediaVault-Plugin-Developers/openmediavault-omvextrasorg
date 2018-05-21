@@ -2,6 +2,7 @@ openmediavault-omvextrasorg (4.1.7) stable; urgency=low
 
   * Add hold/unhold kernel buttons
   * Add enable/disable backports buttons
+  * Update locales
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 21 May 2018 07:22:16 -0500
 

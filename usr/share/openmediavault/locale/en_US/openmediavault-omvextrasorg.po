@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-16 17:25-0600\n"
-"PO-Revision-Date: 2017-09-19 20:47+0000\n"
+"POT-Creation-Date: 2018-05-21 07:40-0500\n"
+"PO-Revision-Date: 2018-05-21 12:40+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: English (United States) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/en_US/)\n"
 "MIME-Version: 1.0\n"
@@ -22,6 +22,9 @@ msgstr "Add repo"
 
 msgid "Apt Clean"
 msgstr "Apt Clean"
+
+msgid "Backports"
+msgstr "Backports"
 
 msgid "Checking for new updates ..."
 msgstr "Checking for new updates ..."
@@ -38,6 +41,12 @@ msgstr "Comment"
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Default username: <b>user</b> and password: <b>live</b>"
 
+msgid "Disable Backports"
+msgstr "Disable Backports"
+
+msgid "Disabling backports repo ..."
+msgstr "Disabling backports repo ..."
+
 msgid "Done..."
 msgstr "Done..."
 
@@ -52,9 +61,9 @@ msgid ""
 msgstr "Downloads GParted Live ISO and configures grub bootloader to allow booting from ISO."
 
 msgid ""
-"Downloads SystemRescuecd ISO and configures grub bootloader to allow booting"
+"Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
 " from ISO."
-msgstr "Downloads SystemRescuecd ISO and configures grub bootloader to allow booting from ISO."
+msgstr "Downloads SystemRescueCD ISO and configures grub bootloader to allow booting from ISO."
 
 msgid "Edit repo"
 msgstr "Edit repo"
@@ -62,11 +71,23 @@ msgstr "Edit repo"
 msgid "Enable"
 msgstr "Enable"
 
+msgid "Enable Backports"
+msgstr "Enable Backports"
+
 msgid "Enabled"
 msgstr "Enabled"
 
+msgid "Enabling backports repo ..."
+msgstr "Enabling backports repo ..."
+
 msgid "GParted Live"
 msgstr "GParted Live"
+
+msgid "Hold Current Kernel"
+msgstr "Hold Current Kernel"
+
+msgid "Holding current kernel ..."
+msgstr "Holding current kernel ..."
 
 msgid "IP Address will be set by DHCP."
 msgstr "IP Address will be set by DHCP."
@@ -97,12 +118,6 @@ msgstr "Install GParted Live"
 msgid "Install GParted Live ISO ..."
 msgstr "Install GParted Live ISO ..."
 
-msgid "Install Proxmox kernel"
-msgstr "Install Proxmox kernel"
-
-msgid "Install Proxmox kernel ..."
-msgstr "Install Proxmox kernel ..."
-
 msgid "Install SystemRescueCD"
 msgstr "Install SystemRescueCD"
 
@@ -111,9 +126,6 @@ msgstr "Install SystemRescueCD ISO ..."
 
 msgid "Installed Kernels"
 msgstr "Installed Kernels"
-
-msgid "Installing the Proxmox kernel will not uninstall other kernels."
-msgstr "Installing the Proxmox kernel will not uninstall other kernels."
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -197,6 +209,9 @@ msgstr "Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time."
 msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 
+msgid "Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time."
+msgstr "Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time."
+
 msgid "Setting boot kernel ..."
 msgstr "Setting boot kernel ..."
 
@@ -208,6 +223,12 @@ msgstr "Setting the wrong default boot kernel may cause the system to be inacces
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
+
+msgid "Unhold Current Kernel"
+msgstr "Unhold Current Kernel"
+
+msgid "Unholding current kernel ..."
+msgstr "Unholding current kernel ..."
 
 msgid "Update"
 msgstr "Update"

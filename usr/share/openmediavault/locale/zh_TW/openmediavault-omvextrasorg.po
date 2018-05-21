@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
 # kochin <kochinc@outlook.com>, 2014-2017
@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-16 17:25-0600\n"
-"PO-Revision-Date: 2017-09-20 02:38+0000\n"
-"Last-Translator: kochin <kochinc@outlook.com>\n"
+"POT-Creation-Date: 2018-05-21 07:40-0500\n"
+"PO-Revision-Date: 2018-05-21 12:40+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,6 +23,9 @@ msgstr "新增套件庫"
 
 msgid "Apt Clean"
 msgstr "Apt 清理"
+
+msgid "Backports"
+msgstr ""
 
 msgid "Checking for new updates ..."
 msgstr "檢查新的更新 ..."
@@ -39,6 +42,12 @@ msgstr "註釋"
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "預設 用戶名稱：<b>user</b> 與 密碼：<b>live</b>"
 
+msgid "Disable Backports"
+msgstr ""
+
+msgid "Disabling backports repo ..."
+msgstr ""
+
 msgid "Done..."
 msgstr "完成 ..."
 
@@ -53,9 +62,9 @@ msgid ""
 msgstr "下載 GParted Live ISO，並將 grub 啟動載入器設置成允許從 ISO 啟動。"
 
 msgid ""
-"Downloads SystemRescuecd ISO and configures grub bootloader to allow booting"
+"Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
 " from ISO."
-msgstr "下載 SystemRescuecd ISO，並將 grub 啟動載入器設置成允許從 ISO 啟動。"
+msgstr ""
 
 msgid "Edit repo"
 msgstr "編輯套件庫"
@@ -63,11 +72,23 @@ msgstr "編輯套件庫"
 msgid "Enable"
 msgstr "啟用"
 
+msgid "Enable Backports"
+msgstr ""
+
 msgid "Enabled"
 msgstr "已啟用"
 
+msgid "Enabling backports repo ..."
+msgstr ""
+
 msgid "GParted Live"
 msgstr "GParted Live"
+
+msgid "Hold Current Kernel"
+msgstr ""
+
+msgid "Holding current kernel ..."
+msgstr ""
 
 msgid "IP Address will be set by DHCP."
 msgstr "IP 地址將由 DHCP 設定。"
@@ -98,12 +119,6 @@ msgstr "安裝 GParted Live"
 msgid "Install GParted Live ISO ..."
 msgstr "安裝 GParted Live ISO ..."
 
-msgid "Install Proxmox kernel"
-msgstr "安裝 Proxmox 核心"
-
-msgid "Install Proxmox kernel ..."
-msgstr "安裝 Proxmox 核心 ..."
-
 msgid "Install SystemRescueCD"
 msgstr "安裝 SystemRescueCD"
 
@@ -112,9 +127,6 @@ msgstr "安裝 SystemRescueCD ISO ..."
 
 msgid "Installed Kernels"
 msgstr "已安裝的核心"
-
-msgid "Installing the Proxmox kernel will not uninstall other kernels."
-msgstr "安裝 Proxmox 核心並不會將其它核心移除。"
 
 msgid "Kernel"
 msgstr "系統核心"
@@ -198,6 +210,9 @@ msgstr "設定 grub 啟動載入器從 Clonezilla ISO 啟動<b>一次</b>。"
 msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr "設定 grub 啟動載入器從 GParted Live ISO 啟動<b>一次</b>。"
 
+msgid "Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time."
+msgstr ""
+
 msgid "Setting boot kernel ..."
 msgstr "設定啟動核心中 ..."
 
@@ -209,6 +224,12 @@ msgstr "設定錯誤的啟動核心可能造成系統無法取用。啟動選單
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
+
+msgid "Unhold Current Kernel"
+msgstr ""
+
+msgid "Unholding current kernel ..."
+msgstr ""
 
 msgid "Update"
 msgstr "更新"

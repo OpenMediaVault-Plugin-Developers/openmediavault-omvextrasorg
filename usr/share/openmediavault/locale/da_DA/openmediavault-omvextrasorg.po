@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
 # Stefan Thrane Overby <stoverby@gmail.com>, 2013-2017
@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-16 17:25-0600\n"
-"PO-Revision-Date: 2017-09-23 19:18+0000\n"
-"Last-Translator: Stefan Thrane Overby <stoverby@gmail.com>\n"
+"POT-Creation-Date: 2018-05-21 07:40-0500\n"
+"PO-Revision-Date: 2018-05-21 12:40+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Danish (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,6 +23,9 @@ msgstr "Tilføj arkiv"
 
 msgid "Apt Clean"
 msgstr "Apt Oprydning"
+
+msgid "Backports"
+msgstr ""
 
 msgid "Checking for new updates ..."
 msgstr "Kontroller efter nye opdateringer ..."
@@ -39,6 +42,12 @@ msgstr "Kommentar"
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Standard brugenavn: <b>user</b> og adgangskode: <b>live</b>"
 
+msgid "Disable Backports"
+msgstr ""
+
+msgid "Disabling backports repo ..."
+msgstr ""
+
 msgid "Done..."
 msgstr "Færdig..."
 
@@ -53,9 +62,9 @@ msgid ""
 msgstr "Downloader GParted Live ISO og opsætter grub bootloader til, at tillade at boote fra ISO. "
 
 msgid ""
-"Downloads SystemRescuecd ISO and configures grub bootloader to allow booting"
+"Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
 " from ISO."
-msgstr "Downloader SystemRescuecd ISO og opsætter grub bootloader til, at tillade at boote fra ISO. "
+msgstr ""
 
 msgid "Edit repo"
 msgstr "Rediger arkiv"
@@ -63,11 +72,23 @@ msgstr "Rediger arkiv"
 msgid "Enable"
 msgstr "Aktiver"
 
+msgid "Enable Backports"
+msgstr ""
+
 msgid "Enabled"
 msgstr "Aktiveret"
 
+msgid "Enabling backports repo ..."
+msgstr ""
+
 msgid "GParted Live"
 msgstr "GParted Live"
+
+msgid "Hold Current Kernel"
+msgstr ""
+
+msgid "Holding current kernel ..."
+msgstr ""
 
 msgid "IP Address will be set by DHCP."
 msgstr "IP adresse vil blive sat af DHCP."
@@ -98,12 +119,6 @@ msgstr "Installer GParted Live"
 msgid "Install GParted Live ISO ..."
 msgstr "Installer GParted Live ISO ..."
 
-msgid "Install Proxmox kernel"
-msgstr "Installer Proxmox kerne"
-
-msgid "Install Proxmox kernel ..."
-msgstr "Installer Proxmox kerne ..."
-
 msgid "Install SystemRescueCD"
 msgstr "Installer SystemRescueCD"
 
@@ -112,9 +127,6 @@ msgstr "Installer SystemRescueCD ISO ..."
 
 msgid "Installed Kernels"
 msgstr "Installeret Kerner"
-
-msgid "Installing the Proxmox kernel will not uninstall other kernels."
-msgstr "Installation af Proxmox kernen, vil ikke afinstallere andre kerner."
 
 msgid "Kernel"
 msgstr "Kerne"
@@ -198,6 +210,9 @@ msgstr "Indstil grub bootloader til at boote fra Clonezilla ISO <b>EN</b> gang."
 msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr "Indstil grub bootloader til at boote fra GParted Live ISO <b>EN</b> gang."
 
+msgid "Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time."
+msgstr ""
+
 msgid "Setting boot kernel ..."
 msgstr "Indstiller boot kerne ..."
 
@@ -209,6 +224,12 @@ msgstr "Indstilling af forkert standard boot kerne kan gøre systemet utilgænge
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
+
+msgid "Unhold Current Kernel"
+msgstr ""
+
+msgid "Unholding current kernel ..."
+msgstr ""
 
 msgid "Update"
 msgstr "Opdater"

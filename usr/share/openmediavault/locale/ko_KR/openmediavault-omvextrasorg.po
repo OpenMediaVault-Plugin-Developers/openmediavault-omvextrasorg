@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
 # Hyeonkyu Chu <hyeonkyu@gmail.com>, 2014-2016
@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-16 17:25-0600\n"
-"PO-Revision-Date: 2017-09-23 20:28+0000\n"
+"POT-Creation-Date: 2018-05-21 07:40-0500\n"
+"PO-Revision-Date: 2018-05-21 12:40+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
@@ -23,6 +23,9 @@ msgstr ""
 
 msgid "Apt Clean"
 msgstr "Apt 정리"
+
+msgid "Backports"
+msgstr ""
 
 msgid "Checking for new updates ..."
 msgstr "새로운 갱신 확인 중 ..."
@@ -39,6 +42,12 @@ msgstr "설명"
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr ""
 
+msgid "Disable Backports"
+msgstr ""
+
+msgid "Disabling backports repo ..."
+msgstr ""
+
 msgid "Done..."
 msgstr "완료..."
 
@@ -53,7 +62,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Downloads SystemRescuecd ISO and configures grub bootloader to allow booting"
+"Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
 " from ISO."
 msgstr ""
 
@@ -63,10 +72,22 @@ msgstr ""
 msgid "Enable"
 msgstr "활성화"
 
+msgid "Enable Backports"
+msgstr ""
+
 msgid "Enabled"
 msgstr ""
 
+msgid "Enabling backports repo ..."
+msgstr ""
+
 msgid "GParted Live"
+msgstr ""
+
+msgid "Hold Current Kernel"
+msgstr ""
+
+msgid "Holding current kernel ..."
 msgstr ""
 
 msgid "IP Address will be set by DHCP."
@@ -98,12 +119,6 @@ msgstr ""
 msgid "Install GParted Live ISO ..."
 msgstr ""
 
-msgid "Install Proxmox kernel"
-msgstr ""
-
-msgid "Install Proxmox kernel ..."
-msgstr ""
-
 msgid "Install SystemRescueCD"
 msgstr ""
 
@@ -112,9 +127,6 @@ msgstr ""
 
 msgid "Installed Kernels"
 msgstr "설치된 커널"
-
-msgid "Installing the Proxmox kernel will not uninstall other kernels."
-msgstr ""
 
 msgid "Kernel"
 msgstr "커널"
@@ -198,6 +210,9 @@ msgstr ""
 msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr ""
 
+msgid "Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time."
+msgstr ""
+
 msgid "Setting boot kernel ..."
 msgstr "시작 커널 설정 중 ..."
 
@@ -208,6 +223,12 @@ msgid ""
 msgstr "잘못된 기본 시작 커널 설정은, 시스템에 접근할 수 없게 할 수 있습니다. 이런 경우, 시작 선택표에서 다른 커널을 선택할 수 있습니다."
 
 msgid "SystemRescueCD"
+msgstr ""
+
+msgid "Unhold Current Kernel"
+msgstr ""
+
+msgid "Unholding current kernel ..."
 msgstr ""
 
 msgid "Update"
