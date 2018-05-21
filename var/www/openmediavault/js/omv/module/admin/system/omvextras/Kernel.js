@@ -54,22 +54,6 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
             iconCls: Ext.baseCSSPrefix + "btn-icon-16x16",
             scope: me,
             handler: Ext.Function.bind(me.onHoldButton, me, [ "unhold" ])
-        },{
-            id: me.getId() + "-enablebackports",
-            xtype: "button",
-            text: _("Enable Backports"),
-            icon: "images/led_green.png",
-            iconCls: Ext.baseCSSPrefix + "btn-icon-16x16",
-            scope: me,
-            handler: Ext.Function.bind(me.onBackportsButton, me, [ "YES" ])
-        },{
-            id: me.getId() + "-disablebackports",
-            xtype: "button",
-            text: _("Disable Backports"),
-            icon: "images/led_red.png",
-            iconCls: Ext.baseCSSPrefix + "btn-icon-16x16",
-            scope: me,
-            handler: Ext.Function.bind(me.onBackportsButton, me, [ "NO" ])
         });
         return items;
     },
@@ -287,7 +271,7 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
         });
     },
 
-    onHoldButton : function(cmd) {
+    onHoldButton: function(cmd) {
         var me = this;
         var msg = "";
         if (cmd == "hold") {
@@ -297,42 +281,16 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
         }
         OMV.MessageBox.wait(null, msg);
         OMV.Rpc.request({
-            scope       : me,
-            relayErrors : false,
-            rpcData     : {
-                service  : "OmvExtras",
-                method   : "doHold",
-                params   : {
-                    cmd : cmd
+            scope: me,
+            relayErrors: false,
+            rpcData: {
+                service: "OmvExtras",
+                method: "doHold",
+                params: {
+                    cmd: cmd
                 }
             },
-            success : function(id, success, response) {
-                me.doReload();
-                OMV.MessageBox.hide();
-            }
-        });
-    },
-
-    onBackportsButton : function(cmd) {
-        var me = this;
-        var msg = "";
-        if (cmd == "NO") {
-            msg = _("Disabling backports repo ...");
-        } else {
-            msg = _("Enabling backports repo ...");
-        }
-        OMV.MessageBox.wait(null, msg);
-        OMV.Rpc.request({
-            scope       : me,
-            relayErrors : false,
-            rpcData     : {
-                service  : "OmvExtras",
-                method   : "doBackports",
-                params   : {
-                    cmd : cmd
-                }
-            },
-            success : function(id, success, response) {
+            success: function(id, success, response) {
                 me.doReload();
                 OMV.MessageBox.hide();
             }

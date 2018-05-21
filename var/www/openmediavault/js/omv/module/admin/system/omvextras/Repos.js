@@ -3,7 +3,7 @@
  * @author    Volker Theile <volker.theile@openmediavault.org>
  * @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
  * @copyright Copyright (c) 2009-2013 Volker Theile
- * @copyright Copyright (c) 2013-2017 OpenMediaVault Plugin Developers
+ * @copyright Copyright (c) 2013-2018 OpenMediaVault Plugin Developers
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -29,39 +29,39 @@
 // require("js/omv/data/proxy/Rpc.js")
 
 Ext.define("OMV.module.admin.system.omvextras.Repo", {
-    extend   : "OMV.workspace.window.Form",
-    requires : [
+    extend: "OMV.workspace.window.Form",
+    requires: [
         "OMV.workspace.window.plugin.ConfigObject"
     ],
 
-    rpcService   : "OmvExtras",
-    rpcGetMethod : "getRepo",
-    rpcSetMethod : "setRepo",
+    rpcService: "OmvExtras",
+    rpcGetMethod: "getRepo",
+    rpcSetMethod: "setRepo",
 
-    plugins      : [{
-        ptype : "configobject"
+    plugins: [{
+        ptype: "configobject"
     }],
 
-    height : 300,
+    height: 300,
 
-    getFormItems : function() {
+    getFormItems: function() {
         return [{
-            xtype      : "checkbox",
-            name       : "enable",
-            fieldLabel : _("Enable"),
-            checked    : true
+            xtype: "checkbox",
+            name: "enable",
+            fieldLabel: _("Enable"),
+            checked: true
         },{
-            xtype      : "textfield",
-            name       : "name",
-            fieldLabel : _("Name"),
-            allowBlank : false,
-            readOnly   : this.permanent
+            xtype: "textfield",
+            name: "name",
+            fieldLabel: _("Name"),
+            allowBlank: false,
+            readOnly: this.permanent
         },{
-            xtype      : "textfield",
-            name       : "comment",
-            fieldLabel : _("Comment"),
-            allowBlank : false,
-            readOnly   : this.permanent
+            xtype: "textfield",
+            name: "comment",
+            fieldLabel: _("Comment"),
+            allowBlank: false,
+            readOnly: this.permanent
         },{
             xtype: "fieldset",
             title: _("Repo #1"),
@@ -69,35 +69,35 @@ Ext.define("OMV.module.admin.system.omvextras.Repo", {
                 labelSeparator: ""
             },
             items: [{
-                xtype      : "textfield",
-                name       : "repo1",
-                fieldLabel : _("Repo"),
-                allowBlank : false,
-                readOnly   : this.permanent
+                xtype: "textfield",
+                name: "repo1",
+                fieldLabel: _("Repo"),
+                allowBlank: false,
+                readOnly: this.permanent
             },{
-                xtype      : "textfield",
-                name       : "key1",
-                fieldLabel : _("Key"),
-                allowBlank : true,
-                readOnly   : this.permanent
+                xtype: "textfield",
+                name: "key1",
+                fieldLabel: _("Key"),
+                allowBlank: true,
+                readOnly: this.permanent
             },{
-                xtype      : "textfield",
-                name       : "package1",
-                fieldLabel : _("Package"),
-                allowBlank : true,
-                readOnly   : this.permanent
+                xtype: "textfield",
+                name: "package1",
+                fieldLabel: _("Package"),
+                allowBlank: true,
+                readOnly: this.permanent
             },{
-                xtype      : "textfield",
-                name       : "pin1",
-                fieldLabel : _("Pin"),
-                allowBlank : true,
-                readOnly   : this.permanent
+                xtype: "textfield",
+                name: "pin1",
+                fieldLabel: _("Pin"),
+                allowBlank: true,
+                readOnly: this.permanent
             },{
-                xtype      : "textfield",
-                name       : "priority1",
-                fieldLabel : _("Priority"),
-                allowBlank : true,
-                readOnly   : this.permanent
+                xtype: "textfield",
+                name: "priority1",
+                fieldLabel: _("Priority"),
+                allowBlank: true,
+                readOnly: this.permanent
             }]
         },{
             xtype: "fieldset",
@@ -106,35 +106,35 @@ Ext.define("OMV.module.admin.system.omvextras.Repo", {
                 labelSeparator: ""
             },
             items: [{
-                xtype      : "textfield",
-                name       : "repo2",
-                fieldLabel : _("Repo"),
-                allowBlank : true,
-                readOnly   : this.permanent
+                xtype: "textfield",
+                name: "repo2",
+                fieldLabel: _("Repo"),
+                allowBlank: true,
+                readOnly: this.permanent
             },{
-                xtype      : "textfield",
-                name       : "key2",
-                fieldLabel : _("Key"),
-                allowBlank : true,
-                readOnly   : this.permanent
+                xtype: "textfield",
+                name: "key2",
+                fieldLabel: _("Key"),
+                allowBlank: true,
+                readOnly: this.permanent
             },{
-                xtype      : "textfield",
-                name       : "package2",
-                fieldLabel : _("Package"),
-                allowBlank : true,
-                readOnly   : this.permanent
+                xtype: "textfield",
+                name: "package2",
+                fieldLabel: _("Package"),
+                allowBlank: true,
+                readOnly: this.permanent
             },{
-                xtype      : "textfield",
-                name       : "pin2",
-                fieldLabel : _("Pin"),
-                allowBlank : true,
-                readOnly   : this.permanent
+                xtype: "textfield",
+                name: "pin2",
+                fieldLabel: _("Pin"),
+                allowBlank: true,
+                readOnly: this.permanent
             },{
-                xtype      : "textfield",
-                name       : "priority2",
-                fieldLabel : _("Priority"),
-                allowBlank : true,
-                readOnly   : this.permanent
+                xtype: "textfield",
+                name: "priority2",
+                fieldLabel: _("Priority"),
+                allowBlank: true,
+                readOnly: this.permanent
             }]
         },{
             xtype: "fieldset",
@@ -143,130 +143,130 @@ Ext.define("OMV.module.admin.system.omvextras.Repo", {
                 labelSeparator: ""
             },
             items: [{
-                xtype      : "textfield",
-                name       : "repo3",
-                fieldLabel : _("Repo"),
-                allowBlank : true,
-                readOnly   : this.permanent
+                xtype: "textfield",
+                name: "repo3",
+                fieldLabel: _("Repo"),
+                allowBlank: true,
+                readOnly: this.permanent
             },{
-                xtype      : "textfield",
-                name       : "key3",
-                fieldLabel : _("Key"),
-                allowBlank : true,
-                readOnly   : this.permanent
+                xtype: "textfield",
+                name: "key3",
+                fieldLabel: _("Key"),
+                allowBlank: true,
+                readOnly: this.permanent
             },{
-                xtype      : "textfield",
-                name       : "package3",
-                fieldLabel : _("Package"),
-                allowBlank : true,
-                readOnly   : this.permanent
+                xtype: "textfield",
+                name: "package3",
+                fieldLabel: _("Package"),
+                allowBlank: true,
+                readOnly: this.permanent
             },{
-                xtype      : "textfield",
-                name       : "pin3",
-                fieldLabel : _("Pin"),
-                allowBlank : true,
-                readOnly   : this.permanent
+                xtype: "textfield",
+                name: "pin3",
+                fieldLabel: _("Pin"),
+                allowBlank: true,
+                readOnly: this.permanent
             },{
-                xtype      : "textfield",
-                name       : "priority3",
-                fieldLabel : _("Priority"),
-                allowBlank : true,
-                readOnly   : this.permanent
+                xtype: "textfield",
+                name: "priority3",
+                fieldLabel: _("Priority"),
+                allowBlank: true,
+                readOnly: this.permanent
             }]
         },{
-            xtype      : "checkbox",
-            name       : "permanent",
-            fieldLabel : _("Permanent"),
-            checked    : false,
-            readOnly   : true
+            xtype: "checkbox",
+            name: "permanent",
+            fieldLabel: _("Permanent"),
+            checked: false,
+            readOnly: true
         }];
     }
 });
 
 Ext.define("OMV.module.admin.system.omvextras.Repos", {
-    extend   : "OMV.workspace.grid.Panel",
-    requires : [
+    extend: "OMV.workspace.grid.Panel",
+    requires: [
         "OMV.Rpc",
         "OMV.data.Store",
         "OMV.data.Model",
         "OMV.data.proxy.Rpc",
         "OMV.util.Format"
     ],
-    uses     : [
+    uses: [
         "OMV.module.admin.system.omvextras.Repo"
     ],
 
-    hidePagingToolbar : false,
-    stateful          : true,
-    stateId           : "a982b26d-6804-4632-b31b-1b48c0ea6dde",
-    columns           : [{
-        xtype     : "booleaniconcolumn",
-        text      : _("Enabled"),
-        sortable  : true,
-        dataIndex : "enable",
-        stateId   : "enable",
-        align     : "center",
-        width     : 80,
-        resizable : false,
-        iconCls   :  Ext.baseCSSPrefix + "grid-cell-booleaniconcolumn-switch"
+    hidePagingToolbar: false,
+    stateful: true,
+    stateId: "a982b26d-6804-4632-b31b-1b48c0ea6dde",
+    columns: [{
+        xtype: "booleaniconcolumn",
+        text: _("Enabled"),
+        sortable: true,
+        dataIndex: "enable",
+        stateId: "enable",
+        align: "center",
+        width: 80,
+        resizable: false,
+        iconCls:  Ext.baseCSSPrefix + "grid-cell-booleaniconcolumn-switch"
     },{
-        xtype     : "textcolumn",
-        text      : _("Name"),
-        sortable  : true,
-        dataIndex : "name",
-        stateId   : "name"
+        xtype: "textcolumn",
+        text: _("Name"),
+        sortable: true,
+        dataIndex: "name",
+        stateId: "name"
     },{
-        xtype     : "textcolumn",
-        text      : _("Comment"),
-        sortable  : true,
-        dataIndex : "comment",
-        stateId   : "comment",
-        flex      : 1
+        xtype: "textcolumn",
+        text: _("Comment"),
+        sortable: true,
+        dataIndex: "comment",
+        stateId: "comment",
+        flex: 1
     }],
 
-    initComponent : function() {
+    initComponent: function() {
         var me = this;
         Ext.apply(me, {
-            store : Ext.create("OMV.data.Store", {
-                autoLoad : true,
-                model    : OMV.data.Model.createImplicit({
-                    idProperty  : "uuid",
-                    fields      : [
-                        { name : "uuid", type : "string" },
-                        { name : "enable", type : "boolean" },
-                        { name : "name", type : "string" },
-                        { name : "repo1", type : "string" },
-                        { name : "repo2", type : "string" },
-                        { name : "repo3", type : "string" },
-                        { name : "key1", type : "string" },
-                        { name : "key2", type : "string" },
-                        { name : "key3", type : "string" },
-                        { name : "comment", type : "string" },
-                        { name : "package1", type : "string" },
-                        { name : "pin1", type : "string" },
-                        { name : "priority1", type : "string" },
-                        { name : "package2", type : "string" },
-                        { name : "pin2", type : "string" },
-                        { name : "priority2", type : "string" },
-                        { name : "package3", type : "string" },
-                        { name : "pin3", type : "string" },
-                        { name : "priority3", type : "string" },
-                        { name : "permanent", type : "boolean" }
+            store: Ext.create("OMV.data.Store", {
+                autoLoad: true,
+                model: OMV.data.Model.createImplicit({
+                    idProperty: "uuid",
+                    fields: [
+                        { name: "uuid", type: "string" },
+                        { name: "enable", type: "boolean" },
+                        { name: "name", type: "string" },
+                        { name: "repo1", type: "string" },
+                        { name: "repo2", type: "string" },
+                        { name: "repo3", type: "string" },
+                        { name: "key1", type: "string" },
+                        { name: "key2", type: "string" },
+                        { name: "key3", type: "string" },
+                        { name: "comment", type: "string" },
+                        { name: "package1", type: "string" },
+                        { name: "pin1", type: "string" },
+                        { name: "priority1", type: "string" },
+                        { name: "package2", type: "string" },
+                        { name: "pin2", type: "string" },
+                        { name: "priority2", type: "string" },
+                        { name: "package3", type: "string" },
+                        { name: "pin3", type: "string" },
+                        { name: "priority3", type: "string" },
+                        { name: "permanent", type: "boolean" }
                     ]
                 }),
-                proxy : {
-                    type    : "rpc",
-                    rpcData : {
-                        service : "OmvExtras",
-                        method  : "getRepoList"
+                proxy: {
+                    type: "rpc",
+                    rpcData: {
+                        service: "OmvExtras",
+                        method: "getRepoList"
                     }
                 }
             })
         });
 
         OMV.Rpc.request({
-            scope    : this,
-            callback : function(id, success, response) {
+            scope: this,
+            callback: function(id, success, response) {
                 var parent = me.up('tabpanel');
 
                 if (!parent)
@@ -284,99 +284,114 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
                     }
                 }
             },
-            relayErrors : false,
-            rpcData     : {
-                service  : "OmvExtras",
-                method   : "getArch"
+            relayErrors: false,
+            rpcData: {
+                service: "OmvExtras",
+                method: "getArch"
             }
         });
 
         me.callParent(arguments);
     },
 
-    getTopToolbarItems : function() {
+    getTopToolbarItems: function() {
         var me = this;
         var items = me.callParent(arguments);
         Ext.Array.push(items, {
-            id      : me.getId() + "-check",
-            xtype   : "button",
-            text    : _("Update"),
-            icon    : "images/refresh.png",
-            iconCls : Ext.baseCSSPrefix + "btn-icon-16x16",
-            handler : Ext.Function.bind(me.onCheckButton, me, [ me ]),
-            scope   : me
+            id: me.getId() + "-check",
+            xtype: "button",
+            text: _("Update"),
+            icon: "images/refresh.png",
+            iconCls: Ext.baseCSSPrefix + "btn-icon-16x16",
+            handler: Ext.Function.bind(me.onCheckButton, me, [ me ]),
+            scope: me
         },{
-            id      : me.getId() + "-aptclean",
-            xtype   : "button",
-            text    : _("Apt Clean"),
-            icon    : "images/erase.png",
-            iconCls : Ext.baseCSSPrefix + "btn-icon-16x16",
-            handler : Ext.Function.bind(me.onAptCleanButton, me, [ me ]),
-            scope   : me
+            id: me.getId() + "-aptclean",
+            xtype: "button",
+            text: _("Apt Clean"),
+            icon: "images/erase.png",
+            iconCls: Ext.baseCSSPrefix + "btn-icon-16x16",
+            handler: Ext.Function.bind(me.onAptCleanButton, me, [ me ]),
+            scope: me
+        },{
+            id: me.getId() + "-backports",
+            xtype: "button",
+            text: _("Backports"),
+            scope: this,
+            icon: "images/software.png",
+            menu: [{
+                text: _("Enable Backports"),
+                icon: "images/led_green.png",
+                handler: Ext.Function.bind(me.onBackportsButton, me, [ "YES" ])
+            },{
+                text: _("Disable Backports"),
+                icon: "images/led_red.png",
+                handler: Ext.Function.bind(me.onBackportsButton, me, [ "NO" ])
+            }]
         });
         return items;
     },
 
-    onAddButton : function() {
+    onAddButton: function() {
         var me = this;
         Ext.create("OMV.module.admin.system.omvextras.Repo", {
-            title     : _("Add repo"),
-            uuid      : OMV.UUID_UNDEFINED,
-            listeners : {
-                scope  : me,
-                submit : function() {
+            title: _("Add repo"),
+            uuid: OMV.UUID_UNDEFINED,
+            listeners: {
+                scope: me,
+                submit: function() {
                     this.doReload();
                 }
             }
         }).show();
     },
 
-    onEditButton : function() {
+    onEditButton: function() {
         var me = this;
         var record = me.getSelected();
         //Check to see if permanent
         Ext.create("OMV.module.admin.system.omvextras.Repo", {
-            title     : _("Edit repo"),
-            uuid      : record.get("uuid"),
-            permanent : record.get("permanent"),
-            listeners : {
-                scope  : me,
-                submit : function() {
+            title: _("Edit repo"),
+            uuid: record.get("uuid"),
+            permanent: record.get("permanent"),
+            listeners: {
+                scope: me,
+                submit: function() {
                     this.doReload();
                 }
             }
         }).show();
     },
 
-    doDeletion : function(record) {
+    doDeletion: function(record) {
         var me = this;
         var record = me.getSelected();
         //Check to see if permanent
         OMV.Rpc.request({
-            scope    : me,
-            callback : me.onDeletion,
-            rpcData  : {
-                service : "OmvExtras",
-                method  : "deleteRepo",
-                params  : {
-                    uuid : record.get("uuid")
+            scope: me,
+            callback: me.onDeletion,
+            rpcData: {
+                service: "OmvExtras",
+                method: "deleteRepo",
+                params: {
+                    uuid: record.get("uuid")
                 }
             }
         });
     },
 
-    onCheckButton : function() {
+    onCheckButton: function() {
         var me = this;
         var wnd = Ext.create("OMV.window.Execute", {
-            title           : _("Checking for new updates ..."),
-            rpcService      : "omvextras",
-            rpcMethod       : "doUpdate",
-            rpcIgnoreErrors : true,
-            hideStartButton : true,
-            hideStopButton  : true,
-            listeners       : {
-                scope     : me,
-                finish    : function(wnd, response) {
+            title: _("Checking for new updates ..."),
+            rpcService: "omvextras",
+            rpcMethod: "doUpdate",
+            rpcIgnoreErrors: true,
+            hideStartButton: true,
+            hideStopButton: true,
+            listeners: {
+                scope: me,
+                finish: function(wnd, response) {
                     wnd.appendValue(_("Done..."));
                     wnd.setButtonDisabled("close", false);
                 },
@@ -394,26 +409,26 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
     onAptCleanButton: function() {
         var me = this;
         var wnd = Ext.create("OMV.window.Execute", {
-            title           : _("Cleaning Apt Files and Lists..."),
-            rpcService      : "OmvExtras",
-            rpcMethod       : "doCommand",
-            rpcParams      : {
-                "command" : "aptclean"
+            title: _("Cleaning Apt Files and Lists..."),
+            rpcService: "OmvExtras",
+            rpcMethod: "doCommand",
+            rpcParams: {
+                "command": "aptclean"
             },
-            rpcIgnoreErrors : true,
-            hideStartButton : true,
-            hideStopButton  : true,
-            listeners       : {
-                scope     : me,
-                finish    : function(wnd, response) {
+            rpcIgnoreErrors: true,
+            hideStartButton: true,
+            hideStopButton: true,
+            listeners: {
+                scope: me,
+                finish: function(wnd, response) {
                     wnd.appendValue(_("Done..."));
                     wnd.setButtonDisabled("close", false);
                 },
-                exception : function(wnd, error) {
+                exception: function(wnd, error) {
                     OMV.MessageBox.error(null, error);
                     wnd.setButtonDisabled("close", false);
                 },
-                close     : function() {
+                close: function() {
                     document.location.reload();
                 }
             }
@@ -421,13 +436,39 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
         wnd.setButtonDisabled("close", true);
         wnd.show();
         wnd.start();
+    },
+
+    onBackportsButton: function(cmd) {
+        var me = this;
+        var msg = "";
+        if (cmd == "NO") {
+            msg = _("Disabling backports repo ...");
+        } else {
+            msg = _("Enabling backports repo ...");
+        }
+        OMV.MessageBox.wait(null, msg);
+        OMV.Rpc.request({
+            scope: me,
+            relayErrors: false,
+            rpcData: {
+                service: "OmvExtras",
+                method: "doBackports",
+                params: {
+                    cmd: cmd
+                }
+            },
+            success: function(id, success, response) {
+                me.doReload();
+                OMV.MessageBox.hide();
+            }
+        });
     }
 });
 
 OMV.WorkspaceManager.registerPanel({
-    id        : "repos",
-    path      : "/system/omvextras",
-    text      : _("Repos"),
-    position  : 10,
-    className : "OMV.module.admin.system.omvextras.Repos"
+    id: "repos",
+    path: "/system/omvextras",
+    text: _("Repos"),
+    position: 10,
+    className: "OMV.module.admin.system.omvextras.Repos"
 });
