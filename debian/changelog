@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (4.1.8) stable; urgency=low
+
+  * Add Proxmox kernel install option
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 30 May 2018 08:27:52 -0500
+
 openmediavault-omvextrasorg (4.1.7) stable; urgency=low
 
   * Add hold/unhold kernel buttons

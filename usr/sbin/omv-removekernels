@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# remove other kernels and headers
+dpkg -l | grep -E "linux-image|linux-headers" | cut -d" " -f3 | xargs dpkg --purge
+
+sed -i "s/GRUB_DEFAULT=.*/GRUB_DEFAULT=0/" /etc/default/grub
+grub-set-default 0
+update-grub
+
+exit 0

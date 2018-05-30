@@ -1,0 +1,66 @@
+#!/bin/bash
+
+declare -i kernnum=0
+
+distro="$(lsb_release --codename --short)"
+grubconfig="/boot/grub/grub.cfg";
+grubdefault="/etc/default/grub";
+kernelversion="4.15"
+pverepo="/etc/apt/sources.list.d/pvekernel.list"
+repourl="http://download.proxmox.com/debian"
+
+# only 64 bit amd/intel supported
+case "$(/usr/bin/arch)" in
+  *amd64*|*x86_64*)
+    echo "Supported kernel found"
+    ;;
+  *)
+    echo "Unsupported kernel and/or processor"
+    exit 1
+    ;;
+esac
+
+# add repo list file
+echo "deb ${repourl} ${distro} pve-no-subscription" > ${pverepo}
+
+# get repo key and add
+wget -O - ${repourl}/dists/${distro}/proxmox-ve-release-5.x.gpg | apt-key add -
+if [ $? -gt 0 ]; then
+  echo "Failed to add Proxmox gpg key.  Exiting..."
+  exit 2
+fi
+apt-get update
+
+# remove conflicting firmware packages
+for pkg in linux linux-nonfree ti-connectivity amd-graphics cavium siano; do
+  if dpkg -l firmware-${pkg} &>/dev/null; then
+    dpkg --purge firmware-${pkg} 2>/dev/null
+    if [ $? -gt 0 ]; then
+      echo "Failed to remove firmware-${pkg} package.  Exiting..."
+      exit 3
+    fi
+  fi
+done
+
+# install kernel and headers
+apt-get --yes --force-yes --fix-missing install pve-kernel-${kernelversion} pve-headers
+if [ $? -gt 0 ]; then
+  echo "Failed to install Proxmox kernel.  Exiting..."
+  exit 4
+fi
+
+# set newly install proxmox kernel as default
+awk '$1 == "menuentry" { print $6 }' ${grubconfig} | while read kernel; do
+  if [[ ${kernel} = *"pve'" ]]; then
+    echo "Set ${kernel} as default... ${kernnum}"
+    sed -i "s/GRUB_DEFAULT=.*/GRUB_DEFAULT=${kernnum}/" ${grubdefault}
+    grub-set-default ${kernnum}
+    update-grub
+    break
+  fi
+  let kernnum++
+done
+
+echo "Please reboot to use the new kernel."
+
+exit 0

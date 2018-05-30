@@ -438,10 +438,10 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
         wnd.start();
     },
 
-    onBackportsButton: function(cmd) {
+    onBackportsButton: function(command) {
         var me = this;
         var msg = "";
-        if (cmd == "NO") {
+        if (command == "NO") {
             msg = _("Disabling backports repo ...");
         } else {
             msg = _("Enabling backports repo ...");
@@ -454,7 +454,7 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
                 service: "OmvExtras",
                 method: "doBackports",
                 params: {
-                    cmd: cmd
+                    "command": command
                 }
             },
             success: function(id, success, response) {

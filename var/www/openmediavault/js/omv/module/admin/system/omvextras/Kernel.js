@@ -98,12 +98,47 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                 text: _("Set as default boot kernel"),
                 scope: this,
                 handler: Ext.Function.bind(me.onSetBootButton, me, [ me ]),
-                margin: "5 0 8 0"
+                margin: "0 0 0 0"
             },{
                 border: false,
                 html: "<ul>" +
-                           "<li>" + _("Setting the wrong default boot kernel may cause the system to be inaccessible.  The boot menu will still be available to select a different kernel.") + "</li>" +
-                         "</ul>"
+                        "<li>" + _("Setting the wrong default boot kernel may cause the system to be inaccessible.  The boot menu will still be available to select a different kernel.") + "</li>" +
+                      "</ul>"
+            }]
+        },{
+            xtype: "fieldset",
+            title: _("Proxmox"),
+            fieldDefaults: {
+                labelSeparator: ""
+            },
+            items: [{
+                xtype: "button",
+                name: "installProxmox",
+                text: _("Install Proxmox kernel"),
+                scope: this,
+                handler: Ext.Function.bind(me.onProxmoxButton, me, [ "install" ]),
+                margin: "0 0 0 0"
+            },{
+                border: false,
+                html: "<ul>" +
+                        "<li>" + _("This will enable the Proxmox 5.x repo.") + "</li>" +
+                        "<li>" + _("This will install the latest 4.15 kernel.") + "</li>" +
+                      "</ul>"
+            },{
+                xtype: "button",
+                name: "setboot",
+                text: _("Remove non-Proxmox kernels and headers"),
+                scope: this,
+                handler: Ext.Function.bind(me.onProxmoxButton, me, [ "remove" ]),
+                margin: "10 0 0 0"
+            },{
+                border: false,
+                html: "<ul>" +
+                        "<li>" + _("Reboot with the Proxmox kernel before removing non-Proxmox kernels.") + "</li>" +
+                        "<li>" + _("This will fail to remove a linux-image-* kernel if it is still active.") + "</li>" +
+                        "<li>" + _("This will remove all kernel packages with the prefix linux-image-.") + "</li>" +
+                        "<li>" + _("This will remove all headers packages with the prefix linux-headers-.") + "</li>" +
+                      "</ul>"
             }]
         },{
             xtype: "fieldset",
@@ -117,7 +152,7 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                 text: _("Install Clonezilla"),
                 scope: this,
                 handler: Ext.Function.bind(me.onCommandButton, me, [ "installcz" ]),
-                margin: "5 0 0 10"
+                margin: "0 0 0 0"
             },{
                 border: false,
                 html: "<ul>" +
@@ -134,7 +169,7 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                 text: _("Reboot to Clonezilla Once"),
                 scope: this,
                 handler: Ext.Function.bind(me.onCommandButton, me, [ "rebootcz" ]),
-                margin: "0 0 0 10"
+                margin: "10 0 0 0"
             },{
                 border: false,
                 html: "<ul><li>" + _("Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time.") + "</li></ul>"
@@ -151,7 +186,7 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                 text: _("Install GParted Live"),
                 scope: this,
                 handler: Ext.Function.bind(me.onCommandButton, me, [ "installgp" ]),
-                margin: "5 0 0 10"
+                margin: "0 0 0 0"
             },{
                 border: false,
                 html: "<ul>" +
@@ -167,7 +202,7 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                 text: _("Reboot to GParted Live Once"),
                 scope: this,
                 handler: Ext.Function.bind(me.onCommandButton, me, [ "rebootgp" ]),
-                margin: "0 0 0 10"
+                margin: "10 0 0 0"
             },{
                 border: false,
                 html: "<ul><li>" + _("Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time.") + "</li></ul>"
@@ -184,7 +219,7 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                 text: _("Install SystemRescueCD"),
                 scope: this,
                 handler: Ext.Function.bind(me.onCommandButton, me, [ "installsys" ]),
-                margin: "5 0 0 10"
+                margin: "0 0 0 0"
             },{
                 border: false,
                 html: "<ul>" +
@@ -200,7 +235,7 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                 text: _("Reboot to SystemRescueCD Once"),
                 scope: this,
                 handler: Ext.Function.bind(me.onCommandButton, me, [ "rebootsys" ]),
-                margin: "0 0 0 10"
+                margin: "10 0 0 0"
             },{
                 border: false,
                 html: "<ul><li>" + _("Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time.") + "</li></ul>"
@@ -208,9 +243,9 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
         }];
     },
 
-    onCommandButton: function(cmd) {
+    onCommandButton: function(command) {
         var me = this;
-        switch(cmd) {
+        switch(command) {
             case "installcz":
                 title = _("Install Clonezilla ISO ...");
                 break;
@@ -231,14 +266,14 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                 break;
             default:
                 title = _("Cleaning Apt Files and Lists...");
-                cmd = "aptclean";
+                command = "aptclean";
         }
         Ext.create("OMV.window.Execute", {
             title: title,
             rpcService: "OmvExtras",
             rpcMethod: "doCommand",
             rpcParams: {
-                "command": cmd
+                "command": command
             },
             hideStopButton: true,
             listeners: {
@@ -261,7 +296,7 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                 service: "OmvExtras",
                 method: "setBootKernel",
                 params: {
-                    key: key
+                    "key": key
                 }
             },
             success: function(id, success, response) {
@@ -271,10 +306,10 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
         });
     },
 
-    onHoldButton: function(cmd) {
+    onHoldButton: function(command) {
         var me = this;
         var msg = "";
-        if (cmd == "hold") {
+        if (command == "hold") {
             msg = _("Holding current kernel ...");
         } else {
             msg = _("Unholding current kernel ...");
@@ -287,7 +322,7 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                 service: "OmvExtras",
                 method: "doHold",
                 params: {
-                    cmd: cmd
+                    "command": command
                 }
             },
             success: function(id, success, response) {
@@ -295,6 +330,40 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                 OMV.MessageBox.hide();
             }
         });
+    },
+
+    onProxmoxButton: function(command) {
+        var title = _("Installing Proxmox kernel...");
+        if (command == "remove") {
+            title = _("Removing non-Proxmox kernels...");
+        }
+        var me = this;
+        var wnd = Ext.create("OMV.window.Execute", {
+            title: title,
+            rpcService: "OmvExtras",
+            rpcMethod: "doProxmox",
+            rpcParams: {
+                "command": command
+            },
+            rpcIgnoreErrors: true,
+            hideStopButton: true,
+            listeners: {
+                scope: me,
+                finish: function(wnd, response) {
+                    wnd.appendValue(_("Done..."));
+                    wnd.setButtonDisabled("close", false);
+                },
+                exception: function(wnd, error) {
+                    OMV.MessageBox.error(null, error);
+                    wnd.setButtonDisabled("close", false);
+                },
+                close: function() {
+                    document.location.reload();
+                }
+            }
+        });
+        wnd.setButtonDisabled("close", true);
+        wnd.show();
     }
 });
 
