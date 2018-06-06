@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
+# Gyuris Gellért <bubu@ujevangelizacio.hu>, 2018
 # Gyuris Gellért <bubu@ujevangelizacio.hu>, 2017
 # Grawens <szabolcs.szanyi@gmail.com>, 2014-2016,2018
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-21 07:40-0500\n"
-"PO-Revision-Date: 2018-05-21 12:40+0000\n"
+"POT-Creation-Date: 2018-05-30 07:43-0500\n"
+"PO-Revision-Date: 2018-05-30 12:43+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +27,7 @@ msgid "Apt Clean"
 msgstr "Apt törlés"
 
 msgid "Backports"
-msgstr ""
+msgstr "Visszaportolások"
 
 msgid "Checking for new updates ..."
 msgstr "Új frissítések keresése…"
@@ -44,10 +45,10 @@ msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Alapértelmezett felhasználónév: <b>felhasználó</b> és jelszó: <b>élő</b>"
 
 msgid "Disable Backports"
-msgstr ""
+msgstr "Visszaportolások letiltása"
 
 msgid "Disabling backports repo ..."
-msgstr ""
+msgstr "Visszaportolt tároló letiltása…"
 
 msgid "Done..."
 msgstr "Kész…"
@@ -65,7 +66,7 @@ msgstr "GParted Live ISO letöltése és a GRUB rendszerbetöltő konfigurálás
 msgid ""
 "Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
 " from ISO."
-msgstr ""
+msgstr "SystemRescueCD ISO letöltése és a GRUB rendszerbetöltő konfigurálása, hogy lehessen rendszert indítani az ISO-ról."
 
 msgid "Edit repo"
 msgstr "Tároló módosítás"
@@ -74,22 +75,22 @@ msgid "Enable"
 msgstr "Engedélyezés"
 
 msgid "Enable Backports"
-msgstr ""
+msgstr "Visszaportolások engedélyezése"
 
 msgid "Enabled"
 msgstr "Engedélyezve"
 
 msgid "Enabling backports repo ..."
-msgstr ""
+msgstr "Visszaportolt tároló engedélyezése…"
 
 msgid "GParted Live"
 msgstr "GParted Live"
 
 msgid "Hold Current Kernel"
-msgstr ""
+msgstr "Jelenlegi kernel tartása"
 
 msgid "Holding current kernel ..."
-msgstr ""
+msgstr "Jelenlegi kernel tartása…"
 
 msgid "IP Address will be set by DHCP."
 msgstr "Az IP címet a DHCP fogja kiosztani."
@@ -120,6 +121,9 @@ msgstr "GParted Live telepítése"
 msgid "Install GParted Live ISO ..."
 msgstr "GParted Live ISO telepítése…"
 
+msgid "Install Proxmox kernel"
+msgstr ""
+
 msgid "Install SystemRescueCD"
 msgstr "SystemRescueCD telepítése"
 
@@ -128,6 +132,9 @@ msgstr "SystemRescueCD ISO telepítése…"
 
 msgid "Installed Kernels"
 msgstr "Telepített kernelek"
+
+msgid "Installing Proxmox kernel..."
+msgstr ""
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -159,6 +166,9 @@ msgstr "Pin"
 msgid "Priority"
 msgstr "Prioritás"
 
+msgid "Proxmox"
+msgstr ""
+
 msgid "Reboot to Clonezilla ..."
 msgstr "Újraindítás a Clonezillával…"
 
@@ -177,6 +187,15 @@ msgstr "Újraindítás a SystemRescueCD-vel…"
 msgid "Reboot to SystemRescueCD Once"
 msgstr "Újraindítás egyszer a SystemRescueCD-vel"
 
+msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
+msgstr ""
+
+msgid "Remove non-Proxmox kernels and headers"
+msgstr ""
+
+msgid "Removing non-Proxmox kernels..."
+msgstr ""
+
 msgid "Repo"
 msgstr "Tároló"
 
@@ -190,7 +209,7 @@ msgid "Repo #3"
 msgstr "Tároló #3"
 
 msgid "Repos"
-msgstr "Tárak"
+msgstr "Tárolók"
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
@@ -212,7 +231,7 @@ msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr "Beállítja a GRUB rendszerbetöltőt, hogy a GParted Live ISO-ról induljon a rendszer <b>EGY</b> alkalommal."
 
 msgid "Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time."
-msgstr ""
+msgstr "Beállítja a GRUB rendszerbetöltőt, hogy a SystemRescueCD ISO-ról induljon a rendszer <b>EGY</b> alkalommal."
 
 msgid "Setting boot kernel ..."
 msgstr "Rendszerindító kernel beállítása…"
@@ -226,11 +245,26 @@ msgstr "A rosszul alapértelmezettként beállított kernel miatt a rendszer el�
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
 
-msgid "Unhold Current Kernel"
+msgid "This will enable the Proxmox 5.x repo."
 msgstr ""
 
-msgid "Unholding current kernel ..."
+msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr ""
+
+msgid "This will install the latest 4.15 kernel."
+msgstr ""
+
+msgid "This will remove all headers packages with the prefix linux-headers-."
+msgstr ""
+
+msgid "This will remove all kernel packages with the prefix linux-image-."
+msgstr ""
+
+msgid "Unhold Current Kernel"
+msgstr "Jelenlegi kernel elengedése"
+
+msgid "Unholding current kernel ..."
+msgstr "Jelenlegi kernel elengedése…"
 
 msgid "Update"
 msgstr "Frissítés"

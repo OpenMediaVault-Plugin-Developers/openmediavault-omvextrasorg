@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# Raul Fernandez Garcia <raulfg3@gmail.com>, 2014-2017
+# Raul Fernandez Garcia <raulfg3@gmail.com>, 2014-2018
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-21 07:40-0500\n"
-"PO-Revision-Date: 2018-05-21 12:40+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"POT-Creation-Date: 2018-05-30 07:43-0500\n"
+"PO-Revision-Date: 2018-06-02 12:42+0000\n"
+"Last-Translator: Raul Fernandez Garcia <raulfg3@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +25,7 @@ msgid "Apt Clean"
 msgstr "Apt Clean"
 
 msgid "Backports"
-msgstr ""
+msgstr "Backports"
 
 msgid "Checking for new updates ..."
 msgstr "Buscando nuevas actualizaciones ..."
@@ -43,10 +43,10 @@ msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Usuario por defecto: <b>user</b> Contraseña: <b>live</b>"
 
 msgid "Disable Backports"
-msgstr ""
+msgstr "Deshabilitar Backports"
 
 msgid "Disabling backports repo ..."
-msgstr ""
+msgstr "Deshabilitando el repositorio backports ...."
 
 msgid "Done..."
 msgstr "Hecho..."
@@ -64,7 +64,7 @@ msgstr "Descarga la ISO de GParted Live y configura el cargador de arranque grub
 msgid ""
 "Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
 " from ISO."
-msgstr ""
+msgstr "Descargar SystemRescueCD y configurando el cargador Grub para permitir arrancar desde la ISO."
 
 msgid "Edit repo"
 msgstr "Editar repo"
@@ -73,22 +73,22 @@ msgid "Enable"
 msgstr "Habilitar"
 
 msgid "Enable Backports"
-msgstr ""
+msgstr "Habilitar Backports"
 
 msgid "Enabled"
 msgstr "Habilitado"
 
 msgid "Enabling backports repo ..."
-msgstr ""
+msgstr "Habilitando repositorio Backports ..."
 
 msgid "GParted Live"
 msgstr "GParted Live"
 
 msgid "Hold Current Kernel"
-msgstr ""
+msgstr "Mantener el Kernel actual"
 
 msgid "Holding current kernel ..."
-msgstr ""
+msgstr "Manteniendo el kernel actual ..."
 
 msgid "IP Address will be set by DHCP."
 msgstr "La IP debe ser forzosamente por DHCP."
@@ -119,6 +119,9 @@ msgstr "Instalar GParted Live"
 msgid "Install GParted Live ISO ..."
 msgstr "Instalando la ISO de GParted Live ..."
 
+msgid "Install Proxmox kernel"
+msgstr "Instalar Kernel Proxmox"
+
 msgid "Install SystemRescueCD"
 msgstr "Instalar SystemRescueCD"
 
@@ -127,6 +130,9 @@ msgstr "Instalando la ISO de SystemRescueCD ..."
 
 msgid "Installed Kernels"
 msgstr "Kelnel Instalados"
+
+msgid "Installing Proxmox kernel..."
+msgstr "Instalando kernel Proxmox ..."
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -158,6 +164,9 @@ msgstr "Pin"
 msgid "Priority"
 msgstr "Prioridad"
 
+msgid "Proxmox"
+msgstr "Proxmox"
+
 msgid "Reboot to Clonezilla ..."
 msgstr "Reiniciar para arrancar Clonezilla ..."
 
@@ -175,6 +184,15 @@ msgstr "Reiniciar para arrancar SystemRescueCD ..."
 
 msgid "Reboot to SystemRescueCD Once"
 msgstr "Reiniciar para arrancar SystemRescueCD una vez"
+
+msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
+msgstr "Reiniciar con el kernel proxmox, antes de borrar otros kernel No-Proxmox."
+
+msgid "Remove non-Proxmox kernels and headers"
+msgstr "Borrar kernel No-Proxmox y sus cabeceras"
+
+msgid "Removing non-Proxmox kernels..."
+msgstr "Borrando kernel No-Proxmox ..."
 
 msgid "Repo"
 msgstr "Repositorio"
@@ -211,7 +229,7 @@ msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr "Indica al cargador Grub que inicie desde la ISO de GParted Live <b>SOLO UNA VEZ</b>. "
 
 msgid "Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time."
-msgstr ""
+msgstr "Indica al cargador grub que arranque de la  ISO SystemRescueCD <b>UNA</b> unica vez."
 
 msgid "Setting boot kernel ..."
 msgstr "Estableciendo el kernel por defecto ..."
@@ -225,11 +243,26 @@ msgstr "Activar un kernel erroneo, puede hacer inaccesible el sistema. En el men
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
 
+msgid "This will enable the Proxmox 5.x repo."
+msgstr "Esto habilita el repositorio del kernel Proxmox 5.x"
+
+msgid "This will fail to remove a linux-image-* kernel if it is still active."
+msgstr "Fallará al eliminar el kernel si aún está activo."
+
+msgid "This will install the latest 4.15 kernel."
+msgstr "Esto instalará el ultimo kernel 4.15"
+
+msgid "This will remove all headers packages with the prefix linux-headers-."
+msgstr "Esto eliminará todas las cabeceras que contengan el prefijo linux-headers-."
+
+msgid "This will remove all kernel packages with the prefix linux-image-."
+msgstr "Esto eliminará todos los archivos de kernel con el prefijo linux-image-."
+
 msgid "Unhold Current Kernel"
-msgstr ""
+msgstr "Dejar el kernel actual"
 
 msgid "Unholding current kernel ..."
-msgstr ""
+msgstr "Dejando el kewrnel actual ..."
 
 msgid "Update"
 msgstr "Actualización"

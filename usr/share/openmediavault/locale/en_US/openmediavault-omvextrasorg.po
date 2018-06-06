@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-21 07:40-0500\n"
-"PO-Revision-Date: 2018-05-21 12:40+0000\n"
+"POT-Creation-Date: 2018-05-30 07:43-0500\n"
+"PO-Revision-Date: 2018-05-30 12:43+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: English (United States) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/en_US/)\n"
 "MIME-Version: 1.0\n"
@@ -118,6 +118,9 @@ msgstr "Install GParted Live"
 msgid "Install GParted Live ISO ..."
 msgstr "Install GParted Live ISO ..."
 
+msgid "Install Proxmox kernel"
+msgstr "Install Proxmox kernel"
+
 msgid "Install SystemRescueCD"
 msgstr "Install SystemRescueCD"
 
@@ -126,6 +129,9 @@ msgstr "Install SystemRescueCD ISO ..."
 
 msgid "Installed Kernels"
 msgstr "Installed Kernels"
+
+msgid "Installing Proxmox kernel..."
+msgstr "Installing Proxmox kernel..."
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -157,6 +163,9 @@ msgstr "Pin"
 msgid "Priority"
 msgstr "Priority"
 
+msgid "Proxmox"
+msgstr "Proxmox"
+
 msgid "Reboot to Clonezilla ..."
 msgstr "Reboot to Clonezilla ..."
 
@@ -174,6 +183,15 @@ msgstr "Reboot to SystemRescueCD ..."
 
 msgid "Reboot to SystemRescueCD Once"
 msgstr "Reboot to SystemRescueCD Once"
+
+msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
+msgstr "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
+
+msgid "Remove non-Proxmox kernels and headers"
+msgstr "Remove non-Proxmox kernels and headers"
+
+msgid "Removing non-Proxmox kernels..."
+msgstr "Removing non-Proxmox kernels..."
 
 msgid "Repo"
 msgstr "Repo"
@@ -223,6 +241,21 @@ msgstr "Setting the wrong default boot kernel may cause the system to be inacces
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
+
+msgid "This will enable the Proxmox 5.x repo."
+msgstr "This will enable the Proxmox 5.x repo."
+
+msgid "This will fail to remove a linux-image-* kernel if it is still active."
+msgstr "This will fail to remove a linux-image-* kernel if it is still active."
+
+msgid "This will install the latest 4.15 kernel."
+msgstr "This will install the latest 4.15 kernel."
+
+msgid "This will remove all headers packages with the prefix linux-headers-."
+msgstr "This will remove all headers packages with the prefix linux-headers-."
+
+msgid "This will remove all kernel packages with the prefix linux-image-."
+msgstr "This will remove all kernel packages with the prefix linux-image-."
 
 msgid "Unhold Current Kernel"
 msgstr "Unhold Current Kernel"

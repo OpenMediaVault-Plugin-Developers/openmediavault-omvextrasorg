@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# Toshihiro Kan <kansuke4649@gmail.com>, 2014-2017
+# Toshihiro Kan <kansuke4649@gmail.com>, 2014-2018
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-21 07:40-0500\n"
-"PO-Revision-Date: 2018-05-21 12:40+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"POT-Creation-Date: 2018-05-30 07:43-0500\n"
+"PO-Revision-Date: 2018-06-06 08:27+0000\n"
+"Last-Translator: Toshihiro Kan <kansuke4649@gmail.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +25,7 @@ msgid "Apt Clean"
 msgstr "APTクリーン"
 
 msgid "Backports"
-msgstr ""
+msgstr "バックポート"
 
 msgid "Checking for new updates ..."
 msgstr "新しいアップデートを確認しています ..."
@@ -43,10 +43,10 @@ msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "デフォルトのユーザー名: <b>user</b>、パスワード:<b>live</b>"
 
 msgid "Disable Backports"
-msgstr ""
+msgstr "バックポートを無効化"
 
 msgid "Disabling backports repo ..."
-msgstr ""
+msgstr "バックポート用リポジトリを無効にしています ..."
 
 msgid "Done..."
 msgstr "完了"
@@ -73,13 +73,13 @@ msgid "Enable"
 msgstr "有効化"
 
 msgid "Enable Backports"
-msgstr ""
+msgstr "バックポートを有効化"
 
 msgid "Enabled"
 msgstr "有効化済"
 
 msgid "Enabling backports repo ..."
-msgstr ""
+msgstr "バックポート用リポジトリを有効にしています ..."
 
 msgid "GParted Live"
 msgstr "GParted Live"
@@ -119,6 +119,9 @@ msgstr "GParted Liveのインストール"
 msgid "Install GParted Live ISO ..."
 msgstr "GParted Live ISOをインストール中 ..."
 
+msgid "Install Proxmox kernel"
+msgstr ""
+
 msgid "Install SystemRescueCD"
 msgstr "SystemRescueCDのインストール"
 
@@ -127,6 +130,9 @@ msgstr "SystemRescueCD ISOをインストール中 ..."
 
 msgid "Installed Kernels"
 msgstr "インストールされているカーネル"
+
+msgid "Installing Proxmox kernel..."
+msgstr ""
 
 msgid "Kernel"
 msgstr "カーネル"
@@ -158,6 +164,9 @@ msgstr "ピン"
 msgid "Priority"
 msgstr "優先度"
 
+msgid "Proxmox"
+msgstr ""
+
 msgid "Reboot to Clonezilla ..."
 msgstr "Clonezillaで再起動 ..."
 
@@ -175,6 +184,15 @@ msgstr "SystemRescueCDで再起動 ..."
 
 msgid "Reboot to SystemRescueCD Once"
 msgstr "一度だけSystemRescueCDで再起動"
+
+msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
+msgstr ""
+
+msgid "Remove non-Proxmox kernels and headers"
+msgstr ""
+
+msgid "Removing non-Proxmox kernels..."
+msgstr ""
 
 msgid "Repo"
 msgstr "リポジトリ"
@@ -224,6 +242,21 @@ msgstr "間違ったデフォルトの起動カーネルを設定すると、シ
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
+
+msgid "This will enable the Proxmox 5.x repo."
+msgstr ""
+
+msgid "This will fail to remove a linux-image-* kernel if it is still active."
+msgstr ""
+
+msgid "This will install the latest 4.15 kernel."
+msgstr ""
+
+msgid "This will remove all headers packages with the prefix linux-headers-."
+msgstr ""
+
+msgid "This will remove all kernel packages with the prefix linux-image-."
+msgstr ""
 
 msgid "Unhold Current Kernel"
 msgstr ""

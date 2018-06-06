@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-21 07:40-0500\n"
-"PO-Revision-Date: 2018-05-21 12:40+0000\n"
+"POT-Creation-Date: 2018-05-30 07:43-0500\n"
+"PO-Revision-Date: 2018-05-30 12:43+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -120,6 +120,9 @@ msgstr "Installa GParted Live"
 msgid "Install GParted Live ISO ..."
 msgstr "Installa ISO di GParted Live"
 
+msgid "Install Proxmox kernel"
+msgstr ""
+
 msgid "Install SystemRescueCD"
 msgstr "Installa SystemRescueCD"
 
@@ -128,6 +131,9 @@ msgstr "Installa ISO di SystemRescueCD ..."
 
 msgid "Installed Kernels"
 msgstr "Kernel installati"
+
+msgid "Installing Proxmox kernel..."
+msgstr ""
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -159,6 +165,9 @@ msgstr "Blocca"
 msgid "Priority"
 msgstr "Priorità"
 
+msgid "Proxmox"
+msgstr ""
+
 msgid "Reboot to Clonezilla ..."
 msgstr "Riavvia su Clonezilla ..."
 
@@ -176,6 +185,15 @@ msgstr "Riavvia su SystemRescueCD ..."
 
 msgid "Reboot to SystemRescueCD Once"
 msgstr "Riavvia su SystemRescueCD una volta sola"
+
+msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
+msgstr ""
+
+msgid "Remove non-Proxmox kernels and headers"
+msgstr ""
+
+msgid "Removing non-Proxmox kernels..."
+msgstr ""
 
 msgid "Repo"
 msgstr "Repository"
@@ -225,6 +243,21 @@ msgstr "L'impostazione errata del kernel di avvio può rendere non accessibile i
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
+
+msgid "This will enable the Proxmox 5.x repo."
+msgstr ""
+
+msgid "This will fail to remove a linux-image-* kernel if it is still active."
+msgstr ""
+
+msgid "This will install the latest 4.15 kernel."
+msgstr ""
+
+msgid "This will remove all headers packages with the prefix linux-headers-."
+msgstr ""
+
+msgid "This will remove all kernel packages with the prefix linux-image-."
+msgstr ""
 
 msgid "Unhold Current Kernel"
 msgstr ""
