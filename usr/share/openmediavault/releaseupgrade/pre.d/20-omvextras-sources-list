@@ -5,6 +5,7 @@ export LC_ALL=C
 
 list="/etc/apt/sources.list.d/omv-extras-org.list"
 armbian="/etc/apt/sources.list.d/armbian.list"
+rpi="/etc/apt/preferences.d/99raspberrypiorg"
 
 if [ -f "${list}" ]; then
   sed -i "s/jessie/stretch/g" ${list}
@@ -14,6 +15,14 @@ fi
 
 if [ -f "${armbian}" ]; then
   sed -i "s/jessie/stretch/g" ${armbian}
+fi
+
+if [ -f "${rpi}" ]; then
+  sed -i \
+      -e 's/n=jessie/n=stretch/' \
+      -e 's/\ 490/\ 10/' \
+      -e 's/\ 500/\ 900/' \
+      ${rpi}
 fi
 
 exit 0
