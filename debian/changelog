@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (4.1.9) stable; urgency=low
+
+  * Add apt repo fix for Raspberry Pi image
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 16 Jul 2018 13:09:59 -0500
+
 openmediavault-omvextrasorg (4.1.8) stable; urgency=low
 
   * Add Proxmox kernel install option
