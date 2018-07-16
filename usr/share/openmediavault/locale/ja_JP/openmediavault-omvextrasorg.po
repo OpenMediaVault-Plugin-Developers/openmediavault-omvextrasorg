@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-30 07:43-0500\n"
-"PO-Revision-Date: 2018-06-06 08:27+0000\n"
+"PO-Revision-Date: 2018-07-05 09:54+0000\n"
 "Last-Translator: Toshihiro Kan <kansuke4649@gmail.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
@@ -64,7 +64,7 @@ msgstr "GParted LiveのISOをダウンロードし、ISOからのブートを可
 msgid ""
 "Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
 " from ISO."
-msgstr ""
+msgstr "SystemRescueCD ISOをダウンロードし、ISOからの起動を許可するようにgrubブートローダを設定します。"
 
 msgid "Edit repo"
 msgstr "リポジトリの編集"
@@ -85,10 +85,10 @@ msgid "GParted Live"
 msgstr "GParted Live"
 
 msgid "Hold Current Kernel"
-msgstr ""
+msgstr "現在のカーネルを保持する"
 
 msgid "Holding current kernel ..."
-msgstr ""
+msgstr "現在のカーネルを保持しています ..."
 
 msgid "IP Address will be set by DHCP."
 msgstr "IPアドレスはDHCPによって設定されます。"
@@ -120,7 +120,7 @@ msgid "Install GParted Live ISO ..."
 msgstr "GParted Live ISOをインストール中 ..."
 
 msgid "Install Proxmox kernel"
-msgstr ""
+msgstr "Proxmox カーネルをインストール"
 
 msgid "Install SystemRescueCD"
 msgstr "SystemRescueCDのインストール"
@@ -132,7 +132,7 @@ msgid "Installed Kernels"
 msgstr "インストールされているカーネル"
 
 msgid "Installing Proxmox kernel..."
-msgstr ""
+msgstr "Proxmox カーネルをインストールしています..."
 
 msgid "Kernel"
 msgstr "カーネル"
@@ -165,7 +165,7 @@ msgid "Priority"
 msgstr "優先度"
 
 msgid "Proxmox"
-msgstr ""
+msgstr "Proxmox"
 
 msgid "Reboot to Clonezilla ..."
 msgstr "Clonezillaで再起動 ..."
@@ -186,13 +186,13 @@ msgid "Reboot to SystemRescueCD Once"
 msgstr "一度だけSystemRescueCDで再起動"
 
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
-msgstr ""
+msgstr "non-Proxmoxカーネルを削除する前に、Proxmoxカーネルで再起動してください。"
 
 msgid "Remove non-Proxmox kernels and headers"
-msgstr ""
+msgstr "non-Proxmoxカーネルとヘッダーを削除する"
 
 msgid "Removing non-Proxmox kernels..."
-msgstr ""
+msgstr "non-Proxmox カーネルを削除しています ..."
 
 msgid "Repo"
 msgstr "リポジトリ"
@@ -229,7 +229,7 @@ msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr "1度だけGParted Live ISOから起動するためにgrubブートローダを設定します。"
 
 msgid "Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time."
-msgstr ""
+msgstr "SystemRescueCD ISO から <b>1</b>回だけ起動するようにgrubブートローダを設定します。 "
 
 msgid "Setting boot kernel ..."
 msgstr "起動カーネルを設定しています ..."
@@ -244,25 +244,25 @@ msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
 
 msgid "This will enable the Proxmox 5.x repo."
-msgstr ""
+msgstr "Proxmox 5.x のリポジトリが有効になります。"
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
-msgstr ""
+msgstr "linux-image- * カーネルがまだアクティブであれば削除することはできません。"
 
 msgid "This will install the latest 4.15 kernel."
-msgstr ""
+msgstr "最新の4.15カーネルがインストールされます。"
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
-msgstr ""
+msgstr "linux-headers-で始まる、すべてのヘッダパッケージが削除されます。"
 
 msgid "This will remove all kernel packages with the prefix linux-image-."
-msgstr ""
+msgstr "linux-image-で始まる、すべてのカーネルパッケージが削除されます。"
 
 msgid "Unhold Current Kernel"
-msgstr ""
+msgstr "現在のカーネルの保持を解除する"
 
 msgid "Unholding current kernel ..."
-msgstr ""
+msgstr "現在のカーネルの保持を解除しています ..."
 
 msgid "Update"
 msgstr "アップデート"

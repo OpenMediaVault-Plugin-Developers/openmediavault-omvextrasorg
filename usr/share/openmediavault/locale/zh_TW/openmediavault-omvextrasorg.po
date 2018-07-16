@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# kochin <kochinc@outlook.com>, 2014-2017
+# kochin <kochinc@outlook.com>, 2014-2018
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-30 07:43-0500\n"
-"PO-Revision-Date: 2018-05-30 12:43+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2018-06-06 15:22+0000\n"
+"Last-Translator: kochin <kochinc@outlook.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +25,7 @@ msgid "Apt Clean"
 msgstr "Apt 清理"
 
 msgid "Backports"
-msgstr ""
+msgstr "向後移植"
 
 msgid "Checking for new updates ..."
 msgstr "檢查新的更新 ..."
@@ -43,10 +43,10 @@ msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "預設 用戶名稱：<b>user</b> 與 密碼：<b>live</b>"
 
 msgid "Disable Backports"
-msgstr ""
+msgstr "停用向後移植"
 
 msgid "Disabling backports repo ..."
-msgstr ""
+msgstr "停用向後移植套件庫中 ..."
 
 msgid "Done..."
 msgstr "完成 ..."
@@ -64,7 +64,7 @@ msgstr "下載 GParted Live ISO，並將 grub 啟動載入器設置成允許從 
 msgid ""
 "Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
 " from ISO."
-msgstr ""
+msgstr "下載 SystemRescuecd ISO，並將 grub 啟動載入器設置成允許從 ISO 啟動。"
 
 msgid "Edit repo"
 msgstr "編輯套件庫"
@@ -73,22 +73,22 @@ msgid "Enable"
 msgstr "啟用"
 
 msgid "Enable Backports"
-msgstr ""
+msgstr "啟用向後移植"
 
 msgid "Enabled"
 msgstr "已啟用"
 
 msgid "Enabling backports repo ..."
-msgstr ""
+msgstr "啟用向後移植套件庫中 ..."
 
 msgid "GParted Live"
 msgstr "GParted Live"
 
 msgid "Hold Current Kernel"
-msgstr ""
+msgstr "保持目前系統核心"
 
 msgid "Holding current kernel ..."
-msgstr ""
+msgstr "保持目前系統核心中 ..."
 
 msgid "IP Address will be set by DHCP."
 msgstr "IP 地址將由 DHCP 設定。"
@@ -120,7 +120,7 @@ msgid "Install GParted Live ISO ..."
 msgstr "安裝 GParted Live ISO ..."
 
 msgid "Install Proxmox kernel"
-msgstr ""
+msgstr "安裝 Proxmox 系統核心"
 
 msgid "Install SystemRescueCD"
 msgstr "安裝 SystemRescueCD"
@@ -129,16 +129,16 @@ msgid "Install SystemRescueCD ISO ..."
 msgstr "安裝 SystemRescueCD ISO ..."
 
 msgid "Installed Kernels"
-msgstr "已安裝的核心"
+msgstr "已安裝的系統核心"
 
 msgid "Installing Proxmox kernel..."
-msgstr ""
+msgstr "安裝 Proxmox 核心中 ..."
 
 msgid "Kernel"
 msgstr "系統核心"
 
 msgid "Kernels"
-msgstr "核心"
+msgstr "系統核心"
 
 msgid "Key"
 msgstr "密鑰"
@@ -165,7 +165,7 @@ msgid "Priority"
 msgstr "Priority"
 
 msgid "Proxmox"
-msgstr ""
+msgstr "Proxmox"
 
 msgid "Reboot to Clonezilla ..."
 msgstr "重新啟動進入 Clonezilla ..."
@@ -186,13 +186,13 @@ msgid "Reboot to SystemRescueCD Once"
 msgstr "重新啟動進入 SystemRescueCD 一次"
 
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
-msgstr ""
+msgstr "在移除 非Proxmox 系統核心之前，請先以 Promxmox 系統核心重新啟動。"
 
 msgid "Remove non-Proxmox kernels and headers"
-msgstr ""
+msgstr "移除 非Proxmox 系統核心與標頭檔案"
 
 msgid "Removing non-Proxmox kernels..."
-msgstr ""
+msgstr "移除 非Proxmox 系統核心中 ..."
 
 msgid "Repo"
 msgstr "套件庫"
@@ -220,7 +220,7 @@ msgid ""
 msgstr "SSH 伺服器被預設為啟用。請以用戶名稱：<b>user</b> 和密碼：<b>live</b> 來登入"
 
 msgid "Set as default boot kernel"
-msgstr "設定為預設啟動核心"
+msgstr "設定為預設的啟動系統核心"
 
 msgid "Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time."
 msgstr "設定 grub 啟動載入器從 Clonezilla ISO 啟動<b>一次</b>。"
@@ -229,40 +229,40 @@ msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr "設定 grub 啟動載入器從 GParted Live ISO 啟動<b>一次</b>。"
 
 msgid "Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time."
-msgstr ""
+msgstr "設定 grub 啟動載入器從 SystenRescueCD ISO 啟動<b>一次</b>。"
 
 msgid "Setting boot kernel ..."
-msgstr "設定啟動核心中 ..."
+msgstr "設定啟動系統核心中 ..."
 
 msgid ""
 "Setting the wrong default boot kernel may cause the system to be "
 "inaccessible.  The boot menu will still be available to select a different "
 "kernel."
-msgstr "設定錯誤的啟動核心可能造成系統無法取用。啟動選單仍將可用來選用不同的核心。"
+msgstr "設定錯誤的啟動系統核心可能造成無法進入系統。啟動選單仍將可用來選用不同的系統核心。"
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
 
 msgid "This will enable the Proxmox 5.x repo."
-msgstr ""
+msgstr "這將啟用 Proxmox 5.x 套件庫。"
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
-msgstr ""
+msgstr "移除 linux-image-* kernel 可能會失敗，如果它仍在操作中。"
 
 msgid "This will install the latest 4.15 kernel."
-msgstr ""
+msgstr "這將會安裝最新的 4.15 系統核心。"
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
-msgstr ""
+msgstr "這將會移除所有前綴詞是 linux-headers- 的標題檔案套件。"
 
 msgid "This will remove all kernel packages with the prefix linux-image-."
-msgstr ""
+msgstr "這將會移除所有前綴詞是 linux-image- 的系統核心套件。"
 
 msgid "Unhold Current Kernel"
-msgstr ""
+msgstr "不保持目前系統核心"
 
 msgid "Unholding current kernel ..."
-msgstr ""
+msgstr "停止保持目前系統核心中 ..."
 
 msgid "Update"
 msgstr "更新"

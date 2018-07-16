@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# Axel Cantenys <clexanis@gmail.com>, 2017
+# Axel Cantenys <clexanis@gmail.com>, 2017-2018
 # Zacharie ARNAISE <spacebrain.damage@gmail.com>, 2013,2015
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-30 07:43-0500\n"
-"PO-Revision-Date: 2018-05-30 12:43+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2018-06-12 19:22+0000\n"
+"Last-Translator: Axel Cantenys <clexanis@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +26,7 @@ msgid "Apt Clean"
 msgstr "Nettoyer APT"
 
 msgid "Backports"
-msgstr ""
+msgstr "Rétroportages"
 
 msgid "Checking for new updates ..."
 msgstr "Recherche de mises à jour..."
@@ -44,10 +44,10 @@ msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Nom d'utilisateur par défaut : «<b>user</b>», et mot de passe : «<b>live</b>»."
 
 msgid "Disable Backports"
-msgstr ""
+msgstr "Désactiver les rétroportages"
 
 msgid "Disabling backports repo ..."
-msgstr ""
+msgstr "Désactivation du dépôt des rétroportages ..."
 
 msgid "Done..."
 msgstr "Terminé..."
@@ -65,7 +65,7 @@ msgstr "Télécharge l'ISO de GParted Live et configure le gestionnaire de déma
 msgid ""
 "Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
 " from ISO."
-msgstr ""
+msgstr "Télécharge l'ISO de SystemRescueCD et configure le gestionnaire de démarrage GRUB pour permettre le démarrage à partir de l'ISO."
 
 msgid "Edit repo"
 msgstr "Éditer un dépôt"
@@ -74,22 +74,22 @@ msgid "Enable"
 msgstr "Activer"
 
 msgid "Enable Backports"
-msgstr ""
+msgstr "Activer les rétroportages"
 
 msgid "Enabled"
 msgstr "Activé"
 
 msgid "Enabling backports repo ..."
-msgstr ""
+msgstr "Activation du dépôt des rétroportages ..."
 
 msgid "GParted Live"
 msgstr "GParted Live"
 
 msgid "Hold Current Kernel"
-msgstr ""
+msgstr "Maintenir le noyau actuel"
 
 msgid "Holding current kernel ..."
-msgstr ""
+msgstr "Maintien du noyau actuel ..."
 
 msgid "IP Address will be set by DHCP."
 msgstr "L'adresse IP sera définie par DHCP."
@@ -121,7 +121,7 @@ msgid "Install GParted Live ISO ..."
 msgstr "Installation de l'ISO de GParted Live ..."
 
 msgid "Install Proxmox kernel"
-msgstr ""
+msgstr "Installer le noyau Proxmox"
 
 msgid "Install SystemRescueCD"
 msgstr "Installer SystemRescueCd"
@@ -133,7 +133,7 @@ msgid "Installed Kernels"
 msgstr "Noyaux installés"
 
 msgid "Installing Proxmox kernel..."
-msgstr ""
+msgstr "Installation du noyau Proxmox ..."
 
 msgid "Kernel"
 msgstr "Noyau"
@@ -166,7 +166,7 @@ msgid "Priority"
 msgstr "Priorité"
 
 msgid "Proxmox"
-msgstr ""
+msgstr "Proxmox"
 
 msgid "Reboot to Clonezilla ..."
 msgstr "Redémarrage vers Clonezilla ..."
@@ -187,13 +187,13 @@ msgid "Reboot to SystemRescueCD Once"
 msgstr "Redémarrer une fois vers SystemRescueCd."
 
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
-msgstr ""
+msgstr "Redémarrez avec le noyau Proxmox avant de supprimer les noyaux non-Proxmox."
 
 msgid "Remove non-Proxmox kernels and headers"
-msgstr ""
+msgstr "Supprimer les noyaux et les en-têtes non-Proxmox"
 
 msgid "Removing non-Proxmox kernels..."
-msgstr ""
+msgstr "Suppression des noyaux non-Proxmox ..."
 
 msgid "Repo"
 msgstr "Dépôt"
@@ -230,7 +230,7 @@ msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr "Définit le gestionnaire de démarrage GRUB pour démarrer à partir de l'ISO de GParted Live <b>ONE</b> fois."
 
 msgid "Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time."
-msgstr ""
+msgstr "Définit le gestionnaire de démarrage GRUB pour démarrer à partir de l'ISO de SystemRescueCD Live <b>ONE</b> fois."
 
 msgid "Setting boot kernel ..."
 msgstr "Définition du noyau de démarrage ..."
@@ -245,25 +245,25 @@ msgid "SystemRescueCD"
 msgstr "SystemRescueCd"
 
 msgid "This will enable the Proxmox 5.x repo."
-msgstr ""
+msgstr "Cela activera le dépôt de Proxmox 5.x."
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
-msgstr ""
+msgstr "Ceci échouera à supprimer un noyau linux-image- * s'il est toujours actif."
 
 msgid "This will install the latest 4.15 kernel."
-msgstr ""
+msgstr "Cela va installer le dernier noyau 4.15."
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
-msgstr ""
+msgstr "Cela supprimera tous les paquets d'en-têtes avec le préfixe linux-headers-."
 
 msgid "This will remove all kernel packages with the prefix linux-image-."
-msgstr ""
+msgstr "Cela supprimera tous les paquets du noyau avec le préfixe linux-image-."
 
 msgid "Unhold Current Kernel"
-msgstr ""
+msgstr "Relâcher le noyau actuel"
 
 msgid "Unholding current kernel ..."
-msgstr ""
+msgstr "Libération du noyau actuel ..."
 
 msgid "Update"
 msgstr "Mise à jour"
