@@ -18,11 +18,19 @@ if [ -f "${armbian}" ]; then
 fi
 
 if [ -f "${rpi}" ]; then
-  sed -i \
-      -e 's/n=jessie/n=stretch/' \
-      -e 's/\ 490/\ 10/' \
-      -e 's/\ 500/\ 900/' \
-      ${rpi}
+  cat <<EOF > ${rpi}
+Package: firmware-brcm80211 libraspberrypi-bin libraspberrypi0 raspberrypi-bootloader raspberrypi-kernel
+Pin: release o=Raspberry Pi Foundation,a=stable,n=stretch, origin archive.raspberrypi.org
+Pin-Priority: 1000
+
+Package: *
+Pin: release o=Raspberry Pi Foundation,a=stable,n=stretch, origin archive.raspberrypi.org
+Pin-Priority: 10
+
+Package: *
+Pin: release n=stretch, origin httpredir.debian.org
+Pin-Priority: 900
+EOF
 fi
 
 exit 0
