@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (4.1.10) stable; urgency=low
+
+  * Fix apt pinning logic
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 18 Aug 2018 07:58:10 -0500
+
 openmediavault-omvextrasorg (4.1.9) stable; urgency=low
 
   * Add apt repo fix for Raspberry Pi image

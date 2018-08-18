@@ -32,7 +32,7 @@ OMVEXTRASAPTPREFS="/etc/apt/preferences.d/omv-extras-org"
 
 rm -f ${OMVEXTRASAPTPREFS}
 
-if ! omv_checkyesno "${OMV_APT_USE_KERNEL_BACKPORTS}"; then
+if omv_checkyesno "${OMV_APT_USE_KERNEL_BACKPORTS}"; then
     cat <<EOF > ${OMVEXTRASAPTPREFS}
 Package: virtualbox*
 Pin: release a=stretch-backports
