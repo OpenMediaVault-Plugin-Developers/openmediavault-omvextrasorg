@@ -24,6 +24,7 @@ set -e
 . /etc/default/openmediavault
 . /usr/share/openmediavault/scripts/helper-functions
 
+OMV_APT_USE_KERNEL_BACKPORTS=${OMV_APT_USE_KERNEL_BACKPORTS:-"yes"}
 OMVEXTRASREPOFILE="/etc/apt/sources.list.d/omv-extras-org.list"
 KEYSERVER="hkp://keyserver.ubuntu.com:80"
 XPATH="/config/system/omvextras/repos/repo"
