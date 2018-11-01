@@ -75,7 +75,7 @@ Package: xrdp
 Pin: release a=stretch-backports
 Pin-Priority: 500
 
-Package: certbot python3-acme python3-certbot python3-cffi-backend python3-configargparse python3-configobj
+Package: certbot python3-acme python3-certbot python3-cffi-backend python3-chardet python3-configargparse python3-configobj
   python3-cryptography python3-future python3-idna python3-josepy python3-mock python3-openssl python3-parsedatetime
   python3-pbr python3-pyasn1 python3-requests python3-rfc3339 python3-urllib3 python3-zope.component
   python3-zope.event python3-zope.hookable python3-zope.interface

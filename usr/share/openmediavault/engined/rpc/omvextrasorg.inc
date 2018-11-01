@@ -33,7 +33,6 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $this->registerMethod('getRepo');
         $this->registerMethod('setRepo');
         $this->registerMethod('deleteRepo');
-        $this->registerMethod('doUpdate');
 
         $this->registerMethod('getArch');
 
@@ -111,18 +110,6 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $db->delete($object);
         // Return the deleted configuration object.
         return $object->getAssoc();
-    }
-
-    public function doUpdate($params, $context)
-    {
-        // Validate the RPC caller context.
-        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
-        // Check if the module is marked as dirty. Abort this RPC
-        // immediatelly in this case, otherwise the added/removed
-        // repositories will not be included/excluded.
-        if ($this->isModuleDirty('apt'))
-            throw new \OMV\Config\ConfigDirtyException();
-        return \OMV\Rpc\Rpc::call('Apt', 'update', NULL, $context);
     }
 
     public function getArch($params, $context)
@@ -213,12 +200,23 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         // Create the background process.
         return $this->execBgProc(function($bgStatusFilename, $bgOutputFilename)
             use ($params) {
-                if ($params['command'] == 'aptclean') {
-                    $cmdBin = 'omv-aptclean';
-                } else {
-                    $cmdBin = 'omv-grubiso';
+                $cmdParams = '';
+                switch ($params['command']) {
+                    case 'update':
+                        $cmdBin = 'apt-get update';  break;
+                    case 'omv-update':
+                        $cmdBin = 'omv-update';  break;
+                    case 'upgrade':
+                        $cmdBin = 'apt-get --yes upgrade';  break;
+                    case 'dist-upgrade':
+                        $cmdBin = 'apt-get --yes dist-upgrade';  break;
+                    case 'clean':
+                        $cmdBin = 'omv-aptclean';  break;
+                    default:
+                        $cmdBin = 'omv-grubiso';
+                        $cmdParams = $params['command'];
                 }
-                $cmd = new \OMV\System\Process($cmdBin, $params['command']);
+                $cmd = new \OMV\System\Process($cmdBin, $cmdParams);
                 $cmdLine = $cmd->getCommandLine();
                 if (0 !== $this->exec($cmdLine, $output, $bgOutputFilename))
                     throw new \OMV\ExecException($cmdLine, $output);

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-30 07:43-0500\n"
+"POT-Creation-Date: 2018-11-01 16:37-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,13 +20,7 @@ msgstr ""
 msgid "Add repo"
 msgstr ""
 
-msgid "Apt Clean"
-msgstr ""
-
 msgid "Backports"
-msgstr ""
-
-msgid "Checking for new updates ..."
 msgstr ""
 
 msgid "Cleaning Apt Files and Lists..."
@@ -200,6 +194,21 @@ msgstr ""
 msgid "Repos"
 msgstr ""
 
+msgid "Running apt-get dist-upgrade ..."
+msgstr ""
+
+msgid "Running apt-get update ..."
+msgstr ""
+
+msgid "Running apt-get upgrade ..."
+msgstr ""
+
+msgid "Running omv-aptclean ..."
+msgstr ""
+
+msgid "Running omv-update ..."
+msgstr ""
+
 msgid "SSH server is enabled by default.  Login with username: <b>root</b> and password: <b>openmediavault</b>"
 msgstr ""
 
@@ -248,11 +257,26 @@ msgstr ""
 msgid "Unholding current kernel ..."
 msgstr ""
 
-msgid "Update"
+msgid "Updates"
 msgstr ""
 
 msgid "When connecting via ssh, the ssh key will be different than the OpenMediaVault ssh key and need to be updated on the client system."
 msgstr ""
 
 msgid "When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
+msgstr ""
+
+msgid "apt clean"
+msgstr ""
+
+msgid "dist-upgrade"
+msgstr ""
+
+msgid "omv-update"
+msgstr ""
+
+msgid "update"
+msgstr ""
+
+msgid "upgrade"
 msgstr ""

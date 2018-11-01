@@ -298,21 +298,32 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
         var me = this;
         var items = me.callParent(arguments);
         Ext.Array.push(items, {
-            id: me.getId() + "-check",
+            id: me.getId() + "-updates",
             xtype: "button",
-            text: _("Update"),
+            text: _("Updates"),
+            scope: this,
             icon: "images/refresh.png",
-            iconCls: Ext.baseCSSPrefix + "btn-icon-16x16",
-            handler: Ext.Function.bind(me.onCheckButton, me, [ me ]),
-            scope: me
-        },{
-            id: me.getId() + "-aptclean",
-            xtype: "button",
-            text: _("Apt Clean"),
-            icon: "images/erase.png",
-            iconCls: Ext.baseCSSPrefix + "btn-icon-16x16",
-            handler: Ext.Function.bind(me.onAptCleanButton, me, [ me ]),
-            scope: me
+            menu: [{
+                text: _("update"),
+                icon: "images/refresh.png",
+                handler: Ext.Function.bind(me.onCommandButton, me, [ "update" ])
+            },{
+                text: _("omv-update"),
+                icon: "images/refresh.png",
+                handler: Ext.Function.bind(me.onCommandButton, me, [ "omv-update" ])
+            },{
+                text: _("upgrade"),
+                icon: "images/refresh.png",
+                handler: Ext.Function.bind(me.onCommandButton, me, [ "upgrade" ])
+            },{
+                text: _("dist-upgrade"),
+                icon: "images/refresh.png",
+                handler: Ext.Function.bind(me.onCommandButton, me, [ "dist-upgrade" ])
+            },{
+                text: _("apt clean"),
+                icon: "images/erase.png",
+                handler: Ext.Function.bind(me.onCommandButton, me, [ "clean" ])
+            }]
         },{
             id: me.getId() + "-backports",
             xtype: "button",
@@ -380,40 +391,32 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
         });
     },
 
-    onCheckButton: function() {
+    onCommandButton: function(command) {
         var me = this;
+        var msg = "";
+        switch (command) {
+            case "update":
+                msg = _("Running apt-get update ...");
+                break;
+            case "omv-update":
+                msg = _("Running omv-update ...");
+                break;
+            case "upgrade":
+                msg = _("Running apt-get upgrade ...");
+                break;
+            case "dist-upgrade":
+                msg = _("Running apt-get dist-upgrade ...");
+                break;
+            case "clean":
+                msg = _("Running omv-aptclean ...");
+                break;
+        }
         var wnd = Ext.create("OMV.window.Execute", {
-            title: _("Checking for new updates ..."),
-            rpcService: "omvextras",
-            rpcMethod: "doUpdate",
-            rpcIgnoreErrors: true,
-            hideStartButton: true,
-            hideStopButton: true,
-            listeners: {
-                scope: me,
-                finish: function(wnd, response) {
-                    wnd.appendValue(_("Done..."));
-                    wnd.setButtonDisabled("close", false);
-                },
-                exception : function(wnd, error) {
-                    OMV.MessageBox.error(null, error);
-                    wnd.setButtonDisabled("close", false);
-                }
-            }
-        });
-        wnd.setButtonDisabled("close", true);
-        wnd.show();
-        wnd.start();
-    },
-
-    onAptCleanButton: function() {
-        var me = this;
-        var wnd = Ext.create("OMV.window.Execute", {
-            title: _("Cleaning Apt Files and Lists..."),
+            title: msg,
             rpcService: "OmvExtras",
             rpcMethod: "doCommand",
             rpcParams: {
-                "command": "aptclean"
+                "command": command
             },
             rpcIgnoreErrors: true,
             hideStartButton: true,
@@ -429,7 +432,9 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
                     wnd.setButtonDisabled("close", false);
                 },
                 close: function() {
-                    document.location.reload();
+                    if (command == "clean") {
+                        document.location.reload();
+                    }
                 }
             }
         });

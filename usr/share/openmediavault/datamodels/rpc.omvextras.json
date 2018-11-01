@@ -1,150 +1,155 @@
 [{
-	"type": "rpc",
-	"id": "rpc.omvextras.setrepo",
-	"params": {
-		"type": "object",
-		"properties": {
-			"uuid": {
-				"type": "string",
-				"format": "uuidv4",
-				"required": true
-			},
-			"enable": {
-				"type": "boolean",
-				"required": true
-			},
-			"name": {
-				"type": "string",
-				"required": true
-			},
-			"repo1": {
-				"type": "string",
-				"required": true
-			},
-			"key1": {
-				"type": "string",
-				"required": false
-			},
-			"package1": {
-				"type": "string",
-				"required": false
-			},
-			"pin1": {
-				"type": "string",
-				"required": false
-			},
-			"priority1": {
-				"type": "string",
-				"required": false
-			},
-			"repo2": {
-				"type": "string",
-				"required": false
-			},
-			"key2": {
-				"type": "string",
-				"required": false
-			},
-			"package2": {
-				"type": "string",
-				"required": false
-			},
-			"pin2": {
-				"type": "string",
-				"required": false
-			},
-			"priority2": {
-				"type": "string",
-				"required": false
-			},
-			"repo3": {
-				"type": "string",
-				"required": false
-			},
-			"key3": {
-				"type": "string",
-				"required": false
-			},
-			"package3": {
-				"type": "string",
-				"required": false
-			},
-			"pin3": {
-				"type": "string",
-				"required": false
-			},
-			"priority3": {
-				"type": "string",
-				"required": false
-			},
-			"comment": {
-				"type": "string",
-				"required": true
-			},
-			"permanent": {
-				"type": "boolean",
-				"required": false
-			}
-		}
-	}
+    "type": "rpc",
+    "id": "rpc.omvextras.setrepo",
+    "params": {
+        "type": "object",
+        "properties": {
+            "uuid": {
+                "type": "string",
+                "format": "uuidv4",
+                "required": true
+            },
+            "enable": {
+                "type": "boolean",
+                "required": true
+            },
+            "name": {
+                "type": "string",
+                "required": true
+            },
+            "repo1": {
+                "type": "string",
+                "required": true
+            },
+            "key1": {
+                "type": "string",
+                "required": false
+            },
+            "package1": {
+                "type": "string",
+                "required": false
+            },
+            "pin1": {
+                "type": "string",
+                "required": false
+            },
+            "priority1": {
+                "type": "string",
+                "required": false
+            },
+            "repo2": {
+                "type": "string",
+                "required": false
+            },
+            "key2": {
+                "type": "string",
+                "required": false
+            },
+            "package2": {
+                "type": "string",
+                "required": false
+            },
+            "pin2": {
+                "type": "string",
+                "required": false
+            },
+            "priority2": {
+                "type": "string",
+                "required": false
+            },
+            "repo3": {
+                "type": "string",
+                "required": false
+            },
+            "key3": {
+                "type": "string",
+                "required": false
+            },
+            "package3": {
+                "type": "string",
+                "required": false
+            },
+            "pin3": {
+                "type": "string",
+                "required": false
+            },
+            "priority3": {
+                "type": "string",
+                "required": false
+            },
+            "comment": {
+                "type": "string",
+                "required": true
+            },
+            "permanent": {
+                "type": "boolean",
+                "required": false
+            }
+        }
+    }
 },{
-	"type": "rpc",
-	"id": "rpc.omvextras.docommand",
-	"params": {
-		"type": "object",
-		"properties": {
-			"command": {
-				"type": "string",
-				"enum": [
-					"aptclean",
-					"installcz",
-					"installgp",
-					"installsys",
-					"rebootcz",
-					"rebootgp",
-					"rebootsys"
-				],
-				"required": true
-			}
-		}
-	}
+    "type": "rpc",
+    "id": "rpc.omvextras.docommand",
+    "params": {
+        "type": "object",
+        "properties": {
+            "command": {
+                "type": "string",
+                "enum": [
+                    "aptclean",
+                    "clean",
+                    "dist-upgrade",
+                    "installcz",
+                    "installgp",
+                    "installsys",
+                    "omv-update",
+                    "rebootcz",
+                    "rebootgp",
+                    "rebootsys",
+                    "update",
+                    "upgrade"
+                ],
+                "required": true
+            }
+        }
+    }
 },{
-	"type": "rpc",
-	"id": "rpc.omvextras.dohold",
-	"params": {
-		"type": "object",
-		"properties": {
-			"command": {
-				"type": "string",
-				"enum": [ "hold", "unhold" ],
-				"required": true
-			}
-		}
-	}
+    "type": "rpc",
+    "id": "rpc.omvextras.dohold",
+    "params": {
+        "type": "object",
+        "properties": {
+            "command": {
+                "type": "string",
+                "enum": [ "hold", "unhold" ],
+                "required": true
+            }
+        }
+    }
 },{
-	"type": "rpc",
-	"id": "rpc.omvextras.dobackports",
-	"params": {
-		"type": "object",
-		"properties": {
-			"command": {
-				"type": "string",
-				"enum": [ "NO", "YES" ],
-				"required": true
-			}
-		}
-	}
+    "type": "rpc",
+    "id": "rpc.omvextras.dobackports",
+    "params": {
+        "type": "object",
+        "properties": {
+            "command": {
+                "type": "string",
+                "enum": [ "NO", "YES" ],
+                "required": true
+            }
+        }
+    }
 },{
-	"type": "rpc",
-	"id": "rpc.omvextras.doproxmox",
-	"params": {
-		"type": "object",
-		"properties": {
-			"command": {
-				"type": "string",
-				"enum": [ "install", "remove" ],
-				"required": true
-			}
-		}
-	}
+    "type": "rpc",
+    "id": "rpc.omvextras.doproxmox",
+    "params": {
+        "type": "object",
+        "properties": {
+            "command": {
+                "type": "string",
+                "enum": [ "install", "remove" ],
+                "required": true
+            }
+        }
+    }
 }]
