@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-30 07:43-0500\n"
-"PO-Revision-Date: 2018-05-30 12:43+0000\n"
+"POT-Creation-Date: 2018-11-01 16:37-0500\n"
+"PO-Revision-Date: 2018-11-01 21:37+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: English (United States) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/en_US/)\n"
 "MIME-Version: 1.0\n"
@@ -20,14 +20,8 @@ msgstr ""
 msgid "Add repo"
 msgstr "Add repo"
 
-msgid "Apt Clean"
-msgstr "Apt Clean"
-
 msgid "Backports"
 msgstr "Backports"
-
-msgid "Checking for new updates ..."
-msgstr "Checking for new updates ..."
 
 msgid "Cleaning Apt Files and Lists..."
 msgstr "Cleaning Apt Files and Lists..."
@@ -208,6 +202,21 @@ msgstr "Repo #3"
 msgid "Repos"
 msgstr "Repos"
 
+msgid "Running apt-get dist-upgrade ..."
+msgstr "Running apt-get dist-upgrade ..."
+
+msgid "Running apt-get update ..."
+msgstr "Running apt-get update ..."
+
+msgid "Running apt-get upgrade ..."
+msgstr "Running apt-get upgrade ..."
+
+msgid "Running omv-aptclean ..."
+msgstr "Running omv-aptclean ..."
+
+msgid "Running omv-update ..."
+msgstr "Running omv-update ..."
+
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
 "password: <b>openmediavault</b>"
@@ -263,8 +272,8 @@ msgstr "Unhold Current Kernel"
 msgid "Unholding current kernel ..."
 msgstr "Unholding current kernel ..."
 
-msgid "Update"
-msgstr "Update"
+msgid "Updates"
+msgstr "Updates"
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
@@ -274,3 +283,18 @@ msgstr "When connecting via ssh, the ssh key will be different than the OpenMedi
 msgid ""
 "When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
 msgstr "When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
+
+msgid "apt clean"
+msgstr "apt clean"
+
+msgid "dist-upgrade"
+msgstr "dist-upgrade"
+
+msgid "omv-update"
+msgstr "omv-update"
+
+msgid "update"
+msgstr "update"
+
+msgid "upgrade"
+msgstr "upgrade"

@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# Axel Cantenys <clexanis@gmail.com>, 2017-2018
+# Axel Cantenys, 2017-2018
 # Zacharie ARNAISE <spacebrain.damage@gmail.com>, 2013,2015
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-30 07:43-0500\n"
-"PO-Revision-Date: 2018-06-12 19:22+0000\n"
-"Last-Translator: Axel Cantenys <clexanis@gmail.com>\n"
+"POT-Creation-Date: 2018-11-01 16:37-0500\n"
+"PO-Revision-Date: 2018-11-01 21:37+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,14 +22,8 @@ msgstr ""
 msgid "Add repo"
 msgstr "Ajouter un dépôt"
 
-msgid "Apt Clean"
-msgstr "Nettoyer APT"
-
 msgid "Backports"
 msgstr "Rétroportages"
-
-msgid "Checking for new updates ..."
-msgstr "Recherche de mises à jour..."
 
 msgid "Cleaning Apt Files and Lists..."
 msgstr "Nettoyage des fichiers d'APT et des listes ..."
@@ -210,6 +204,21 @@ msgstr "Dépôt #3"
 msgid "Repos"
 msgstr "Dépôts"
 
+msgid "Running apt-get dist-upgrade ..."
+msgstr ""
+
+msgid "Running apt-get update ..."
+msgstr ""
+
+msgid "Running apt-get upgrade ..."
+msgstr ""
+
+msgid "Running omv-aptclean ..."
+msgstr ""
+
+msgid "Running omv-update ..."
+msgstr ""
+
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
 "password: <b>openmediavault</b>"
@@ -265,8 +274,8 @@ msgstr "Relâcher le noyau actuel"
 msgid "Unholding current kernel ..."
 msgstr "Libération du noyau actuel ..."
 
-msgid "Update"
-msgstr "Mise à jour"
+msgid "Updates"
+msgstr ""
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
@@ -276,3 +285,18 @@ msgstr "Lors de la connexion via SSH, la clé SSH sera différente de la clé SS
 msgid ""
 "When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
 msgstr "Lorsque vous vous connectez à distance, démarrez clonezilla avec : «<b>sudo clonezilla</b>»."
+
+msgid "apt clean"
+msgstr ""
+
+msgid "dist-upgrade"
+msgstr ""
+
+msgid "omv-update"
+msgstr ""
+
+msgid "update"
+msgstr ""
+
+msgid "upgrade"
+msgstr ""

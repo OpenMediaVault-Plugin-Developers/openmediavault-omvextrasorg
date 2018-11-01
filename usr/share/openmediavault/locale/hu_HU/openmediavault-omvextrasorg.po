@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-30 07:43-0500\n"
-"PO-Revision-Date: 2018-06-09 17:25+0000\n"
-"Last-Translator: Gyuris Gellért <bubu@ujevangelizacio.hu>\n"
+"POT-Creation-Date: 2018-11-01 16:37-0500\n"
+"PO-Revision-Date: 2018-11-01 21:37+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,14 +23,8 @@ msgstr ""
 msgid "Add repo"
 msgstr "Tároló hozzáadása"
 
-msgid "Apt Clean"
-msgstr "Apt törlés"
-
 msgid "Backports"
 msgstr "Visszaportolások"
-
-msgid "Checking for new updates ..."
-msgstr "Új frissítések keresése…"
 
 msgid "Cleaning Apt Files and Lists..."
 msgstr "Apt fájlok és listák ürítése…"
@@ -211,6 +205,21 @@ msgstr "Tároló #3"
 msgid "Repos"
 msgstr "Tárolók"
 
+msgid "Running apt-get dist-upgrade ..."
+msgstr ""
+
+msgid "Running apt-get update ..."
+msgstr ""
+
+msgid "Running apt-get upgrade ..."
+msgstr ""
+
+msgid "Running omv-aptclean ..."
+msgstr ""
+
+msgid "Running omv-update ..."
+msgstr ""
+
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
 "password: <b>openmediavault</b>"
@@ -266,8 +275,8 @@ msgstr "Jelenlegi kernel elengedése"
 msgid "Unholding current kernel ..."
 msgstr "Jelenlegi kernel elengedése…"
 
-msgid "Update"
-msgstr "Frissítés"
+msgid "Updates"
+msgstr ""
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
@@ -277,3 +286,18 @@ msgstr "SSH kapcsolódás esetén az SSH-kulcs eltérő lesz a OpenMediaVault SS
 msgid ""
 "When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
 msgstr "Távoli belépés esetén a Clonezilla így indítható: <b>sudo clonezilla</b>"
+
+msgid "apt clean"
+msgstr ""
+
+msgid "dist-upgrade"
+msgstr ""
+
+msgid "omv-update"
+msgstr ""
+
+msgid "update"
+msgstr ""
+
+msgid "upgrade"
+msgstr ""

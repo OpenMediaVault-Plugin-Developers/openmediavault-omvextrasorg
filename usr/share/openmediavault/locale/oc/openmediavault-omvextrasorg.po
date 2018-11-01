@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-30 07:43-0500\n"
-"PO-Revision-Date: 2018-05-30 12:43+0000\n"
+"POT-Creation-Date: 2018-11-01 16:37-0500\n"
+"PO-Revision-Date: 2018-11-01 21:37+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Occitan (post 1500) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/oc/)\n"
 "MIME-Version: 1.0\n"
@@ -20,13 +20,7 @@ msgstr ""
 msgid "Add repo"
 msgstr ""
 
-msgid "Apt Clean"
-msgstr ""
-
 msgid "Backports"
-msgstr ""
-
-msgid "Checking for new updates ..."
 msgstr ""
 
 msgid "Cleaning Apt Files and Lists..."
@@ -208,6 +202,21 @@ msgstr ""
 msgid "Repos"
 msgstr ""
 
+msgid "Running apt-get dist-upgrade ..."
+msgstr ""
+
+msgid "Running apt-get update ..."
+msgstr ""
+
+msgid "Running apt-get upgrade ..."
+msgstr ""
+
+msgid "Running omv-aptclean ..."
+msgstr ""
+
+msgid "Running omv-update ..."
+msgstr ""
+
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
 "password: <b>openmediavault</b>"
@@ -263,7 +272,7 @@ msgstr ""
 msgid "Unholding current kernel ..."
 msgstr ""
 
-msgid "Update"
+msgid "Updates"
 msgstr ""
 
 msgid ""
@@ -273,4 +282,19 @@ msgstr ""
 
 msgid ""
 "When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
+msgstr ""
+
+msgid "apt clean"
+msgstr ""
+
+msgid "dist-upgrade"
+msgstr ""
+
+msgid "omv-update"
+msgstr ""
+
+msgid "update"
+msgstr ""
+
+msgid "upgrade"
 msgstr ""

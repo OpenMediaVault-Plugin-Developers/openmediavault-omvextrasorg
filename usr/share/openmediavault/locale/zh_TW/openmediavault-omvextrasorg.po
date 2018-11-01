@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-30 07:43-0500\n"
-"PO-Revision-Date: 2018-06-06 15:22+0000\n"
-"Last-Translator: kochin <kochinc@outlook.com>\n"
+"POT-Creation-Date: 2018-11-01 16:37-0500\n"
+"PO-Revision-Date: 2018-11-01 21:37+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,14 +21,8 @@ msgstr ""
 msgid "Add repo"
 msgstr "新增套件庫"
 
-msgid "Apt Clean"
-msgstr "Apt 清理"
-
 msgid "Backports"
 msgstr "向後移植"
-
-msgid "Checking for new updates ..."
-msgstr "檢查新的更新 ..."
 
 msgid "Cleaning Apt Files and Lists..."
 msgstr "清理 Apt 檔案和列表 ..."
@@ -209,6 +203,21 @@ msgstr "套件庫 #3"
 msgid "Repos"
 msgstr "套件庫"
 
+msgid "Running apt-get dist-upgrade ..."
+msgstr ""
+
+msgid "Running apt-get update ..."
+msgstr ""
+
+msgid "Running apt-get upgrade ..."
+msgstr ""
+
+msgid "Running omv-aptclean ..."
+msgstr ""
+
+msgid "Running omv-update ..."
+msgstr ""
+
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
 "password: <b>openmediavault</b>"
@@ -264,8 +273,8 @@ msgstr "不保持目前系統核心"
 msgid "Unholding current kernel ..."
 msgstr "停止保持目前系統核心中 ..."
 
-msgid "Update"
-msgstr "更新"
+msgid "Updates"
+msgstr ""
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
@@ -275,3 +284,18 @@ msgstr "當經由 ssh 連接時，所用的 ssh 密鑰將會與 OpenMediaVault �
 msgid ""
 "When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
 msgstr "當從遠端登入時，以此指令啟動 clonezilla：<b>sudo clonezilla</b>"
+
+msgid "apt clean"
+msgstr ""
+
+msgid "dist-upgrade"
+msgstr ""
+
+msgid "omv-update"
+msgstr ""
+
+msgid "update"
+msgstr ""
+
+msgid "upgrade"
+msgstr ""
