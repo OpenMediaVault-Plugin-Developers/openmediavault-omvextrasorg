@@ -118,9 +118,9 @@ while [ ${index} -le ${count} ]; do
                     if [ "${key}" != "" ]; then
                         key=${key,,}
                         if [ ${key:0:4} = "http" ]; then
-                            wget -qO - "${key}" -4 2>/dev/null | apt-key add -
+                            wget -qO - "${key}" -4 2>/dev/null | apt-key add --no-tty -
                         else
-                            apt-key adv --keyserver ${KEYSERVER} --recv-keys "${key}"
+                            apt-key adv --no-tty --keyserver ${KEYSERVER} --recv-keys "${key}"
                         fi
                     fi
 
