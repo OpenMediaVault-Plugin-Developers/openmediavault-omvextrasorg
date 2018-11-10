@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (4.1.13) stable; urgency=low
+
+  * Add --no-tty option to apt-key
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 10 Nov 2018 17:56:15 -0600
+
 openmediavault-omvextrasorg (4.1.12) stable; urgency=low
 
   * Pin new backports dependency for letsencrypt
