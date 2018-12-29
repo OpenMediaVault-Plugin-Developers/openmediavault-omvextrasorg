@@ -27,12 +27,6 @@ case "$1" in
         dpkg-trigger update-fixperms
         dpkg-trigger update-locale
 
-        if dpkg --compare-versions "$2" lt-nl "4.0.1"; then
-            if omv_config_exists "/config/system/omvextras"; then
-                omv_config_delete "/config/system/omvextras"
-            fi
-        fi
-
         # Initialize and migrate configuration database.
         echo "Updating configuration database ..."
         omv-confdbadm create "conf.system.omvextras"

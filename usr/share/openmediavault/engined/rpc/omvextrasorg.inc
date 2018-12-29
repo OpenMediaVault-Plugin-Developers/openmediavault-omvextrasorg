@@ -29,10 +29,8 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
 
     public function initialize()
     {
-        $this->registerMethod('getRepoList');
-        $this->registerMethod('getRepo');
-        $this->registerMethod('setRepo');
-        $this->registerMethod('deleteRepo');
+        $this->registerMethod('getSettings');
+        $this->registerMethod('setSettings');
 
         $this->registerMethod('getArch');
 
@@ -47,42 +45,26 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $this->registerMethod('doProxmox');
     }
 
-    public function getRepoList($params, $context)
+    public function getSettings($params, $context)
     {
         // Validate the RPC caller context.
         $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
-        // Validate the parameters of the RPC service method.
-        $this->validateMethodParams($params, 'rpc.common.getlist');
-        // Get the list of configuration objects.
-        $db = \OMV\Config\Database::getInstance();
-        $objects = $db->getAssoc('conf.system.omvextras');
-        // Filter the result objects.
-        return $this->applyFilter($objects, $params['start'], $params['limit'],
-            $params['sortfield'], $params['sortdir']);
-    }
-
-    public function getRepo($params, $context)
-    {
-        // Validate the RPC caller context.
-        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
-        // Validate the parameters of the RPC service method.
-        $this->validateMethodParams($params, 'rpc.common.objectuuid');
         // Get the configuration object.
         $db = \OMV\Config\Database::getInstance();
-        return $db->getAssoc('conf.system.omvextras', $params['uuid']);
+        $object = $db->get("conf.system.omvextras");
+        return $object->getAssoc();
     }
 
-    public function setRepo($params, $context)
+    public function setSettings($params, $context)
     {
         // Validate the RPC caller context.
         $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
         // Validate the parameters of the RPC service method.
-        $this->validateMethodParams($params, 'rpc.omvextras.setrepo');
-        // Prepare the configuration object.
-        $object = new \OMV\Config\ConfigObject('conf.system.omvextras');
-        $object->setAssoc($params);
-        // Set the configuration object.
+        $this->validateMethodParams($params, 'rpc.omvextras.setsettings');
+        // Get the existing configuration object.
         $db = \OMV\Config\Database::getInstance();
+        $object = $db->get("conf.system.omvextras");
+        $object->setAssoc($params);
         $db->set($object);
         // Set apt module to dirty
         $dispatcher = \OMV\Engine\Notify\Dispatcher::getInstance();
@@ -95,20 +77,6 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         ], $context);
         \OMV\Rpc\Rpc::call('Apt', 'update', NULL, $context);
         // Return the configuration object.
-        return $object->getAssoc();
-    }
-
-    public function deleteRepo($params, $context)
-    {
-        // Validate the RPC caller context.
-        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
-        // Validate the parameters of the RPC service method.
-        $this->validateMethodParams($params, 'rpc.common.objectuuid');
-        // Delete the configuration object.
-        $db = \OMV\Config\Database::getInstance();
-        $object = $db->get('conf.system.omvextras', $params['uuid']);
-        $db->delete($object);
-        // Return the deleted configuration object.
         return $object->getAssoc();
     }
 

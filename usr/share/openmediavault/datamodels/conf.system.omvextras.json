@@ -3,88 +3,15 @@
 	"id": "conf.system.omvextras",
 	"title": "omvextras",
 	"queryinfo": {
-		"xpath": "//system/omvextras/repos/repo",
-		"iterable": true,
-		"idproperty": "uuid"
+		"xpath": "//system/omvextras",
+		"iterable": false
 	},
 	"properties": {
-		"uuid": {
-			"type": "string",
-			"format": "uuidv4"
-		},
-		"enable": {
+		"testing": {
 			"type": "boolean",
 			"default": false
 		},
-		"name": {
-			"type": "string",
-			"default": ""
-		},
-		"repo1": {
-			"type": "string",
-			"default": ""
-		},
-		"key1": {
-			"type": "string",
-			"default": ""
-		},
-		"package1": {
-			"type": "string",
-			"default": ""
-		},
-		"pin1": {
-			"type": "string",
-			"default": ""
-		},
-		"priority1": {
-			"type": "string",
-			"default": ""
-		},
-		"repo2": {
-			"type": "string",
-			"default": ""
-		},
-		"key2": {
-			"type": "string",
-			"default": ""
-		},
-		"package2": {
-			"type": "string",
-			"default": ""
-		},
-		"pin2": {
-			"type": "string",
-			"default": ""
-		},
-		"priority2": {
-			"type": "string",
-			"default": ""
-		},
-		"repo3": {
-			"type": "string",
-			"default": ""
-		},
-		"key3": {
-			"type": "string",
-			"default": ""
-		},
-		"package3": {
-			"type": "string",
-			"default": ""
-		},
-		"pin3": {
-			"type": "string",
-			"default": ""
-		},
-		"priority3": {
-			"type": "string",
-			"default": ""
-		},
-		"comment": {
-			"type": "string",
-			"default": ""
-		},
-		"permanent": {
+		"extras": {
 			"type": "boolean",
 			"default": false
 		}

@@ -19,250 +19,23 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 // require("js/omv/WorkspaceManager.js")
-// require("js/omv/workspace/grid/Panel.js")
+// require("js/omv/workspace/form/Panel.js")
 // require("js/omv/workspace/window/Form.js")
 // require("js/omv/workspace/window/plugin/ConfigObject.js")
 // require("js/omv/util/Format.js")
-// require("js/omv/Rpc.js")
-// require("js/omv/data/Store.js")
-// require("js/omv/data/Model.js")
-// require("js/omv/data/proxy/Rpc.js")
 
-Ext.define("OMV.module.admin.system.omvextras.Repo", {
-    extend: "OMV.workspace.window.Form",
+Ext.define("OMV.module.admin.system.omvextras.Repos", {
+    extend: "OMV.workspace.form.Panel",
     requires: [
-        "OMV.workspace.window.plugin.ConfigObject"
+        "OMV.util.Format"
     ],
 
     rpcService: "OmvExtras",
-    rpcGetMethod: "getRepo",
-    rpcSetMethod: "setRepo",
-
-    plugins: [{
-        ptype: "configobject"
-    }],
-
-    height: 300,
-
-    getFormItems: function() {
-        return [{
-            xtype: "checkbox",
-            name: "enable",
-            fieldLabel: _("Enable"),
-            checked: true
-        },{
-            xtype: "textfield",
-            name: "name",
-            fieldLabel: _("Name"),
-            allowBlank: false,
-            readOnly: this.permanent
-        },{
-            xtype: "textfield",
-            name: "comment",
-            fieldLabel: _("Comment"),
-            allowBlank: false,
-            readOnly: this.permanent
-        },{
-            xtype: "fieldset",
-            title: _("Repo #1"),
-            fieldDefaults: {
-                labelSeparator: ""
-            },
-            items: [{
-                xtype: "textfield",
-                name: "repo1",
-                fieldLabel: _("Repo"),
-                allowBlank: false,
-                readOnly: this.permanent
-            },{
-                xtype: "textfield",
-                name: "key1",
-                fieldLabel: _("Key"),
-                allowBlank: true,
-                readOnly: this.permanent
-            },{
-                xtype: "textfield",
-                name: "package1",
-                fieldLabel: _("Package"),
-                allowBlank: true,
-                readOnly: this.permanent
-            },{
-                xtype: "textfield",
-                name: "pin1",
-                fieldLabel: _("Pin"),
-                allowBlank: true,
-                readOnly: this.permanent
-            },{
-                xtype: "textfield",
-                name: "priority1",
-                fieldLabel: _("Priority"),
-                allowBlank: true,
-                readOnly: this.permanent
-            }]
-        },{
-            xtype: "fieldset",
-            title: _("Repo #2"),
-            fieldDefaults: {
-                labelSeparator: ""
-            },
-            items: [{
-                xtype: "textfield",
-                name: "repo2",
-                fieldLabel: _("Repo"),
-                allowBlank: true,
-                readOnly: this.permanent
-            },{
-                xtype: "textfield",
-                name: "key2",
-                fieldLabel: _("Key"),
-                allowBlank: true,
-                readOnly: this.permanent
-            },{
-                xtype: "textfield",
-                name: "package2",
-                fieldLabel: _("Package"),
-                allowBlank: true,
-                readOnly: this.permanent
-            },{
-                xtype: "textfield",
-                name: "pin2",
-                fieldLabel: _("Pin"),
-                allowBlank: true,
-                readOnly: this.permanent
-            },{
-                xtype: "textfield",
-                name: "priority2",
-                fieldLabel: _("Priority"),
-                allowBlank: true,
-                readOnly: this.permanent
-            }]
-        },{
-            xtype: "fieldset",
-            title: _("Repo #3"),
-            fieldDefaults: {
-                labelSeparator: ""
-            },
-            items: [{
-                xtype: "textfield",
-                name: "repo3",
-                fieldLabel: _("Repo"),
-                allowBlank: true,
-                readOnly: this.permanent
-            },{
-                xtype: "textfield",
-                name: "key3",
-                fieldLabel: _("Key"),
-                allowBlank: true,
-                readOnly: this.permanent
-            },{
-                xtype: "textfield",
-                name: "package3",
-                fieldLabel: _("Package"),
-                allowBlank: true,
-                readOnly: this.permanent
-            },{
-                xtype: "textfield",
-                name: "pin3",
-                fieldLabel: _("Pin"),
-                allowBlank: true,
-                readOnly: this.permanent
-            },{
-                xtype: "textfield",
-                name: "priority3",
-                fieldLabel: _("Priority"),
-                allowBlank: true,
-                readOnly: this.permanent
-            }]
-        },{
-            xtype: "checkbox",
-            name: "permanent",
-            fieldLabel: _("Permanent"),
-            checked: false,
-            readOnly: true
-        }];
-    }
-});
-
-Ext.define("OMV.module.admin.system.omvextras.Repos", {
-    extend: "OMV.workspace.grid.Panel",
-    requires: [
-        "OMV.Rpc",
-        "OMV.data.Store",
-        "OMV.data.Model",
-        "OMV.data.proxy.Rpc",
-        "OMV.util.Format"
-    ],
-    uses: [
-        "OMV.module.admin.system.omvextras.Repo"
-    ],
-
-    hidePagingToolbar: false,
-    stateful: true,
-    stateId: "a982b26d-6804-4632-b31b-1b48c0ea6dde",
-    columns: [{
-        xtype: "booleaniconcolumn",
-        text: _("Enabled"),
-        sortable: true,
-        dataIndex: "enable",
-        stateId: "enable",
-        align: "center",
-        width: 80,
-        resizable: false,
-        iconCls:  Ext.baseCSSPrefix + "grid-cell-booleaniconcolumn-switch"
-    },{
-        xtype: "textcolumn",
-        text: _("Name"),
-        sortable: true,
-        dataIndex: "name",
-        stateId: "name"
-    },{
-        xtype: "textcolumn",
-        text: _("Comment"),
-        sortable: true,
-        dataIndex: "comment",
-        stateId: "comment",
-        flex: 1
-    }],
+    rpcGetMethod: "getSettings",
+    rpcSetMethod: "setSettings",
 
     initComponent: function() {
         var me = this;
-        Ext.apply(me, {
-            store: Ext.create("OMV.data.Store", {
-                autoLoad: true,
-                model: OMV.data.Model.createImplicit({
-                    idProperty: "uuid",
-                    fields: [
-                        { name: "uuid", type: "string" },
-                        { name: "enable", type: "boolean" },
-                        { name: "name", type: "string" },
-                        { name: "repo1", type: "string" },
-                        { name: "repo2", type: "string" },
-                        { name: "repo3", type: "string" },
-                        { name: "key1", type: "string" },
-                        { name: "key2", type: "string" },
-                        { name: "key3", type: "string" },
-                        { name: "comment", type: "string" },
-                        { name: "package1", type: "string" },
-                        { name: "pin1", type: "string" },
-                        { name: "priority1", type: "string" },
-                        { name: "package2", type: "string" },
-                        { name: "pin2", type: "string" },
-                        { name: "priority2", type: "string" },
-                        { name: "package3", type: "string" },
-                        { name: "pin3", type: "string" },
-                        { name: "priority3", type: "string" },
-                        { name: "permanent", type: "boolean" }
-                    ]
-                }),
-                proxy: {
-                    type: "rpc",
-                    rpcData: {
-                        service: "OmvExtras",
-                        method: "getRepoList"
-                    }
-                }
-            })
-        });
 
         OMV.Rpc.request({
             scope: this,
@@ -294,10 +67,10 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
         me.callParent(arguments);
     },
 
-    getTopToolbarItems: function() {
+    getButtonsItems: function() {
         var me = this;
         var items = me.callParent(arguments);
-        Ext.Array.push(items, {
+        items.push({
             id: me.getId() + "-updates",
             xtype: "button",
             text: _("Updates"),
@@ -343,52 +116,25 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
         return items;
     },
 
-    onAddButton: function() {
-        var me = this;
-        Ext.create("OMV.module.admin.system.omvextras.Repo", {
-            title: _("Add repo"),
-            uuid: OMV.UUID_UNDEFINED,
-            listeners: {
-                scope: me,
-                submit: function() {
-                    this.doReload();
-                }
-            }
-        }).show();
-    },
-
-    onEditButton: function() {
-        var me = this;
-        var record = me.getSelected();
-        //Check to see if permanent
-        Ext.create("OMV.module.admin.system.omvextras.Repo", {
-            title: _("Edit repo"),
-            uuid: record.get("uuid"),
-            permanent: record.get("permanent"),
-            listeners: {
-                scope: me,
-                submit: function() {
-                    this.doReload();
-                }
-            }
-        }).show();
-    },
-
-    doDeletion: function(record) {
-        var me = this;
-        var record = me.getSelected();
-        //Check to see if permanent
-        OMV.Rpc.request({
-            scope: me,
-            callback: me.onDeletion,
-            rpcData: {
-                service: "OmvExtras",
-                method: "deleteRepo",
-                params: {
-                    uuid: record.get("uuid")
-                }
-            }
-        });
+getFormItems : function () {
+        return [{
+            xtype         : "fieldset",
+            title         : _("General settings"),
+            fieldDefaults : {
+                labelSeparator : ""
+            },
+            items : [{
+                xtype      : "checkbox",
+                name       : "testing",
+                fieldLabel : _("Testing repo"),
+                checked    : false
+            },{
+                xtype      : "checkbox",
+                name       : "extras",
+                fieldLabel : _("Extras repo"),
+                checked    : false
+            }]
+        }];
     },
 
     onCommandButton: function(command) {

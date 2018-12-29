@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.0) stable; urgency=low
+
+  * Adapt to openmediavault 5 (usul)
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 29 Dec 2018 14:02:15 -0600
+
 openmediavault-omvextrasorg (4.1.13) stable; urgency=low
 
   * Add --no-tty option to apt-key

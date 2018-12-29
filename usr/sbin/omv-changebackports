@@ -15,7 +15,7 @@ else
     echo "${BACKPORTS}=\"${status}\"" >> ${DEFAULT_FILE}
 fi
 
-omv-mkconf apt
+omv-salt deploy run apt
 omv-aptclean
 
 exit 0

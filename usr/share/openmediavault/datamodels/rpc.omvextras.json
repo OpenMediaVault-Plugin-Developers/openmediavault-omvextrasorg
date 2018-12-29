@@ -1,87 +1,14 @@
 [{
 	"type": "rpc",
-	"id": "rpc.omvextras.setrepo",
+	"id": "rpc.omvextras.setsettings",
 	"params": {
 		"type": "object",
 		"properties": {
-			"uuid": {
-				"type": "string",
-				"format": "uuidv4",
-				"required": true
-			},
-			"enable": {
+			"testing": {
 				"type": "boolean",
 				"required": true
 			},
-			"name": {
-				"type": "string",
-				"required": true
-			},
-			"repo1": {
-				"type": "string",
-				"required": true
-			},
-			"key1": {
-				"type": "string",
-				"required": false
-			},
-			"package1": {
-				"type": "string",
-				"required": false
-			},
-			"pin1": {
-				"type": "string",
-				"required": false
-			},
-			"priority1": {
-				"type": "string",
-				"required": false
-			},
-			"repo2": {
-				"type": "string",
-				"required": false
-			},
-			"key2": {
-				"type": "string",
-				"required": false
-			},
-			"package2": {
-				"type": "string",
-				"required": false
-			},
-			"pin2": {
-				"type": "string",
-				"required": false
-			},
-			"priority2": {
-				"type": "string",
-				"required": false
-			},
-			"repo3": {
-				"type": "string",
-				"required": false
-			},
-			"key3": {
-				"type": "string",
-				"required": false
-			},
-			"package3": {
-				"type": "string",
-				"required": false
-			},
-			"pin3": {
-				"type": "string",
-				"required": false
-			},
-			"priority3": {
-				"type": "string",
-				"required": false
-			},
-			"comment": {
-				"type": "string",
-				"required": true
-			},
-			"permanent": {
+			"extras": {
 				"type": "boolean",
 				"required": false
 			}

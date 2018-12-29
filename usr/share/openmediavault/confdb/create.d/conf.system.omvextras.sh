@@ -24,25 +24,14 @@ set -e
 . /usr/share/openmediavault/scripts/helper-functions
 
 if ! omv_config_exists "/config/system/omvextras"; then
-    echo "Initialize configuration"
-    default_repos=$(cat /etc/omvextras/default_repos.xml | sed -e 's/^[ \t]*//' | tr '\n' ' ')
-    omv_config_add_node_data "/config/system" "omvextras" "${default_repos}"
+    omv_config_add_node "/config/system" "omvextras"
+    omv_config_add_key "/config/system/omvextras" "testing" "0"
+    omv_config_add_key "/config/system/omvextras" "extras" "0"
 fi
-
-# change plex repo based on architecture
-if [[ $(arch) == arm* ]]; then
-    plex_repo=""
-else
-    plex_repo="https://downloads.plex.tv/repo/deb/ ./public main"
-fi
-omv_config_update "/config/system/omvextras/repos/repo[uuid='eafd450c-0e48-11e6-8349-000c290ea003']/repo2" "${plex_repo}"
 
 # disable grub submenus on systems that use grub
 if [ -f /usr/sbin/update-grub ]; then
     omv-grubiso disablesubmenu
 fi
-
-# write list file
-omv-mkconf apt
 
 exit 0

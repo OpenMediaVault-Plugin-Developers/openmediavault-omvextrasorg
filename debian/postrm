@@ -21,27 +21,24 @@ set -e
 
 . /usr/share/openmediavault/scripts/helper-functions
 
-rm -f /etc/apt/preferences.d/99omv-extras-org*
-rm -f /etc/apt/sources.list.d/omv-extras-org*.list
+find /etc/apt/ -type f -name "omvextras*" -delete
 
 case "$1" in
-	purge)
+    purge)
         # Remove the configuration data.
-		echo "Cleaning up configuration database ..."
+        echo "Cleaning up configuration database ..."
         if omv_config_exists "/config/system/omvextras"; then
             omv_config_delete "/config/system/omvextras"
         fi
+    ;;
 
-        omv-mkconf apt
-	;;
+    remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+    ;;
 
-	remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
-	;;
-
-	*)
-		echo "postrm called with unknown argument '$1'" >&2
-		exit 1
-	;;
+    *)
+        echo "postrm called with unknown argument '$1'" >&2
+        exit 1
+    ;;
 esac
 
 exit 0
