@@ -22,13 +22,9 @@
 // require("js/omv/workspace/form/Panel.js")
 // require("js/omv/workspace/window/Form.js")
 // require("js/omv/workspace/window/plugin/ConfigObject.js")
-// require("js/omv/util/Format.js")
 
 Ext.define("OMV.module.admin.system.omvextras.Repos", {
     extend: "OMV.workspace.form.Panel",
-    requires: [
-        "OMV.util.Format"
-    ],
 
     rpcService: "OmvExtras",
     rpcGetMethod: "getSettings",
@@ -36,7 +32,6 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
 
     initComponent: function() {
         var me = this;
-
         OMV.Rpc.request({
             scope: this,
             callback: function(id, success, response) {
@@ -63,18 +58,17 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
                 method: "getArch"
             }
         });
-
         me.callParent(arguments);
     },
 
-    getButtonsItems: function() {
+    getButtonItems: function() {
         var me = this;
         var items = me.callParent(arguments);
         items.push({
             id: me.getId() + "-updates",
             xtype: "button",
             text: _("Updates"),
-            scope: this,
+            scope: me,
             icon: "images/refresh.png",
             menu: [{
                 text: _("update"),
@@ -101,7 +95,7 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
             id: me.getId() + "-backports",
             xtype: "button",
             text: _("Backports"),
-            scope: this,
+            scope: me,
             icon: "images/software.png",
             menu: [{
                 text: _("Enable Backports"),
@@ -116,23 +110,23 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
         return items;
     },
 
-getFormItems : function () {
+    getFormItems: function () {
         return [{
-            xtype         : "fieldset",
-            title         : _("General settings"),
-            fieldDefaults : {
-                labelSeparator : ""
+            xtype: "fieldset",
+            title: _("General settings"),
+            fieldDefaults: {
+                labelSeparator: ""
             },
-            items : [{
-                xtype      : "checkbox",
-                name       : "testing",
-                fieldLabel : _("Testing repo"),
-                checked    : false
+            items: [{
+                xtype: "checkbox",
+                name: "testing",
+                fieldLabel: _("Testing repo"),
+                checked: false
             },{
-                xtype      : "checkbox",
-                name       : "extras",
-                fieldLabel : _("Extras repo"),
-                checked    : false
+                xtype: "checkbox",
+                name: "extras",
+                fieldLabel: _("Extras repo"),
+                checked: false
             }]
         }];
     },
