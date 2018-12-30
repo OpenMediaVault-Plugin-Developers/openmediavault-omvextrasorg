@@ -33,6 +33,9 @@ case "$1" in
         if [ -n "$2" ]; then
             omv-confdbadm migrate "conf.system.omvextras" "${2}"
         fi
+
+        # create repo files
+        omv-salt deploy run --quiet omvextras
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
