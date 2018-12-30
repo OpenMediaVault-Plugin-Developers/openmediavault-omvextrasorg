@@ -69,10 +69,10 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         // Set apt module to dirty
         $dispatcher = \OMV\Engine\Notify\Dispatcher::getInstance();
         $dispatcher->notify(OMV_NOTIFY_MODIFY,
-            'org.openmediavault.conf.system.apt.distribution');
+            'org.openmediavault.conf.system.omvextras');
         // Apply the changes immediatelly (no user interaction is wanted).
         \OMV\Rpc\Rpc::call('Config', 'applyChanges', [
-            'modules' => [ 'apt' ],
+            'modules' => [ 'omvextras' ],
             'force' => TRUE
         ], $context);
         \OMV\Rpc\Rpc::call('Apt', 'update', NULL, $context);
