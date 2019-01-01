@@ -15,6 +15,7 @@ else
     echo "${BACKPORTS}=\"${status}\"" >> ${DEFAULT_FILE}
 fi
 
+omv-salt stage run --quiet prepare
 omv-salt deploy run --quiet apt
 omv-salt deploy run --quiet omvextras
 omv-aptclean

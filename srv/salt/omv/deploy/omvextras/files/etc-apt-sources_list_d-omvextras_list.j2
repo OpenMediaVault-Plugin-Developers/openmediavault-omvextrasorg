@@ -1,4 +1,4 @@
-{% set config = salt['omv_conf.get']('conf.system.omvextras') %}
+{%- set config = salt['omv_conf.get']('conf.system.omvextras') -%}
 deb https://dl.bintray.com/openmediavault-plugin-developers/{{ pillar['productinfo']['distribution'] }} {{ grains['oscodename'] }} main
 deb http://apt.syncthing.net/ syncthing release
 deb https://download.docker.com/linux/debian {{ grains['oscodename'] }} stable
