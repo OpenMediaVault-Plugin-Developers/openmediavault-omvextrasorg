@@ -2,7 +2,7 @@
 #
 # @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
 # @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
-# @copyright Copyright (c) 2013-2018 OpenMediaVault Plugin Developers
+# @copyright Copyright (c) 2013-2019 OpenMediaVault Plugin Developers
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -21,10 +21,14 @@ set -e
 
 . /usr/share/openmediavault/scripts/helper-functions
 
-find /etc/apt/ -type f -name "omvextras*" -delete
+remove_action() {
+    find /etc/apt/ -type f -name "omvextras*" -delete
+    dpkg-trigger update-fixperms
+}
 
 case "$1" in
     purge)
+        remove_action
         # Remove the configuration data.
         echo "Cleaning up configuration database ..."
         if omv_config_exists "/config/system/omvextras"; then
@@ -32,7 +36,11 @@ case "$1" in
         fi
     ;;
 
-    remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+    remove)
+        remove_action
+    ;;
+
+    upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
     ;;
 
     *)
