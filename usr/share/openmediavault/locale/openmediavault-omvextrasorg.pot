@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-01 16:37-0500\n"
+"POT-Creation-Date: 2019-01-02 13:43-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,9 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "Add repo"
-msgstr ""
-
 msgid "Backports"
 msgstr ""
 
@@ -27,9 +24,6 @@ msgid "Cleaning Apt Files and Lists..."
 msgstr ""
 
 msgid "Clonezilla"
-msgstr ""
-
-msgid "Comment"
 msgstr ""
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
@@ -53,22 +47,19 @@ msgstr ""
 msgid "Downloads SystemRescueCD ISO and configures grub bootloader to allow booting from ISO."
 msgstr ""
 
-msgid "Edit repo"
-msgstr ""
-
-msgid "Enable"
-msgstr ""
-
 msgid "Enable Backports"
-msgstr ""
-
-msgid "Enabled"
 msgstr ""
 
 msgid "Enabling backports repo ..."
 msgstr ""
 
+msgid "Extras repo"
+msgstr ""
+
 msgid "GParted Live"
+msgstr ""
+
+msgid "General settings"
 msgstr ""
 
 msgid "Hold Current Kernel"
@@ -125,28 +116,10 @@ msgstr ""
 msgid "Kernels"
 msgstr ""
 
-msgid "Key"
-msgstr ""
-
-msgid "Name"
-msgstr ""
-
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr ""
 
 msgid "OMV-Extras"
-msgstr ""
-
-msgid "Package"
-msgstr ""
-
-msgid "Permanent"
-msgstr ""
-
-msgid "Pin"
-msgstr ""
-
-msgid "Priority"
 msgstr ""
 
 msgid "Proxmox"
@@ -177,18 +150,6 @@ msgid "Remove non-Proxmox kernels and headers"
 msgstr ""
 
 msgid "Removing non-Proxmox kernels..."
-msgstr ""
-
-msgid "Repo"
-msgstr ""
-
-msgid "Repo #1"
-msgstr ""
-
-msgid "Repo #2"
-msgstr ""
-
-msgid "Repo #3"
 msgstr ""
 
 msgid "Repos"
@@ -234,6 +195,9 @@ msgid "Setting the wrong default boot kernel may cause the system to be inaccess
 msgstr ""
 
 msgid "SystemRescueCD"
+msgstr ""
+
+msgid "Testing repo"
 msgstr ""
 
 msgid "This will enable the Proxmox 5.x repo."
