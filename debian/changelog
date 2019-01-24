@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (4.1.14) stable; urgency=low
+
+  * Remove docker repo key from repo info since key is already installed
+    by default
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 24 Jan 2019 08:02:25 -0600
+
 openmediavault-omvextrasorg (4.1.13) stable; urgency=low
 
   * Add --no-tty option to apt-key

@@ -1,9 +1,7 @@
 #!/bin/sh
 #
 # @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
-# @author    Volker Theile <volker.theile@openmediavault.org>
 # @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
-# @copyright Copyright (c) 2009-2013 Volker Theile
 # @copyright Copyright (c) 2013-2019 OpenMediaVault Plugin Developers
 #
 # This program is free software: you can redistribute it and/or modify
@@ -23,7 +21,6 @@ set -e
 
 . /usr/share/openmediavault/scripts/helper-functions
 
-# make config file
-omv-mkconf apt
+omv_config_update "/config/system/omvextras/repos/repo[uuid='07f6f64f-8dd8-4d19-8832-bd9608d2476f']/key1" ""
 
 exit 0
