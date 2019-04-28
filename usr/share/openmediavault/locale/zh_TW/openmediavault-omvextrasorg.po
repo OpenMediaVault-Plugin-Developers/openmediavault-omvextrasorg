@@ -3,23 +3,20 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# kochin <kochinc@outlook.com>, 2014-2018
+# kochin <kochinc@outlook.com>, 2014-2019
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-01 16:37-0500\n"
-"PO-Revision-Date: 2018-11-01 21:37+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"POT-Creation-Date: 2019-01-02 13:43-0600\n"
+"PO-Revision-Date: 2019-01-11 15:36+0000\n"
+"Last-Translator: kochin <kochinc@outlook.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-msgid "Add repo"
-msgstr "新增套件庫"
 
 msgid "Backports"
 msgstr "向後移植"
@@ -29,9 +26,6 @@ msgstr "清理 Apt 檔案和列表 ..."
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
-
-msgid "Comment"
-msgstr "註釋"
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "預設 用戶名稱：<b>user</b> 與 密碼：<b>live</b>"
@@ -60,29 +54,26 @@ msgid ""
 " from ISO."
 msgstr "下載 SystemRescuecd ISO，並將 grub 啟動載入器設置成允許從 ISO 啟動。"
 
-msgid "Edit repo"
-msgstr "編輯套件庫"
-
-msgid "Enable"
-msgstr "啟用"
-
 msgid "Enable Backports"
 msgstr "啟用向後移植"
-
-msgid "Enabled"
-msgstr "已啟用"
 
 msgid "Enabling backports repo ..."
 msgstr "啟用向後移植套件庫中 ..."
 
+msgid "Extras repo"
+msgstr "Extras 套件庫"
+
 msgid "GParted Live"
 msgstr "GParted Live"
 
+msgid "General settings"
+msgstr "一般設定"
+
 msgid "Hold Current Kernel"
-msgstr "保持目前系統核心"
+msgstr "維持在目前系統核心"
 
 msgid "Holding current kernel ..."
-msgstr "保持目前系統核心中 ..."
+msgstr "設定維持目前系統核心中 ..."
 
 msgid "IP Address will be set by DHCP."
 msgstr "IP 地址將由 DHCP 設定。"
@@ -134,29 +125,11 @@ msgstr "系統核心"
 msgid "Kernels"
 msgstr "系統核心"
 
-msgid "Key"
-msgstr "密鑰"
-
-msgid "Name"
-msgstr "名稱"
-
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr "不建議在無頭伺服器上使用。SSH 並非預設為啟動。"
 
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
-
-msgid "Package"
-msgstr "Package"
-
-msgid "Permanent"
-msgstr "Permanent"
-
-msgid "Pin"
-msgstr "Pin"
-
-msgid "Priority"
-msgstr "Priority"
 
 msgid "Proxmox"
 msgstr "Proxmox"
@@ -188,35 +161,23 @@ msgstr "移除 非Proxmox 系統核心與標頭檔案"
 msgid "Removing non-Proxmox kernels..."
 msgstr "移除 非Proxmox 系統核心中 ..."
 
-msgid "Repo"
-msgstr "套件庫"
-
-msgid "Repo #1"
-msgstr "套件庫 #1"
-
-msgid "Repo #2"
-msgstr "套件庫 #2"
-
-msgid "Repo #3"
-msgstr "套件庫 #3"
-
 msgid "Repos"
 msgstr "套件庫"
 
 msgid "Running apt-get dist-upgrade ..."
-msgstr ""
+msgstr "執行 apt-get dist-upgrade 中 ..."
 
 msgid "Running apt-get update ..."
-msgstr ""
+msgstr "執行 apt-get update 中 ..."
 
 msgid "Running apt-get upgrade ..."
-msgstr ""
+msgstr "執行 apt-get upgrade 中 ..."
 
 msgid "Running omv-aptclean ..."
-msgstr ""
+msgstr "執行 omv-aptclean 中 ..."
 
 msgid "Running omv-update ..."
-msgstr ""
+msgstr "執行 omv-update 中 ..."
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
@@ -252,6 +213,9 @@ msgstr "設定錯誤的啟動系統核心可能造成無法進入系統。啟動
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
 
+msgid "Testing repo"
+msgstr "測試套件庫"
+
 msgid "This will enable the Proxmox 5.x repo."
 msgstr "這將啟用 Proxmox 5.x 套件庫。"
 
@@ -268,13 +232,13 @@ msgid "This will remove all kernel packages with the prefix linux-image-."
 msgstr "這將會移除所有前綴詞是 linux-image- 的系統核心套件。"
 
 msgid "Unhold Current Kernel"
-msgstr "不保持目前系統核心"
+msgstr "取消維持在目前系統核心"
 
 msgid "Unholding current kernel ..."
-msgstr "停止保持目前系統核心中 ..."
+msgstr "取消維持目前系統核心中 ..."
 
 msgid "Updates"
-msgstr ""
+msgstr "更新方式"
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
@@ -286,16 +250,16 @@ msgid ""
 msgstr "當從遠端登入時，以此指令啟動 clonezilla：<b>sudo clonezilla</b>"
 
 msgid "apt clean"
-msgstr ""
+msgstr "apt clean"
 
 msgid "dist-upgrade"
-msgstr ""
+msgstr "dist-upgrade"
 
 msgid "omv-update"
-msgstr ""
+msgstr "omv-update"
 
 msgid "update"
-msgstr ""
+msgstr "update"
 
 msgid "upgrade"
-msgstr ""
+msgstr "upgrade"

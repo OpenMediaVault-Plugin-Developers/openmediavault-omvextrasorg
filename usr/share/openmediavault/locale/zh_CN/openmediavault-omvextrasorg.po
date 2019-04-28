@@ -3,23 +3,20 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# songming <by@songming.me>, 2013-2016,2018
+# songming <by@songming.me>, 2013-2016,2018-2019
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-01 16:37-0500\n"
-"PO-Revision-Date: 2018-11-01 21:37+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"POT-Creation-Date: 2019-01-02 13:43-0600\n"
+"PO-Revision-Date: 2019-01-06 12:40+0000\n"
+"Last-Translator: songming <by@songming.me>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-msgid "Add repo"
-msgstr "添加源"
 
 msgid "Backports"
 msgstr "Backports"
@@ -29,9 +26,6 @@ msgstr "清除 Apt 文件及列表"
 
 msgid "Clonezilla"
 msgstr "再生龙 Clonezilla"
-
-msgid "Comment"
-msgstr "注释"
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "默认用户名 <b>user</b>  默认密码: <b>live</b>"
@@ -60,23 +54,20 @@ msgid ""
 " from ISO."
 msgstr "下载 SystemRescueCD ISO 镜像，配置 grub 从该 ISO镜像 引导启动。"
 
-msgid "Edit repo"
-msgstr "编辑源"
-
-msgid "Enable"
-msgstr "启用"
-
 msgid "Enable Backports"
 msgstr "启用 Backports"
-
-msgid "Enabled"
-msgstr "启用"
 
 msgid "Enabling backports repo ..."
 msgstr "启用 backports 源中 ..."
 
+msgid "Extras repo"
+msgstr "扩展源"
+
 msgid "GParted Live"
 msgstr "GParted Live"
+
+msgid "General settings"
+msgstr " 常规设置"
 
 msgid "Hold Current Kernel"
 msgstr "保持当前内核"
@@ -134,29 +125,11 @@ msgstr "内核"
 msgid "Kernels"
 msgstr "内核"
 
-msgid "Key"
-msgstr "密钥"
-
-msgid "Name"
-msgstr "名称"
-
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr "不建议使用缺省服务器，因为默认 SSH 没有开启。"
 
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
-
-msgid "Package"
-msgstr "包"
-
-msgid "Permanent"
-msgstr "固定的"
-
-msgid "Pin"
-msgstr "Pin"
-
-msgid "Priority"
-msgstr "优先级"
 
 msgid "Proxmox"
 msgstr "Proxmox"
@@ -188,35 +161,23 @@ msgstr "删除 non-Proxmox 内核和头文件"
 msgid "Removing non-Proxmox kernels..."
 msgstr "删除 non-Proxmox 内核中 ..."
 
-msgid "Repo"
-msgstr "源"
-
-msgid "Repo #1"
-msgstr "源 #1"
-
-msgid "Repo #2"
-msgstr "源 #2"
-
-msgid "Repo #3"
-msgstr "源 #3"
-
 msgid "Repos"
 msgstr "源"
 
 msgid "Running apt-get dist-upgrade ..."
-msgstr ""
+msgstr "运行 apt-get dist-upgrade 中 ..."
 
 msgid "Running apt-get update ..."
-msgstr ""
+msgstr "运行 apt-get update 中 ..."
 
 msgid "Running apt-get upgrade ..."
-msgstr ""
+msgstr "运行 apt-get upgrade 中 ..."
 
 msgid "Running omv-aptclean ..."
-msgstr ""
+msgstr "运行 omv-aptclean 中 ..."
 
 msgid "Running omv-update ..."
-msgstr ""
+msgstr "运行 omv-update 中 ..."
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
@@ -252,6 +213,9 @@ msgstr "如果设置的默认启动内核错误而不能启动系统，可以通
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
 
+msgid "Testing repo"
+msgstr "测试源"
+
 msgid "This will enable the Proxmox 5.x repo."
 msgstr "这将启用 Proxmox 5.x 源。"
 
@@ -274,7 +238,7 @@ msgid "Unholding current kernel ..."
 msgstr "解除保持当前内核中 ..."
 
 msgid "Updates"
-msgstr ""
+msgstr "更新"
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
@@ -286,16 +250,16 @@ msgid ""
 msgstr "当远程登录时，启动再生龙 clonezilla 命令是: <b>sudo clonezilla</b>"
 
 msgid "apt clean"
-msgstr ""
+msgstr "apt clean"
 
 msgid "dist-upgrade"
-msgstr ""
+msgstr "dist-upgrade"
 
 msgid "omv-update"
-msgstr ""
+msgstr "omv-update"
 
 msgid "update"
-msgstr ""
+msgstr "update"
 
 msgid "upgrade"
-msgstr ""
+msgstr "upgrade"

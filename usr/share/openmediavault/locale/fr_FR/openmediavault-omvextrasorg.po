@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-01 16:37-0500\n"
-"PO-Revision-Date: 2018-11-01 21:37+0000\n"
+"POT-Creation-Date: 2019-01-02 13:43-0600\n"
+"PO-Revision-Date: 2019-01-02 19:43+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -18,9 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-
-msgid "Add repo"
-msgstr "Ajouter un dépôt"
 
 msgid "Backports"
 msgstr "Rétroportages"
@@ -30,9 +27,6 @@ msgstr "Nettoyage des fichiers d'APT et des listes ..."
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
-
-msgid "Comment"
-msgstr "Commentaire"
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Nom d'utilisateur par défaut : «<b>user</b>», et mot de passe : «<b>live</b>»."
@@ -61,23 +55,20 @@ msgid ""
 " from ISO."
 msgstr "Télécharge l'ISO de SystemRescueCD et configure le gestionnaire de démarrage GRUB pour permettre le démarrage à partir de l'ISO."
 
-msgid "Edit repo"
-msgstr "Éditer un dépôt"
-
-msgid "Enable"
-msgstr "Activer"
-
 msgid "Enable Backports"
 msgstr "Activer les rétroportages"
-
-msgid "Enabled"
-msgstr "Activé"
 
 msgid "Enabling backports repo ..."
 msgstr "Activation du dépôt des rétroportages ..."
 
+msgid "Extras repo"
+msgstr ""
+
 msgid "GParted Live"
 msgstr "GParted Live"
+
+msgid "General settings"
+msgstr ""
 
 msgid "Hold Current Kernel"
 msgstr "Maintenir le noyau actuel"
@@ -135,29 +126,11 @@ msgstr "Noyau"
 msgid "Kernels"
 msgstr "Noyaux"
 
-msgid "Key"
-msgstr "Clé"
-
-msgid "Name"
-msgstr "Nom"
-
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr "Non recommandé pour les serveurs sans affichage. SSH n'est pas activé par défaut."
 
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
-
-msgid "Package"
-msgstr "Paquet"
-
-msgid "Permanent"
-msgstr "Permanent"
-
-msgid "Pin"
-msgstr "Épingle"
-
-msgid "Priority"
-msgstr "Priorité"
 
 msgid "Proxmox"
 msgstr "Proxmox"
@@ -188,18 +161,6 @@ msgstr "Supprimer les noyaux et les en-têtes non-Proxmox"
 
 msgid "Removing non-Proxmox kernels..."
 msgstr "Suppression des noyaux non-Proxmox ..."
-
-msgid "Repo"
-msgstr "Dépôt"
-
-msgid "Repo #1"
-msgstr "Dépôt #1"
-
-msgid "Repo #2"
-msgstr "Dépôt #2"
-
-msgid "Repo #3"
-msgstr "Dépôt #3"
 
 msgid "Repos"
 msgstr "Dépôts"
@@ -252,6 +213,9 @@ msgstr "Définir le mauvais noyau de démarrage par défaut peut rendre le syst�
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCd"
+
+msgid "Testing repo"
+msgstr ""
 
 msgid "This will enable the Proxmox 5.x repo."
 msgstr "Cela activera le dépôt de Proxmox 5.x."

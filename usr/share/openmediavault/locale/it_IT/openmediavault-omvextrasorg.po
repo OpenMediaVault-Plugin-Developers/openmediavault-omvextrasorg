@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-01 16:37-0500\n"
-"PO-Revision-Date: 2018-11-01 21:37+0000\n"
+"POT-Creation-Date: 2019-01-02 13:43-0600\n"
+"PO-Revision-Date: 2019-01-02 19:43+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -18,9 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-msgid "Add repo"
-msgstr "Aggiungi repository"
 
 msgid "Backports"
 msgstr ""
@@ -30,9 +27,6 @@ msgstr "Pulizia Apt File e Liste..."
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
-
-msgid "Comment"
-msgstr "Commenta"
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Utente: <b>user</b> e password: <b>live</b> predefiniti"
@@ -61,23 +55,20 @@ msgid ""
 " from ISO."
 msgstr ""
 
-msgid "Edit repo"
-msgstr "Modifica repository"
-
-msgid "Enable"
-msgstr "Abilita"
-
 msgid "Enable Backports"
 msgstr ""
-
-msgid "Enabled"
-msgstr "Abilitato"
 
 msgid "Enabling backports repo ..."
 msgstr ""
 
+msgid "Extras repo"
+msgstr ""
+
 msgid "GParted Live"
 msgstr "GParted Live"
+
+msgid "General settings"
+msgstr ""
 
 msgid "Hold Current Kernel"
 msgstr ""
@@ -135,29 +126,11 @@ msgstr "Kernel"
 msgid "Kernels"
 msgstr "Kernel"
 
-msgid "Key"
-msgstr "Chiave"
-
-msgid "Name"
-msgstr "Nome"
-
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr "Non consigliato per i server headless. SSH non è abilitato per impostazione predefinita."
 
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
-
-msgid "Package"
-msgstr "Pacchetto"
-
-msgid "Permanent"
-msgstr "Permanente"
-
-msgid "Pin"
-msgstr "Blocca"
-
-msgid "Priority"
-msgstr "Priorità"
 
 msgid "Proxmox"
 msgstr ""
@@ -188,18 +161,6 @@ msgstr ""
 
 msgid "Removing non-Proxmox kernels..."
 msgstr ""
-
-msgid "Repo"
-msgstr "Repository"
-
-msgid "Repo #1"
-msgstr "Repository #1"
-
-msgid "Repo #2"
-msgstr "Repository #2"
-
-msgid "Repo #3"
-msgstr "Repository #3"
 
 msgid "Repos"
 msgstr "Repository"
@@ -252,6 +213,9 @@ msgstr "L'impostazione errata del kernel di avvio può rendere non accessibile i
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
+
+msgid "Testing repo"
+msgstr ""
 
 msgid "This will enable the Proxmox 5.x repo."
 msgstr ""

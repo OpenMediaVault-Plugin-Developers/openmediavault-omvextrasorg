@@ -3,23 +3,20 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# Raul Fernandez Garcia <raulfg3@gmail.com>, 2014-2018
+# Raul Fernandez Garcia <raulfg3@gmail.com>, 2014-2019
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-01 16:37-0500\n"
-"PO-Revision-Date: 2018-11-01 21:37+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"POT-Creation-Date: 2019-01-02 13:43-0600\n"
+"PO-Revision-Date: 2019-01-15 11:20+0000\n"
+"Last-Translator: Raul Fernandez Garcia <raulfg3@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-msgid "Add repo"
-msgstr "Añadir repo"
 
 msgid "Backports"
 msgstr "Backports"
@@ -29,9 +26,6 @@ msgstr "Limpiando archivos Apt y listas ..."
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
-
-msgid "Comment"
-msgstr "Comentario"
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Usuario por defecto: <b>user</b> Contraseña: <b>live</b>"
@@ -60,23 +54,20 @@ msgid ""
 " from ISO."
 msgstr "Descargar SystemRescueCD y configurando el cargador Grub para permitir arrancar desde la ISO."
 
-msgid "Edit repo"
-msgstr "Editar repo"
-
-msgid "Enable"
-msgstr "Habilitar"
-
 msgid "Enable Backports"
 msgstr "Habilitar Backports"
-
-msgid "Enabled"
-msgstr "Habilitado"
 
 msgid "Enabling backports repo ..."
 msgstr "Habilitando repositorio Backports ..."
 
+msgid "Extras repo"
+msgstr "Repositorio de Extras"
+
 msgid "GParted Live"
 msgstr "GParted Live"
+
+msgid "General settings"
+msgstr "Opciones"
 
 msgid "Hold Current Kernel"
 msgstr "Mantener el Kernel actual"
@@ -134,29 +125,11 @@ msgstr "Kernel"
 msgid "Kernels"
 msgstr "Kernels"
 
-msgid "Key"
-msgstr "Llave"
-
-msgid "Name"
-msgstr "Nombre"
-
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr "No se recomienda para servidores sin monitor. No se habilita SSH por defecto."
 
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
-
-msgid "Package"
-msgstr "Paquete"
-
-msgid "Permanent"
-msgstr "Permanente"
-
-msgid "Pin"
-msgstr "Pin"
-
-msgid "Priority"
-msgstr "Prioridad"
 
 msgid "Proxmox"
 msgstr "Proxmox"
@@ -188,35 +161,23 @@ msgstr "Borrar kernel No-Proxmox y sus cabeceras"
 msgid "Removing non-Proxmox kernels..."
 msgstr "Borrando kernel No-Proxmox ..."
 
-msgid "Repo"
-msgstr "Repositorio"
-
-msgid "Repo #1"
-msgstr "Repo #1"
-
-msgid "Repo #2"
-msgstr "Repo #2"
-
-msgid "Repo #3"
-msgstr "Repo #3"
-
 msgid "Repos"
 msgstr "Repositorios"
 
 msgid "Running apt-get dist-upgrade ..."
-msgstr ""
+msgstr "Ejecutando apt-get dist-upgrade ..."
 
 msgid "Running apt-get update ..."
-msgstr ""
+msgstr "Ejecutando apt-get update ..."
 
 msgid "Running apt-get upgrade ..."
-msgstr ""
+msgstr "Ejecutando apt-get upgrade ..."
 
 msgid "Running omv-aptclean ..."
-msgstr ""
+msgstr "Ejecutando omv-aptclean ..."
 
 msgid "Running omv-update ..."
-msgstr ""
+msgstr "Ejecutando omv-update ..."
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
@@ -252,6 +213,9 @@ msgstr "Activar un kernel erroneo, puede hacer inaccesible el sistema. En el men
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
 
+msgid "Testing repo"
+msgstr "Repositorio de Test"
+
 msgid "This will enable the Proxmox 5.x repo."
 msgstr "Esto habilita el repositorio del kernel Proxmox 5.x"
 
@@ -274,7 +238,7 @@ msgid "Unholding current kernel ..."
 msgstr "Dejando el kewrnel actual ..."
 
 msgid "Updates"
-msgstr ""
+msgstr "Actualizaciones"
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
@@ -286,16 +250,16 @@ msgid ""
 msgstr "Cuand se conecte remotamente, inicie Clonezilla con:  <b>sudo clonezilla</b>"
 
 msgid "apt clean"
-msgstr ""
+msgstr "apt clean"
 
 msgid "dist-upgrade"
-msgstr ""
+msgstr "dist-upgrade"
 
 msgid "omv-update"
-msgstr ""
+msgstr "omv-update"
 
 msgid "update"
-msgstr ""
+msgstr "update"
 
 msgid "upgrade"
-msgstr ""
+msgstr "upgrade"

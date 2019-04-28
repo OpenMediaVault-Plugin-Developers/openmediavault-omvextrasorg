@@ -3,23 +3,20 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# Marcelo Esteves <marcelopge@gmail.com>, 2017
+# Marcelo Esteves <marcelopge@gmail.com>, 2017,2019
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-01 16:37-0500\n"
-"PO-Revision-Date: 2018-11-01 21:37+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"POT-Creation-Date: 2019-01-02 13:43-0600\n"
+"PO-Revision-Date: 2019-04-04 21:42+0000\n"
+"Last-Translator: Marcelo Esteves <marcelopge@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-
-msgid "Add repo"
-msgstr "Adicionar repositório"
 
 msgid "Backports"
 msgstr ""
@@ -30,14 +27,11 @@ msgstr ""
 msgid "Clonezilla"
 msgstr "Clonezilla"
 
-msgid "Comment"
-msgstr "Comentário"
-
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr ""
 
 msgid "Disable Backports"
-msgstr ""
+msgstr "Desativar Backports"
 
 msgid "Disabling backports repo ..."
 msgstr ""
@@ -60,23 +54,20 @@ msgid ""
 " from ISO."
 msgstr ""
 
-msgid "Edit repo"
-msgstr "Editar repositório"
-
-msgid "Enable"
-msgstr "Habilitar"
-
 msgid "Enable Backports"
-msgstr ""
-
-msgid "Enabled"
-msgstr "Ativo"
+msgstr "Ativar Backports"
 
 msgid "Enabling backports repo ..."
-msgstr ""
+msgstr "Ativando repositórios backport ..."
+
+msgid "Extras repo"
+msgstr "Repositórios extras"
 
 msgid "GParted Live"
 msgstr "GParted Live"
+
+msgid "General settings"
+msgstr "Configurações gerais"
 
 msgid "Hold Current Kernel"
 msgstr ""
@@ -114,7 +105,7 @@ msgid "Install GParted Live ISO ..."
 msgstr "Instalar ISO do GParted Live ..."
 
 msgid "Install Proxmox kernel"
-msgstr ""
+msgstr "Instalar kernel Proxmox"
 
 msgid "Install SystemRescueCD"
 msgstr "Instalar SystemRescueCD"
@@ -126,7 +117,7 @@ msgid "Installed Kernels"
 msgstr "Kernels instalados"
 
 msgid "Installing Proxmox kernel..."
-msgstr ""
+msgstr "Instalando kernel Proxmox"
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -134,32 +125,14 @@ msgstr "Kernel"
 msgid "Kernels"
 msgstr "Kernels"
 
-msgid "Key"
-msgstr "Chave"
-
-msgid "Name"
-msgstr "Nome"
-
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr ""
 
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
-msgid "Package"
-msgstr "Pacote"
-
-msgid "Permanent"
-msgstr "Permanente"
-
-msgid "Pin"
-msgstr ""
-
-msgid "Priority"
-msgstr ""
-
 msgid "Proxmox"
-msgstr ""
+msgstr "Proxmox"
 
 msgid "Reboot to Clonezilla ..."
 msgstr "Reiniciar com Clonezilla ..."
@@ -171,13 +144,13 @@ msgid "Reboot to GParted Live ..."
 msgstr "Reiniciar com GParted Live ..."
 
 msgid "Reboot to GParted Live Once"
-msgstr ""
+msgstr "Reinício único no GParted Live"
 
 msgid "Reboot to SystemRescueCD ..."
 msgstr "Reiniciar com SystemRescueCD ..."
 
 msgid "Reboot to SystemRescueCD Once"
-msgstr ""
+msgstr "Reinício único no SystemRescueCD"
 
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr ""
@@ -187,18 +160,6 @@ msgstr ""
 
 msgid "Removing non-Proxmox kernels..."
 msgstr ""
-
-msgid "Repo"
-msgstr "Repositório"
-
-msgid "Repo #1"
-msgstr "Repositório #1"
-
-msgid "Repo #2"
-msgstr "Repositório #2"
-
-msgid "Repo #3"
-msgstr "Repositório #3"
 
 msgid "Repos"
 msgstr "Repositórios"
@@ -252,6 +213,9 @@ msgstr "Definir o kernel de inicialização padrão incorreto pode fazer com que
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
 
+msgid "Testing repo"
+msgstr "Testando repositório"
+
 msgid "This will enable the Proxmox 5.x repo."
 msgstr ""
 
@@ -274,12 +238,12 @@ msgid "Unholding current kernel ..."
 msgstr ""
 
 msgid "Updates"
-msgstr ""
+msgstr "Atualizações"
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
 "OpenMediaVault ssh key and need to be updated on the client system."
-msgstr ""
+msgstr "Quando estiver se conectando por ssh a chave pode ser diferente da que está sendo usada no OpenMediaVault e precisa ser atualizada no sistema cliente."
 
 msgid ""
 "When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
@@ -295,7 +259,7 @@ msgid "omv-update"
 msgstr ""
 
 msgid "update"
-msgstr ""
+msgstr "atualizar"
 
 msgid "upgrade"
-msgstr ""
+msgstr "atualizar versão"

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-01 16:37-0500\n"
-"PO-Revision-Date: 2018-11-01 21:37+0000\n"
+"POT-Creation-Date: 2019-01-02 13:43-0600\n"
+"PO-Revision-Date: 2019-01-02 19:43+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Danish (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -17,9 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: da\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-msgid "Add repo"
-msgstr "Tilføj arkiv"
 
 msgid "Backports"
 msgstr ""
@@ -29,9 +26,6 @@ msgstr "Rydder op i Apt Filer og Lister.."
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
-
-msgid "Comment"
-msgstr "Kommentar"
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Standard brugenavn: <b>user</b> og adgangskode: <b>live</b>"
@@ -60,23 +54,20 @@ msgid ""
 " from ISO."
 msgstr ""
 
-msgid "Edit repo"
-msgstr "Rediger arkiv"
-
-msgid "Enable"
-msgstr "Aktiver"
-
 msgid "Enable Backports"
 msgstr ""
-
-msgid "Enabled"
-msgstr "Aktiveret"
 
 msgid "Enabling backports repo ..."
 msgstr ""
 
+msgid "Extras repo"
+msgstr ""
+
 msgid "GParted Live"
 msgstr "GParted Live"
+
+msgid "General settings"
+msgstr ""
 
 msgid "Hold Current Kernel"
 msgstr ""
@@ -134,29 +125,11 @@ msgstr "Kerne"
 msgid "Kernels"
 msgstr "Kerner"
 
-msgid "Key"
-msgstr "Nøgle"
-
-msgid "Name"
-msgstr "Navn"
-
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr "Ikke anbefalet til skærmløse servere. SSH er ikke aktiveret som standard."
 
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
-
-msgid "Package"
-msgstr "Pakke"
-
-msgid "Permanent"
-msgstr "Permanent"
-
-msgid "Pin"
-msgstr "Pin"
-
-msgid "Priority"
-msgstr "Prioritet"
 
 msgid "Proxmox"
 msgstr ""
@@ -187,18 +160,6 @@ msgstr ""
 
 msgid "Removing non-Proxmox kernels..."
 msgstr ""
-
-msgid "Repo"
-msgstr "Arkiv"
-
-msgid "Repo #1"
-msgstr "Arkiv #1"
-
-msgid "Repo #2"
-msgstr "Arkiv #2"
-
-msgid "Repo #3"
-msgstr "Arkiv #3"
 
 msgid "Repos"
 msgstr "Arkiver"
@@ -251,6 +212,9 @@ msgstr "Indstilling af forkert standard boot kerne kan gøre systemet utilgænge
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
+
+msgid "Testing repo"
+msgstr ""
 
 msgid "This will enable the Proxmox 5.x repo."
 msgstr ""

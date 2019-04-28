@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-01 16:37-0500\n"
-"PO-Revision-Date: 2018-11-01 21:37+0000\n"
+"POT-Creation-Date: 2019-01-02 13:43-0600\n"
+"PO-Revision-Date: 2019-01-02 19:43+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
@@ -17,9 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ko_KR\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-msgid "Add repo"
-msgstr ""
 
 msgid "Backports"
 msgstr ""
@@ -29,9 +26,6 @@ msgstr "Apt 파일 및 목록 정리 중..."
 
 msgid "Clonezilla"
 msgstr ""
-
-msgid "Comment"
-msgstr "설명"
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr ""
@@ -60,22 +54,19 @@ msgid ""
 " from ISO."
 msgstr ""
 
-msgid "Edit repo"
-msgstr ""
-
-msgid "Enable"
-msgstr "활성화"
-
 msgid "Enable Backports"
-msgstr ""
-
-msgid "Enabled"
 msgstr ""
 
 msgid "Enabling backports repo ..."
 msgstr ""
 
+msgid "Extras repo"
+msgstr ""
+
 msgid "GParted Live"
+msgstr ""
+
+msgid "General settings"
 msgstr ""
 
 msgid "Hold Current Kernel"
@@ -134,28 +125,10 @@ msgstr "커널"
 msgid "Kernels"
 msgstr "커널"
 
-msgid "Key"
-msgstr "Key"
-
-msgid "Name"
-msgstr "이름"
-
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr ""
 
 msgid "OMV-Extras"
-msgstr ""
-
-msgid "Package"
-msgstr ""
-
-msgid "Permanent"
-msgstr ""
-
-msgid "Pin"
-msgstr ""
-
-msgid "Priority"
 msgstr ""
 
 msgid "Proxmox"
@@ -186,18 +159,6 @@ msgid "Remove non-Proxmox kernels and headers"
 msgstr ""
 
 msgid "Removing non-Proxmox kernels..."
-msgstr ""
-
-msgid "Repo"
-msgstr "저장소"
-
-msgid "Repo #1"
-msgstr ""
-
-msgid "Repo #2"
-msgstr ""
-
-msgid "Repo #3"
 msgstr ""
 
 msgid "Repos"
@@ -250,6 +211,9 @@ msgid ""
 msgstr "잘못된 기본 시작 커널 설정은, 시스템에 접근할 수 없게 할 수 있습니다. 이런 경우, 시작 선택표에서 다른 커널을 선택할 수 있습니다."
 
 msgid "SystemRescueCD"
+msgstr ""
+
+msgid "Testing repo"
 msgstr ""
 
 msgid "This will enable the Proxmox 5.x repo."

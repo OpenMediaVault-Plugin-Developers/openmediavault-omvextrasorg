@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-01 16:37-0500\n"
-"PO-Revision-Date: 2018-11-01 21:37+0000\n"
+"POT-Creation-Date: 2019-01-02 13:43-0600\n"
+"PO-Revision-Date: 2019-01-02 19:43+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -20,9 +20,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ru\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
-
-msgid "Add repo"
-msgstr "Добавить репозиторий"
 
 msgid "Backports"
 msgstr ""
@@ -32,9 +29,6 @@ msgstr "Очистка Apt файлов и списков ..."
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
-
-msgid "Comment"
-msgstr "Комментарий"
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "По умолчанию имя пользователя: <b>user</b> и пароль: <b>live</b>"
@@ -63,23 +57,20 @@ msgid ""
 " from ISO."
 msgstr ""
 
-msgid "Edit repo"
-msgstr "Редактировать репозиторий"
-
-msgid "Enable"
-msgstr "Включить"
-
 msgid "Enable Backports"
 msgstr ""
-
-msgid "Enabled"
-msgstr "Включенно"
 
 msgid "Enabling backports repo ..."
 msgstr ""
 
+msgid "Extras repo"
+msgstr ""
+
 msgid "GParted Live"
 msgstr "GParted Live"
+
+msgid "General settings"
+msgstr ""
 
 msgid "Hold Current Kernel"
 msgstr ""
@@ -137,29 +128,11 @@ msgstr "Ядро"
 msgid "Kernels"
 msgstr "Ядра"
 
-msgid "Key"
-msgstr "Ключ"
-
-msgid "Name"
-msgstr "Имя"
-
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr "Не рекомендуется для серверов без головы. По умолчанию SSH не включен."
 
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
-
-msgid "Package"
-msgstr "Пакет"
-
-msgid "Permanent"
-msgstr "Постоянный"
-
-msgid "Pin"
-msgstr "Пин"
-
-msgid "Priority"
-msgstr "Приоритет"
 
 msgid "Proxmox"
 msgstr ""
@@ -190,18 +163,6 @@ msgstr ""
 
 msgid "Removing non-Proxmox kernels..."
 msgstr ""
-
-msgid "Repo"
-msgstr "Репозиторий"
-
-msgid "Repo #1"
-msgstr "Репозиторий #1"
-
-msgid "Repo #2"
-msgstr "Репозиторий #2"
-
-msgid "Repo #3"
-msgstr "Репозиторий #3"
 
 msgid "Repos"
 msgstr "Репозитории"
@@ -254,6 +215,9 @@ msgstr "Выбор неправильного ядра загрузки по у�
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
+
+msgid "Testing repo"
+msgstr ""
 
 msgid "This will enable the Proxmox 5.x repo."
 msgstr ""

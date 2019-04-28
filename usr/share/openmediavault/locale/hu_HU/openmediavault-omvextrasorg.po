@@ -3,25 +3,22 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# Gyuris Gellért <bubu@ujevangelizacio.hu>, 2018
+# Gyuris Gellért <bubu@ujevangelizacio.hu>, 2018-2019
 # Gyuris Gellért <bubu@ujevangelizacio.hu>, 2017
 # Grawens <szabolcs.szanyi@gmail.com>, 2014-2016,2018
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-01 16:37-0500\n"
-"PO-Revision-Date: 2018-11-01 21:37+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"POT-Creation-Date: 2019-01-02 13:43-0600\n"
+"PO-Revision-Date: 2019-01-27 21:20+0000\n"
+"Last-Translator: Gyuris Gellért <bubu@ujevangelizacio.hu>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: hu_HU\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-msgid "Add repo"
-msgstr "Tároló hozzáadása"
 
 msgid "Backports"
 msgstr "Visszaportolások"
@@ -31,9 +28,6 @@ msgstr "Apt fájlok és listák ürítése…"
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
-
-msgid "Comment"
-msgstr "Megjegyzés"
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Alapértelmezett felhasználónév: <b>felhasználó</b> és jelszó: <b>élő</b>"
@@ -62,23 +56,20 @@ msgid ""
 " from ISO."
 msgstr "SystemRescueCD ISO letöltése és a GRUB rendszerbetöltő konfigurálása, hogy lehessen rendszert indítani az ISO-ról."
 
-msgid "Edit repo"
-msgstr "Tároló módosítás"
-
-msgid "Enable"
-msgstr "Engedélyezés"
-
 msgid "Enable Backports"
 msgstr "Visszaportolások engedélyezése"
-
-msgid "Enabled"
-msgstr "Engedélyezve"
 
 msgid "Enabling backports repo ..."
 msgstr "Visszaportolt tároló engedélyezése…"
 
+msgid "Extras repo"
+msgstr "Extrák tároló"
+
 msgid "GParted Live"
 msgstr "GParted Live"
+
+msgid "General settings"
+msgstr "Általános beállítások"
 
 msgid "Hold Current Kernel"
 msgstr "Jelenlegi kernel tartása"
@@ -136,29 +127,11 @@ msgstr "Kernel"
 msgid "Kernels"
 msgstr "Kernelek"
 
-msgid "Key"
-msgstr "Kulcs"
-
-msgid "Name"
-msgstr "Név"
-
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr "Nem tanácsolt periféria nélküli kiszolgálókra. Az SSH nincs engedélyezve alapértelmezetten."
 
 msgid "OMV-Extras"
 msgstr "OMV-Extrák"
-
-msgid "Package"
-msgstr "Csomag"
-
-msgid "Permanent"
-msgstr "Állandó"
-
-msgid "Pin"
-msgstr "Pin"
-
-msgid "Priority"
-msgstr "Prioritás"
 
 msgid "Proxmox"
 msgstr "Proxmox"
@@ -190,35 +163,23 @@ msgstr "Nem Proxmox kernelek és fejlécek eltávolítása"
 msgid "Removing non-Proxmox kernels..."
 msgstr "Nem Proxmox kernelek eltávolítása…"
 
-msgid "Repo"
-msgstr "Tároló"
-
-msgid "Repo #1"
-msgstr "Tároló #1"
-
-msgid "Repo #2"
-msgstr "Tároló #2"
-
-msgid "Repo #3"
-msgstr "Tároló #3"
-
 msgid "Repos"
 msgstr "Tárolók"
 
 msgid "Running apt-get dist-upgrade ..."
-msgstr ""
+msgstr "apt-get dist-upgrade futtatása ..."
 
 msgid "Running apt-get update ..."
-msgstr ""
+msgstr "apt-get update futtatása ..."
 
 msgid "Running apt-get upgrade ..."
-msgstr ""
+msgstr "apt-get upgrade futtatása ..."
 
 msgid "Running omv-aptclean ..."
-msgstr ""
+msgstr "omv-aptclean futtatása ..."
 
 msgid "Running omv-update ..."
-msgstr ""
+msgstr "omv-update futtatása ..."
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
@@ -254,6 +215,9 @@ msgstr "A rosszul alapértelmezettként beállított kernel miatt a rendszer el�
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
 
+msgid "Testing repo"
+msgstr "Teszt tároló"
+
 msgid "This will enable the Proxmox 5.x repo."
 msgstr "A Proxmox 5.x tároló engedélyezése."
 
@@ -276,7 +240,7 @@ msgid "Unholding current kernel ..."
 msgstr "Jelenlegi kernel elengedése…"
 
 msgid "Updates"
-msgstr ""
+msgstr "Frissítések"
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
@@ -288,16 +252,16 @@ msgid ""
 msgstr "Távoli belépés esetén a Clonezilla így indítható: <b>sudo clonezilla</b>"
 
 msgid "apt clean"
-msgstr ""
+msgstr "apt clean"
 
 msgid "dist-upgrade"
-msgstr ""
+msgstr "dist-upgrade"
 
 msgid "omv-update"
-msgstr ""
+msgstr "omv-update"
 
 msgid "update"
-msgstr ""
+msgstr "update"
 
 msgid "upgrade"
-msgstr ""
+msgstr "upgrade"

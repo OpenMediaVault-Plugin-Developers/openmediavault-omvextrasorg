@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-01 16:37-0500\n"
-"PO-Revision-Date: 2018-11-01 21:37+0000\n"
+"POT-Creation-Date: 2019-01-02 13:43-0600\n"
+"PO-Revision-Date: 2019-01-02 19:43+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -22,9 +22,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-msgid "Add repo"
-msgstr "Paketquelle hinzufügen"
 
 msgid "Backports"
 msgstr ""
@@ -34,9 +31,6 @@ msgstr "Apt-Dateien und -Listen werden bereinigt..."
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
-
-msgid "Comment"
-msgstr "Kommentar"
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Standardbenutzername: <b>user</b> und Passwort: <b>live</b>"
@@ -65,23 +59,20 @@ msgid ""
 " from ISO."
 msgstr ""
 
-msgid "Edit repo"
-msgstr "Paketquelle bearbeiten"
-
-msgid "Enable"
-msgstr "Aktivieren"
-
 msgid "Enable Backports"
 msgstr ""
-
-msgid "Enabled"
-msgstr "Aktiviert"
 
 msgid "Enabling backports repo ..."
 msgstr ""
 
+msgid "Extras repo"
+msgstr ""
+
 msgid "GParted Live"
 msgstr "GParted Live"
+
+msgid "General settings"
+msgstr ""
 
 msgid "Hold Current Kernel"
 msgstr ""
@@ -139,29 +130,11 @@ msgstr "Kernel"
 msgid "Kernels"
 msgstr "Kernel"
 
-msgid "Key"
-msgstr "Schlüssel"
-
-msgid "Name"
-msgstr "Name"
-
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr ""
 
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
-
-msgid "Package"
-msgstr "Paket"
-
-msgid "Permanent"
-msgstr "Dauerhaft"
-
-msgid "Pin"
-msgstr "Pin"
-
-msgid "Priority"
-msgstr "Priorität"
 
 msgid "Proxmox"
 msgstr ""
@@ -192,18 +165,6 @@ msgstr ""
 
 msgid "Removing non-Proxmox kernels..."
 msgstr ""
-
-msgid "Repo"
-msgstr "Paketquelle"
-
-msgid "Repo #1"
-msgstr "Paketquelle #1"
-
-msgid "Repo #2"
-msgstr "Paketquelle #2"
-
-msgid "Repo #3"
-msgstr "Paketquelle #3"
 
 msgid "Repos"
 msgstr "Paketquellen"
@@ -256,6 +217,9 @@ msgstr "Durch einen falsch festgelegten Standard-Boot-Kernel kann das System unz
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
+
+msgid "Testing repo"
+msgstr ""
 
 msgid "This will enable the Proxmox 5.x repo."
 msgstr ""
