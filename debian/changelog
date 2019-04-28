@@ -1,9 +1,9 @@
-openmediavault-omvextrasorg (5.0.1) UNRELEASED; urgency=medium
+openmediavault-omvextrasorg (5.0.1) stable; urgency=low
 
   * Improve uninstall and upgrades
   * Update locales
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 02 Jan 2019 13:45:07 -0600
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 28 Apr 2019 09:50:47 -0500
 
 openmediavault-omvextrasorg (5.0) stable; urgency=low
 
