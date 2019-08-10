@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-{% set config = salt['omv_conf.get']('conf.system.apt.distribution') %}
+{% set config = salt['omv_conf.get']('conf.system.omvextras') %}
 {% set use_kernel_backports = salt['pillar.get']('default:OMV_APT_USE_KERNEL_BACKPORTS', True) -%}
 
 configure_apt_sources_list_omvextras:

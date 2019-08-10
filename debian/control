@@ -9,8 +9,7 @@ Homepage: http://omv-extras.org/
 
 Package: openmediavault-omvextrasorg
 Architecture: all
-Depends: apt-transport-https,
-         dirmngr,
+Depends: dirmngr,
          gnupg,
          openmediavault (>= 5.0),
          ${misc:Depends}

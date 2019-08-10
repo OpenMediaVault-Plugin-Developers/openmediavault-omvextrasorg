@@ -42,6 +42,7 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $this->registerMethod('doCommand');
         $this->registerMethod('doHold');
         $this->registerMethod('doBackports');
+        $this->registerMethod('doDocker');
         $this->registerMethod('doProxmox');
     }
 
@@ -215,6 +216,22 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         // Execute command
         $cmd = new \OMV\System\Process('omv-changebackports', $params['command']);
         $cmd->execute($output);
+    }
+
+    public function doDocker($params, $context)
+    {
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
+        // Create the background process.
+        return $this->execBgProc(function($bgStatusFilename, $bgOutputFilename)
+            use ($params) {
+                $cmd = new \OMV\System\Process("/usr/sbin/omv-installdocker");
+                $cmdLine = $cmd->getCommandLine();
+                if (0 !== $this->exec($cmdLine, $output, $bgOutputFilename))
+                    throw new \OMV\ExecException($cmdLine, $output);
+                return $output;
+            }
+        );
     }
 
     public function doProxmox($params, $context)

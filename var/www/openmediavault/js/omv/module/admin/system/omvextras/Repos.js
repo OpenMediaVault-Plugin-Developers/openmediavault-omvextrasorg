@@ -111,6 +111,7 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
     },
 
     getFormItems: function () {
+        var me = this;
         return [{
             xtype: "fieldset",
             title: _("General settings"),
@@ -127,6 +128,38 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
                 name: "extras",
                 fieldLabel: _("Extras repo"),
                 checked: false
+            }]
+        },{
+
+            xtype: "fieldset",
+            title: _("Docker"),
+            fieldDefaults: {
+                labelSeparator: ""
+            },
+            items: [{
+                xtype: 'textfield',
+                name: 'dockerStorage',
+                fieldLabel: _('Docker Storage'),
+                allowBlank: true,
+                value: '/var/lib/docker',
+                plugins: [{
+                    ptype: 'fieldinfo',
+                    text: _('Path to Docker images and containers storage. Leave blank to use custom /etc/docker/daemon.json.')
+                }]
+            },{
+                xtype: "button",
+                name: "installDocker",
+                text: _("Install Docker and Portainer"),
+                scope: this,
+                handler: Ext.Function.bind(me.onDockerButton, me, [ me ]),
+                margin: "0 0 0 0"
+            },{
+                border: false,
+                html: "<ul>" +
+                        "<li>" + _("This will install the docker-ce package.") + "</li>" +
+                        "<li>" + _("This will download and place docker-compose in /usr/local/bin/.") + "</li>" +
+                        "<li>" + _("This will run portainer on port 9000 for the web interface and 8000 for the agent.") + "</li>" +
+                      "</ul>"
             }]
         }];
     },
@@ -207,13 +240,30 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
                 OMV.MessageBox.hide();
             }
         });
+    },
+
+    onDockerButton: function() {
+        var me = this;
+        OMV.MessageBox.wait(null, msg);
+        OMV.Rpc.request({
+            scope: me,
+            relayErrors: false,
+            rpcData: {
+                service: "OmvExtras",
+                method: "doDocker"
+            },
+            success: function(id, success, response) {
+                me.doReload();
+                OMV.MessageBox.hide();
+            }
+        });
     }
 });
 
 OMV.WorkspaceManager.registerPanel({
     id: "repos",
     path: "/system/omvextras",
-    text: _("Repos"),
+    text: _("Settings"),
     position: 10,
     className: "OMV.module.admin.system.omvextras.Repos"
 });

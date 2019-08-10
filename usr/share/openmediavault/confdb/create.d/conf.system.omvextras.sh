@@ -27,6 +27,7 @@ if ! omv_config_exists "/config/system/omvextras"; then
     omv_config_add_node "/config/system" "omvextras"
     omv_config_add_key "/config/system/omvextras" "testing" "0"
     omv_config_add_key "/config/system/omvextras" "extras" "0"
+    omv_config_add_key "/config/system/omvextras" "dockerStorage" "/var/lib/docker"
 fi
 
 # disable grub submenus on systems that use grub

@@ -1,0 +1,69 @@
+#!/bin/bash
+
+. /etc/default/openmediavault
+. /usr/share/openmediavault/scripts/helper-functions
+
+declare -i download=0
+
+daemonJson="/etc/docker/daemon.json"
+dcVersion="1.24.1"
+dockerCompose="/usr/local/bin/docker-compose"
+portainerVolume="portainer_data"
+xpath="/config/system/omvextras"
+
+dockerStorage=$(omv_config_get "${xpath}/dockerStorage")
+
+echo "Docker storage :: ${dockerStorage}"
+
+# update repo lists
+apt-get update
+
+# install docker-ce package
+DEBIAN_FRONTEND=noninteractive apt-get --yes install docker-ce
+
+# if path specified, write config file
+if [ -n "${dockerStorage}" ]; then
+  cat <<EOF > ${daemonJson}
+{
+  "data-root": "${dockerStorage}"
+}
+EOF
+fi
+
+# enable and restart docker service
+systemctl enable docker.service
+systemctl restart docker.service
+
+# download docker-compose and place in /usr/local/bin/ if current version is older
+if [ -f "${dockerCompose}" ]; then
+  curVers="$(${dockerCompose} --version | cut -d',' -f1 | awk '{ print $3 }')"
+  if [ ! "${curVers}" = "${dcVersion}" ]; then
+    download=1
+  fi
+else
+  download=1
+fi
+if [ ${download} -eq 1 ]; then
+  curl -L "https://github.com/docker/compose/releases/download/${dcVersion}/docker-compose-$(uname -s)-$(uname -m)" -o ${dockerCompose}
+  chmod +x /usr/local/bin/docker-compose
+fi
+
+# stop existing Portainer container
+if docker container ls | grep -q Portainer; then
+  docker container stop Portainer
+fi
+
+# remove existing Portainer container
+if docker container ls --all | grep -q Portainer; then
+  docker container rm Portainer
+fi
+
+# create portainer data volume
+if ! docker volume ls | grep -q ${portainerVolume}; then
+  docker volume create ${portainerVolume}
+fi
+
+# pull and start portainer
+docker run -d --name Portainer -p 9000:9000 -p 8000:8000 --restart=unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v ${portainerVolume}:/data portainer/portainer
+
+exit 0

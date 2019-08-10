@@ -11,6 +11,10 @@
 			"extras": {
 				"type": "boolean",
 				"required": false
+			},
+			"dockerStorage": {
+				"type": "string",
+				"required": false
 			}
 		}
 	}
