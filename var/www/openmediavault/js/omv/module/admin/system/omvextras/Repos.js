@@ -209,7 +209,7 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
             listeners: {
                 scope: me,
                 finish: function(wnd, response) {
-                    wnd.appendValue(_("Done..."));
+                    wnd.appendValue(_("Done."));
                     wnd.setButtonDisabled("close", false);
                 },
                 exception: function(wnd, error) {

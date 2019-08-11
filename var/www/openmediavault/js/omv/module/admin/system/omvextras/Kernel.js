@@ -265,7 +265,7 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                 title = _("Reboot to SystemRescueCD ...");
                 break;
             default:
-                title = _("Cleaning Apt Files and Lists...");
+                title = _("Cleaning Apt Files and Lists ...");
                 command = "aptclean";
         }
         Ext.create("OMV.window.Execute", {
@@ -333,9 +333,9 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
     },
 
     onProxmoxButton: function(command) {
-        var title = _("Installing Proxmox kernel...");
+        var title = _("Installing Proxmox kernel ...");
         if (command == "remove") {
-            title = _("Removing non-Proxmox kernels...");
+            title = _("Removing non-Proxmox kernels ...");
         }
         var me = this;
         var wnd = Ext.create("OMV.window.Execute", {
@@ -350,7 +350,7 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
             listeners: {
                 scope: me,
                 finish: function(wnd, response) {
-                    wnd.appendValue(_("Done..."));
+                    wnd.appendValue(_("Done."));
                     wnd.setButtonDisabled("close", false);
                 },
                 exception: function(wnd, error) {
