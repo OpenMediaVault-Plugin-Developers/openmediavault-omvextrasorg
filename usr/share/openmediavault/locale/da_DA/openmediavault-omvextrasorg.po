@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-02 13:43-0600\n"
-"PO-Revision-Date: 2019-01-02 19:43+0000\n"
+"POT-Creation-Date: 2019-08-10 20:58-0500\n"
+"PO-Revision-Date: 2019-08-11 01:58+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Danish (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -34,6 +34,12 @@ msgid "Disable Backports"
 msgstr ""
 
 msgid "Disabling backports repo ..."
+msgstr ""
+
+msgid "Docker"
+msgstr ""
+
+msgid "Docker Storage"
 msgstr ""
 
 msgid "Done..."
@@ -98,6 +104,9 @@ msgstr "Installer Clonezilla"
 msgid "Install Clonezilla ISO ..."
 msgstr "Installer Clonezilla ISO ..."
 
+msgid "Install Docker and Portainer"
+msgstr ""
+
 msgid "Install GParted Live"
 msgstr "Installer GParted Live"
 
@@ -116,6 +125,9 @@ msgstr "Installer SystemRescueCD ISO ..."
 msgid "Installed Kernels"
 msgstr "Installeret Kerner"
 
+msgid "Installing Docker and Portainer ..."
+msgstr ""
+
 msgid "Installing Proxmox kernel..."
 msgstr ""
 
@@ -130,6 +142,14 @@ msgstr "Ikke anbefalet til skærmløse servere. SSH er ikke aktiveret som standa
 
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
+
+msgid "Open Portainer web interface"
+msgstr ""
+
+msgid ""
+"Path to Docker images and containers storage. Leave blank to use custom "
+"/etc/docker/daemon.json."
+msgstr ""
 
 msgid "Proxmox"
 msgstr ""
@@ -160,9 +180,6 @@ msgstr ""
 
 msgid "Removing non-Proxmox kernels..."
 msgstr ""
-
-msgid "Repos"
-msgstr "Arkiver"
 
 msgid "Running apt-get dist-upgrade ..."
 msgstr ""
@@ -210,16 +227,25 @@ msgid ""
 "kernel."
 msgstr "Indstilling af forkert standard boot kerne kan gøre systemet utilgængeligt. Boot menuen vil stadig være tilgængelig til at vælge en anden kerne."
 
+msgid "Settings"
+msgstr ""
+
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
 
 msgid "Testing repo"
 msgstr ""
 
+msgid "This will download and place docker-compose in /usr/local/bin/."
+msgstr ""
+
 msgid "This will enable the Proxmox 5.x repo."
 msgstr ""
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
+msgstr ""
+
+msgid "This will install the docker-ce package."
 msgstr ""
 
 msgid "This will install the latest 4.15 kernel."
@@ -229,6 +255,11 @@ msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr ""
 
 msgid "This will remove all kernel packages with the prefix linux-image-."
+msgstr ""
+
+msgid ""
+"This will run portainer on port 9000 for the web interface and 8000 for the "
+"agent."
 msgstr ""
 
 msgid "Unhold Current Kernel"

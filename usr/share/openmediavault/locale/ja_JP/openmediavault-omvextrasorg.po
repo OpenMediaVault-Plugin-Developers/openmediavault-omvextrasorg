@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-02 13:43-0600\n"
-"PO-Revision-Date: 2019-01-07 04:21+0000\n"
-"Last-Translator: Toshihiro Kan <kansuke4649@gmail.com>\n"
+"POT-Creation-Date: 2019-08-10 20:58-0500\n"
+"PO-Revision-Date: 2019-08-11 01:58+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,6 +35,12 @@ msgstr "バックポートを無効化"
 
 msgid "Disabling backports repo ..."
 msgstr "バックポート用リポジトリを無効にしています ..."
+
+msgid "Docker"
+msgstr ""
+
+msgid "Docker Storage"
+msgstr ""
 
 msgid "Done..."
 msgstr "完了"
@@ -98,6 +104,9 @@ msgstr "Clonezillaのインストール"
 msgid "Install Clonezilla ISO ..."
 msgstr "Clonezilla ISOをインストール中 ..."
 
+msgid "Install Docker and Portainer"
+msgstr ""
+
 msgid "Install GParted Live"
 msgstr "GParted Liveのインストール"
 
@@ -116,6 +125,9 @@ msgstr "SystemRescueCD ISOをインストール中 ..."
 msgid "Installed Kernels"
 msgstr "インストールされているカーネル"
 
+msgid "Installing Docker and Portainer ..."
+msgstr ""
+
 msgid "Installing Proxmox kernel..."
 msgstr "Proxmox カーネルをインストールしています..."
 
@@ -130,6 +142,14 @@ msgstr "ヘッドレスサーバーにはお勧めしません。 SSHはデフ�
 
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
+
+msgid "Open Portainer web interface"
+msgstr ""
+
+msgid ""
+"Path to Docker images and containers storage. Leave blank to use custom "
+"/etc/docker/daemon.json."
+msgstr ""
 
 msgid "Proxmox"
 msgstr "Proxmox"
@@ -160,9 +180,6 @@ msgstr "non-Proxmoxカーネルとヘッダーを削除する"
 
 msgid "Removing non-Proxmox kernels..."
 msgstr "non-Proxmox カーネルを削除しています ..."
-
-msgid "Repos"
-msgstr "リポジトリ"
 
 msgid "Running apt-get dist-upgrade ..."
 msgstr "apt-get dist-upgrade を実行しています..."
@@ -210,17 +227,26 @@ msgid ""
 "kernel."
 msgstr "間違ったデフォルトの起動カーネルを設定すると、システムにアクセスできなくなることがあります。　別のカーネルを選択するためにブートメニューが利用可能となります。"
 
+msgid "Settings"
+msgstr ""
+
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
 
 msgid "Testing repo"
 msgstr "テストリポジトリ"
 
+msgid "This will download and place docker-compose in /usr/local/bin/."
+msgstr ""
+
 msgid "This will enable the Proxmox 5.x repo."
 msgstr "Proxmox 5.x のリポジトリが有効になります。"
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "linux-image- * カーネルがまだアクティブであれば削除することはできません。"
+
+msgid "This will install the docker-ce package."
+msgstr ""
 
 msgid "This will install the latest 4.15 kernel."
 msgstr "最新の4.15カーネルがインストールされます。"
@@ -230,6 +256,11 @@ msgstr "linux-headers-で始まる、すべてのヘッダパッケージが削�
 
 msgid "This will remove all kernel packages with the prefix linux-image-."
 msgstr "linux-image-で始まる、すべてのカーネルパッケージが削除されます。"
+
+msgid ""
+"This will run portainer on port 9000 for the web interface and 8000 for the "
+"agent."
+msgstr ""
 
 msgid "Unhold Current Kernel"
 msgstr "現在のカーネルの保持を解除する"

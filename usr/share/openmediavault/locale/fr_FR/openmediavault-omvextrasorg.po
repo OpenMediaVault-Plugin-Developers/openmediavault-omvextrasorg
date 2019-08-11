@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-02 13:43-0600\n"
-"PO-Revision-Date: 2019-01-02 19:43+0000\n"
+"POT-Creation-Date: 2019-08-10 20:58-0500\n"
+"PO-Revision-Date: 2019-08-11 01:58+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -36,6 +36,12 @@ msgstr "Désactiver les rétroportages"
 
 msgid "Disabling backports repo ..."
 msgstr "Désactivation du dépôt des rétroportages ..."
+
+msgid "Docker"
+msgstr ""
+
+msgid "Docker Storage"
+msgstr ""
 
 msgid "Done..."
 msgstr "Terminé..."
@@ -99,6 +105,9 @@ msgstr "Installer Clonezilla"
 msgid "Install Clonezilla ISO ..."
 msgstr "Installation de l'ISO de Clonezilla ..."
 
+msgid "Install Docker and Portainer"
+msgstr ""
+
 msgid "Install GParted Live"
 msgstr "Installer GParted Live"
 
@@ -117,6 +126,9 @@ msgstr "Installation de l'ISO de SystemRescueCd ..."
 msgid "Installed Kernels"
 msgstr "Noyaux installés"
 
+msgid "Installing Docker and Portainer ..."
+msgstr ""
+
 msgid "Installing Proxmox kernel..."
 msgstr "Installation du noyau Proxmox ..."
 
@@ -131,6 +143,14 @@ msgstr "Non recommandé pour les serveurs sans affichage. SSH n'est pas activé 
 
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
+
+msgid "Open Portainer web interface"
+msgstr ""
+
+msgid ""
+"Path to Docker images and containers storage. Leave blank to use custom "
+"/etc/docker/daemon.json."
+msgstr ""
 
 msgid "Proxmox"
 msgstr "Proxmox"
@@ -161,9 +181,6 @@ msgstr "Supprimer les noyaux et les en-têtes non-Proxmox"
 
 msgid "Removing non-Proxmox kernels..."
 msgstr "Suppression des noyaux non-Proxmox ..."
-
-msgid "Repos"
-msgstr "Dépôts"
 
 msgid "Running apt-get dist-upgrade ..."
 msgstr ""
@@ -211,10 +228,16 @@ msgid ""
 "kernel."
 msgstr "Définir le mauvais noyau de démarrage par défaut peut rendre le système inaccessible. Le menu de démarrage sera toujours disponible pour sélectionner un noyau différent."
 
+msgid "Settings"
+msgstr ""
+
 msgid "SystemRescueCD"
 msgstr "SystemRescueCd"
 
 msgid "Testing repo"
+msgstr ""
+
+msgid "This will download and place docker-compose in /usr/local/bin/."
 msgstr ""
 
 msgid "This will enable the Proxmox 5.x repo."
@@ -222,6 +245,9 @@ msgstr "Cela activera le dépôt de Proxmox 5.x."
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "Ceci échouera à supprimer un noyau linux-image- * s'il est toujours actif."
+
+msgid "This will install the docker-ce package."
+msgstr ""
 
 msgid "This will install the latest 4.15 kernel."
 msgstr "Cela va installer le dernier noyau 4.15."
@@ -231,6 +257,11 @@ msgstr "Cela supprimera tous les paquets d'en-têtes avec le préfixe linux-head
 
 msgid "This will remove all kernel packages with the prefix linux-image-."
 msgstr "Cela supprimera tous les paquets du noyau avec le préfixe linux-image-."
+
+msgid ""
+"This will run portainer on port 9000 for the web interface and 8000 for the "
+"agent."
+msgstr ""
 
 msgid "Unhold Current Kernel"
 msgstr "Relâcher le noyau actuel"

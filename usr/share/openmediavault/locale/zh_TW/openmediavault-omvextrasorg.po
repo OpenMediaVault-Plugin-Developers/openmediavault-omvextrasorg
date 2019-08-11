@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-02 13:43-0600\n"
-"PO-Revision-Date: 2019-01-11 15:36+0000\n"
-"Last-Translator: kochin <kochinc@outlook.com>\n"
+"POT-Creation-Date: 2019-08-10 20:58-0500\n"
+"PO-Revision-Date: 2019-08-11 01:58+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,6 +35,12 @@ msgstr "停用向後移植"
 
 msgid "Disabling backports repo ..."
 msgstr "停用向後移植套件庫中 ..."
+
+msgid "Docker"
+msgstr ""
+
+msgid "Docker Storage"
+msgstr ""
 
 msgid "Done..."
 msgstr "完成 ..."
@@ -98,6 +104,9 @@ msgstr "安裝 Clonezilla"
 msgid "Install Clonezilla ISO ..."
 msgstr "安裝 Clonezilla ISO ..."
 
+msgid "Install Docker and Portainer"
+msgstr ""
+
 msgid "Install GParted Live"
 msgstr "安裝 GParted Live"
 
@@ -116,6 +125,9 @@ msgstr "安裝 SystemRescueCD ISO ..."
 msgid "Installed Kernels"
 msgstr "已安裝的系統核心"
 
+msgid "Installing Docker and Portainer ..."
+msgstr ""
+
 msgid "Installing Proxmox kernel..."
 msgstr "安裝 Proxmox 核心中 ..."
 
@@ -130,6 +142,14 @@ msgstr "不建議在無頭伺服器上使用。SSH 並非預設為啟動。"
 
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
+
+msgid "Open Portainer web interface"
+msgstr ""
+
+msgid ""
+"Path to Docker images and containers storage. Leave blank to use custom "
+"/etc/docker/daemon.json."
+msgstr ""
 
 msgid "Proxmox"
 msgstr "Proxmox"
@@ -160,9 +180,6 @@ msgstr "移除 非Proxmox 系統核心與標頭檔案"
 
 msgid "Removing non-Proxmox kernels..."
 msgstr "移除 非Proxmox 系統核心中 ..."
-
-msgid "Repos"
-msgstr "套件庫"
 
 msgid "Running apt-get dist-upgrade ..."
 msgstr "執行 apt-get dist-upgrade 中 ..."
@@ -210,17 +227,26 @@ msgid ""
 "kernel."
 msgstr "設定錯誤的啟動系統核心可能造成無法進入系統。啟動選單仍將可用來選用不同的系統核心。"
 
+msgid "Settings"
+msgstr ""
+
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
 
 msgid "Testing repo"
 msgstr "測試套件庫"
 
+msgid "This will download and place docker-compose in /usr/local/bin/."
+msgstr ""
+
 msgid "This will enable the Proxmox 5.x repo."
 msgstr "這將啟用 Proxmox 5.x 套件庫。"
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "移除 linux-image-* kernel 可能會失敗，如果它仍在操作中。"
+
+msgid "This will install the docker-ce package."
+msgstr ""
 
 msgid "This will install the latest 4.15 kernel."
 msgstr "這將會安裝最新的 4.15 系統核心。"
@@ -230,6 +256,11 @@ msgstr "這將會移除所有前綴詞是 linux-headers- 的標題檔案套件�
 
 msgid "This will remove all kernel packages with the prefix linux-image-."
 msgstr "這將會移除所有前綴詞是 linux-image- 的系統核心套件。"
+
+msgid ""
+"This will run portainer on port 9000 for the web interface and 8000 for the "
+"agent."
+msgstr ""
 
 msgid "Unhold Current Kernel"
 msgstr "取消維持在目前系統核心"
