@@ -5,7 +5,7 @@ declare -i kernnum=0
 distro="$(lsb_release --codename --short)"
 grubconfig="/boot/grub/grub.cfg";
 grubdefault="/etc/default/grub";
-kernelversion="4.15"
+kernelversion="5.0"
 pverepo="/etc/apt/sources.list.d/pvekernel.list"
 repourl="http://download.proxmox.com/debian"
 
@@ -22,17 +22,10 @@ esac
 
 # add repo list file
 echo "deb ${repourl} ${distro} pve-no-subscription" > ${pverepo}
-
-# get repo key and add
-wget -O - ${repourl}/dists/${distro}/proxmox-ve-release-5.x.gpg | apt-key add -
-if [ $? -gt 0 ]; then
-  echo "Failed to add Proxmox gpg key.  Exiting..."
-  exit 2
-fi
 apt-get update
 
 # remove conflicting firmware packages
-for pkg in linux linux-nonfree ti-connectivity amd-graphics cavium siano; do
+for pkg in linux linux-nonfree ti-connectivity amd-graphics cavium siano netronome; do
   if dpkg -l firmware-${pkg} &>/dev/null; then
     dpkg --purge firmware-${pkg} 2>/dev/null
     if [ $? -gt 0 ]; then
@@ -43,7 +36,7 @@ for pkg in linux linux-nonfree ti-connectivity amd-graphics cavium siano; do
 done
 
 # install kernel and headers
-apt-get --yes --force-yes --fix-missing install pve-kernel-${kernelversion} pve-headers
+DEBIAN_FRONTEND=noninteractive apt-get --yes --fix-missing install pve-kernel-${kernelversion} pve-headers
 if [ $? -gt 0 ]; then
   echo "Failed to install Proxmox kernel.  Exiting..."
   exit 4

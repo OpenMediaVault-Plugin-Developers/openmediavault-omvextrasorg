@@ -30,6 +30,7 @@
 					"aptclean",
 					"clean",
 					"dist-upgrade",
+					"docker",
 					"installcz",
 					"installgp",
 					"installsys",

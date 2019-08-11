@@ -1,8 +1,8 @@
-openmediavault-omvextrasorg (5.0.2) UNRELEASED; urgency=medium
+openmediavault-omvextrasorg (5.0.2) stable; urgency=low
 
   * Add docker and portainer install option
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 10 Aug 2019 11:17:44 -0500
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 10 Aug 2019 20:57:46 -0500
 
 openmediavault-omvextrasorg (5.0.1) stable; urgency=low
 

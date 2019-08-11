@@ -151,7 +151,7 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
                 name: "installDocker",
                 text: _("Install Docker and Portainer"),
                 scope: this,
-                handler: Ext.Function.bind(me.onDockerButton, me, [ me ]),
+                handler: Ext.Function.bind(me.onCommandButton, me, [ "docker" ]),
                 margin: "0 0 0 0"
             },{
                 border: false,
@@ -160,6 +160,15 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
                         "<li>" + _("This will download and place docker-compose in /usr/local/bin/.") + "</li>" +
                         "<li>" + _("This will run portainer on port 9000 for the web interface and 8000 for the agent.") + "</li>" +
                       "</ul>"
+            },{
+                xtype: "button",
+                name: "show",
+                text: _("Open Portainer web interface"),
+                scope: this,
+                handler: function() {
+                    window.open('http://' + location.hostname + ':9000', '_blank');
+                },
+                margin: "0 0 0 0"
             }]
         }];
     },
@@ -182,6 +191,9 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
                 break;
             case "clean":
                 msg = _("Running omv-aptclean ...");
+                break;
+            case "docker":
+                msg = _("Installing Docker and Portainer ...");
                 break;
         }
         var wnd = Ext.create("OMV.window.Execute", {
@@ -234,23 +246,6 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
                 params: {
                     "command": command
                 }
-            },
-            success: function(id, success, response) {
-                me.doReload();
-                OMV.MessageBox.hide();
-            }
-        });
-    },
-
-    onDockerButton: function() {
-        var me = this;
-        OMV.MessageBox.wait(null, msg);
-        OMV.Rpc.request({
-            scope: me,
-            relayErrors: false,
-            rpcData: {
-                service: "OmvExtras",
-                method: "doDocker"
             },
             success: function(id, success, response) {
                 me.doReload();
