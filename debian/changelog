@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.0.3) stable; urgency=low
+
+  * salt fixes
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 22 Aug 2019 20:58:52 -0500
+
 openmediavault-omvextrasorg (5.0.2) stable; urgency=low
 
   * Add docker and portainer install option

@@ -50,6 +50,6 @@ configure_apt_pref_omvextras:
 
 {% endif %}
 
-refresh_apt_database:
+refresh_database_apt:
   module.run:
     - name: pkg.refresh_db
