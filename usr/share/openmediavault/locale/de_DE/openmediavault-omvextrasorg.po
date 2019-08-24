@@ -4,7 +4,7 @@
 # 
 # Translators:
 # David Hönel <davidh1990@gmx.de>, 2013-2015
-# Ettore Atalan <atalanttore@googlemail.com>, 2014-2016
+# Ettore Atalan <atalanttore@googlemail.com>, 2014-2016,2019
 # Raiko, 2016
 # René P. <phortexx@gmx.net>, 2014
 # WastlJ, 2014-2015
@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-10 20:58-0500\n"
-"PO-Revision-Date: 2019-08-11 01:58+0000\n"
+"POT-Creation-Date: 2019-08-24 10:23-0500\n"
+"PO-Revision-Date: 2019-08-24 15:23+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -24,10 +24,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Backports"
-msgstr ""
+msgstr "Rückportierungen"
 
-msgid "Cleaning Apt Files and Lists..."
-msgstr "Apt-Dateien und -Listen werden bereinigt..."
+msgid "Cleaning Apt Files and Lists ..."
+msgstr ""
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
@@ -36,19 +36,19 @@ msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Standardbenutzername: <b>user</b> und Passwort: <b>live</b>"
 
 msgid "Disable Backports"
-msgstr ""
+msgstr "Rückportierungen deaktivieren"
 
 msgid "Disabling backports repo ..."
 msgstr ""
 
 msgid "Docker"
-msgstr ""
+msgstr "Docker"
 
 msgid "Docker Storage"
 msgstr ""
 
-msgid "Done..."
-msgstr "Fertig..."
+msgid "Done."
+msgstr "Fertig."
 
 msgid ""
 "Downloads Clonezilla ISO and configures grub bootloader to allow booting "
@@ -66,7 +66,7 @@ msgid ""
 msgstr ""
 
 msgid "Enable Backports"
-msgstr ""
+msgstr "Rückportierungen aktivieren"
 
 msgid "Enabling backports repo ..."
 msgstr ""
@@ -78,13 +78,13 @@ msgid "GParted Live"
 msgstr "GParted Live"
 
 msgid "General settings"
-msgstr ""
+msgstr "Allgemeine Einstellungen"
 
 msgid "Hold Current Kernel"
-msgstr ""
+msgstr "Aktuellen Kernel beibehalten"
 
 msgid "Holding current kernel ..."
-msgstr ""
+msgstr "Aktueller Kernel wird beibehalten ..."
 
 msgid "IP Address will be set by DHCP."
 msgstr "IP-Adresse wird durch DHCP festgelegt."
@@ -103,13 +103,33 @@ msgstr "ISO belegt ungefähr 219 MB im Verzeichnis /boot auf dem BS-Laufwerk."
 msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
 msgstr "ISO belegt ungefähr 381 MB im Verzeichnis /boot auf dem BS-Laufwerk."
 
+msgid ""
+"If Cockpit is enabled, the cockpit web interface will run on port 9090."
+msgstr ""
+
+msgid ""
+"If Portainer is enabled, this will run portainer on port 9000 for the web "
+"interface and 8000 for the agent."
+msgstr ""
+
+msgid "If enabled, Portainer will be installed."
+msgstr ""
+
+msgid ""
+"If enabled, cockpit, cockpit-docker, cockpit-machines, and cockpit-"
+"packagekit will be installed."
+msgstr ""
+
 msgid "Install Clonezilla"
 msgstr "Clonezilla installieren"
 
 msgid "Install Clonezilla ISO ..."
 msgstr "Clonezilla ISO installieren ..."
 
-msgid "Install Docker and Portainer"
+msgid "Install Cockpit"
+msgstr ""
+
+msgid "Install Docker"
 msgstr ""
 
 msgid "Install GParted Live"
@@ -118,8 +138,11 @@ msgstr "GParted Live installieren"
 msgid "Install GParted Live ISO ..."
 msgstr "GParted Live ISO installieren ..."
 
-msgid "Install Proxmox kernel"
+msgid "Install Portainer"
 msgstr ""
+
+msgid "Install Proxmox kernel"
+msgstr "Proxmox-Kernel installieren"
 
 msgid "Install SystemRescueCD"
 msgstr "SystemRescueCD installieren"
@@ -131,9 +154,9 @@ msgid "Installed Kernels"
 msgstr "Installierte Kernel"
 
 msgid "Installing Docker and Portainer ..."
-msgstr ""
+msgstr "Docker und Portainer wird installiert ..."
 
-msgid "Installing Proxmox kernel..."
+msgid "Installing Proxmox kernel ..."
 msgstr ""
 
 msgid "Kernel"
@@ -148,8 +171,11 @@ msgstr ""
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
-msgid "Open Portainer web interface"
+msgid "Open Cockpit web interface"
 msgstr ""
+
+msgid "Open Portainer web interface"
+msgstr "Portainer-Weboberfläche öffnen"
 
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
@@ -157,7 +183,7 @@ msgid ""
 msgstr ""
 
 msgid "Proxmox"
-msgstr ""
+msgstr "Proxmox"
 
 msgid "Reboot to Clonezilla ..."
 msgstr "Clonezilla starten..."
@@ -183,7 +209,7 @@ msgstr ""
 msgid "Remove non-Proxmox kernels and headers"
 msgstr ""
 
-msgid "Removing non-Proxmox kernels..."
+msgid "Removing non-Proxmox kernels ..."
 msgstr ""
 
 msgid "Running apt-get dist-upgrade ..."
@@ -233,7 +259,7 @@ msgid ""
 msgstr "Durch einen falsch festgelegten Standard-Boot-Kernel kann das System unzugänglich werden. Das Bootmenü wird zur Auswahl eines anderen Kernels trotzdem verfügbar sein."
 
 msgid "Settings"
-msgstr ""
+msgstr "Einstellungen"
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
@@ -262,19 +288,14 @@ msgstr ""
 msgid "This will remove all kernel packages with the prefix linux-image-."
 msgstr ""
 
-msgid ""
-"This will run portainer on port 9000 for the web interface and 8000 for the "
-"agent."
-msgstr ""
-
 msgid "Unhold Current Kernel"
-msgstr ""
+msgstr "Aktuellen Kernel nicht beibehalten"
 
 msgid "Unholding current kernel ..."
-msgstr ""
+msgstr "Aktueller Kernel wird nicht beibehalten ..."
 
 msgid "Updates"
-msgstr ""
+msgstr "Aktualisierungen"
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "

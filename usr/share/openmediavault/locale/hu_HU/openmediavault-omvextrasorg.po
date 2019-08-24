@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-10 20:58-0500\n"
-"PO-Revision-Date: 2019-08-11 01:58+0000\n"
+"POT-Creation-Date: 2019-08-24 10:23-0500\n"
+"PO-Revision-Date: 2019-08-24 15:23+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -23,8 +23,8 @@ msgstr ""
 msgid "Backports"
 msgstr "Visszaportolások"
 
-msgid "Cleaning Apt Files and Lists..."
-msgstr "Apt fájlok és listák ürítése…"
+msgid "Cleaning Apt Files and Lists ..."
+msgstr ""
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
@@ -44,8 +44,8 @@ msgstr ""
 msgid "Docker Storage"
 msgstr ""
 
-msgid "Done..."
-msgstr "Kész…"
+msgid "Done."
+msgstr ""
 
 msgid ""
 "Downloads Clonezilla ISO and configures grub bootloader to allow booting "
@@ -100,13 +100,33 @@ msgstr "Az ISO fájl kb. 219 MB-ot foglal el az operációs rendszer /boot mapp�
 msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
 msgstr "Az ISO fájl kb. 381 Mb-ot foglal el az operációs rendszer /boot mappájában."
 
+msgid ""
+"If Cockpit is enabled, the cockpit web interface will run on port 9090."
+msgstr ""
+
+msgid ""
+"If Portainer is enabled, this will run portainer on port 9000 for the web "
+"interface and 8000 for the agent."
+msgstr ""
+
+msgid "If enabled, Portainer will be installed."
+msgstr ""
+
+msgid ""
+"If enabled, cockpit, cockpit-docker, cockpit-machines, and cockpit-"
+"packagekit will be installed."
+msgstr ""
+
 msgid "Install Clonezilla"
 msgstr "Clonezilla telepítése"
 
 msgid "Install Clonezilla ISO ..."
 msgstr "Clonezilla ISO telepítése…"
 
-msgid "Install Docker and Portainer"
+msgid "Install Cockpit"
+msgstr ""
+
+msgid "Install Docker"
 msgstr ""
 
 msgid "Install GParted Live"
@@ -114,6 +134,9 @@ msgstr "GParted Live telepítése"
 
 msgid "Install GParted Live ISO ..."
 msgstr "GParted Live ISO telepítése…"
+
+msgid "Install Portainer"
+msgstr ""
 
 msgid "Install Proxmox kernel"
 msgstr "Proxmox kernel telepítése"
@@ -130,8 +153,8 @@ msgstr "Telepített kernelek"
 msgid "Installing Docker and Portainer ..."
 msgstr ""
 
-msgid "Installing Proxmox kernel..."
-msgstr "Proxmox kernel telepítése…"
+msgid "Installing Proxmox kernel ..."
+msgstr ""
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -144,6 +167,9 @@ msgstr "Nem tanácsolt periféria nélküli kiszolgálókra. Az SSH nincs enged�
 
 msgid "OMV-Extras"
 msgstr "OMV-Extrák"
+
+msgid "Open Cockpit web interface"
+msgstr ""
 
 msgid "Open Portainer web interface"
 msgstr ""
@@ -180,8 +206,8 @@ msgstr "Újraindítás Proxmox kernellel a nem Proxmox kernelek eltávolítása 
 msgid "Remove non-Proxmox kernels and headers"
 msgstr "Nem Proxmox kernelek és fejlécek eltávolítása"
 
-msgid "Removing non-Proxmox kernels..."
-msgstr "Nem Proxmox kernelek eltávolítása…"
+msgid "Removing non-Proxmox kernels ..."
+msgstr ""
 
 msgid "Running apt-get dist-upgrade ..."
 msgstr "apt-get dist-upgrade futtatása ..."
@@ -258,11 +284,6 @@ msgstr "A linux-headers- előtagra illeszkedő összes fejléc csomag eltávolí
 
 msgid "This will remove all kernel packages with the prefix linux-image-."
 msgstr "A linux-image- előtagra illeszkedő összes kernel csomag eltávolítása."
-
-msgid ""
-"This will run portainer on port 9000 for the web interface and 8000 for the "
-"agent."
-msgstr ""
 
 msgid "Unhold Current Kernel"
 msgstr "Jelenlegi kernel elengedése"

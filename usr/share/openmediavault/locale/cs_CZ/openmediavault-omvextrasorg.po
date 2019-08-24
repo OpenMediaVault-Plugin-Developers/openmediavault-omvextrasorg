@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-10 20:58-0500\n"
-"PO-Revision-Date: 2019-08-11 01:58+0000\n"
+"POT-Creation-Date: 2019-08-24 10:23-0500\n"
+"PO-Revision-Date: 2019-08-24 15:23+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Backports"
 msgstr "Přenesené z novějšího do staršího vydání (backports)"
 
-msgid "Cleaning Apt Files and Lists..."
+msgid "Cleaning Apt Files and Lists ..."
 msgstr "Čistění souborů a seznamů Apt…"
 
 msgid "Clonezilla"
@@ -38,13 +38,13 @@ msgid "Disabling backports repo ..."
 msgstr "Vypíná se používání repozitáře backports…"
 
 msgid "Docker"
-msgstr ""
+msgstr "Docker"
 
 msgid "Docker Storage"
-msgstr ""
+msgstr "Docker úložiště"
 
-msgid "Done..."
-msgstr "Hotovo…"
+msgid "Done."
+msgstr "Hotovo."
 
 msgid ""
 "Downloads Clonezilla ISO and configures grub bootloader to allow booting "
@@ -99,13 +99,33 @@ msgstr "ISO soubor zabere přibližně 219 MB ve složce /boot na jednotce datov
 msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
 msgstr "ISO soubor zabere přibližně 381 MB ve složce /boot na jednotce datového úložiště s operačním systémem."
 
+msgid ""
+"If Cockpit is enabled, the cockpit web interface will run on port 9090."
+msgstr ""
+
+msgid ""
+"If Portainer is enabled, this will run portainer on port 9000 for the web "
+"interface and 8000 for the agent."
+msgstr ""
+
+msgid "If enabled, Portainer will be installed."
+msgstr ""
+
+msgid ""
+"If enabled, cockpit, cockpit-docker, cockpit-machines, and cockpit-"
+"packagekit will be installed."
+msgstr ""
+
 msgid "Install Clonezilla"
 msgstr "Připravit systém Clonezilla"
 
 msgid "Install Clonezilla ISO ..."
 msgstr "Příprava systému Clonezilla…"
 
-msgid "Install Docker and Portainer"
+msgid "Install Cockpit"
+msgstr ""
+
+msgid "Install Docker"
 msgstr ""
 
 msgid "Install GParted Live"
@@ -113,6 +133,9 @@ msgstr "Připravit systém GParted Live"
 
 msgid "Install GParted Live ISO ..."
 msgstr "Příprava systému GParted Live…"
+
+msgid "Install Portainer"
+msgstr ""
 
 msgid "Install Proxmox kernel"
 msgstr "Nainstalovat jádro z Proxmox"
@@ -127,9 +150,9 @@ msgid "Installed Kernels"
 msgstr "Nainstalovaná jádra operačního systému:"
 
 msgid "Installing Docker and Portainer ..."
-msgstr ""
+msgstr "Instaluje se Docker a Portainer…"
 
-msgid "Installing Proxmox kernel..."
+msgid "Installing Proxmox kernel ..."
 msgstr "Instaluje se jádro z Proxmox…"
 
 msgid "Kernel"
@@ -144,13 +167,16 @@ msgstr "Není vhodné pro stroje, ke kterým není připojený monitor. Ve vých
 msgid "OMV-Extras"
 msgstr "Zdroje přídavných funkcí"
 
-msgid "Open Portainer web interface"
+msgid "Open Cockpit web interface"
 msgstr ""
+
+msgid "Open Portainer web interface"
+msgstr "Otevřít webové rozhraní Portainer"
 
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
 "/etc/docker/daemon.json."
-msgstr ""
+msgstr "Popis umístění úložiště Docker obrazů a kontejnerů. Pro použití výchozího /etc/docker/daemon.json ponechte nevyplněné."
 
 msgid "Proxmox"
 msgstr "Proxmox"
@@ -179,7 +205,7 @@ msgstr "Před odebráním jader jiných, než z Proxmox restartujte s Proxmox j�
 msgid "Remove non-Proxmox kernels and headers"
 msgstr "Odebrat jádra a hlavičkové soubory nepocházející z Proxmox"
 
-msgid "Removing non-Proxmox kernels..."
+msgid "Removing non-Proxmox kernels ..."
 msgstr "Odebírání jader nepocházejících z Proxmox…"
 
 msgid "Running apt-get dist-upgrade ..."
@@ -229,7 +255,7 @@ msgid ""
 msgstr "Nastavení nefungujícího výchozího jádra může způsobit nedostupnost systému. V nabídce zavaděče bude ovšem stále možné zvolit jiné jádro."
 
 msgid "Settings"
-msgstr ""
+msgstr "Nastavení"
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
@@ -238,7 +264,7 @@ msgid "Testing repo"
 msgstr "Repozitář testing"
 
 msgid "This will download and place docker-compose in /usr/local/bin/."
-msgstr ""
+msgstr "Toto stáhne a docker-compose a umístí ho do /usr/local/bin/."
 
 msgid "This will enable the Proxmox 5.x repo."
 msgstr "Toto zapne používání repozitáře z Proxmox 5.x."
@@ -247,7 +273,7 @@ msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "Pokud je stále aktivní, tomuto se nepodaří odebrat jádro linux-image-*."
 
 msgid "This will install the docker-ce package."
-msgstr ""
+msgstr "Toto nainstaluje balíček docker-ce."
 
 msgid "This will install the latest 4.15 kernel."
 msgstr "Toto nainstaluje nejnovější jádro 4.15."
@@ -257,11 +283,6 @@ msgstr "Toto odebere všechny balíčky s hlavičkovými soubory s předponou li
 
 msgid "This will remove all kernel packages with the prefix linux-image-."
 msgstr "Toto odebere všechny balíčky s jádry s předponou linux-image-."
-
-msgid ""
-"This will run portainer on port 9000 for the web interface and 8000 for the "
-"agent."
-msgstr ""
 
 msgid "Unhold Current Kernel"
 msgstr "Zrušit podržení stávající verze jádra"

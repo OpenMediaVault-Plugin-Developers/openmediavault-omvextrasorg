@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-10 20:58-0500\n"
-"PO-Revision-Date: 2019-08-11 01:58+0000\n"
+"POT-Creation-Date: 2019-08-24 10:23-0500\n"
+"PO-Revision-Date: 2019-08-24 15:23+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -21,8 +21,8 @@ msgstr ""
 msgid "Backports"
 msgstr "Backports"
 
-msgid "Cleaning Apt Files and Lists..."
-msgstr "清除 Apt 文件及列表"
+msgid "Cleaning Apt Files and Lists ..."
+msgstr "清除 Apt 文件及列表 ..."
 
 msgid "Clonezilla"
 msgstr "再生龙 Clonezilla"
@@ -37,13 +37,13 @@ msgid "Disabling backports repo ..."
 msgstr "停用 Backports 源中 ..."
 
 msgid "Docker"
-msgstr ""
+msgstr "Docker "
 
 msgid "Docker Storage"
-msgstr ""
+msgstr "Docker 存储"
 
-msgid "Done..."
-msgstr "完成..."
+msgid "Done."
+msgstr "完成。"
 
 msgid ""
 "Downloads Clonezilla ISO and configures grub bootloader to allow booting "
@@ -98,13 +98,33 @@ msgstr "ISO 镜像大约占用系统盘 /boot 目录 219Mb 空间。"
 msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
 msgstr "ISO 镜像大约占用系统盘 /boot 目录 381Mb 空间。"
 
+msgid ""
+"If Cockpit is enabled, the cockpit web interface will run on port 9090."
+msgstr ""
+
+msgid ""
+"If Portainer is enabled, this will run portainer on port 9000 for the web "
+"interface and 8000 for the agent."
+msgstr ""
+
+msgid "If enabled, Portainer will be installed."
+msgstr ""
+
+msgid ""
+"If enabled, cockpit, cockpit-docker, cockpit-machines, and cockpit-"
+"packagekit will be installed."
+msgstr ""
+
 msgid "Install Clonezilla"
 msgstr "安装再生龙 Clonezilla"
 
 msgid "Install Clonezilla ISO ..."
 msgstr "安装再生龙 Clonezilla ISO ..."
 
-msgid "Install Docker and Portainer"
+msgid "Install Cockpit"
+msgstr ""
+
+msgid "Install Docker"
 msgstr ""
 
 msgid "Install GParted Live"
@@ -112,6 +132,9 @@ msgstr "安装 GParted Live"
 
 msgid "Install GParted Live ISO ..."
 msgstr "安装 GParted Live ISO ..."
+
+msgid "Install Portainer"
+msgstr ""
 
 msgid "Install Proxmox kernel"
 msgstr "安装 Proxmox 内核"
@@ -126,9 +149,9 @@ msgid "Installed Kernels"
 msgstr "安装内核"
 
 msgid "Installing Docker and Portainer ..."
-msgstr ""
+msgstr "安装 Docker 和 Portainer 中..."
 
-msgid "Installing Proxmox kernel..."
+msgid "Installing Proxmox kernel ..."
 msgstr "安装 Proxmox 内核中 ..."
 
 msgid "Kernel"
@@ -143,8 +166,11 @@ msgstr "不建议使用缺省服务器，因为默认 SSH 没有开启。"
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
-msgid "Open Portainer web interface"
+msgid "Open Cockpit web interface"
 msgstr ""
+
+msgid "Open Portainer web interface"
+msgstr "打开 Portainer web 标签页"
 
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
@@ -178,7 +204,7 @@ msgstr "在删除 non-Proxmox 内核后以 Proxmox内核重启。"
 msgid "Remove non-Proxmox kernels and headers"
 msgstr "删除 non-Proxmox 内核和头文件"
 
-msgid "Removing non-Proxmox kernels..."
+msgid "Removing non-Proxmox kernels ..."
 msgstr "删除 non-Proxmox 内核中 ..."
 
 msgid "Running apt-get dist-upgrade ..."
@@ -228,7 +254,7 @@ msgid ""
 msgstr "如果设置的默认启动内核错误而不能启动系统，可以通过终端在启动菜单选择不同的内核来启动。"
 
 msgid "Settings"
-msgstr ""
+msgstr "设置"
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
@@ -246,7 +272,7 @@ msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "如果 linux-image-*内核处于使用状态删除该内核将失败。"
 
 msgid "This will install the docker-ce package."
-msgstr ""
+msgstr "这将安装 docker-ce 软件包。"
 
 msgid "This will install the latest 4.15 kernel."
 msgstr "这将安装最新的 4.15 版内核。"
@@ -256,11 +282,6 @@ msgstr "这将删除前缀为 linux-headers- 的所有软件包。"
 
 msgid "This will remove all kernel packages with the prefix linux-image-."
 msgstr "这将删除前缀为 linux-image- 的所有内核包。"
-
-msgid ""
-"This will run portainer on port 9000 for the web interface and 8000 for the "
-"agent."
-msgstr ""
 
 msgid "Unhold Current Kernel"
 msgstr "解除保持当前内核"

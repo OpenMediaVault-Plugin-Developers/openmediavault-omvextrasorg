@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-10 20:58-0500\n"
-"PO-Revision-Date: 2019-08-11 01:58+0000\n"
+"POT-Creation-Date: 2019-08-24 10:23-0500\n"
+"PO-Revision-Date: 2019-08-24 15:23+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -21,8 +21,8 @@ msgstr ""
 msgid "Backports"
 msgstr "Backports"
 
-msgid "Cleaning Apt Files and Lists..."
-msgstr "Limpiando archivos Apt y listas ..."
+msgid "Cleaning Apt Files and Lists ..."
+msgstr ""
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
@@ -42,8 +42,8 @@ msgstr ""
 msgid "Docker Storage"
 msgstr ""
 
-msgid "Done..."
-msgstr "Hecho..."
+msgid "Done."
+msgstr ""
 
 msgid ""
 "Downloads Clonezilla ISO and configures grub bootloader to allow booting "
@@ -98,13 +98,33 @@ msgstr "La ISO utiliza aproximadamente 219 Mb en el directorio /boot del disco d
 msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
 msgstr "La ISO utiliza aproximadamente 381 Mb en el directorio /boot del disco de arranque."
 
+msgid ""
+"If Cockpit is enabled, the cockpit web interface will run on port 9090."
+msgstr ""
+
+msgid ""
+"If Portainer is enabled, this will run portainer on port 9000 for the web "
+"interface and 8000 for the agent."
+msgstr ""
+
+msgid "If enabled, Portainer will be installed."
+msgstr ""
+
+msgid ""
+"If enabled, cockpit, cockpit-docker, cockpit-machines, and cockpit-"
+"packagekit will be installed."
+msgstr ""
+
 msgid "Install Clonezilla"
 msgstr "Instalar Clonezilla"
 
 msgid "Install Clonezilla ISO ..."
 msgstr "Instalando ISO de Clonezilla ..."
 
-msgid "Install Docker and Portainer"
+msgid "Install Cockpit"
+msgstr ""
+
+msgid "Install Docker"
 msgstr ""
 
 msgid "Install GParted Live"
@@ -112,6 +132,9 @@ msgstr "Instalar GParted Live"
 
 msgid "Install GParted Live ISO ..."
 msgstr "Instalando la ISO de GParted Live ..."
+
+msgid "Install Portainer"
+msgstr ""
 
 msgid "Install Proxmox kernel"
 msgstr "Instalar Kernel Proxmox"
@@ -128,8 +151,8 @@ msgstr "Kelnel Instalados"
 msgid "Installing Docker and Portainer ..."
 msgstr ""
 
-msgid "Installing Proxmox kernel..."
-msgstr "Instalando kernel Proxmox ..."
+msgid "Installing Proxmox kernel ..."
+msgstr ""
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -142,6 +165,9 @@ msgstr "No se recomienda para servidores sin monitor. No se habilita SSH por def
 
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
+
+msgid "Open Cockpit web interface"
+msgstr ""
 
 msgid "Open Portainer web interface"
 msgstr ""
@@ -178,8 +204,8 @@ msgstr "Reiniciar con el kernel proxmox, antes de borrar otros kernel No-Proxmox
 msgid "Remove non-Proxmox kernels and headers"
 msgstr "Borrar kernel No-Proxmox y sus cabeceras"
 
-msgid "Removing non-Proxmox kernels..."
-msgstr "Borrando kernel No-Proxmox ..."
+msgid "Removing non-Proxmox kernels ..."
+msgstr ""
 
 msgid "Running apt-get dist-upgrade ..."
 msgstr "Ejecutando apt-get dist-upgrade ..."
@@ -256,11 +282,6 @@ msgstr "Esto eliminará todas las cabeceras que contengan el prefijo linux-heade
 
 msgid "This will remove all kernel packages with the prefix linux-image-."
 msgstr "Esto eliminará todos los archivos de kernel con el prefijo linux-image-."
-
-msgid ""
-"This will run portainer on port 9000 for the web interface and 8000 for the "
-"agent."
-msgstr ""
 
 msgid "Unhold Current Kernel"
 msgstr "Dejar el kernel actual"
