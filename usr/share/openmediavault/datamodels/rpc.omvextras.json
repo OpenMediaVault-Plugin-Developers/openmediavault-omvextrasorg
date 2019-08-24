@@ -12,6 +12,14 @@
 				"type": "boolean",
 				"required": false
 			},
+			"portainer": {
+				"type": "boolean",
+				"required": false
+			},
+			"cockpit": {
+				"type": "boolean",
+				"required": false
+			},
 			"dockerStorage": {
 				"type": "string",
 				"required": false

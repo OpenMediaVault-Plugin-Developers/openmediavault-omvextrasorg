@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.0.4) stable; urgency=low
+
+  * Add option to install cockpit
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 24 Aug 2019 09:51:11 -0500
+
 openmediavault-omvextrasorg (5.0.3) stable; urgency=low
 
   * salt fixes

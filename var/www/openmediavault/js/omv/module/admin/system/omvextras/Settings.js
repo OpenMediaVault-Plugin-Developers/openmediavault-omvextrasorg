@@ -18,6 +18,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+// require("js/omv/form/plugin/LinkedFields.js")
 // require("js/omv/WorkspaceManager.js")
 // require("js/omv/workspace/form/Panel.js")
 // require("js/omv/workspace/window/Form.js")
@@ -25,6 +26,31 @@
 
 Ext.define("OMV.module.admin.system.omvextras.Repos", {
     extend: "OMV.workspace.form.Panel",
+
+    plugins: [{
+        ptype: 'linkedfields',
+        correlations: [{
+            name: [
+                "showCockpit"
+            ],
+            conditions: [
+                { name: "cockpit", value: true }
+            ],
+            properties: [
+                "show"
+            ]
+        },{
+            name: [
+                "showPortainer"
+            ],
+            conditions: [
+                { name: "portainer", value: true }
+            ],
+            properties: [
+                "show"
+            ]
+        }]
+    }],
 
     rpcService: "OmvExtras",
     rpcGetMethod: "getSettings",
@@ -147,9 +173,21 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
                     text: _('Path to Docker images and containers storage. Leave blank to use custom /etc/docker/daemon.json.')
                 }]
             },{
+                xtype: "checkbox",
+                name: "portainer",
+                fieldLabel: _("Install Portainer"),
+                checked: false,
+                boxLabel: _('If enabled, Portainer will be installed.')
+            },{
+                xtype: "checkbox",
+                name: "cockpit",
+                fieldLabel: _("Install Cockpit"),
+                checked: false,
+                boxLabel: _('If enabled, cockpit, cockpit-docker, cockpit-machines, and cockpit-packagekit will be installed.')
+            },{
                 xtype: "button",
                 name: "installDocker",
-                text: _("Install Docker and Portainer"),
+                text: _("Install Docker"),
                 scope: this,
                 handler: Ext.Function.bind(me.onCommandButton, me, [ "docker" ]),
                 margin: "0 0 0 0"
@@ -158,15 +196,29 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
                 html: "<ul>" +
                         "<li>" + _("This will install the docker-ce package.") + "</li>" +
                         "<li>" + _("This will download and place docker-compose in /usr/local/bin/.") + "</li>" +
-                        "<li>" + _("This will run portainer on port 9000 for the web interface and 8000 for the agent.") + "</li>" +
+                        "<li>" + _("If Portainer is enabled, this will run portainer on port 9000 for the web interface and 8000 for the agent.") + "</li>" +
                       "</ul>"
             },{
                 xtype: "button",
-                name: "show",
+                name: "showPortainer",
                 text: _("Open Portainer web interface"),
                 scope: this,
                 handler: function() {
                     window.open('http://' + location.hostname + ':9000', '_blank');
+                },
+                margin: "0 0 0 0"
+            },{
+                border: false,
+                html: "<ul>" +
+                        "<li>" + _("If Cockpit is enabled, the cockpit web interface will run on port 9090.") + "</li>" +
+                      "</ul>"
+            },{
+                xtype: "button",
+                name: "showCockpit",
+                text: _("Open Cockpit web interface"),
+                scope: this,
+                handler: function() {
+                    window.open('http://' + location.hostname + ':9090', '_blank');
                 },
                 margin: "0 0 0 0"
             }]

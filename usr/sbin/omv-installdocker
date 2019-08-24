@@ -12,14 +12,22 @@ portainerVolume="portainer_data"
 xpath="/config/system/omvextras"
 
 dockerStorage=$(omv_config_get "${xpath}/dockerStorage")
+portainer=$(omv_config_get "${xpath}/portainer")
+cockpit=$(omv_config_get "${xpath}/cockpit")
 
 echo "Docker storage :: ${dockerStorage}"
+echo "Portainer :: ${portainer}"
+echo "Cockpit :: ${cockpit}"
+
+if [[ ${cockpit} == "1" ]]; then
+  cockpitPackages="cockpit cockpit-docker cockpit-machines cockpit-packagekit"
+fi
 
 # update repo lists
 apt-get update
 
 # install docker-ce package
-DEBIAN_FRONTEND=noninteractive apt-get --yes install docker-ce
+DEBIAN_FRONTEND=noninteractive apt-get --yes install docker-ce ${cockpitPackages} 
 
 # if path specified, write config file
 if [ -n "${dockerStorage}" ]; then
@@ -58,12 +66,15 @@ if docker container ls --all | grep -q Portainer; then
   docker container rm Portainer
 fi
 
-# create portainer data volume
-if ! docker volume ls | grep -q ${portainerVolume}; then
-  docker volume create ${portainerVolume}
-fi
+if [[ ${portainer} == "1" ]]; then
 
-# pull and start portainer
-docker run -d --name Portainer -p 9000:9000 -p 8000:8000 --restart=unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v ${portainerVolume}:/data portainer/portainer
+  # create portainer data volume
+  if ! docker volume ls | grep -q ${portainerVolume}; then
+    docker volume create ${portainerVolume}
+  fi
+
+  # pull and start portainer
+  docker run -d --name Portainer -p 9000:9000 -p 8000:8000 --restart=unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v ${portainerVolume}:/data portainer/portainer
+fi
 
 exit 0

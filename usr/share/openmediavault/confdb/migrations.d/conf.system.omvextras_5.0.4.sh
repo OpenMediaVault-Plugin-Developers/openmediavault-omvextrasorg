@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #
 # @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
 # @author    Volker Theile <volker.theile@openmediavault.org>
@@ -23,18 +23,15 @@ set -e
 
 . /usr/share/openmediavault/scripts/helper-functions
 
-if ! omv_config_exists "/config/system/omvextras"; then
-    omv_config_add_node "/config/system" "omvextras"
-    omv_config_add_key "/config/system/omvextras" "testing" "0"
-    omv_config_add_key "/config/system/omvextras" "extras" "0"
-    omv_config_add_key "/config/system/omvextras" "portainer" "1"
-    omv_config_add_key "/config/system/omvextras" "cockpit" "0"
-    omv_config_add_key "/config/system/omvextras" "dockerStorage" "/var/lib/docker"
+SERVICE_XPATH_NAME="omvextras"
+SERVICE_XPATH="/config/system/${SERVICE_XPATH_NAME}"
+
+if ! omv_config_exists "${SERVICE_XPATH}/cockpit"; then
+    omv_config_add_key "${SERVICE_XPATH}" "cockpit" "0"
 fi
 
-# disable grub submenus on systems that use grub
-if [ -f /usr/sbin/update-grub ]; then
-    omv-grubiso disablesubmenu
+if ! omv_config_exists "${SERVICE_XPATH}/portainer"; then
+    omv_config_add_key "${SERVICE_XPATH}" "portainer" "1"
 fi
 
 exit 0
