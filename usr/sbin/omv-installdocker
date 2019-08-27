@@ -20,7 +20,10 @@ echo "Portainer :: ${portainer}"
 echo "Cockpit :: ${cockpit}"
 
 if [[ ${cockpit} == "1" ]]; then
-  cockpitPackages="cockpit cockpit-docker cockpit-machines cockpit-packagekit"
+  cockpitPackages="cockpit cockpit-docker cockpit-packagekit"
+  if [[ ! "$(arch)" == "arm"* ]]; then
+    cockpitPackages="${cockpitPackages} cockpit-machines virtinst qemu-kvm qemu-utils"
+  fi
 fi
 
 # update repo lists
