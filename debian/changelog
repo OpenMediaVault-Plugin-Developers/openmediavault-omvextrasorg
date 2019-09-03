@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.0.6) stable; urgency=low
+
+  * Improve pinning
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 03 Sep 2019 16:58:15 -0500
+
 openmediavault-omvextrasorg (5.0.5) stable; urgency=low
 
   * Add kvm dependencies for cockpit
