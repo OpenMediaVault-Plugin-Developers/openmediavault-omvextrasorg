@@ -82,6 +82,10 @@ Package: certbot python3-acme python3-certbot python3-cffi-backend python3-chard
 Pin: release a=stretch-backports
 Pin-Priority: 500
 
+Package: borgbackup
+Pin: release a=stretch-backports
+Pin-Priority: 500
+
 EOF
 fi
 
