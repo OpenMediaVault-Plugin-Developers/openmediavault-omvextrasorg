@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.0.7) stable; urgency=low
+
+  * Remove backports from sources.list
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 11 Sep 2019 21:02:35 -0500
+
 openmediavault-omvextrasorg (5.0.6) stable; urgency=low
 
   * Improve pinning

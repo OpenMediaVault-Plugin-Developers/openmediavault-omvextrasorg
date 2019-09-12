@@ -37,4 +37,7 @@ if [ -f /usr/sbin/update-grub ]; then
     omv-grubiso disablesubmenu
 fi
 
+# remove backports from sources.list
+sed -i "/$(lsb_release -sc)-backports/d" /etc/apt/sources.list
+
 exit 0
