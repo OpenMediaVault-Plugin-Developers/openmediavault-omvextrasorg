@@ -13,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-24 10:23-0500\n"
-"PO-Revision-Date: 2019-08-24 17:37+0000\n"
-"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
+"POT-Creation-Date: 2019-09-30 19:37-0500\n"
+"PO-Revision-Date: 2019-10-01 00:37+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,6 +31,12 @@ msgstr ""
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
+
+msgid "Cockpit"
+msgstr ""
+
+msgid "Cockpit listens on port 9090 for the web interface."
+msgstr ""
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Standardbenutzername: <b>user</b> und Passwort: <b>live</b>"
@@ -103,23 +109,6 @@ msgstr "ISO belegt ungefähr 219 MB im Verzeichnis /boot auf dem BS-Laufwerk."
 msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
 msgstr "ISO belegt ungefähr 381 MB im Verzeichnis /boot auf dem BS-Laufwerk."
 
-msgid ""
-"If Cockpit is enabled, the cockpit web interface will run on port 9090."
-msgstr ""
-
-msgid ""
-"If Portainer is enabled, this will run portainer on port 9000 for the web "
-"interface and 8000 for the agent."
-msgstr ""
-
-msgid "If enabled, Portainer will be installed."
-msgstr ""
-
-msgid ""
-"If enabled, cockpit, cockpit-docker, cockpit-machines, and cockpit-"
-"packagekit will be installed."
-msgstr ""
-
 msgid "Install Clonezilla"
 msgstr "Clonezilla installieren"
 
@@ -132,6 +121,13 @@ msgstr "Cockpit installieren"
 msgid "Install Docker"
 msgstr "Docker installieren"
 
+msgid ""
+"Install Docker will download and place docker-compose in /usr/local/bin/."
+msgstr ""
+
+msgid "Install Docker will restart the docker service if daemon.json changes."
+msgstr ""
+
 msgid "Install GParted Live"
 msgstr "GParted Live installieren"
 
@@ -140,6 +136,16 @@ msgstr "GParted Live ISO installieren ..."
 
 msgid "Install Portainer"
 msgstr "Portainer installieren"
+
+msgid ""
+"Install Portainer will install the docker-ce package if not already "
+"installed."
+msgstr ""
+
+msgid ""
+"Install Portainer will update Portainer to the latest image if the image "
+"already exists."
+msgstr ""
 
 msgid "Install Proxmox kernel"
 msgstr "Proxmox-Kernel installieren"
@@ -150,11 +156,14 @@ msgstr "SystemRescueCD installieren"
 msgid "Install SystemRescueCD ISO ..."
 msgstr "SystemRescueCD ISO installieren ..."
 
+msgid "Installed"
+msgstr ""
+
 msgid "Installed Kernels"
 msgstr "Installierte Kernel"
 
-msgid "Installing Docker and Portainer ..."
-msgstr "Docker und Portainer wird installiert ..."
+msgid "Installing"
+msgstr ""
 
 msgid "Installing Proxmox kernel ..."
 msgstr "Proxmox-Kernel wird installiert ..."
@@ -164,6 +173,9 @@ msgstr "Kernel"
 
 msgid "Kernels"
 msgstr "Kernel"
+
+msgid "Not installed"
+msgstr ""
 
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr ""
@@ -180,6 +192,14 @@ msgstr "Portainer-Weboberfläche öffnen"
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
 "/etc/docker/daemon.json."
+msgstr ""
+
+msgid "Portainer"
+msgstr ""
+
+msgid ""
+"Portainer will listen on port 9000 for the web interface and 8000 for the "
+"agent."
 msgstr ""
 
 msgid "Proxmox"
@@ -206,7 +226,27 @@ msgstr "SystemRescueCD einmal starten ..."
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr ""
 
+msgid "Remove Cockpit"
+msgstr ""
+
+msgid "Remove Docker"
+msgstr ""
+
+msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
+msgstr ""
+
+msgid "Remove Portainer"
+msgstr ""
+
+msgid ""
+"Remove Portainer will remove the Portainer image and container but the "
+"volume will not be removed."
+msgstr ""
+
 msgid "Remove non-Proxmox kernels and headers"
+msgstr ""
+
+msgid "Removing"
 msgstr ""
 
 msgid "Removing non-Proxmox kernels ..."
@@ -261,25 +301,22 @@ msgstr "Durch einen falsch festgelegten Standard-Boot-Kernel kann das System unz
 msgid "Settings"
 msgstr "Einstellungen"
 
+msgid "Status"
+msgstr ""
+
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
 
 msgid "Testing repo"
 msgstr ""
 
-msgid "This will download and place docker-compose in /usr/local/bin/."
-msgstr ""
-
-msgid "This will enable the Proxmox 5.x repo."
+msgid "This will enable the Proxmox 6.x repo."
 msgstr ""
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr ""
 
-msgid "This will install the docker-ce package."
-msgstr ""
-
-msgid "This will install the latest 4.15 kernel."
+msgid "This will install the latest 5.0 kernel."
 msgstr ""
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
@@ -297,6 +334,9 @@ msgstr "Aktueller Kernel wird nicht beibehalten ..."
 msgid "Updates"
 msgstr "Aktualisierungen"
 
+msgid "Version"
+msgstr ""
+
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
 "OpenMediaVault ssh key and need to be updated on the client system."
@@ -306,10 +346,25 @@ msgid ""
 "When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
 msgstr ""
 
+msgid "and not running"
+msgstr ""
+
+msgid "and running"
+msgstr ""
+
 msgid "apt clean"
 msgstr ""
 
+msgid "disabled"
+msgstr ""
+
 msgid "dist-upgrade"
+msgstr ""
+
+msgid "enabled"
+msgstr ""
+
+msgid "n/a"
 msgstr ""
 
 msgid "omv-update"

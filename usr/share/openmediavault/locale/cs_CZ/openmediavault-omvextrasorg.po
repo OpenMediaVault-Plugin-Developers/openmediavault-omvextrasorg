@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-24 10:23-0500\n"
-"PO-Revision-Date: 2019-08-26 07:57+0000\n"
-"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
+"POT-Creation-Date: 2019-09-30 19:37-0500\n"
+"PO-Revision-Date: 2019-10-01 00:37+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,6 +27,12 @@ msgstr "Čistění souborů a seznamů Apt…"
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
+
+msgid "Cockpit"
+msgstr ""
+
+msgid "Cockpit listens on port 9090 for the web interface."
+msgstr ""
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Výchozí uživatelské jméno: <b>user</b> a heslo: <b>live</b>"
@@ -99,23 +105,6 @@ msgstr "ISO soubor zabere přibližně 219 MB ve složce /boot na jednotce datov
 msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
 msgstr "ISO soubor zabere přibližně 381 MB ve složce /boot na jednotce datového úložiště s operačním systémem."
 
-msgid ""
-"If Cockpit is enabled, the cockpit web interface will run on port 9090."
-msgstr "Když je Cockpit zapnuté, jeho webové rozhraní bude spuštěné na portu 9090."
-
-msgid ""
-"If Portainer is enabled, this will run portainer on port 9000 for the web "
-"interface and 8000 for the agent."
-msgstr "Když je Portainer zapnuté, toto ho spustí na portu 9000 pro webové rozhraní a 8000 pro agenta."
-
-msgid "If enabled, Portainer will be installed."
-msgstr "Když je zapnuto, bude nainstalován Portainer."
-
-msgid ""
-"If enabled, cockpit, cockpit-docker, cockpit-machines, and cockpit-"
-"packagekit will be installed."
-msgstr "Když je zapnuto, bude nainstalováno cockpit, cockpit-docker, cockpit-machines, a cockpit-packagekit"
-
 msgid "Install Clonezilla"
 msgstr "Připravit systém Clonezilla"
 
@@ -128,6 +117,13 @@ msgstr "Nainstalovat Cockpit"
 msgid "Install Docker"
 msgstr "Nainstalovat Docker"
 
+msgid ""
+"Install Docker will download and place docker-compose in /usr/local/bin/."
+msgstr ""
+
+msgid "Install Docker will restart the docker service if daemon.json changes."
+msgstr ""
+
 msgid "Install GParted Live"
 msgstr "Připravit systém GParted Live"
 
@@ -136,6 +132,16 @@ msgstr "Příprava systému GParted Live…"
 
 msgid "Install Portainer"
 msgstr "Nainstalovat Portainer"
+
+msgid ""
+"Install Portainer will install the docker-ce package if not already "
+"installed."
+msgstr ""
+
+msgid ""
+"Install Portainer will update Portainer to the latest image if the image "
+"already exists."
+msgstr ""
 
 msgid "Install Proxmox kernel"
 msgstr "Nainstalovat jádro z Proxmox"
@@ -146,11 +152,14 @@ msgstr "Připravit systém SystemRescueCD"
 msgid "Install SystemRescueCD ISO ..."
 msgstr "Připravit sem ISO soubor s obrazem systému SystemRescueCD…"
 
+msgid "Installed"
+msgstr ""
+
 msgid "Installed Kernels"
 msgstr "Nainstalovaná jádra operačního systému:"
 
-msgid "Installing Docker and Portainer ..."
-msgstr "Instaluje se Docker a Portainer…"
+msgid "Installing"
+msgstr ""
 
 msgid "Installing Proxmox kernel ..."
 msgstr "Instaluje se jádro z Proxmox…"
@@ -160,6 +169,9 @@ msgstr "Jádro"
 
 msgid "Kernels"
 msgstr "Jádra"
+
+msgid "Not installed"
+msgstr ""
 
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr "Není vhodné pro stroje, ke kterým není připojený monitor. Ve výchozím stavu totiž není dostupné přes SSH."
@@ -177,6 +189,14 @@ msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
 "/etc/docker/daemon.json."
 msgstr "Popis umístění úložiště Docker obrazů a kontejnerů. Pro použití výchozího /etc/docker/daemon.json ponechte nevyplněné."
+
+msgid "Portainer"
+msgstr ""
+
+msgid ""
+"Portainer will listen on port 9000 for the web interface and 8000 for the "
+"agent."
+msgstr ""
 
 msgid "Proxmox"
 msgstr "Proxmox"
@@ -202,8 +222,28 @@ msgstr "Jednorázově restartovat do systému SystemRescueCD"
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "Před odebráním jader jiných, než z Proxmox restartujte s Proxmox jádrem."
 
+msgid "Remove Cockpit"
+msgstr ""
+
+msgid "Remove Docker"
+msgstr ""
+
+msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
+msgstr ""
+
+msgid "Remove Portainer"
+msgstr ""
+
+msgid ""
+"Remove Portainer will remove the Portainer image and container but the "
+"volume will not be removed."
+msgstr ""
+
 msgid "Remove non-Proxmox kernels and headers"
 msgstr "Odebrat jádra a hlavičkové soubory nepocházející z Proxmox"
+
+msgid "Removing"
+msgstr ""
 
 msgid "Removing non-Proxmox kernels ..."
 msgstr "Odebírání jader nepocházejících z Proxmox…"
@@ -257,26 +297,23 @@ msgstr "Nastavení nefungujícího výchozího jádra může způsobit nedostupn
 msgid "Settings"
 msgstr "Nastavení"
 
+msgid "Status"
+msgstr ""
+
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
 
 msgid "Testing repo"
 msgstr "Repozitář testing"
 
-msgid "This will download and place docker-compose in /usr/local/bin/."
-msgstr "Toto stáhne a docker-compose a umístí ho do /usr/local/bin/."
-
-msgid "This will enable the Proxmox 5.x repo."
-msgstr "Toto zapne používání repozitáře z Proxmox 5.x."
+msgid "This will enable the Proxmox 6.x repo."
+msgstr ""
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "Pokud je stále aktivní, tomuto se nepodaří odebrat jádro linux-image-*."
 
-msgid "This will install the docker-ce package."
-msgstr "Toto nainstaluje balíček docker-ce."
-
-msgid "This will install the latest 4.15 kernel."
-msgstr "Toto nainstaluje nejnovější jádro 4.15."
+msgid "This will install the latest 5.0 kernel."
+msgstr ""
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "Toto odebere všechny balíčky s hlavičkovými soubory s předponou linux-headers-."
@@ -293,6 +330,9 @@ msgstr "Ruší se podržení stávající verze jádra…"
 msgid "Updates"
 msgstr "Aktualizace"
 
+msgid "Version"
+msgstr ""
+
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
 "OpenMediaVault ssh key and need to be updated on the client system."
@@ -302,11 +342,26 @@ msgid ""
 "When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
 msgstr "V případě, že se k systému přihlásíte na dálku, spusťte nástroj clonezilla takto:  <b>sudo clonezilla</b>"
 
+msgid "and not running"
+msgstr ""
+
+msgid "and running"
+msgstr ""
+
 msgid "apt clean"
 msgstr "apt clean"
 
+msgid "disabled"
+msgstr ""
+
 msgid "dist-upgrade"
 msgstr "dist-upgrade"
+
+msgid "enabled"
+msgstr ""
+
+msgid "n/a"
+msgstr ""
 
 msgid "omv-update"
 msgstr "omv-update"

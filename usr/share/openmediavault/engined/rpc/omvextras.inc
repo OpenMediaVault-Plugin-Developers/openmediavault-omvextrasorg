@@ -70,7 +70,7 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
             $status = sprintf('%s %s', gettext("Installed"), $running);
             $version = $output[0];
         } else {
-            $status = gettext("Not installed.");
+            $status = gettext("Not installed");
             $version = gettext("n/a");
         }
         $object->add('dockerStatus', 'string', $status);
@@ -106,7 +106,7 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
             $status = sprintf('%s %s', gettext("Installed"), $running);
             $version = $output[0];
         } else {
-            $status = gettext("Not installed.");
+            $status = gettext("Not installed");
             $version = gettext("n/a");
         }
         $object->add('cockpitStatus', 'string', $status);
