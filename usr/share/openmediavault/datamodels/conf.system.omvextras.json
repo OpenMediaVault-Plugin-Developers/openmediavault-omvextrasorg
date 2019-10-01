@@ -15,14 +15,6 @@
 			"type": "boolean",
 			"default": false
 		},
-		"portainer": {
-			"type": "boolean",
-			"default": true
-		},
-		"cockpit": {
-			"type": "boolean",
-			"default": false
-		},
 		"dockerStorage": {
 			"type": "string",
 			"default": "/var/lib/docker"

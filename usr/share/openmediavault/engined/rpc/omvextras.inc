@@ -52,6 +52,74 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         // Get the configuration object.
         $db = \OMV\Config\Database::getInstance();
         $object = $db->get("conf.system.omvextras");
+
+        // docker status
+        $cmdLine = "dpkg-query -W -f='\${Version}' docker-ce";
+        $cmd = new \OMV\System\Process($cmdLine);
+        $cmd->setQuiet(true);
+        $output = [];
+        $cmd->execute($output, $exitStatus);
+        if ((0 == $exitStatus) && (!empty($output))) {
+            // Get docker service status
+            $systemCtl = new \OMV\System\SystemCtl('docker');
+            if ($systemCtl->isActive()) {
+                $running = gettext("and running");
+            } else {
+                $running = gettext("and not running");
+            }
+            $status = sprintf('%s %s', gettext("Installed"), $running);
+            $version = $output[0];
+        } else {
+            $status = gettext("Not installed.");
+            $version = gettext("n/a");
+        }
+        $object->add('dockerStatus', 'string', $status);
+        $object->add('dockerVersion', 'string', $version);
+
+        // portainer status
+        $cmdLine = "docker container ls --all --format='{{.Names}}|{{.Status}}' | awk -F \"|\" '\$1 == \"Portainer\" { print \$2 }'";
+        $cmd = new \OMV\System\Process($cmdLine);
+        $cmd->setQuiet(true);
+        $output = [];
+        $cmd->execute($output, $exitStatus);
+        if (empty($output[0])) {
+            $status = "No Portainer container found.";
+        } else {
+            $status = $output[0];
+        }
+        $object->add('portainerStatus', 'string', $status);
+
+        // cockpit status
+        $cmdLine = "dpkg-query -W -f='\${Version}' cockpit";
+        $cmd = new \OMV\System\Process($cmdLine);
+        $cmd->setQuiet(true);
+        $output = [];
+        $cmd->execute($output, $exitStatus);
+        if ((0 == $exitStatus) && (!empty($output))) {
+            // Get docker service status
+            $systemCtl = new \OMV\System\SystemCtl('cockpit');
+            if ($systemCtl->isActive()) {
+                $running = gettext("and running");
+            } else {
+                $running = gettext("and not running");
+            }
+            $status = sprintf('%s %s', gettext("Installed"), $running);
+            $version = $output[0];
+        } else {
+            $status = gettext("Not installed.");
+            $version = gettext("n/a");
+        }
+        $object->add('cockpitStatus', 'string', $status);
+        $object->add('cockpitVersion', 'string', $version);
+
+        // backports status
+        if (file_exists('/etc/apt/sources.list.d/openmediavault-kernel-backports.list')) {
+            $backports = gettext("enabled");
+        } else {
+            $backports = gettext("disabled");
+        }
+        $object->add('backportsStatus', 'string', $backports);
+
         return $object->getAssoc();
     }
 
@@ -180,8 +248,15 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
                         $cmdBin = 'apt-get --yes dist-upgrade';  break;
                     case 'clean':
                         $cmdBin = 'omv-aptclean';  break;
-                    case 'docker':
-                        $cmdBin = 'omv-installdocker';  break;
+                    case 'cockpit_install':
+                    case 'cockpit_remove':
+                    case 'docker_install':
+                    case 'docker_remove':
+                    case 'portainer_install':
+                    case 'portainer_remove':
+                        $cmdBin = 'omv-installdocker';
+                        $cmdParams = str_replace('_',' ',$params['command']);
+                        break;
                     default:
                         $cmdBin = 'omv-grubiso';
                         $cmdParams = $params['command'];

@@ -1,3 +1,11 @@
+openmediavault-omvextrasorg (5.1) stable; urgency=low
+
+  * Update SystemRescueCD to 6.0.3
+  * Add cockpit, docker, portainer install and remove buttons with
+    notes.
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 30 Sep 2019 19:29:47 -0500
+
 openmediavault-omvextrasorg (5.0.7) stable; urgency=low
 
   * Remove backports from sources.list

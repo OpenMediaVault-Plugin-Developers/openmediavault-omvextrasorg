@@ -27,31 +27,6 @@
 Ext.define("OMV.module.admin.system.omvextras.Repos", {
     extend: "OMV.workspace.form.Panel",
 
-    plugins: [{
-        ptype: 'linkedfields',
-        correlations: [{
-            name: [
-                "showCockpit"
-            ],
-            conditions: [
-                { name: "cockpit", value: true }
-            ],
-            properties: [
-                "show"
-            ]
-        },{
-            name: [
-                "showPortainer"
-            ],
-            conditions: [
-                { name: "portainer", value: true }
-            ],
-            properties: [
-                "show"
-            ]
-        }]
-    }],
-
     rpcService: "OmvExtras",
     rpcGetMethod: "getSettings",
     rpcSetMethod: "setSettings",
@@ -154,79 +129,154 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
                 name: "extras",
                 fieldLabel: _("Extras repo"),
                 checked: false
+            },{
+                xtype: "textfield",
+                name: "backportsStatus",
+                fieldLabel: _("Backports"),
+                submitValue: false
             }]
         },{
-
             xtype: "fieldset",
             title: _("Docker"),
             fieldDefaults: {
                 labelSeparator: ""
             },
             items: [{
-                xtype: 'textfield',
-                name: 'dockerStorage',
-                fieldLabel: _('Docker Storage'),
+                xtype: "textfield",
+                name: "dockerStorage",
+                fieldLabel: _("Docker Storage"),
                 allowBlank: true,
-                value: '/var/lib/docker',
+                value: "/var/lib/docker",
                 plugins: [{
-                    ptype: 'fieldinfo',
-                    text: _('Path to Docker images and containers storage. Leave blank to use custom /etc/docker/daemon.json.')
+                    ptype: "fieldinfo",
+                    text: _("Path to Docker images and containers storage. Leave blank to use custom /etc/docker/daemon.json.")
                 }]
-            },{
-                xtype: "checkbox",
-                name: "portainer",
-                fieldLabel: _("Install Portainer"),
-                checked: false,
-                boxLabel: _('If enabled, Portainer will be installed.')
-            },{
-                xtype: "checkbox",
-                name: "cockpit",
-                fieldLabel: _("Install Cockpit"),
-                checked: false,
-                boxLabel: _('If enabled, cockpit, cockpit-docker, cockpit-machines, and cockpit-packagekit will be installed.')
             },{
                 xtype: "button",
                 name: "installDocker",
                 text: _("Install Docker"),
                 scope: this,
-                handler: Ext.Function.bind(me.onCommandButton, me, [ "docker" ]),
-                margin: "0 0 0 0"
+                handler: Ext.Function.bind(me.onCommandButton, me, [ "docker_install" ]),
+                margin: "0 5 5 0"
+            },{
+                xtype: "button",
+                name: "removeDocker",
+                text: _("Remove Docker"),
+                scope: this,
+                handler: Ext.Function.bind(me.onCommandButton, me, [ "docker_remove" ]),
+                margin: "0 0 5 0"
+            },{
+                xtype: "textfield",
+                name: "dockerStatus",
+                fieldLabel: _("Status"),
+                submitValue: false
+            },{
+                xtype: "textfield",
+                name: "dockerVersion",
+                fieldLabel: _("Version"),
+                submitValue: false
             },{
                 border: false,
                 html: "<ul>" +
-                        "<li>" + _("This will install the docker-ce package.") + "</li>" +
-                        "<li>" + _("This will download and place docker-compose in /usr/local/bin/.") + "</li>" +
-                        "<li>" + _("If Portainer is enabled, this will run portainer on port 9000 for the web interface and 8000 for the agent.") + "</li>" +
+                        "<li>" + _("Install Docker will download and place docker-compose in /usr/local/bin/.") + "</li>" +
+                        "<li>" + _("Install Docker will restart the docker service if daemon.json changes.") + "</li>" +
+                        "<li>" + _("Remove Docker will delete docker-compose from /usr/local/bin/.") + "</li>" +
                       "</ul>"
+            }]
+        },{
+            xtype: "fieldset",
+            title: _("Portainer"),
+            fieldDefaults: {
+                labelSeparator: ""
+            },
+            items: [{
+                xtype: "button",
+                name: "installPortainer",
+                text: _("Install Portainer"),
+                scope: this,
+                handler: Ext.Function.bind(me.onCommandButton, me, [ "portainer_install" ]),
+                margin: "0 5 5 0"
+            },{
+                xtype: "button",
+                name: "removePortainer",
+                text: _("Remove Portainer"),
+                scope: this,
+                handler: Ext.Function.bind(me.onCommandButton, me, [ "portainer_remove" ]),
+                margin: "0 5 5 0"
             },{
                 xtype: "button",
                 name: "showPortainer",
                 text: _("Open Portainer web interface"),
                 scope: this,
                 handler: function() {
-                    window.open('http://' + location.hostname + ':9000', '_blank');
+                    window.open("http://" + location.hostname + ":9000", "_blank");
                 },
-                margin: "0 0 0 0"
+                margin: "0 0 5 0"
+            },{
+                xtype: "textfield",
+                name: "portainerStatus",
+                fieldLabel: _("Status"),
+                submitValue: false
             },{
                 border: false,
                 html: "<ul>" +
-                        "<li>" + _("If Cockpit is enabled, the cockpit web interface will run on port 9090.") + "</li>" +
+                        "<li>" + _("Install Portainer will install the docker-ce package if not already installed.") + "</li>" +
+                        "<li>" + _("Install Portainer will update Portainer to the latest image if the image already exists.") + "</li>" +
+                        "<li>" + _("Portainer will listen on port 9000 for the web interface and 8000 for the agent.") + "</li>" +
+                        "<li>" + _("Remove Portainer will remove the Portainer image and container but the volume will not be removed.") + "</li>" +
                       "</ul>"
+            }]
+        },{
+            xtype: "fieldset",
+            title: _("Cockpit"),
+            fieldDefaults: {
+                labelSeparator: ""
+            },
+            items: [{
+                xtype: "button",
+                name: "installCockpit",
+                text: _("Install Cockpit"),
+                scope: this,
+                handler: Ext.Function.bind(me.onCommandButton, me, [ "cockpit_install" ]),
+                margin: "0 5 5 0"
+            },{
+                xtype: "button",
+                name: "removeCockpit",
+                text: _("Remove Cockpit"),
+                scope: this,
+                handler: Ext.Function.bind(me.onCommandButton, me, [ "cockpit_remove" ]),
+                margin: "0 5 5 0"
             },{
                 xtype: "button",
                 name: "showCockpit",
                 text: _("Open Cockpit web interface"),
                 scope: this,
                 handler: function() {
-                    window.open('http://' + location.hostname + ':9090', '_blank');
+                    window.open("http://" + location.hostname + ":9090", "_blank");
                 },
-                margin: "0 0 0 0"
+                margin: "0 0 5 0"
+            },{
+                xtype: "textfield",
+                name: "cockpitStatus",
+                fieldLabel: _("Status"),
+                submitValue: false
+            },{
+                xtype: "textfield",
+                name: "cockpitVersion",
+                fieldLabel: _("Version"),
+                submitValue: false
+            },{
+                border: false,
+                html: "<ul>" +
+                        "<li>" + _("Cockpit listens on port 9090 for the web interface.") + "</li>" +
+                      "</ul>"
             }]
         }];
     },
 
     onCommandButton: function(command) {
         var me = this;
+        me.doSubmit();
         var msg = "";
         switch (command) {
             case "update":
@@ -244,8 +294,19 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
             case "clean":
                 msg = _("Running omv-aptclean ...");
                 break;
-            case "docker":
-                msg = _("Installing Docker and Portainer ...");
+            case "cockpit_install":
+            case "cockpit_remove":
+            case "docker_install":
+            case "docker_remove":
+            case "portainer_install":
+            case "portainer_remove":
+                str = command.split("_");
+                if (str[1] == "remove") {
+                  action = _("Removing");
+                } else {
+                  action = _("Installing");
+                }
+                msg = action + " " + str[1] + " ...";
                 break;
         }
         var wnd = Ext.create("OMV.window.Execute", {
@@ -271,6 +332,8 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
                 close: function() {
                     if (command == "clean") {
                         document.location.reload();
+                    } else {
+                        me.doReload();
                     }
                 }
             }

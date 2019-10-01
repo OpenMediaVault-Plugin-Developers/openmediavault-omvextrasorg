@@ -1,83 +1,282 @@
 #!/bin/bash
 
-. /etc/default/openmediavault
-. /usr/share/openmediavault/scripts/helper-functions
+# shellcheck disable=SC1091,SC2086
 
+declare -i status=0
+
+# cockpit
+declare cockpitPackages=""
+declare dockerPackages="docker-ce"
+
+# docker
 declare -i download=0
-
 daemonJson="/etc/docker/daemon.json"
-dcVersion="1.24.1"
+dockerBin="/usr/bin/docker"
 dockerCompose="/usr/local/bin/docker-compose"
+dockerComposeUrl="https://github.com/docker/compose/releases/download/"
+dockerComposeVersion="1.24.1"
+
+# portainer
+portainerImage="portainer/portainer"
+portainerName="Portainer"
 portainerVolume="portainer_data"
-xpath="/config/system/omvextras"
 
-dockerStorage=$(omv_config_get "${xpath}/dockerStorage")
-portainer=$(omv_config_get "${xpath}/portainer")
-cockpit=$(omv_config_get "${xpath}/cockpit")
 
-echo "Docker storage :: ${dockerStorage}"
-echo "Portainer :: ${portainer}"
-echo "Cockpit :: ${cockpit}"
-
-if [[ ${cockpit} == "1" ]]; then
+setCockpitPackages()
+{
   cockpitPackages="cockpit cockpit-docker cockpit-packagekit"
   if [[ ! "$(arch)" == "arm"* ]]; then
     cockpitPackages="${cockpitPackages} cockpit-machines virtinst qemu-kvm qemu-utils"
   fi
-fi
+}
 
-# update repo lists
-apt-get update
+setExports()
+{
+  export DEBIAN_FRONTEND=noninteractive
+  export APT_LISTCHANGES_FRONTEND=none
+  export LANG=C.UTF-8
+}
 
-# install docker-ce package
-DEBIAN_FRONTEND=noninteractive apt-get --yes install docker-ce ${cockpitPackages} 
+updateRepos()
+{
+  # update repo lists
+  if ! apt-get update; then
+    echo "Failed to update apt repos."
+    exit 10
+  fi
+}
 
-# if path specified, write config file
-if [ -n "${dockerStorage}" ]; then
-  cat <<EOF > ${daemonJson}
+removeCockpit()
+{
+  setCockpitPackages
+  setExports
+
+  # remove cockpit packages
+  status=0
+  for pkg in ${cockpitPackages}; do
+    if dpkg --list | grep --quiet "${pkg}"; then
+      status=1
+      if apt-get --yes --auto-remove purge ${pkg}; then
+        echo "Successfully removed '${pkg}' package."
+      else
+        echo "Failed to remove '${pkg}' package."
+        exit 1
+      fi
+    fi
+  done
+  if [ ${status} -ne 1 ]; then
+    echo "No cockpit packages to remove."
+  fi
+}
+
+removeDocker()
+{
+  setExports
+
+  # remove docker
+  status=0
+  for pkg in ${dockerPackages}; do
+    if dpkg --list | grep --quiet "${pkg}"; then
+      status=1
+      if apt-get --yes --auto-remove purge ${pkg}; then
+        echo "Successfully removed '${pkg}' package."
+      else
+        echo "Failed to remove '${pkg}' package."
+        exit 2
+      fi
+    fi
+  done
+  if [ ${status} -ne 1 ]; then
+    echo "No docker packages to remove."
+  fi
+  if [ -f "${dockerCompose}" ]; then
+    rm "${dockerCompose}"
+    echo "docker-compose removed."
+  fi
+}
+
+removePortainer()
+{
+  status=0
+  if [ ! -f "${dockerBin}" ]; then
+    echo "Docker is not installed."
+    exit 3
+  fi
+
+  # stop existing Portainer container
+  if docker container ls | grep --quiet "${portainerName}"; then
+    docker container stop "${portainerName}"
+    status=1
+  fi
+
+  # remove existing Portainer container
+  if docker container ls --all | grep --quiet "${portainerName}"; then
+    docker container rm "${portainerName}"
+    status=1
+  fi
+
+  # remove existing Portainer image
+  if docker image ls --all | grep --quiet "${portainerImage}"; then
+    docker image rm "${portainerImage}"
+    status=1
+  fi
+
+  if [ ${status} -ne 1 ]; then
+    echo "No portainer containers or images to remove."
+  fi
+}
+
+installCockpit()
+{
+  setCockpitPackages
+  setExports
+
+  # check to see if already installed
+  status=0
+  for pkg in ${cockpitPackages}; do
+    if ! dpkg --list | grep --quiet "${pkg}"; then
+      status=1
+    fi
+  done
+
+  # install cockpit packages
+  if [ ${status} -eq 1 ]; then
+    updateRepos
+
+    if apt-get --yes install ${cockpitPackages}; then
+      echo "Successfully installed cockpit."
+    else
+      echo "Failed to install cockpit."
+      exit 4
+    fi
+  else
+    echo "cockpit already installed."
+  fi
+}
+
+installDocker()
+{
+  setExports
+
+  # if openmediavault is installed, get docker storage path
+  if [ -f "/usr/share/openmediavault/scripts/helper-functions" ]; then
+    # source openmediavault functions
+    . /etc/default/openmediavault
+    . /usr/share/openmediavault/scripts/helper-functions
+
+    xpath="/config/system/omvextras"
+    dockerStorage=$(omv_config_get "${xpath}/dockerStorage")
+    echo "Docker storage :: ${dockerStorage}"
+  fi
+
+  # check to see if already installed to avoid restarting service
+  status=0
+  for pkg in ${dockerPackages}; do
+    if ! dpkg --list | grep --quiet "${pkg}"; then
+      status=1
+    fi
+  done
+
+  # install docker-ce package
+  if [ ${status} -eq 1 ]; then
+    updateRepos
+
+    if apt-get --yes install ${dockerPackages}; then
+      echo "Successfully installed docker."
+    else
+      echo "Failed to install docker."
+      exit 5
+    fi
+  fi
+
+  # if path specified, write config file
+  if [ -n "${dockerStorage}" ]; then
+    daemonJsonTemp="$(mktemp)"
+    cat <<EOF > ${daemonJsonTemp}
 {
   "data-root": "${dockerStorage}"
 }
 EOF
-fi
 
-# enable and restart docker service
-systemctl enable docker.service
-systemctl restart docker.service
+    if ! diff --brief "${daemonJsonTemp}" "${daemonJson}"; then
+      echo "Docker storage path has changed."
+      cp "${daemonJsonTemp}" "${daemonJson}"
+      status=1
+    fi
+    rm -f "${daemonJsonTemp}"
+  fi
 
-# download docker-compose and place in /usr/local/bin/ if current version is older
-if [ -f "${dockerCompose}" ]; then
-  curVers="$(${dockerCompose} --version | cut -d',' -f1 | awk '{ print $3 }')"
-  if [ ! "${curVers}" = "${dcVersion}" ]; then
+  # enable and restart docker service
+  if [ ${status} -eq 1 ]; then
+    systemctl enable docker.service
+    systemctl restart docker.service
+  else
+    echo "Skipping docker restart since it was already installed."
+  fi
+
+  # download docker-compose and place in /usr/local/bin/ if current version is older
+  if [ -f "${dockerCompose}" ]; then
+    curVers="$(${dockerCompose} --version | cut -d',' -f1 | awk '{ print $3 }')"
+    if [ ! "${curVers}" = "${dockerComposeVersion}" ]; then
+      download=1
+    fi
+  else
     download=1
   fi
-else
-  download=1
-fi
-if [ ${download} -eq 1 ]; then
-  curl -L "https://github.com/docker/compose/releases/download/${dcVersion}/docker-compose-$(uname -s)-$(uname -m)" -o ${dockerCompose}
-  chmod +x /usr/local/bin/docker-compose
-fi
+  if [ ${download} -eq 1 ]; then
+    curl -L "${dockerComposeUrl}/${dockerComposeVersion}/docker-compose-$(uname -s)-$(uname -m)" -o "${dockerCompose}"
+    chmod +x "${dockerCompose}"
+  fi
+}
 
-# stop existing Portainer container
-if docker container ls | grep -q Portainer; then
-  docker container stop Portainer
-fi
+installPortainer()
+{
+  if [ ! -f "${dockerBin}" ]; then
+    installDocker
+  fi
 
-# remove existing Portainer container
-if docker container ls --all | grep -q Portainer; then
-  docker container rm Portainer
-fi
-
-if [[ ${portainer} == "1" ]]; then
+  # remove existing
+  removePortainer
 
   # create portainer data volume
-  if ! docker volume ls | grep -q ${portainerVolume}; then
-    docker volume create ${portainerVolume}
+  if ! docker volume ls | grep --quiet "${portainerVolume}"; then
+    docker volume create "${portainerVolume}"
   fi
 
   # pull and start portainer
-  docker run -d --name Portainer -p 9000:9000 -p 8000:8000 --restart=unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v ${portainerVolume}:/data portainer/portainer
-fi
+  docker run -d --name "${portainerName}" -p 9000:9000 -p 8000:8000 --restart=unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v ${portainerVolume}:/data portainer/portainer
+}
+
+
+option="${1}"
+state="${2}"
+
+echo "option :: ${option}"
+echo "state  :: ${state}"
+
+
+case ${option} in
+  cockpit)
+    if [[ "${state}" == "remove" ]]; then
+      removeCockpit
+    else
+      installCockpit
+    fi
+    ;;
+  portainer)
+    if [[ "${state}" == "remove" ]]; then
+      removePortainer
+    else
+      installPortainer
+    fi
+    ;;
+  *)
+    if [[ "${state}" == "remove" ]]; then
+      removeDocker
+    else
+      installDocker
+    fi
+    ;;
+esac
 
 exit 0

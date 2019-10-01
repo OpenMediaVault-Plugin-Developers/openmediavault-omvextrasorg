@@ -12,14 +12,6 @@
 				"type": "boolean",
 				"required": false
 			},
-			"portainer": {
-				"type": "boolean",
-				"required": false
-			},
-			"cockpit": {
-				"type": "boolean",
-				"required": false
-			},
 			"dockerStorage": {
 				"type": "string",
 				"required": false
@@ -38,11 +30,16 @@
 					"aptclean",
 					"clean",
 					"dist-upgrade",
-					"docker",
+					"cockpit_install",
+					"cockpit_remove",
+					"docker_install",
+					"docker_remove",
 					"installcz",
 					"installgp",
 					"installsys",
 					"omv-update",
+					"portainer_install",
+					"portainer_remove",
 					"rebootcz",
 					"rebootgp",
 					"rebootsys",

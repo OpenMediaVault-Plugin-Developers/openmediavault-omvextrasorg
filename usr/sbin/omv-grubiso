@@ -27,17 +27,15 @@ CLONEZILLA_VERSION="2.6.0-37"
 CLONEZILLA_ISO="clonezilla-live-${CLONEZILLA_VERSION}-i686-pae.iso"
 
 GRUB_SYSRESCCD="/etc/grub.d/42_sysresccd"
-SYSRESCCD_VERSION="5.2.2"
-SYSRESCCD_ISO="systemrescuecd-x86-${SYSRESCCD_VERSION}.iso"
+SYSRESCCD_VERSION="6.0.3"
+SYSRESCCD_ISO="systemrescuecd-${SYSRESCCD_VERSION}.iso"
 
 GRUB_GPARTEDLIVE="/etc/grub.d/42_gpartedlive"
 GPARTEDLIVE_VERSION="0.31.0-1"
 GPARTEDLIVE_ISO="gparted-live-${GPARTEDLIVE_VERSION}-i686.iso"
 
 GRUB="/etc/default/grub"
-GRUB_BACKUP="grub.bak"
 GRUB_CFG="/boot/grub/grub.cfg"
-TFILE="/tmp/grub"
 
 installclonezilla()
 {
@@ -66,13 +64,7 @@ installsysresccd()
 {
     if [ ! -f "${ISO_PATH}/${SYSRESCCD_ISO}" ]; then
         rm -f ${ISO_PATH}/systemrescuecd*.iso
-        wget "https://sourceforge.net/projects/systemrescuecd/files/sysresccd-x86/${SYSRESCCD_VERSION}/${SYSRESCCD_ISO}/download" -O ${ISO_PATH}/${SYSRESCCD_ISO} 2>&1
-    fi
-
-    if [[ $(arch) == x86_64* ]]; then
-        rescue="64"
-    else
-        rescue="32"
+        wget "https://osdn.net/projects/systemrescuecd/storage/releases/${SYSRESCCD_VERSION}/${SYSRESCCD_ISO}" -O ${ISO_PATH}/${SYSRESCCD_ISO} 2>&1
     fi
 
     cat <<EOF > ${GRUB_SYSRESCCD}
@@ -81,8 +73,8 @@ exec tail -n +3 \$0
 menuentry 'SystemRescueCD' {
   set isofile="${ISO_PATH}/${SYSRESCCD_ISO}"
   loopback loop \$isofile
-  linux (loop)/isolinux/rescue${rescue} nomodeset setkmap=us rootpass=openmediavault docache isoloop=\$isofile
-  initrd (loop)/isolinux/initram.igz
+  linux (loop)/sysresccd/boot/x86_64/vmlinuz img_label=boot rootpass=openmediavault nomodeset archisobasedir=sysresccd copytoram setkmap=us img_loop=\$isofile
+  initrd (loop)/sysresccd/boot/x86_64/sysresccd.img
 }
 EOF
 
@@ -117,14 +109,14 @@ rebootclonezilla()
     if [ ! -f "${ISO_PATH}/${CLONEZILLA_ISO}" ]; then
         echo "Please click on Install button."
     else
-        DEFAULT=$(cat ${GRUB} | grep GRUB_DEFAULT | cut -d= -f2)
+        DEFAULT=$(awk -F "=" '$1 == "GRUB_DEFAULT" { print $2 }' ${GRUB})
 
         disablesubmenu
 
         if grep -q 'submenu' ${GRUB_CFG}; then
-            ENTRY=$(cat ${GRUB_CFG} | grep '^menuentry ' | grep -n Clonezilla | cut -f1 -d:)
+            ENTRY=$(grep '^menuentry ' ${GRUB_CFG} | grep -n Clonezilla | cut -f1 -d:)
         else
-            ENTRY=$(($(cat ${GRUB_CFG} | grep 'menuentry ' | grep -n Clonezilla | cut -f1 -d:)-1))
+            ENTRY=$(($(grep 'menuentry ' ${GRUB_CFG} | grep -n Clonezilla | cut -f1 -d:)-1))
         fi
 
         echo "Configuring grub to boot once from Clonezilla iso...  ${ENTRY}"
@@ -141,14 +133,14 @@ rebootsysresccd()
     if [ ! -f "${ISO_PATH}/${SYSRESCCD_ISO}" ]; then
         echo "Please click on Install button."
     else
-        DEFAULT=$(cat ${GRUB} | grep GRUB_DEFAULT | cut -d= -f2)
+        DEFAULT=$(awk -F "=" '$1 == "GRUB_DEFAULT" { print $2 }' ${GRUB})
 
         disablesubmenu
 
         if grep -q 'submenu' ${GRUB_CFG}; then
-            ENTRY=$(cat ${GRUB_CFG} | grep '^menuentry ' | grep -n SystemRescueCD | cut -f1 -d:)
+            ENTRY=$(grep '^menuentry ' ${GRUB_CFG} | grep -n SystemRescueCD | cut -f1 -d:)
         else
-            ENTRY=$(($(cat ${GRUB_CFG} | grep 'menuentry ' | grep -n SystemRescueCD | cut -f1 -d:)-1))
+            ENTRY=$(($(grep 'menuentry ' ${GRUB_CFG} | grep -n SystemRescueCD | cut -f1 -d:)-1))
         fi
 
         echo "Configuring grub to boot once from SystemRescueCD iso...  ${ENTRY}"
@@ -165,14 +157,14 @@ rebootgpartedlive()
     if [ ! -f "${ISO_PATH}/${GPARTEDLIVE_ISO}" ]; then
         echo "Please click on Install button."
     else
-        DEFAULT=$(cat ${GRUB} | grep GRUB_DEFAULT | cut -d= -f2)
+        DEFAULT=$(awk -F "=" '$1 == "GRUB_DEFAULT" { print $2 }' ${GRUB})
 
         disablesubmenu
 
         if grep -q 'submenu' ${GRUB_CFG}; then
-            ENTRY=$(cat ${GRUB_CFG} | grep '^menuentry ' | grep -n GParted | cut -f1 -d:)
+            ENTRY=$(grep '^menuentry ' ${GRUB_CFG} | grep -n GParted | cut -f1 -d:)
         else
-            ENTRY=$(($(cat ${GRUB_CFG} | grep 'menuentry ' | grep -n GParted | cut -f1 -d:)-1))
+            ENTRY=$(($(grep 'menuentry ' ${GRUB_CFG} | grep -n GParted | cut -f1 -d:)-1))
         fi
 
         echo "Configuring grub to boot once from GParted Live iso...  ${ENTRY}"
