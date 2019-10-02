@@ -1,6 +1,5 @@
 {%- set config = salt['omv_conf.get']('conf.system.omvextras') -%}
 deb https://dl.bintray.com/openmediavault-plugin-developers/{{ pillar['productinfo']['distribution'] }} {{ grains['oscodename'] }} main
-deb https://apt.syncthing.net/ syncthing release
 deb https://download.docker.com/linux/debian {{ grains['oscodename'] }} stable
 deb http://linux.teamviewer.com/deb stable main
 {%- if config.testing | to_bool %}
