@@ -1,9 +1,9 @@
-openmediavault-omvextrasorg (5.1.1) UNRELEASED; urgency=medium
+openmediavault-omvextrasorg (5.1.1) stable; urgency=low
 
   * Add cockpit packages to allow VMs to be stored in different location
   * Update locales
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 01 Oct 2019 10:03:33 -0500
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 05 Oct 2019 08:52:24 -0500
 
 openmediavault-omvextrasorg (5.1) stable; urgency=low
 
