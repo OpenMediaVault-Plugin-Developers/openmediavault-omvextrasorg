@@ -13,8 +13,8 @@ declare -i download=0
 daemonJson="/etc/docker/daemon.json"
 dockerBin="/usr/bin/docker"
 dockerCompose="/usr/local/bin/docker-compose"
-dockerComposeUrl="https://github.com/docker/compose/releases/download/"
 dockerComposeVersion="1.24.1"
+dockerComposeUrl="https://github.com/docker/compose/releases/download/${dockerComposeVersion}/docker-compose-Linux-x86_64"
 
 # portainer
 portainerImage="portainer/portainer"
@@ -213,19 +213,24 @@ EOF
   else
     echo "Skipping docker restart since it was already installed."
   fi
-
-  # download docker-compose and place in /usr/local/bin/ if current version is older
-  if [ -f "${dockerCompose}" ]; then
-    curVers="$(${dockerCompose} --version | cut -d',' -f1 | awk '{ print $3 }')"
-    if [ ! "${curVers}" = "${dockerComposeVersion}" ]; then
+  # docker-compose is only supported on 64 bit x86 systems (x86_64)
+  if [[ "$(uname -m)" == "x86_64" ]]; then
+    # download docker-compose and place in /usr/local/bin/ if current version is older
+    if [ -f "${dockerCompose}" ]; then
+      curVers="$(${dockerCompose} --version | cut -d',' -f1 | awk '{ print $3 }')"
+      if [ ! "${curVers}" = "${dockerComposeVersion}" ]; then
+        download=1
+      fi
+    else
       download=1
     fi
+    if [ ${download} -eq 1 ]; then
+      echo "Installing docker-compose ${dockerComposeVersion}..."
+      curl -L "${dockerComposeUrl}" -o "${dockerCompose}"
+      chmod +x "${dockerCompose}"
+    fi
   else
-    download=1
-  fi
-  if [ ${download} -eq 1 ]; then
-    curl -L "${dockerComposeUrl}/${dockerComposeVersion}/docker-compose-$(uname -s)-$(uname -m)" -o "${dockerCompose}"
-    chmod +x "${dockerCompose}"
+    echo "docker-compose is not supported on this system."
   fi
 }
 
