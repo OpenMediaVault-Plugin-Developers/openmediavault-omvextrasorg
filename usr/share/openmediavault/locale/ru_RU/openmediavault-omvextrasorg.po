@@ -6,13 +6,13 @@
 # Alexander Savchenko, 2013
 # Alexander Savchenko, 2014-2015
 # Артур Мудрых <arturmon82@gmail.com>, 2013,2015-2016
-# Артур Мудрых <arturmon82@gmail.com>, 2017
+# Артур Мудрых <arturmon82@gmail.com>, 2017,2019
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-30 19:37-0500\n"
-"PO-Revision-Date: 2019-10-01 00:37+0000\n"
+"POT-Creation-Date: 2019-11-04 06:55-0600\n"
+"PO-Revision-Date: 2019-11-04 12:55+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -22,37 +22,37 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 msgid "Backports"
-msgstr ""
+msgstr "Backports"
 
 msgid "Cleaning Apt Files and Lists ..."
-msgstr ""
+msgstr "Очистка Apt файлов и списков ..."
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
 
 msgid "Cockpit"
-msgstr ""
+msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
-msgstr ""
+msgstr "Cockpit прослушивает порт 9090 для веб-интерфейса."
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "По умолчанию имя пользователя: <b>user</b> и пароль: <b>live</b>"
 
 msgid "Disable Backports"
-msgstr ""
+msgstr "Отключить Backports"
 
 msgid "Disabling backports repo ..."
-msgstr ""
+msgstr "Отключается репо backports..."
 
 msgid "Docker"
-msgstr ""
+msgstr "Докер"
 
 msgid "Docker Storage"
-msgstr ""
+msgstr "Докер Хранилище"
 
 msgid "Done."
-msgstr ""
+msgstr "Готово."
 
 msgid ""
 "Downloads Clonezilla ISO and configures grub bootloader to allow booting "
@@ -67,28 +67,28 @@ msgstr "Загружает GParted Live ISO и настраивает загру
 msgid ""
 "Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
 " from ISO."
-msgstr ""
+msgstr "Загружает SystemRescuecd ISO и настраивает загрузчик grub, чтобы разрешить загрузку с ISO."
 
 msgid "Enable Backports"
-msgstr ""
+msgstr "Включить Backports"
 
 msgid "Enabling backports repo ..."
-msgstr ""
+msgstr "Включение репо backports ..."
 
 msgid "Extras repo"
-msgstr ""
+msgstr "Extras repo"
 
 msgid "GParted Live"
 msgstr "GParted Live"
 
 msgid "General settings"
-msgstr ""
+msgstr "Общие настройки"
 
 msgid "Hold Current Kernel"
-msgstr ""
+msgstr "Использовать текущее ядро"
 
 msgid "Holding current kernel ..."
-msgstr ""
+msgstr "Удерживаем текущее ядро ..."
 
 msgid "IP Address will be set by DHCP."
 msgstr "IP-адрес будет установлен DHCP."
@@ -114,17 +114,18 @@ msgid "Install Clonezilla ISO ..."
 msgstr "Установка Clonezilla ISO ..."
 
 msgid "Install Cockpit"
-msgstr ""
+msgstr "Установить Cockpit"
 
 msgid "Install Docker"
-msgstr ""
+msgstr "Установить Докер"
 
 msgid ""
-"Install Docker will download and place docker-compose in /usr/local/bin/."
+"Install Docker will download and place docker-compose in /usr/local/bin/ on "
+"64 bit x86 systems only."
 msgstr ""
 
 msgid "Install Docker will restart the docker service if daemon.json changes."
-msgstr ""
+msgstr "Установка Докер перезапустит службу Докер, если изменится daemon.json."
 
 msgid "Install GParted Live"
 msgstr "Установить GParted Live"
@@ -133,20 +134,20 @@ msgid "Install GParted Live ISO ..."
 msgstr "Установка GParted Live ISO ..."
 
 msgid "Install Portainer"
-msgstr ""
+msgstr "Установить Portainer"
 
 msgid ""
 "Install Portainer will install the docker-ce package if not already "
 "installed."
-msgstr ""
+msgstr "Установка Portainer установит пакет docker-ce, если он еще не установлен."
 
 msgid ""
 "Install Portainer will update Portainer to the latest image if the image "
 "already exists."
-msgstr ""
+msgstr "Установка Portainer обновит Portainer до последней версии, если он уже существует."
 
 msgid "Install Proxmox kernel"
-msgstr ""
+msgstr "Установить ядро Proxmox"
 
 msgid "Install SystemRescueCD"
 msgstr "Установить SystemRescueCD"
@@ -155,16 +156,16 @@ msgid "Install SystemRescueCD ISO ..."
 msgstr "Установка SystemRescueCD ISO ..."
 
 msgid "Installed"
-msgstr ""
+msgstr "Установлен"
 
 msgid "Installed Kernels"
 msgstr "Установленные ядра"
 
 msgid "Installing"
-msgstr ""
+msgstr "Установка"
 
 msgid "Installing Proxmox kernel ..."
-msgstr ""
+msgstr "Установка ядра Proxmox ..."
 
 msgid "Kernel"
 msgstr "Ядро"
@@ -173,7 +174,7 @@ msgid "Kernels"
 msgstr "Ядра"
 
 msgid "Not installed"
-msgstr ""
+msgstr "Не установлен"
 
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr "Не рекомендуется для серверов без головы. По умолчанию SSH не включен."
@@ -182,26 +183,26 @@ msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
 msgid "Open Cockpit web interface"
-msgstr ""
+msgstr "Открыть веб интерфейс Cockpit"
 
 msgid "Open Portainer web interface"
-msgstr ""
+msgstr "Открыть веб интерфейс Portainer"
 
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
 "/etc/docker/daemon.json."
-msgstr ""
+msgstr "Путь к хранилищу образов и контейнеров Докер. Оставьте пустым, чтобы использовать пользовательский /etc/docker/daemon.json."
 
 msgid "Portainer"
-msgstr ""
+msgstr "Portainer"
 
 msgid ""
 "Portainer will listen on port 9000 for the web interface and 8000 for the "
 "agent."
-msgstr ""
+msgstr "Portainer прослушивает порт 9000 для веб-интерфейса и 8000 для агента."
 
 msgid "Proxmox"
-msgstr ""
+msgstr "Proxmox"
 
 msgid "Reboot to Clonezilla ..."
 msgstr "Перезагрузиться в Clonezilla ..."
@@ -222,48 +223,48 @@ msgid "Reboot to SystemRescueCD Once"
 msgstr "Перезагрузиться в SystemRescueCD Once"
 
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
-msgstr ""
+msgstr "Перезагрузите ядро Proxmox перед удалением не-Proxmox ядер."
 
 msgid "Remove Cockpit"
-msgstr ""
+msgstr "Удалить Cockpit"
 
 msgid "Remove Docker"
-msgstr ""
+msgstr "Удалить Докер"
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
-msgstr ""
+msgstr "Удаление Докер, удалит docker-compose из /usr/local/bin/."
 
 msgid "Remove Portainer"
-msgstr ""
+msgstr "Удалить Portainer"
 
 msgid ""
 "Remove Portainer will remove the Portainer image and container but the "
 "volume will not be removed."
-msgstr ""
+msgstr "Удаление Portainer, удалит образ Portainer и контейнер, но том не будет удален."
 
 msgid "Remove non-Proxmox kernels and headers"
-msgstr ""
+msgstr "Удалить не Proxmox ядра и заголовки"
 
 msgid "Removing"
-msgstr ""
+msgstr "Удаление"
 
 msgid "Removing non-Proxmox kernels ..."
-msgstr ""
+msgstr "Удаление не-Proxmox ядер ..."
 
 msgid "Running apt-get dist-upgrade ..."
-msgstr ""
+msgstr "Запуск apt-get dist-upgrade ..."
 
 msgid "Running apt-get update ..."
-msgstr ""
+msgstr "Запуск apt-get update ..."
 
 msgid "Running apt-get upgrade ..."
-msgstr ""
+msgstr "Запуск apt-get upgrade ..."
 
 msgid "Running omv-aptclean ..."
-msgstr ""
+msgstr "Запуск omv-aptclean ..."
 
 msgid "Running omv-update ..."
-msgstr ""
+msgstr "Запуск omv-update ..."
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
@@ -285,7 +286,7 @@ msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr "Устанавливает загрузчик grub для загрузки GParted Live ISO <b>ONE</ b>."
 
 msgid "Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time."
-msgstr ""
+msgstr "Устанавливает загрузчик grub для загрузки с SystemRescueCD ISO <b>ONE</b>."
 
 msgid "Setting boot kernel ..."
 msgstr "Выбор загружаемого ядра ..."
@@ -297,43 +298,43 @@ msgid ""
 msgstr "Выбор неправильного ядра загрузки по умолчанию может привести к недоступности системы. Меню загрузки все еще будут доступно для выбора другого ядра."
 
 msgid "Settings"
-msgstr ""
+msgstr "Настройки"
 
 msgid "Status"
-msgstr ""
+msgstr "Статус"
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
 
 msgid "Testing repo"
-msgstr ""
+msgstr "Тестовое репо"
 
 msgid "This will enable the Proxmox 6.x repo."
-msgstr ""
+msgstr "Включит репо Proxmox 6.x."
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
-msgstr ""
+msgstr "Не удалит ядро linux-image- *, если оно все еще активно."
 
 msgid "This will install the latest 5.0 kernel."
-msgstr ""
+msgstr "Установит последнее ядро 5.0."
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
-msgstr ""
+msgstr "Удалит все пакеты заголовков с префиксом linux-headers-."
 
 msgid "This will remove all kernel packages with the prefix linux-image-."
-msgstr ""
+msgstr "Удалит все пакеты ядра с префиксом linux-image-."
 
 msgid "Unhold Current Kernel"
-msgstr ""
+msgstr "Не использовать текущее ядро"
 
 msgid "Unholding current kernel ..."
-msgstr ""
+msgstr "Прекращаем удерживать текущее ядро ..."
 
 msgid "Updates"
-msgstr ""
+msgstr "Обновления"
 
 msgid "Version"
-msgstr ""
+msgstr "Версия"
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
@@ -345,31 +346,31 @@ msgid ""
 msgstr "При удаленном входе в систему запустите clonezilla с помощью: <b>sudo clonezilla</ b>"
 
 msgid "and not running"
-msgstr ""
+msgstr "и не работает"
 
 msgid "and running"
-msgstr ""
+msgstr "и работает"
 
 msgid "apt clean"
-msgstr ""
+msgstr "apt clean"
 
 msgid "disabled"
-msgstr ""
+msgstr "Отключен"
 
 msgid "dist-upgrade"
-msgstr ""
+msgstr "dist-upgrade"
 
 msgid "enabled"
-msgstr ""
+msgstr "включено"
 
 msgid "n/a"
-msgstr ""
+msgstr "n/a"
 
 msgid "omv-update"
-msgstr ""
+msgstr "omv-update"
 
 msgid "update"
-msgstr ""
+msgstr "update"
 
 msgid "upgrade"
-msgstr ""
+msgstr "upgrade"

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-30 19:37-0500\n"
-"PO-Revision-Date: 2019-10-01 00:37+0000\n"
+"POT-Creation-Date: 2019-11-04 06:55-0600\n"
+"PO-Revision-Date: 2019-11-04 12:55+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
@@ -28,10 +28,10 @@ msgid "Clonezilla"
 msgstr "Clonezilla"
 
 msgid "Cockpit"
-msgstr ""
+msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
-msgstr ""
+msgstr "Cockpit のWebインタフェースはポート9090で待ち受けます。"
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "デフォルトのユーザー名: <b>user</b>、パスワード:<b>live</b>"
@@ -117,7 +117,8 @@ msgid "Install Docker"
 msgstr "Docker のインストール"
 
 msgid ""
-"Install Docker will download and place docker-compose in /usr/local/bin/."
+"Install Docker will download and place docker-compose in /usr/local/bin/ on "
+"64 bit x86 systems only."
 msgstr ""
 
 msgid "Install Docker will restart the docker service if daemon.json changes."
@@ -152,13 +153,13 @@ msgid "Install SystemRescueCD ISO ..."
 msgstr "SystemRescueCD ISOをインストール中 ..."
 
 msgid "Installed"
-msgstr ""
+msgstr "インストール済み"
 
 msgid "Installed Kernels"
 msgstr "インストールされているカーネル"
 
 msgid "Installing"
-msgstr ""
+msgstr "インストール中"
 
 msgid "Installing Proxmox kernel ..."
 msgstr "Proxmox カーネルをインストールしています ..."
@@ -170,7 +171,7 @@ msgid "Kernels"
 msgstr "カーネル"
 
 msgid "Not installed"
-msgstr ""
+msgstr "未インストール"
 
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr "ヘッドレスサーバーにはお勧めしません。 SSHはデフォルトで無効です。"
@@ -190,12 +191,12 @@ msgid ""
 msgstr "Dockerイメージとコンテナ ストレージへのパス。 カスタムの/etc/docker/daemon.jsonを使用するには空白のままにします。"
 
 msgid "Portainer"
-msgstr ""
+msgstr "Portainer"
 
 msgid ""
 "Portainer will listen on port 9000 for the web interface and 8000 for the "
 "agent."
-msgstr ""
+msgstr "portainerはWebインタフェースの場合はポート9000で、エージェントの場合はポート8000で待ち受けます。"
 
 msgid "Proxmox"
 msgstr "Proxmox"
@@ -222,16 +223,16 @@ msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "non-Proxmoxカーネルを削除する前に、Proxmoxカーネルで再起動してください。"
 
 msgid "Remove Cockpit"
-msgstr ""
+msgstr "Cockpitの削除"
 
 msgid "Remove Docker"
-msgstr ""
+msgstr "Dockerの削除"
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
 msgstr ""
 
 msgid "Remove Portainer"
-msgstr ""
+msgstr "Portainerの削除"
 
 msgid ""
 "Remove Portainer will remove the Portainer image and container but the "
@@ -242,7 +243,7 @@ msgid "Remove non-Proxmox kernels and headers"
 msgstr "non-Proxmoxカーネルとヘッダーを削除する"
 
 msgid "Removing"
-msgstr ""
+msgstr "削除中"
 
 msgid "Removing non-Proxmox kernels ..."
 msgstr "non-Proxmox カーネルを削除しています ..."
@@ -297,7 +298,7 @@ msgid "Settings"
 msgstr "設定"
 
 msgid "Status"
-msgstr ""
+msgstr "状態"
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
@@ -312,7 +313,7 @@ msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "linux-image- * カーネルがまだアクティブであれば削除することはできません。"
 
 msgid "This will install the latest 5.0 kernel."
-msgstr ""
+msgstr "最新の5.0カーネルがインストールされます。"
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "linux-headers-で始まる、すべてのヘッダパッケージが削除されます。"
@@ -330,7 +331,7 @@ msgid "Updates"
 msgstr "アップデート"
 
 msgid "Version"
-msgstr ""
+msgstr "バージョン"
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
@@ -342,25 +343,25 @@ msgid ""
 msgstr "リモートからログインする場合、 <b>sudo clonezilla</b>コマンドでclonezilla を起動します。"
 
 msgid "and not running"
-msgstr ""
+msgstr "未実行"
 
 msgid "and running"
-msgstr ""
+msgstr "実行中"
 
 msgid "apt clean"
 msgstr "apt clean"
 
 msgid "disabled"
-msgstr ""
+msgstr "無効化済"
 
 msgid "dist-upgrade"
 msgstr "dist-upgrade"
 
 msgid "enabled"
-msgstr ""
+msgstr "有効化済"
 
 msgid "n/a"
-msgstr ""
+msgstr "n/a"
 
 msgid "omv-update"
 msgstr "omv-update"

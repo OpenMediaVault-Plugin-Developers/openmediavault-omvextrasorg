@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-30 19:37-0500\n"
-"PO-Revision-Date: 2019-10-01 00:37+0000\n"
+"POT-Creation-Date: 2019-11-04 06:55-0600\n"
+"PO-Revision-Date: 2019-11-04 12:55+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -24,16 +24,16 @@ msgid "Backports"
 msgstr "Visszaportolások"
 
 msgid "Cleaning Apt Files and Lists ..."
-msgstr ""
+msgstr "Apt fájlok és listák ürítése…"
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
 
 msgid "Cockpit"
-msgstr ""
+msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
-msgstr ""
+msgstr "A Cockpit webes felhasználói felülete a 9090-es porton hallgat."
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Alapértelmezett felhasználónév: <b>felhasználó</b> és jelszó: <b>élő</b>"
@@ -45,13 +45,13 @@ msgid "Disabling backports repo ..."
 msgstr "Visszaportolt tároló letiltása…"
 
 msgid "Docker"
-msgstr ""
+msgstr "Docker"
 
 msgid "Docker Storage"
-msgstr ""
+msgstr "Docker tároló"
 
 msgid "Done."
-msgstr ""
+msgstr "Kész."
 
 msgid ""
 "Downloads Clonezilla ISO and configures grub bootloader to allow booting "
@@ -113,17 +113,18 @@ msgid "Install Clonezilla ISO ..."
 msgstr "Clonezilla ISO telepítése…"
 
 msgid "Install Cockpit"
-msgstr ""
+msgstr "Cockpit telepítése"
 
 msgid "Install Docker"
-msgstr ""
+msgstr "Docker telepítése"
 
 msgid ""
-"Install Docker will download and place docker-compose in /usr/local/bin/."
+"Install Docker will download and place docker-compose in /usr/local/bin/ on "
+"64 bit x86 systems only."
 msgstr ""
 
 msgid "Install Docker will restart the docker service if daemon.json changes."
-msgstr ""
+msgstr "A Docker telepítése újraindítja a docker szolgáltatást ha a daemon.json megváltozik."
 
 msgid "Install GParted Live"
 msgstr "GParted Live telepítése"
@@ -132,17 +133,17 @@ msgid "Install GParted Live ISO ..."
 msgstr "GParted Live ISO telepítése…"
 
 msgid "Install Portainer"
-msgstr ""
+msgstr "Portainer telepítése"
 
 msgid ""
 "Install Portainer will install the docker-ce package if not already "
 "installed."
-msgstr ""
+msgstr "A Portainer telepítése telepíteni fogja a docker-ce csomagot, ha az még nincs telepítve."
 
 msgid ""
 "Install Portainer will update Portainer to the latest image if the image "
 "already exists."
-msgstr ""
+msgstr "A Portainer telepítése frissíteni fogja a Portainer-t a legfrissebb képre, ha az már létezik."
 
 msgid "Install Proxmox kernel"
 msgstr "Proxmox kernel telepítése"
@@ -154,16 +155,16 @@ msgid "Install SystemRescueCD ISO ..."
 msgstr "SystemRescueCD ISO telepítése…"
 
 msgid "Installed"
-msgstr ""
+msgstr "Telepítve"
 
 msgid "Installed Kernels"
 msgstr "Telepített kernelek"
 
 msgid "Installing"
-msgstr ""
+msgstr "Telepítés"
 
 msgid "Installing Proxmox kernel ..."
-msgstr ""
+msgstr "Proxmox kernel telepítése…"
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -172,7 +173,7 @@ msgid "Kernels"
 msgstr "Kernelek"
 
 msgid "Not installed"
-msgstr ""
+msgstr "Nincs telepítve"
 
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr "Nem tanácsolt periféria nélküli kiszolgálókra. Az SSH nincs engedélyezve alapértelmezetten."
@@ -181,23 +182,23 @@ msgid "OMV-Extras"
 msgstr "OMV-Extrák"
 
 msgid "Open Cockpit web interface"
-msgstr ""
+msgstr "Cockpit webes felületének megnyitása"
 
 msgid "Open Portainer web interface"
-msgstr ""
+msgstr "Portainer webes felület megnyitása"
 
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
 "/etc/docker/daemon.json."
-msgstr ""
+msgstr "A Docker képek és a konténer tárolók útvonala. Üresen hagyva egyéni /etc/docker/daemon.json lesz alkalmazva."
 
 msgid "Portainer"
-msgstr ""
+msgstr "Portainer"
 
 msgid ""
 "Portainer will listen on port 9000 for the web interface and 8000 for the "
 "agent."
-msgstr ""
+msgstr "A Portainer webes felhasználói felülete a 9000-es porton hallgat, az ügynök pedig a 8000-en."
 
 msgid "Proxmox"
 msgstr "Proxmox"
@@ -224,30 +225,30 @@ msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "Újraindítás Proxmox kernellel a nem Proxmox kernelek eltávolítása előtt."
 
 msgid "Remove Cockpit"
-msgstr ""
+msgstr "Cockpit eltávolítása"
 
 msgid "Remove Docker"
-msgstr ""
+msgstr "Docker eltávolítása"
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
-msgstr ""
+msgstr "A Docker eltávolítása törölni fogja a docker-compose-t a /usr/local/bin/-ből."
 
 msgid "Remove Portainer"
-msgstr ""
+msgstr "Portainer eltávolítása"
 
 msgid ""
 "Remove Portainer will remove the Portainer image and container but the "
 "volume will not be removed."
-msgstr ""
+msgstr "A Portainer eltávolítása el fogja távolítani a Portainer képet és a tárolót, de a kötet nem lesz eltávolítva."
 
 msgid "Remove non-Proxmox kernels and headers"
 msgstr "Nem Proxmox kernelek és fejlécek eltávolítása"
 
 msgid "Removing"
-msgstr ""
+msgstr "Eltávolítás"
 
 msgid "Removing non-Proxmox kernels ..."
-msgstr ""
+msgstr "Nem Proxmox kernelek eltávolítása…"
 
 msgid "Running apt-get dist-upgrade ..."
 msgstr "apt-get dist-upgrade futtatása ..."
@@ -296,10 +297,10 @@ msgid ""
 msgstr "A rosszul alapértelmezettként beállított kernel miatt a rendszer elérhetetlenné válhat. A boot menüben továbbra is kiválasztható lesz egy másik kernel. "
 
 msgid "Settings"
-msgstr ""
+msgstr "Beállítások"
 
 msgid "Status"
-msgstr ""
+msgstr "Állapot"
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
@@ -308,13 +309,13 @@ msgid "Testing repo"
 msgstr "Teszt tároló"
 
 msgid "This will enable the Proxmox 6.x repo."
-msgstr ""
+msgstr "A Proxmox 6.x tároló engedélyezése."
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "Meg fog hiúsulni a linux-image-* kernel eltávolítása, ha még aktív."
 
 msgid "This will install the latest 5.0 kernel."
-msgstr ""
+msgstr "A legutolsó 5.0-ás kernel telepítése."
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "A linux-headers- előtagra illeszkedő összes fejléc csomag eltávolítása."
@@ -332,7 +333,7 @@ msgid "Updates"
 msgstr "Frissítések"
 
 msgid "Version"
-msgstr ""
+msgstr "Verzió"
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
@@ -344,25 +345,25 @@ msgid ""
 msgstr "Távoli belépés esetén a Clonezilla így indítható: <b>sudo clonezilla</b>"
 
 msgid "and not running"
-msgstr ""
+msgstr "és nem fut"
 
 msgid "and running"
-msgstr ""
+msgstr "és fut"
 
 msgid "apt clean"
 msgstr "apt clean"
 
 msgid "disabled"
-msgstr ""
+msgstr "letiltva"
 
 msgid "dist-upgrade"
 msgstr "dist-upgrade"
 
 msgid "enabled"
-msgstr ""
+msgstr "engedélyezve"
 
 msgid "n/a"
-msgstr ""
+msgstr "nem értelmezett"
 
 msgid "omv-update"
 msgstr "omv-update"

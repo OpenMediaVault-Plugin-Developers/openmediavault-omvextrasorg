@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-30 19:37-0500\n"
-"PO-Revision-Date: 2019-10-01 00:37+0000\n"
+"POT-Creation-Date: 2019-11-04 06:55-0600\n"
+"PO-Revision-Date: 2019-11-04 12:55+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -28,10 +28,10 @@ msgid "Clonezilla"
 msgstr "Clonezilla"
 
 msgid "Cockpit"
-msgstr ""
+msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
-msgstr ""
+msgstr "Cockpit 在連接埠 9090 監聽網站介面。"
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "預設 用戶名稱：<b>user</b> 與 密碼：<b>live</b>"
@@ -117,11 +117,12 @@ msgid "Install Docker"
 msgstr "安裝 Docker"
 
 msgid ""
-"Install Docker will download and place docker-compose in /usr/local/bin/."
+"Install Docker will download and place docker-compose in /usr/local/bin/ on "
+"64 bit x86 systems only."
 msgstr ""
 
 msgid "Install Docker will restart the docker service if daemon.json changes."
-msgstr ""
+msgstr "安裝 Docker 後，如果 daemon.json 有改變，則將重新啟動 docker 服務程式。"
 
 msgid "Install GParted Live"
 msgstr "安裝 GParted Live"
@@ -135,12 +136,12 @@ msgstr "安裝 Portainer"
 msgid ""
 "Install Portainer will install the docker-ce package if not already "
 "installed."
-msgstr ""
+msgstr "安裝 Portainer 也會安裝 docker-ce 套件，如果它之前沒被安裝。"
 
 msgid ""
 "Install Portainer will update Portainer to the latest image if the image "
 "already exists."
-msgstr ""
+msgstr "安裝 Portainer 時將更新 Portainer 到最新的影像，如果它的影像已經存在。"
 
 msgid "Install Proxmox kernel"
 msgstr "安裝 Proxmox 系統核心"
@@ -152,13 +153,13 @@ msgid "Install SystemRescueCD ISO ..."
 msgstr "安裝 SystemRescueCD ISO ..."
 
 msgid "Installed"
-msgstr ""
+msgstr "已安裝"
 
 msgid "Installed Kernels"
 msgstr "已安裝的系統核心"
 
 msgid "Installing"
-msgstr ""
+msgstr "安裝中"
 
 msgid "Installing Proxmox kernel ..."
 msgstr "安裝 Proxmox 核心中 ..."
@@ -170,7 +171,7 @@ msgid "Kernels"
 msgstr "系統核心"
 
 msgid "Not installed"
-msgstr ""
+msgstr "未安裝"
 
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr "不建議在無頭伺服器上使用。SSH 並非預設為啟動。"
@@ -190,12 +191,12 @@ msgid ""
 msgstr "指向儲存 Docker 影像和容器的路徑。若留空白則會使用客製的 /etc/docker/daemon.json。"
 
 msgid "Portainer"
-msgstr ""
+msgstr "Portainer"
 
 msgid ""
 "Portainer will listen on port 9000 for the web interface and 8000 for the "
 "agent."
-msgstr ""
+msgstr "Portainer 將在連接埠 9000 監聽網站介面，在連接埠 8000 上監聽代理服務。"
 
 msgid "Proxmox"
 msgstr "Proxmox"
@@ -222,27 +223,27 @@ msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "在移除 非Proxmox 系統核心之前，請先以 Promxmox 系統核心重新啟動。"
 
 msgid "Remove Cockpit"
-msgstr ""
+msgstr "移除 Cockpit"
 
 msgid "Remove Docker"
-msgstr ""
+msgstr "移除 Docker"
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
-msgstr ""
+msgstr "移除 Docker 將會把 docker-compose 從 /usr/local/bin/ 裡刪除掉。"
 
 msgid "Remove Portainer"
-msgstr ""
+msgstr "移除 Portainer"
 
 msgid ""
 "Remove Portainer will remove the Portainer image and container but the "
 "volume will not be removed."
-msgstr ""
+msgstr "移除 Portainer 將會移除 Portainer 的影像和容器，但資料卷將不會被移除。"
 
 msgid "Remove non-Proxmox kernels and headers"
 msgstr "移除 非Proxmox 系統核心與標頭檔案"
 
 msgid "Removing"
-msgstr ""
+msgstr "移除中"
 
 msgid "Removing non-Proxmox kernels ..."
 msgstr "移除 非Proxmox 系統核心中 ..."
@@ -297,7 +298,7 @@ msgid "Settings"
 msgstr "設定"
 
 msgid "Status"
-msgstr ""
+msgstr "狀態"
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
@@ -306,13 +307,13 @@ msgid "Testing repo"
 msgstr "測試套件庫"
 
 msgid "This will enable the Proxmox 6.x repo."
-msgstr ""
+msgstr "這將啟用 Proxmox 6.x 套件庫。"
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "移除 linux-image-* kernel 可能會失敗，如果它仍在操作中。"
 
 msgid "This will install the latest 5.0 kernel."
-msgstr ""
+msgstr "這將會安裝最新的 5.0 系統核心。"
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "這將會移除所有前綴詞是 linux-headers- 的標題檔案套件。"
@@ -330,7 +331,7 @@ msgid "Updates"
 msgstr "更新方式"
 
 msgid "Version"
-msgstr ""
+msgstr "版本"
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
@@ -342,25 +343,25 @@ msgid ""
 msgstr "當從遠端登入時，以此指令啟動 clonezilla：<b>sudo clonezilla</b>"
 
 msgid "and not running"
-msgstr ""
+msgstr "並且不在執行中"
 
 msgid "and running"
-msgstr ""
+msgstr "並且正在執行中"
 
 msgid "apt clean"
 msgstr "apt clean"
 
 msgid "disabled"
-msgstr ""
+msgstr "已停用"
 
 msgid "dist-upgrade"
 msgstr "dist-upgrade"
 
 msgid "enabled"
-msgstr ""
+msgstr "已啟用"
 
 msgid "n/a"
-msgstr ""
+msgstr "不適用"
 
 msgid "omv-update"
 msgstr "omv-update"
