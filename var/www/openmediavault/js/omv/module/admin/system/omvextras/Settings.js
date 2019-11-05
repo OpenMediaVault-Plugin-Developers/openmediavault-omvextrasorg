@@ -178,8 +178,10 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
             },{
                 border: false,
                 html: "<ul>" +
-                        "<li>" + _("Install Docker will download and place docker-compose in /usr/local/bin/ on 64 bit x86 systems only.") + "</li>" +
+                        "<li>" + _("Install Docker will install the docker-compose package. Location: /usr/bin/ on all systems.") + "</li>" +
+                        "<li>" + _("Install Docker will download and place a newer docker-compose in /usr/local/bin/ on 64 bit x86 systems only.") + "</li>" +
                         "<li>" + _("Install Docker will restart the docker service if daemon.json changes.") + "</li>" +
+                        "<li>" + _("Remove Docker will remove the docker-compose package.") + "</li>" +
                         "<li>" + _("Remove Docker will delete docker-compose from /usr/local/bin/.") + "</li>" +
                       "</ul>"
             }]

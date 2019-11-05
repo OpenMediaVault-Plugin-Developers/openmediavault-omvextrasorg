@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-04 06:55-0600\n"
-"PO-Revision-Date: 2019-11-04 12:55+0000\n"
+"POT-Creation-Date: 2019-11-05 13:51-0600\n"
+"PO-Revision-Date: 2019-11-05 19:51+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -33,7 +33,7 @@ msgid "Clonezilla"
 msgstr "Clonezilla"
 
 msgid "Cockpit"
-msgstr ""
+msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
 msgstr ""
@@ -122,8 +122,13 @@ msgid "Install Docker"
 msgstr "Docker installieren"
 
 msgid ""
-"Install Docker will download and place docker-compose in /usr/local/bin/ on "
-"64 bit x86 systems only."
+"Install Docker will download and place a newer docker-compose in "
+"/usr/local/bin/ on 64 bit x86 systems only."
+msgstr ""
+
+msgid ""
+"Install Docker will install the docker-compose package. Location: /usr/bin/ "
+"on all systems."
 msgstr ""
 
 msgid "Install Docker will restart the docker service if daemon.json changes."
@@ -158,13 +163,13 @@ msgid "Install SystemRescueCD ISO ..."
 msgstr "SystemRescueCD ISO installieren ..."
 
 msgid "Installed"
-msgstr ""
+msgstr "Installiert"
 
 msgid "Installed Kernels"
 msgstr "Installierte Kernel"
 
 msgid "Installing"
-msgstr ""
+msgstr "Wird installiert"
 
 msgid "Installing Proxmox kernel ..."
 msgstr "Proxmox-Kernel wird installiert ..."
@@ -176,7 +181,7 @@ msgid "Kernels"
 msgstr "Kernel"
 
 msgid "Not installed"
-msgstr ""
+msgstr "Nicht installiert"
 
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr ""
@@ -196,7 +201,7 @@ msgid ""
 msgstr ""
 
 msgid "Portainer"
-msgstr ""
+msgstr "Portainer"
 
 msgid ""
 "Portainer will listen on port 9000 for the web interface and 8000 for the "
@@ -228,16 +233,19 @@ msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr ""
 
 msgid "Remove Cockpit"
-msgstr ""
+msgstr "Cockpit entfernen"
 
 msgid "Remove Docker"
-msgstr ""
+msgstr "Docker entfernen"
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
 msgstr ""
 
-msgid "Remove Portainer"
+msgid "Remove Docker will remove the docker-compose package."
 msgstr ""
+
+msgid "Remove Portainer"
+msgstr "Portainer entfernen"
 
 msgid ""
 "Remove Portainer will remove the Portainer image and container but the "
@@ -248,25 +256,25 @@ msgid "Remove non-Proxmox kernels and headers"
 msgstr ""
 
 msgid "Removing"
-msgstr ""
+msgstr "Wird entfernt"
 
 msgid "Removing non-Proxmox kernels ..."
-msgstr ""
+msgstr "Nicht-Proxmox-Kernel werden entfernt ..."
 
 msgid "Running apt-get dist-upgrade ..."
-msgstr ""
+msgstr "apt-get dist-upgrade wird ausgeführt ..."
 
 msgid "Running apt-get update ..."
-msgstr ""
+msgstr "apt-get update wird ausgeführt ..."
 
 msgid "Running apt-get upgrade ..."
-msgstr ""
+msgstr "apt-get upgrade wird ausgeführt ..."
 
 msgid "Running omv-aptclean ..."
-msgstr ""
+msgstr "omv-aptclean wird ausgeführt ..."
 
 msgid "Running omv-update ..."
-msgstr ""
+msgstr "omv-update wird ausgeführt ..."
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
@@ -336,7 +344,7 @@ msgid "Updates"
 msgstr "Aktualisierungen"
 
 msgid "Version"
-msgstr ""
+msgstr "Version"
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
@@ -354,25 +362,25 @@ msgid "and running"
 msgstr ""
 
 msgid "apt clean"
-msgstr ""
+msgstr "apt clean"
 
 msgid "disabled"
-msgstr ""
+msgstr "deaktiviert"
 
 msgid "dist-upgrade"
-msgstr ""
+msgstr "dist-upgrade"
 
 msgid "enabled"
-msgstr ""
+msgstr "aktiviert"
 
 msgid "n/a"
-msgstr ""
+msgstr "n/v"
 
 msgid "omv-update"
-msgstr ""
+msgstr "omv-update"
 
 msgid "update"
-msgstr ""
+msgstr "update"
 
 msgid "upgrade"
-msgstr ""
+msgstr "upgrade"

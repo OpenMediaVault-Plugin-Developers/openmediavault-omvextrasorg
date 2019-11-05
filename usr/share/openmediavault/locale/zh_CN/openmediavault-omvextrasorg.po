@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-04 06:55-0600\n"
-"PO-Revision-Date: 2019-11-04 12:55+0000\n"
+"POT-Creation-Date: 2019-11-05 13:51-0600\n"
+"PO-Revision-Date: 2019-11-05 19:51+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -28,10 +28,10 @@ msgid "Clonezilla"
 msgstr "再生龙 Clonezilla"
 
 msgid "Cockpit"
-msgstr ""
+msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
-msgstr ""
+msgstr "9090作为 Cockpit web 标签页的监听端口。"
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "默认用户名 <b>user</b>  默认密码: <b>live</b>"
@@ -117,12 +117,17 @@ msgid "Install Docker"
 msgstr "安装 Docker"
 
 msgid ""
-"Install Docker will download and place docker-compose in /usr/local/bin/ on "
-"64 bit x86 systems only."
+"Install Docker will download and place a newer docker-compose in "
+"/usr/local/bin/ on 64 bit x86 systems only."
+msgstr ""
+
+msgid ""
+"Install Docker will install the docker-compose package. Location: /usr/bin/ "
+"on all systems."
 msgstr ""
 
 msgid "Install Docker will restart the docker service if daemon.json changes."
-msgstr ""
+msgstr "如果 daemon.json 有变更，安装 Docker 将会重启 Docker服务。"
 
 msgid "Install GParted Live"
 msgstr "安装 GParted Live"
@@ -136,12 +141,12 @@ msgstr "安装 Portainer"
 msgid ""
 "Install Portainer will install the docker-ce package if not already "
 "installed."
-msgstr ""
+msgstr "如果没有安装 docker-ce 包，在安装 Portainer 时将会一并安装。"
 
 msgid ""
 "Install Portainer will update Portainer to the latest image if the image "
 "already exists."
-msgstr ""
+msgstr "安装 Portainer 将会更新已有 Portainer 镜像到最新版。"
 
 msgid "Install Proxmox kernel"
 msgstr "安装 Proxmox 内核"
@@ -153,13 +158,13 @@ msgid "Install SystemRescueCD ISO ..."
 msgstr "安装 SystemRescueCD ISO ..."
 
 msgid "Installed"
-msgstr ""
+msgstr "已安装"
 
 msgid "Installed Kernels"
 msgstr "安装内核"
 
 msgid "Installing"
-msgstr ""
+msgstr "安装中"
 
 msgid "Installing Proxmox kernel ..."
 msgstr "安装 Proxmox 内核中 ..."
@@ -171,7 +176,7 @@ msgid "Kernels"
 msgstr "内核"
 
 msgid "Not installed"
-msgstr ""
+msgstr "未安装"
 
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr "不建议使用缺省服务器，因为默认 SSH 没有开启。"
@@ -191,12 +196,12 @@ msgid ""
 msgstr "Docker images 和 containers 存储路径，留空的话将使用 /etc/docker/daemon.json。"
 
 msgid "Portainer"
-msgstr ""
+msgstr "Portainer"
 
 msgid ""
 "Portainer will listen on port 9000 for the web interface and 8000 for the "
 "agent."
-msgstr ""
+msgstr "Portainer 将会在web 标签页监听9000端口 ，在agent代理监听8000端口。"
 
 msgid "Proxmox"
 msgstr "Proxmox"
@@ -223,27 +228,30 @@ msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "在删除 non-Proxmox 内核后以 Proxmox内核重启。"
 
 msgid "Remove Cockpit"
-msgstr ""
+msgstr "删除  Cockpit"
 
 msgid "Remove Docker"
-msgstr ""
+msgstr "删除 Docker"
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
+msgstr "删除 Docker 将会删除 /usr/local/bin/ 路径下的 docker-compose"
+
+msgid "Remove Docker will remove the docker-compose package."
 msgstr ""
 
 msgid "Remove Portainer"
-msgstr ""
+msgstr "删除 Portainer"
 
 msgid ""
 "Remove Portainer will remove the Portainer image and container but the "
 "volume will not be removed."
-msgstr ""
+msgstr "删除 Portainer 将会删除 Portainer 镜像和容器，但是卷不会被删除。"
 
 msgid "Remove non-Proxmox kernels and headers"
 msgstr "删除 non-Proxmox 内核和头文件"
 
 msgid "Removing"
-msgstr ""
+msgstr "删除中"
 
 msgid "Removing non-Proxmox kernels ..."
 msgstr "删除 non-Proxmox 内核中 ..."
@@ -298,7 +306,7 @@ msgid "Settings"
 msgstr "设置"
 
 msgid "Status"
-msgstr ""
+msgstr "状态"
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
@@ -307,13 +315,13 @@ msgid "Testing repo"
 msgstr "测试源"
 
 msgid "This will enable the Proxmox 6.x repo."
-msgstr ""
+msgstr "这将启用 Proxmox 6.x 源。"
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "如果 linux-image-*内核处于使用状态删除该内核将失败。"
 
 msgid "This will install the latest 5.0 kernel."
-msgstr ""
+msgstr "这将安装最新的5.0版本内核。"
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "这将删除前缀为 linux-headers- 的所有软件包。"
@@ -331,7 +339,7 @@ msgid "Updates"
 msgstr "更新"
 
 msgid "Version"
-msgstr ""
+msgstr "版本"
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
@@ -343,25 +351,25 @@ msgid ""
 msgstr "当远程登录时，启动再生龙 clonezilla 命令是: <b>sudo clonezilla</b>"
 
 msgid "and not running"
-msgstr ""
+msgstr "未运行"
 
 msgid "and running"
-msgstr ""
+msgstr "运行中"
 
 msgid "apt clean"
 msgstr "apt clean"
 
 msgid "disabled"
-msgstr ""
+msgstr "停用"
 
 msgid "dist-upgrade"
 msgstr "dist-upgrade"
 
 msgid "enabled"
-msgstr ""
+msgstr "启用"
 
 msgid "n/a"
-msgstr ""
+msgstr "n/a"
 
 msgid "omv-update"
 msgstr "omv-update"
