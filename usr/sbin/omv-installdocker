@@ -6,9 +6,9 @@ declare -i status=0
 
 # cockpit
 declare cockpitPackages=""
-declare dockerPackages="docker-ce"
 
 # docker
+declare dockerPackages="docker-ce docker-compose"
 declare -i download=0
 daemonJson="/etc/docker/daemon.json"
 dockerBin="/usr/bin/docker"
@@ -91,7 +91,7 @@ removeDocker()
   fi
   if [ -f "${dockerCompose}" ]; then
     rm "${dockerCompose}"
-    echo "docker-compose removed."
+    echo "local docker-compose removed."
   fi
 }
 
@@ -213,7 +213,6 @@ EOF
   else
     echo "Skipping docker restart since it was already installed."
   fi
-  # docker-compose is only supported on 64 bit x86 systems (x86_64)
   if [[ "$(uname -m)" == "x86_64" ]]; then
     # download docker-compose and place in /usr/local/bin/ if current version is older
     if [ -f "${dockerCompose}" ]; then
@@ -225,12 +224,10 @@ EOF
       download=1
     fi
     if [ ${download} -eq 1 ]; then
-      echo "Installing docker-compose ${dockerComposeVersion}..."
+      echo "Installing local docker-compose ${dockerComposeVersion}..."
       curl -L "${dockerComposeUrl}" -o "${dockerCompose}"
       chmod +x "${dockerCompose}"
     fi
-  else
-    echo "docker-compose is not supported on this system."
   fi
 }
 
