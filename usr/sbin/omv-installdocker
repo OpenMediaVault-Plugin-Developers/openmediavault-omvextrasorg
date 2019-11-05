@@ -25,7 +25,7 @@ portainerVolume="portainer_data"
 setCockpitPackages()
 {
   cockpitPackages="cockpit cockpit-docker cockpit-packagekit"
-  if [[ ! "$(arch)" == "arm"* ]]; then
+  if [[ "$(dpkg --print-architecture)" == "amd64" ]] || [[ "$(dpkg --print-architecture)" == "i386" ]]; then
     cockpitPackages="${cockpitPackages} cockpit-machines virtinst qemu-kvm qemu-utils libvirt-dbus cockpit-storaged"
   fi
 }
