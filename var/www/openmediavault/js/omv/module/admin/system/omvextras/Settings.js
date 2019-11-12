@@ -308,7 +308,7 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
                 } else {
                   action = _("Installing");
                 }
-                msg = action + " " + str[1] + " ...";
+                msg = action + " " + str[0] + " ...";
                 break;
         }
         var wnd = Ext.create("OMV.window.Execute", {
