@@ -5,7 +5,7 @@ declare -i kernnum=0
 distro="$(lsb_release --codename --short)"
 grubconfig="/boot/grub/grub.cfg";
 grubdefault="/etc/default/grub";
-kernelversion="5.0"
+kernelversion="5.3"
 pverepo="/etc/apt/sources.list.d/pvekernel.list"
 repourl="http://download.proxmox.com/debian"
 
@@ -36,7 +36,7 @@ for pkg in linux linux-nonfree ti-connectivity amd-graphics cavium siano netrono
 done
 
 # install kernel and headers
-DEBIAN_FRONTEND=noninteractive apt-get --yes --fix-missing install pve-kernel-${kernelversion} pve-headers
+DEBIAN_FRONTEND=noninteractive apt-get --yes --fix-missing install pve-kernel-${kernelversion} pve-headers-${kernelversion} pve-headers
 if [ $? -gt 0 ]; then
   echo "Failed to install Proxmox kernel.  Exiting..."
   exit 4

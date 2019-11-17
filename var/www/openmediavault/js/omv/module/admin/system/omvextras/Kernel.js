@@ -122,7 +122,7 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                 border: false,
                 html: "<ul>" +
                         "<li>" + _("This will enable the Proxmox 6.x repo.") + "</li>" +
-                        "<li>" + _("This will install the latest 5.0 kernel.") + "</li>" +
+                        "<li>" + _("This will install the latest 5.3 kernel.") + "</li>" +
                       "</ul>"
             },{
                 xtype: "button",
