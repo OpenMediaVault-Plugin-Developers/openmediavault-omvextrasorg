@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-05 13:51-0600\n"
-"PO-Revision-Date: 2019-11-05 19:51+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2019-11-14 15:42+0000\n"
+"Last-Translator: Raul Fernandez Garcia <raulfg3@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,16 +22,16 @@ msgid "Backports"
 msgstr "Backports"
 
 msgid "Cleaning Apt Files and Lists ..."
-msgstr ""
+msgstr "Limpiando listas y Archivos Apt ..."
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
 
 msgid "Cockpit"
-msgstr ""
+msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
-msgstr ""
+msgstr "Cockpit está a la escucha en el puerto 9000 para mostrar su interfaz."
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Usuario por defecto: <b>user</b> Contraseña: <b>live</b>"
@@ -43,13 +43,13 @@ msgid "Disabling backports repo ..."
 msgstr "Deshabilitando el repositorio backports ...."
 
 msgid "Docker"
-msgstr ""
+msgstr "Docker"
 
 msgid "Docker Storage"
-msgstr ""
+msgstr "Almacenamiento de Dockers"
 
 msgid "Done."
-msgstr ""
+msgstr "Hecho."
 
 msgid ""
 "Downloads Clonezilla ISO and configures grub bootloader to allow booting "
@@ -111,23 +111,23 @@ msgid "Install Clonezilla ISO ..."
 msgstr "Instalando ISO de Clonezilla ..."
 
 msgid "Install Cockpit"
-msgstr ""
+msgstr "Instalar Cockpit"
 
 msgid "Install Docker"
-msgstr ""
+msgstr "Instalar Docker"
 
 msgid ""
 "Install Docker will download and place a newer docker-compose in "
 "/usr/local/bin/ on 64 bit x86 systems only."
-msgstr ""
+msgstr "Instalar Docker iniciará la descarga e instalación via docker-compose de la imagen en  /usr/local/bin/ en sistemas de 64 bit y  x86 exclusivamente."
 
 msgid ""
 "Install Docker will install the docker-compose package. Location: /usr/bin/ "
 "on all systems."
-msgstr ""
+msgstr "Instalar Docker instalará también docker-compose. Ubicación: /us¡r/bin en todos los sistemas"
 
 msgid "Install Docker will restart the docker service if daemon.json changes."
-msgstr ""
+msgstr "Instalar Docker, reiniciara el servicio si el demonio daemon.json ha cambiado."
 
 msgid "Install GParted Live"
 msgstr "Instalar GParted Live"
@@ -136,17 +136,17 @@ msgid "Install GParted Live ISO ..."
 msgstr "Instalando la ISO de GParted Live ..."
 
 msgid "Install Portainer"
-msgstr ""
+msgstr "Instalar Portainer"
 
 msgid ""
 "Install Portainer will install the docker-ce package if not already "
 "installed."
-msgstr ""
+msgstr "Instalar Portainer, instalará el paquete docker-ce si no existe en el sistema"
 
 msgid ""
 "Install Portainer will update Portainer to the latest image if the image "
 "already exists."
-msgstr ""
+msgstr "Instalar Portainer, actualizará portainer a su ultima versión si la imagen ya existe."
 
 msgid "Install Proxmox kernel"
 msgstr "Instalar Kernel Proxmox"
@@ -158,16 +158,16 @@ msgid "Install SystemRescueCD ISO ..."
 msgstr "Instalando la ISO de SystemRescueCD ..."
 
 msgid "Installed"
-msgstr ""
+msgstr "Instalado"
 
 msgid "Installed Kernels"
 msgstr "Kelnel Instalados"
 
 msgid "Installing"
-msgstr ""
+msgstr "Instalando"
 
 msgid "Installing Proxmox kernel ..."
-msgstr ""
+msgstr "Instalado Kernel Proxmox ..."
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -176,7 +176,7 @@ msgid "Kernels"
 msgstr "Kernels"
 
 msgid "Not installed"
-msgstr ""
+msgstr "No Instalado"
 
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr "No se recomienda para servidores sin monitor. No se habilita SSH por defecto."
@@ -185,23 +185,23 @@ msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
 msgid "Open Cockpit web interface"
-msgstr ""
+msgstr "Abrir la interfaz web de Cockpit"
 
 msgid "Open Portainer web interface"
-msgstr ""
+msgstr "Abrir la interfaz web de Portainer"
 
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
 "/etc/docker/daemon.json."
-msgstr ""
+msgstr "Ruta a donde se desea descargar las imágenes, dejar en blanco para la ruta por defecto:  /etc/docker/daemon.json."
 
 msgid "Portainer"
-msgstr ""
+msgstr "Portainer"
 
 msgid ""
 "Portainer will listen on port 9000 for the web interface and 8000 for the "
 "agent."
-msgstr ""
+msgstr "Portainer escucha el puerto 9000 para la interfaz web y el 8000 para el agente."
 
 msgid "Proxmox"
 msgstr "Proxmox"
@@ -228,33 +228,33 @@ msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "Reiniciar con el kernel proxmox, antes de borrar otros kernel No-Proxmox."
 
 msgid "Remove Cockpit"
-msgstr ""
+msgstr "Eliminar Cockpit"
 
 msgid "Remove Docker"
-msgstr ""
+msgstr "Eliminar Docker"
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
-msgstr ""
+msgstr "Eliminar Docker, también elimina docker-compose de /usr/local/bin/."
 
 msgid "Remove Docker will remove the docker-compose package."
-msgstr ""
+msgstr "Eliminar Docker, también elimina el paquete docker-compose "
 
 msgid "Remove Portainer"
-msgstr ""
+msgstr "Eliminar Portainer"
 
 msgid ""
 "Remove Portainer will remove the Portainer image and container but the "
 "volume will not be removed."
-msgstr ""
+msgstr "Eliminar Portainer borra la imagen de portainer del sistema, pero mantiene el volumen."
 
 msgid "Remove non-Proxmox kernels and headers"
 msgstr "Borrar kernel No-Proxmox y sus cabeceras"
 
 msgid "Removing"
-msgstr ""
+msgstr "Eliminando"
 
 msgid "Removing non-Proxmox kernels ..."
-msgstr ""
+msgstr "Eliminando kernels no-proxmox"
 
 msgid "Running apt-get dist-upgrade ..."
 msgstr "Ejecutando apt-get dist-upgrade ..."
@@ -303,10 +303,10 @@ msgid ""
 msgstr "Activar un kernel erroneo, puede hacer inaccesible el sistema. En el menú de arranque siempre podrá seleccionar otro kernel diferente."
 
 msgid "Settings"
-msgstr ""
+msgstr "Opciones"
 
 msgid "Status"
-msgstr ""
+msgstr "Estado"
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
@@ -315,13 +315,13 @@ msgid "Testing repo"
 msgstr "Repositorio de Test"
 
 msgid "This will enable the Proxmox 6.x repo."
-msgstr ""
+msgstr "Eso habilita el repositorio 6.x de proxmox."
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "Fallará al eliminar el kernel si aún está activo."
 
 msgid "This will install the latest 5.0 kernel."
-msgstr ""
+msgstr "Esto instala el ultimo kernel 5,x."
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "Esto eliminará todas las cabeceras que contengan el prefijo linux-headers-."
@@ -339,7 +339,7 @@ msgid "Updates"
 msgstr "Actualizaciones"
 
 msgid "Version"
-msgstr ""
+msgstr "Versión"
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
@@ -351,25 +351,25 @@ msgid ""
 msgstr "Cuand se conecte remotamente, inicie Clonezilla con:  <b>sudo clonezilla</b>"
 
 msgid "and not running"
-msgstr ""
+msgstr "Corriendo"
 
 msgid "and running"
-msgstr ""
+msgstr "No corriendo"
 
 msgid "apt clean"
 msgstr "apt clean"
 
 msgid "disabled"
-msgstr ""
+msgstr "Des habilitado"
 
 msgid "dist-upgrade"
 msgstr "dist-upgrade"
 
 msgid "enabled"
-msgstr ""
+msgstr "habilitado"
 
 msgid "n/a"
-msgstr ""
+msgstr "n/d"
 
 msgid "omv-update"
 msgstr "omv-update"
