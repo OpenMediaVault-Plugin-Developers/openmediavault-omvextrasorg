@@ -185,7 +185,13 @@ installDocker()
       echo "Successfully installed docker."
     else
       echo "Failed to install docker."
-      exit 5
+      echo "Try fixing install..."
+      if apt-get --fix-broken --yes install; then
+        echo "Successfully fixed docker install."
+      else
+        echo "Unable to fix docker install."
+        exit 5
+      fi
     fi
   fi
 
