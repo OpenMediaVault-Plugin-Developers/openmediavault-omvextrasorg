@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.1.6) stable; urgency=low
+
+  * Improve upgrades from 4.x
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 23 Nov 2019 09:27:35 -0600
+
 openmediavault-omvextrasorg (5.1.5) stable; urgency=low
 
   * Fix message
