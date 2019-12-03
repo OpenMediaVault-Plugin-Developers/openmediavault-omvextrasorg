@@ -132,6 +132,10 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         // Get the existing configuration object.
         $db = \OMV\Config\Database::getInstance();
         $object = $db->get("conf.system.omvextras");
+        // Check for illegal path
+        if ( preg_match('#^/sharedfolders/#', $params['dockerStorage']) === 1 ) {
+            throw new \OMV\Exception(gettext("Illegal docker storage path - cannot use /sharedfolders paths"));
+        }
         $object->setAssoc($params);
         $db->set($object);
         // Set apt module to dirty
