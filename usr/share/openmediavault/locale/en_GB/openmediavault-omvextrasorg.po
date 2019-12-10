@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# Andi Chandler <andi@gowling.com>, 2015-2017
+# Andi Chandler <andi@gowling.com>, 2015-2017,2019
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-05 13:51-0600\n"
-"PO-Revision-Date: 2019-11-05 19:51+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2019-12-03 13:15+0000\n"
+"Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/en_GB/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,37 +19,37 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Backports"
-msgstr ""
+msgstr "Backports"
 
 msgid "Cleaning Apt Files and Lists ..."
-msgstr ""
+msgstr "Cleaning Apt Files and Lists ..."
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
 
 msgid "Cockpit"
-msgstr ""
+msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
-msgstr ""
+msgstr "Cockpit listens on port 9090 for the web interface."
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Default username: <b>user</b> and password: <b>live</b>"
 
 msgid "Disable Backports"
-msgstr ""
+msgstr "Disable Backports"
 
 msgid "Disabling backports repo ..."
-msgstr ""
+msgstr "Disabling backports repo ..."
 
 msgid "Docker"
-msgstr ""
+msgstr "Docker"
 
 msgid "Docker Storage"
-msgstr ""
+msgstr "Docker Storage"
 
 msgid "Done."
-msgstr ""
+msgstr "Done."
 
 msgid ""
 "Downloads Clonezilla ISO and configures grub bootloader to allow booting "
@@ -64,28 +64,28 @@ msgstr "Downloads GParted Live ISO and configures Grub bootloader to allow booti
 msgid ""
 "Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
 " from ISO."
-msgstr ""
+msgstr "Downloads SystemRescueCD ISO and configures Grub bootloader to allow booting from ISO."
 
 msgid "Enable Backports"
-msgstr ""
+msgstr "Enable Backports"
 
 msgid "Enabling backports repo ..."
-msgstr ""
+msgstr "Enabling backports repo ..."
 
 msgid "Extras repo"
-msgstr ""
+msgstr "Extras repo"
 
 msgid "GParted Live"
 msgstr "GParted Live"
 
 msgid "General settings"
-msgstr ""
+msgstr "General settings"
 
 msgid "Hold Current Kernel"
-msgstr ""
+msgstr "Hold Current Kernel"
 
 msgid "Holding current kernel ..."
-msgstr ""
+msgstr "Holding current kernel ..."
 
 msgid "IP Address will be set by DHCP."
 msgstr "IP Address will be set by DHCP."
@@ -111,23 +111,23 @@ msgid "Install Clonezilla ISO ..."
 msgstr "Install Clonezilla ISO ..."
 
 msgid "Install Cockpit"
-msgstr ""
+msgstr "Install Cockpit"
 
 msgid "Install Docker"
-msgstr ""
+msgstr "Install Docker"
 
 msgid ""
 "Install Docker will download and place a newer docker-compose in "
 "/usr/local/bin/ on 64 bit x86 systems only."
-msgstr ""
+msgstr "Install Docker will download and place a newer docker-compose in /usr/local/bin/ on 64 bit x86 systems only."
 
 msgid ""
 "Install Docker will install the docker-compose package. Location: /usr/bin/ "
 "on all systems."
-msgstr ""
+msgstr "Install Docker will install the docker-compose package. Location: /usr/bin/ on all systems."
 
 msgid "Install Docker will restart the docker service if daemon.json changes."
-msgstr ""
+msgstr "Install Docker will restart the docker service if daemon.json changes."
 
 msgid "Install GParted Live"
 msgstr "Install GParted Live"
@@ -136,20 +136,20 @@ msgid "Install GParted Live ISO ..."
 msgstr "Install GParted Live ISO ..."
 
 msgid "Install Portainer"
-msgstr ""
+msgstr "Install Portainer"
 
 msgid ""
 "Install Portainer will install the docker-ce package if not already "
 "installed."
-msgstr ""
+msgstr "Install Portainer will install the docker-ce package if not already installed."
 
 msgid ""
 "Install Portainer will update Portainer to the latest image if the image "
 "already exists."
-msgstr ""
+msgstr "Install Portainer will update Portainer to the latest image if the image already exists."
 
 msgid "Install Proxmox kernel"
-msgstr ""
+msgstr "Install Proxmox kernel"
 
 msgid "Install SystemRescueCD"
 msgstr "Install SystemRescueCD"
@@ -158,16 +158,16 @@ msgid "Install SystemRescueCD ISO ..."
 msgstr "Install SystemRescueCD ISO ..."
 
 msgid "Installed"
-msgstr ""
+msgstr "Installed"
 
 msgid "Installed Kernels"
 msgstr "Installed Kernels"
 
 msgid "Installing"
-msgstr ""
+msgstr "Installing"
 
 msgid "Installing Proxmox kernel ..."
-msgstr ""
+msgstr "Installing Proxmox kernel ..."
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -176,7 +176,7 @@ msgid "Kernels"
 msgstr "Kernels"
 
 msgid "Not installed"
-msgstr ""
+msgstr "Not installed"
 
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr "Not recommended for headless servers.  SSH is not enabled by default."
@@ -185,26 +185,26 @@ msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
 msgid "Open Cockpit web interface"
-msgstr ""
+msgstr "Open Cockpit web interface"
 
 msgid "Open Portainer web interface"
-msgstr ""
+msgstr "Open Portainer web interface"
 
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
 "/etc/docker/daemon.json."
-msgstr ""
+msgstr "Path to Docker images and containers storage. Leave blank to use custom /etc/docker/daemon.json."
 
 msgid "Portainer"
-msgstr ""
+msgstr "Portainer"
 
 msgid ""
 "Portainer will listen on port 9000 for the web interface and 8000 for the "
 "agent."
-msgstr ""
+msgstr "Portainer will listen on port 9000 for the web interface and 8000 for the agent."
 
 msgid "Proxmox"
-msgstr ""
+msgstr "Proxmox"
 
 msgid "Reboot to Clonezilla ..."
 msgstr "Reboot to Clonezilla ..."
@@ -225,51 +225,51 @@ msgid "Reboot to SystemRescueCD Once"
 msgstr "Reboot to SystemRescueCD Once"
 
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
-msgstr ""
+msgstr "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 
 msgid "Remove Cockpit"
-msgstr ""
+msgstr "Remove Cockpit"
 
 msgid "Remove Docker"
-msgstr ""
+msgstr "Remove Docker"
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
-msgstr ""
+msgstr "Remove Docker will delete docker-compose from /usr/local/bin/."
 
 msgid "Remove Docker will remove the docker-compose package."
-msgstr ""
+msgstr "Remove Docker will remove the docker-compose package."
 
 msgid "Remove Portainer"
-msgstr ""
+msgstr "Remove Portainer"
 
 msgid ""
 "Remove Portainer will remove the Portainer image and container but the "
 "volume will not be removed."
-msgstr ""
+msgstr "Remove Portainer will remove the Portainer image and container but the volume will not be removed."
 
 msgid "Remove non-Proxmox kernels and headers"
-msgstr ""
+msgstr "Remove non-Proxmox kernels and headers"
 
 msgid "Removing"
-msgstr ""
+msgstr "Removing"
 
 msgid "Removing non-Proxmox kernels ..."
-msgstr ""
+msgstr "Removing non-Proxmox kernels ..."
 
 msgid "Running apt-get dist-upgrade ..."
-msgstr ""
+msgstr "Running apt-get dist-upgrade ..."
 
 msgid "Running apt-get update ..."
-msgstr ""
+msgstr "Running apt-get update ..."
 
 msgid "Running apt-get upgrade ..."
-msgstr ""
+msgstr "Running apt-get upgrade ..."
 
 msgid "Running omv-aptclean ..."
-msgstr ""
+msgstr "Running omv-aptclean ..."
 
 msgid "Running omv-update ..."
-msgstr ""
+msgstr "Running omv-update ..."
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
@@ -291,7 +291,7 @@ msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr "Sets Grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 
 msgid "Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time."
-msgstr ""
+msgstr "Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time."
 
 msgid "Setting boot kernel ..."
 msgstr "Setting boot kernel ..."
@@ -303,43 +303,43 @@ msgid ""
 msgstr "Setting the wrong default boot kernel may cause the system to be inaccessible.  The boot menu will still be available to select a different kernel."
 
 msgid "Settings"
-msgstr ""
+msgstr "Settings"
 
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 msgid "SystemRescueCD"
 msgstr "SystemRescueCD"
 
 msgid "Testing repo"
-msgstr ""
+msgstr "Testing repo"
 
 msgid "This will enable the Proxmox 6.x repo."
-msgstr ""
+msgstr "This will enable the Proxmox 6.x repo."
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
-msgstr ""
+msgstr "This will fail to remove a linux-image-* kernel if it is still active."
 
 msgid "This will install the latest 5.0 kernel."
-msgstr ""
+msgstr "This will install the latest 5.0 kernel."
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
-msgstr ""
+msgstr "This will remove all headers packages with the prefix linux-headers-."
 
 msgid "This will remove all kernel packages with the prefix linux-image-."
-msgstr ""
+msgstr "This will remove all kernel packages with the prefix linux-image-."
 
 msgid "Unhold Current Kernel"
-msgstr ""
+msgstr "Unhold Current Kernel"
 
 msgid "Unholding current kernel ..."
-msgstr ""
+msgstr "Unholding current kernel ..."
 
 msgid "Updates"
-msgstr ""
+msgstr "Updates"
 
 msgid "Version"
-msgstr ""
+msgstr "Version"
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
@@ -351,31 +351,31 @@ msgid ""
 msgstr "When logging in remotely, start Clonezilla with:  <b>sudo clonezilla</b>"
 
 msgid "and not running"
-msgstr ""
+msgstr "and not running"
 
 msgid "and running"
-msgstr ""
+msgstr "and running"
 
 msgid "apt clean"
-msgstr ""
+msgstr "apt clean"
 
 msgid "disabled"
-msgstr ""
+msgstr "disabled"
 
 msgid "dist-upgrade"
-msgstr ""
+msgstr "dist-upgrade"
 
 msgid "enabled"
-msgstr ""
+msgstr "enabled"
 
 msgid "n/a"
-msgstr ""
+msgstr "n/a"
 
 msgid "omv-update"
-msgstr ""
+msgstr "omv-update"
 
 msgid "update"
-msgstr ""
+msgstr "update"
 
 msgid "upgrade"
-msgstr ""
+msgstr "upgrade"
