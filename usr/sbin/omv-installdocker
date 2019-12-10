@@ -3,6 +3,7 @@
 # shellcheck disable=SC1091,SC2086
 
 declare -i status=0
+declare -l arch=""
 
 # cockpit
 declare cockpitPackages=""
@@ -22,18 +23,27 @@ portainerName="Portainer"
 portainerVolume="portainer_data"
 
 
+setArch()
+{
+  arch="$(dpkg --print-architecture)"
+}
+
 setCockpitPackages()
 {
+  setArch
+
   cockpitPackages="cockpit cockpit-docker cockpit-packagekit"
-  if [[ "$(dpkg --print-architecture)" == "amd64" ]] || [[ "$(dpkg --print-architecture)" == "i386" ]]; then
+  if [[ "${arch}" == "amd64" ]] || [[ "${arch}" == "i386" ]]; then
     cockpitPackages="${cockpitPackages} cockpit-machines virtinst qemu-kvm qemu-utils libvirt-dbus cockpit-storaged"
   fi
 }
 
 setDockerPackages()
 {
+  setArch
+
   dockerPackages="docker-compose"
-  if [[ "$(dpkg --print-architecture)" == "i386" ]]; then
+  if [[ "${arch}" == "i386" ]]; then
     # there is no i386 docker-ce package in the docker repos
     # use docker.io from Debian repo
     dockerPackages="docker.io ${dockerPackages}"
