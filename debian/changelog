@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.1.9) UNRELEASED; urgency=medium
+
+  * Only add teamviewer repo on amd64 and i386 systems
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 10 Dec 2019 06:49:12 -0600
+
 openmediavault-omvextrasorg (5.1.8) stable; urgency=low
 
   * Support docker.io on i386

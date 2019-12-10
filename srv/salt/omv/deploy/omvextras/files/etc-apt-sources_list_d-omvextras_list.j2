@@ -1,7 +1,10 @@
 {%- set config = salt['omv_conf.get']('conf.system.omvextras') -%}
+{%- set arch = grains['osarch'] -%}
 deb https://dl.bintray.com/openmediavault-plugin-developers/{{ pillar['productinfo']['distribution'] }} {{ grains['oscodename'] }} main
 deb https://download.docker.com/linux/debian {{ grains['oscodename'] }} stable
+{%- if arch == 'amd64' or arch == 'i386' %}
 deb http://linux.teamviewer.com/deb stable main
+{%- endif %}
 {%- if config.testing | to_bool %}
 deb https://dl.bintray.com/openmediavault-plugin-developers/{{ pillar['productinfo']['distribution'] }}-testing {{ grains['oscodename'] }} main
 {%- endif %}
