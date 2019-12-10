@@ -1,8 +1,9 @@
-openmediavault-omvextrasorg (5.1.9) UNRELEASED; urgency=medium
+openmediavault-omvextrasorg (5.1.9) stable; urgency=low
 
   * Only add teamviewer repo on amd64 and i386 systems
+  * Exit if trying to install Portainer on i386
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 10 Dec 2019 06:49:12 -0600
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 10 Dec 2019 07:02:26 -0600
 
 openmediavault-omvextrasorg (5.1.8) stable; urgency=low
 

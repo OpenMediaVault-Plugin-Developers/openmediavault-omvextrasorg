@@ -30,8 +30,6 @@ setArch()
 
 setCockpitPackages()
 {
-  setArch
-
   cockpitPackages="cockpit cockpit-docker cockpit-packagekit"
   if [[ "${arch}" == "amd64" ]] || [[ "${arch}" == "i386" ]]; then
     cockpitPackages="${cockpitPackages} cockpit-machines virtinst qemu-kvm qemu-utils libvirt-dbus cockpit-storaged"
@@ -40,8 +38,6 @@ setCockpitPackages()
 
 setDockerPackages()
 {
-  setArch
-
   dockerPackages="docker-compose"
   if [[ "${arch}" == "i386" ]]; then
     # there is no i386 docker-ce package in the docker repos
@@ -121,9 +117,10 @@ removeDocker()
 removePortainer()
 {
   status=0
+
   if [ ! -f "${dockerBin}" ]; then
     echo "Docker is not installed."
-    exit 3
+    exit 0
   fi
 
   # stop existing Portainer container
@@ -243,7 +240,7 @@ EOF
   else
     echo "Skipping docker restart since it was already installed."
   fi
-  if [[ "$(uname -m)" == "x86_64" ]]; then
+  if [[ "${arch}" == "amd64" ]]; then
     # download docker-compose and place in /usr/local/bin/ if current version is older
     if [ -f "${dockerCompose}" ]; then
       curVers="$(${dockerCompose} --version | cut -d',' -f1 | awk '{ print $3 }')"
@@ -263,6 +260,7 @@ EOF
 
 installPortainer()
 {
+
   if [ ! -f "${dockerBin}" ]; then
     installDocker
   fi
@@ -280,9 +278,12 @@ installPortainer()
 }
 
 
+setArch
+
 option="${1}"
 state="${2}"
 
+echo "arch   :: ${arch}"
 echo "option :: ${option}"
 echo "state  :: ${state}"
 
@@ -296,6 +297,10 @@ case ${option} in
     fi
     ;;
   portainer)
+    if [[ "${arch}" == "i386" ]]; then
+      echo "Portainer is not compatible with i386 systems."
+      exit 0
+    fi
     if [[ "${state}" == "remove" ]]; then
       removePortainer
     else
