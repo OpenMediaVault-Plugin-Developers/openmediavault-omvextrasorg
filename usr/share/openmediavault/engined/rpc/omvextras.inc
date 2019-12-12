@@ -77,13 +77,13 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $object->add('dockerVersion', 'string', $version);
 
         // portainer status
-        $cmdLine = "docker container ls --all --format='{{.Names}}|{{.Status}}' | awk -F \"|\" '\$1 == \"Portainer\" { print \$2 }'";
+        $cmdLine = "docker container ls --all --format='{{.Names}}|{{.Status}}' | awk -F \"|\" 'tolower(\$1) == \"portainer\" { print \$2 }'";
         $cmd = new \OMV\System\Process($cmdLine);
         $cmd->setQuiet(true);
         $output = [];
         $cmd->execute($output, $exitStatus);
         if (empty($output[0])) {
-            $status = "No Portainer container found.";
+            $status = "No portainer container found.";
         } else {
             $status = $output[0];
         }

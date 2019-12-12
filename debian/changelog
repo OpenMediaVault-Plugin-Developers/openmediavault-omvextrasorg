@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.1.10) stable; urgency=low
+
+  * Make portainer name case insensitive
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 12 Dec 2019 12:16:39 -0600
+
 openmediavault-omvextrasorg (5.1.9) stable; urgency=low
 
   * Only add teamviewer repo on amd64 and i386 systems

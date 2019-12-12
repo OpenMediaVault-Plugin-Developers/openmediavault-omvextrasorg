@@ -19,7 +19,7 @@ dockerComposeUrl="https://github.com/docker/compose/releases/download/${dockerCo
 
 # portainer
 portainerImage="portainer/portainer"
-portainerName="Portainer"
+portainerName="portainer"
 portainerVolume="portainer_data"
 
 
@@ -123,19 +123,19 @@ removePortainer()
     exit 0
   fi
 
-  # stop existing Portainer container
-  if docker container ls | grep --quiet "${portainerName}"; then
-    docker container stop "${portainerName}"
+  # stop existing portainer container
+  for cn in $(docker container ls --format "{{.Names}},{{.Image}}" | grep --ignore-case "${portainerName}"); do
+    docker container stop "${cn%%,*}"
     status=1
-  fi
+  done
 
-  # remove existing Portainer container
-  if docker container ls --all | grep --quiet "${portainerName}"; then
-    docker container rm "${portainerName}"
+  # remove existing portainer container
+  for cn in $(docker container ls --all --format "{{.Names}},{{.Image}}" | grep --ignore-case "${portainerName}"); do
+    docker container rm "${cn%%,*}"
     status=1
-  fi
+  done
 
-  # remove existing Portainer image
+  # remove existing portainer image
   if docker image ls --all | grep --quiet "${portainerImage}"; then
     docker image rm "${portainerImage}"
     status=1
@@ -298,7 +298,7 @@ case ${option} in
     ;;
   portainer)
     if [[ "${arch}" == "i386" ]]; then
-      echo "Portainer is not compatible with i386 systems."
+      echo "portainer is not compatible with i386 systems."
       exit 0
     fi
     if [[ "${state}" == "remove" ]]; then
