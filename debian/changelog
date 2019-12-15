@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.1.11) stable; urgency=low
+
+  * Improve messages when installing cockpit, docker, and portainer
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 15 Dec 2019 08:36:23 -0600
+
 openmediavault-omvextrasorg (5.1.10) stable; urgency=low
 
   * Make portainer name case insensitive

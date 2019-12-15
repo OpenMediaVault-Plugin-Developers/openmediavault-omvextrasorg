@@ -28,6 +28,19 @@ setArch()
   arch="$(dpkg --print-architecture)"
 }
 
+checkDNS()
+{
+  host="/usr/bin/host"
+  if [ -f "${host}" ]; then
+    if ! ${host} hub.docker.com > /dev/null; then
+      echo "DNS error.  Exiting ..."
+      exit 0
+    else
+      echo "DNS OK."
+    fi
+  fi
+}
+
 setCockpitPackages()
 {
   cockpitPackages="cockpit cockpit-docker cockpit-packagekit"
@@ -125,18 +138,21 @@ removePortainer()
 
   # stop existing portainer container
   for cn in $(docker container ls --format "{{.Names}},{{.Image}}" | grep --ignore-case "${portainerName}"); do
+    echo "Stopping ${cn%%,*} ..."
     docker container stop "${cn%%,*}"
     status=1
   done
 
   # remove existing portainer container
   for cn in $(docker container ls --all --format "{{.Names}},{{.Image}}" | grep --ignore-case "${portainerName}"); do
+    echo "Removing ${cn%%,*} ..."
     docker container rm "${cn%%,*}"
     status=1
   done
 
   # remove existing portainer image
   if docker image ls --all | grep --quiet "${portainerImage}"; then
+    echo "Removing ${portainerImage} image ..."
     docker image rm "${portainerImage}"
     status=1
   fi
@@ -270,13 +286,17 @@ installPortainer()
 
   # create portainer data volume
   if ! docker volume ls | grep --quiet "${portainerVolume}"; then
+    echo "Creating portainer volume ..."
     docker volume create "${portainerVolume}"
   fi
 
   # pull and start portainer
+  echo "Pulling and starting portainer ..."
   docker run -d --name "${portainerName}" -p 9000:9000 -p 8000:8000 --restart=unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v ${portainerVolume}:/data portainer/portainer
+  if [ $? -gt 0 ]; then
+    echo "Something went wrong trying to pull and start portainer ..."
+  fi
 }
-
 
 setArch
 
@@ -286,7 +306,11 @@ state="${2}"
 echo "arch   :: ${arch}"
 echo "option :: ${option}"
 echo "state  :: ${state}"
+echo "extras :: $(dpkg-query -W -f='${Version}' openmediavault-omvextrasorg)"
 
+if [[ "${state}" == "install" ]]; then
+  checkDNS
+fi
 
 case ${option} in
   cockpit)
