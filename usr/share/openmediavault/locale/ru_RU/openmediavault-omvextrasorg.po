@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-05 13:51-0600\n"
-"PO-Revision-Date: 2019-11-25 08:55+0000\n"
-"Last-Translator: Артур Мудрых <arturmon82@gmail.com>\n"
+"POT-Creation-Date: 2020-01-01 16:46-0600\n"
+"PO-Revision-Date: 2020-01-01 22:46+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -107,17 +107,17 @@ msgstr "ISO использует примерно 219 МБ в /boot катало
 msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
 msgstr "ISO использует примерно 381 МБ в /boot каталог на диске ОС."
 
+msgid "Illegal docker storage path - cannot use /sharedfolders paths"
+msgstr ""
+
+msgid "Install"
+msgstr ""
+
 msgid "Install Clonezilla"
 msgstr "Установить Clonezilla"
 
 msgid "Install Clonezilla ISO ..."
 msgstr "Установка Clonezilla ISO ..."
-
-msgid "Install Cockpit"
-msgstr "Установить Cockpit"
-
-msgid "Install Docker"
-msgstr "Установить Докер"
 
 msgid ""
 "Install Docker will download and place a newer docker-compose in "
@@ -137,9 +137,6 @@ msgstr "Установить GParted Live"
 
 msgid "Install GParted Live ISO ..."
 msgstr "Установка GParted Live ISO ..."
-
-msgid "Install Portainer"
-msgstr "Установить Portainer"
 
 msgid ""
 "Install Portainer will install the docker-ce package if not already "
@@ -187,11 +184,8 @@ msgstr "Не рекомендуется для серверов без голо�
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
-msgid "Open Cockpit web interface"
-msgstr "Открыть веб интерфейс Cockpit"
-
-msgid "Open Portainer web interface"
-msgstr "Открыть веб интерфейс Portainer"
+msgid "Open web"
+msgstr ""
 
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
@@ -230,20 +224,14 @@ msgstr "Перезагрузиться в SystemRescueCD Once"
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "Перезагрузите ядро Proxmox перед удалением не-Proxmox ядер."
 
-msgid "Remove Cockpit"
-msgstr "Удалить Cockpit"
-
-msgid "Remove Docker"
-msgstr "Удалить Докер"
+msgid "Remove"
+msgstr ""
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
 msgstr "Удаление Докер, удалит docker-compose из /usr/local/bin/."
 
 msgid "Remove Docker will remove the docker-compose package."
 msgstr "Удаление Docker удалит пакет docker-compose."
-
-msgid "Remove Portainer"
-msgstr "Удалить Portainer"
 
 msgid ""
 "Remove Portainer will remove the Portainer image and container but the "
@@ -258,6 +246,12 @@ msgstr "Удаление"
 
 msgid "Removing non-Proxmox kernels ..."
 msgstr "Удаление не-Proxmox ядер ..."
+
+msgid "Restart"
+msgstr ""
+
+msgid "Restarting docker ..."
+msgstr ""
 
 msgid "Running apt-get dist-upgrade ..."
 msgstr "Запуск apt-get dist-upgrade ..."
@@ -283,6 +277,11 @@ msgid ""
 "SSH server is enabled by default.  Login with username: <b>user</b> and "
 "password: <b>live</b>"
 msgstr "Сервер SSH включен по умолчанию. Войти с логином: <b>пользователь</ b> и пароль: <b>live</ b>"
+
+msgid ""
+"Save will rewrite daemon.json and restart docker if Docker Storage path has "
+"changed."
+msgstr ""
 
 msgid "Set as default boot kernel"
 msgstr "Установить как ядро загрузки по умолчанию"
@@ -323,8 +322,8 @@ msgstr "Включит репо Proxmox 6.x."
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "Не удалит ядро linux-image- *, если оно все еще активно."
 
-msgid "This will install the latest 5.0 kernel."
-msgstr "Установит последнее ядро 5.0."
+msgid "This will install the latest 5.3 kernel."
+msgstr ""
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "Удалит все пакеты заголовков с префиксом linux-headers-."

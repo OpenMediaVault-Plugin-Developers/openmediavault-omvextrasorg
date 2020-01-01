@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-05 13:51-0600\n"
-"PO-Revision-Date: 2019-11-05 19:51+0000\n"
+"POT-Creation-Date: 2020-01-01 16:46-0600\n"
+"PO-Revision-Date: 2020-01-01 22:46+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: English (United States) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/en_US/)\n"
 "MIME-Version: 1.0\n"
@@ -103,17 +103,17 @@ msgstr "ISO uses approximately 219 Mb in /boot directory on OS drive."
 msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
 msgstr "ISO uses approximately 381 Mb in /boot directory on OS drive."
 
+msgid "Illegal docker storage path - cannot use /sharedfolders paths"
+msgstr "Illegal docker storage path - cannot use /sharedfolders paths"
+
+msgid "Install"
+msgstr "Install"
+
 msgid "Install Clonezilla"
 msgstr "Install Clonezilla"
 
 msgid "Install Clonezilla ISO ..."
 msgstr "Install Clonezilla ISO ..."
-
-msgid "Install Cockpit"
-msgstr "Install Cockpit"
-
-msgid "Install Docker"
-msgstr "Install Docker"
 
 msgid ""
 "Install Docker will download and place a newer docker-compose in "
@@ -133,9 +133,6 @@ msgstr "Install GParted Live"
 
 msgid "Install GParted Live ISO ..."
 msgstr "Install GParted Live ISO ..."
-
-msgid "Install Portainer"
-msgstr "Install Portainer"
 
 msgid ""
 "Install Portainer will install the docker-ce package if not already "
@@ -183,11 +180,8 @@ msgstr "Not recommended for headless servers.  SSH is not enabled by default."
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
-msgid "Open Cockpit web interface"
-msgstr "Open Cockpit web interface"
-
-msgid "Open Portainer web interface"
-msgstr "Open Portainer web interface"
+msgid "Open web"
+msgstr "Open web"
 
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
@@ -226,20 +220,14 @@ msgstr "Reboot to SystemRescueCD Once"
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 
-msgid "Remove Cockpit"
-msgstr "Remove Cockpit"
-
-msgid "Remove Docker"
-msgstr "Remove Docker"
+msgid "Remove"
+msgstr "Remove"
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
 msgstr "Remove Docker will delete docker-compose from /usr/local/bin/."
 
 msgid "Remove Docker will remove the docker-compose package."
 msgstr "Remove Docker will remove the docker-compose package."
-
-msgid "Remove Portainer"
-msgstr "Remove Portainer"
 
 msgid ""
 "Remove Portainer will remove the Portainer image and container but the "
@@ -254,6 +242,12 @@ msgstr "Removing"
 
 msgid "Removing non-Proxmox kernels ..."
 msgstr "Removing non-Proxmox kernels ..."
+
+msgid "Restart"
+msgstr "Restart"
+
+msgid "Restarting docker ..."
+msgstr "Restarting docker ..."
 
 msgid "Running apt-get dist-upgrade ..."
 msgstr "Running apt-get dist-upgrade ..."
@@ -279,6 +273,11 @@ msgid ""
 "SSH server is enabled by default.  Login with username: <b>user</b> and "
 "password: <b>live</b>"
 msgstr "SSH server is enabled by default.  Login with username: <b>user</b> and password: <b>live</b>"
+
+msgid ""
+"Save will rewrite daemon.json and restart docker if Docker Storage path has "
+"changed."
+msgstr "Save will rewrite daemon.json and restart docker if Docker Storage path has changed."
 
 msgid "Set as default boot kernel"
 msgstr "Set as default boot kernel"
@@ -319,8 +318,8 @@ msgstr "This will enable the Proxmox 6.x repo."
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "This will fail to remove a linux-image-* kernel if it is still active."
 
-msgid "This will install the latest 5.0 kernel."
-msgstr "This will install the latest 5.0 kernel."
+msgid "This will install the latest 5.3 kernel."
+msgstr "This will install the latest 5.3 kernel."
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "This will remove all headers packages with the prefix linux-headers-."

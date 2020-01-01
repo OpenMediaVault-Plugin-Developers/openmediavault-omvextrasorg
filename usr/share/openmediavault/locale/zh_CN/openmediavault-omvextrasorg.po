@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-05 13:51-0600\n"
-"PO-Revision-Date: 2019-11-05 19:51+0000\n"
+"POT-Creation-Date: 2020-01-01 16:46-0600\n"
+"PO-Revision-Date: 2020-01-01 22:46+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -104,17 +104,17 @@ msgstr "ISO 镜像大约占用系统盘 /boot 目录 219Mb 空间。"
 msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
 msgstr "ISO 镜像大约占用系统盘 /boot 目录 381Mb 空间。"
 
+msgid "Illegal docker storage path - cannot use /sharedfolders paths"
+msgstr ""
+
+msgid "Install"
+msgstr ""
+
 msgid "Install Clonezilla"
 msgstr "安装再生龙 Clonezilla"
 
 msgid "Install Clonezilla ISO ..."
 msgstr "安装再生龙 Clonezilla ISO ..."
-
-msgid "Install Cockpit"
-msgstr "安装 Cockpit"
-
-msgid "Install Docker"
-msgstr "安装 Docker"
 
 msgid ""
 "Install Docker will download and place a newer docker-compose in "
@@ -134,9 +134,6 @@ msgstr "安装 GParted Live"
 
 msgid "Install GParted Live ISO ..."
 msgstr "安装 GParted Live ISO ..."
-
-msgid "Install Portainer"
-msgstr "安装 Portainer"
 
 msgid ""
 "Install Portainer will install the docker-ce package if not already "
@@ -184,11 +181,8 @@ msgstr "不建议使用缺省服务器，因为默认 SSH 没有开启。"
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
-msgid "Open Cockpit web interface"
-msgstr "在 web 页打开 Cockpit"
-
-msgid "Open Portainer web interface"
-msgstr "打开 Portainer web 标签页"
+msgid "Open web"
+msgstr ""
 
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
@@ -227,20 +221,14 @@ msgstr "从 SystemRescueCD 启动一次"
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "在删除 non-Proxmox 内核后以 Proxmox内核重启。"
 
-msgid "Remove Cockpit"
-msgstr "删除  Cockpit"
-
-msgid "Remove Docker"
-msgstr "删除 Docker"
+msgid "Remove"
+msgstr ""
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
 msgstr "删除 Docker 将会删除 /usr/local/bin/ 路径下的 docker-compose"
 
 msgid "Remove Docker will remove the docker-compose package."
 msgstr ""
-
-msgid "Remove Portainer"
-msgstr "删除 Portainer"
 
 msgid ""
 "Remove Portainer will remove the Portainer image and container but the "
@@ -255,6 +243,12 @@ msgstr "删除中"
 
 msgid "Removing non-Proxmox kernels ..."
 msgstr "删除 non-Proxmox 内核中 ..."
+
+msgid "Restart"
+msgstr ""
+
+msgid "Restarting docker ..."
+msgstr ""
 
 msgid "Running apt-get dist-upgrade ..."
 msgstr "运行 apt-get dist-upgrade 中 ..."
@@ -280,6 +274,11 @@ msgid ""
 "SSH server is enabled by default.  Login with username: <b>user</b> and "
 "password: <b>live</b>"
 msgstr "默认开启 SSH 服务，登录用户名: <b>user</b>，密码: <b>live</b>"
+
+msgid ""
+"Save will rewrite daemon.json and restart docker if Docker Storage path has "
+"changed."
+msgstr ""
 
 msgid "Set as default boot kernel"
 msgstr "设置默认启动内核"
@@ -320,8 +319,8 @@ msgstr "这将启用 Proxmox 6.x 源。"
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "如果 linux-image-*内核处于使用状态删除该内核将失败。"
 
-msgid "This will install the latest 5.0 kernel."
-msgstr "这将安装最新的5.0版本内核。"
+msgid "This will install the latest 5.3 kernel."
+msgstr ""
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "这将删除前缀为 linux-headers- 的所有软件包。"

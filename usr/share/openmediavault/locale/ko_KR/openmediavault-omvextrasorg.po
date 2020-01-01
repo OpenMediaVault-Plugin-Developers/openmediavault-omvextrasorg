@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-05 13:51-0600\n"
-"PO-Revision-Date: 2019-11-05 19:51+0000\n"
+"POT-Creation-Date: 2020-01-01 16:46-0600\n"
+"PO-Revision-Date: 2020-01-01 22:46+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
@@ -104,16 +104,16 @@ msgstr ""
 msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
 msgstr ""
 
+msgid "Illegal docker storage path - cannot use /sharedfolders paths"
+msgstr ""
+
+msgid "Install"
+msgstr ""
+
 msgid "Install Clonezilla"
 msgstr ""
 
 msgid "Install Clonezilla ISO ..."
-msgstr ""
-
-msgid "Install Cockpit"
-msgstr ""
-
-msgid "Install Docker"
 msgstr ""
 
 msgid ""
@@ -133,9 +133,6 @@ msgid "Install GParted Live"
 msgstr ""
 
 msgid "Install GParted Live ISO ..."
-msgstr ""
-
-msgid "Install Portainer"
 msgstr ""
 
 msgid ""
@@ -184,10 +181,7 @@ msgstr ""
 msgid "OMV-Extras"
 msgstr ""
 
-msgid "Open Cockpit web interface"
-msgstr ""
-
-msgid "Open Portainer web interface"
+msgid "Open web"
 msgstr ""
 
 msgid ""
@@ -227,19 +221,13 @@ msgstr ""
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr ""
 
-msgid "Remove Cockpit"
-msgstr ""
-
-msgid "Remove Docker"
+msgid "Remove"
 msgstr ""
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
 msgstr ""
 
 msgid "Remove Docker will remove the docker-compose package."
-msgstr ""
-
-msgid "Remove Portainer"
 msgstr ""
 
 msgid ""
@@ -254,6 +242,12 @@ msgid "Removing"
 msgstr ""
 
 msgid "Removing non-Proxmox kernels ..."
+msgstr ""
+
+msgid "Restart"
+msgstr ""
+
+msgid "Restarting docker ..."
 msgstr ""
 
 msgid "Running apt-get dist-upgrade ..."
@@ -279,6 +273,11 @@ msgstr ""
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>user</b> and "
 "password: <b>live</b>"
+msgstr ""
+
+msgid ""
+"Save will rewrite daemon.json and restart docker if Docker Storage path has "
+"changed."
 msgstr ""
 
 msgid "Set as default boot kernel"
@@ -320,7 +319,7 @@ msgstr ""
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr ""
 
-msgid "This will install the latest 5.0 kernel."
+msgid "This will install the latest 5.3 kernel."
 msgstr ""
 
 msgid "This will remove all headers packages with the prefix linux-headers-."

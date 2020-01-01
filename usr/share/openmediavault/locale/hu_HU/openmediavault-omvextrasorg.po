@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-05 13:51-0600\n"
-"PO-Revision-Date: 2019-11-05 19:51+0000\n"
+"POT-Creation-Date: 2020-01-01 16:46-0600\n"
+"PO-Revision-Date: 2020-01-01 22:46+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -106,17 +106,17 @@ msgstr "Az ISO fájl kb. 219 MB-ot foglal el az operációs rendszer /boot mapp�
 msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
 msgstr "Az ISO fájl kb. 381 Mb-ot foglal el az operációs rendszer /boot mappájában."
 
+msgid "Illegal docker storage path - cannot use /sharedfolders paths"
+msgstr ""
+
+msgid "Install"
+msgstr ""
+
 msgid "Install Clonezilla"
 msgstr "Clonezilla telepítése"
 
 msgid "Install Clonezilla ISO ..."
 msgstr "Clonezilla ISO telepítése…"
-
-msgid "Install Cockpit"
-msgstr "Cockpit telepítése"
-
-msgid "Install Docker"
-msgstr "Docker telepítése"
 
 msgid ""
 "Install Docker will download and place a newer docker-compose in "
@@ -136,9 +136,6 @@ msgstr "GParted Live telepítése"
 
 msgid "Install GParted Live ISO ..."
 msgstr "GParted Live ISO telepítése…"
-
-msgid "Install Portainer"
-msgstr "Portainer telepítése"
 
 msgid ""
 "Install Portainer will install the docker-ce package if not already "
@@ -186,11 +183,8 @@ msgstr "Nem tanácsolt periféria nélküli kiszolgálókra. Az SSH nincs enged�
 msgid "OMV-Extras"
 msgstr "OMV-Extrák"
 
-msgid "Open Cockpit web interface"
-msgstr "Cockpit webes felületének megnyitása"
-
-msgid "Open Portainer web interface"
-msgstr "Portainer webes felület megnyitása"
+msgid "Open web"
+msgstr ""
 
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
@@ -229,20 +223,14 @@ msgstr "Újraindítás egyszer a SystemRescueCD-vel"
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "Újraindítás Proxmox kernellel a nem Proxmox kernelek eltávolítása előtt."
 
-msgid "Remove Cockpit"
-msgstr "Cockpit eltávolítása"
-
-msgid "Remove Docker"
-msgstr "Docker eltávolítása"
+msgid "Remove"
+msgstr ""
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
 msgstr "A Docker eltávolítása törölni fogja a docker-compose-t a /usr/local/bin/-ből."
 
 msgid "Remove Docker will remove the docker-compose package."
 msgstr ""
-
-msgid "Remove Portainer"
-msgstr "Portainer eltávolítása"
 
 msgid ""
 "Remove Portainer will remove the Portainer image and container but the "
@@ -257,6 +245,12 @@ msgstr "Eltávolítás"
 
 msgid "Removing non-Proxmox kernels ..."
 msgstr "Nem Proxmox kernelek eltávolítása…"
+
+msgid "Restart"
+msgstr ""
+
+msgid "Restarting docker ..."
+msgstr ""
 
 msgid "Running apt-get dist-upgrade ..."
 msgstr "apt-get dist-upgrade futtatása ..."
@@ -282,6 +276,11 @@ msgid ""
 "SSH server is enabled by default.  Login with username: <b>user</b> and "
 "password: <b>live</b>"
 msgstr "Az SSH szerver alapértelmezett engedélyezve van. Felhasználói név a belépéshez: <b>user</b>, valamint a jelszó: <b>live</b>"
+
+msgid ""
+"Save will rewrite daemon.json and restart docker if Docker Storage path has "
+"changed."
+msgstr ""
 
 msgid "Set as default boot kernel"
 msgstr "Alap rendszerindító kernel beállítása"
@@ -322,8 +321,8 @@ msgstr "A Proxmox 6.x tároló engedélyezése."
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "Meg fog hiúsulni a linux-image-* kernel eltávolítása, ha még aktív."
 
-msgid "This will install the latest 5.0 kernel."
-msgstr "A legutolsó 5.0-ás kernel telepítése."
+msgid "This will install the latest 5.3 kernel."
+msgstr ""
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "A linux-headers- előtagra illeszkedő összes fejléc csomag eltávolítása."
