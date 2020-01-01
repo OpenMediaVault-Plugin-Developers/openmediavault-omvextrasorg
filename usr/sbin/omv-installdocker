@@ -190,10 +190,9 @@ installCockpit()
   fi
 }
 
-installDocker()
+configDocker()
 {
   setExports
-  setDockerPackages
 
   # if openmediavault is installed, get docker storage path
   if [ -f "/usr/share/openmediavault/scripts/helper-functions" ]; then
@@ -204,32 +203,6 @@ installDocker()
     xpath="/config/system/omvextras"
     dockerStorage=$(omv_config_get "${xpath}/dockerStorage")
     echo "Docker storage :: ${dockerStorage}"
-  fi
-
-  # check to see if already installed to avoid restarting service
-  status=0
-  for pkg in ${dockerPackages}; do
-    if ! dpkg --list | grep --quiet "${pkg}"; then
-      status=1
-    fi
-  done
-
-  # install docker-ce package
-  if [ ${status} -eq 1 ]; then
-    updateRepos
-
-    if apt-get --yes install ${dockerPackages}; then
-      echo "Successfully installed docker."
-    else
-      echo "Failed to install docker."
-      echo "Try fixing install..."
-      if apt-get --fix-broken --yes install; then
-        echo "Successfully fixed docker install."
-      else
-        echo "Unable to fix docker install."
-        exit 5
-      fi
-    fi
   fi
 
   # if path specified, write config file
@@ -254,8 +227,43 @@ EOF
     systemctl enable docker.service
     systemctl restart docker.service
   else
-    echo "Skipping docker restart since it was already installed."
+    echo "Skipping docker restart."
   fi
+}
+
+installDocker()
+{
+  setExports
+  setDockerPackages
+
+  # check to see if already installed to avoid restarting service
+  for pkg in ${dockerPackages}; do
+    if ! dpkg --list | grep --quiet "${pkg}"; then
+      status=1
+    fi
+  done
+
+  # install docker-ce package
+  if [ ${status} -eq 1 ]; then
+    updateRepos
+
+    if apt-get --yes install ${dockerPackages}; then
+      echo "Successfully installed docker."
+    else
+      echo "Failed to install docker."
+      echo "Try fixing install..."
+      if apt-get --fix-broken --yes install; then
+        echo "Successfully fixed docker install."
+      else
+        echo "Unable to fix docker install."
+        exit 5
+      fi
+    fi
+  fi
+
+  # Write daemon.json file
+  configDocker
+
   if [[ "${arch}" == "amd64" ]]; then
     # download docker-compose and place in /usr/local/bin/ if current version is older
     if [ -f "${dockerCompose}" ]; then
@@ -334,6 +342,8 @@ case ${option} in
   *)
     if [[ "${state}" == "remove" ]]; then
       removeDocker
+    elif [[ "${state}" == "config" ]]; then
+      configDocker
     else
       installDocker
     fi

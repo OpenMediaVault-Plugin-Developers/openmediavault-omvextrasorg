@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.2) stable; urgency=low
+
+  * Create Docker and Cockpit tabs
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 01 Jan 2020 16:46:27 -0600
+
 openmediavault-omvextrasorg (5.1.11) stable; urgency=low
 
   * Improve messages when installing cockpit, docker, and portainer

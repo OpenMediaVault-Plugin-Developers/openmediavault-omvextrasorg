@@ -31,6 +31,9 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
     {
         $this->registerMethod('getSettings');
         $this->registerMethod('setSettings');
+        $this->registerMethod('getDocker');
+        $this->registerMethod('setDocker');
+        $this->registerMethod('getCockpit');
 
         $this->registerMethod('getArch');
 
@@ -46,6 +49,51 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
     }
 
     public function getSettings($params, $context)
+    {
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
+        // Get the configuration object.
+        $db = \OMV\Config\Database::getInstance();
+        $object = $db->get("conf.system.omvextras");
+
+        // backports status
+        if (file_exists('/etc/apt/sources.list.d/openmediavault-kernel-backports.list')) {
+            $backports = gettext("enabled");
+        } else {
+            $backports = gettext("disabled");
+        }
+        $object->add('backportsStatus', 'string', $backports);
+
+        return $object->getAssoc();
+    }
+
+    public function setSettings($params, $context)
+    {
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
+        // Validate the parameters of the RPC service method.
+        $this->validateMethodParams($params, 'rpc.omvextras.setsettings');
+        // Get the existing configuration object.
+        $db = \OMV\Config\Database::getInstance();
+        $object = $db->get("conf.system.omvextras");
+        $object->set("testing",$params["testing"]);
+        $object->set("extras",$params["extras"]);
+        $db->set($object);
+        // Set omvextras module to dirty
+        $dispatcher = \OMV\Engine\Notify\Dispatcher::getInstance();
+        $dispatcher->notify(OMV_NOTIFY_MODIFY,
+            'org.openmediavault.conf.system.omvextras');
+        // Apply the changes immediatelly (no user interaction is wanted).
+        \OMV\Rpc\Rpc::call('Config', 'applyChanges', [
+            'modules' => [ 'omvextras' ],
+            'force' => TRUE
+        ], $context);
+        \OMV\Rpc\Rpc::call('Apt', 'update', NULL, $context);
+        // Return the configuration object.
+        return $object->getAssoc();
+    }
+
+    public function getDocker($params, $context)
     {
         // Validate the RPC caller context.
         $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
@@ -89,6 +137,47 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         }
         $object->add('portainerStatus', 'string', $status);
 
+        return $object->getAssoc();
+    }
+
+    public function setDocker($params, $context)
+    {
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
+        // Validate the parameters of the RPC service method.
+        $this->validateMethodParams($params, 'rpc.omvextras.setdocker');
+        // Get the existing configuration object.
+        $db = \OMV\Config\Database::getInstance();
+        $object = $db->get("conf.system.omvextras");
+        // Check for illegal path
+        if ( preg_match('#^/sharedfolders/#', $params['dockerStorage']) === 1 ) {
+            throw new \OMV\Exception(gettext("Illegal docker storage path - cannot use /sharedfolders paths"));
+        }
+        $object->set("dockerStorage",$params["dockerStorage"]);
+        $db->set($object);
+        // Apply the changes immediatelly (no user interaction is wanted).
+        \OMV\Rpc\Rpc::call('Config', 'applyChanges', [
+            'modules' => [ 'omvextras' ],
+            'force' => TRUE
+        ], $context);
+        // Rewrite daemon.json and restart if necessary
+        $cmdLine = "omv-installdocker docker config";
+        $cmd = new \OMV\System\Process($cmdLine);
+        $cmd->setQuiet(true);
+        $output = [];
+        $cmd->execute($output, $exitStatus);
+        // Return the configuration object.
+        return $object->getAssoc();
+    }
+
+    public function getCockpit($params, $context)
+    {
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
+        // Get the configuration object.
+        $db = \OMV\Config\Database::getInstance();
+        $object = $db->get("conf.system.omvextras");
+
         // cockpit status
         $cmdLine = "dpkg-query -W -f='\${Version}' cockpit";
         $cmd = new \OMV\System\Process($cmdLine);
@@ -97,7 +186,7 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $cmd->execute($output, $exitStatus);
         if ((0 == $exitStatus) && (!empty($output))) {
             // Get docker service status
-            $systemCtl = new \OMV\System\SystemCtl('cockpit');
+            $systemCtl = new \OMV\System\SystemCtl('cockpit.socket');
             if ($systemCtl->isActive()) {
                 $running = gettext("and running");
             } else {
@@ -112,43 +201,6 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $object->add('cockpitStatus', 'string', $status);
         $object->add('cockpitVersion', 'string', $version);
 
-        // backports status
-        if (file_exists('/etc/apt/sources.list.d/openmediavault-kernel-backports.list')) {
-            $backports = gettext("enabled");
-        } else {
-            $backports = gettext("disabled");
-        }
-        $object->add('backportsStatus', 'string', $backports);
-
-        return $object->getAssoc();
-    }
-
-    public function setSettings($params, $context)
-    {
-        // Validate the RPC caller context.
-        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
-        // Validate the parameters of the RPC service method.
-        $this->validateMethodParams($params, 'rpc.omvextras.setsettings');
-        // Get the existing configuration object.
-        $db = \OMV\Config\Database::getInstance();
-        $object = $db->get("conf.system.omvextras");
-        // Check for illegal path
-        if ( preg_match('#^/sharedfolders/#', $params['dockerStorage']) === 1 ) {
-            throw new \OMV\Exception(gettext("Illegal docker storage path - cannot use /sharedfolders paths"));
-        }
-        $object->setAssoc($params);
-        $db->set($object);
-        // Set apt module to dirty
-        $dispatcher = \OMV\Engine\Notify\Dispatcher::getInstance();
-        $dispatcher->notify(OMV_NOTIFY_MODIFY,
-            'org.openmediavault.conf.system.omvextras');
-        // Apply the changes immediatelly (no user interaction is wanted).
-        \OMV\Rpc\Rpc::call('Config', 'applyChanges', [
-            'modules' => [ 'omvextras' ],
-            'force' => TRUE
-        ], $context);
-        \OMV\Rpc\Rpc::call('Apt', 'update', NULL, $context);
-        // Return the configuration object.
         return $object->getAssoc();
     }
 
@@ -252,6 +304,8 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
                         $cmdBin = 'apt-get --yes dist-upgrade';  break;
                     case 'clean':
                         $cmdBin = 'omv-aptclean';  break;
+                    case 'docker_restart':
+                        $cmdBin = 'echo "Restarting docker ..." && systemctl restart docker.service';  break;
                     case 'cockpit_install':
                     case 'cockpit_remove':
                     case 'docker_install':

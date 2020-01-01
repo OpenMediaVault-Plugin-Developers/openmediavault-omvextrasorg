@@ -11,7 +11,15 @@
 			"extras": {
 				"type": "boolean",
 				"required": false
-			},
+			}
+		}
+	}
+},{
+	"type": "rpc",
+	"id": "rpc.omvextras.setdocker",
+	"params": {
+		"type": "object",
+		"properties": {
 			"dockerStorage": {
 				"type": "string",
 				"required": false
@@ -34,6 +42,7 @@
 					"cockpit_remove",
 					"docker_install",
 					"docker_remove",
+					"docker_restart",
 					"installcz",
 					"installgp",
 					"installsys",

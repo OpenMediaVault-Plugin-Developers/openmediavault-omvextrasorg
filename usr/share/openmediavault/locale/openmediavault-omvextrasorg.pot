@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-05 13:51-0600\n"
+"POT-Creation-Date: 2020-01-01 16:46-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,16 +95,16 @@ msgstr ""
 msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
 msgstr ""
 
+msgid "Illegal docker storage path - cannot use /sharedfolders paths"
+msgstr ""
+
+msgid "Install"
+msgstr ""
+
 msgid "Install Clonezilla"
 msgstr ""
 
 msgid "Install Clonezilla ISO ..."
-msgstr ""
-
-msgid "Install Cockpit"
-msgstr ""
-
-msgid "Install Docker"
 msgstr ""
 
 msgid "Install Docker will download and place a newer docker-compose in /usr/local/bin/ on 64 bit x86 systems only."
@@ -120,9 +120,6 @@ msgid "Install GParted Live"
 msgstr ""
 
 msgid "Install GParted Live ISO ..."
-msgstr ""
-
-msgid "Install Portainer"
 msgstr ""
 
 msgid "Install Portainer will install the docker-ce package if not already installed."
@@ -167,10 +164,7 @@ msgstr ""
 msgid "OMV-Extras"
 msgstr ""
 
-msgid "Open Cockpit web interface"
-msgstr ""
-
-msgid "Open Portainer web interface"
+msgid "Open web"
 msgstr ""
 
 msgid "Path to Docker images and containers storage. Leave blank to use custom /etc/docker/daemon.json."
@@ -206,19 +200,13 @@ msgstr ""
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr ""
 
-msgid "Remove Cockpit"
-msgstr ""
-
-msgid "Remove Docker"
+msgid "Remove"
 msgstr ""
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
 msgstr ""
 
 msgid "Remove Docker will remove the docker-compose package."
-msgstr ""
-
-msgid "Remove Portainer"
 msgstr ""
 
 msgid "Remove Portainer will remove the Portainer image and container but the volume will not be removed."
@@ -231,6 +219,12 @@ msgid "Removing"
 msgstr ""
 
 msgid "Removing non-Proxmox kernels ..."
+msgstr ""
+
+msgid "Restart"
+msgstr ""
+
+msgid "Restarting docker ..."
 msgstr ""
 
 msgid "Running apt-get dist-upgrade ..."
@@ -252,6 +246,9 @@ msgid "SSH server is enabled by default.  Login with username: <b>root</b> and p
 msgstr ""
 
 msgid "SSH server is enabled by default.  Login with username: <b>user</b> and password: <b>live</b>"
+msgstr ""
+
+msgid "Save will rewrite daemon.json and restart docker if Docker Storage path has changed."
 msgstr ""
 
 msgid "Set as default boot kernel"
@@ -290,7 +287,7 @@ msgstr ""
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr ""
 
-msgid "This will install the latest 5.0 kernel."
+msgid "This will install the latest 5.3 kernel."
 msgstr ""
 
 msgid "This will remove all headers packages with the prefix linux-headers-."

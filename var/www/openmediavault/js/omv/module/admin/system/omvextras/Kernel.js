@@ -371,6 +371,6 @@ OMV.WorkspaceManager.registerPanel({
     id: "kernel",
     path: "/system/omvextras",
     text: _("Kernel"),
-    position: 20,
+    position: 40,
     className: "OMV.module.admin.system.omvextras.Kernel"
 });
