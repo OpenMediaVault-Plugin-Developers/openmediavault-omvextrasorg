@@ -4,7 +4,7 @@
  * @author    Volker Theile <volker.theile@openmediavault.org>
  * @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
  * @copyright Copyright (c) 2009-2013 Volker Theile
- * @copyright Copyright (c) 2013-2019 OpenMediaVault Plugin Developers
+ * @copyright Copyright (c) 2013-2020 OpenMediaVault Plugin Developers
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -44,7 +44,6 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
 
         $this->registerMethod('doCommand');
         $this->registerMethod('doHold');
-        $this->registerMethod('doBackports');
         $this->registerMethod('doProxmox');
     }
 
@@ -54,15 +53,10 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
         // Get the configuration object.
         $db = \OMV\Config\Database::getInstance();
-        $object = $db->get("conf.system.omvextras");
-
+        $object = $db->get('conf.system.omvextras');
         // backports status
-        if (file_exists('/etc/apt/sources.list.d/openmediavault-kernel-backports.list')) {
-            $backports = gettext("enabled");
-        } else {
-            $backports = gettext("disabled");
-        }
-        $object->add('backportsStatus', 'string', $backports);
+        $backports =  file_exists('/etc/apt/sources.list.d/openmediavault-kernel-backports.list');
+        $object->add('backportsStatus', 'boolean', $backports);
 
         return $object->getAssoc();
     }
@@ -75,9 +69,9 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $this->validateMethodParams($params, 'rpc.omvextras.setsettings');
         // Get the existing configuration object.
         $db = \OMV\Config\Database::getInstance();
-        $object = $db->get("conf.system.omvextras");
-        $object->set("testing",$params["testing"]);
-        $object->set("extras",$params["extras"]);
+        $object = $db->get('conf.system.omvextras');
+        $object->set('testing',$params['testing']);
+        $object->set('extras',$params['extras']);
         $db->set($object);
         // Set omvextras module to dirty
         $dispatcher = \OMV\Engine\Notify\Dispatcher::getInstance();
@@ -88,7 +82,9 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
             'modules' => [ 'omvextras' ],
             'force' => TRUE
         ], $context);
-        \OMV\Rpc\Rpc::call('Apt', 'update', NULL, $context);
+        // Execute command
+        $cmd = new \OMV\System\Process('omv-changebackports', $params['backportsStatus'] ? 'YES' : 'NO');
+        $cmd->execute($output);
         // Return the configuration object.
         return $object->getAssoc();
     }
@@ -99,7 +95,7 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
         // Get the configuration object.
         $db = \OMV\Config\Database::getInstance();
-        $object = $db->get("conf.system.omvextras");
+        $object = $db->get('conf.system.omvextras');
 
         // docker status
         $cmdLine = "dpkg-query -W -f='\${Version}' docker-ce";
@@ -131,7 +127,7 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $output = [];
         $cmd->execute($output, $exitStatus);
         if (empty($output[0])) {
-            $status = "No portainer container found.";
+            $status = 'No portainer container found.';
         } else {
             $status = $output[0];
         }
@@ -148,12 +144,12 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $this->validateMethodParams($params, 'rpc.omvextras.setdocker');
         // Get the existing configuration object.
         $db = \OMV\Config\Database::getInstance();
-        $object = $db->get("conf.system.omvextras");
+        $object = $db->get('conf.system.omvextras');
         // Check for illegal path
         if ( preg_match('#^/sharedfolders/#', $params['dockerStorage']) === 1 ) {
             throw new \OMV\Exception(gettext("Illegal docker storage path - cannot use /sharedfolders paths"));
         }
-        $object->set("dockerStorage",$params["dockerStorage"]);
+        $object->set('dockerStorage',$params['dockerStorage']);
         $db->set($object);
         // Apply the changes immediatelly (no user interaction is wanted).
         \OMV\Rpc\Rpc::call('Config', 'applyChanges', [
@@ -161,7 +157,7 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
             'force' => TRUE
         ], $context);
         // Rewrite daemon.json and restart if necessary
-        $cmdLine = "omv-installdocker docker config";
+        $cmdLine = 'omv-installdocker docker config';
         $cmd = new \OMV\System\Process($cmdLine);
         $cmd->setQuiet(true);
         $output = [];
@@ -176,7 +172,7 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
         // Get the configuration object.
         $db = \OMV\Config\Database::getInstance();
-        $object = $db->get("conf.system.omvextras");
+        $object = $db->get('conf.system.omvextras');
 
         // cockpit status
         $cmdLine = "dpkg-query -W -f='\${Version}' cockpit";
@@ -338,17 +334,6 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $arch = $this->getArch([], $context);
         $packages = sprintf('linux-image-%s linux-headers-%s', $arch['arch'], $arch['arch']);
         $cmd = new \OMV\System\Process('apt-mark', $params['command'], $packages);
-        $cmd->execute($output);
-    }
-
-    public function doBackports($params, $context)
-    {
-        // Validate the RPC caller context.
-        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
-        // Validate the parameters of the RPC service method.
-        $this->validateMethodParams($params, 'rpc.omvextras.dobackports');
-        // Execute command
-        $cmd = new \OMV\System\Process('omv-changebackports', $params['command']);
         $cmd->execute($output);
     }
 

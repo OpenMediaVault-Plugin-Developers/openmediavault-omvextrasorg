@@ -3,7 +3,7 @@
  * @author    Volker Theile <volker.theile@openmediavault.org>
  * @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
  * @copyright Copyright (c) 2009-2013 Volker Theile
- * @copyright Copyright (c) 2013-2019 OpenMediaVault Plugin Developers
+ * @copyright Copyright (c) 2013-2020 OpenMediaVault Plugin Developers
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -92,21 +92,6 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
                 icon: "images/erase.png",
                 handler: Ext.Function.bind(me.onCommandButton, me, [ "clean" ])
             }]
-        },{
-            id: me.getId() + "-backports",
-            xtype: "button",
-            text: _("Backports"),
-            scope: me,
-            icon: "images/software.png",
-            menu: [{
-                text: _("Enable Backports"),
-                icon: "images/led_green.png",
-                handler: Ext.Function.bind(me.onBackportsButton, me, [ "YES" ])
-            },{
-                text: _("Disable Backports"),
-                icon: "images/led_red.png",
-                handler: Ext.Function.bind(me.onBackportsButton, me, [ "NO" ])
-            }]
         });
         return items;
     },
@@ -130,10 +115,10 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
                 fieldLabel: _("Extras repo"),
                 checked: false
             },{
-                xtype: "textfield",
+                xtype: "checkbox",
                 name: "backportsStatus",
                 fieldLabel: _("Backports"),
-                submitValue: false
+                checked: true
             }]
         }];
     },
@@ -191,32 +176,6 @@ Ext.define("OMV.module.admin.system.omvextras.Repos", {
         wnd.setButtonDisabled("close", true);
         wnd.show();
         wnd.start();
-    },
-
-    onBackportsButton: function(command) {
-        var me = this;
-        var msg = "";
-        if (command == "NO") {
-            msg = _("Disabling backports repo ...");
-        } else {
-            msg = _("Enabling backports repo ...");
-        }
-        OMV.MessageBox.wait(null, msg);
-        OMV.Rpc.request({
-            scope: me,
-            relayErrors: false,
-            rpcData: {
-                service: "OmvExtras",
-                method: "doBackports",
-                params: {
-                    "command": command
-                }
-            },
-            success: function(id, success, response) {
-                me.doReload();
-                OMV.MessageBox.hide();
-            }
-        });
     }
 });
 

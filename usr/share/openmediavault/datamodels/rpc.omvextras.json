@@ -11,6 +11,10 @@
 			"extras": {
 				"type": "boolean",
 				"required": false
+			},
+			"backportsStatus": {
+				"type": "boolean",
+				"required": false
 			}
 		}
 	}
