@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-01 16:46-0600\n"
-"PO-Revision-Date: 2020-01-01 22:46+0000\n"
+"POT-Creation-Date: 2020-01-18 08:25-0600\n"
+"PO-Revision-Date: 2020-01-18 14:25+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -37,12 +37,6 @@ msgstr ""
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Utente: <b>user</b> e password: <b>live</b> predefiniti"
 
-msgid "Disable Backports"
-msgstr ""
-
-msgid "Disabling backports repo ..."
-msgstr ""
-
 msgid "Docker"
 msgstr ""
 
@@ -65,12 +59,6 @@ msgstr "Scarica ISO di GParted Live e configura il bootloader grub per consentir
 msgid ""
 "Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
 " from ISO."
-msgstr ""
-
-msgid "Enable Backports"
-msgstr ""
-
-msgid "Enabling backports repo ..."
 msgstr ""
 
 msgid "Extras repo"
@@ -183,6 +171,9 @@ msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
 msgid "Open web"
+msgstr ""
+
+msgid "Opt-out"
 msgstr ""
 
 msgid ""
@@ -323,6 +314,9 @@ msgstr ""
 msgid "This will install the latest 5.3 kernel."
 msgstr ""
 
+msgid "This will opt-out of Portainer's minimal analytics."
+msgstr ""
+
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr ""
 
@@ -359,13 +353,7 @@ msgstr ""
 msgid "apt clean"
 msgstr ""
 
-msgid "disabled"
-msgstr ""
-
 msgid "dist-upgrade"
-msgstr ""
-
-msgid "enabled"
 msgstr ""
 
 msgid "n/a"

@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# kochin <kochinc@outlook.com>, 2014-2019
+# kochin <kochinc@outlook.com>, 2014-2020
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-01 16:46-0600\n"
-"PO-Revision-Date: 2020-01-01 22:46+0000\n"
+"POT-Creation-Date: 2020-01-18 08:25-0600\n"
+"PO-Revision-Date: 2020-01-18 14:25+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -36,12 +36,6 @@ msgstr "Cockpit 在連接埠 9090 監聽網站介面。"
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "預設 用戶名稱：<b>user</b> 與 密碼：<b>live</b>"
 
-msgid "Disable Backports"
-msgstr "停用向後移植"
-
-msgid "Disabling backports repo ..."
-msgstr "停用向後移植套件庫中 ..."
-
 msgid "Docker"
 msgstr "Docker"
 
@@ -65,12 +59,6 @@ msgid ""
 "Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
 " from ISO."
 msgstr "下載 SystemRescuecd ISO，並將 grub 啟動載入器設置成允許從 ISO 啟動。"
-
-msgid "Enable Backports"
-msgstr "啟用向後移植"
-
-msgid "Enabling backports repo ..."
-msgstr "啟用向後移植套件庫中 ..."
 
 msgid "Extras repo"
 msgstr "Extras 套件庫"
@@ -105,10 +93,10 @@ msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
 msgstr "ISO 在作業系統磁碟上的 /boot 目錄會使用大約 381 Mb。"
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
-msgstr ""
+msgstr "非法的 docker 儲存路徑 - 不能使用 /sharedfolders 路徑"
 
 msgid "Install"
-msgstr ""
+msgstr "安裝"
 
 msgid "Install Clonezilla"
 msgstr "安裝 Clonezilla"
@@ -182,6 +170,9 @@ msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
 msgid "Open web"
+msgstr "打開網頁"
+
+msgid "Opt-out"
 msgstr ""
 
 msgid ""
@@ -222,7 +213,7 @@ msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "在移除 非Proxmox 系統核心之前，請先以 Promxmox 系統核心重新啟動。"
 
 msgid "Remove"
-msgstr ""
+msgstr "移除"
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
 msgstr "移除 Docker 將會把 docker-compose 從 /usr/local/bin/ 裡刪除掉。"
@@ -245,10 +236,10 @@ msgid "Removing non-Proxmox kernels ..."
 msgstr "移除 非Proxmox 系統核心中 ..."
 
 msgid "Restart"
-msgstr ""
+msgstr "重新啟動"
 
 msgid "Restarting docker ..."
-msgstr ""
+msgstr "重新啟動 docker 中 ..."
 
 msgid "Running apt-get dist-upgrade ..."
 msgstr "執行 apt-get dist-upgrade 中 ..."
@@ -278,7 +269,7 @@ msgstr "SSH 伺服器被預設為啟用。請以用戶名稱：<b>user</b> 和�
 msgid ""
 "Save will rewrite daemon.json and restart docker if Docker Storage path has "
 "changed."
-msgstr ""
+msgstr "存入將會蓋寫過 daemon.json，如果 Docker 的儲存路徑有改變，則也重新啟動 docker。"
 
 msgid "Set as default boot kernel"
 msgstr "設定為預設的啟動系統核心"
@@ -320,6 +311,9 @@ msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "移除 linux-image-* kernel 可能會失敗，如果它仍在操作中。"
 
 msgid "This will install the latest 5.3 kernel."
+msgstr "這將會安裝最新的 5.3 系統核心。"
+
+msgid "This will opt-out of Portainer's minimal analytics."
 msgstr ""
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
@@ -358,14 +352,8 @@ msgstr "並且正在執行中"
 msgid "apt clean"
 msgstr "apt clean"
 
-msgid "disabled"
-msgstr "已停用"
-
 msgid "dist-upgrade"
 msgstr "dist-upgrade"
-
-msgid "enabled"
-msgstr "已啟用"
 
 msgid "n/a"
 msgstr "不適用"

@@ -4,7 +4,7 @@
 # 
 # Translators:
 # David Hönel <davidh1990@gmx.de>, 2013-2015
-# Ettore Atalan <atalanttore@googlemail.com>, 2014-2016,2019
+# Ettore Atalan <atalanttore@googlemail.com>, 2014-2016,2019-2020
 # Raiko, 2016
 # René P. <phortexx@gmx.net>, 2014
 # WastlJ, 2014-2015
@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-01 16:46-0600\n"
-"PO-Revision-Date: 2020-01-01 22:46+0000\n"
+"POT-Creation-Date: 2020-01-18 08:25-0600\n"
+"PO-Revision-Date: 2020-01-18 14:25+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -41,12 +41,6 @@ msgstr ""
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Standardbenutzername: <b>user</b> und Passwort: <b>live</b>"
 
-msgid "Disable Backports"
-msgstr "Rückportierungen deaktivieren"
-
-msgid "Disabling backports repo ..."
-msgstr ""
-
 msgid "Docker"
 msgstr "Docker"
 
@@ -69,12 +63,6 @@ msgstr "GParted Live ISO herunterladen und konfiguriert den Grub-Bootloader dies
 msgid ""
 "Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
 " from ISO."
-msgstr ""
-
-msgid "Enable Backports"
-msgstr "Rückportierungen aktivieren"
-
-msgid "Enabling backports repo ..."
 msgstr ""
 
 msgid "Extras repo"
@@ -113,7 +101,7 @@ msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr ""
 
 msgid "Install"
-msgstr ""
+msgstr "Installieren"
 
 msgid "Install Clonezilla"
 msgstr "Clonezilla installieren"
@@ -189,6 +177,9 @@ msgstr "OMV-Extras"
 msgid "Open web"
 msgstr ""
 
+msgid "Opt-out"
+msgstr ""
+
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
 "/etc/docker/daemon.json."
@@ -227,7 +218,7 @@ msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr ""
 
 msgid "Remove"
-msgstr ""
+msgstr "Entfernen"
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
 msgstr ""
@@ -250,7 +241,7 @@ msgid "Removing non-Proxmox kernels ..."
 msgstr "Nicht-Proxmox-Kernel werden entfernt ..."
 
 msgid "Restart"
-msgstr ""
+msgstr "Neustart"
 
 msgid "Restarting docker ..."
 msgstr ""
@@ -327,6 +318,9 @@ msgstr ""
 msgid "This will install the latest 5.3 kernel."
 msgstr ""
 
+msgid "This will opt-out of Portainer's minimal analytics."
+msgstr ""
+
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr ""
 
@@ -363,14 +357,8 @@ msgstr ""
 msgid "apt clean"
 msgstr "apt clean"
 
-msgid "disabled"
-msgstr "deaktiviert"
-
 msgid "dist-upgrade"
 msgstr "dist-upgrade"
-
-msgid "enabled"
-msgstr "aktiviert"
 
 msgid "n/a"
 msgstr "n/v"

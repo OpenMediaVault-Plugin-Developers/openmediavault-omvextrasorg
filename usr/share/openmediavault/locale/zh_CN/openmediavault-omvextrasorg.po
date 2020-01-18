@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-01 16:46-0600\n"
-"PO-Revision-Date: 2020-01-01 22:46+0000\n"
+"POT-Creation-Date: 2020-01-18 08:25-0600\n"
+"PO-Revision-Date: 2020-01-18 14:25+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -36,12 +36,6 @@ msgstr "9090作为 Cockpit web 标签页的监听端口。"
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "默认用户名 <b>user</b>  默认密码: <b>live</b>"
 
-msgid "Disable Backports"
-msgstr "停用 Backports"
-
-msgid "Disabling backports repo ..."
-msgstr "停用 Backports 源中 ..."
-
 msgid "Docker"
 msgstr "Docker "
 
@@ -65,12 +59,6 @@ msgid ""
 "Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
 " from ISO."
 msgstr "下载 SystemRescueCD ISO 镜像，配置 grub 从该 ISO镜像 引导启动。"
-
-msgid "Enable Backports"
-msgstr "启用 Backports"
-
-msgid "Enabling backports repo ..."
-msgstr "启用 backports 源中 ..."
 
 msgid "Extras repo"
 msgstr "扩展源"
@@ -182,6 +170,9 @@ msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
 msgid "Open web"
+msgstr ""
+
+msgid "Opt-out"
 msgstr ""
 
 msgid ""
@@ -322,6 +313,9 @@ msgstr "如果 linux-image-*内核处于使用状态删除该内核将失败。"
 msgid "This will install the latest 5.3 kernel."
 msgstr ""
 
+msgid "This will opt-out of Portainer's minimal analytics."
+msgstr ""
+
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "这将删除前缀为 linux-headers- 的所有软件包。"
 
@@ -358,14 +352,8 @@ msgstr "运行中"
 msgid "apt clean"
 msgstr "apt clean"
 
-msgid "disabled"
-msgstr "停用"
-
 msgid "dist-upgrade"
 msgstr "dist-upgrade"
-
-msgid "enabled"
-msgstr "启用"
 
 msgid "n/a"
 msgstr "n/a"

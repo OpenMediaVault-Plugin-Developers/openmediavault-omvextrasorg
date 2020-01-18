@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-01 16:46-0600\n"
-"PO-Revision-Date: 2020-01-01 22:46+0000\n"
+"POT-Creation-Date: 2020-01-18 08:25-0600\n"
+"PO-Revision-Date: 2020-01-18 14:25+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -38,12 +38,6 @@ msgstr "A Cockpit webes felhasználói felülete a 9090-es porton hallgat."
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Alapértelmezett felhasználónév: <b>felhasználó</b> és jelszó: <b>élő</b>"
 
-msgid "Disable Backports"
-msgstr "Visszaportolások letiltása"
-
-msgid "Disabling backports repo ..."
-msgstr "Visszaportolt tároló letiltása…"
-
 msgid "Docker"
 msgstr "Docker"
 
@@ -67,12 +61,6 @@ msgid ""
 "Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
 " from ISO."
 msgstr "SystemRescueCD ISO letöltése és a GRUB rendszerbetöltő konfigurálása, hogy lehessen rendszert indítani az ISO-ról."
-
-msgid "Enable Backports"
-msgstr "Visszaportolások engedélyezése"
-
-msgid "Enabling backports repo ..."
-msgstr "Visszaportolt tároló engedélyezése…"
 
 msgid "Extras repo"
 msgstr "Extrák tároló"
@@ -184,6 +172,9 @@ msgid "OMV-Extras"
 msgstr "OMV-Extrák"
 
 msgid "Open web"
+msgstr ""
+
+msgid "Opt-out"
 msgstr ""
 
 msgid ""
@@ -324,6 +315,9 @@ msgstr "Meg fog hiúsulni a linux-image-* kernel eltávolítása, ha még aktív
 msgid "This will install the latest 5.3 kernel."
 msgstr ""
 
+msgid "This will opt-out of Portainer's minimal analytics."
+msgstr ""
+
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "A linux-headers- előtagra illeszkedő összes fejléc csomag eltávolítása."
 
@@ -360,14 +354,8 @@ msgstr "és fut"
 msgid "apt clean"
 msgstr "apt clean"
 
-msgid "disabled"
-msgstr "letiltva"
-
 msgid "dist-upgrade"
 msgstr "dist-upgrade"
-
-msgid "enabled"
-msgstr "engedélyezve"
 
 msgid "n/a"
 msgstr "nem értelmezett"

@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-01 16:46-0600\n"
-"PO-Revision-Date: 2020-01-01 22:46+0000\n"
+"POT-Creation-Date: 2020-01-18 08:25-0600\n"
+"PO-Revision-Date: 2020-01-18 14:25+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -39,12 +39,6 @@ msgstr "Cockpit прослушивает порт 9090 для веб-интер�
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "По умолчанию имя пользователя: <b>user</b> и пароль: <b>live</b>"
 
-msgid "Disable Backports"
-msgstr "Отключить Backports"
-
-msgid "Disabling backports repo ..."
-msgstr "Отключается репо backports..."
-
 msgid "Docker"
 msgstr "Докер"
 
@@ -68,12 +62,6 @@ msgid ""
 "Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
 " from ISO."
 msgstr "Загружает SystemRescuecd ISO и настраивает загрузчик grub, чтобы разрешить загрузку с ISO."
-
-msgid "Enable Backports"
-msgstr "Включить Backports"
-
-msgid "Enabling backports repo ..."
-msgstr "Включение репо backports ..."
 
 msgid "Extras repo"
 msgstr "Extras repo"
@@ -185,6 +173,9 @@ msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
 msgid "Open web"
+msgstr ""
+
+msgid "Opt-out"
 msgstr ""
 
 msgid ""
@@ -325,6 +316,9 @@ msgstr "Не удалит ядро linux-image- *, если оно все еще
 msgid "This will install the latest 5.3 kernel."
 msgstr ""
 
+msgid "This will opt-out of Portainer's minimal analytics."
+msgstr ""
+
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "Удалит все пакеты заголовков с префиксом linux-headers-."
 
@@ -361,14 +355,8 @@ msgstr "и работает"
 msgid "apt clean"
 msgstr "apt clean"
 
-msgid "disabled"
-msgstr "Отключен"
-
 msgid "dist-upgrade"
 msgstr "dist-upgrade"
-
-msgid "enabled"
-msgstr "включено"
 
 msgid "n/a"
 msgstr "n/a"

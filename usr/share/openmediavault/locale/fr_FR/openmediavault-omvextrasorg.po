@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-01 16:46-0600\n"
-"PO-Revision-Date: 2020-01-01 22:46+0000\n"
+"POT-Creation-Date: 2020-01-18 08:25-0600\n"
+"PO-Revision-Date: 2020-01-18 14:25+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -37,12 +37,6 @@ msgstr ""
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Nom d'utilisateur par défaut : «<b>user</b>», et mot de passe : «<b>live</b>»."
 
-msgid "Disable Backports"
-msgstr "Désactiver les rétroportages"
-
-msgid "Disabling backports repo ..."
-msgstr "Désactivation du dépôt des rétroportages ..."
-
 msgid "Docker"
 msgstr ""
 
@@ -66,12 +60,6 @@ msgid ""
 "Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
 " from ISO."
 msgstr "Télécharge l'ISO de SystemRescueCD et configure le gestionnaire de démarrage GRUB pour permettre le démarrage à partir de l'ISO."
-
-msgid "Enable Backports"
-msgstr "Activer les rétroportages"
-
-msgid "Enabling backports repo ..."
-msgstr "Activation du dépôt des rétroportages ..."
 
 msgid "Extras repo"
 msgstr ""
@@ -183,6 +171,9 @@ msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
 msgid "Open web"
+msgstr ""
+
+msgid "Opt-out"
 msgstr ""
 
 msgid ""
@@ -323,6 +314,9 @@ msgstr "Ceci échouera à supprimer un noyau linux-image- * s'il est toujours ac
 msgid "This will install the latest 5.3 kernel."
 msgstr ""
 
+msgid "This will opt-out of Portainer's minimal analytics."
+msgstr ""
+
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "Cela supprimera tous les paquets d'en-têtes avec le préfixe linux-headers-."
 
@@ -359,13 +353,7 @@ msgstr ""
 msgid "apt clean"
 msgstr ""
 
-msgid "disabled"
-msgstr ""
-
 msgid "dist-upgrade"
-msgstr ""
-
-msgid "enabled"
 msgstr ""
 
 msgid "n/a"

@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# Toshihiro Kan <kansuke4649@gmail.com>, 2014-2019
+# Toshihiro Kan <kansuke4649@gmail.com>, 2014-2020
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-01 16:46-0600\n"
-"PO-Revision-Date: 2020-01-01 22:46+0000\n"
+"POT-Creation-Date: 2020-01-18 08:25-0600\n"
+"PO-Revision-Date: 2020-01-18 14:25+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
@@ -36,12 +36,6 @@ msgstr "Cockpit のWebインタフェースはポート9090で待ち受けます
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "デフォルトのユーザー名: <b>user</b>、パスワード:<b>live</b>"
 
-msgid "Disable Backports"
-msgstr "バックポートを無効化"
-
-msgid "Disabling backports repo ..."
-msgstr "バックポート用リポジトリを無効にしています ..."
-
 msgid "Docker"
 msgstr "Docker"
 
@@ -65,12 +59,6 @@ msgid ""
 "Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
 " from ISO."
 msgstr "SystemRescueCD ISOをダウンロードし、ISOからの起動を許可するようにgrubブートローダを設定します。"
-
-msgid "Enable Backports"
-msgstr "バックポートを有効化"
-
-msgid "Enabling backports repo ..."
-msgstr "バックポート用リポジトリを有効にしています ..."
 
 msgid "Extras repo"
 msgstr "その他のリポジトリ"
@@ -105,10 +93,10 @@ msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
 msgstr "ISOは、OSのドライブ上の/bootディレクトリ内に約381 MBの容量を使用します。"
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
-msgstr ""
+msgstr "不正なdockerストレージのパス - /sharedfolders パスは使えません"
 
 msgid "Install"
-msgstr ""
+msgstr "インストール"
 
 msgid "Install Clonezilla"
 msgstr "Clonezillaのインストール"
@@ -182,6 +170,9 @@ msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
 msgid "Open web"
+msgstr "Webを開く"
+
+msgid "Opt-out"
 msgstr ""
 
 msgid ""
@@ -222,7 +213,7 @@ msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "non-Proxmoxカーネルを削除する前に、Proxmoxカーネルで再起動してください。"
 
 msgid "Remove"
-msgstr ""
+msgstr "削除"
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
 msgstr "Dockerの削除は、/usr/local/bin/からdocker-composeを削除します。"
@@ -245,10 +236,10 @@ msgid "Removing non-Proxmox kernels ..."
 msgstr "non-Proxmox カーネルを削除しています ..."
 
 msgid "Restart"
-msgstr ""
+msgstr "再起動"
 
 msgid "Restarting docker ..."
-msgstr ""
+msgstr "dockerを再起動中 ..."
 
 msgid "Running apt-get dist-upgrade ..."
 msgstr "apt-get dist-upgrade を実行しています..."
@@ -278,7 +269,7 @@ msgstr "SSHサーバはデフォルトで有効になっています。ログイ
 msgid ""
 "Save will rewrite daemon.json and restart docker if Docker Storage path has "
 "changed."
-msgstr ""
+msgstr "Dockerストレージパスが変更された場合、保存するとdaemon.jsonを書き換えてdockerを再起動します。"
 
 msgid "Set as default boot kernel"
 msgstr "デフォルトの起動カーネルをセット"
@@ -320,6 +311,9 @@ msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "linux-image- * カーネルがまだアクティブであれば削除することはできません。"
 
 msgid "This will install the latest 5.3 kernel."
+msgstr "最新の5.3カーネルがインストールされます。"
+
+msgid "This will opt-out of Portainer's minimal analytics."
 msgstr ""
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
@@ -358,14 +352,8 @@ msgstr "実行中"
 msgid "apt clean"
 msgstr "apt clean"
 
-msgid "disabled"
-msgstr "無効化済"
-
 msgid "dist-upgrade"
 msgstr "dist-upgrade"
-
-msgid "enabled"
-msgstr "有効化済"
 
 msgid "n/a"
 msgstr "n/a"
