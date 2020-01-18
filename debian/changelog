@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.2.1) stable; urgency=low
+
+  * GDPR is stupid.
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 18 Jan 2020 11:53:35 -0600
+
 openmediavault-omvextrasorg (5.2) stable; urgency=low
 
   * Create Docker and Cockpit tabs

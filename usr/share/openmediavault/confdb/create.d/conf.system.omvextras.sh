@@ -36,7 +36,7 @@ if ! omv_config_exists "/config/system/omvextras/dockerStorage"; then
     omv_config_add_key "/config/system/omvextras" "dockerStorage" "/var/lib/docker"
 fi
 if ! omv_config_exists "/config/system/omvextras/optout"; then
-    omv_config_add_key "/config/system/omvextras" "optout" "0"
+    omv_config_add_key "/config/system/omvextras" "optout" "1"
 fi
 
 # disable grub submenus on systems that use grub
