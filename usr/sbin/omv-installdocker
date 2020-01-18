@@ -300,7 +300,7 @@ installPortainer()
 
   # pull and start portainer
   echo "Pulling and starting portainer ..."
-  docker run -d --name "${portainerName}" -p 9000:9000 -p 8000:8000 --restart=unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v ${portainerVolume}:/data portainer/portainer
+  docker run -d --name "${portainerName}" -p 9000:9000 -p 8000:8000 --restart=unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v ${portainerVolume}:/data portainer/portainer --no-analytics
   if [ $? -gt 0 ]; then
     echo "Something went wrong trying to pull and start portainer ..."
   fi
