@@ -27,6 +27,10 @@
 			"dockerStorage": {
 				"type": "string",
 				"required": false
+			},
+			"optout": {
+				"type": "boolean",
+				"required": false
 			}
 		}
 	}

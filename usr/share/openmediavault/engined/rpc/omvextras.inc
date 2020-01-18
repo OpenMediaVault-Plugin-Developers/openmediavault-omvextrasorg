@@ -150,6 +150,7 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
             throw new \OMV\Exception(gettext("Illegal docker storage path - cannot use /sharedfolders paths"));
         }
         $object->set('dockerStorage',$params['dockerStorage']);
+        $object->set('optout',$params['optout']);
         $db->set($object);
         // Apply the changes immediatelly (no user interaction is wanted).
         \OMV\Rpc\Rpc::call('Config', 'applyChanges', [
