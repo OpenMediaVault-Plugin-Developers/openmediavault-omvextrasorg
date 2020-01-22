@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-18 08:25-0600\n"
-"PO-Revision-Date: 2020-01-18 14:25+0000\n"
+"POT-Creation-Date: 2020-01-22 11:05-0600\n"
+"PO-Revision-Date: 2020-01-22 17:05+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: English (United Kingdom) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/en_GB/)\n"
 "MIME-Version: 1.0\n"
@@ -82,15 +82,6 @@ msgid ""
 "IP Address will be set by DHCP.  Using static DHCP is recommended for "
 "headless servers."
 msgstr "IP Address will be set by DHCP.  Using static DHCP is recommended for headless servers."
-
-msgid "ISO uses approximately 139 Mb in /boot directory on OS drive."
-msgstr "ISO uses approximately 139 MBytes in /boot directory on OS drive."
-
-msgid "ISO uses approximately 219 Mb in /boot directory on OS drive."
-msgstr "ISO uses approximately 219 MBytes in /boot directory on OS drive."
-
-msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
-msgstr "ISO uses approximately 381 MBytes in /boot directory on OS drive."
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr ""
@@ -294,6 +285,9 @@ msgstr "Setting the wrong default boot kernel may cause the system to be inacces
 
 msgid "Settings"
 msgstr "Settings"
+
+msgid "Spaced used by ISO in /boot directory on OS drive"
+msgstr ""
 
 msgid "Status"
 msgstr "Status"

@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-18 08:25-0600\n"
-"PO-Revision-Date: 2020-01-18 14:25+0000\n"
+"POT-Creation-Date: 2020-01-22 11:05-0600\n"
+"PO-Revision-Date: 2020-01-22 17:05+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -83,15 +83,6 @@ msgid ""
 "IP Address will be set by DHCP.  Using static DHCP is recommended for "
 "headless servers."
 msgstr "IP adresa bude nastavena automaticky protokolem DHCP. Pro stroje bez připojeného monitoru je dobré nastavit statickou zápůjčku na DHCP serveru."
-
-msgid "ISO uses approximately 139 Mb in /boot directory on OS drive."
-msgstr "ISO soubor zabere přibližně 139 MB ve složce /boot na jednotce datového úložiště s operačním systémem."
-
-msgid "ISO uses approximately 219 Mb in /boot directory on OS drive."
-msgstr "ISO soubor zabere přibližně 219 MB ve složce /boot na jednotce datového úložiště s operačním systémem."
-
-msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
-msgstr "ISO soubor zabere přibližně 381 MB ve složce /boot na jednotce datového úložiště s operačním systémem."
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr "Neplatný popis umístění úložiště pro docker – není možné použít popisy umístění /sharedfolders"
@@ -174,7 +165,7 @@ msgid "Open web"
 msgstr "Otevřít web"
 
 msgid "Opt-out"
-msgstr ""
+msgstr "Zrušit svou účast"
 
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
@@ -296,6 +287,9 @@ msgstr "Nastavení nefungujícího výchozího jádra může způsobit nedostupn
 msgid "Settings"
 msgstr "Nastavení"
 
+msgid "Spaced used by ISO in /boot directory on OS drive"
+msgstr ""
+
 msgid "Status"
 msgstr "Stav"
 
@@ -315,7 +309,7 @@ msgid "This will install the latest 5.3 kernel."
 msgstr "Toto nainstaluje nejnovější jádro 5.3."
 
 msgid "This will opt-out of Portainer's minimal analytics."
-msgstr ""
+msgstr "Toto zruší vaši účast na analýze využívání Portainer, odesílané jeho vývojářům."
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "Toto odebere všechny balíčky s hlavičkovými soubory s předponou linux-headers-."

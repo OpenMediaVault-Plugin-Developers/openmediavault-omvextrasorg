@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-18 08:25-0600\n"
-"PO-Revision-Date: 2020-01-18 14:25+0000\n"
+"POT-Creation-Date: 2020-01-22 11:05-0600\n"
+"PO-Revision-Date: 2020-01-22 17:05+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
@@ -82,15 +82,6 @@ msgid ""
 "IP Address will be set by DHCP.  Using static DHCP is recommended for "
 "headless servers."
 msgstr "IPアドレスはDHCPによって設定されます。スタティックDHCPはヘッドレスサーバに推奨されています。"
-
-msgid "ISO uses approximately 139 Mb in /boot directory on OS drive."
-msgstr "ISOは、OSのドライブ上の/bootディレクトリ内に約139 MBの容量を使用します。"
-
-msgid "ISO uses approximately 219 Mb in /boot directory on OS drive."
-msgstr "ISOは、OSのドライブ上の/bootディレクトリ内に約219 MBの容量を使用します。"
-
-msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
-msgstr "ISOは、OSのドライブ上の/bootディレクトリ内に約381 MBの容量を使用します。"
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr "不正なdockerストレージのパス - /sharedfolders パスは使えません"
@@ -173,7 +164,7 @@ msgid "Open web"
 msgstr "Webを開く"
 
 msgid "Opt-out"
-msgstr ""
+msgstr "Opt-out"
 
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
@@ -295,6 +286,9 @@ msgstr "間違ったデフォルトの起動カーネルを設定すると、シ
 msgid "Settings"
 msgstr "設定"
 
+msgid "Spaced used by ISO in /boot directory on OS drive"
+msgstr ""
+
 msgid "Status"
 msgstr "状態"
 
@@ -314,7 +308,7 @@ msgid "This will install the latest 5.3 kernel."
 msgstr "最新の5.3カーネルがインストールされます。"
 
 msgid "This will opt-out of Portainer's minimal analytics."
-msgstr ""
+msgstr "これにより、Portainerの最小限の分析がオプトアウトされます。"
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "linux-headers-で始まる、すべてのヘッダパッケージが削除されます。"

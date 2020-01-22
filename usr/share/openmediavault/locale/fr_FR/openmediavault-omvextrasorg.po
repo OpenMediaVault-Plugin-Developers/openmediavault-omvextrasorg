@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-18 08:25-0600\n"
-"PO-Revision-Date: 2020-01-18 14:25+0000\n"
+"POT-Creation-Date: 2020-01-22 11:05-0600\n"
+"PO-Revision-Date: 2020-01-22 17:05+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -83,15 +83,6 @@ msgid ""
 "IP Address will be set by DHCP.  Using static DHCP is recommended for "
 "headless servers."
 msgstr "L'utilisation de DHCP statique est recommandée pour les serveurs sans affichage."
-
-msgid "ISO uses approximately 139 Mb in /boot directory on OS drive."
-msgstr "L'ISO utilise environ 139 Mo dans le répertoire /boot sur le lecteur de système d'exploitation."
-
-msgid "ISO uses approximately 219 Mb in /boot directory on OS drive."
-msgstr "L'ISO utilise environ 219 Mo dans le répertoire /boot sur le lecteur de système d'exploitation."
-
-msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
-msgstr "L'ISO utilise environ 381 Mo dans le répertoire /boot sur le lecteur de système d'exploitation."
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr ""
@@ -294,6 +285,9 @@ msgid ""
 msgstr "Définir le mauvais noyau de démarrage par défaut peut rendre le système inaccessible. Le menu de démarrage sera toujours disponible pour sélectionner un noyau différent."
 
 msgid "Settings"
+msgstr ""
+
+msgid "Spaced used by ISO in /boot directory on OS drive"
 msgstr ""
 
 msgid "Status"

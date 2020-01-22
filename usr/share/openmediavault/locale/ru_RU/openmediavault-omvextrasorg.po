@@ -6,13 +6,13 @@
 # Alexander Savchenko, 2013
 # Alexander Savchenko, 2014-2015
 # Артур Мудрых <arturmon82@gmail.com>, 2013,2015-2016
-# Артур Мудрых <arturmon82@gmail.com>, 2017,2019
+# Артур Мудрых <arturmon82@gmail.com>, 2017,2019-2020
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-18 08:25-0600\n"
-"PO-Revision-Date: 2020-01-18 14:25+0000\n"
+"POT-Creation-Date: 2020-01-22 11:05-0600\n"
+"PO-Revision-Date: 2020-01-22 17:05+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -86,20 +86,11 @@ msgid ""
 "headless servers."
 msgstr "IP-адрес будет получен по DHCP. Использование статического DHCP рекомендуется для серверов без основы."
 
-msgid "ISO uses approximately 139 Mb in /boot directory on OS drive."
-msgstr "ISO использует примерно 139 МБ в /boot каталог на диске ОС."
-
-msgid "ISO uses approximately 219 Mb in /boot directory on OS drive."
-msgstr "ISO использует примерно 219 МБ в /boot каталог на диске ОС."
-
-msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
-msgstr "ISO использует примерно 381 МБ в /boot каталог на диске ОС."
-
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
-msgstr ""
+msgstr "Неверный путь хранения докера - нельзя использовать пути /sharedfolders"
 
 msgid "Install"
-msgstr ""
+msgstr "Установить"
 
 msgid "Install Clonezilla"
 msgstr "Установить Clonezilla"
@@ -173,7 +164,7 @@ msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
 msgid "Open web"
-msgstr ""
+msgstr "Открыть web"
 
 msgid "Opt-out"
 msgstr ""
@@ -216,7 +207,7 @@ msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "Перезагрузите ядро Proxmox перед удалением не-Proxmox ядер."
 
 msgid "Remove"
-msgstr ""
+msgstr "Удалить"
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
 msgstr "Удаление Докер, удалит docker-compose из /usr/local/bin/."
@@ -239,10 +230,10 @@ msgid "Removing non-Proxmox kernels ..."
 msgstr "Удаление не-Proxmox ядер ..."
 
 msgid "Restart"
-msgstr ""
+msgstr "Повторный запуск"
 
 msgid "Restarting docker ..."
-msgstr ""
+msgstr "Перезапускается docker ..."
 
 msgid "Running apt-get dist-upgrade ..."
 msgstr "Запуск apt-get dist-upgrade ..."
@@ -272,7 +263,7 @@ msgstr "Сервер SSH включен по умолчанию. Войти с �
 msgid ""
 "Save will rewrite daemon.json and restart docker if Docker Storage path has "
 "changed."
-msgstr ""
+msgstr "Сохранение перезапишет daemon.json и перезапустит Docker, если путь к хранилищу Docker был изменен."
 
 msgid "Set as default boot kernel"
 msgstr "Установить как ядро загрузки по умолчанию"
@@ -298,6 +289,9 @@ msgstr "Выбор неправильного ядра загрузки по у�
 msgid "Settings"
 msgstr "Настройки"
 
+msgid "Spaced used by ISO in /boot directory on OS drive"
+msgstr ""
+
 msgid "Status"
 msgstr "Статус"
 
@@ -314,10 +308,10 @@ msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "Не удалит ядро linux-image- *, если оно все еще активно."
 
 msgid "This will install the latest 5.3 kernel."
-msgstr ""
+msgstr "Установить последнюю версию ядра 5.3."
 
 msgid "This will opt-out of Portainer's minimal analytics."
-msgstr ""
+msgstr "Позволит отказаться от минимальной аналитики Portainer."
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "Удалит все пакеты заголовков с префиксом linux-headers-."

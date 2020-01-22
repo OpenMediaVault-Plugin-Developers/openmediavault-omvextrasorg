@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-18 08:25-0600\n"
+"POT-Creation-Date: 2020-01-22 11:05-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -72,15 +72,6 @@ msgid "IP Address will be set by DHCP."
 msgstr ""
 
 msgid "IP Address will be set by DHCP.  Using static DHCP is recommended for headless servers."
-msgstr ""
-
-msgid "ISO uses approximately 139 Mb in /boot directory on OS drive."
-msgstr ""
-
-msgid "ISO uses approximately 219 Mb in /boot directory on OS drive."
-msgstr ""
-
-msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
 msgstr ""
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
@@ -261,6 +252,9 @@ msgid "Setting the wrong default boot kernel may cause the system to be inaccess
 msgstr ""
 
 msgid "Settings"
+msgstr ""
+
+msgid "Spaced used by ISO in /boot directory on OS drive"
 msgstr ""
 
 msgid "Status"

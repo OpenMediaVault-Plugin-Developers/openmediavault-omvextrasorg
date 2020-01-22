@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-18 08:25-0600\n"
-"PO-Revision-Date: 2020-01-18 14:25+0000\n"
+"POT-Creation-Date: 2020-01-22 11:05-0600\n"
+"PO-Revision-Date: 2020-01-22 17:05+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -84,15 +84,6 @@ msgid ""
 "IP Address will be set by DHCP.  Using static DHCP is recommended for "
 "headless servers."
 msgstr "Az IP címet a DHCP fogja kiosztani. Statikus DHCP alkalmazása periféria nélküli kiszolgálóknál javasolt. "
-
-msgid "ISO uses approximately 139 Mb in /boot directory on OS drive."
-msgstr "Az ISO fájl kb. 139 MB-ot foglal el az operációs rendszer /boot mappájában."
-
-msgid "ISO uses approximately 219 Mb in /boot directory on OS drive."
-msgstr "Az ISO fájl kb. 219 MB-ot foglal el az operációs rendszer /boot mappájában."
-
-msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
-msgstr "Az ISO fájl kb. 381 Mb-ot foglal el az operációs rendszer /boot mappájában."
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr ""
@@ -296,6 +287,9 @@ msgstr "A rosszul alapértelmezettként beállított kernel miatt a rendszer el�
 
 msgid "Settings"
 msgstr "Beállítások"
+
+msgid "Spaced used by ISO in /boot directory on OS drive"
+msgstr ""
 
 msgid "Status"
 msgstr "Állapot"

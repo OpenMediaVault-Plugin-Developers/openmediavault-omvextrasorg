@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-18 08:25-0600\n"
-"PO-Revision-Date: 2020-01-18 14:25+0000\n"
+"POT-Creation-Date: 2020-01-22 11:05-0600\n"
+"PO-Revision-Date: 2020-01-22 17:05+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -82,15 +82,6 @@ msgid ""
 "IP Address will be set by DHCP.  Using static DHCP is recommended for "
 "headless servers."
 msgstr "IP 地址將由 DHCP 設定。建議在無頭伺服器上使用靜態 DHCP。"
-
-msgid "ISO uses approximately 139 Mb in /boot directory on OS drive."
-msgstr "ISO 在作業系統磁碟上的 /boot 目錄會使用大約 139 Mb。"
-
-msgid "ISO uses approximately 219 Mb in /boot directory on OS drive."
-msgstr "ISO 在作業系統磁碟上的 /boot 目錄會使用大約 219 Mb。"
-
-msgid "ISO uses approximately 381 Mb in /boot directory on OS drive."
-msgstr "ISO 在作業系統磁碟上的 /boot 目錄會使用大約 381 Mb。"
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr "非法的 docker 儲存路徑 - 不能使用 /sharedfolders 路徑"
@@ -173,7 +164,7 @@ msgid "Open web"
 msgstr "打開網頁"
 
 msgid "Opt-out"
-msgstr ""
+msgstr "選擇不參與"
 
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
@@ -295,6 +286,9 @@ msgstr "設定錯誤的啟動系統核心可能造成無法進入系統。啟動
 msgid "Settings"
 msgstr "設定"
 
+msgid "Spaced used by ISO in /boot directory on OS drive"
+msgstr ""
+
 msgid "Status"
 msgstr "狀態"
 
@@ -314,7 +308,7 @@ msgid "This will install the latest 5.3 kernel."
 msgstr "這將會安裝最新的 5.3 系統核心。"
 
 msgid "This will opt-out of Portainer's minimal analytics."
-msgstr ""
+msgstr "這將選擇不參與 Portainer 之極少量的分析。"
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "這將會移除所有前綴詞是 linux-headers- 的標題檔案套件。"
