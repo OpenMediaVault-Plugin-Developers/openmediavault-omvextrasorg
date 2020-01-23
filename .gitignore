@@ -42,3 +42,5 @@ debian/*.debhelper.log
 debian/*.debhelper
 debian/*substvars
 debian/debhelper-build-stamp
+*.sqlite
+/.vs/ProjectSettings.json
