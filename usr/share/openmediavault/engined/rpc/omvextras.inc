@@ -134,6 +134,27 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $object->add('portainerStatus', 'string', $status);
 
         return $object->getAssoc();
+
+		// portainer swarm status
+		// src : https://docs.docker.com/get-started/part4/
+		// > Make sure that Swarm is enabled on your Docker Desktop by typing docker system info, and looking for a message Swarm: active
+        $cmdLine = "docker system info";
+        $cmd = new \OMV\System\Process($cmdLine);
+        $cmd->setQuiet(true);
+        $output = [];
+		// $output2 = []; look the suggestion of Docker.js l.170 (D.js)
+        $cmd->execute($output, $exitStatus);
+		if (empty($output[0])) {
+			$status = 'Swarm mode not activate.';
+		} else {
+			$status = $output[0];
+		//	$swarm = $output2[0]; l.170 (D.js)
+		}
+		//	$object->add('swarmToken', 'crypted file grab via curl', $screenplay the content in a div);
+        $object->add('swarmStatus', 'string', $status);
+
+        return $object->getAssoc();
+
     }
 
     public function setDocker($params, $context)
