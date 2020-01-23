@@ -120,7 +120,7 @@ Ext.define("OMV.module.admin.system.omvextras.Docker", {
                         "<li>" + _("Remove Docker will remove the docker-compose package.") + "</li>" +
                         "<li>" + _("Remove Docker will delete docker-compose from /usr/local/bin/.") + "</li>" +
                         "<li>" + _("Save will rewrite daemon.json and restart docker if Docker Storage path has changed.") + "</li>" +
-                      "</ul>"
+                    "</ul>"
             }]
         },{
             xtype: "fieldset",
@@ -146,10 +146,10 @@ Ext.define("OMV.module.admin.system.omvextras.Docker", {
                         "<li>" + _("Install Portainer will update Portainer to the latest image if the image already exists.") + "</li>" +
                         "<li>" + _("Portainer will listen on port 9000 for the web interface and 8000 for the agent.") + "</li>" +
                         "<li>" + _("Remove Portainer will remove the Portainer image and container but the volume will not be removed.") + "</li>" +
-                      "</ul>"
+                    "</ul>"
             }]
         },{
-                    // Make difference between the classic portainer installation and portainer cluster install,
+            // Make difference between the classic portainer installation and portainer cluster install,
             xtype: "fieldset",
             title: _("Portainer Cluster Orchestration"),
             fieldDefaults: {
@@ -163,23 +163,25 @@ Ext.define("OMV.module.admin.system.omvextras.Docker", {
                 boxLabel: _("This will set the docker swarm init command to provide portainer cluster orchestration features (swarm,agent...).")
             },{
                 xtype: "textfield",
-                    name: "swarmStatus",
+                name: "swarmStatus",
                 fieldLabel: _("Status"),
                 submitValue: false
-            },{     // 0 * Suggestion : add a new item to printscreen the token istruction file or something else ?
-                    // 1 * Need to print screen the consol output with the token instruction to join the cluster/node
-                    // 2 * or record the output token proces in a secure file before to playscreen his data
+            },{
+                // 0 * Suggestion : add a new item to printscreen the token istruction file or something else ?
+                // 1 * Need to print screen the consol output with the token instruction to join the cluster/node
+                // 2 * or record the output token proces in a secure file before to playscreen his data
                 border: false,
                 html: "<ul>" +
                         "<li>" + _("Install Portainer in cluster mode will install the docker-ce package if not already installed and set will set docker swarm init.") + "</li>" +
                         "<li>" + _("Install Portainer in cluster mode will update Portainer to the latest image if the image already exists.") + "</li>" +
-                    // check agent port 8000 are not necessarie regarding the portainer swarm agent install instruction from portainer.io
-                    // src : "Inside a Swarm cluster "https://portainer.readthedocs.io/en/stable/agent.html#agent
+                        // check agent port 8000 are not necessarie regarding the portainer swarm agent install instruction from portainer.io
+                        // src : "Inside a Swarm cluster "https://portainer.readthedocs.io/en/stable/agent.html#agent
                         "<li>" + _("Portainer in cluster mode will listen on port 9000 for the web interface and throught docker socket for the agent on linux system.") + "</li>" +
                         "<li>" + _("Remove Portainer cluster will remove the Portainer stacks, image and container but the volume will not be removed.") + "</li>" +
-                      "</ul>"
+                    "</ul>"
             }]
-        }],
+        }];
+    },
 
     onCommandButton: function(command) {
         var me = this;
