@@ -309,9 +309,21 @@ installPortainer()
     optoutArg="--no-analytics"
   fi
 
-  # pull and start portainer
-  echo "Pulling and starting portainer ..."
-  docker run -d --name "${portainerName}" -p 9000:9000 -p 8000:8000 --restart=unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v ${portainerVolume}:/data portainer/portainer ${optoutArg}
+#// Add swarm flag if is set | need to check the fx below from the equality
+  if [ ${optout} -eq 1 ]; then
+    optoutArg="Swarm: active"
+  fi
+
+#// pull and start portainer or PCO : portainer cluster orcheastration depand of swarm mode activation
+  if [[ ${optout}]] || [[ ${the swarm optout argument} !-eq 1]]; then
+	echo "Pulling and starting portainer ..."
+    docker run -d --name "${portainerName}" -p 9000:9000 -p 8000:8000 --restart=unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v ${portainerVolume}:/data portainer/portainer ${optoutArg}
+  else
+	echo "Pulling and starting portainer cluster orchestrator (swarm + portainer agent)..."
+	curl -L https://downloads.portainer.io/portainer-agent-stack.yml -o portainer-agent-stack.yml
+	docker stack deploy --compose-file=portainer-agent-stack.yml portainer
+  fi
+  
   if [ $? -gt 0 ]; then
     echo "Something went wrong trying to pull and start portainer ..."
   fi
@@ -323,12 +335,18 @@ setConfig
 option="${1}"
 state="${2}"
 
+#// Add swarm index
+swarm="${3}"
+
 echo "arch   :: ${arch}"
 echo "option :: ${option}"
 echo "state  :: ${state}"
 echo "extras :: $(dpkg-query -W -f='${Version}' openmediavault-omvextrasorg)"
 
-if [[ "${state}" == "install" ]]; then
+#// Add swarm echo
+echo "swarm  :: $(docker system info)"
+
+if [[ "${state}"||"${swarm}" == "install"||"cluster_install" ]]; then
   checkDNS
 fi
 
@@ -347,9 +365,9 @@ case ${option} in
     fi
     if [[ "${state}" == "remove" ]]; then
       removePortainer
-    else
-      installPortainer
-    fi
+	else
+	  installPortainer
+	fi
     ;;
   *)
     if [[ "${state}" == "remove" ]]; then
