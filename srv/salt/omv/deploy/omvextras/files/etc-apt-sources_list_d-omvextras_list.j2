@@ -2,7 +2,7 @@
 {%- set arch = grains['osarch'] -%}
 {%- set oscodename = grains['oscodename'] -%}
 {%- if oscodename == 'eoan' %}
-{%- set oscodename = 'buster -%}
+{%- set oscodename = 'buster' -%}
 {%- endif %}
 deb https://dl.bintray.com/openmediavault-plugin-developers/{{ pillar['productinfo']['distribution'] }} {{ oscodename }} main
 deb [arch={{ arch }}] https://download.docker.com/linux/debian {{ oscodename }} stable
