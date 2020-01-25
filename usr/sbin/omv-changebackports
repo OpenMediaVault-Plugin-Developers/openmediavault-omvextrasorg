@@ -1,5 +1,8 @@
 #!/bin/bash
 
+. /etc/default/openmediavault
+. /usr/share/openmediavault/scripts/helper-functions
+
 status=$1
 
 if [ ! "${status}" = "NO" ] && [ ! "${status}" = "YES" ]; then
