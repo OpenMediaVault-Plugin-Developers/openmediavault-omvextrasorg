@@ -1,13 +1,17 @@
 {%- set config = salt['omv_conf.get']('conf.system.omvextras') -%}
 {%- set arch = grains['osarch'] -%}
-deb https://dl.bintray.com/openmediavault-plugin-developers/{{ pillar['productinfo']['distribution'] }} {{ grains['oscodename'] }} main
-deb https://download.docker.com/linux/debian {{ grains['oscodename'] }} stable
+{%- set oscodename = grains['oscodename'] -%}
+{%- if oscodename == 'eoan' %}
+{%- set oscodename = 'buster -%}
+{%- endif %}
+deb https://dl.bintray.com/openmediavault-plugin-developers/{{ pillar['productinfo']['distribution'] }} {{ oscodename }} main
+deb [arch={{ arch }}] https://download.docker.com/linux/debian {{ oscodename }} stable
 {%- if arch == 'amd64' or arch == 'i386' %}
 deb http://linux.teamviewer.com/deb stable main
 {%- endif %}
 {%- if config.testing | to_bool %}
-deb https://dl.bintray.com/openmediavault-plugin-developers/{{ pillar['productinfo']['distribution'] }}-testing {{ grains['oscodename'] }} main
+deb https://dl.bintray.com/openmediavault-plugin-developers/{{ pillar['productinfo']['distribution'] }}-testing {{ oscodename }} main
 {%- endif %}
 {%- if config.extras | to_bool %}
-deb https://dl.bintray.com/openmediavault-plugin-developers/{{ pillar['productinfo']['distribution'] }}-extras {{ grains['oscodename'] }} main
+deb https://dl.bintray.com/openmediavault-plugin-developers/{{ pillar['productinfo']['distribution'] }}-extras {{ oscodename }} main
 {%- endif %}
