@@ -1,8 +1,9 @@
-openmediavault-omvextrasorg (5.2.2) UNRELEASED; urgency=medium
+openmediavault-omvextrasorg (5.2.2) stable; urgency=low
 
   * Update gparted-live version to 1.1.0-1
+  * Improve sources list
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 22 Jan 2020 09:27:28 -0600
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 24 Jan 2020 18:53:13 -0600
 
 openmediavault-omvextrasorg (5.2.1) stable; urgency=low
 
