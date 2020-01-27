@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (5.2.3) stable; urgency=low
+
+  * Move portainer open
+  * Update SystemRescueCD to 6.0.7
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 27 Jan 2020 12:52:38 -0600
+
 openmediavault-omvextrasorg (5.2.2) stable; urgency=low
 
   * Update gparted-live version to 1.1.0-1

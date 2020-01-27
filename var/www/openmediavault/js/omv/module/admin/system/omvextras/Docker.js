@@ -31,6 +31,18 @@ Ext.define("OMV.module.admin.system.omvextras.Docker", {
     rpcGetMethod: "getDocker",
     rpcSetMethod: "setDocker",
 
+    plugins: [{
+        ptype: "linkedfields",
+        correlations: [{
+            conditions: [
+                { name: "portainerStatus2", value: true }
+            ],
+            properties: function(valid, field) {
+                this.setButtonDisabled("portainerweb", !valid);
+            }
+        }]
+    }],
+
     getButtonItems: function() {
         var me = this;
         var items = me.callParent(arguments);
@@ -67,13 +79,18 @@ Ext.define("OMV.module.admin.system.omvextras.Docker", {
                 text: _("Remove"),
                 icon: "images/minus.png",
                 handler: Ext.Function.bind(me.onCommandButton, me, [ "portainer_remove" ])
-            },{
-                text: _("Open web"),
-                icon: "images/arrow-up.png",
-                handler: function() {
-                    window.open("http://" + location.hostname + ":9000", "_blank");
-                }
             }]
+        },{
+            id: me.getId() + "-portainerweb",
+            xtype: "button",
+            text: _("Open web"),
+            icon: "images/arrow-up.png",
+            iconCls: Ext.baseCSSPrefix + "btn-icon-16x16",
+            disabled: true,
+            scope: me,
+            handler: function() {
+                window.open("http://" + location.hostname + ":9000", "_blank");
+            }
         });
         return items;
     },
@@ -133,6 +150,11 @@ Ext.define("OMV.module.admin.system.omvextras.Docker", {
                 xtype: "textfield",
                 name: "portainerStatus",
                 fieldLabel: _("Status"),
+                submitValue: false
+            },{
+                xtype: "checkbox",
+                name: "portainerStatus2",
+                hidden: true,
                 submitValue: false
             },{
                 border: false,

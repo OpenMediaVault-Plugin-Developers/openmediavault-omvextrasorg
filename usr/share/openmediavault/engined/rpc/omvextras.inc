@@ -128,10 +128,13 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $cmd->execute($output, $exitStatus);
         if (empty($output[0])) {
             $status = 'No portainer container found.';
+            $status2 = false;
         } else {
             $status = $output[0];
+            $status2 = true;
         }
         $object->add('portainerStatus', 'string', $status);
+        $object->add('portainerStatus2', 'boolean', $status2);
 
         return $object->getAssoc();
     }
