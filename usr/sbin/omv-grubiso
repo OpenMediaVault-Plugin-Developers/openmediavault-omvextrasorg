@@ -43,8 +43,10 @@ installclonezilla()
     if [ ! -f "${ISO_PATH}/${CLONEZILLA_ISO}" ]; then
         rm -f ${ISO_PATH}/clonezilla*.iso
         wget "https://downloads.sourceforge.net/project/clonezilla/clonezilla_live_stable/${CLONEZILLA_VERSION}/${CLONEZILLA_ISO}" -O ${ISO_PATH}/${CLONEZILLA_ISO} 2>&1
+    else
+        echo "${CLONEZILLA_ISO} already exists.  Skipping download."
     fi
-
+    echo "Creating GRUB entry..."
     cat <<EOF > ${GRUB_CLONEZILLA}
 #!/bin/sh
 exec tail -n +3 \$0
@@ -65,8 +67,10 @@ installsysresccd()
     if [ ! -f "${ISO_PATH}/${SYSRESCCD_ISO}" ]; then
         rm -f ${ISO_PATH}/systemrescuecd*.iso
         wget "https://osdn.net/projects/systemrescuecd/storage/releases/${SYSRESCCD_VERSION}/${SYSRESCCD_ISO}" -O ${ISO_PATH}/${SYSRESCCD_ISO} 2>&1
+    else
+        echo "${SYSRESCCD_ISO} already exists.  Skipping download."
     fi
-
+    echo "Creating GRUB entry..."
     cat <<EOF > ${GRUB_SYSRESCCD}
 #!/bin/sh
 exec tail -n +3 \$0
@@ -88,8 +92,10 @@ installgpartedlive()
     if [ ! -f "${ISO_PATH}/${GPARTEDLIVE_ISO}" ]; then
         rm -f ${ISO_PATH}/gparted-live*.iso
         wget "https://downloads.sourceforge.net/gparted/${GPARTEDLIVE_ISO}" -O ${ISO_PATH}/${GPARTEDLIVE_ISO} 2>&1
+    else
+        echo "${GPARTEDLIVE_ISO} already exists.  Skipping download."
     fi
-
+    echo "Creating GRUB entry..."
     cat <<EOF > ${GRUB_GPARTEDLIVE}
 #!/bin/sh
 exec tail -n +3 \$0
