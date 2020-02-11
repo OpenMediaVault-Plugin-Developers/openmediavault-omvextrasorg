@@ -1,3 +1,11 @@
+openmediavault-omvextrasorg (5.2.4) stable; urgency=low
+
+  * Use docker-compose 1.25.4
+  * Check DNS before trying to download an ISO
+  * Add more output to grubiso
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 11 Feb 2020 07:56:42 -0600
+
 openmediavault-omvextrasorg (5.2.3) stable; urgency=low
 
   * Move portainer open

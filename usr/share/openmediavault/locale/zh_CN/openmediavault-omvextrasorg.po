@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# songming <by@songming.me>, 2013-2016,2018-2019
+# songming <by@songming.me>, 2013-2016,2018-2020
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-22 11:05-0600\n"
-"PO-Revision-Date: 2020-01-22 17:05+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2020-02-06 02:30+0000\n"
+"Last-Translator: songming <by@songming.me>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -84,10 +84,10 @@ msgid ""
 msgstr "IP 地址设为 DHCP 自动获取，若是缺省服务器建议使用静态 IP。"
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
-msgstr ""
+msgstr "Docker 存储路径不能使用共享文件夹路径"
 
 msgid "Install"
-msgstr ""
+msgstr "安装"
 
 msgid "Install Clonezilla"
 msgstr "安装再生龙 Clonezilla"
@@ -98,12 +98,12 @@ msgstr "安装再生龙 Clonezilla ISO ..."
 msgid ""
 "Install Docker will download and place a newer docker-compose in "
 "/usr/local/bin/ on 64 bit x86 systems only."
-msgstr ""
+msgstr "安装 Docker 将会下载 docker-compose 放到 /usr/local/bin/ 目录，仅支持64位x86系统。"
 
 msgid ""
 "Install Docker will install the docker-compose package. Location: /usr/bin/ "
 "on all systems."
-msgstr ""
+msgstr "安装 Docker 将会安装 docker-compose 包到本地路径：/usr/bin/。"
 
 msgid "Install Docker will restart the docker service if daemon.json changes."
 msgstr "如果 daemon.json 有变更，安装 Docker 将会重启 Docker服务。"
@@ -161,10 +161,10 @@ msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
 msgid "Open web"
-msgstr ""
+msgstr "打开 web 页"
 
 msgid "Opt-out"
-msgstr ""
+msgstr "Opt-out"
 
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
@@ -204,13 +204,13 @@ msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "在删除 non-Proxmox 内核后以 Proxmox内核重启。"
 
 msgid "Remove"
-msgstr ""
+msgstr "删除"
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
 msgstr "删除 Docker 将会删除 /usr/local/bin/ 路径下的 docker-compose"
 
 msgid "Remove Docker will remove the docker-compose package."
-msgstr ""
+msgstr "删除 Docker 将会一起删掉 docker-compose 包。"
 
 msgid ""
 "Remove Portainer will remove the Portainer image and container but the "
@@ -227,10 +227,10 @@ msgid "Removing non-Proxmox kernels ..."
 msgstr "删除 non-Proxmox 内核中 ..."
 
 msgid "Restart"
-msgstr ""
+msgstr "重启"
 
 msgid "Restarting docker ..."
-msgstr ""
+msgstr "重启 Docker ..."
 
 msgid "Running apt-get dist-upgrade ..."
 msgstr "运行 apt-get dist-upgrade 中 ..."
@@ -260,7 +260,7 @@ msgstr "默认开启 SSH 服务，登录用户名: <b>user</b>，密码: <b>live
 msgid ""
 "Save will rewrite daemon.json and restart docker if Docker Storage path has "
 "changed."
-msgstr ""
+msgstr "如果存储路径变更了，保存将覆盖 daemon.json 和重启 Docker。"
 
 msgid "Set as default boot kernel"
 msgstr "设置默认启动内核"
@@ -287,7 +287,7 @@ msgid "Settings"
 msgstr "设置"
 
 msgid "Spaced used by ISO in /boot directory on OS drive"
-msgstr ""
+msgstr "ISO 会使用系统盘 /boot 路径的空间"
 
 msgid "Status"
 msgstr "状态"
@@ -305,10 +305,10 @@ msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "如果 linux-image-*内核处于使用状态删除该内核将失败。"
 
 msgid "This will install the latest 5.3 kernel."
-msgstr ""
+msgstr "这将会安装最新的 5.3 版内核。"
 
 msgid "This will opt-out of Portainer's minimal analytics."
-msgstr ""
+msgstr "这将会 opt-out Portainer的最小分析。"
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "这将删除前缀为 linux-headers- 的所有软件包。"
