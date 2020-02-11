@@ -15,7 +15,7 @@ declare -i download=0
 daemonJson="/etc/docker/daemon.json"
 dockerBin="/usr/bin/docker"
 dockerCompose="/usr/local/bin/docker-compose"
-dockerComposeVersion="1.24.1"
+dockerComposeVersion="1.25.4"
 dockerComposeUrl="https://github.com/docker/compose/releases/download/${dockerComposeVersion}/docker-compose-Linux-x86_64"
 
 # portainer
