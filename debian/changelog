@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (5.2.5) stable; urgency=low
+
+  * Add nofirewall option to systemrescuecd boot
+  * Replace 'slspath' with 'tpldir' for saltstack 3000
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 25 Feb 2020 20:05:23 -0600
+
 openmediavault-omvextrasorg (5.2.4) stable; urgency=low
 
   * Use docker-compose 1.25.4
