@@ -10,7 +10,6 @@ Homepage: http://omv-extras.org/
 Package: openmediavault-omvextrasorg
 Architecture: all
 Depends: dirmngr,
-         gnupg,
          openmediavault (>= 5.0),
          ${misc:Depends}
 Breaks: openmediavault (<< 5.0)
