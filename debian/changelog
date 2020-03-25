@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (5.2.6) stable; urgency=low
+
+  * Use systemrescuecd 6.1.1
+  * Download architecture-specific ISOs
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 25 Mar 2020 07:38:28 -0500
+
 openmediavault-omvextrasorg (5.2.5) stable; urgency=low
 
   * Add nofirewall option to systemrescuecd boot
