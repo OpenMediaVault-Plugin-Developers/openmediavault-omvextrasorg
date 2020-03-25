@@ -21,18 +21,29 @@
 
 set -e
 
+arch="$(dpkg --print-architecture)"
+
+if [[ "${arch}" == "amd64" ]]; then
+  isoArch="amd64"
+elif [[ "${arch}" == "i386" ]]; then
+  isoArch="i686"
+else
+  echo "Unsupported architecture."
+  exit 1
+fi
+
 ISO_PATH="/boot"
 GRUB_CLONEZILLA="/etc/grub.d/42_clonezilla"
 CLONEZILLA_VERSION="2.6.0-37"
 CLONEZILLA_ISO="clonezilla-live-${CLONEZILLA_VERSION}-i686-pae.iso"
 
 GRUB_SYSRESCCD="/etc/grub.d/42_sysresccd"
-SYSRESCCD_VERSION="6.0.7"
-SYSRESCCD_ISO="systemrescuecd-${SYSRESCCD_VERSION}.iso"
+SYSRESCCD_VERSION="6.1.1"
+SYSRESCCD_ISO="systemrescuecd-${isoArch}-${SYSRESCCD_VERSION}.iso"
 
 GRUB_GPARTEDLIVE="/etc/grub.d/42_gpartedlive"
 GPARTEDLIVE_VERSION="1.1.0-1"
-GPARTEDLIVE_ISO="gparted-live-${GPARTEDLIVE_VERSION}-i686.iso"
+GPARTEDLIVE_ISO="gparted-live-${GPARTEDLIVE_VERSION}-${isoArch}.iso"
 
 GRUB="/etc/default/grub"
 GRUB_CFG="/boot/grub/grub.cfg"
