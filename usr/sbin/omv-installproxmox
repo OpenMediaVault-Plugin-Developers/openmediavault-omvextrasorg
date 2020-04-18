@@ -5,7 +5,7 @@ declare -i kernnum=0
 distro="$(lsb_release --codename --short)"
 grubconfig="/boot/grub/grub.cfg";
 grubdefault="/etc/default/grub";
-kernelversion="5.3"
+kernelversion="5.4"
 pverepo="/etc/apt/sources.list.d/pvekernel.list"
 repourl="http://download.proxmox.com/debian"
 
