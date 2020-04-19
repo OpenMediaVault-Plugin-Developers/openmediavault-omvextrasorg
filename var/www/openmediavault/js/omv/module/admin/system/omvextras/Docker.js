@@ -175,7 +175,11 @@ Ext.define("OMV.module.admin.system.omvextras.Docker", {
                 allowDecimals: false,
                 allowBlank: false,
                 value: 9000,
-                hidden: true
+                hidden: true,
+                plugins: [{
+                    ptype: "fieldinfo",
+                    text: _("If port is changed, click Install in the Portainer menu again.")
+                }]
             },{
                 xtype: "numberfield",
                 name: "agentport",
@@ -186,7 +190,11 @@ Ext.define("OMV.module.admin.system.omvextras.Docker", {
                 allowDecimals: false,
                 allowBlank: false,
                 value: 8000,
-                hidden: true
+                hidden: true,
+                plugins: [{
+                    ptype: "fieldinfo",
+                    text: _("If port is changed, click Install in the Portainer menu again.")
+                }]
             },{
                 xtype: "checkbox",
                 name: "portainerStatus2",

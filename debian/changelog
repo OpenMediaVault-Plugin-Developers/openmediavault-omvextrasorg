@@ -1,6 +1,8 @@
 openmediavault-omvextrasorg (5.3) stable; urgency=low
 
   * Add advanced options for portainer
+  * Use Proxmox 5.4 kernel
+  * Update locales
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 19 Apr 2020 10:12:03 -0500
 

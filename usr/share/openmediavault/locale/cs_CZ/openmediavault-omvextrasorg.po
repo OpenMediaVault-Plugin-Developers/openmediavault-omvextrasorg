@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-22 11:05-0600\n"
-"PO-Revision-Date: 2020-01-22 17:05+0000\n"
+"POT-Creation-Date: 2020-04-19 10:33-0500\n"
+"PO-Revision-Date: 2020-04-19 15:33+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: cs_CZ\n"
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+
+msgid "Advanced"
+msgstr ""
+
+msgid "Agent port"
+msgstr ""
 
 msgid "Backports"
 msgstr "Přenesené z novějšího do staršího vydání (backports)"
@@ -83,6 +89,9 @@ msgid ""
 "IP Address will be set by DHCP.  Using static DHCP is recommended for "
 "headless servers."
 msgstr "IP adresa bude nastavena automaticky protokolem DHCP. Pro stroje bez připojeného monitoru je dobré nastavit statickou zápůjčku na DHCP serveru."
+
+msgid "If port is changed, click Install in the Portainer menu again."
+msgstr ""
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr "Neplatný popis umístění úložiště pro docker – není možné použít popisy umístění /sharedfolders"
@@ -177,8 +186,8 @@ msgstr "Portainer"
 
 msgid ""
 "Portainer will listen on port 9000 for the web interface and 8000 for the "
-"agent."
-msgstr "Webové rozhraní Portainer bude na portu 9000 a rozhraní pro agenty na portu 8000."
+"agent unless changed."
+msgstr ""
 
 msgid "Proxmox"
 msgstr "Proxmox"
@@ -305,8 +314,8 @@ msgstr "Toto zapne repozitář Proxmox 6.x."
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "Pokud je stále aktivní, tomuto se nepodaří odebrat jádro linux-image-*."
 
-msgid "This will install the latest 5.3 kernel."
-msgstr "Toto nainstaluje nejnovější jádro 5.3."
+msgid "This will install the latest 5.4 kernel."
+msgstr ""
 
 msgid "This will opt-out of Portainer's minimal analytics."
 msgstr "Toto zruší vaši účast na analýze využívání Portainer, odesílané jeho vývojářům."
@@ -328,6 +337,12 @@ msgstr "Aktualizace"
 
 msgid "Version"
 msgstr "Verze"
+
+msgid "Web port"
+msgstr ""
+
+msgid "Web port and agent port cannot be the same."
+msgstr ""
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-22 11:05-0600\n"
-"PO-Revision-Date: 2020-01-22 17:05+0000\n"
+"POT-Creation-Date: 2020-04-19 10:33-0500\n"
+"PO-Revision-Date: 2020-04-19 15:33+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: English (United States) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/en_US/)\n"
 "MIME-Version: 1.0\n"
@@ -16,6 +16,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: en_US\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Advanced"
+msgstr "Advanced"
+
+msgid "Agent port"
+msgstr "Agent port"
 
 msgid "Backports"
 msgstr "Backports"
@@ -81,6 +87,9 @@ msgid ""
 "IP Address will be set by DHCP.  Using static DHCP is recommended for "
 "headless servers."
 msgstr "IP Address will be set by DHCP.  Using static DHCP is recommended for headless servers."
+
+msgid "If port is changed, click Install in the Portainer menu again."
+msgstr "If port is changed, click Install in the Portainer menu again."
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr "Illegal docker storage path - cannot use /sharedfolders paths"
@@ -175,8 +184,8 @@ msgstr "Portainer"
 
 msgid ""
 "Portainer will listen on port 9000 for the web interface and 8000 for the "
-"agent."
-msgstr "Portainer will listen on port 9000 for the web interface and 8000 for the agent."
+"agent unless changed."
+msgstr "Portainer will listen on port 9000 for the web interface and 8000 for the agent unless changed."
 
 msgid "Proxmox"
 msgstr "Proxmox"
@@ -303,8 +312,8 @@ msgstr "This will enable the Proxmox 6.x repo."
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "This will fail to remove a linux-image-* kernel if it is still active."
 
-msgid "This will install the latest 5.3 kernel."
-msgstr "This will install the latest 5.3 kernel."
+msgid "This will install the latest 5.4 kernel."
+msgstr "This will install the latest 5.4 kernel."
 
 msgid "This will opt-out of Portainer's minimal analytics."
 msgstr "This will opt-out of Portainer's minimal analytics."
@@ -326,6 +335,12 @@ msgstr "Updates"
 
 msgid "Version"
 msgstr "Version"
+
+msgid "Web port"
+msgstr "Web port"
+
+msgid "Web port and agent port cannot be the same."
+msgstr "Web port and agent port cannot be the same."
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "

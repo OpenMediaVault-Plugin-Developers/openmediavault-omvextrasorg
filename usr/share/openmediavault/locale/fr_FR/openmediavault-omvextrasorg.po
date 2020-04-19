@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# Axel Cantenys, 2017-2018
+# clexanis, 2017-2018
 # Zacharie ARNAISE <spacebrain.damage@gmail.com>, 2013,2015
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-22 11:05-0600\n"
-"PO-Revision-Date: 2020-01-22 17:05+0000\n"
+"POT-Creation-Date: 2020-04-19 10:33-0500\n"
+"PO-Revision-Date: 2020-04-19 15:33+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Advanced"
+msgstr ""
+
+msgid "Agent port"
+msgstr ""
 
 msgid "Backports"
 msgstr "Rétroportages"
@@ -83,6 +89,9 @@ msgid ""
 "IP Address will be set by DHCP.  Using static DHCP is recommended for "
 "headless servers."
 msgstr "L'utilisation de DHCP statique est recommandée pour les serveurs sans affichage."
+
+msgid "If port is changed, click Install in the Portainer menu again."
+msgstr ""
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr ""
@@ -177,7 +186,7 @@ msgstr ""
 
 msgid ""
 "Portainer will listen on port 9000 for the web interface and 8000 for the "
-"agent."
+"agent unless changed."
 msgstr ""
 
 msgid "Proxmox"
@@ -305,7 +314,7 @@ msgstr ""
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "Ceci échouera à supprimer un noyau linux-image- * s'il est toujours actif."
 
-msgid "This will install the latest 5.3 kernel."
+msgid "This will install the latest 5.4 kernel."
 msgstr ""
 
 msgid "This will opt-out of Portainer's minimal analytics."
@@ -327,6 +336,12 @@ msgid "Updates"
 msgstr ""
 
 msgid "Version"
+msgstr ""
+
+msgid "Web port"
+msgstr ""
+
+msgid "Web port and agent port cannot be the same."
 msgstr ""
 
 msgid ""

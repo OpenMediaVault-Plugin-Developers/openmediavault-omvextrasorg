@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-22 11:05-0600\n"
-"PO-Revision-Date: 2020-01-22 17:05+0000\n"
+"POT-Creation-Date: 2020-04-19 10:33-0500\n"
+"PO-Revision-Date: 2020-04-19 15:33+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ko_KR\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Advanced"
+msgstr ""
+
+msgid "Agent port"
+msgstr ""
 
 msgid "Backports"
 msgstr ""
@@ -81,6 +87,9 @@ msgstr ""
 msgid ""
 "IP Address will be set by DHCP.  Using static DHCP is recommended for "
 "headless servers."
+msgstr ""
+
+msgid "If port is changed, click Install in the Portainer menu again."
 msgstr ""
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
@@ -176,7 +185,7 @@ msgstr ""
 
 msgid ""
 "Portainer will listen on port 9000 for the web interface and 8000 for the "
-"agent."
+"agent unless changed."
 msgstr ""
 
 msgid "Proxmox"
@@ -304,7 +313,7 @@ msgstr ""
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr ""
 
-msgid "This will install the latest 5.3 kernel."
+msgid "This will install the latest 5.4 kernel."
 msgstr ""
 
 msgid "This will opt-out of Portainer's minimal analytics."
@@ -326,6 +335,12 @@ msgid "Updates"
 msgstr ""
 
 msgid "Version"
+msgstr ""
+
+msgid "Web port"
+msgstr ""
+
+msgid "Web port and agent port cannot be the same."
 msgstr ""
 
 msgid ""
