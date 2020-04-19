@@ -31,6 +31,18 @@
 			"optout": {
 				"type": "boolean",
 				"required": false
+			},
+			"webport": {
+				"type": "integer",
+				"minimum": 1000,
+				"maximum": 65535,
+				"required": true
+			},
+			"agentport": {
+				"type": "integer",
+				"minimum": 1000,
+				"maximum": 65535,
+				"required": true
 			}
 		}
 	}

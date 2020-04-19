@@ -40,6 +40,12 @@ Ext.define("OMV.module.admin.system.omvextras.Docker", {
             properties: function(valid, field) {
                 this.setButtonDisabled("portainerweb", !valid);
             }
+        },{
+            conditions: [{
+                name: "advanced", value: false
+            }],
+            name: ["webport","agentport"],
+            properties: ["!show"]
         }]
     }],
 
@@ -89,7 +95,10 @@ Ext.define("OMV.module.admin.system.omvextras.Docker", {
             disabled: true,
             scope: me,
             handler: function() {
-                window.open("http://" + location.hostname + ":9000", "_blank");
+                var port = this.getForm().findField("webport").getValue()
+                if (port >= 1000) {
+                    window.open("http://" + location.hostname + ":" + port, "_blank");
+                }
             }
         });
         return items;
@@ -153,6 +162,33 @@ Ext.define("OMV.module.admin.system.omvextras.Docker", {
                 submitValue: false
             },{
                 xtype: "checkbox",
+                name: "advanced",
+                fieldLabel: _("Advanced"),
+                submitValue: false
+            },{
+                xtype: "numberfield",
+                name: "webport",
+                fieldLabel: _("Web port"),
+                vtype: "port",
+                minValue: 1000,
+                maxValue: 65535,
+                allowDecimals: false,
+                allowBlank: false,
+                value: 9000,
+                hidden: true
+            },{
+                xtype: "numberfield",
+                name: "agentport",
+                fieldLabel: _("Agent port"),
+                vtype: "port",
+                minValue: 1000,
+                maxValue: 65535,
+                allowDecimals: false,
+                allowBlank: false,
+                value: 8000,
+                hidden: true
+            },{
+                xtype: "checkbox",
                 name: "portainerStatus2",
                 hidden: true,
                 submitValue: false
@@ -161,7 +197,7 @@ Ext.define("OMV.module.admin.system.omvextras.Docker", {
                 html: "<ul>" +
                         "<li>" + _("Install Portainer will install the docker-ce package if not already installed.") + "</li>" +
                         "<li>" + _("Install Portainer will update Portainer to the latest image if the image already exists.") + "</li>" +
-                        "<li>" + _("Portainer will listen on port 9000 for the web interface and 8000 for the agent.") + "</li>" +
+                        "<li>" + _("Portainer will listen on port 9000 for the web interface and 8000 for the agent unless changed.") + "</li>" +
                         "<li>" + _("Remove Portainer will remove the Portainer image and container but the volume will not be removed.") + "</li>" +
                       "</ul>"
             }]

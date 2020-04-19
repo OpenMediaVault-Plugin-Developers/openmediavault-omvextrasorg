@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.3) stable; urgency=low
+
+  * Add advanced options for portainer
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 19 Apr 2020 10:12:03 -0500
+
 openmediavault-omvextrasorg (5.2.6) stable; urgency=low
 
   * Use systemrescuecd 6.1.1

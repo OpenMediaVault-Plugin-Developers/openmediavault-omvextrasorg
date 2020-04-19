@@ -12,6 +12,8 @@ declare cockpitPackages=""
 declare dockerPackages=""
 declare dockerStorage=""
 declare -i download=0
+declare -i agentport=8000
+declare -i webport=9000
 daemonJson="/etc/docker/daemon.json"
 dockerBin="/usr/bin/docker"
 dockerCompose="/usr/local/bin/docker-compose"
@@ -81,6 +83,10 @@ setConfig()
     xpath="/config/system/omvextras"
     dockerStorage=$(omv_config_get "${xpath}/dockerStorage")
     echo "Docker storage :: ${dockerStorage}"
+    agentport=$(omv_config_get "${xpath}/agentport")
+    echo "Agent port:: ${agentport}"
+    webport=$(omv_config_get "${xpath}/webport")
+    echo "Web port:: ${webport}"
     optout=$(omv_config_get "${xpath}/optout")
     echo "Opt-out :: ${optout}"
   fi
@@ -311,7 +317,7 @@ installPortainer()
 
   # pull and start portainer
   echo "Pulling and starting portainer ..."
-  docker run -d --name "${portainerName}" -p 9000:9000 -p 8000:8000 --restart=unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v ${portainerVolume}:/data portainer/portainer ${optoutArg}
+  docker run -d --name "${portainerName}" -p ${webport}:9000 -p ${agentport}:8000 --restart=unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v ${portainerVolume}:/data portainer/portainer ${optoutArg}
   if [ $? -gt 0 ]; then
     echo "Something went wrong trying to pull and start portainer ..."
   fi

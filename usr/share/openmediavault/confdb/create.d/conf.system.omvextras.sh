@@ -38,6 +38,12 @@ fi
 if ! omv_config_exists "/config/system/omvextras/optout"; then
     omv_config_add_key "/config/system/omvextras" "optout" "1"
 fi
+if ! omv_config_exists "/config/system/omvextras/webport"; then
+    omv_config_add_key "/config/system/omvextras" "webport" "9000"
+fi
+if ! omv_config_exists "/config/system/omvextras/agentport"; then
+    omv_config_add_key "/config/system/omvextras" "agentport" "8000"
+fi
 
 # disable grub submenus on systems that use grub
 if [ -f /usr/sbin/update-grub ]; then

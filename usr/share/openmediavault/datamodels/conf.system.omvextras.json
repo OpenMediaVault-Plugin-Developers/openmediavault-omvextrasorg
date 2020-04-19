@@ -22,6 +22,18 @@
 		"dockerStorage": {
 			"type": "string",
 			"default": "/var/lib/docker"
+		},
+		"webport": {
+			"type": "integer",
+			"minimum": 1000,
+			"maximum": 65535,
+			"default": 9000
+		},
+		"agentport": {
+			"type": "integer",
+			"minimum": 1000,
+			"maximum": 65535,
+			"default": 8000
 		}
 	}
 }
