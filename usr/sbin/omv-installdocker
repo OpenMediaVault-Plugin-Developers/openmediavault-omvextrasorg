@@ -34,9 +34,9 @@ setArch()
 
 checkDNS()
 {
-  host="/usr/bin/host"
-  if [ -f "${host}" ]; then
-    if ! ${host} hub.docker.com > /dev/null; then
+  getent="/usr/bin/getent"
+  if [ -f "${getent}" ]; then
+    if ! ${getent} hosts hub.docker.com > /dev/null; then
       echo "DNS error.  Exiting ..."
       exit 0
     else
