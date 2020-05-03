@@ -29,7 +29,7 @@ elif [[ "${arch}" == "i386" ]]; then
   isoArch="i686"
 else
   echo "Unsupported architecture."
-  exit 1
+  exit 0
 fi
 
 ISO_PATH="/boot"
