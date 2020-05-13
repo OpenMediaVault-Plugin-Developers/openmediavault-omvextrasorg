@@ -19,6 +19,8 @@ dockerBin="/usr/bin/docker"
 dockerCompose="/usr/local/bin/docker-compose"
 dockerComposeVersion="1.25.4"
 dockerComposeUrl="https://github.com/docker/compose/releases/download/${dockerComposeVersion}/docker-compose-Linux-x86_64"
+dockerOverrideDir="/etc/systemd/system/docker.service.d"
+dockerOverrideFile="${dockerOverrideDir}/waitLocalFs.conf"
 
 # portainer
 declare -i optout=0
@@ -129,6 +131,11 @@ removeDocker()
   setExports
   setDockerPackages
 
+  if [ -f "${dockerOverrideFile}" ]; then
+    rm -f "${dockerOverrideFile}"
+    systemctl daemon-reload
+  fi
+
   # remove docker
   status=0
   for pkg in ${dockerPackages}; do
@@ -235,6 +242,7 @@ EOF
     rm -f "${daemonJsonTemp}"
   fi
 
+
   # enable and restart docker service
   if [ ${status} -eq 1 ]; then
     systemctl enable docker.service
@@ -244,10 +252,28 @@ EOF
   fi
 }
 
+configOverride()
+{
+  # create override to wait for local filesystems
+  if [ -d "${dockerOverrideDir}" ]; then
+    echo "Create override directory ..."
+    mkdir -p "${dockerOverrideDir}"
+  fi
+
+  echo "Create override file ..."
+  cat <<EOF > ${dockerOverrideFile}
+[Unit]
+After=local-fs.target
+EOF
+  echo "Reload systemd daemon ..."
+  systemctl daemon-reload
+}
+
 installDocker()
 {
   setExports
   setDockerPackages
+  configOverride
 
   # check to see if already installed to avoid restarting service
   for pkg in ${dockerPackages}; do

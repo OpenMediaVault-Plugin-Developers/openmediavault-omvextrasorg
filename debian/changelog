@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.3.2) stable; urgency=low
+
+  * Add docker override file to wait for local filesystems
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 13 May 2020 09:13:16 -0500
+
 openmediavault-omvextrasorg (5.3.1) stable; urgency=low
 
   * Improve dns check
