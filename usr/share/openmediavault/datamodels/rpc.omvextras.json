@@ -66,6 +66,8 @@
 					"installcz",
 					"installgp",
 					"installsys",
+					"iptables_legacy",
+					"iptables_nft",
 					"omv-update",
 					"portainer_install",
 					"portainer_remove",

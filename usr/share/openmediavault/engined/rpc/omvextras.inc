@@ -321,6 +321,10 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
                         $cmdBin = 'omv-installdocker';
                         $cmdParams = str_replace('_',' ',$params['command']);
                         break;
+                    case 'iptables_legacy':
+                        $cmdBin = 'update-alternatives --set iptables /usr/sbin/iptables-legacy';  break;
+                    case 'iptables_nft':
+                        $cmdBin = 'update-alternatives --set iptables /usr/sbin/iptables-nft';  break;
                     default:
                         $cmdBin = 'omv-grubiso';
                         $cmdParams = $params['command'];

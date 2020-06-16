@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.3.4) stable; urgency=low
+
+  * Add menu to change iptables setting.
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 16 Jun 2020 07:57:34 -0500
+
 openmediavault-omvextrasorg (5.3.3) stable; urgency=low
 
   * Add dnsmasq-base when installing cockpit

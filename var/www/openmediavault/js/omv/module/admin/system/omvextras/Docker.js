@@ -72,6 +72,21 @@ Ext.define("OMV.module.admin.system.omvextras.Docker", {
                 handler: Ext.Function.bind(me.onCommandButton, me, [ "docker_restart" ])
             }]
         },{
+            id: me.getId() + "-iptables",
+            xtype: "button",
+            text: "iptables",
+            scope: me,
+            icon: "images/network.png",
+            menu: [{
+                text: _("Use legacy"),
+                icon: "images/add.png",
+                handler: Ext.Function.bind(me.onCommandButton, me, [ "iptables_legacy" ])
+            },{
+                text: _("Use nft"),
+                icon: "images/minus.png",
+                handler: Ext.Function.bind(me.onCommandButton, me, [ "iptables_nft" ])
+            }]
+        },{
             id: me.getId() + "-portainer",
             xtype: "button",
             text: "Portainer",
@@ -141,6 +156,8 @@ Ext.define("OMV.module.admin.system.omvextras.Docker", {
                         "<li>" + _("Remove Docker will remove the docker-compose package.") + "</li>" +
                         "<li>" + _("Remove Docker will delete docker-compose from /usr/local/bin/.") + "</li>" +
                         "<li>" + _("Save will rewrite daemon.json and restart docker if Docker Storage path has changed.") + "</li>" +
+                        "<li>" + _("Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-legacy. Use iptables menu to change. ")
+                               + "<a href=\"https://wiki.debian.org/iptables\" target=\"_blank\">" + _("More info") + "</a></li>" +
                       "</ul>"
             }]
         },{
