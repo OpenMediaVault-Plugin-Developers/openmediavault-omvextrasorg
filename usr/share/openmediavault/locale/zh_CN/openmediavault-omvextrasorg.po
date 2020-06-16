@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-19 10:33-0500\n"
-"PO-Revision-Date: 2020-04-19 15:33+0000\n"
+"POT-Creation-Date: 2020-06-16 08:06-0500\n"
+"PO-Revision-Date: 2020-06-16 13:06+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -38,6 +38,11 @@ msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
 msgstr "9090作为 Cockpit web 标签页的监听端口。"
+
+msgid ""
+"Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
+"legacy. Use iptables menu to change. "
+msgstr ""
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "默认用户名 <b>user</b>  默认密码: <b>live</b>"
@@ -159,6 +164,9 @@ msgstr "内核"
 
 msgid "Kernels"
 msgstr "内核"
+
+msgid "More info"
+msgstr ""
 
 msgid "Not installed"
 msgstr "未安装"
@@ -333,6 +341,12 @@ msgstr "解除保持当前内核中 ..."
 
 msgid "Updates"
 msgstr "更新"
+
+msgid "Use legacy"
+msgstr ""
+
+msgid "Use nft"
+msgstr ""
 
 msgid "Version"
 msgstr "版本"

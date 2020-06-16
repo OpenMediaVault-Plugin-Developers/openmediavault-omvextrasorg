@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-19 10:33-0500\n"
-"PO-Revision-Date: 2020-04-19 15:33+0000\n"
+"POT-Creation-Date: 2020-06-16 08:06-0500\n"
+"PO-Revision-Date: 2020-06-16 13:06+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Swedish (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/sv/)\n"
 "MIME-Version: 1.0\n"
@@ -36,6 +36,11 @@ msgid "Cockpit"
 msgstr ""
 
 msgid "Cockpit listens on port 9090 for the web interface."
+msgstr ""
+
+msgid ""
+"Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
+"legacy. Use iptables menu to change. "
 msgstr ""
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
@@ -157,6 +162,9 @@ msgid "Kernel"
 msgstr ""
 
 msgid "Kernels"
+msgstr ""
+
+msgid "More info"
 msgstr ""
 
 msgid "Not installed"
@@ -331,6 +339,12 @@ msgid "Unholding current kernel ..."
 msgstr ""
 
 msgid "Updates"
+msgstr ""
+
+msgid "Use legacy"
+msgstr ""
+
+msgid "Use nft"
 msgstr ""
 
 msgid "Version"

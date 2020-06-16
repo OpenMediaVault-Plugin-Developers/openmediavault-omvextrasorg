@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-19 10:33-0500\n"
-"PO-Revision-Date: 2020-04-20 19:06+0000\n"
-"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
+"POT-Creation-Date: 2020-06-16 08:06-0500\n"
+"PO-Revision-Date: 2020-06-16 13:06+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,6 +39,11 @@ msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
 msgstr "Webové rozhraní Cockpit se nachází na portu 9090."
+
+msgid ""
+"Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
+"legacy. Use iptables menu to change. "
+msgstr ""
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Výchozí uživatelské jméno: <b>user</b> a heslo: <b>live</b>"
@@ -160,6 +165,9 @@ msgstr "Jádro"
 
 msgid "Kernels"
 msgstr "Jádra"
+
+msgid "More info"
+msgstr ""
 
 msgid "Not installed"
 msgstr "Nenaistalováno"
@@ -334,6 +342,12 @@ msgstr "Ruší se podržení stávající verze jádra…"
 
 msgid "Updates"
 msgstr "Aktualizace"
+
+msgid "Use legacy"
+msgstr ""
+
+msgid "Use nft"
+msgstr ""
 
 msgid "Version"
 msgstr "Verze"

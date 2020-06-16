@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# Andi Chandler <andi@gowling.com>, 2015-2017,2019
+# Andi Chandler <andi@gowling.com>, 2015-2017,2019-2020
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-19 10:33-0500\n"
-"PO-Revision-Date: 2020-04-19 15:33+0000\n"
+"POT-Creation-Date: 2020-06-16 08:06-0500\n"
+"PO-Revision-Date: 2020-06-16 13:06+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: English (United Kingdom) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/en_GB/)\n"
 "MIME-Version: 1.0\n"
@@ -19,10 +19,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Advanced"
-msgstr ""
+msgstr "Advanced"
 
 msgid "Agent port"
-msgstr ""
+msgstr "Agent port"
 
 msgid "Backports"
 msgstr "Backports"
@@ -38,6 +38,11 @@ msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
 msgstr "Cockpit listens on port 9090 for the web interface."
+
+msgid ""
+"Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
+"legacy. Use iptables menu to change. "
+msgstr ""
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Default username: <b>user</b> and password: <b>live</b>"
@@ -90,13 +95,13 @@ msgid ""
 msgstr "IP Address will be set by DHCP.  Using static DHCP is recommended for headless servers."
 
 msgid "If port is changed, click Install in the Portainer menu again."
-msgstr ""
+msgstr "If port is changed, click Install in the Portainer menu again."
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
-msgstr ""
+msgstr "Illegal Docker storage path - cannot use /sharedfolders paths"
 
 msgid "Install"
-msgstr ""
+msgstr "Install"
 
 msgid "Install Clonezilla"
 msgstr "Install Clonezilla"
@@ -160,6 +165,9 @@ msgstr "Kernel"
 msgid "Kernels"
 msgstr "Kernels"
 
+msgid "More info"
+msgstr ""
+
 msgid "Not installed"
 msgstr "Not installed"
 
@@ -170,10 +178,10 @@ msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
 msgid "Open web"
-msgstr ""
+msgstr "Open web"
 
 msgid "Opt-out"
-msgstr ""
+msgstr "Opt-out"
 
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
@@ -186,7 +194,7 @@ msgstr "Portainer"
 msgid ""
 "Portainer will listen on port 9000 for the web interface and 8000 for the "
 "agent unless changed."
-msgstr ""
+msgstr "Portainer will listen on port 9000 for the web interface and 8000 for the agent unless changed."
 
 msgid "Proxmox"
 msgstr "Proxmox"
@@ -213,7 +221,7 @@ msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 
 msgid "Remove"
-msgstr ""
+msgstr "Remove"
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
 msgstr "Remove Docker will delete docker-compose from /usr/local/bin/."
@@ -236,10 +244,10 @@ msgid "Removing non-Proxmox kernels ..."
 msgstr "Removing non-Proxmox kernels ..."
 
 msgid "Restart"
-msgstr ""
+msgstr "Restart"
 
 msgid "Restarting docker ..."
-msgstr ""
+msgstr "Restarting Docker ..."
 
 msgid "Running apt-get dist-upgrade ..."
 msgstr "Running apt-get dist-upgrade ..."
@@ -269,7 +277,7 @@ msgstr "SSH server is enabled by default.  Login with username: <b>user</b> and 
 msgid ""
 "Save will rewrite daemon.json and restart docker if Docker Storage path has "
 "changed."
-msgstr ""
+msgstr "Save will rewrite daemon.json and restart docker if Docker Storage path has changed."
 
 msgid "Set as default boot kernel"
 msgstr "Set as default boot kernel"
@@ -296,7 +304,7 @@ msgid "Settings"
 msgstr "Settings"
 
 msgid "Spaced used by ISO in /boot directory on OS drive"
-msgstr ""
+msgstr "Spaced used by ISO in /boot directory on OS drive"
 
 msgid "Status"
 msgstr "Status"
@@ -314,10 +322,10 @@ msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "This will fail to remove a linux-image-* kernel if it is still active."
 
 msgid "This will install the latest 5.4 kernel."
-msgstr ""
+msgstr "This will install the latest 5.4 kernel."
 
 msgid "This will opt-out of Portainer's minimal analytics."
-msgstr ""
+msgstr "This will opt-out of Portainer's minimal analytics."
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "This will remove all headers packages with the prefix linux-headers-."
@@ -334,14 +342,20 @@ msgstr "Unholding current kernel ..."
 msgid "Updates"
 msgstr "Updates"
 
+msgid "Use legacy"
+msgstr ""
+
+msgid "Use nft"
+msgstr ""
+
 msgid "Version"
 msgstr "Version"
 
 msgid "Web port"
-msgstr ""
+msgstr "Web port"
 
 msgid "Web port and agent port cannot be the same."
-msgstr ""
+msgstr "Web port and agent port cannot be the same."
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
