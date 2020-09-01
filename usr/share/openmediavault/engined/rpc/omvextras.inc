@@ -158,7 +158,6 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         }
         $object->set('agentport',$params['agentport']);
         $object->set('dockerStorage',$params['dockerStorage']);
-        $object->set('optout',$params['optout']);
         $object->set('webport',$params['webport']);
         $db->set($object);
         // Apply the changes immediatelly (no user interaction is wanted).

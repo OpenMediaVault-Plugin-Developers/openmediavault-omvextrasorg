@@ -23,7 +23,6 @@ dockerOverrideDir="/etc/systemd/system/docker.service.d"
 dockerOverrideFile="${dockerOverrideDir}/waitAllMounts.conf"
 
 # portainer
-declare -i optout=0
 portainerImage="portainer/portainer-ce"
 portainerImageOld="portainer/portainer"
 portainerName="portainer"
@@ -90,8 +89,6 @@ setConfig()
     echo "Agent port:: ${agentport}"
     webport=$(omv_config_get "${xpath}/webport")
     echo "Web port:: ${webport}"
-    optout=$(omv_config_get "${xpath}/optout")
-    echo "Opt-out :: ${optout}"
   fi
 }
 
@@ -339,14 +336,9 @@ installPortainer()
     docker volume create "${portainerVolume}"
   fi
 
-  # add opt-out flag if set
-  if [ ${optout} -eq 1 ]; then
-    optoutArg="--no-analytics"
-  fi
-
   # pull and start portainer
   echo "Pulling and starting ${portainerImage} ..."
-  docker run -d --name "${portainerName}" -p ${webport}:9000 -p ${agentport}:8000 --restart=unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v ${portainerVolume}:/data ${portainerImage} ${optoutArg}
+  docker run -d --name "${portainerName}" -p ${webport}:9000 -p ${agentport}:8000 --restart=unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v ${portainerVolume}:/data ${portainerImage}
   if [ $? -gt 0 ]; then
     echo "Something went wrong trying to pull and start portainer ..."
   fi

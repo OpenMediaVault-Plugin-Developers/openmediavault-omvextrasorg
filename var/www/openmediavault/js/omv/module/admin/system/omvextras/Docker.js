@@ -167,12 +167,6 @@ Ext.define("OMV.module.admin.system.omvextras.Docker", {
                 labelSeparator: ""
             },
             items: [{
-                xtype: "checkbox",
-                name: "optout",
-                fieldLabel: _("Opt-out"),
-                checked: true,
-                boxLabel: _("This will opt-out of Portainer's minimal analytics.")
-            },{
                 xtype: "textfield",
                 name: "portainerStatus",
                 fieldLabel: _("Status"),

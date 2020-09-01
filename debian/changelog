@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.3.6) UNRELEASED; urgency=medium
+
+  * Remove deprecated portainer optout
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 01 Sep 2020 18:42:10 -0500
+
 openmediavault-omvextrasorg (5.3.5) stable; urgency=low
 
   * Add environment variables to disable docker and teamviewer repos

@@ -15,10 +15,6 @@
 			"type": "boolean",
 			"default": false
 		},
-		"optout": {
-			"type": "boolean",
-			"default": false
-		},
 		"dockerStorage": {
 			"type": "string",
 			"default": "/var/lib/docker"

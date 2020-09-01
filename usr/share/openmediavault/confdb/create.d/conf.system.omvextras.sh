@@ -35,9 +35,6 @@ fi
 if ! omv_config_exists "/config/system/omvextras/dockerStorage"; then
     omv_config_add_key "/config/system/omvextras" "dockerStorage" "/var/lib/docker"
 fi
-if ! omv_config_exists "/config/system/omvextras/optout"; then
-    omv_config_add_key "/config/system/omvextras" "optout" "1"
-fi
 if ! omv_config_exists "/config/system/omvextras/webport"; then
     omv_config_add_key "/config/system/omvextras" "webport" "9000"
 fi

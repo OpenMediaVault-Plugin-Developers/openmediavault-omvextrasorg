@@ -28,10 +28,6 @@
 				"type": "string",
 				"required": false
 			},
-			"optout": {
-				"type": "boolean",
-				"required": false
-			},
 			"webport": {
 				"type": "integer",
 				"minimum": 1000,
