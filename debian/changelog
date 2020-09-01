@@ -1,8 +1,9 @@
-openmediavault-omvextrasorg (5.3.5) UNRELEASED; urgency=medium
+openmediavault-omvextrasorg (5.3.5) stable; urgency=low
 
   * Add environment variables to disable docker and teamviewer repos
+  * Use portainer-ce package
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 26 Jul 2020 11:37:36 -0500
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 01 Sep 2020 18:08:35 -0500
 
 openmediavault-omvextrasorg (5.3.4) stable; urgency=low
 

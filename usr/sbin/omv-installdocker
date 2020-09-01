@@ -24,7 +24,8 @@ dockerOverrideFile="${dockerOverrideDir}/waitAllMounts.conf"
 
 # portainer
 declare -i optout=0
-portainerImage="portainer/portainer"
+portainerImage="portainer/portainer-ce"
+portainerImageOld="portainer/portainer"
 portainerName="portainer"
 portainerVolume="portainer_data"
 
@@ -181,12 +182,14 @@ removePortainer()
     status=1
   done
 
-  # remove existing portainer image
-  if docker image ls --all | grep --quiet "${portainerImage}"; then
-    echo "Removing ${portainerImage} image ..."
-    docker image rm "${portainerImage}"
-    status=1
-  fi
+  # remove existing portainer or portainer-ce images
+  for img in ${portainerImage} ${portainerImageOld}; do
+    if docker image ls --all | grep --quiet "${img}"; then
+      echo "Removing ${img} image ..."
+      docker image rm "${img}"
+      status=1
+    fi
+  done
 
   if [ ${status} -ne 1 ]; then
     echo "No portainer containers or images to remove."
@@ -342,8 +345,8 @@ installPortainer()
   fi
 
   # pull and start portainer
-  echo "Pulling and starting portainer ..."
-  docker run -d --name "${portainerName}" -p ${webport}:9000 -p ${agentport}:8000 --restart=unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v ${portainerVolume}:/data portainer/portainer ${optoutArg}
+  echo "Pulling and starting ${portainerImage} ..."
+  docker run -d --name "${portainerName}" -p ${webport}:9000 -p ${agentport}:8000 --restart=unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v ${portainerVolume}:/data ${portainerImage} ${optoutArg}
   if [ $? -gt 0 ]; then
     echo "Something went wrong trying to pull and start portainer ..."
   fi
