@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-16 08:06-0500\n"
-"PO-Revision-Date: 2020-06-16 18:23+0000\n"
-"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
+"POT-Creation-Date: 2020-09-02 07:24-0500\n"
+"PO-Revision-Date: 2020-09-02 12:24+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -181,9 +181,6 @@ msgstr "Zdroje přídavných funkcí"
 msgid "Open web"
 msgstr "Otevřít web"
 
-msgid "Opt-out"
-msgstr "Zrušit svou účast"
-
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
 "/etc/docker/daemon.json."
@@ -324,9 +321,6 @@ msgstr "Pokud je stále aktivní, tomuto se nepodaří odebrat jádro linux-imag
 
 msgid "This will install the latest 5.4 kernel."
 msgstr "Toto nainstaluje nejnovější jádro řady 5.4."
-
-msgid "This will opt-out of Portainer's minimal analytics."
-msgstr "Toto zruší vaši účast na analýze využívání Portainer, odesílané jeho vývojářům."
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "Toto odebere všechny balíčky s hlavičkovými soubory s předponou linux-headers-."

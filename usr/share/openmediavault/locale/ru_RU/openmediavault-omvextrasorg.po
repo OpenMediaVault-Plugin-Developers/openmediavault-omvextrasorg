@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-16 08:06-0500\n"
-"PO-Revision-Date: 2020-06-16 13:06+0000\n"
+"POT-Creation-Date: 2020-09-02 07:24-0500\n"
+"PO-Revision-Date: 2020-09-02 12:24+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -183,9 +183,6 @@ msgstr "OMV-Extras"
 msgid "Open web"
 msgstr "Открыть web"
 
-msgid "Opt-out"
-msgstr "Opt-out"
-
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
 "/etc/docker/daemon.json."
@@ -326,9 +323,6 @@ msgstr "Не удалит ядро linux-image- *, если оно все еще
 
 msgid "This will install the latest 5.4 kernel."
 msgstr ""
-
-msgid "This will opt-out of Portainer's minimal analytics."
-msgstr "Позволит отказаться от минимальной аналитики Portainer."
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "Удалит все пакеты заголовков с префиксом linux-headers-."

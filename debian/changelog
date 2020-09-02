@@ -1,8 +1,8 @@
-openmediavault-omvextrasorg (5.3.6) UNRELEASED; urgency=medium
+openmediavault-omvextrasorg (5.3.6) stable; urgency=low
 
   * Remove deprecated portainer optout
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 01 Sep 2020 18:42:10 -0500
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 02 Sep 2020 07:24:09 -0500
 
 openmediavault-omvextrasorg (5.3.5) stable; urgency=low
 
