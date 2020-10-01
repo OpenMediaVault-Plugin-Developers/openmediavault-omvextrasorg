@@ -35,6 +35,12 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
     hideOkButton: true,
     hideResetButton: true,
 
+    initComponent: function() {
+        var me = this;
+        me.hide();
+        me.callParent(arguments);
+    },
+
     getButtonItems: function() {
         var me = this;
         var items = me.callParent(arguments);
