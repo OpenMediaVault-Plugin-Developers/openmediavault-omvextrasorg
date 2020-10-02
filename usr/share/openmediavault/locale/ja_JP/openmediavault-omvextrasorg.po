@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-02 07:24-0500\n"
-"PO-Revision-Date: 2020-09-02 12:24+0000\n"
+"POT-Creation-Date: 2020-10-02 12:15-0500\n"
+"PO-Revision-Date: 2020-10-02 17:15+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
@@ -43,6 +43,12 @@ msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
 "legacy. Use iptables menu to change. "
 msgstr "Debian 10 / OMV 5.xはデフォルトでiptables-nftを使用し、Dockerはiptables-legacyを必要とします。 変更するにはiptablesメニューを使用します。"
+
+msgid "Default password: "
+msgstr ""
+
+msgid "Default username: "
+msgstr ""
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "デフォルトのユーザー名: <b>user</b>、パスワード:<b>live</b>"
@@ -97,6 +103,9 @@ msgstr "IPアドレスはDHCPによって設定されます。スタティック
 msgid "If port is changed, click Install in the Portainer menu again."
 msgstr "ポートが変更されている場合は、Portainerメニューのインストールをもう一度クリックします。"
 
+msgid "If port is changed, click Install in the Yacht menu again."
+msgstr ""
+
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr "不正なdockerストレージのパス - /sharedfolders パスは使えません"
 
@@ -147,6 +156,15 @@ msgstr "SystemRescueCDのインストール"
 msgid "Install SystemRescueCD ISO ..."
 msgstr "SystemRescueCD ISOをインストール中 ..."
 
+msgid ""
+"Install Yacht will install the docker-ce package if not already installed."
+msgstr ""
+
+msgid ""
+"Install Yacht will update Yacht to the latest image if the image already "
+"exists."
+msgstr ""
+
 msgid "Installed"
 msgstr "インストール済み"
 
@@ -176,6 +194,12 @@ msgstr "ヘッドレスサーバーにはお勧めしません。 SSHはデフ�
 
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
+
+msgid "Open Portainer"
+msgstr ""
+
+msgid "Open Yacht"
+msgstr ""
 
 msgid "Open web"
 msgstr "Webを開く"
@@ -230,6 +254,11 @@ msgid ""
 "Remove Portainer will remove the Portainer image and container but the "
 "volume will not be removed."
 msgstr "Portainerの削除は、Portainerのイメージとコンテナーを削除しますが、ボリュームは削除されません。"
+
+msgid ""
+"Remove Yacht will remove the Yacht image and container but the volume will "
+"not be removed."
+msgstr ""
 
 msgid "Remove non-Proxmox kernels and headers"
 msgstr "non-Proxmoxカーネルとヘッダーを削除する"
@@ -359,6 +388,9 @@ msgstr "sshを使用して接続する場合、ssh keyがOpenMediaVaultと異な
 msgid ""
 "When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
 msgstr "リモートからログインする場合、 <b>sudo clonezilla</b>コマンドでclonezilla を起動します。"
+
+msgid "Yacht will listen on port 8001 for the web interface unless changed."
+msgstr ""
 
 msgid "and not running"
 msgstr "未実行"

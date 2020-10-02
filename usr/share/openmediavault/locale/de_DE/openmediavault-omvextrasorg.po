@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-02 07:24-0500\n"
-"PO-Revision-Date: 2020-09-02 12:24+0000\n"
+"POT-Creation-Date: 2020-10-02 12:15-0500\n"
+"PO-Revision-Date: 2020-10-02 17:15+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -47,6 +47,12 @@ msgstr "Cockpit lauscht auf Port 9090 nach der Web-Schnittstelle."
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
 "legacy. Use iptables menu to change. "
+msgstr ""
+
+msgid "Default password: "
+msgstr ""
+
+msgid "Default username: "
 msgstr ""
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
@@ -102,6 +108,9 @@ msgstr ""
 msgid "If port is changed, click Install in the Portainer menu again."
 msgstr ""
 
+msgid "If port is changed, click Install in the Yacht menu again."
+msgstr ""
+
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr ""
 
@@ -152,6 +161,15 @@ msgstr "SystemRescueCD installieren"
 msgid "Install SystemRescueCD ISO ..."
 msgstr "SystemRescueCD ISO installieren ..."
 
+msgid ""
+"Install Yacht will install the docker-ce package if not already installed."
+msgstr ""
+
+msgid ""
+"Install Yacht will update Yacht to the latest image if the image already "
+"exists."
+msgstr ""
+
 msgid "Installed"
 msgstr "Installiert"
 
@@ -181,6 +199,12 @@ msgstr ""
 
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
+
+msgid "Open Portainer"
+msgstr ""
+
+msgid "Open Yacht"
+msgstr ""
 
 msgid "Open web"
 msgstr ""
@@ -234,6 +258,11 @@ msgstr ""
 msgid ""
 "Remove Portainer will remove the Portainer image and container but the "
 "volume will not be removed."
+msgstr ""
+
+msgid ""
+"Remove Yacht will remove the Yacht image and container but the volume will "
+"not be removed."
 msgstr ""
 
 msgid "Remove non-Proxmox kernels and headers"
@@ -363,6 +392,9 @@ msgstr ""
 
 msgid ""
 "When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
+msgstr ""
+
+msgid "Yacht will listen on port 8001 for the web interface unless changed."
 msgstr ""
 
 msgid "and not running"
