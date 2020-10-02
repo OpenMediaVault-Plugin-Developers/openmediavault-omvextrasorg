@@ -12,8 +12,6 @@ declare cockpitPackages=""
 declare dockerPackages=""
 declare dockerStorage=""
 declare -i download=0
-declare -i agentport=8000
-declare -i webport=9000
 daemonJson="/etc/docker/daemon.json"
 dockerBin="/usr/bin/docker"
 dockerCompose="/usr/local/bin/docker-compose"
@@ -23,11 +21,18 @@ dockerOverrideDir="/etc/systemd/system/docker.service.d"
 dockerOverrideFile="${dockerOverrideDir}/waitAllMounts.conf"
 
 # portainer
+declare -i agentport=8000
+declare -i webport=9000
 portainerImage="portainer/portainer-ce"
 portainerImageOld="portainer/portainer"
 portainerName="portainer"
 portainerVolume="portainer_data"
 
+# yacht
+declare -i yachtport=8001
+yachtImage="selfhostedpro/yacht"
+yachtName="yacht"
+yachtVolume="yacht"
 
 setArch()
 {
@@ -89,6 +94,8 @@ setConfig()
     echo "Agent port:: ${agentport}"
     webport=$(omv_config_get "${xpath}/webport")
     echo "Web port:: ${webport}"
+    yachtport=$(omv_config_get "${xpath}/yachtport")
+    echo "Yacht port:: ${yachtport}"
   fi
 }
 
@@ -190,6 +197,41 @@ removePortainer()
 
   if [ ${status} -ne 1 ]; then
     echo "No portainer containers or images to remove."
+  fi
+}
+
+removeYacht()
+{
+  status=0
+
+  if [ ! -f "${dockerBin}" ]; then
+    echo "Docker is not installed."
+    exit 0
+  fi
+
+  # stop existing yacht container
+  for cn in $(docker container ls --format "{{.Names}},{{.Image}}" | grep --ignore-case "${yachtName}"); do
+    echo "Stopping ${cn%%,*} ..."
+    docker container stop "${cn%%,*}"
+    status=1
+  done
+
+  # remove existing yacht container
+  for cn in $(docker container ls --all --format "{{.Names}},{{.Image}}" | grep --ignore-case "${yachtName}"); do
+    echo "Removing ${cn%%,*} ..."
+    docker container rm "${cn%%,*}"
+    status=1
+  done
+
+  # remove existing yacht image
+  if docker image ls --all | grep --quiet "${yachtImage}"; then
+    echo "Removing ${yachtImage} image ..."
+    docker image rm "${yachtImage}"
+    status=1
+  fi
+
+  if [ ${status} -ne 1 ]; then
+    echo "No yacht containers or images to remove."
   fi
 }
 
@@ -344,6 +386,29 @@ installPortainer()
   fi
 }
 
+installYacht()
+{
+  if [ ! -f "${dockerBin}" ]; then
+    installDocker
+  fi
+
+  # remove existing
+  removeYacht
+
+  # create yacht data volume
+  if ! docker volume ls | grep --quiet "${yachtVolume}"; then
+    echo "Creating yacht volume ..."
+    docker volume create "${yachtVolume}"
+  fi
+
+  # pull and start yacht
+  echo "Pulling and starting ${yachtImage} ..."
+  docker run -d --name "${yachtName}" -p ${yachtport}:8000 --restart=unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v ${yachtVolume}:/config ${yachtImage}
+  if [ $? -gt 0 ]; then
+    echo "Something went wrong trying to pull and start yacht ..."
+  fi
+}
+
 setArch
 setConfig
 
@@ -376,6 +441,13 @@ case ${option} in
       removePortainer
     else
       installPortainer
+    fi
+    ;;
+  yacht)
+    if [[ "${state}" == "remove" ]]; then
+      removeYacht
+    else
+      installYacht
     fi
     ;;
   *)

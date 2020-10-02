@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.4) stable; urgency=low
+
+  * Add Yacht to Docker tab
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 02 Oct 2020 12:06:11 -0500
+
 openmediavault-omvextrasorg (5.3.6) stable; urgency=low
 
   * Remove deprecated portainer optout

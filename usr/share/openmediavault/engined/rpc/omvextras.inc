@@ -136,6 +136,21 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $object->add('portainerStatus', 'string', $status);
         $object->add('portainerStatus2', 'boolean', $status2);
 
+        // yacht status
+        $cmdLine = "docker container ls --all --format='{{.Names}}|{{.Status}}' | awk -F \"|\" 'tolower(\$1) == \"yacht\" { print \$2 }'";
+        $cmd = new \OMV\System\Process($cmdLine);
+        $cmd->setQuiet(true);
+        $output = [];
+        $cmd->execute($output, $exitStatus);
+        if (empty($output[0])) {
+            $status = 'No yacht container found.';
+            $status2 = false;
+        } else {
+            $status = $output[0];
+            $status2 = true;
+        }
+        $object->add('yachtStatus', 'string', $status);
+        $object->add('yachtStatus2', 'boolean', $status2);
         return $object->getAssoc();
     }
 
@@ -159,6 +174,7 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $object->set('agentport',$params['agentport']);
         $object->set('dockerStorage',$params['dockerStorage']);
         $object->set('webport',$params['webport']);
+        $object->set('yachtport',$params['yachtport']);
         $db->set($object);
         // Apply the changes immediatelly (no user interaction is wanted).
         \OMV\Rpc\Rpc::call('Config', 'applyChanges', [
@@ -317,6 +333,8 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
                     case 'docker_remove':
                     case 'portainer_install':
                     case 'portainer_remove':
+                    case 'yacht_install':
+                    case 'yacht_remove':
                         $cmdBin = 'omv-installdocker';
                         $cmdParams = str_replace('_',' ',$params['command']);
                         break;

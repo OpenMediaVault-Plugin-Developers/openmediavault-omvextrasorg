@@ -41,6 +41,9 @@ fi
 if ! omv_config_exists "/config/system/omvextras/agentport"; then
     omv_config_add_key "/config/system/omvextras" "agentport" "8000"
 fi
+if ! omv_config_exists "/config/system/omvextras/yachtport"; then
+    omv_config_add_key "/config/system/omvextras" "yachtport" "8001"
+fi
 
 # disable grub submenus on systems that use grub
 if [ -f /usr/sbin/update-grub ]; then

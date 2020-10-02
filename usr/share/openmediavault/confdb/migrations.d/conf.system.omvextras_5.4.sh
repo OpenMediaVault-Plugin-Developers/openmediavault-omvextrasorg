@@ -26,9 +26,8 @@ set -e
 SERVICE_XPATH_NAME="omvextras"
 SERVICE_XPATH="/config/system/${SERVICE_XPATH_NAME}"
 
-if ! omv_config_exists "${SERVICE_XPATH}/webport"; then
-    omv_config_add_key "${SERVICE_XPATH}" "webport" "9000"
-    omv_config_add_key "${SERVICE_XPATH}" "agentport" "8000"
+if ! omv_config_exists "${SERVICE_XPATH}/yachtport"; then
+    omv_config_add_key "${SERVICE_XPATH}" "yachtport" "8001"
 fi
 
 exit 0

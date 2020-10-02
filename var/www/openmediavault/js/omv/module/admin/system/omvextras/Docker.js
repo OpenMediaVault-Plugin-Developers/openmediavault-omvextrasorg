@@ -41,10 +41,23 @@ Ext.define("OMV.module.admin.system.omvextras.Docker", {
                 this.setButtonDisabled("portainerweb", !valid);
             }
         },{
+            conditions: [
+                { name: "yachtStatus2", value: true }
+            ],
+            properties: function(valid, field) {
+                this.setButtonDisabled("yachtweb", !valid);
+            }
+        },{
             conditions: [{
                 name: "advanced", value: false
             }],
             name: ["webport","agentport"],
+            properties: ["!show"]
+        },{
+            conditions: [{
+                name: "advanced2", value: false
+            }],
+            name: ["yachtport"],
             properties: ["!show"]
         }]
     }],
@@ -104,13 +117,42 @@ Ext.define("OMV.module.admin.system.omvextras.Docker", {
         },{
             id: me.getId() + "-portainerweb",
             xtype: "button",
-            text: _("Open web"),
+            text: _("Open Portainer"),
             icon: "images/arrow-up.png",
             iconCls: Ext.baseCSSPrefix + "btn-icon-16x16",
             disabled: true,
             scope: me,
             handler: function() {
                 var port = this.getForm().findField("webport").getValue()
+                if (port >= 1000) {
+                    window.open("http://" + location.hostname + ":" + port, "_blank");
+                }
+            }
+        },{
+            id: me.getId() + "-yacht",
+            xtype: "button",
+            text: "Yacht",
+            scope: me,
+            icon: "images/refresh.png",
+            menu: [{
+                text: _("Install"),
+                icon: "images/add.png",
+                handler: Ext.Function.bind(me.onCommandButton, me, [ "yacht_install" ])
+            },{
+                text: _("Remove"),
+                icon: "images/minus.png",
+                handler: Ext.Function.bind(me.onCommandButton, me, [ "yacht_remove" ])
+            }]
+        },{
+            id: me.getId() + "-yachtweb",
+            xtype: "button",
+            text: _("Open Yacht"),
+            icon: "images/arrow-up.png",
+            iconCls: Ext.baseCSSPrefix + "btn-icon-16x16",
+            disabled: true,
+            scope: me,
+            handler: function() {
+                var port = this.getForm().findField("yachtport").getValue()
                 if (port >= 1000) {
                     window.open("http://" + location.hostname + ":" + port, "_blank");
                 }
@@ -220,6 +262,53 @@ Ext.define("OMV.module.admin.system.omvextras.Docker", {
                         "<li>" + _("Remove Portainer will remove the Portainer image and container but the volume will not be removed.") + "</li>" +
                       "</ul>"
             }]
+        },{
+            xtype: "fieldset",
+            title: "Yacht (alpha)",
+            fieldDefaults: {
+                labelSeparator: ""
+            },
+            items: [{
+                xtype: "textfield",
+                name: "yachtStatus",
+                fieldLabel: _("Status"),
+                submitValue: false
+            },{
+                xtype: "checkbox",
+                name: "advanced2",
+                fieldLabel: _("Advanced"),
+                submitValue: false
+            },{
+                xtype: "numberfield",
+                name: "yachtport",
+                fieldLabel: _("Web port"),
+                vtype: "port",
+                minValue: 1000,
+                maxValue: 65535,
+                allowDecimals: false,
+                allowBlank: false,
+                value: 8001,
+                hidden: true,
+                plugins: [{
+                    ptype: "fieldinfo",
+                    text: _("If port is changed, click Install in the Yacht menu again.")
+                }]
+            },{
+                xtype: "checkbox",
+                name: "yachtStatus2",
+                hidden: true,
+                submitValue: false
+            },{
+                border: false,
+                html: "<ul>" +
+                        "<li>" + _("Install Yacht will install the docker-ce package if not already installed.") + "</li>" +
+                        "<li>" + _("Install Yacht will update Yacht to the latest image if the image already exists.") + "</li>" +
+                        "<li>" + _("Yacht will listen on port 8001 for the web interface unless changed.") + "</li>" +
+                        "<li>" + _("Remove Yacht will remove the Yacht image and container but the volume will not be removed.") + "</li>" +
+                        "<li>" + _("Default username: ") + "admin@yacht.local</li>" +
+                        "<li>" + _("Default password: ") + "pass</li>" +
+                      "</ul>"
+            }]
         }];
     },
 
@@ -235,6 +324,8 @@ Ext.define("OMV.module.admin.system.omvextras.Docker", {
             case "docker_remove":
             case "portainer_install":
             case "portainer_remove":
+            case "yacht_install":
+            case "yacht_remove":
                 str = command.split("_");
                 if (str[1] == "remove") {
                   action = _("Removing");

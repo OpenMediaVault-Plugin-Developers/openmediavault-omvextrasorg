@@ -30,6 +30,12 @@
 			"minimum": 1000,
 			"maximum": 65535,
 			"default": 8000
+		},
+		"yachtport": {
+			"type": "integer",
+			"minimum": 1000,
+			"maximum": 65535,
+			"default": 8001
 		}
 	}
 }
