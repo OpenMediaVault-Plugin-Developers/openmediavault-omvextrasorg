@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.4.1) stable; urgency=low
+
+  * Skip adding docker repo for i386 systems due to apt segfault
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 15 Oct 2020 08:12:10 -0500
+
 openmediavault-omvextrasorg (5.4) stable; urgency=low
 
   * Add Yacht to Docker tab
