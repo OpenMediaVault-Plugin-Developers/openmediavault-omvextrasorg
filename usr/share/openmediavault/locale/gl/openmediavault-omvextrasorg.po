@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-02 12:15-0500\n"
-"PO-Revision-Date: 2020-10-02 17:15+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2020-10-02 17:52+0000\n"
+"Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,10 +45,10 @@ msgid ""
 msgstr "Debian 10/OMV 5.x usa iptables-nft como predeterminadoo e Docker precisa iptables-legacy. Use o menú iptables para cambiar."
 
 msgid "Default password: "
-msgstr ""
+msgstr "Contrasinal predeterminado:"
 
 msgid "Default username: "
-msgstr ""
+msgstr "Nome de usuario predeterminado:"
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Nome de usuario predeterminado: <b>user</b> e o contrasinal: <b>live</b>"
@@ -104,7 +104,7 @@ msgid "If port is changed, click Install in the Portainer menu again."
 msgstr "Se se cambia o porto, prema de novo en Instalar no menú Portainer."
 
 msgid "If port is changed, click Install in the Yacht menu again."
-msgstr ""
+msgstr "Se se cambia o porto, prema de novo en Instalar no menú Yacht."
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr "Ruta de almacenamento Docker incorrecta: non se poden usar rutas de /cartfoles_compartidos"
@@ -158,12 +158,12 @@ msgstr "Instalar a ISO de SystemRescueCD Vivo…"
 
 msgid ""
 "Install Yacht will install the docker-ce package if not already installed."
-msgstr ""
+msgstr "Instalar Yacht instalará o paquete docker-ce se aínda non está instalado."
 
 msgid ""
 "Install Yacht will update Yacht to the latest image if the image already "
 "exists."
-msgstr ""
+msgstr "Instalar Yacht actualizará Yacht á imaxe máis recente se a imaxe xa existe."
 
 msgid "Installed"
 msgstr "Instalado"
@@ -196,10 +196,10 @@ msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
 msgid "Open Portainer"
-msgstr ""
+msgstr "Abrir Portainer"
 
 msgid "Open Yacht"
-msgstr ""
+msgstr "Abrir Yacht"
 
 msgid "Open web"
 msgstr "Abrir web"
@@ -258,7 +258,7 @@ msgstr "Eliminar Portainer eliminará a imaxe e o contedor de Portainer mais o v
 msgid ""
 "Remove Yacht will remove the Yacht image and container but the volume will "
 "not be removed."
-msgstr ""
+msgstr "Eliminar Yacht eliminará a imaxe e o contedor de Yacht mais o volume non se eliminará."
 
 msgid "Remove non-Proxmox kernels and headers"
 msgstr "Retirar os núcleos e as cabeceiras non Proxmox"
@@ -390,7 +390,7 @@ msgid ""
 msgstr "Cando inicie sesión de xeito remoto, inicie clonezilla con: <b>sudo clonezilla</b>"
 
 msgid "Yacht will listen on port 8001 for the web interface unless changed."
-msgstr ""
+msgstr "Yacht escoitará no porto 8001 para a interface web a menos que o cambie."
 
 msgid "and not running"
 msgstr "e detido"

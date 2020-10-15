@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-02 12:15-0500\n"
-"PO-Revision-Date: 2020-10-02 17:15+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2020-10-04 03:28+0000\n"
+"Last-Translator: kochin <kochinc@outlook.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,10 +45,10 @@ msgid ""
 msgstr "Debian 10/OMV 5.x 預設使用 iptables-nft，而 Docker 需要 iptables-legacy。請用 iptables 選單來改變。"
 
 msgid "Default password: "
-msgstr ""
+msgstr "預設密碼："
 
 msgid "Default username: "
-msgstr ""
+msgstr "預設用戶名稱："
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "預設 用戶名稱：<b>user</b> 與 密碼：<b>live</b>"
@@ -104,7 +104,7 @@ msgid "If port is changed, click Install in the Portainer menu again."
 msgstr "若連接埠被改變，請於 Portainer 選單中再點按「安裝」一次。"
 
 msgid "If port is changed, click Install in the Yacht menu again."
-msgstr ""
+msgstr "若連接埠被改變，請再次點擊 Yacht 選單中的「安裝」。"
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr "非法的 docker 儲存路徑 - 不能使用 /sharedfolders 路徑"
@@ -158,12 +158,12 @@ msgstr "安裝 SystemRescueCD ISO ..."
 
 msgid ""
 "Install Yacht will install the docker-ce package if not already installed."
-msgstr ""
+msgstr "安裝 Yacht 將也會安裝 docker-ce 套件，若它還未被安裝。"
 
 msgid ""
 "Install Yacht will update Yacht to the latest image if the image already "
 "exists."
-msgstr ""
+msgstr "安裝 Yacht 時將更新 Yacht 到最新的影像，如果它的影像已經存在。"
 
 msgid "Installed"
 msgstr "已安裝"
@@ -196,10 +196,10 @@ msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
 msgid "Open Portainer"
-msgstr ""
+msgstr "開啓 Portainer"
 
 msgid "Open Yacht"
-msgstr ""
+msgstr "開啓 Yacht"
 
 msgid "Open web"
 msgstr "打開網頁"
@@ -258,7 +258,7 @@ msgstr "移除 Portainer 將會移除 Portainer 的影像和容器，但資料�
 msgid ""
 "Remove Yacht will remove the Yacht image and container but the volume will "
 "not be removed."
-msgstr ""
+msgstr "移除 Yacht 將會移除 Yacht 的影像和容器，但資料卷將不會被移除。"
 
 msgid "Remove non-Proxmox kernels and headers"
 msgstr "移除 非Proxmox 系統核心與標頭檔案"
@@ -390,7 +390,7 @@ msgid ""
 msgstr "當從遠端登入時，以此指令啟動 clonezilla：<b>sudo clonezilla</b>"
 
 msgid "Yacht will listen on port 8001 for the web interface unless changed."
-msgstr ""
+msgstr "Yacht 將在連接埠 8001 監聽網站介面，除非被改變。"
 
 msgid "and not running"
 msgstr "並且不在執行中"
