@@ -98,12 +98,12 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $object = $db->get('conf.system.omvextras');
 
         // docker status
-        $cmdLine = "dpkg-query -W -f='\${Version}' docker-ce";
+        $cmdLine = "dpkg-query -W -f='\${Version}' docker-ce docker.io 2>/dev/null";
         $cmd = new \OMV\System\Process($cmdLine);
         $cmd->setQuiet(true);
         $output = [];
         $cmd->execute($output, $exitStatus);
-        if ((0 == $exitStatus) && (!empty($output))) {
+        if (!empty($output)) {
             // Get docker service status
             $systemCtl = new \OMV\System\SystemCtl('docker');
             if ($systemCtl->isActive()) {

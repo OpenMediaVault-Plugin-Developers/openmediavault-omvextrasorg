@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.4.2) stable; urgency=low
+
+  * Use docker.io if docker.com repo is disabled
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 16 Oct 2020 07:49:11 -0500
+
 openmediavault-omvextrasorg (5.4.1) stable; urgency=low
 
   * Skip adding docker repo for i386 systems due to apt segfault
