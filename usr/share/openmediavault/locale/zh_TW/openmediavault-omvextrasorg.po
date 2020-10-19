@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-02 12:15-0500\n"
-"PO-Revision-Date: 2020-10-04 03:28+0000\n"
-"Last-Translator: kochin <kochinc@outlook.com>\n"
+"POT-Creation-Date: 2020-10-19 10:32-0500\n"
+"PO-Revision-Date: 2020-10-19 15:32+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -73,9 +73,9 @@ msgid ""
 msgstr "下載 GParted Live ISO，並將 grub 啟動載入器設置成允許從 ISO 啟動。"
 
 msgid ""
-"Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
-" from ISO."
-msgstr "下載 SystemRescuecd ISO，並將 grub 啟動載入器設置成允許從 ISO 啟動。"
+"Downloads SystemRescue ISO and configures grub bootloader to allow booting "
+"from ISO."
+msgstr ""
 
 msgid "Extras repo"
 msgstr "Extras 套件庫"
@@ -150,11 +150,11 @@ msgstr "安裝 Portainer 時將更新 Portainer 到最新的影像，如果它�
 msgid "Install Proxmox kernel"
 msgstr "安裝 Proxmox 系統核心"
 
-msgid "Install SystemRescueCD"
-msgstr "安裝 SystemRescueCD"
+msgid "Install SystemRescue"
+msgstr ""
 
-msgid "Install SystemRescueCD ISO ..."
-msgstr "安裝 SystemRescueCD ISO ..."
+msgid "Install SystemRescue ISO ..."
+msgstr ""
 
 msgid ""
 "Install Yacht will install the docker-ce package if not already installed."
@@ -232,11 +232,11 @@ msgstr "重新啟動進入 GParted Live ..."
 msgid "Reboot to GParted Live Once"
 msgstr "重新啟動進入 GParted Live 一次"
 
-msgid "Reboot to SystemRescueCD ..."
-msgstr "重新啟動進入 SystemRescueCD ..."
+msgid "Reboot to SystemRescue ..."
+msgstr ""
 
-msgid "Reboot to SystemRescueCD Once"
-msgstr "重新啟動進入 SystemRescueCD 一次"
+msgid "Reboot to SystemRescue Once"
+msgstr ""
 
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "在移除 非Proxmox 系統核心之前，請先以 Promxmox 系統核心重新啟動。"
@@ -314,8 +314,8 @@ msgstr "設定 grub 啟動載入器從 Clonezilla ISO 啟動<b>一次</b>。"
 msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr "設定 grub 啟動載入器從 GParted Live ISO 啟動<b>一次</b>。"
 
-msgid "Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time."
-msgstr "設定 grub 啟動載入器從 SystenRescueCD ISO 啟動<b>一次</b>。"
+msgid "Sets grub bootloader to boot from SystemRescue ISO <b>ONE</b> time."
+msgstr ""
 
 msgid "Setting boot kernel ..."
 msgstr "設定啟動系統核心中 ..."
@@ -334,9 +334,6 @@ msgstr "在作業系統硬碟上的 /root 檔案目錄內，被 ISO 所佔用的
 
 msgid "Status"
 msgstr "狀態"
-
-msgid "SystemRescueCD"
-msgstr "SystemRescueCD"
 
 msgid "Testing repo"
 msgstr "測試套件庫"

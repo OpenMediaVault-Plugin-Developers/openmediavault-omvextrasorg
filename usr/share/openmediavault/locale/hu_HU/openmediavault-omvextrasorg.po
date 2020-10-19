@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-02 12:15-0500\n"
+"POT-Creation-Date: 2020-10-19 10:32-0500\n"
 "PO-Revision-Date: 2020-10-02 17:15+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/hu_HU/)\n"
@@ -75,9 +75,9 @@ msgid ""
 msgstr "GParted Live ISO letöltése és a GRUB rendszerbetöltő konfigurálása, hogy lehessen rendszert indítani az ISO-ról."
 
 msgid ""
-"Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
-" from ISO."
-msgstr "SystemRescueCD ISO letöltése és a GRUB rendszerbetöltő konfigurálása, hogy lehessen rendszert indítani az ISO-ról."
+"Downloads SystemRescue ISO and configures grub bootloader to allow booting "
+"from ISO."
+msgstr ""
 
 msgid "Extras repo"
 msgstr "Extrák tároló"
@@ -152,11 +152,11 @@ msgstr "A Portainer telepítése frissíteni fogja a Portainer-t a legfrissebb k
 msgid "Install Proxmox kernel"
 msgstr "Proxmox kernel telepítése"
 
-msgid "Install SystemRescueCD"
-msgstr "SystemRescueCD telepítése"
+msgid "Install SystemRescue"
+msgstr ""
 
-msgid "Install SystemRescueCD ISO ..."
-msgstr "SystemRescueCD ISO telepítése…"
+msgid "Install SystemRescue ISO ..."
+msgstr ""
 
 msgid ""
 "Install Yacht will install the docker-ce package if not already installed."
@@ -234,11 +234,11 @@ msgstr "Újraindítás a GParted Live-val…"
 msgid "Reboot to GParted Live Once"
 msgstr "Újraindítás egyszer a GParted Live-val"
 
-msgid "Reboot to SystemRescueCD ..."
-msgstr "Újraindítás a SystemRescueCD-vel…"
+msgid "Reboot to SystemRescue ..."
+msgstr ""
 
-msgid "Reboot to SystemRescueCD Once"
-msgstr "Újraindítás egyszer a SystemRescueCD-vel"
+msgid "Reboot to SystemRescue Once"
+msgstr ""
 
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "Újraindítás Proxmox kernellel a nem Proxmox kernelek eltávolítása előtt."
@@ -316,8 +316,8 @@ msgstr "Beállítja a GRUB rendszerbetöltőt, hogy a Clonezilla ISO-ról indulj
 msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr "Beállítja a GRUB rendszerbetöltőt, hogy a GParted Live ISO-ról induljon a rendszer <b>EGY</b> alkalommal."
 
-msgid "Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time."
-msgstr "Beállítja a GRUB rendszerbetöltőt, hogy a SystemRescueCD ISO-ról induljon a rendszer <b>EGY</b> alkalommal."
+msgid "Sets grub bootloader to boot from SystemRescue ISO <b>ONE</b> time."
+msgstr ""
 
 msgid "Setting boot kernel ..."
 msgstr "Rendszerindító kernel beállítása…"
@@ -336,9 +336,6 @@ msgstr ""
 
 msgid "Status"
 msgstr "Állapot"
-
-msgid "SystemRescueCD"
-msgstr "SystemRescueCD"
 
 msgid "Testing repo"
 msgstr "Teszt tároló"

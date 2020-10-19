@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-02 12:15-0500\n"
-"PO-Revision-Date: 2020-10-03 13:04+0000\n"
-"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
+"POT-Creation-Date: 2020-10-19 10:32-0500\n"
+"PO-Revision-Date: 2020-10-19 15:32+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -74,9 +74,9 @@ msgid ""
 msgstr "Stáhne ISO obraz systému GParted Live a nastaví zavaděč grub, aby z tohoto ISO bylo možné spustit systém."
 
 msgid ""
-"Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
-" from ISO."
-msgstr "Stáhne ISO obraz systému SystemRescueCD a nastaví zavaděč grub, aby z tohoto ISO bylo možné spustit systém."
+"Downloads SystemRescue ISO and configures grub bootloader to allow booting "
+"from ISO."
+msgstr ""
 
 msgid "Extras repo"
 msgstr "Repozitář extras"
@@ -151,11 +151,11 @@ msgstr "Nainstalovat Portainer aktualizuje Portainer na nejnovější obraz (pok
 msgid "Install Proxmox kernel"
 msgstr "Nainstalovat jádro z Proxmox"
 
-msgid "Install SystemRescueCD"
-msgstr "Připravit systém SystemRescueCD"
+msgid "Install SystemRescue"
+msgstr ""
 
-msgid "Install SystemRescueCD ISO ..."
-msgstr "Připravit sem ISO soubor s obrazem systému SystemRescueCD…"
+msgid "Install SystemRescue ISO ..."
+msgstr ""
 
 msgid ""
 "Install Yacht will install the docker-ce package if not already installed."
@@ -233,11 +233,11 @@ msgstr "Restartovat do systému Gparted Live…"
 msgid "Reboot to GParted Live Once"
 msgstr "Jednorázově restartovat do systému Clonezilla"
 
-msgid "Reboot to SystemRescueCD ..."
-msgstr "Restartovat do systému SystemRescueCD…"
+msgid "Reboot to SystemRescue ..."
+msgstr ""
 
-msgid "Reboot to SystemRescueCD Once"
-msgstr "Jednorázově restartovat do systému SystemRescueCD"
+msgid "Reboot to SystemRescue Once"
+msgstr ""
 
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "Před odebráním jader jiných, než z Proxmox restartujte s Proxmox jádrem."
@@ -315,8 +315,8 @@ msgstr "Nastaví zavaděč grub tak, aby <b>JEDNORÁZOVĚ</b> spustil systém Cl
 msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr "Nastaví zavaděč grub tak, aby <b>JEDNORÁZOVĚ</b> spustil systém GParted Live."
 
-msgid "Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time."
-msgstr "Nastaví zavaděč grub tak, aby <b>JEDNORÁZOVĚ</b> spustil systém SystemRescueCD."
+msgid "Sets grub bootloader to boot from SystemRescue ISO <b>ONE</b> time."
+msgstr ""
 
 msgid "Setting boot kernel ..."
 msgstr "Nastavení jádra k zavádění…"
@@ -335,9 +335,6 @@ msgstr "Prostor zabraný ISO souborem v adresáři /boot disku s operačním sys
 
 msgid "Status"
 msgstr "Stav"
-
-msgid "SystemRescueCD"
-msgstr "SystemRescueCD"
 
 msgid "Testing repo"
 msgstr "Repozitář testing"

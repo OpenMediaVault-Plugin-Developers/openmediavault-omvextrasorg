@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-02 12:15-0500\n"
-"PO-Revision-Date: 2020-10-02 17:15+0000\n"
+"POT-Creation-Date: 2020-10-19 10:32-0500\n"
+"PO-Revision-Date: 2020-10-19 15:32+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -74,8 +74,8 @@ msgid ""
 msgstr "Scarica ISO di GParted Live e configura il bootloader grub per consentire l'avvio da ISO."
 
 msgid ""
-"Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
-" from ISO."
+"Downloads SystemRescue ISO and configures grub bootloader to allow booting "
+"from ISO."
 msgstr ""
 
 msgid "Extras repo"
@@ -151,11 +151,11 @@ msgstr ""
 msgid "Install Proxmox kernel"
 msgstr ""
 
-msgid "Install SystemRescueCD"
-msgstr "Installa SystemRescueCD"
+msgid "Install SystemRescue"
+msgstr ""
 
-msgid "Install SystemRescueCD ISO ..."
-msgstr "Installa ISO di SystemRescueCD ..."
+msgid "Install SystemRescue ISO ..."
+msgstr ""
 
 msgid ""
 "Install Yacht will install the docker-ce package if not already installed."
@@ -233,11 +233,11 @@ msgstr "Riavvia su GParted Live ..."
 msgid "Reboot to GParted Live Once"
 msgstr "Riavvia su GParted Live una volta sola"
 
-msgid "Reboot to SystemRescueCD ..."
-msgstr "Riavvia su SystemRescueCD ..."
+msgid "Reboot to SystemRescue ..."
+msgstr ""
 
-msgid "Reboot to SystemRescueCD Once"
-msgstr "Riavvia su SystemRescueCD una volta sola"
+msgid "Reboot to SystemRescue Once"
+msgstr ""
 
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr ""
@@ -315,7 +315,7 @@ msgstr "Imposta il bootloader di grub per l'avvio da Clonezilla <b>UNA</b> volta
 msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr "Imposta il bootloader di grub per l'avvio da GParted Live <b>UNA</b> volta."
 
-msgid "Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time."
+msgid "Sets grub bootloader to boot from SystemRescue ISO <b>ONE</b> time."
 msgstr ""
 
 msgid "Setting boot kernel ..."
@@ -335,9 +335,6 @@ msgstr ""
 
 msgid "Status"
 msgstr ""
-
-msgid "SystemRescueCD"
-msgstr "SystemRescueCD"
 
 msgid "Testing repo"
 msgstr ""

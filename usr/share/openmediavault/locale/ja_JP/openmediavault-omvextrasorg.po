@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-02 12:15-0500\n"
-"PO-Revision-Date: 2020-10-02 17:15+0000\n"
+"POT-Creation-Date: 2020-10-19 10:32-0500\n"
+"PO-Revision-Date: 2020-10-19 15:32+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
@@ -73,9 +73,9 @@ msgid ""
 msgstr "GParted LiveのISOをダウンロードし、ISOからのブートを可能にするためにgrubブートローダを設定します。"
 
 msgid ""
-"Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
-" from ISO."
-msgstr "SystemRescueCD ISOをダウンロードし、ISOからの起動を許可するようにgrubブートローダを設定します。"
+"Downloads SystemRescue ISO and configures grub bootloader to allow booting "
+"from ISO."
+msgstr ""
 
 msgid "Extras repo"
 msgstr "その他のリポジトリ"
@@ -150,11 +150,11 @@ msgstr "Portainerのインストールはイメージが既に存在する場合
 msgid "Install Proxmox kernel"
 msgstr "Proxmox カーネルをインストール"
 
-msgid "Install SystemRescueCD"
-msgstr "SystemRescueCDのインストール"
+msgid "Install SystemRescue"
+msgstr ""
 
-msgid "Install SystemRescueCD ISO ..."
-msgstr "SystemRescueCD ISOをインストール中 ..."
+msgid "Install SystemRescue ISO ..."
+msgstr ""
 
 msgid ""
 "Install Yacht will install the docker-ce package if not already installed."
@@ -232,11 +232,11 @@ msgstr "GParted Liveで再起動 ..."
 msgid "Reboot to GParted Live Once"
 msgstr "一度だけGParted Liveで再起動"
 
-msgid "Reboot to SystemRescueCD ..."
-msgstr "SystemRescueCDで再起動 ..."
+msgid "Reboot to SystemRescue ..."
+msgstr ""
 
-msgid "Reboot to SystemRescueCD Once"
-msgstr "一度だけSystemRescueCDで再起動"
+msgid "Reboot to SystemRescue Once"
+msgstr ""
 
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "non-Proxmoxカーネルを削除する前に、Proxmoxカーネルで再起動してください。"
@@ -314,8 +314,8 @@ msgstr "1度だけClonezilla ISOから起動するためにgrubブートロー�
 msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr "1度だけGParted Live ISOから起動するためにgrubブートローダを設定します。"
 
-msgid "Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time."
-msgstr "SystemRescueCD ISO から <b>1</b>回だけ起動するようにgrubブートローダを設定します。 "
+msgid "Sets grub bootloader to boot from SystemRescue ISO <b>ONE</b> time."
+msgstr ""
 
 msgid "Setting boot kernel ..."
 msgstr "起動カーネルを設定しています ..."
@@ -334,9 +334,6 @@ msgstr "OSドライブの/ bootディレクトリでISOによって使用され�
 
 msgid "Status"
 msgstr "状態"
-
-msgid "SystemRescueCD"
-msgstr "SystemRescueCD"
 
 msgid "Testing repo"
 msgstr "テストリポジトリ"

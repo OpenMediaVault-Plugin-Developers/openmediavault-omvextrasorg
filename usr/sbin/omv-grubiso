@@ -38,8 +38,8 @@ CLONEZILLA_VERSION="2.6.0-37"
 CLONEZILLA_ISO="clonezilla-live-${CLONEZILLA_VERSION}-i686-pae.iso"
 
 GRUB_SYSRESCCD="/etc/grub.d/42_sysresccd"
-SYSRESCCD_VERSION="6.1.1"
-SYSRESCCD_ISO="systemrescuecd-${isoArch}-${SYSRESCCD_VERSION}.iso"
+SYSRESCCD_VERSION="7.00"
+SYSRESCCD_ISO="systemrescue-${SYSRESCCD_VERSION}-${isoArch}.iso"
 
 GRUB_GPARTEDLIVE="/etc/grub.d/42_gpartedlive"
 GPARTEDLIVE_VERSION="1.1.0-1"
@@ -93,7 +93,7 @@ installsysresccd()
     checkDNS
 
     if [ ! -f "${ISO_PATH}/${SYSRESCCD_ISO}" ]; then
-        rm -f ${ISO_PATH}/systemrescuecd*.iso
+        rm -f ${ISO_PATH}/systemrescue*.iso
         wget "https://osdn.net/projects/systemrescuecd/storage/releases/${SYSRESCCD_VERSION}/${SYSRESCCD_ISO}" -O ${ISO_PATH}/${SYSRESCCD_ISO} 2>&1
     else
         echo "${SYSRESCCD_ISO} already exists.  Skipping download."
@@ -102,7 +102,7 @@ installsysresccd()
     cat <<EOF > ${GRUB_SYSRESCCD}
 #!/bin/sh
 exec tail -n +3 \$0
-menuentry 'SystemRescueCD' {
+menuentry 'SystemRescue' {
   probe -u \$root --set=rootuuid
   set imgdevpath="/dev/disk/by-uuid/\$rootuuid"
   set isofile="${ISO_PATH}/${SYSRESCCD_ISO}"
@@ -175,12 +175,12 @@ rebootsysresccd()
         disablesubmenu
 
         if grep -q 'submenu' ${GRUB_CFG}; then
-            ENTRY=$(grep '^menuentry ' ${GRUB_CFG} | grep -n SystemRescueCD | cut -f1 -d:)
+            ENTRY=$(grep '^menuentry ' ${GRUB_CFG} | grep -n SystemRescue | cut -f1 -d:)
         else
-            ENTRY=$(($(grep 'menuentry ' ${GRUB_CFG} | grep -n SystemRescueCD | cut -f1 -d:)-1))
+            ENTRY=$(($(grep 'menuentry ' ${GRUB_CFG} | grep -n SystemRescue | cut -f1 -d:)-1))
         fi
 
-        echo "Configuring grub to boot once from SystemRescueCD iso...  ${ENTRY}"
+        echo "Configuring grub to boot once from SystemRescue iso...  ${ENTRY}"
 
         perl -p -i -e "s/GRUB_DEFAULT=.*/GRUB_DEFAULT=saved/g" ${GRUB}
         grub-set-default ${DEFAULT}

@@ -215,36 +215,36 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
             }]
         },{
             xtype: "fieldset",
-            title: _("SystemRescueCD"),
+            title: "SystemRescue",
             fieldDefaults: {
                 labelSeparator: ""
             },
             items: [{
                 xtype: "button",
                 name: "installsys",
-                text: _("Install SystemRescueCD"),
+                text: _("Install SystemRescue"),
                 scope: this,
                 handler: Ext.Function.bind(me.onCommandButton, me, [ "installsys" ]),
                 margin: "0 0 0 0"
             },{
                 border: false,
                 html: "<ul>" +
-                             "<li>" + _("Downloads SystemRescueCD ISO and configures grub bootloader to allow booting from ISO.") + "</li>" +
+                             "<li>" + _("Downloads SystemRescue ISO and configures grub bootloader to allow booting from ISO.") + "</li>" +
                              "<li>" + _("SSH server is enabled by default.  Login with username: <b>root</b> and password: <b>openmediavault</b>") + "</li>" +
                              "<li>" + _("When connecting via ssh, the ssh key will be different than the OpenMediaVault ssh key and need to be updated on the client system.") + "</li>" +
                              "<li>" + _("IP Address will be set by DHCP.  Using static DHCP is recommended for headless servers.") + "</li>" +
-                             "<li>" + _("Spaced used by ISO in /boot directory on OS drive") + ": 691M" + "</li>" +
+                             "<li>" + _("Spaced used by ISO in /boot directory on OS drive") + ": 687M" + "</li>" +
                          "</ul>"
             },{
                 xtype: "button",
                 name: "rebootsys",
-                text: _("Reboot to SystemRescueCD Once"),
+                text: _("Reboot to SystemRescue Once"),
                 scope: this,
                 handler: Ext.Function.bind(me.onCommandButton, me, [ "rebootsys" ]),
                 margin: "10 0 0 0"
             },{
                 border: false,
-                html: "<ul><li>" + _("Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time.") + "</li></ul>"
+                html: "<ul><li>" + _("Sets grub bootloader to boot from SystemRescue ISO <b>ONE</b> time.") + "</li></ul>"
             }]
         }];
     },
@@ -259,7 +259,7 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                 title = _("Install GParted Live ISO ...");
                 break;
             case "installsys":
-                title = _("Install SystemRescueCD ISO ...");
+                title = _("Install SystemRescue ISO ...");
                 break;
             case "rebootcz":
                 title = _("Reboot to Clonezilla ...");
@@ -268,7 +268,7 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                 title = _("Reboot to GParted Live ...");
                 break;
             case "rebootsys":
-                title = _("Reboot to SystemRescueCD ...");
+                title = _("Reboot to SystemRescue ...");
                 break;
             default:
                 title = _("Cleaning Apt Files and Lists ...");

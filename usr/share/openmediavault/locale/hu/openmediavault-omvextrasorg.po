@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-02 12:15-0500\n"
-"PO-Revision-Date: 2020-10-02 17:15+0000\n"
+"POT-Creation-Date: 2020-10-19 10:32-0500\n"
+"PO-Revision-Date: 2020-10-19 15:32+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Hungarian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/hu/)\n"
 "MIME-Version: 1.0\n"
@@ -72,8 +72,8 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
-" from ISO."
+"Downloads SystemRescue ISO and configures grub bootloader to allow booting "
+"from ISO."
 msgstr ""
 
 msgid "Extras repo"
@@ -149,10 +149,10 @@ msgstr ""
 msgid "Install Proxmox kernel"
 msgstr ""
 
-msgid "Install SystemRescueCD"
+msgid "Install SystemRescue"
 msgstr ""
 
-msgid "Install SystemRescueCD ISO ..."
+msgid "Install SystemRescue ISO ..."
 msgstr ""
 
 msgid ""
@@ -231,10 +231,10 @@ msgstr ""
 msgid "Reboot to GParted Live Once"
 msgstr ""
 
-msgid "Reboot to SystemRescueCD ..."
+msgid "Reboot to SystemRescue ..."
 msgstr ""
 
-msgid "Reboot to SystemRescueCD Once"
+msgid "Reboot to SystemRescue Once"
 msgstr ""
 
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
@@ -313,7 +313,7 @@ msgstr ""
 msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr ""
 
-msgid "Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time."
+msgid "Sets grub bootloader to boot from SystemRescue ISO <b>ONE</b> time."
 msgstr ""
 
 msgid "Setting boot kernel ..."
@@ -332,9 +332,6 @@ msgid "Spaced used by ISO in /boot directory on OS drive"
 msgstr ""
 
 msgid "Status"
-msgstr ""
-
-msgid "SystemRescueCD"
 msgstr ""
 
 msgid "Testing repo"

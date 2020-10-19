@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-02 12:15-0500\n"
+"POT-Creation-Date: 2020-10-19 10:32-0500\n"
 "PO-Revision-Date: 2020-10-02 17:15+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/fr/)\n"
@@ -75,9 +75,9 @@ msgid ""
 msgstr "Télécharge l'ISO de GParted Live et configure le gestionnaire de démarrage GRUB pour permettre le démarrage à partir de l'ISO."
 
 msgid ""
-"Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
-" from ISO."
-msgstr "Télécharge l'ISO de SystemRescueCD et configure le gestionnaire de démarrage GRUB pour permettre le démarrage à partir de l'ISO."
+"Downloads SystemRescue ISO and configures grub bootloader to allow booting "
+"from ISO."
+msgstr ""
 
 msgid "Extras repo"
 msgstr "Dépôt des extras"
@@ -152,11 +152,11 @@ msgstr "Installer Portainer va mettre à jour Portainer vers la dernière image 
 msgid "Install Proxmox kernel"
 msgstr "Installer le noyau Proxmox"
 
-msgid "Install SystemRescueCD"
-msgstr "Installer SystemRescueCd"
+msgid "Install SystemRescue"
+msgstr ""
 
-msgid "Install SystemRescueCD ISO ..."
-msgstr "Installation de l'ISO de SystemRescueCd ..."
+msgid "Install SystemRescue ISO ..."
+msgstr ""
 
 msgid ""
 "Install Yacht will install the docker-ce package if not already installed."
@@ -234,11 +234,11 @@ msgstr "Redémarrage vers GParted Live ..."
 msgid "Reboot to GParted Live Once"
 msgstr "Redémarrer une fois vers GParted Live."
 
-msgid "Reboot to SystemRescueCD ..."
-msgstr "Redémarrage vers SystemRescueCd ..."
+msgid "Reboot to SystemRescue ..."
+msgstr ""
 
-msgid "Reboot to SystemRescueCD Once"
-msgstr "Redémarrer une fois vers SystemRescueCd."
+msgid "Reboot to SystemRescue Once"
+msgstr ""
 
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "Redémarrez avec le noyau Proxmox avant de supprimer les noyaux non-Proxmox."
@@ -316,8 +316,8 @@ msgstr "Définit le gestionnaire de démarrage GRUB pour démarrer à partir de 
 msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr "Définit le gestionnaire de démarrage GRUB pour démarrer à partir de l'ISO de GParted Live <b>ONE</b> fois."
 
-msgid "Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time."
-msgstr "Définit le gestionnaire de démarrage GRUB pour démarrer à partir de l'ISO de SystemRescueCD Live <b>ONE</b> fois."
+msgid "Sets grub bootloader to boot from SystemRescue ISO <b>ONE</b> time."
+msgstr ""
 
 msgid "Setting boot kernel ..."
 msgstr "Définition du noyau de démarrage ..."
@@ -336,9 +336,6 @@ msgstr "Espace utilisé par l'ISO dans le dossier /boot du disque système"
 
 msgid "Status"
 msgstr "Statut"
-
-msgid "SystemRescueCD"
-msgstr "SystemRescueCd"
 
 msgid "Testing repo"
 msgstr "Test du dépôt"

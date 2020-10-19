@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-02 12:15-0500\n"
-"PO-Revision-Date: 2020-10-02 17:15+0000\n"
+"POT-Creation-Date: 2020-10-19 10:32-0500\n"
+"PO-Revision-Date: 2020-10-19 15:32+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -76,9 +76,9 @@ msgid ""
 msgstr "Загружает GParted Live ISO и настраивает загрузчик grub, чтобы разрешить загрузку с ISO."
 
 msgid ""
-"Downloads SystemRescueCD ISO and configures grub bootloader to allow booting"
-" from ISO."
-msgstr "Загружает SystemRescuecd ISO и настраивает загрузчик grub, чтобы разрешить загрузку с ISO."
+"Downloads SystemRescue ISO and configures grub bootloader to allow booting "
+"from ISO."
+msgstr ""
 
 msgid "Extras repo"
 msgstr "Extras repo"
@@ -153,11 +153,11 @@ msgstr "Установка Portainer обновит Portainer до послед�
 msgid "Install Proxmox kernel"
 msgstr "Установить ядро Proxmox"
 
-msgid "Install SystemRescueCD"
-msgstr "Установить SystemRescueCD"
+msgid "Install SystemRescue"
+msgstr ""
 
-msgid "Install SystemRescueCD ISO ..."
-msgstr "Установка SystemRescueCD ISO ..."
+msgid "Install SystemRescue ISO ..."
+msgstr ""
 
 msgid ""
 "Install Yacht will install the docker-ce package if not already installed."
@@ -235,11 +235,11 @@ msgstr "Перезагрузиться в GParted Live ..."
 msgid "Reboot to GParted Live Once"
 msgstr "Перезагрузиться в GParted Live Once"
 
-msgid "Reboot to SystemRescueCD ..."
-msgstr "Перезагрузиться в SystemRescueCD ..."
+msgid "Reboot to SystemRescue ..."
+msgstr ""
 
-msgid "Reboot to SystemRescueCD Once"
-msgstr "Перезагрузиться в SystemRescueCD Once"
+msgid "Reboot to SystemRescue Once"
+msgstr ""
 
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "Перезагрузите ядро Proxmox перед удалением не-Proxmox ядер."
@@ -317,8 +317,8 @@ msgstr "Устанавливает загрузчик grub для загрузк
 msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr "Устанавливает загрузчик grub для загрузки GParted Live ISO <b>ONE</ b>."
 
-msgid "Sets grub bootloader to boot from SystemRescueCD ISO <b>ONE</b> time."
-msgstr "Устанавливает загрузчик grub для загрузки с SystemRescueCD ISO <b>ONE</b>."
+msgid "Sets grub bootloader to boot from SystemRescue ISO <b>ONE</b> time."
+msgstr ""
 
 msgid "Setting boot kernel ..."
 msgstr "Выбор загружаемого ядра ..."
@@ -337,9 +337,6 @@ msgstr "Используемый ISO размещен в каталоге /boot 
 
 msgid "Status"
 msgstr "Статус"
-
-msgid "SystemRescueCD"
-msgstr "SystemRescueCD"
 
 msgid "Testing repo"
 msgstr "Тестовое репо"
