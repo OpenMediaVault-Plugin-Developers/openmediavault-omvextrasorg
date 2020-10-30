@@ -42,7 +42,7 @@ SYSRESCCD_VERSION="7.00"
 SYSRESCCD_ISO="systemrescue-${SYSRESCCD_VERSION}-${isoArch}.iso"
 
 GRUB_GPARTEDLIVE="/etc/grub.d/42_gpartedlive"
-GPARTEDLIVE_VERSION="1.1.0-1"
+GPARTEDLIVE_VERSION="1.1.0-6"
 GPARTEDLIVE_ISO="gparted-live-${GPARTEDLIVE_VERSION}-${isoArch}.iso"
 
 GRUB="/etc/default/grub"
