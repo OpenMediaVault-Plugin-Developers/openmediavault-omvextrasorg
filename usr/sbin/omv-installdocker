@@ -55,7 +55,7 @@ checkDNS()
 
 setCockpitPackages()
 {
-  cockpitPackages="cockpit cockpit-docker cockpit-packagekit"
+  cockpitPackages="cockpit cockpit-packagekit"
   if [[ "${arch}" == "amd64" ]] || [[ "${arch}" == "i386" ]]; then
     cockpitPackages="${cockpitPackages} cockpit-machines virtinst qemu-kvm qemu-utils libvirt-dbus cockpit-storaged dnsmasq-base"
   fi

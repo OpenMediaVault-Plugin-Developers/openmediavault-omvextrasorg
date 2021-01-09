@@ -1,8 +1,9 @@
-openmediavault-omvextrasorg (5.4.3) UNRELEASED; urgency=medium
+openmediavault-omvextrasorg (5.4.3) stable; urgency=low
 
-  * Increment to SystemRescue to 7.00
+  * Increment to SystemRescue to 7.01
+  * Remove cockpit-docker from cockpit install
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 19 Oct 2020 10:32:32 -0500
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 09 Jan 2021 09:33:27 -0600
 
 openmediavault-omvextrasorg (5.4.2) stable; urgency=low
 
