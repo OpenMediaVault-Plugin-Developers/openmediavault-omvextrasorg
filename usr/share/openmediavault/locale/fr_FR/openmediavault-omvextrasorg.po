@@ -4,15 +4,16 @@
 # 
 # Translators:
 # Axel Cantenys, 2017-2018
+# ETIENNE VICTORIA, 2020
 # RC, 2020
 # Zacharie ARNAISE <spacebrain.damage@gmail.com>, 2013,2015
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-19 10:32-0500\n"
-"PO-Revision-Date: 2020-10-02 17:15+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"POT-Creation-Date: 2021-01-09 09:41-0600\n"
+"PO-Revision-Date: 2020-11-11 15:55+0000\n"
+"Last-Translator: ETIENNE VICTORIA\n"
 "Language-Team: French (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,10 +48,10 @@ msgid ""
 msgstr "Debian 10/OMV 5.x utilise iptables-nft par défaut et Docker a besoin de iptables-legacy. Utiliser le menu iptables pour changer."
 
 msgid "Default password: "
-msgstr ""
+msgstr "Mot de passe par défaut."
 
 msgid "Default username: "
-msgstr ""
+msgstr "Nom d'utilisateur par défaut."
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Nom d'utilisateur par défaut : «<b>user</b>», et mot de passe : «<b>live</b>»."
@@ -77,7 +78,7 @@ msgstr "Télécharge l'ISO de GParted Live et configure le gestionnaire de déma
 msgid ""
 "Downloads SystemRescue ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr ""
+msgstr "Télécharge l'ISO de SystemRescue et configure le gestionnaire de démarrage GRUB pour permettre le démarrage à partir de l'ISO."
 
 msgid "Extras repo"
 msgstr "Dépôt des extras"
@@ -106,7 +107,7 @@ msgid "If port is changed, click Install in the Portainer menu again."
 msgstr "Si le port a changé, cliquer une nouvelle fois sur Installer dans le menu Portainer."
 
 msgid "If port is changed, click Install in the Yacht menu again."
-msgstr ""
+msgstr "Si le port a changé, cliquez à nouveau Installer dans le menu Yacht."
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr "Chemin de stockage docker incorrect - impossible d'utiliser les chemins /sharedfolders"
@@ -153,19 +154,19 @@ msgid "Install Proxmox kernel"
 msgstr "Installer le noyau Proxmox"
 
 msgid "Install SystemRescue"
-msgstr ""
+msgstr "Installer SystemRescue"
 
 msgid "Install SystemRescue ISO ..."
-msgstr ""
+msgstr "Installer l'ISO SystemRescue ..."
 
 msgid ""
 "Install Yacht will install the docker-ce package if not already installed."
-msgstr ""
+msgstr "L'installation de Yacht installera l'image docker-ce si elle n'est pas déjà installée."
 
 msgid ""
 "Install Yacht will update Yacht to the latest image if the image already "
 "exists."
-msgstr ""
+msgstr "L'installation de Yacht mettra à jour Yacht à la dernière version de l'image si l'image existe déjà."
 
 msgid "Installed"
 msgstr "Installé"
@@ -198,10 +199,10 @@ msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
 msgid "Open Portainer"
-msgstr ""
+msgstr "Ouvrir Portainer"
 
 msgid "Open Yacht"
-msgstr ""
+msgstr "Ouvrir Yacht"
 
 msgid "Open web"
 msgstr "Ouvrir l'interface web"
@@ -235,10 +236,10 @@ msgid "Reboot to GParted Live Once"
 msgstr "Redémarrer une fois vers GParted Live."
 
 msgid "Reboot to SystemRescue ..."
-msgstr ""
+msgstr "Redémarrer sur SystemRescue ..."
 
 msgid "Reboot to SystemRescue Once"
-msgstr ""
+msgstr "Redémarrer une seule fois sur SystemRescue."
 
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "Redémarrez avec le noyau Proxmox avant de supprimer les noyaux non-Proxmox."
@@ -260,7 +261,7 @@ msgstr "Supprimer Portainer va supprimer l'image et le conteneur Portainer mais 
 msgid ""
 "Remove Yacht will remove the Yacht image and container but the volume will "
 "not be removed."
-msgstr ""
+msgstr "La suppression de Yacht suprimera l'image Yacht ainsi que le conteneur mais le volume ne sera pas supprimé."
 
 msgid "Remove non-Proxmox kernels and headers"
 msgstr "Supprimer les noyaux et les en-têtes non-Proxmox"
@@ -317,7 +318,7 @@ msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr "Définit le gestionnaire de démarrage GRUB pour démarrer à partir de l'ISO de GParted Live <b>ONE</b> fois."
 
 msgid "Sets grub bootloader to boot from SystemRescue ISO <b>ONE</b> time."
-msgstr ""
+msgstr "Définit le gestionnaire de démarrage GRUB pour démarrer à partir de l'ISO de SystemRescue <b> UNE </b> fois."
 
 msgid "Setting boot kernel ..."
 msgstr "Définition du noyau de démarrage ..."
@@ -389,7 +390,7 @@ msgid ""
 msgstr "Lorsque vous vous connectez à distance, démarrez clonezilla avec : «<b>sudo clonezilla</b>»."
 
 msgid "Yacht will listen on port 8001 for the web interface unless changed."
-msgstr ""
+msgstr "Yacht écoutera le port 8001 pour l'interface web sauf si cette valeur est modifiée."
 
 msgid "and not running"
 msgstr "et arrêté"
