@@ -1,7 +1,7 @@
 openmediavault-omvextrasorg (5.4.3) stable; urgency=low
 
   * Increment to SystemRescue to 7.01
-  * Remove cockpit-docker from cockpit install
+  * Remove cockpit-docker and qemu-kvm from cockpit install
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 09 Jan 2021 09:33:27 -0600
 
