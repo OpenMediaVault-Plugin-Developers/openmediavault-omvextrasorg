@@ -57,7 +57,7 @@ setCockpitPackages()
 {
   cockpitPackages="cockpit cockpit-packagekit"
   if [[ "${arch}" == "amd64" ]] || [[ "${arch}" == "i386" ]]; then
-    cockpitPackages="${cockpitPackages} cockpit-machines virtinst qemu-utils libvirt-dbus cockpit-storaged dnsmasq-base"
+    cockpitPackages="${cockpitPackages} cockpit-machines virtinst qemu-system-x86 qemu-utils libvirt-dbus cockpit-storaged dnsmasq-base"
   fi
 }
 
