@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.4.4) stable; urgency=low
+
+  * Fix cockpit dependencies and pinning
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 14 Jan 2021 06:53:03 -0600
+
 openmediavault-omvextrasorg (5.4.3) stable; urgency=low
 
   * Increment to SystemRescue to 7.01
