@@ -34,6 +34,10 @@ Package: qemu*
 Pin: release a={{ grains['oscodename'] }}-backports
 Pin-Priority: 500
 
+Package: libfdt1
+Pin: release a={{ grains['oscodename'] }}-backports
+Pin-Priority: 500
+
 Package: borgbackup
 Pin: release a={{ grains['oscodename'] }}-backports
 Pin-Priority: 500
