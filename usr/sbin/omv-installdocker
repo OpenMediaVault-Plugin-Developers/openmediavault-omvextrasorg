@@ -15,8 +15,10 @@ declare -i download=0
 daemonJson="/etc/docker/daemon.json"
 dockerBin="/usr/bin/docker"
 dockerCompose="/usr/local/bin/docker-compose"
-dockerComposeVersion="1.27.3"
+dockerComposeVersion="1.28.0"
+dockerComposeBuild="ls28"
 dockerComposeUrl="https://github.com/docker/compose/releases/download/${dockerComposeVersion}/docker-compose-Linux-x86_64"
+dockerComposeUrlLs="https://github.com/linuxserver/docker-docker-compose/releases/download/${dockerComposeVersion}-${dockerComposeBuild}/docker-compose-"
 dockerOverrideDir="/etc/systemd/system/docker.service.d"
 dockerOverrideFile="${dockerOverrideDir}/waitAllMounts.conf"
 omvextrasList="/etc/apt/sources.list.d/omvextras.list"
@@ -63,12 +65,11 @@ setCockpitPackages()
 
 setDockerPackages()
 {
-  dockerPackages="docker-compose"
   if [[ "${arch}" == "i386" ]] || ! grep -q 'download.docker.com' ${omvextrasList}; then
     # there is no i386 docker-ce package in the docker repos
     # if docker repos are disabled, use debian repos as well
     # use docker.io from Debian repo
-    dockerPackages="docker.io ${dockerPackages}"
+    dockerPackages="docker.io docker-compose ${dockerPackages}"
   else
     dockerPackages="docker-ce ${dockerPackages}"
   fi
@@ -315,6 +316,8 @@ EOF
 
 installDocker()
 {
+  local url=""
+
   setExports
   setDockerPackages
   configOverride
@@ -347,7 +350,7 @@ installDocker()
   # Write daemon.json file
   configDocker
 
-  if [[ "${arch}" == "amd64" ]]; then
+  if [[ "${arch}" == "amd64" ]] || [[ "${arch}" == "armhf" ]] || [[ "${arch}" == "arm64" ]]; then
     # download docker-compose and place in /usr/local/bin/ if current version is older
     if [ -f "${dockerCompose}" ]; then
       curVers="$(${dockerCompose} --version | cut -d',' -f1 | awk '{ print $3 }')"
@@ -359,7 +362,15 @@ installDocker()
     fi
     if [ ${download} -eq 1 ]; then
       echo "Installing local docker-compose ${dockerComposeVersion}..."
-      curl -L "${dockerComposeUrl}" -o "${dockerCompose}"
+      case ${arch} in
+        amd64)
+          url="${dockerComposeUrl}"
+          ;;
+        arm*)
+          url="${dockerComposeUrlLs}${arch}"
+          ;;
+      esac
+      curl -L "${url}" -o "${dockerCompose}"
       chmod +x "${dockerCompose}"
     fi
   fi

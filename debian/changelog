@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (5.4.5) stable; urgency=low
+
+  * Use docker-compose 1.28.0
+  * Use LinuxServer docker-compose builds for armhf and arm64
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 22 Jan 2021 17:13:16 -0600
+
 openmediavault-omvextrasorg (5.4.4) stable; urgency=low
 
   * Fix cockpit dependencies and pinning
