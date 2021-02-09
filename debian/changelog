@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (5.5) stable; urgency=low
+
+  * Move repos to github
+  * Use saltstack to manage repos
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 09 Feb 2021 14:19:19 -0600
+
 openmediavault-omvextrasorg (5.4.5) stable; urgency=low
 
   * Use docker-compose 1.28.0
