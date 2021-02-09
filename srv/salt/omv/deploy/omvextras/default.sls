@@ -77,6 +77,8 @@ omvextrasbaserepo:
 "deb http://linux.teamviewer.com/deb stable main":
   pkgrepo.managed:
     - file: /etc/apt/sources.list.d/omvextras.list
+    - gpgcheck: 1
+    - key_url: https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc
 
 {% else %}
 
