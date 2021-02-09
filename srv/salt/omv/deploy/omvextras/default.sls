@@ -72,7 +72,7 @@ omvextrasbaserepo:
 
 {% endif %}
 
-{% if (arch == 'amd64' or arch == 'i386') and teamviewer | to_bool %}
+{% if (arch == 'amd64' or arch == 'i386') and not teamviewer | to_bool %}
 
 "deb http://linux.teamviewer.com/deb stable main":
   pkgrepo.managed:
