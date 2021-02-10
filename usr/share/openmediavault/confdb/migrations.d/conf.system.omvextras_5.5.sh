@@ -1,7 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 #
 # @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
+# @author    Volker Theile <volker.theile@openmediavault.org>
 # @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
+# @copyright Copyright (c) 2009-2013 Volker Theile
 # @copyright Copyright (c) 2013-2021 OpenMediaVault Plugin Developers
 #
 # This program is free software: you can redistribute it and/or modify
@@ -17,34 +19,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-set -e
-
-. /usr/share/openmediavault/scripts/helper-functions
-
-case "$1" in
-    configure)
-        # Activate package triggers.
-        dpkg-trigger update-fixperms
-        dpkg-trigger update-locale
-
-        # Initialize and migrate configuration database.
-        echo "Updating configuration database ..."
-        omv-confdbadm create "conf.system.omvextras"
-        if [ -n "$2" ]; then
-            omv-confdbadm migrate "conf.system.omvextras" "${2}"
-        fi
-
-        # create repo files
-        omv-salt deploy run omvextras || :
-    ;;
-
-    abort-upgrade|abort-remove|abort-deconfigure)
-    ;;
-
-    *)
-        echo "postinst called with unknown argument \`$1'" >&2
-        exit 1
-    ;;
-esac
+rm -f /etc/apt/sources.list.d/omvextras.list
 
 exit 0

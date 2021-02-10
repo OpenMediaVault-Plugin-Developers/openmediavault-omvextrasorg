@@ -26,33 +26,33 @@
 omvextrasbaserepo:
   pkgrepo.managed:
     - humanname: omv-extras.org {{ dist }}
-    - name: "deb https://openmediavault-plugin-developers.github.io/packages/main/{{ dist }} ./"
+    - name: "deb https://openmediavault-plugin-developers.github.io/packages/debian {{ dist }} main"
     - file: /etc/apt/sources.list.d/omvextras.list
     - gpgcheck: 1
     - key_url: https://openmediavault-plugin-developers.github.io/packages/omvextras2026.asc
 
 {%- if config.testing | to_bool %}
 
-"deb https://openmediavault-plugin-developers.github.io/packages/main/{{ dist }}-testing ./":
+"deb https://openmediavault-plugin-developers.github.io/packages/debian {{ dist }}-testing main":
   pkgrepo.managed:
     - file: /etc/apt/sources.list.d/omvextras.list
 
 {% else %}
 
-"deb https://openmediavault-plugin-developers.github.io/packages/main/{{ dist }}-testing ./":
+"deb https://openmediavault-plugin-developers.github.io/packages/debian {{ dist }}-testing main":
   pkgrepo.absent
 
 {% endif %}
 
 {%- if config.extras | to_bool %}
 
-"deb https://openmediavault-plugin-developers.github.io/packages/main/{{ dist }}-extras ./":
+"deb https://openmediavault-plugin-developers.github.io/packages/debian {{ dist }}-extras main":
   pkgrepo.managed:
     - file: /etc/apt/sources.list.d/omvextras.list
 
 {% else %}
 
-"deb https://openmediavault-plugin-developers.github.io/packages/main/{{ dist }}-extras ./":
+"deb https://openmediavault-plugin-developers.github.io/packages/debian {{ dist }}-extras main":
   pkgrepo.absent
 
 {% endif %}
