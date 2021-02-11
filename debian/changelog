@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.5.1) UNRELEASED; urgency=medium
+
+  * Turn color off on salt run during install
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 11 Feb 2021 05:49:29 -0600
+
 openmediavault-omvextrasorg (5.5) stable; urgency=low
 
   * Move repos to github

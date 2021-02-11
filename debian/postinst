@@ -35,7 +35,7 @@ case "$1" in
         fi
 
         # create repo files
-        omv-salt deploy run omvextras || :
+        omv-salt deploy run --no-color omvextras || :
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
