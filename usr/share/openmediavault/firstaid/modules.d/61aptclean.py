@@ -2,7 +2,7 @@
 #
 # @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
 # @author    Volker Theile <volker.theile@openmediavault.org>
-# @copyright Copyright (c) 2009-2020 Volker Theile
+# @copyright Copyright (c) 2009-2021 Volker Theile
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -19,7 +19,7 @@
 import sys
 import openmediavault
 import openmediavault.firstaid
-import openmediavault.subprocess
+import openmediavault.procutils
 
 class Module(openmediavault.firstaid.IModule):
     @property
@@ -27,7 +27,7 @@ class Module(openmediavault.firstaid.IModule):
         return "Clean apt"
 
     def execute(self):
-        openmediavault.subprocess.check_call("omv-aptclean")
+        openmediavault.procutils.check_call("omv-aptclean")
         return 0
 
 if __name__ == "__main__":
