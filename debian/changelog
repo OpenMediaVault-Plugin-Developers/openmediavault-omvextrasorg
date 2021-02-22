@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (5.5.3) stable; urgency=low
+
+  * Use wget instead of curl since wget is an OMV dependency
+  * Use docker-compose 1.28.4
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 22 Feb 2021 16:18:17 -0600
+
 openmediavault-omvextrasorg (5.5.2) stable; urgency=low
 
   * Rename omv python module

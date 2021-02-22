@@ -15,8 +15,8 @@ declare -i download=0
 daemonJson="/etc/docker/daemon.json"
 dockerBin="/usr/bin/docker"
 dockerCompose="/usr/local/bin/docker-compose"
-dockerComposeVersion="1.28.0"
-dockerComposeBuild="ls28"
+dockerComposeVersion="1.28.4"
+dockerComposeBuild="ls31"
 dockerComposeUrl="https://github.com/docker/compose/releases/download/${dockerComposeVersion}/docker-compose-Linux-x86_64"
 dockerComposeUrlLs="https://github.com/linuxserver/docker-docker-compose/releases/download/${dockerComposeVersion}-${dockerComposeBuild}/docker-compose-"
 dockerOverrideDir="/etc/systemd/system/docker.service.d"
@@ -370,7 +370,7 @@ installDocker()
           url="${dockerComposeUrlLs}${arch}"
           ;;
       esac
-      curl -L "${url}" -o "${dockerCompose}"
+      wget --tries=3 --output-document="${dockerCompose}" "${url}"
       chmod +x "${dockerCompose}"
     fi
   fi
