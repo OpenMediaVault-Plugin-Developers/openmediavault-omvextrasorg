@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
+# dsafsadf <heneral@gmail.com>, 2021
 # zubr139, 2013,2016
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-09 09:41-0600\n"
-"PO-Revision-Date: 2020-10-19 15:32+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"POT-Creation-Date: 2021-03-10 16:01-0600\n"
+"PO-Revision-Date: 2021-03-08 11:24+0000\n"
+"Last-Translator: dsafsadf <heneral@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,13 +20,13 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 msgid "Advanced"
-msgstr ""
+msgstr "Розширений"
 
 msgid "Agent port"
 msgstr ""
 
 msgid "Backports"
-msgstr ""
+msgstr "Задні порти"
 
 msgid "Cleaning Apt Files and Lists ..."
 msgstr ""
@@ -37,7 +38,7 @@ msgid "Cockpit"
 msgstr ""
 
 msgid "Cockpit listens on port 9090 for the web interface."
-msgstr ""
+msgstr "Cockpit слухає через порт 9090 веб-інтерфейс."
 
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
@@ -45,10 +46,10 @@ msgid ""
 msgstr ""
 
 msgid "Default password: "
-msgstr ""
+msgstr "Типовий пароль:"
 
 msgid "Default username: "
-msgstr ""
+msgstr "Типове ім'я користувача:"
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr ""
@@ -57,10 +58,10 @@ msgid "Docker"
 msgstr ""
 
 msgid "Docker Storage"
-msgstr ""
+msgstr "Зберігання Docker"
 
 msgid "Done."
-msgstr ""
+msgstr "Готово."
 
 msgid ""
 "Downloads Clonezilla ISO and configures grub bootloader to allow booting "
@@ -78,13 +79,13 @@ msgid ""
 msgstr ""
 
 msgid "Extras repo"
-msgstr ""
+msgstr "Додаткове repo"
 
 msgid "GParted Live"
 msgstr ""
 
 msgid "General settings"
-msgstr ""
+msgstr "Загальні налаштування"
 
 msgid "Hold Current Kernel"
 msgstr ""
@@ -140,7 +141,7 @@ msgstr ""
 msgid ""
 "Install Portainer will install the docker-ce package if not already "
 "installed."
-msgstr ""
+msgstr "Install Portainer встановить пакет docker-ce, якщо він ще не встановлений."
 
 msgid ""
 "Install Portainer will update Portainer to the latest image if the image "
@@ -158,7 +159,7 @@ msgstr ""
 
 msgid ""
 "Install Yacht will install the docker-ce package if not already installed."
-msgstr ""
+msgstr "Install Yacht встановить пакет docker-ce, якщо він ще не встановлений."
 
 msgid ""
 "Install Yacht will update Yacht to the latest image if the image already "
@@ -166,13 +167,13 @@ msgid ""
 msgstr ""
 
 msgid "Installed"
-msgstr ""
+msgstr "Встановлено"
 
 msgid "Installed Kernels"
-msgstr ""
+msgstr "Встановлені ядра"
 
 msgid "Installing"
-msgstr ""
+msgstr "Встановлення"
 
 msgid "Installing Proxmox kernel ..."
 msgstr ""
@@ -181,13 +182,13 @@ msgid "Kernel"
 msgstr "Ядро"
 
 msgid "Kernels"
-msgstr ""
+msgstr "Ядра"
 
 msgid "More info"
-msgstr ""
+msgstr "Більше інформації"
 
 msgid "Not installed"
-msgstr ""
+msgstr "Не встановлено"
 
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr ""
@@ -196,18 +197,18 @@ msgid "OMV-Extras"
 msgstr ""
 
 msgid "Open Portainer"
-msgstr ""
+msgstr "Відкрити Portainer"
 
 msgid "Open Yacht"
-msgstr ""
+msgstr "Відкрити Yacht"
 
 msgid "Open web"
-msgstr ""
+msgstr "Відкрити web"
 
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
 "/etc/docker/daemon.json."
-msgstr ""
+msgstr "Шлях до сховища зображень та контейнерів Docker. Залиште порожнім, щоб використовувати користувацький /etc/docker/daemon.json."
 
 msgid "Portainer"
 msgstr ""
@@ -270,7 +271,7 @@ msgid "Removing non-Proxmox kernels ..."
 msgstr ""
 
 msgid "Restart"
-msgstr ""
+msgstr "Перезапустити"
 
 msgid "Restarting docker ..."
 msgstr ""
@@ -327,16 +328,16 @@ msgid ""
 msgstr ""
 
 msgid "Settings"
-msgstr ""
+msgstr "Налаштування"
 
 msgid "Spaced used by ISO in /boot directory on OS drive"
 msgstr ""
 
 msgid "Status"
-msgstr ""
+msgstr "Статус"
 
 msgid "Testing repo"
-msgstr ""
+msgstr "Тестове repo"
 
 msgid "This will enable the Proxmox 6.x repo."
 msgstr ""
@@ -360,7 +361,7 @@ msgid "Unholding current kernel ..."
 msgstr ""
 
 msgid "Updates"
-msgstr ""
+msgstr "Оновлення"
 
 msgid "Use legacy"
 msgstr ""
@@ -369,7 +370,7 @@ msgid "Use nft"
 msgstr ""
 
 msgid "Version"
-msgstr ""
+msgstr "Версія"
 
 msgid "Web port"
 msgstr ""
@@ -408,7 +409,7 @@ msgid "omv-update"
 msgstr ""
 
 msgid "update"
-msgstr ""
+msgstr "обновлення"
 
 msgid "upgrade"
-msgstr ""
+msgstr "оновлення"

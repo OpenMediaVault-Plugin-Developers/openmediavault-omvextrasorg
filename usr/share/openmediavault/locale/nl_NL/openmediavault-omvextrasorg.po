@@ -4,14 +4,14 @@
 # 
 # Translators:
 # okpail <okpail@gmail.com>, 2014-2015
-# Rudy ten Kate, 2020
+# Varkentjes, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-09 09:41-0600\n"
+"POT-Creation-Date: 2021-03-10 16:01-0600\n"
 "PO-Revision-Date: 2020-11-21 17:04+0000\n"
-"Last-Translator: Rudy ten Kate\n"
+"Last-Translator: Varkentjes\n"
 "Language-Team: Dutch (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
