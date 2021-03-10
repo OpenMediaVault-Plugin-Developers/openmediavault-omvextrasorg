@@ -1,3 +1,11 @@
+openmediavault-omvextrasorg (5.5.4) stable; urgency=low
+
+  * Check sha256 checksum of iso downloads
+  * Update SystemRescue to 8.00
+  * Update GParted Live to 1.2.0-1
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 10 Mar 2021 15:22:19 -0600
+
 openmediavault-omvextrasorg (5.5.3) stable; urgency=low
 
   * Use wget instead of curl since wget is an OMV dependency

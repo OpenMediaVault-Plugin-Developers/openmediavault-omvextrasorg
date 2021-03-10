@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# shellcheck disable=SC2086,SC2181
+
 #
 # @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
 # @author    Volker Theile <volker.theile@openmediavault.org>
@@ -35,18 +38,37 @@ fi
 ISO_PATH="/boot"
 GRUB_CLONEZILLA="/etc/grub.d/42_clonezilla"
 CLONEZILLA_VERSION="2.6.0-37"
-CLONEZILLA_ISO="clonezilla-live-${CLONEZILLA_VERSION}-i686-pae.iso"
+CLONEZILLA_FILE="clonezilla-live-${CLONEZILLA_VERSION}-i686-pae.iso"
+CLONEZILLA_ISO="${ISO_PATH}/${CLONEZILLA_FILE}"
+CLONEZILLA_URL="https://downloads.sourceforge.net/project/clonezilla/clonezilla_live_stable/${CLONEZILLA_VERSION}/${CLONEZILLA_FILE}"
+CLONEZILLA_CHECKSUM="8c2d788b4ea0b8db015227e919bc989dabc10ed89f5f671b90d5b764eab13a37"
 
 GRUB_SYSRESCCD="/etc/grub.d/42_sysresccd"
-SYSRESCCD_VERSION="7.01"
-SYSRESCCD_ISO="systemrescue-${SYSRESCCD_VERSION}-${isoArch}.iso"
+SYSRESCCD_VERSION="8.00"
+SYSRESCCD_FILE="systemrescue-${SYSRESCCD_VERSION}-${isoArch}.iso"
+SYSRESCCD_ISO="${ISO_PATH}/${SYSRESCCD_FILE}"
+SYSRESCCD_URL="https://sourceforge.net/projects/systemrescuecd/files/sysresccd-x86/${SYSRESCCD_VERSION}/${SYSRESCCD_FILE}/download"
+SYSRESCCD_CHECKSUM_amd64="f1c476166bfd44bbe0e1dea82ee9bd9956770bad7a73dba49e2a069222de148b"
+SYSRESCCD_CHECKSUM_i686="64d694d3fc162d2cd7dc4efffb3a84154ac7b74cddd84b9ecd6537ce52495bb1"
 
 GRUB_GPARTEDLIVE="/etc/grub.d/42_gpartedlive"
-GPARTEDLIVE_VERSION="1.1.0-6"
-GPARTEDLIVE_ISO="gparted-live-${GPARTEDLIVE_VERSION}-${isoArch}.iso"
+GPARTEDLIVE_VERSION="1.2.0-1"
+GPARTEDLIVE_FILE="gparted-live-${GPARTEDLIVE_VERSION}-${isoArch}.iso"
+GPARTEDLIVE_ISO="${ISO_PATH}/${GPARTEDLIVE_FILE}"
+GPARTEDLIVE_URL="https://downloads.sourceforge.net/gparted/${GPARTEDLIVE_FILE}"
+GPARTEDLIVE_CHECKSUM_amd64="0dcf1b76556875d5fde5b79410d397a2883c4985ea3dd0c9e0532ebe5a772cda"
+GPARTEDLIVE_CHECKSUM_i686="674fbd37c0e2ec5b3f3b6d48fc1d1eca395f0bd8fdb14841a3b77af4085f400c"
 
 GRUB="/etc/default/grub"
 GRUB_CFG="/boot/grub/grub.cfg"
+
+if [[ "${arch}" == "amd64" ]]; then
+  GPARTEDLIVE_CHECKSUM="${GPARTEDLIVE_CHECKSUM_amd64}"
+  SYSRESCCD_CHECKSUM="${SYSRESCCD_CHECKSUM_amd64}"
+else
+  GPARTEDLIVE_CHECKSUM="${GPARTEDLIVE_CHECKSUM_i686}"
+  SYSRESCCD_CHECKSUM="${SYSRESCCD_CHECKSUM_i686}"
+fi
 
 checkDNS()
 {
@@ -66,9 +88,16 @@ installclonezilla()
     checkDNS
 
     echo "Installing Clonezilla..."
-    if [ ! -f "${ISO_PATH}/${CLONEZILLA_ISO}" ]; then
+    if [ ! -f "${CLONEZILLA_ISO}" ]; then
         rm -f ${ISO_PATH}/clonezilla*.iso
-        wget "https://downloads.sourceforge.net/project/clonezilla/clonezilla_live_stable/${CLONEZILLA_VERSION}/${CLONEZILLA_ISO}" -O ${ISO_PATH}/${CLONEZILLA_ISO} 2>&1
+        wget "${CLONEZILLA_URL}" -O ${CLONEZILLA_ISO} 2>&1
+        echo "Checking sha256sum..."
+        echo "${CLONEZILLA_CHECKSUM} ${CLONEZILLA_ISO}" | sha256sum --check
+        if [ $? -gt 0 ]; then
+            echo "Checksum failed.  Deleting Clonezilla file and exiting..."
+            rm -f ${CLONEZILLA_ISO}
+            exit 10
+        fi
     else
         echo "${CLONEZILLA_ISO} already exists.  Skipping download."
     fi
@@ -77,7 +106,7 @@ installclonezilla()
 #!/bin/sh
 exec tail -n +3 \$0
 menuentry 'Clonezilla Live' {
-  set isofile="${ISO_PATH}/${CLONEZILLA_ISO}"
+  set isofile="${CLONEZILLA_ISO}"
   loopback loop \$isofile
   linux (loop)/live/vmlinuz boot=live live-config noswap edd=on nomodeset ocs_prerun="dhclient" ocs_live_run="ocs-live-general" ocs_live_extra_param="" keyboard-layouts=NONE ocs_live_batch="no" locales="en_US.UTF-8" ocs_daemonon="ssh" vga=788 nosplash toram=filesystem.squashfs findiso=\$isofile
   initrd (loop)/live/initrd.img
@@ -92,9 +121,16 @@ installsysresccd()
 {
     checkDNS
 
-    if [ ! -f "${ISO_PATH}/${SYSRESCCD_ISO}" ]; then
+    if [ ! -f "${SYSRESCCD_ISO}" ]; then
         rm -f ${ISO_PATH}/systemrescue*.iso
-        wget "https://osdn.net/projects/systemrescuecd/storage/releases/${SYSRESCCD_VERSION}/${SYSRESCCD_ISO}" -O ${ISO_PATH}/${SYSRESCCD_ISO} 2>&1
+        wget "${SYSRESCCD_URL}" -O ${SYSRESCCD_ISO} 2>&1
+        echo "Checking sha256sum..."
+        echo "${SYSRESCCD_CHECKSUM} ${SYSRESCCD_ISO}" | sha256sum --check
+        if [ $? -gt 0 ]; then
+            echo "Checksum failed.  Deleting SystemRescue file and exiting..."
+            rm -f ${SYSRESCCD_ISO}
+            exit 11
+        fi
     else
         echo "${SYSRESCCD_ISO} already exists.  Skipping download."
     fi
@@ -105,7 +141,7 @@ exec tail -n +3 \$0
 menuentry 'SystemRescue' {
   probe -u \$root --set=rootuuid
   set imgdevpath="/dev/disk/by-uuid/\$rootuuid"
-  set isofile="${ISO_PATH}/${SYSRESCCD_ISO}"
+  set isofile="${SYSRESCCD_ISO}"
   loopback loop \$isofile
   linux (loop)/sysresccd/boot/x86_64/vmlinuz rootpass=openmediavault nomodeset nofirewall archisobasedir=sysresccd copytoram setkmap=us img_dev=\$imgdevpath img_loop=\$isofile earlymodules=loop
   initrd (loop)/sysresccd/boot/intel_ucode.img (loop)/sysresccd/boot/amd_ucode.img (loop)/sysresccd/boot/x86_64/sysresccd.img
@@ -119,9 +155,16 @@ installgpartedlive()
 {
     checkDNS
 
-    if [ ! -f "${ISO_PATH}/${GPARTEDLIVE_ISO}" ]; then
+    if [ ! -f "${GPARTEDLIVE_ISO}" ]; then
         rm -f ${ISO_PATH}/gparted-live*.iso
-        wget "https://downloads.sourceforge.net/gparted/${GPARTEDLIVE_ISO}" -O ${ISO_PATH}/${GPARTEDLIVE_ISO} 2>&1
+        wget "${GPARTEDLIVE_URL}" -O ${GPARTEDLIVE_ISO} 2>&1
+        echo "Checking sha256sum..."
+        echo "${GPARTEDLIVE_CHECKSUM} ${GPARTEDLIVE_ISO}" | sha256sum --check
+        if [ $? -gt 0 ]; then
+            echo "Checksum failed.  Deleting GParted Live file and exiting..."
+            rm -f ${GPARTEDLIVE_ISO}
+            exit 12
+        fi
     else
         echo "${GPARTEDLIVE_ISO} already exists.  Skipping download."
     fi
@@ -130,7 +173,7 @@ installgpartedlive()
 #!/bin/sh
 exec tail -n +3 \$0
 menuentry 'GParted Live' {
-  set isofile="${ISO_PATH}/${GPARTEDLIVE_ISO}"
+  set isofile="${GPARTEDLIVE_ISO}"
   loopback loop \$isofile
   linux (loop)/live/vmlinuz boot='live' union='overlay' username='user' config components noswap noeject toram='filesystem.squashfs' ip='' nosplash findiso=\$isofile
   initrd (loop)/live/initrd.img
@@ -143,7 +186,7 @@ EOF
 
 rebootclonezilla()
 {
-    if [ ! -f "${ISO_PATH}/${CLONEZILLA_ISO}" ]; then
+    if [ ! -f "${CLONEZILLA_ISO}" ]; then
         echo "Please click on Install button."
     else
         DEFAULT=$(awk -F "=" '$1 == "GRUB_DEFAULT" { print $2 }' ${GRUB})
@@ -167,7 +210,7 @@ rebootclonezilla()
 
 rebootsysresccd()
 {
-    if [ ! -f "${ISO_PATH}/${SYSRESCCD_ISO}" ]; then
+    if [ ! -f "${SYSRESCCD_ISO}" ]; then
         echo "Please click on Install button."
     else
         DEFAULT=$(awk -F "=" '$1 == "GRUB_DEFAULT" { print $2 }' ${GRUB})
@@ -191,7 +234,7 @@ rebootsysresccd()
 
 rebootgpartedlive()
 {
-    if [ ! -f "${ISO_PATH}/${GPARTEDLIVE_ISO}" ]; then
+    if [ ! -f "${GPARTEDLIVE_ISO}" ]; then
         echo "Please click on Install button."
     else
         DEFAULT=$(awk -F "=" '$1 == "GRUB_DEFAULT" { print $2 }' ${GRUB})
