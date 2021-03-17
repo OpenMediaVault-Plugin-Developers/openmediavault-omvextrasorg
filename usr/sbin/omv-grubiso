@@ -44,7 +44,7 @@ CLONEZILLA_URL="https://downloads.sourceforge.net/project/clonezilla/clonezilla_
 CLONEZILLA_CHECKSUM="8c2d788b4ea0b8db015227e919bc989dabc10ed89f5f671b90d5b764eab13a37"
 
 GRUB_SYSRESCCD="/etc/grub.d/42_sysresccd"
-SYSRESCCD_VERSION="8.00"
+SYSRESCCD_VERSION="8.01"
 SYSRESCCD_FILE="systemrescue-${SYSRESCCD_VERSION}-${isoArch}.iso"
 SYSRESCCD_ISO="${ISO_PATH}/${SYSRESCCD_FILE}"
 SYSRESCCD_URL="https://sourceforge.net/projects/systemrescuecd/files/sysresccd-x86/${SYSRESCCD_VERSION}/${SYSRESCCD_FILE}/download"

@@ -1,3 +1,11 @@
+openmediavault-omvextrasorg (5.5.5) stable; urgency=low
+
+  * Update SystemRescue to 8.01
+  * Only uninstall cockpit packages if openmediavault-kvm plugin
+    installed
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 17 Mar 2021 17:11:12 -0500
+
 openmediavault-omvextrasorg (5.5.4) stable; urgency=low
 
   * Check sha256 checksum of iso downloads

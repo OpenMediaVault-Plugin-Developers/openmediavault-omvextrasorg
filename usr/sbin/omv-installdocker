@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# shellcheck disable=SC1091,SC2086
+# shellcheck disable=SC1091,SC2086,SC2181
 
+declare -i plugin=0
 declare -i status=0
 declare -l arch=""
 
@@ -116,9 +117,19 @@ removeCockpit()
   setCockpitPackages
   setExports
 
+  if dpkg --list | grep --quiet openmediavault-kvm; then
+    plugin=1
+  fi
+
   # remove cockpit packages
   status=0
   for pkg in ${cockpitPackages}; do
+    if [ ${plugin} -eq 1 ]; then
+      if [[ ! "${pkg}" == cockpit* ]]; then
+        echo "Skipping ${pkg} because openmediavault-kvm plugin is installed."
+        continue
+      fi
+    fi
     if dpkg --list | grep --quiet "${pkg}"; then
       status=1
       if apt-get --yes --auto-remove purge ${pkg}; then
