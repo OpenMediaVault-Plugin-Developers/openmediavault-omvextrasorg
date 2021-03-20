@@ -22,7 +22,7 @@
 {% set docker = salt['pillar.get']('default:OMV_DISABLE_DOCKER', False) %}
 {% set teamviewer = salt['pillar.get']('default:OMV_DISABLE_TEAMVIEWER', False) %}
 {% set dist = pillar['productinfo']['distribution'] %}
-{% set repo_url = salt['pillar.get']('default:OMVEXTRAS_APT_REPOSITORY_URL', 'https://openmediavault-plugin-developers.github.io/packages/debian') -%}
+{% set repo_url = salt['pillar.get']('default:OMV_EXTRAS_APT_REPOSITORY_URL', 'https://openmediavault-plugin-developers.github.io/packages/debian') -%}
 
 omvextrasbaserepo:
   pkgrepo.managed:

@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.5.7) stable; urgency=low
+
+  * Fix repo environment variable name
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 20 Mar 2021 18:34:16 -0500
+
 openmediavault-omvextrasorg (5.5.6) stable; urgency=low
 
   * Add environment variable for repo url
