@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.5.6) UNRELEASED; urgency=medium
+
+  * Add environment variable for repo url
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 20 Mar 2021 18:04:38 -0500
+
 openmediavault-omvextrasorg (5.5.5) stable; urgency=low
 
   * Update SystemRescue to 8.01

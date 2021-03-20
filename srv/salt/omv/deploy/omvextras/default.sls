@@ -22,37 +22,38 @@
 {% set docker = salt['pillar.get']('default:OMV_DISABLE_DOCKER', False) %}
 {% set teamviewer = salt['pillar.get']('default:OMV_DISABLE_TEAMVIEWER', False) %}
 {% set dist = pillar['productinfo']['distribution'] %}
+{% set repo_url = salt['pillar.get']('default:OMVEXTRAS_APT_REPOSITORY_URL', 'https://openmediavault-plugin-developers.github.io/packages/debian') -%}
 
 omvextrasbaserepo:
   pkgrepo.managed:
     - humanname: omv-extras.org {{ dist }}
-    - name: "deb https://openmediavault-plugin-developers.github.io/packages/debian {{ dist }} main"
+    - name: "deb {{ repo_url }} {{ dist }} main"
     - file: /etc/apt/sources.list.d/omvextras.list
     - gpgcheck: 1
-    - key_url: https://openmediavault-plugin-developers.github.io/packages/omvextras2026.asc
+    - key_url: {{ repo_url }}/omvextras2026.asc
 
 {%- if config.testing | to_bool %}
 
-"deb https://openmediavault-plugin-developers.github.io/packages/debian {{ dist }}-testing main":
+"deb {{ repo_url }} {{ dist }}-testing main":
   pkgrepo.managed:
     - file: /etc/apt/sources.list.d/omvextras.list
 
 {% else %}
 
-"deb https://openmediavault-plugin-developers.github.io/packages/debian {{ dist }}-testing main":
+"deb {{ repo_url }} {{ dist }}-testing main":
   pkgrepo.absent
 
 {% endif %}
 
 {%- if config.extras | to_bool %}
 
-"deb https://openmediavault-plugin-developers.github.io/packages/debian {{ dist }}-extras main":
+"deb {{ repo_url }} {{ dist }}-extras main":
   pkgrepo.managed:
     - file: /etc/apt/sources.list.d/omvextras.list
 
 {% else %}
 
-"deb https://openmediavault-plugin-developers.github.io/packages/debian {{ dist }}-extras main":
+"deb {{ repo_url }} {{ dist }}-extras main":
   pkgrepo.absent
 
 {% endif %}
