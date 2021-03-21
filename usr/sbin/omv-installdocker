@@ -2,12 +2,18 @@
 
 # shellcheck disable=SC1091,SC2086,SC2181
 
+. /etc/default/openmediavault
+
 declare -i plugin=0
 declare -i status=0
 declare -l arch=""
 
 # cockpit
 declare cockpitPackages=""
+
+# docker environment variables
+OMV_DOCKER_COMPOSE_URL=${OMV_DOCKER_COMPOSE_URL:-"https://github.com/docker/compose/releases/download"}
+OMV_DOCKER_COMPOSE_LS_URL=${OMV_DOCKER_COMPOSE_LS_URL:-"https://github.com/linuxserver/docker-docker-compose/releases/download"}
 
 # docker
 declare dockerPackages=""
@@ -18,8 +24,8 @@ dockerBin="/usr/bin/docker"
 dockerCompose="/usr/local/bin/docker-compose"
 dockerComposeVersion="1.28.4"
 dockerComposeBuild="ls31"
-dockerComposeUrl="https://github.com/docker/compose/releases/download/${dockerComposeVersion}/docker-compose-Linux-x86_64"
-dockerComposeUrlLs="https://github.com/linuxserver/docker-docker-compose/releases/download/${dockerComposeVersion}-${dockerComposeBuild}/docker-compose-"
+dockerComposeUrl="${OMV_DOCKER_COMPOSE_URL}/${dockerComposeVersion}/docker-compose-Linux-x86_64"
+dockerComposeUrlLs="${OMV_DOCKER_COMPOSE_LS_URL}/${dockerComposeVersion}-${dockerComposeBuild}/docker-compose-"
 dockerOverrideDir="/etc/systemd/system/docker.service.d"
 dockerOverrideFile="${dockerOverrideDir}/waitAllMounts.conf"
 omvextrasList="/etc/apt/sources.list.d/omvextras.list"

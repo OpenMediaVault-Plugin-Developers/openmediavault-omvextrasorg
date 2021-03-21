@@ -23,6 +23,10 @@
 {% set teamviewer = salt['pillar.get']('default:OMV_DISABLE_TEAMVIEWER', False) %}
 {% set dist = pillar['productinfo']['distribution'] %}
 {% set repo_url = salt['pillar.get']('default:OMV_EXTRAS_APT_REPOSITORY_URL', 'https://openmediavault-plugin-developers.github.io/packages/debian') -%}
+{% set docker_url = salt['pillar.get']('default:OMV_DOCKER_APT_REPOSITORY_URL', 'https://download.docker.com/linux/debian') -%}
+{% set docker_key = salt['pillar.get']('default:OMV_DOCKER_KEY_URL', 'https://download.docker.com/linux/ubuntu/gpg') -%}
+{% set teamviewer_url = salt['pillar.get']('default:OMV_TEAMVIEWER_APT_REPOSITORY_URL', 'http://linux.teamviewer.com/deb') -%}
+{% set teamviewer_key = salt['pillar.get']('default:OMV_TEAMVIEWER_KEY_URL', 'https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc') -%}
 
 omvextrasbaserepo:
   pkgrepo.managed:
@@ -60,30 +64,30 @@ omvextrasbaserepo:
 
 {% if not docker | to_bool and not arch == 'i386' %}
 
-"deb [arch={{ arch }}] https://download.docker.com/linux/debian {{ oscodename }} stable":
+"deb [arch={{ arch }}] {{ docker_url }} {{ oscodename }} stable":
   pkgrepo.managed:
     - file: /etc/apt/sources.list.d/omvextras.list
     - gpgcheck: 1
-    - key_url: https://download.docker.com/linux/ubuntu/gpg
+    - key_url: {{ docker_key }}
 
 {% else %}
 
-"deb [arch={{ arch }}] https://download.docker.com/linux/debian {{ oscodename }} stable":
+"deb [arch={{ arch }}] {{ docker_url }} {{ oscodename }} stable":
   pkgrepo.absent
 
 {% endif %}
 
 {% if (arch == 'amd64' or arch == 'i386') and not teamviewer | to_bool %}
 
-"deb http://linux.teamviewer.com/deb stable main":
+"deb {{ teamviewer_url }} stable main":
   pkgrepo.managed:
     - file: /etc/apt/sources.list.d/omvextras.list
     - gpgcheck: 1
-    - key_url: https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc
+    - key_url: {{ teamviewer_key }}
 
 {% else %}
 
-"deb http://linux.teamviewer.com/deb stable main":
+"deb {{ teamviewer_url }} stable main":
   pkgrepo.absent
 
 {% endif %}
