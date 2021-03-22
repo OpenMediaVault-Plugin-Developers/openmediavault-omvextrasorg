@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-10 16:01-0600\n"
-"PO-Revision-Date: 2020-10-19 15:32+0000\n"
+"POT-Creation-Date: 2021-03-22 07:34-0500\n"
+"PO-Revision-Date: 2021-03-22 12:34+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -150,6 +150,9 @@ msgstr "安装 Portainer 将会更新已有 Portainer 镜像到最新版。"
 msgid "Install Proxmox kernel"
 msgstr "安装 Proxmox 内核"
 
+msgid "Install Proxmox test kernel"
+msgstr ""
+
 msgid "Install SystemRescue"
 msgstr ""
 
@@ -176,6 +179,9 @@ msgstr "安装中"
 
 msgid "Installing Proxmox kernel ..."
 msgstr "安装 Proxmox 内核中 ..."
+
+msgid "Installing Proxmox test kernel ..."
+msgstr ""
 
 msgid "Kernel"
 msgstr "内核"
@@ -343,6 +349,9 @@ msgstr "这将启用 Proxmox 6.x 源。"
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "如果 linux-image-*内核处于使用状态删除该内核将失败。"
+
+msgid "This will install the latest 5.11 kernel."
+msgstr ""
 
 msgid "This will install the latest 5.4 kernel."
 msgstr "这将安装最新的 5.4 版内核。"

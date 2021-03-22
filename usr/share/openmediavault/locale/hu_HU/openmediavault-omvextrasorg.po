@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-10 16:01-0600\n"
-"PO-Revision-Date: 2020-10-19 15:32+0000\n"
+"POT-Creation-Date: 2021-03-22 07:34-0500\n"
+"PO-Revision-Date: 2021-03-22 12:34+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -152,6 +152,9 @@ msgstr "A Portainer telepítése frissíteni fogja a Portainer-t a legfrissebb k
 msgid "Install Proxmox kernel"
 msgstr "Proxmox kernel telepítése"
 
+msgid "Install Proxmox test kernel"
+msgstr ""
+
 msgid "Install SystemRescue"
 msgstr ""
 
@@ -178,6 +181,9 @@ msgstr "Telepítés"
 
 msgid "Installing Proxmox kernel ..."
 msgstr "Proxmox kernel telepítése…"
+
+msgid "Installing Proxmox test kernel ..."
+msgstr ""
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -345,6 +351,9 @@ msgstr "A Proxmox 6.x tároló engedélyezése."
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "Meg fog hiúsulni a linux-image-* kernel eltávolítása, ha még aktív."
+
+msgid "This will install the latest 5.11 kernel."
+msgstr ""
 
 msgid "This will install the latest 5.4 kernel."
 msgstr ""

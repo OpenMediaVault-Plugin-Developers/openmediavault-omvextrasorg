@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-10 16:01-0600\n"
-"PO-Revision-Date: 2021-01-19 10:23+0000\n"
-"Last-Translator: Raul Fernandez Garcia <raulfg3@gmail.com>\n"
+"POT-Creation-Date: 2021-03-22 07:34-0500\n"
+"PO-Revision-Date: 2021-03-22 12:34+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -150,6 +150,9 @@ msgstr "Instalar Portainer, actualizará portainer a su ultima versión si la im
 msgid "Install Proxmox kernel"
 msgstr "Instalar Kernel Proxmox"
 
+msgid "Install Proxmox test kernel"
+msgstr ""
+
 msgid "Install SystemRescue"
 msgstr "Instalar SystemRescue"
 
@@ -176,6 +179,9 @@ msgstr "Instalando"
 
 msgid "Installing Proxmox kernel ..."
 msgstr "Instalado Kernel Proxmox ..."
+
+msgid "Installing Proxmox test kernel ..."
+msgstr ""
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -343,6 +349,9 @@ msgstr "Eso habilita el repositorio 6.x de proxmox."
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "Fallará al eliminar el kernel si aún está activo."
+
+msgid "This will install the latest 5.11 kernel."
+msgstr ""
 
 msgid "This will install the latest 5.4 kernel."
 msgstr "Instalar el último kernel 5.4"

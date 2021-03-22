@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-10 16:01-0600\n"
-"PO-Revision-Date: 2020-10-19 15:32+0000\n"
+"POT-Creation-Date: 2021-03-22 07:34-0500\n"
+"PO-Revision-Date: 2021-03-22 12:34+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -153,6 +153,9 @@ msgstr "Установка Portainer обновит Portainer до послед�
 msgid "Install Proxmox kernel"
 msgstr "Установить ядро Proxmox"
 
+msgid "Install Proxmox test kernel"
+msgstr ""
+
 msgid "Install SystemRescue"
 msgstr ""
 
@@ -179,6 +182,9 @@ msgstr "Установка"
 
 msgid "Installing Proxmox kernel ..."
 msgstr "Установка ядра Proxmox ..."
+
+msgid "Installing Proxmox test kernel ..."
+msgstr ""
 
 msgid "Kernel"
 msgstr "Ядро"
@@ -346,6 +352,9 @@ msgstr "Включит репо Proxmox 6.x."
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "Не удалит ядро linux-image- *, если оно все еще активно."
+
+msgid "This will install the latest 5.11 kernel."
+msgstr ""
 
 msgid "This will install the latest 5.4 kernel."
 msgstr ""

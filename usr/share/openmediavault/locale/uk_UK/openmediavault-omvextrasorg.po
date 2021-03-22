@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-10 16:01-0600\n"
-"PO-Revision-Date: 2021-03-08 11:24+0000\n"
-"Last-Translator: dsafsadf <heneral@gmail.com>\n"
+"POT-Creation-Date: 2021-03-22 07:34-0500\n"
+"PO-Revision-Date: 2021-03-22 12:34+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,10 +32,10 @@ msgid "Cleaning Apt Files and Lists ..."
 msgstr ""
 
 msgid "Clonezilla"
-msgstr ""
+msgstr "Clonezilla"
 
 msgid "Cockpit"
-msgstr ""
+msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
 msgstr "Cockpit слухає через порт 9090 веб-інтерфейс."
@@ -55,7 +55,7 @@ msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr ""
 
 msgid "Docker"
-msgstr ""
+msgstr "Docker"
 
 msgid "Docker Storage"
 msgstr "Зберігання Docker"
@@ -111,26 +111,26 @@ msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr ""
 
 msgid "Install"
-msgstr ""
+msgstr "Встановити"
 
 msgid "Install Clonezilla"
-msgstr ""
+msgstr "Встановити Clonezilla"
 
 msgid "Install Clonezilla ISO ..."
-msgstr ""
+msgstr "Встановлення Clonezilla ISO ..."
 
 msgid ""
 "Install Docker will download and place a newer docker-compose in "
 "/usr/local/bin/ on 64 bit x86 systems only."
-msgstr ""
+msgstr "Install Docker завантажить і розмістить новіший компонент docker-compose у /usr/local/bin/ лише у 64-розрядних x86 системах."
 
 msgid ""
 "Install Docker will install the docker-compose package. Location: /usr/bin/ "
 "on all systems."
-msgstr ""
+msgstr "Install Docker встановить пакет docker-compose. Розташований: /usr/bin/ на усіх системах."
 
 msgid "Install Docker will restart the docker service if daemon.json changes."
-msgstr ""
+msgstr "Install Docker перезапустить службу docker, якщо daemon.json зміниться."
 
 msgid "Install GParted Live"
 msgstr ""
@@ -149,6 +149,9 @@ msgid ""
 msgstr ""
 
 msgid "Install Proxmox kernel"
+msgstr ""
+
+msgid "Install Proxmox test kernel"
 msgstr ""
 
 msgid "Install SystemRescue"
@@ -178,6 +181,9 @@ msgstr "Встановлення"
 msgid "Installing Proxmox kernel ..."
 msgstr ""
 
+msgid "Installing Proxmox test kernel ..."
+msgstr ""
+
 msgid "Kernel"
 msgstr "Ядро"
 
@@ -194,7 +200,7 @@ msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr ""
 
 msgid "OMV-Extras"
-msgstr ""
+msgstr "OMV-Extras"
 
 msgid "Open Portainer"
 msgstr "Відкрити Portainer"
@@ -211,7 +217,7 @@ msgid ""
 msgstr "Шлях до сховища зображень та контейнерів Docker. Залиште порожнім, щоб використовувати користувацький /etc/docker/daemon.json."
 
 msgid "Portainer"
-msgstr ""
+msgstr "Portainer"
 
 msgid ""
 "Portainer will listen on port 9000 for the web interface and 8000 for the "
@@ -222,7 +228,7 @@ msgid "Proxmox"
 msgstr ""
 
 msgid "Reboot to Clonezilla ..."
-msgstr ""
+msgstr "Перезапуск Clonezilla ..."
 
 msgid "Reboot to Clonezilla Once"
 msgstr ""
@@ -243,7 +249,7 @@ msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr ""
 
 msgid "Remove"
-msgstr ""
+msgstr "Видалити"
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
 msgstr ""
@@ -265,7 +271,7 @@ msgid "Remove non-Proxmox kernels and headers"
 msgstr ""
 
 msgid "Removing"
-msgstr ""
+msgstr "Видалення"
 
 msgid "Removing non-Proxmox kernels ..."
 msgstr ""
@@ -345,6 +351,9 @@ msgstr ""
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr ""
 
+msgid "This will install the latest 5.11 kernel."
+msgstr ""
+
 msgid "This will install the latest 5.4 kernel."
 msgstr ""
 
@@ -373,7 +382,7 @@ msgid "Version"
 msgstr "Версія"
 
 msgid "Web port"
-msgstr ""
+msgstr "Web порт"
 
 msgid "Web port and agent port cannot be the same."
 msgstr ""
@@ -388,7 +397,7 @@ msgid ""
 msgstr ""
 
 msgid "Yacht will listen on port 8001 for the web interface unless changed."
-msgstr ""
+msgstr "Yacht буде слухати веб-інтерфейс через порт 8001, якщо не змінити."
 
 msgid "and not running"
 msgstr ""

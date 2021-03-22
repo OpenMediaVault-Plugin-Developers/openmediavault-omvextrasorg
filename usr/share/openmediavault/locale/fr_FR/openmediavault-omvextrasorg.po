@@ -4,16 +4,16 @@
 # 
 # Translators:
 # Axel Cantenys, 2017-2018,2021
-# ETIENNE VICTORIA, 2020
+# Etienne V, 2020
 # RC, 2020
 # Zacharie ARNAISE <spacebrain.damage@gmail.com>, 2013,2015
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-10 16:01-0600\n"
-"PO-Revision-Date: 2021-02-27 18:12+0000\n"
-"Last-Translator: Axel Cantenys\n"
+"POT-Creation-Date: 2021-03-22 07:34-0500\n"
+"PO-Revision-Date: 2021-03-22 12:34+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -153,6 +153,9 @@ msgstr "Installer Portainer va mettre à jour Portainer vers la dernière image 
 msgid "Install Proxmox kernel"
 msgstr "Installer le noyau Proxmox"
 
+msgid "Install Proxmox test kernel"
+msgstr ""
+
 msgid "Install SystemRescue"
 msgstr "Installer SystemRescue"
 
@@ -179,6 +182,9 @@ msgstr "Installation en cours"
 
 msgid "Installing Proxmox kernel ..."
 msgstr "Installation de Proxmox kernel en cours..."
+
+msgid "Installing Proxmox test kernel ..."
+msgstr ""
 
 msgid "Kernel"
 msgstr "Noyau"
@@ -346,6 +352,9 @@ msgstr "Cela va activer le dépôt Proxmox 6.x."
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "Ceci échouera à supprimer un noyau linux-image- * s'il est toujours actif."
+
+msgid "This will install the latest 5.11 kernel."
+msgstr ""
 
 msgid "This will install the latest 5.4 kernel."
 msgstr "Cela va installer le dernier noyau 5.4."

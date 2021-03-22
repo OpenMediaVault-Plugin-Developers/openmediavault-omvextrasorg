@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-10 16:01-0600\n"
+"POT-Creation-Date: 2021-03-22 07:34-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -131,6 +131,9 @@ msgstr ""
 msgid "Install Proxmox kernel"
 msgstr ""
 
+msgid "Install Proxmox test kernel"
+msgstr ""
+
 msgid "Install SystemRescue"
 msgstr ""
 
@@ -153,6 +156,9 @@ msgid "Installing"
 msgstr ""
 
 msgid "Installing Proxmox kernel ..."
+msgstr ""
+
+msgid "Installing Proxmox test kernel ..."
 msgstr ""
 
 msgid "Kernel"
@@ -303,6 +309,9 @@ msgid "This will enable the Proxmox 6.x repo."
 msgstr ""
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
+msgstr ""
+
+msgid "This will install the latest 5.11 kernel."
 msgstr ""
 
 msgid "This will install the latest 5.4 kernel."
