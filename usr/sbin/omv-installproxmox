@@ -2,12 +2,14 @@
 
 declare -i kernnum=0
 
+. /etc/default/openmediavault
+
 distro="$(lsb_release --codename --short)"
 grubconfig="/boot/grub/grub.cfg";
 grubdefault="/etc/default/grub";
 kernelversion="5.4"
 pverepo="/etc/apt/sources.list.d/pvekernel.list"
-repourl="http://download.proxmox.com/debian"
+repourl=${OMV_PROXMOX_APT_REPOSITORY_URL:-"http://download.proxmox.com/debian"}
 
 # only 64 bit amd/intel supported
 case "$(/usr/bin/arch)" in
