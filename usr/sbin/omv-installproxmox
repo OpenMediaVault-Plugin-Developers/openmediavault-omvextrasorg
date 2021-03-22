@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# shellcheck disable=SC1091,SC2162,SC2181
+
 declare -i kernnum=0
 
 . /etc/default/openmediavault
@@ -7,9 +9,17 @@ declare -i kernnum=0
 distro="$(lsb_release --codename --short)"
 grubconfig="/boot/grub/grub.cfg";
 grubdefault="/etc/default/grub";
-kernelversion="5.4"
 pverepo="/etc/apt/sources.list.d/pvekernel.list"
-repourl=${OMV_PROXMOX_APT_REPOSITORY_URL:-"http://download.proxmox.com/debian"}
+repourl=${OMV_PROXMOX_APT_REPOSITORY_URL:-"http://download.proxmox.com/debian/pve"}
+
+# use test repo if argument of test is passed
+if [[ "${1}" = "installtest" ]]; then
+  kernelversion="5.11"
+  repo="pvetest"
+else
+  kernelversion="5.4"
+  repo="pve-no-subscription"
+fi
 
 # only 64 bit amd/intel supported
 case "$(/usr/bin/arch)" in
@@ -23,14 +33,13 @@ case "$(/usr/bin/arch)" in
 esac
 
 # add repo list file
-echo "deb ${repourl} ${distro} pve-no-subscription" > ${pverepo}
+echo "deb ${repourl} ${distro} ${repo}" > ${pverepo}
 apt-get update
 
 # remove conflicting firmware packages
 for pkg in linux linux-nonfree ti-connectivity amd-graphics cavium siano netronome; do
-  if dpkg -l firmware-${pkg} &>/dev/null; then
-    dpkg --purge firmware-${pkg} 2>/dev/null
-    if [ $? -gt 0 ]; then
+  if dpkg -l firmware-${pkg} > /dev/null; then
+    if ! dpkg --purge firmware-${pkg} 2>/dev/null; then
       echo "Failed to remove firmware-${pkg} package.  Exiting..."
       exit 3
     fi
@@ -53,7 +62,7 @@ awk '$1 == "menuentry" { print $6 }' ${grubconfig} | while read kernel; do
     update-grub
     break
   fi
-  let kernnum++
+  (( kernnum++ ))
 done
 
 echo "Please reboot to use the new kernel."

@@ -119,7 +119,7 @@
 		"properties": {
 			"command": {
 				"type": "string",
-				"enum": [ "install", "remove" ],
+				"enum": [ "install", "installtest", "remove" ],
 				"required": true
 			}
 		}

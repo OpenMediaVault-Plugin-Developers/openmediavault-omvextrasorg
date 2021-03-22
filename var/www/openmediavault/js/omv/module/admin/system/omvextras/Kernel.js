@@ -132,6 +132,19 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
                       "</ul>"
             },{
                 xtype: "button",
+                name: "installProxmoxTest",
+                text: _("Install Proxmox test kernel"),
+                scope: this,
+                handler: Ext.Function.bind(me.onProxmoxButton, me, [ "installtest" ]),
+                margin: "0 0 0 0"
+            },{
+                border: false,
+                html: "<ul>" +
+                        "<li>" + _("This will enable the Proxmox 6.x repo.") + "</li>" +
+                        "<li>" + _("This will install the latest 5.11 kernel.") + "</li>" +
+                      "</ul>"
+            },{
+                xtype: "button",
                 name: "setboot",
                 text: _("Remove non-Proxmox kernels and headers"),
                 scope: this,
@@ -339,9 +352,13 @@ Ext.define("OMV.module.admin.system.omvextras.Kernel", {
     },
 
     onProxmoxButton: function(command) {
-        var title = _("Installing Proxmox kernel ...");
+        var title;
         if (command == "remove") {
             title = _("Removing non-Proxmox kernels ...");
+        } else if (command == "installtest") {
+            title = _("Installing Proxmox test kernel ...");
+        } else {
+            title = _("Installing Proxmox kernel ...");
         }
         var me = this;
         var wnd = Ext.create("OMV.window.Execute", {
