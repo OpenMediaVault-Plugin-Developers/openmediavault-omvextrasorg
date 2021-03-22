@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# shellcheck disable=SC2086,SC2181
+# shellcheck disable=SC1091,SC2086,SC2181
 
 #
 # @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
@@ -24,30 +24,37 @@
 
 set -e
 
+. /etc/default/openmediavault
+
 arch="$(dpkg --print-architecture)"
 
 if [[ "${arch}" == "amd64" ]]; then
   isoArch="amd64"
+  paeArch="amd64"
 elif [[ "${arch}" == "i386" ]]; then
   isoArch="i686"
+  paeArch="i686-pae"
 else
   echo "Unsupported architecture."
   exit 0
 fi
 
+OMV_SOURCEFORGE_URL=${OMV_SOURCEFORGE_URL:-"https://sourceforge.net/projects"}
+
 ISO_PATH="/boot"
 GRUB_CLONEZILLA="/etc/grub.d/42_clonezilla"
 CLONEZILLA_VERSION="2.6.0-37"
-CLONEZILLA_FILE="clonezilla-live-${CLONEZILLA_VERSION}-i686-pae.iso"
+CLONEZILLA_FILE="clonezilla-live-${CLONEZILLA_VERSION}-${paeArch}.iso"
 CLONEZILLA_ISO="${ISO_PATH}/${CLONEZILLA_FILE}"
-CLONEZILLA_URL="https://downloads.sourceforge.net/project/clonezilla/clonezilla_live_stable/${CLONEZILLA_VERSION}/${CLONEZILLA_FILE}"
-CLONEZILLA_CHECKSUM="8c2d788b4ea0b8db015227e919bc989dabc10ed89f5f671b90d5b764eab13a37"
+CLONEZILLA_URL="${OMV_SOURCEFORGE_URL}/clonezilla/files/clonezilla_live_stable/${CLONEZILLA_VERSION}/${CLONEZILLA_FILE}/download"
+CLONEZILLA_CHECKSUM_i686="8c2d788b4ea0b8db015227e919bc989dabc10ed89f5f671b90d5b764eab13a37"
+CLONEZILLA_CHECKSUM_amd64="5550e19d2f795b4063e6dd7aae8e2855c581d3b3264edd3e2c2b71f3a22a08b9"
 
 GRUB_SYSRESCCD="/etc/grub.d/42_sysresccd"
 SYSRESCCD_VERSION="8.01"
 SYSRESCCD_FILE="systemrescue-${SYSRESCCD_VERSION}-${isoArch}.iso"
 SYSRESCCD_ISO="${ISO_PATH}/${SYSRESCCD_FILE}"
-SYSRESCCD_URL="https://sourceforge.net/projects/systemrescuecd/files/sysresccd-x86/${SYSRESCCD_VERSION}/${SYSRESCCD_FILE}/download"
+SYSRESCCD_URL="${OMV_SOURCEFORGE_URL}/systemrescuecd/files/sysresccd-x86/${SYSRESCCD_VERSION}/${SYSRESCCD_FILE}/download"
 SYSRESCCD_CHECKSUM_amd64="f1c476166bfd44bbe0e1dea82ee9bd9956770bad7a73dba49e2a069222de148b"
 SYSRESCCD_CHECKSUM_i686="64d694d3fc162d2cd7dc4efffb3a84154ac7b74cddd84b9ecd6537ce52495bb1"
 
@@ -55,7 +62,7 @@ GRUB_GPARTEDLIVE="/etc/grub.d/42_gpartedlive"
 GPARTEDLIVE_VERSION="1.2.0-1"
 GPARTEDLIVE_FILE="gparted-live-${GPARTEDLIVE_VERSION}-${isoArch}.iso"
 GPARTEDLIVE_ISO="${ISO_PATH}/${GPARTEDLIVE_FILE}"
-GPARTEDLIVE_URL="https://downloads.sourceforge.net/gparted/${GPARTEDLIVE_FILE}"
+GPARTEDLIVE_URL="${OMV_SOURCEFORGE_URL}/gparted/files/gparted-live-stable/${GPARTEDLIVE_VERSION}/${GPARTEDLIVE_FILE}/download"
 GPARTEDLIVE_CHECKSUM_amd64="0dcf1b76556875d5fde5b79410d397a2883c4985ea3dd0c9e0532ebe5a772cda"
 GPARTEDLIVE_CHECKSUM_i686="674fbd37c0e2ec5b3f3b6d48fc1d1eca395f0bd8fdb14841a3b77af4085f400c"
 
@@ -63,9 +70,11 @@ GRUB="/etc/default/grub"
 GRUB_CFG="/boot/grub/grub.cfg"
 
 if [[ "${arch}" == "amd64" ]]; then
+  CLONEZILLA_CHECKSUM="${CLONEZILLA_CHECKSUM_amd64}"
   GPARTEDLIVE_CHECKSUM="${GPARTEDLIVE_CHECKSUM_amd64}"
   SYSRESCCD_CHECKSUM="${SYSRESCCD_CHECKSUM_amd64}"
 else
+  CLONEZILLA_CHECKSUM="${CLONEZILLA_CHECKSUM_i686}"
   GPARTEDLIVE_CHECKSUM="${GPARTEDLIVE_CHECKSUM_i686}"
   SYSRESCCD_CHECKSUM="${SYSRESCCD_CHECKSUM_i686}"
 fi
@@ -73,8 +82,10 @@ fi
 checkDNS()
 {
   host="/usr/bin/host"
+  hostDomain="$(echo ${OMV_SOURCEFORGE_URL} | sed -e 's/[^/]*\/\/\([^@]*@\)\?\([^:/]*\).*/\2/')"
+  echo "Checking DNS with '${hostDomain}' ..."
   if [ -f "${host}" ]; then
-    if ! ${host} sourceforge.net > /dev/null; then
+    if ! ${host} ${hostDomain} > /dev/null; then
       echo "DNS error.  Exiting ..."
       exit 0
     else
