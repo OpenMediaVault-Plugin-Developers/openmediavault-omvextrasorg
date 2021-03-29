@@ -11,14 +11,13 @@ grubconfig="/boot/grub/grub.cfg";
 grubdefault="/etc/default/grub";
 pverepo="/etc/apt/sources.list.d/pvekernel.list"
 repourl=${OMV_PROXMOX_APT_REPOSITORY_URL:-"http://download.proxmox.com/debian/pve"}
+repo="pve-no-subscription"
 
-# use test repo if argument of test is passed
+# use 5.11 kernel if argument of installtest is passed
 if [[ "${1}" = "installtest" ]]; then
   kernelversion="5.11"
-  repo="pvetest"
 else
   kernelversion="5.4"
-  repo="pve-no-subscription"
 fi
 
 # only 64 bit amd/intel supported
