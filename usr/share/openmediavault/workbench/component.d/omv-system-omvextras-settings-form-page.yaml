@@ -1,0 +1,41 @@
+version: "1.0"
+type: component
+data:
+  name: omv-system-omvextras-settings-form-page
+  type: formPage
+  config:
+    request:
+      service: OmvExtras
+      get:
+        method: get
+      post:
+        method: set
+    fields:
+      - type: checkbox
+        name: testing
+        label: _("Testing repo")
+        value: false
+      - type: checkbox
+        name: backportsStatus
+        label: _("Backports")
+        value: true
+    buttons:
+      - template: submit
+      - template: cancel
+        execute:
+          type: url
+          url: "/system/omvextras"
+      - text: _("apt clean")
+        execute:
+          type: taskDialog
+          taskDialog:
+            config:
+              title: _("Cleaning apt ...")
+              startOnInit: true
+              request:
+                service: OmvExtras
+                method: clean
+              buttons:
+                stop:
+                  hidden: true
+            successUrl: /system/omvextras

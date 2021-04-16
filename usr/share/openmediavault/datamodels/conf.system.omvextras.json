@@ -11,10 +11,6 @@
 			"type": "boolean",
 			"default": false
 		},
-		"extras": {
-			"type": "boolean",
-			"default": false
-		},
 		"dockerStorage": {
 			"type": "string",
 			"default": "/var/lib/docker"

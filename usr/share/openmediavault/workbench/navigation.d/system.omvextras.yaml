@@ -1,0 +1,7 @@
+version: "1.0"
+type: navigation-item
+data:
+  path: "system.omvextras"
+  text: _("omv-extras")
+  icon: "mdi:power-plug-outline"
+  url: "/system/omvextras"

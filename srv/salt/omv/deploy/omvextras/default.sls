@@ -49,19 +49,6 @@ omvextrasbaserepo:
 
 {% endif %}
 
-{%- if config.extras | to_bool %}
-
-"deb {{ repo_url }} {{ dist }}-extras main":
-  pkgrepo.managed:
-    - file: /etc/apt/sources.list.d/omvextras.list
-
-{% else %}
-
-"deb {{ repo_url }} {{ dist }}-extras main":
-  pkgrepo.absent
-
-{% endif %}
-
 {% if not docker | to_bool and not arch == 'i386' %}
 
 "deb [arch={{ arch }}] {{ docker_url }} {{ oscodename }} stable":

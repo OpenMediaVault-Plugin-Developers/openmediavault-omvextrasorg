@@ -29,25 +29,22 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
 
     public function initialize()
     {
-        $this->registerMethod('getSettings');
-        $this->registerMethod('setSettings');
+        $this->registerMethod('get');
+        $this->registerMethod('set');
+
         $this->registerMethod('getDocker');
         $this->registerMethod('setDocker');
-        $this->registerMethod('getCockpit');
+        $this->registerMethod('getPortainer');
+        $this->registerMethod('setPortainer');
+        $this->registerMethod('getYacht');
+        $this->registerMethod('setYacht');
+        $this->registerMethod('getUrl');
 
-        $this->registerMethod('getArch');
-
-        $this->registerMethod('getKernel');
-        $this->registerMethod('setKernel');
-        $this->registerMethod('getKernelList');
-        $this->registerMethod('setBootKernel');
-
+        $this->registerMethod('clean');
         $this->registerMethod('doCommand');
-        $this->registerMethod('doHold');
-        $this->registerMethod('doProxmox');
     }
 
-    public function getSettings($params, $context)
+    public function get($params, $context)
     {
         // Validate the RPC caller context.
         $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
@@ -61,27 +58,21 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         return $object->getAssoc();
     }
 
-    public function setSettings($params, $context)
+    public function set($params, $context)
     {
         // Validate the RPC caller context.
         $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
         // Validate the parameters of the RPC service method.
-        $this->validateMethodParams($params, 'rpc.omvextras.setsettings');
+        $this->validateMethodParams($params, 'rpc.omvextras.set');
         // Get the existing configuration object.
         $db = \OMV\Config\Database::getInstance();
         $object = $db->get('conf.system.omvextras');
         $object->set('testing',$params['testing']);
-        $object->set('extras',$params['extras']);
         $db->set($object);
         // Set omvextras module to dirty
         $dispatcher = \OMV\Engine\Notify\Dispatcher::getInstance();
         $dispatcher->notify(OMV_NOTIFY_MODIFY,
             'org.openmediavault.conf.system.omvextras');
-        // Apply the changes immediatelly (no user interaction is wanted).
-        \OMV\Rpc\Rpc::call('Config', 'applyChanges', [
-            'modules' => [ 'omvextras' ],
-            'force' => TRUE
-        ], $context);
         // Execute command
         $cmd = new \OMV\System\Process('omv-changebackports', $params['backportsStatus'] ? 'YES' : 'NO');
         $cmd->execute($output);
@@ -96,7 +87,6 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         // Get the configuration object.
         $db = \OMV\Config\Database::getInstance();
         $object = $db->get('conf.system.omvextras');
-
         // docker status
         $cmdLine = "dpkg-query -W -f='\${Version}' docker-ce docker.io 2>/dev/null";
         $cmd = new \OMV\System\Process($cmdLine);
@@ -119,38 +109,6 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         }
         $object->add('dockerStatus', 'string', $status);
         $object->add('dockerVersion', 'string', $version);
-
-        // portainer status
-        $cmdLine = "docker container ls --all --format='{{.Names}}|{{.Status}}' | awk -F \"|\" 'tolower(\$1) == \"portainer\" { print \$2 }'";
-        $cmd = new \OMV\System\Process($cmdLine);
-        $cmd->setQuiet(true);
-        $output = [];
-        $cmd->execute($output, $exitStatus);
-        if (empty($output[0])) {
-            $status = 'No portainer container found.';
-            $status2 = false;
-        } else {
-            $status = $output[0];
-            $status2 = true;
-        }
-        $object->add('portainerStatus', 'string', $status);
-        $object->add('portainerStatus2', 'boolean', $status2);
-
-        // yacht status
-        $cmdLine = "docker container ls --all --format='{{.Names}}|{{.Status}}' | awk -F \"|\" 'tolower(\$1) == \"yacht\" { print \$2 }'";
-        $cmd = new \OMV\System\Process($cmdLine);
-        $cmd->setQuiet(true);
-        $output = [];
-        $cmd->execute($output, $exitStatus);
-        if (empty($output[0])) {
-            $status = 'No yacht container found.';
-            $status2 = false;
-        } else {
-            $status = $output[0];
-            $status2 = true;
-        }
-        $object->add('yachtStatus', 'string', $status);
-        $object->add('yachtStatus2', 'boolean', $status2);
         return $object->getAssoc();
     }
 
@@ -171,10 +129,7 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         if ( $params['webport'] == $params['agentport'] ) {
             throw new \OMV\Exception(gettext("Web port and agent port cannot be the same."));
         }
-        $object->set('agentport',$params['agentport']);
         $object->set('dockerStorage',$params['dockerStorage']);
-        $object->set('webport',$params['webport']);
-        $object->set('yachtport',$params['yachtport']);
         $db->set($object);
         // Apply the changes immediatelly (no user interaction is wanted).
         \OMV\Rpc\Rpc::call('Config', 'applyChanges', [
@@ -191,7 +146,8 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         return $object->getAssoc();
     }
 
-    public function getCockpit($params, $context)
+
+    public function getPortainer($params, $context)
     {
         // Validate the RPC caller context.
         $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
@@ -199,109 +155,122 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         $db = \OMV\Config\Database::getInstance();
         $object = $db->get('conf.system.omvextras');
 
-        // cockpit status
-        $cmdLine = "dpkg-query -W -f='\${Version}' cockpit";
+        // portainer status
+        $cmdLine = "docker container ls --all --format='{{.Names}}|{{.Status}}' | awk -F \"|\" 'tolower(\$1) == \"portainer\" { print \$2 }'";
         $cmd = new \OMV\System\Process($cmdLine);
         $cmd->setQuiet(true);
         $output = [];
         $cmd->execute($output, $exitStatus);
-        if ((0 == $exitStatus) && (!empty($output))) {
-            // Get docker service status
-            $systemCtl = new \OMV\System\SystemCtl('cockpit.socket');
-            if ($systemCtl->isActive()) {
-                $running = gettext("and running");
-            } else {
-                $running = gettext("and not running");
-            }
-            $status = sprintf('%s %s', gettext("Installed"), $running);
-            $version = $output[0];
+        if (empty($output[0])) {
+            $status = 'No portainer container found.';
+            $status2 = false;
+            $url = sprintf("<a href='https://%s:%d/' target='_blank'>Portainer</a>", gethostname(), $object->get('webport'));
         } else {
-            $status = gettext("Not installed");
-            $version = gettext("n/a");
+            $status = $output[0];
+            $status2 = true;
+            $url = '';
         }
-        $object->add('cockpitStatus', 'string', $status);
-        $object->add('cockpitVersion', 'string', $version);
-
+        $object->add('portainerStatus', 'string', $status);
+        $object->add('portainerStatus2', 'boolean', $status2);
+        $object->add('url', 'string', $url);
         return $object->getAssoc();
     }
 
-    public function getArch($params, $context)
-    {
-        // Validate the RPC caller context.
-        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
-        // Get architecture
-        $object = [];
-        $cmd = new \OMV\System\Process('dpkg --print-architecture');
-        $cmd->execute($output);
-        $object['arch'] = strtolower($output[0]);
-        // Return object
-        return $object;
-    }
-
-    public function getKernel($params, $context)
-    {
-        // Validate the RPC caller context.
-        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
-        // Get boot kernel
-        $grub = '/etc/default/grub';
-        if (file_exists($grub)) {
-            $line_grub = 'GRUB_DEFAULT=';
-            $cmd = new \OMV\System\Process(sprintf('grep %s %s', $line_grub, $grub));
-            $cmd->execute($output);
-            $object['kernels'] = intval(str_replace($line_grub, '', $output[0]));
-        }
-        // Return object
-        return $object;
-    }
-
-    public function setKernel($params, $context)
-    {
-        // Validate the RPC caller context.
-        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
-    }
-
-    public function getKernelList($params, $context)
+    public function setPortainer($params, $context)
     {
         // Validate the RPC caller context.
         $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
         // Validate the parameters of the RPC service method.
-        $this->validateMethodParams($params, 'rpc.common.getlist');
-        // Get configuration data.
-        $kernels = [];
-        $awkArgs = '-F "\'" \'$1 == "menuentry " { print $2 }\'';
-        $grub = '/boot/grub/grub.cfg';
-        if (file_exists($grub)) {
-            $cmd = new \OMV\System\Process('awk', $awkArgs, $grub);
-            $cmd->execute($output);
-            foreach ($output as $kernelk => $kernelv) {
-                if (empty($kernelv))
-                    continue;
-                $kernels[] = [
-                    'key'  => $kernelk,
-                    'name' => $kernelv
-                ];
-            }
+        $this->validateMethodParams($params, 'rpc.omvextras.setportainer');
+        // Get the existing configuration object.
+        $db = \OMV\Config\Database::getInstance();
+        $object = $db->get('conf.system.omvextras');
+        // Check for same web and agent port
+        if ( $params['webport'] == $params['agentport'] ) {
+            throw new \OMV\Exception(gettext("Web port and agent port cannot be the same."));
         }
-        return $this->applyFilter($kernels, $params['start'], $params['limit'],
-            $params['sortfield'], $params['sortdir']
-        );
+        $object->set('agentport',$params['agentport']);
+        $object->set('webport',$params['webport']);
+        $db->set($object);
+        // Return the configuration object.
+        return $object->getAssoc();
     }
 
-    public function setBootKernel($params, $context)
+
+    public function getYacht($params, $context)
     {
         // Validate the RPC caller context.
         $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
-        // Set boot kernel
-        $grub = '/etc/default/grub';
-        if (file_exists($grub)) {
-            $cmdArgs = sprintf('-p -i -e "s/GRUB_DEFAULT=.*/GRUB_DEFAULT=%s/g" %s', $params['key'], $grub);
-            $cmd = new \OMV\System\Process('perl', $cmdArgs);
-            $cmd->execute($output);
-            $cmd = new \OMV\System\Process('grub-set-default', $params['key']);
-            $cmd->execute($output);
-            $cmd = new \OMV\System\Process('update-grub');
-            $cmd->execute($output);
+        // Get the configuration object.
+        $db = \OMV\Config\Database::getInstance();
+        $object = $db->get('conf.system.omvextras');
+        // yacht status
+        $cmdLine = "docker container ls --all --format='{{.Names}}|{{.Status}}' | awk -F \"|\" 'tolower(\$1) == \"yacht\" { print \$2 }'";
+        $cmd = new \OMV\System\Process($cmdLine);
+        $cmd->setQuiet(true);
+        $output = [];
+        $cmd->execute($output, $exitStatus);
+        if (empty($output[0])) {
+            $status = 'No yacht container found.';
+            $status2 = false;
+            $url = sprintf("<a href='https://%s:%d/' target='_blank'>Yacht</a>", gethostname(), $object->get('yachtport'));
+        } else {
+            $status = $output[0];
+            $status2 = true;
+            $url = '';
         }
+        $object->add('yachtStatus', 'string', $status);
+        $object->add('yachtStatus2', 'boolean', $status2);
+        $object->add('url', 'string', $url);
+        return $object->getAssoc();
+    }
+
+    public function setYacht($params, $context)
+    {
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
+        // Validate the parameters of the RPC service method.
+        $this->validateMethodParams($params, 'rpc.omvextras.setyacht');
+        // Get the existing configuration object.
+        $db = \OMV\Config\Database::getInstance();
+        $object = $db->get('conf.system.omvextras');
+        $object->set('yachtport',$params['yachtport']);
+        $db->set($object);
+        // Return the configuration object.
+        return $object->getAssoc();
+    }
+
+    public function getUrl($params, $context)
+    {
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
+        // Get the configuration object.
+        $db = \OMV\Config\Database::getInstance();
+        $object = $db->get('conf.system.omvextras');
+        $object->add('backportsStatus', 'boolean', $backports);
+        switch ($params['type']) {
+            case 'portainer': $port = 'webport'; break;
+            case 'yacht': $port = 'yachtport'; break;
+        }
+        $url = sprintf('http://%s:%d/', gethostname(), $object->get($port));
+        return $url;
+    }
+
+    public function clean($params, $context)
+    {
+        // Validate the RPC caller context.
+        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
+        // Create the background process.
+        return $this->execBgProc(function($bgStatusFilename, $bgOutputFilename)
+            use ($params) {
+                $cmd = new \OMV\System\Process("omv-aptclean");
+                $cmd->setRedirect2to1();
+                $cmdLine = $cmd->getCommandLine();
+                if (0 !== $this->exec($cmdLine, $output, $bgOutputFilename))
+                    throw new \OMV\ExecException($cmdLine, $output);
+                return $output;
+            }
+        );
     }
 
     public function doCommand($params, $context)
@@ -315,20 +284,8 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
             use ($params) {
                 $cmdParams = '';
                 switch ($params['command']) {
-                    case 'update':
-                        $cmdBin = 'apt-get update';  break;
-                    case 'omv-update':
-                        $cmdBin = 'omv-update';  break;
-                    case 'upgrade':
-                        $cmdBin = 'apt-get --yes upgrade';  break;
-                    case 'dist-upgrade':
-                        $cmdBin = 'apt-get --yes dist-upgrade';  break;
-                    case 'clean':
-                        $cmdBin = 'omv-aptclean';  break;
                     case 'docker_restart':
                         $cmdBin = 'echo "Restarting docker ..." && systemctl restart docker.service';  break;
-                    case 'cockpit_install':
-                    case 'cockpit_remove':
                     case 'docker_install':
                     case 'docker_remove':
                     case 'portainer_install':
@@ -342,47 +299,8 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
                         $cmdBin = 'update-alternatives --set iptables /usr/sbin/iptables-legacy';  break;
                     case 'iptables_nft':
                         $cmdBin = 'update-alternatives --set iptables /usr/sbin/iptables-nft';  break;
-                    default:
-                        $cmdBin = 'omv-grubiso';
-                        $cmdParams = $params['command'];
                 }
                 $cmd = new \OMV\System\Process($cmdBin, $cmdParams);
-                $cmdLine = $cmd->getCommandLine();
-                if (0 !== $this->exec($cmdLine, $output, $bgOutputFilename))
-                    throw new \OMV\ExecException($cmdLine, $output);
-                return $output;
-            }
-        );
-    }
-
-    public function doHold($params, $context)
-    {
-        // Validate the RPC caller context.
-        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
-        // Validate the parameters of the RPC service method.
-        $this->validateMethodParams($params, 'rpc.omvextras.dohold');
-        // Execute command
-        $arch = $this->getArch([], $context);
-        $packages = sprintf('linux-image-%s linux-headers-%s', $arch['arch'], $arch['arch']);
-        $cmd = new \OMV\System\Process('apt-mark', $params['command'], $packages);
-        $cmd->execute($output);
-    }
-
-    public function doProxmox($params, $context)
-    {
-        // Validate the RPC caller context.
-        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
-        // Validate the parameters of the RPC service method.
-        $this->validateMethodParams($params, 'rpc.omvextras.doproxmox');
-        // Create the background process.
-        return $this->execBgProc(function($bgStatusFilename, $bgOutputFilename)
-            use ($params) {
-                if ($params['command'] == 'remove') {
-                    $cmdBin = 'omv-removekernels';
-                } else {
-                    $cmdBin = 'omv-installproxmox';
-                }
-                $cmd = new \OMV\System\Process($cmdBin, $params['command']);
                 $cmdLine = $cmd->getCommandLine();
                 if (0 !== $this->exec($cmdLine, $output, $bgOutputFilename))
                     throw new \OMV\ExecException($cmdLine, $output);

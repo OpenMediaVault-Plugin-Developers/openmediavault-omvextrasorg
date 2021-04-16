@@ -1,0 +1,8 @@
+version: "1.0"
+type: navigation-item
+data:
+  path: "system.omvextras.yacht"
+  text: "Yacht"
+  position: 40
+  icon: "mdi:sail-boat"
+  url: "/system/omvextras/yacht"

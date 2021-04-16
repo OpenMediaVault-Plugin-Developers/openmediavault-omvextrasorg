@@ -1,0 +1,6 @@
+version: "1.0"
+type: route
+data:
+  url: "/system/omvextras"
+  title: _("omv-extras")
+  component: omv-system-omvextras-navigation-page

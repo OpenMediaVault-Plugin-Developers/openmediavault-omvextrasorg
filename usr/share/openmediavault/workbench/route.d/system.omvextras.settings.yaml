@@ -1,0 +1,7 @@
+version: "1.0"
+type: route
+data:
+  url: "/system/omvextras/settings"
+  title: _("Settings")
+  editing: true
+  component: omv-system-omvextras-settings-form-page

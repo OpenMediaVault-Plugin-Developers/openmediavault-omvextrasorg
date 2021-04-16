@@ -1,0 +1,75 @@
+version: "1.0"
+type: component
+data:
+  name: omv-system-omvextras-yacht-form-page
+  type: formPage
+  config:
+    request:
+      service: OmvExtras
+      get:
+        method: getYacht
+      post:
+        method: setYacht
+    fields:
+      - type: textInput
+        name: yachtStatus
+        label: _("Status")
+        submitValue: false
+        modifiers:
+          - type: readonly
+      - type: numberInput
+        name: yachtport
+        label: _("Web port")
+        value: 8001
+        validators:
+          min: 1
+          max: 65535
+          patternType: port
+          required: true 
+    buttons:
+      - template: submit
+      - template: cancel
+        execute:
+          type: url
+          url: "/system/omvextras"
+      - text: _("Install")
+        execute:
+          type: taskDialog
+          taskDialog:
+            config:
+              title: _("Installing Yacht ...")
+              startOnInit: true
+              request:
+                service: OmvExtras
+                method: doCommand
+                params:
+                  command: "yacht_install"
+              buttons:
+                stop:
+                  hidden: true
+            successUrl: /system/omvextras
+      - text: _("Remove")
+        execute:
+          type: taskDialog
+          taskDialog:
+            config:
+              title: _("Removing Yacht ...")
+              startOnInit: true
+              request:
+                service: OmvExtras
+                method: doCommand
+                params:
+                  command: "yacht_remove"
+              buttons:
+                stop:
+                  hidden: true
+            successUrl: /system/omvextras
+      - text: _("Open web")
+        execute:
+          type: request
+          request:
+            service: OmvExtras
+            method: getUrl
+            params:
+              type: "yacht"
+            successUrl: '/externalRedirect/{{ _response }}'

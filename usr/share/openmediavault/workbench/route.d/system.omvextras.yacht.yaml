@@ -1,0 +1,7 @@
+version: "1.0"
+type: route
+data:
+  url: "/system/omvextras/yacht"
+  title: "Yacht"
+  editing: true
+  component: omv-system-omvextras-yacht-form-page

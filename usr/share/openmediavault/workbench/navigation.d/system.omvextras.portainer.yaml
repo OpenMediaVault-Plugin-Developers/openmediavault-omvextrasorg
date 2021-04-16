@@ -1,0 +1,8 @@
+version: "1.0"
+type: navigation-item
+data:
+  path: "system.omvextras.portainer"
+  text: "Portainer"
+  position: 30
+  icon: "mdi:cloud-outline"
+  url: "/system/omvextras/portainer"

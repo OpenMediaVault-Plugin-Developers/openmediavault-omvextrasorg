@@ -1,0 +1,78 @@
+version: "1.0"
+type: component
+data:
+  name: omv-system-omvextras-docker-form-page
+  type: formPage
+  config:
+    request:
+      service: OmvExtras
+      get:
+        method: getDocker
+      post:
+        method: setDocker
+    fields:
+      - type: textInput
+        name: dockerStorage
+        label: _("Docker storage")
+        value: "/var/lib/docker"
+      - type: textInput
+        name: dockerStatus
+        label: _("Status")
+        submitValue: false
+        modifiers:
+          - type: readonly
+      - type: textInput
+        name: dockerVersion
+        label: _("Version")
+        submitValue: false
+        modifiers:
+          - type: readonly
+    buttons:
+      - template: submit
+      - template: cancel
+        execute:
+          type: url
+          url: "/system/omvextras"
+      - text: _("Install")
+        execute:
+          type: taskDialog
+          taskDialog:
+            config:
+              title: _("Installing Docker ...")
+              startOnInit: true
+              request:
+                service: OmvExtras
+                method: doCommand
+                params:
+                  command: "docker_install"
+              buttons:
+                stop:
+                  hidden: true
+            successUrl: /system/omvextras
+      - text: _("Remove")
+        execute:
+          type: taskDialog
+          taskDialog:
+            config:
+              title: _("Removing Docker ...")
+              startOnInit: true
+              request:
+                service: OmvExtras
+                method: doCommand
+                params:
+                  command: "docker_remove"
+              buttons:
+                stop:
+                  hidden: true
+            successUrl: /system/omvextras
+      - text: _("Restart")
+        execute:
+          type: request
+          request:
+            service: OmvExtras
+            method: doCommand
+            params:
+              command: "docker_restart"
+            task: true
+            progressMessage: _("Restarting Docker ...")
+            successUrl: /system/omvextras/docker

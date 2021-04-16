@@ -24,8 +24,7 @@ set -e
 case "$1" in
     configure)
         # Activate package triggers.
-        dpkg-trigger update-fixperms
-        dpkg-trigger update-locale
+        dpkg-trigger update-workbench
 
         # Initialize and migrate configuration database.
         echo "Updating configuration database ..."

@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (6.0) UNRELEASED; urgency=medium
+
+  * Initial port to OMV 6.x
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 08 Apr 2021 08:08:42 -0500
+
 openmediavault-omvextrasorg (5.6) stable; urgency=low
 
   * Add environment variable for sourceforge ISO downloads

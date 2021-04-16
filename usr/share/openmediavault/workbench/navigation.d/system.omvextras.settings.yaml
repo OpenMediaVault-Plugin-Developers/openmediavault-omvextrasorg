@@ -1,0 +1,8 @@
+version: "1.0"
+type: navigation-item
+data:
+  path: "system.omvextras.settings"
+  text: _("Settings")
+  position: 10
+  icon: "tune"
+  url: "/system/omvextras/settings"

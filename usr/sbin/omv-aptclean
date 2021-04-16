@@ -34,19 +34,16 @@ echo "\n2. Clearing available dpkg packages..."
 echo "\n3. Removing apt lists..."
 rm -rfv /var/lib/apt/lists/*
 
-echo "\n4. Purging internal cache ..."
-omv_purge_internal_cache
-
-echo "\n5. Removing OpenMediaVault cache packages..."
+echo "\n4. Removing OpenMediaVault cache packages..."
 rm -fv /var/cache/openmediavault/archives/*
 
-echo "\n6. Creating new OpenMediaVault packages file..."
+echo "\n5. Creating new OpenMediaVault packages file..."
 touch /var/cache/openmediavault/archives/Packages
 
-echo "\n7. Updating apt..."
+echo "\n6. Updating apt..."
 /usr/bin/apt-get update
 
-echo "\n8. Saving current package list..."
+echo "\n7. Saving current package list..."
 /usr/bin/dpkg -l | grep ^ii | awk '{print $2 "=" $3 " \\"}' > /var/cache/openmediavault/currently_installed_packages.list
 
 exit 0

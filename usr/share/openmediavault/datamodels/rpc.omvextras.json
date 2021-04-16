@@ -1,16 +1,12 @@
 [{
 	"type": "rpc",
-	"id": "rpc.omvextras.setsettings",
+	"id": "rpc.omvextras.set",
 	"params": {
 		"type": "object",
 		"properties": {
 			"testing": {
 				"type": "boolean",
 				"required": true
-			},
-			"extras": {
-				"type": "boolean",
-				"required": false
 			},
 			"backportsStatus": {
 				"type": "boolean",
@@ -27,7 +23,15 @@
 			"dockerStorage": {
 				"type": "string",
 				"required": false
-			},
+			}
+		}
+	}
+},{
+	"type": "rpc",
+	"id": "rpc.omvextras.setportainer",
+	"params": {
+		"type": "object",
+		"properties": {
 			"webport": {
 				"type": "integer",
 				"minimum": 1000,
@@ -39,7 +43,15 @@
 				"minimum": 1000,
 				"maximum": 65535,
 				"required": true
-			},
+			}
+		}
+	}
+},{
+	"type": "rpc",
+	"id": "rpc.omvextras.setyacht",
+	"params": {
+		"type": "object",
+		"properties": {
 			"yachtport": {
 				"type": "integer",
 				"minimum": 1000,
@@ -57,43 +69,16 @@
 			"command": {
 				"type": "string",
 				"enum": [
-					"aptclean",
-					"clean",
-					"dist-upgrade",
-					"cockpit_install",
-					"cockpit_remove",
 					"docker_install",
 					"docker_remove",
 					"docker_restart",
-					"installcz",
-					"installgp",
-					"installsys",
 					"iptables_legacy",
 					"iptables_nft",
-					"omv-update",
 					"portainer_install",
 					"portainer_remove",
-					"rebootcz",
-					"rebootgp",
-					"rebootsys",
-					"update",
-					"upgrade",
 					"yacht_install",
 					"yacht_remove"
 				],
-				"required": true
-			}
-		}
-	}
-},{
-	"type": "rpc",
-	"id": "rpc.omvextras.dohold",
-	"params": {
-		"type": "object",
-		"properties": {
-			"command": {
-				"type": "string",
-				"enum": [ "hold", "unhold" ],
 				"required": true
 			}
 		}
@@ -107,19 +92,6 @@
 			"command": {
 				"type": "string",
 				"enum": [ "NO", "YES" ],
-				"required": true
-			}
-		}
-	}
-},{
-	"type": "rpc",
-	"id": "rpc.omvextras.doproxmox",
-	"params": {
-		"type": "object",
-		"properties": {
-			"command": {
-				"type": "string",
-				"enum": [ "install", "installtest", "remove" ],
 				"required": true
 			}
 		}
