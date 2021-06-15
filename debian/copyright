@@ -4,11 +4,10 @@ Files: *
 Copyright: 2013-2021 OpenMediaVault Plugin Developers <plugins@omv-extras.org>
 License: GPL-3+
 
-Files: /var/www/openmediavault/images/plug.png
-       /var/www/openmediavault/images/plug.svg
-Copyright: IcoMoon <http://www.icomoon.io>
-IcoMoon <http://www.icomoon.io>
-License: GPLv3
+Files: /var/www/openmediavault/images/power-plug-outline.png
+       /var/www/openmediavault/images/power-plug-outline.svg
+Copyright: Material Design Icons <http://materialdesignicons.com>
+License: Apache 2.0
 
 License: GPL-3+
  /usr/share/common-licenses/GPL-3

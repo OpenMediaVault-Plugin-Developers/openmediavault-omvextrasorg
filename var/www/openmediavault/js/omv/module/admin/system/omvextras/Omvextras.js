@@ -24,7 +24,7 @@ OMV.WorkspaceManager.registerNode({
     id: "omvextras",
     path: "/system",
     text: _("OMV-Extras"),
-    icon16: "images/plug.png",
-    iconSvg: "images/plug.svg",
+    icon16: "images/power-plug-outline.png",
+    iconSvg: "images/power-plug-outline.svg",
     position: 200
 });
