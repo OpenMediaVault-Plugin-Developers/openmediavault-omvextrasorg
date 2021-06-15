@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.6.2) stable; urgency=low
+
+  * Use Material Designs icon in preparation for OMV 6.x.
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 15 Jun 2021 07:27:42 -0500
+
 openmediavault-omvextrasorg (5.6.1) stable; urgency=low
 
   * Fix saltstack apt update command

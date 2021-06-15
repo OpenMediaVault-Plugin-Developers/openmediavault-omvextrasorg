@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
+# Jonatan Nyberg <jonatan@autistici.org>, 2021
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-22 07:34-0500\n"
-"PO-Revision-Date: 2021-03-22 12:34+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2021-04-10 10:30+0000\n"
+"Last-Translator: Jonatan Nyberg <jonatan@autistici.org>\n"
 "Language-Team: Swedish (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,72 +19,72 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Advanced"
-msgstr ""
+msgstr "Avancerat"
 
 msgid "Agent port"
-msgstr ""
+msgstr "Agentport"
 
 msgid "Backports"
-msgstr ""
+msgstr "Backports"
 
 msgid "Cleaning Apt Files and Lists ..."
-msgstr ""
+msgstr "Rensar Apt-filer och listor ..."
 
 msgid "Clonezilla"
-msgstr ""
+msgstr "Clonezilla"
 
 msgid "Cockpit"
-msgstr ""
+msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
-msgstr ""
+msgstr "Cockpit lyssnar på port 9090 för webbgränssnittet."
 
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
 "legacy. Use iptables menu to change. "
-msgstr ""
+msgstr "Debian 10/OMV 5.x använder iptables-nft som standard och Docker behöver iptables-legacy. Använd iptables-menyn för att ändra."
 
 msgid "Default password: "
-msgstr ""
+msgstr "Standardlösenord: "
 
 msgid "Default username: "
-msgstr ""
+msgstr "Standard användarnamn: "
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
-msgstr ""
+msgstr "Standard användarnamn: <b>user</b> och lösenord: <b>live</b>"
 
 msgid "Docker"
-msgstr ""
+msgstr "Docker"
 
 msgid "Docker Storage"
-msgstr ""
+msgstr "Docker-lagring"
 
 msgid "Done."
-msgstr ""
+msgstr "Klart."
 
 msgid ""
 "Downloads Clonezilla ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr ""
+msgstr "Hämtar Clonezilla ISO och konfigurerar grub bootloader för att möjliggöra start från ISO."
 
 msgid ""
 "Downloads GParted Live ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr ""
+msgstr "Hämtar GParted Live ISO och konfigurerar grub bootloader för att möjliggöra start från ISO."
 
 msgid ""
 "Downloads SystemRescue ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr ""
+msgstr "Hämtar SystemRescue ISO och konfigurerar grub bootloader för att möjliggöra start från ISO."
 
 msgid "Extras repo"
 msgstr ""
 
 msgid "GParted Live"
-msgstr ""
+msgstr "GParted Live"
 
 msgid "General settings"
-msgstr ""
+msgstr "Allmänna Inställningar"
 
 msgid "Hold Current Kernel"
 msgstr ""
@@ -109,54 +110,54 @@ msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr ""
 
 msgid "Install"
-msgstr ""
+msgstr "Installera"
 
 msgid "Install Clonezilla"
-msgstr ""
+msgstr "Installera Clonezilla"
 
 msgid "Install Clonezilla ISO ..."
-msgstr ""
+msgstr "Installera Clonezilla ISO ..."
 
 msgid ""
 "Install Docker will download and place a newer docker-compose in "
 "/usr/local/bin/ on 64 bit x86 systems only."
-msgstr ""
+msgstr "Installering av Docker hämtar och placerar en nyare docker-compose i /usr/local/bin/ endast på 64-bitars x86-system."
 
 msgid ""
 "Install Docker will install the docker-compose package. Location: /usr/bin/ "
 "on all systems."
-msgstr ""
+msgstr "Installering av Docker installerar paketet docker-compose. Plats: /usr/bin/ på alla system."
 
 msgid "Install Docker will restart the docker service if daemon.json changes."
-msgstr ""
+msgstr "Installering av Docker startar om docker-tjänsten om daemon.json ändras."
 
 msgid "Install GParted Live"
-msgstr ""
+msgstr "Installera GParted Live"
 
 msgid "Install GParted Live ISO ..."
-msgstr ""
+msgstr "Installera GParted Live ISO ..."
 
 msgid ""
 "Install Portainer will install the docker-ce package if not already "
 "installed."
-msgstr ""
+msgstr "Installering av Portainer installerar docker-ce-paketet om det inte redan är installerat."
 
 msgid ""
 "Install Portainer will update Portainer to the latest image if the image "
 "already exists."
-msgstr ""
+msgstr "Installering av Portainer uppdaterar Portainer till den senaste bilden om bilden redan finns."
 
 msgid "Install Proxmox kernel"
-msgstr ""
+msgstr "Installera Proxmox-kärna"
 
 msgid "Install Proxmox test kernel"
-msgstr ""
+msgstr "Installera Proxmox-testkärna"
 
 msgid "Install SystemRescue"
-msgstr ""
+msgstr "Installera SystemRescue"
 
 msgid "Install SystemRescue ISO ..."
-msgstr ""
+msgstr "Installera SystemRescue ISO ..."
 
 msgid ""
 "Install Yacht will install the docker-ce package if not already installed."
@@ -168,19 +169,19 @@ msgid ""
 msgstr ""
 
 msgid "Installed"
-msgstr ""
+msgstr "Installerad"
 
 msgid "Installed Kernels"
-msgstr ""
+msgstr "Installerade kärnor"
 
 msgid "Installing"
-msgstr ""
+msgstr "Installerar"
 
 msgid "Installing Proxmox kernel ..."
-msgstr ""
+msgstr "Installerar Proxmox-kärna ..."
 
 msgid "Installing Proxmox test kernel ..."
-msgstr ""
+msgstr "Installerar Proxmox-testkärna ..."
 
 msgid "Kernel"
 msgstr ""
@@ -198,13 +199,13 @@ msgid "Not recommended for headless servers.  SSH is not enabled by default."
 msgstr ""
 
 msgid "OMV-Extras"
-msgstr ""
+msgstr "OMV-Extras"
 
 msgid "Open Portainer"
-msgstr ""
+msgstr "Öppna Portainer"
 
 msgid "Open Yacht"
-msgstr ""
+msgstr "Öppna Yacht"
 
 msgid "Open web"
 msgstr ""
@@ -215,7 +216,7 @@ msgid ""
 msgstr ""
 
 msgid "Portainer"
-msgstr ""
+msgstr "Portainer"
 
 msgid ""
 "Portainer will listen on port 9000 for the web interface and 8000 for the "
@@ -223,25 +224,25 @@ msgid ""
 msgstr ""
 
 msgid "Proxmox"
-msgstr ""
+msgstr "Proxmox"
 
 msgid "Reboot to Clonezilla ..."
-msgstr ""
+msgstr "Starta om till Clonezilla ..."
 
 msgid "Reboot to Clonezilla Once"
-msgstr ""
+msgstr "Starta om till Clonezilla Once"
 
 msgid "Reboot to GParted Live ..."
-msgstr ""
+msgstr "Starta om till GParted Live ..."
 
 msgid "Reboot to GParted Live Once"
-msgstr ""
+msgstr "Starta om till GParted Live Once"
 
 msgid "Reboot to SystemRescue ..."
-msgstr ""
+msgstr "Starta om till SystemRescue ..."
 
 msgid "Reboot to SystemRescue Once"
-msgstr ""
+msgstr "Starta om till SystemRescue Once"
 
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr ""
@@ -275,25 +276,25 @@ msgid "Removing non-Proxmox kernels ..."
 msgstr ""
 
 msgid "Restart"
-msgstr ""
+msgstr "Starta om"
 
 msgid "Restarting docker ..."
-msgstr ""
+msgstr "Startar om docker ..."
 
 msgid "Running apt-get dist-upgrade ..."
-msgstr ""
+msgstr "Kör apt-get dist-upgrade ..."
 
 msgid "Running apt-get update ..."
-msgstr ""
+msgstr "Kör apt-get update ..."
 
 msgid "Running apt-get upgrade ..."
-msgstr ""
+msgstr "Kör apt-get upgrade ..."
 
 msgid "Running omv-aptclean ..."
-msgstr ""
+msgstr "Kör omv-aptclean ..."
 
 msgid "Running omv-update ..."
-msgstr ""
+msgstr "Kör omv-update ..."
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
@@ -374,13 +375,13 @@ msgid "Use legacy"
 msgstr ""
 
 msgid "Use nft"
-msgstr ""
+msgstr "Använd nft"
 
 msgid "Version"
-msgstr ""
+msgstr "Version"
 
 msgid "Web port"
-msgstr ""
+msgstr "Webbport"
 
 msgid "Web port and agent port cannot be the same."
 msgstr ""
@@ -404,19 +405,19 @@ msgid "and running"
 msgstr ""
 
 msgid "apt clean"
-msgstr ""
+msgstr "apt clean"
 
 msgid "dist-upgrade"
-msgstr ""
+msgstr "dist-upgrade"
 
 msgid "n/a"
 msgstr ""
 
 msgid "omv-update"
-msgstr ""
+msgstr "omv-update"
 
 msgid "update"
-msgstr ""
+msgstr "update"
 
 msgid "upgrade"
-msgstr ""
+msgstr "upgrade"
