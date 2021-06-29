@@ -1,4 +1,4 @@
-openmediavault-omvextrasorg (6.0.01) stable; urgency=low
+openmediavault-omvextrasorg (6.0.1) stable; urgency=low
 
   * Fix saltstack apt update command
 
