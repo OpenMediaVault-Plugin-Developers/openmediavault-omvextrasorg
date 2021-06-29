@@ -1,4 +1,10 @@
-openmediavault-omvextrasorg (6.0) UNRELEASED; urgency=medium
+openmediavault-omvextrasorg (6.0.01) stable; urgency=low
+
+  * Fix saltstack apt update command
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 29 Jun 2021 06:15:42 -0500
+
+openmediavault-omvextrasorg (6.0) stable; urgency=low
 
   * Initial port to OMV 6.x
 
