@@ -101,4 +101,4 @@ configure_apt_pref_omvextras:
 
 refresh_database_apt:
   module.run:
-    - name: pkg.refresh_db
+    - pkg.refresh_db:
