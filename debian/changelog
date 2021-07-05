@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (6.0.2) stable; urgency=low
+
+  * Improve Portainer and Yacht urls
+  * Fix uninstall
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 05 Jul 2021 15:15:42 -0500
+
 openmediavault-omvextrasorg (6.0.1) stable; urgency=low
 
   * Fix saltstack apt update command
