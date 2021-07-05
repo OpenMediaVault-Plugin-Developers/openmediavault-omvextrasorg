@@ -23,7 +23,7 @@ set -e
 
 remove_action() {
     find /etc/apt/ -type f -name "omvextras*" -delete
-    dpkg-trigger update-fixperms
+    dpkg-trigger update-workbench
 }
 
 case "$1" in
