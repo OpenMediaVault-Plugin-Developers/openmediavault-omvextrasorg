@@ -242,18 +242,6 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
 
     public function getUrl($params, $context)
     {
-        // Validate the RPC caller context.
-        $this->validateMethodContext($context, ['role' => OMV_ROLE_ADMINISTRATOR]);
-        // Get the configuration object.
-        $db = \OMV\Config\Database::getInstance();
-        $object = $db->get('conf.system.omvextras');
-        $object->add('backportsStatus', 'boolean', $backports);
-        switch ($params['type']) {
-            case 'portainer': $port = 'webport'; break;
-            case 'yacht': $port = 'yachtport'; break;
-        }
-        $url = sprintf('http://%s:%d/', gethostname(), $object->get($port));
-        return $url;
     }
 
     public function clean($params, $context)

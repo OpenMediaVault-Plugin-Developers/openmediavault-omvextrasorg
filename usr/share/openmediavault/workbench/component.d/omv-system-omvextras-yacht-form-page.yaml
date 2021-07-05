@@ -70,6 +70,4 @@ data:
           request:
             service: OmvExtras
             method: getUrl
-            params:
-              type: "yacht"
-            successUrl: '/externalRedirect/{{ _response }}'
+            successUrl: '/externalRedirect/http%3A%2F%2F{{ location() | get("hostname") }}%3A{{ yachtport }}'
