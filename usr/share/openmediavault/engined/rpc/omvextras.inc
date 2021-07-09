@@ -125,10 +125,6 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         if ( preg_match('#^/sharedfolders/#', $params['dockerStorage']) === 1 ) {
             throw new \OMV\Exception(gettext("Illegal docker storage path - cannot use /sharedfolders paths"));
         }
-        // Check for same web and agent port
-        if ( $params['webport'] == $params['agentport'] ) {
-            throw new \OMV\Exception(gettext("Web port and agent port cannot be the same."));
-        }
         $object->set('dockerStorage',$params['dockerStorage']);
         $db->set($object);
         // Apply the changes immediatelly (no user interaction is wanted).
