@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (5.6.3) stable; urgency=low
+
+  * Add release upgrade script
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 17 Nov 2021 09:21:00 -0600
+
 openmediavault-omvextrasorg (5.6.2) stable; urgency=low
 
   * Use Material Designs icon in preparation for OMV 6.x.
