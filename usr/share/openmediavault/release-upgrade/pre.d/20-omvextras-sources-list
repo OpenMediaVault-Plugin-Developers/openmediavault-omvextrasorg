@@ -1,0 +1,18 @@
+#!/bin/sh
+
+export LANG=C
+export LC_ALL=C
+
+list="/etc/apt/sources.list.d/omvextras.list"
+armbian="/etc/apt/sources.list.d/armbian.list"
+
+if [ -f "${list}" ]; then
+  sed -i "s/buster/bullseye/g" ${list}
+  sed -i "s/usul/shaitan/g" ${list}
+fi
+
+if [ -f "${armbian}" ]; then
+  sed -i "s/buster/bullseye/g" ${armbian}
+fi
+
+exit 0
