@@ -7,6 +7,8 @@ list="/etc/apt/sources.list.d/omvextras.list"
 armbian="/etc/apt/sources.list.d/armbian.list"
 
 if [ -f "${list}" ]; then
+  sed -i "/-testing/d" ${list}
+  sed -i "/-extras/d" ${list}
   sed -i "s/buster/bullseye/g" ${list}
   sed -i "s/usul/shaitan/g" ${list}
 fi
