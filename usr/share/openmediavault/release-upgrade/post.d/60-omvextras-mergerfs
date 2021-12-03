@@ -1,0 +1,29 @@
+#!/bin/sh
+
+export LANG=C
+export LC_ALL=C
+
+export DEBIAN_FRONTEND=noninteractive
+export APT_LISTCHANGES_FRONTEND=none
+export LANG=C.UTF-8
+
+install=0
+
+if dpkg -l openmediavault-mergerfsfolders; then
+  apt-get --yes remove openmediavault-mergerfsfolders
+  install=1
+fi
+
+if dpkg -l openmediavault-unionfilesystems; then
+  apt-get --yes remove openmediavault-unionfilesystems
+  install=1
+fi
+
+if [ ${install} -eq 1 ]; then
+  if apt-get --yes --no-install-recommends install openmediavault-mergerfs; then
+    apt-get --yes purge openmediavault-unionfilesystems
+    apt-get --yes purge openmediavault-mergerfsfolders
+  fi
+fi
+
+exit 0
