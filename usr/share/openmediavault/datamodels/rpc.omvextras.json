@@ -43,6 +43,10 @@
 				"minimum": 1000,
 				"maximum": 65535,
 				"required": true
+			},
+			"ee": {
+				"type": "boolean",
+				"required": false
 			}
 		}
 	}

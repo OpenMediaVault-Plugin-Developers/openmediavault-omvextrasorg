@@ -46,4 +46,7 @@ echo "\n6. Updating apt..."
 echo "\n7. Saving current package list..."
 /usr/bin/dpkg -l | grep ^ii | awk '{print $2 "=" $3 " \\"}' > /var/cache/openmediavault/currently_installed_packages.list
 
+echo "\n8. Updating plugin index..."
+/usr/sbin/omv-mkaptidx
+
 exit 0

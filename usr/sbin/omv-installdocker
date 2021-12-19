@@ -4,6 +4,7 @@
 
 . /etc/default/openmediavault
 
+declare -i ee=0
 declare -i plugin=0
 declare -i status=0
 declare -l arch=""
@@ -106,6 +107,12 @@ setConfig()
     echo "Web port:: ${webport}"
     yachtport=$(omv_config_get "${xpath}/yachtport")
     echo "Yacht port:: ${yachtport}"
+    ee=$(omv_config_get "${xpath}/ee")
+    echo "ee:: ${ee}"
+    if [ ${ee} -eq 1 ]; then
+      portainerImage="${portainerImage/ce/ee}"
+    fi
+    echo "image:: ${portainerImage}"
   fi
 }
 

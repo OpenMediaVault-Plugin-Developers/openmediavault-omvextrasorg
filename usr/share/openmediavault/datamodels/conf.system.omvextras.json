@@ -32,6 +32,10 @@
 			"minimum": 1000,
 			"maximum": 65535,
 			"default": 8001
+		},
+		"ee": {
+			"type": "boolean",
+			"default": false
 		}
 	}
 }

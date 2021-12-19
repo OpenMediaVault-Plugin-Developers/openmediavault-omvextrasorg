@@ -187,6 +187,7 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         }
         $object->set('agentport',$params['agentport']);
         $object->set('webport',$params['webport']);
+        $object->set('ee',$params['ee']);
         $db->set($object);
         // Return the configuration object.
         return $object->getAssoc();

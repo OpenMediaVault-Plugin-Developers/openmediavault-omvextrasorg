@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #
 # @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
 # @author    Volker Theile <volker.theile@openmediavault.org>
@@ -23,29 +23,8 @@ set -e
 
 . /usr/share/openmediavault/scripts/helper-functions
 
-if ! omv_config_exists "/config/system/omvextras"; then
-    omv_config_add_node "/config/system" "omvextras"
-fi
-if ! omv_config_exists "/config/system/omvextras/testing"; then
-    omv_config_add_key "/config/system/omvextras" "testing" "0"
-fi
-if ! omv_config_exists "/config/system/omvextras/dockerStorage"; then
-    omv_config_add_key "/config/system/omvextras" "dockerStorage" "/var/lib/docker"
-fi
-if ! omv_config_exists "/config/system/omvextras/webport"; then
-    omv_config_add_key "/config/system/omvextras" "webport" "9000"
-fi
-if ! omv_config_exists "/config/system/omvextras/agentport"; then
-    omv_config_add_key "/config/system/omvextras" "agentport" "8000"
-fi
-if ! omv_config_exists "/config/system/omvextras/yachtport"; then
-    omv_config_add_key "/config/system/omvextras" "yachtport" "8001"
-fi
 if ! omv_config_exists "/config/system/omvextras/ee"; then
     omv_config_add_key "/config/system/omvextras" "ee" "0"
 fi
-
-# remove backports from sources.list
-sed -i "/$(lsb_release -sc)-backports/d" /etc/apt/sources.list
 
 exit 0

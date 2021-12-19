@@ -35,6 +35,11 @@ data:
           max: 65535
           patternType: port
           required: true 
+      - type: checkbox
+        name: ee
+        label: _("Use EE")
+        hint: _("Use business edition. This version requires a license.")
+        value: false
     buttons:
       - template: submit
       - template: cancel
