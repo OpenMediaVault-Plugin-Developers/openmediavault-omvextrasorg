@@ -324,7 +324,7 @@ EOF
 configOverride()
 {
   # create override to wait for local filesystems
-  if [ -d "${dockerOverrideDir}" ]; then
+  if [ ! -d "${dockerOverrideDir}" ]; then
     echo "Create override directory ..."
     mkdir -p "${dockerOverrideDir}"
   fi
