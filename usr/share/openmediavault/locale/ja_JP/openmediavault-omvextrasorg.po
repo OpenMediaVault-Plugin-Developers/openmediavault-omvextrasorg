@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# Toshihiro Kan <kansuke4649@gmail.com>, 2014-2020
+# Toshihiro Kan <kansuke4649@gmail.com>, 2014-2021
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-22 07:34-0500\n"
-"PO-Revision-Date: 2021-03-22 12:34+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2021-03-25 00:29+0000\n"
+"Last-Translator: Toshihiro Kan <kansuke4649@gmail.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -151,7 +151,7 @@ msgid "Install Proxmox kernel"
 msgstr "Proxmox カーネルをインストール"
 
 msgid "Install Proxmox test kernel"
-msgstr ""
+msgstr "Proxmox テストカーネルをインストール"
 
 msgid "Install SystemRescue"
 msgstr "SystemRescueのインストール"
@@ -181,7 +181,7 @@ msgid "Installing Proxmox kernel ..."
 msgstr "Proxmox カーネルをインストールしています ..."
 
 msgid "Installing Proxmox test kernel ..."
-msgstr ""
+msgstr "Proxmox テストカーネルをインストールしています ..."
 
 msgid "Kernel"
 msgstr "カーネル"
@@ -351,7 +351,7 @@ msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "linux-image- * カーネルがまだアクティブであれば削除することはできません。"
 
 msgid "This will install the latest 5.11 kernel."
-msgstr ""
+msgstr "最新の5.11カーネルがインストールされます。"
 
 msgid "This will install the latest 5.4 kernel."
 msgstr "最新の5.4カーネルがインストールされます。"

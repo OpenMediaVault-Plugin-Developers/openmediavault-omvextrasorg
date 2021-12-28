@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Matěj Mihal <mejatysek@gmail.com>, 2014
-# Pavel Borecki <pavel.borecki@gmail.com>, 2015-2020
+# Pavel Borecki <pavel.borecki@gmail.com>, 2015-2021
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-22 07:34-0500\n"
-"PO-Revision-Date: 2021-03-22 12:34+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2021-12-14 13:57+0000\n"
+"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -76,7 +76,7 @@ msgstr "Stáhne ISO obraz systému GParted Live a nastaví zavaděč grub, aby z
 msgid ""
 "Downloads SystemRescue ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr ""
+msgstr "Stáhne ISO obraz systému SystemRescue a nastaví zavaděč grub, aby z tohoto ISO bylo možné spustit systém."
 
 msgid "Extras repo"
 msgstr "Repozitář extras"
@@ -152,13 +152,13 @@ msgid "Install Proxmox kernel"
 msgstr "Nainstalovat jádro z Proxmox"
 
 msgid "Install Proxmox test kernel"
-msgstr ""
+msgstr "Nainstalovat testovací jádro z Proxmox"
 
 msgid "Install SystemRescue"
-msgstr ""
+msgstr "Připravit systém SystemRescue"
 
 msgid "Install SystemRescue ISO ..."
-msgstr ""
+msgstr "Připravit sem ISO soubor s obrazem systému SystemRescue…"
 
 msgid ""
 "Install Yacht will install the docker-ce package if not already installed."
@@ -182,7 +182,7 @@ msgid "Installing Proxmox kernel ..."
 msgstr "Instaluje se jádro z Proxmox…"
 
 msgid "Installing Proxmox test kernel ..."
-msgstr ""
+msgstr "Instaluje se testovací jádro z Proxmox…"
 
 msgid "Kernel"
 msgstr "Jádro"
@@ -240,10 +240,10 @@ msgid "Reboot to GParted Live Once"
 msgstr "Jednorázově restartovat do systému Clonezilla"
 
 msgid "Reboot to SystemRescue ..."
-msgstr ""
+msgstr "Restartovat do systému SystemRescue…"
 
 msgid "Reboot to SystemRescue Once"
-msgstr ""
+msgstr "Jednorázově restartovat do systému SystemRescue"
 
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "Před odebráním jader jiných, než z Proxmox restartujte s Proxmox jádrem."
@@ -322,7 +322,7 @@ msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr "Nastaví zavaděč grub tak, aby <b>JEDNORÁZOVĚ</b> spustil systém GParted Live."
 
 msgid "Sets grub bootloader to boot from SystemRescue ISO <b>ONE</b> time."
-msgstr ""
+msgstr "Nastaví zavaděč grub tak, aby <b>JEDNORÁZOVĚ</b> spustil systém SystemRescue."
 
 msgid "Setting boot kernel ..."
 msgstr "Nastavení jádra k zavádění…"
@@ -352,7 +352,7 @@ msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "Pokud je stále aktivní, tomuto se nepodaří odebrat jádro linux-image-*."
 
 msgid "This will install the latest 5.11 kernel."
-msgstr ""
+msgstr "Toto nainstaluje nejnovější jádro řady 5.11"
 
 msgid "This will install the latest 5.4 kernel."
 msgstr "Toto nainstaluje nejnovější jádro řady 5.4."

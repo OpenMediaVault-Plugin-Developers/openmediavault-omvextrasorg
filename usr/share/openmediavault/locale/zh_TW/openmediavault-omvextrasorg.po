@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# kochin <kochinc@outlook.com>, 2014-2020
+# kochin <kochinc@outlook.com>, 2014-2021
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-22 07:34-0500\n"
-"PO-Revision-Date: 2021-03-22 12:34+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2021-12-20 17:57+0000\n"
+"Last-Translator: kochin <kochinc@outlook.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -151,7 +151,7 @@ msgid "Install Proxmox kernel"
 msgstr "安裝 Proxmox 系統核心"
 
 msgid "Install Proxmox test kernel"
-msgstr ""
+msgstr "安裝 Proxmox 測試核心"
 
 msgid "Install SystemRescue"
 msgstr "安裝 SystemRescue"
@@ -181,7 +181,7 @@ msgid "Installing Proxmox kernel ..."
 msgstr "安裝 Proxmox 核心中 ..."
 
 msgid "Installing Proxmox test kernel ..."
-msgstr ""
+msgstr "安裝 Proxmox 測試核心 ..."
 
 msgid "Kernel"
 msgstr "系統核心"
@@ -351,7 +351,7 @@ msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "移除 linux-image-* kernel 可能會失敗，如果它仍在操作中。"
 
 msgid "This will install the latest 5.11 kernel."
-msgstr ""
+msgstr "這將安裝最新的 5.11 核心。"
 
 msgid "This will install the latest 5.4 kernel."
 msgstr "這將會安裝最新的 5.4 系統核心。"
@@ -369,7 +369,7 @@ msgid "Unholding current kernel ..."
 msgstr "取消維持目前系統核心中 ..."
 
 msgid "Updates"
-msgstr "更新方式"
+msgstr "更新"
 
 msgid "Use legacy"
 msgstr "使用舊版"

@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
+# haai so <s1097854603@gmail.com>, 2021
 # songming <by@songming.me>, 2013-2016,2018-2020
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-22 07:34-0500\n"
-"PO-Revision-Date: 2021-03-22 12:34+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2021-07-11 23:23+0000\n"
+"Last-Translator: haai so <s1097854603@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,10 +46,10 @@ msgid ""
 msgstr "Debian 10/OMV 5.x 默认使用iptables-nft，Docker 需要使用 iptables-legacy，可在 iptables 菜单手动切换。"
 
 msgid "Default password: "
-msgstr ""
+msgstr "默认密码："
 
 msgid "Default username: "
-msgstr ""
+msgstr "默认用户名："
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "默认用户名 <b>user</b>  默认密码: <b>live</b>"
@@ -75,7 +76,7 @@ msgstr "下载 GParted Live ISO 镜像，配置 grub 从该 ISO 镜像引导启�
 msgid ""
 "Downloads SystemRescue ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr ""
+msgstr "下载 SystemRescue ISO ，并配置 grub 引导加载程序，设置为允许从 ISO 启动。"
 
 msgid "Extras repo"
 msgstr "扩展源"
@@ -84,7 +85,7 @@ msgid "GParted Live"
 msgstr "GParted Live"
 
 msgid "General settings"
-msgstr " 常规设置"
+msgstr "常规设置"
 
 msgid "Hold Current Kernel"
 msgstr "保持当前内核"
@@ -104,7 +105,7 @@ msgid "If port is changed, click Install in the Portainer menu again."
 msgstr "如果改变了端口，请再次点击安装 Portainer 菜单。"
 
 msgid "If port is changed, click Install in the Yacht menu again."
-msgstr ""
+msgstr "如果改变了端口，请再次点击安装 Yacht 菜单。"
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr "Docker 存储路径不能使用共享文件夹路径"
@@ -151,22 +152,22 @@ msgid "Install Proxmox kernel"
 msgstr "安装 Proxmox 内核"
 
 msgid "Install Proxmox test kernel"
-msgstr ""
+msgstr "安装 Proxmox 测试版内核"
 
 msgid "Install SystemRescue"
-msgstr ""
+msgstr "安装 SystemRescue"
 
 msgid "Install SystemRescue ISO ..."
-msgstr ""
+msgstr "安装 SystemRescue ISO ..."
 
 msgid ""
 "Install Yacht will install the docker-ce package if not already installed."
-msgstr ""
+msgstr "如果没有安装 docker-ce 包，在安装 Yacht 时将会一并安装。"
 
 msgid ""
 "Install Yacht will update Yacht to the latest image if the image already "
 "exists."
-msgstr ""
+msgstr "安装 Yacht 将会更新已有 Yacht 镜像到最新版。"
 
 msgid "Installed"
 msgstr "已安装"
@@ -181,7 +182,7 @@ msgid "Installing Proxmox kernel ..."
 msgstr "安装 Proxmox 内核中 ..."
 
 msgid "Installing Proxmox test kernel ..."
-msgstr ""
+msgstr "安装 Proxmox 测试版内核中 ..."
 
 msgid "Kernel"
 msgstr "内核"
@@ -202,10 +203,10 @@ msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
 msgid "Open Portainer"
-msgstr ""
+msgstr "打开 Portainer"
 
 msgid "Open Yacht"
-msgstr ""
+msgstr "打开 Yacht"
 
 msgid "Open web"
 msgstr "打开 web 页"
@@ -239,10 +240,10 @@ msgid "Reboot to GParted Live Once"
 msgstr "从 GParted Live 启动一次"
 
 msgid "Reboot to SystemRescue ..."
-msgstr ""
+msgstr "从 SystemRescue 启动 ..."
 
 msgid "Reboot to SystemRescue Once"
-msgstr ""
+msgstr "从 SystemRescue 启动一次"
 
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "在删除 non-Proxmox 内核后以 Proxmox内核重启。"
@@ -264,7 +265,7 @@ msgstr "删除 Portainer 将会删除 Portainer 镜像和容器，但是卷不�
 msgid ""
 "Remove Yacht will remove the Yacht image and container but the volume will "
 "not be removed."
-msgstr ""
+msgstr "删除 Yacht 将会删除 Yacht 镜像和容器，但是不会删除卷。"
 
 msgid "Remove non-Proxmox kernels and headers"
 msgstr "删除 non-Proxmox 内核和头文件"
@@ -321,7 +322,7 @@ msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr "设置 grub 从 GParted Live ISO 镜像引导启动<b> 1 </b>次。"
 
 msgid "Sets grub bootloader to boot from SystemRescue ISO <b>ONE</b> time."
-msgstr ""
+msgstr "设置 grub 从 SystemRescue ISO 镜像引导启动<b> 1 </b>次。"
 
 msgid "Setting boot kernel ..."
 msgstr "设置启动内核 ..."
@@ -351,7 +352,7 @@ msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "如果 linux-image-*内核处于使用状态删除该内核将失败。"
 
 msgid "This will install the latest 5.11 kernel."
-msgstr ""
+msgstr "这将安装最新的 5.11 版内核。"
 
 msgid "This will install the latest 5.4 kernel."
 msgstr "这将安装最新的 5.4 版内核。"
@@ -396,7 +397,7 @@ msgid ""
 msgstr "当远程登录时，启动再生龙 clonezilla 命令是: <b>sudo clonezilla</b>"
 
 msgid "Yacht will listen on port 8001 for the web interface unless changed."
-msgstr ""
+msgstr "如果没有手动改变过设置，Yacht 将会为 web 服务监听8001 端口。"
 
 msgid "and not running"
 msgstr "未运行"
