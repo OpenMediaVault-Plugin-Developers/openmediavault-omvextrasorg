@@ -4,14 +4,14 @@
 # 
 # Translators:
 # dsafsadf <heneral@gmail.com>, 2021
-# zubr139, 2013,2016
+# zubr139, 2013,2016,2021
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-22 07:34-0500\n"
-"PO-Revision-Date: 2021-03-22 12:34+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"PO-Revision-Date: 2021-12-29 16:56+0000\n"
+"Last-Translator: zubr139\n"
 "Language-Team: Ukrainian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +23,7 @@ msgid "Advanced"
 msgstr "Розширений"
 
 msgid "Agent port"
-msgstr ""
+msgstr "Порт агента"
 
 msgid "Backports"
 msgstr "Задні порти"
@@ -76,13 +76,13 @@ msgstr ""
 msgid ""
 "Downloads SystemRescue ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr ""
+msgstr "Завантажує ISO SystemRescue і налаштовує завантажувач grub, щоб дозволити завантаження з ISO."
 
 msgid "Extras repo"
 msgstr "Додаткове repo"
 
 msgid "GParted Live"
-msgstr ""
+msgstr "GParted Live"
 
 msgid "General settings"
 msgstr "Загальні налаштування"
@@ -133,10 +133,10 @@ msgid "Install Docker will restart the docker service if daemon.json changes."
 msgstr "Install Docker перезапустить службу docker, якщо daemon.json зміниться."
 
 msgid "Install GParted Live"
-msgstr ""
+msgstr "Встановити GParted Live"
 
 msgid "Install GParted Live ISO ..."
-msgstr ""
+msgstr "Встановлення GParted Live ISO ..."
 
 msgid ""
 "Install Portainer will install the docker-ce package if not already "

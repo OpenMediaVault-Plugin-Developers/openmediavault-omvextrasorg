@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (6.0.6) stable; urgency=low
+
+  * Rewrite omvextras.list on every salt run
+  * Remove teamviewer repo
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 06 Feb 2022 16:56:33 -0600
+
 openmediavault-omvextrasorg (6.0.5) stable; urgency=low
 
   * Fix docker override directory creation
