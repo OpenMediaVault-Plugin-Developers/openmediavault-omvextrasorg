@@ -1,14 +1,8 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 
 Files: *
-Copyright: 2013-2021 OpenMediaVault Plugin Developers <plugins@omv-extras.org>
+Copyright: 2013-2022 OpenMediaVault Plugin Developers <plugins@omv-extras.org>
 License: GPL-3+
-
-Files: /var/www/openmediavault/images/plug.png
-       /var/www/openmediavault/images/plug.svg
-Copyright: IcoMoon <http://www.icomoon.io>
-IcoMoon <http://www.icomoon.io>
-License: GPLv3
 
 License: GPL-3+
  /usr/share/common-licenses/GPL-3

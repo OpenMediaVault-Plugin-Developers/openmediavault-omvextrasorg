@@ -1,6 +1,6 @@
 # @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
 # @author    Volker Theile <volker.theile@openmediavault.org>
-# @copyright Copyright (c) 2019-2021 OpenMediaVault Plugin Developers
+# @copyright Copyright (c) 2019-2022 OpenMediaVault Plugin Developers
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -20,19 +20,22 @@
 {% set arch = grains['osarch'] %}
 {% set oscodename = grains['oscodename'] %}
 {% set docker = salt['pillar.get']('default:OMV_DISABLE_DOCKER', False) %}
-{% set teamviewer = salt['pillar.get']('default:OMV_DISABLE_TEAMVIEWER', False) %}
 {% set dist = pillar['productinfo']['distribution'] %}
 {% set repo_url = salt['pillar.get']('default:OMV_EXTRAS_APT_REPOSITORY_URL', 'https://openmediavault-plugin-developers.github.io/packages/debian') -%}
 {% set docker_url = salt['pillar.get']('default:OMV_DOCKER_APT_REPOSITORY_URL', 'https://download.docker.com/linux/debian') -%}
 {% set docker_key = salt['pillar.get']('default:OMV_DOCKER_KEY_URL', 'https://download.docker.com/linux/ubuntu/gpg') -%}
-{% set teamviewer_url = salt['pillar.get']('default:OMV_TEAMVIEWER_APT_REPOSITORY_URL', 'http://linux.teamviewer.com/deb') -%}
-{% set teamviewer_key = salt['pillar.get']('default:OMV_TEAMVIEWER_KEY_URL', 'https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc') -%}
+{% set list = '/etc/apt/sources.list.d/omvextras.list' %}
+{% set pref = '/etc/apt/preferences.d/omvextras.pref' %}
+
+remove_apt_list_omvextras:
+  file.absent:
+    - name: "{{ list }}"
 
 omvextrasbaserepo:
   pkgrepo.managed:
     - humanname: omv-extras.org {{ dist }}
     - name: "deb {{ repo_url }} {{ dist }} main"
-    - file: /etc/apt/sources.list.d/omvextras.list
+    - file: "{{ list }}"
     - gpgcheck: 1
     - key_url: {{ repo_url }}/omvextras2026.asc
 
@@ -40,7 +43,7 @@ omvextrasbaserepo:
 
 "deb {{ repo_url }} {{ dist }}-testing main":
   pkgrepo.managed:
-    - file: /etc/apt/sources.list.d/omvextras.list
+    - file: "{{ list }}"
 
 {% else %}
 
@@ -53,7 +56,7 @@ omvextrasbaserepo:
 
 "deb [arch={{ arch }}] {{ docker_url }} {{ oscodename }} stable":
   pkgrepo.managed:
-    - file: /etc/apt/sources.list.d/omvextras.list
+    - file: "{{ list }}"
     - gpgcheck: 1
     - key_url: {{ docker_key }}
 
@@ -64,32 +67,17 @@ omvextrasbaserepo:
 
 {% endif %}
 
-{% if (arch == 'amd64' or arch == 'i386') and not teamviewer | to_bool %}
-
-"deb {{ teamviewer_url }} stable main":
-  pkgrepo.managed:
-    - file: /etc/apt/sources.list.d/omvextras.list
-    - gpgcheck: 1
-    - key_url: {{ teamviewer_key }}
-
-{% else %}
-
-"deb {{ teamviewer_url }} stable main":
-  pkgrepo.absent
-
-{% endif %}
-
 {% if not use_kernel_backports | to_bool %}
 
 remove_apt_pref_omvextras:
   file.absent:
-    - name: "/etc/apt/preferences.d/omvextras.pref"
+    - name: "{{ pref }}"
 
 {% else %}
 
 configure_apt_pref_omvextras:
   file.managed:
-    - name: "/etc/apt/preferences.d/omvextras.pref"
+    - name: "{{ pref }}"
     - source:
       - salt://{{ tpldir }}/files/etc-apt-preferences_d-omvextras_pref.j2
     - template: jinja
