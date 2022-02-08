@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-22 07:34-0500\n"
-"PO-Revision-Date: 2021-07-11 23:23+0000\n"
-"Last-Translator: haai so <s1097854603@gmail.com>\n"
+"POT-Creation-Date: 2022-02-08 16:42-0600\n"
+"PO-Revision-Date: 2022-02-08 22:43+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,6 +31,9 @@ msgstr "Backports"
 msgid "Cleaning Apt Files and Lists ..."
 msgstr "清除 Apt 文件及列表 ..."
 
+msgid "Cleaning apt ..."
+msgstr ""
+
 msgid "Clonezilla"
 msgstr "再生龙 Clonezilla"
 
@@ -39,6 +42,9 @@ msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
 msgstr "9090作为 Cockpit web 标签页的监听端口。"
+
+msgid "Containers"
+msgstr ""
 
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
@@ -59,6 +65,9 @@ msgstr "Docker "
 
 msgid "Docker Storage"
 msgstr "Docker 存储"
+
+msgid "Docker storage"
+msgstr ""
 
 msgid "Done."
 msgstr "完成。"
@@ -109,6 +118,9 @@ msgstr "如果改变了端口，请再次点击安装 Yacht 菜单。"
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr "Docker 存储路径不能使用共享文件夹路径"
+
+msgid "Image"
+msgstr ""
 
 msgid "Install"
 msgstr "安装"
@@ -178,11 +190,20 @@ msgstr "安装内核"
 msgid "Installing"
 msgstr "安装中"
 
+msgid "Installing Docker ..."
+msgstr ""
+
+msgid "Installing Portainer ..."
+msgstr ""
+
 msgid "Installing Proxmox kernel ..."
 msgstr "安装 Proxmox 内核中 ..."
 
 msgid "Installing Proxmox test kernel ..."
 msgstr "安装 Proxmox 测试版内核中 ..."
+
+msgid "Installing Yacht ..."
+msgstr ""
 
 msgid "Kernel"
 msgstr "内核"
@@ -192,6 +213,9 @@ msgstr "内核"
 
 msgid "More info"
 msgstr "更多信息"
+
+msgid "Name"
+msgstr ""
 
 msgid "Not installed"
 msgstr "未安装"
@@ -273,11 +297,23 @@ msgstr "删除 non-Proxmox 内核和头文件"
 msgid "Removing"
 msgstr "删除中"
 
+msgid "Removing Docker ..."
+msgstr ""
+
+msgid "Removing Portainer ..."
+msgstr ""
+
+msgid "Removing Yacht ..."
+msgstr ""
+
 msgid "Removing non-Proxmox kernels ..."
 msgstr "删除 non-Proxmox 内核中 ..."
 
 msgid "Restart"
 msgstr "重启"
+
+msgid "Restarting Docker ..."
+msgstr ""
 
 msgid "Restarting docker ..."
 msgstr "重启 Docker ..."
@@ -372,6 +408,12 @@ msgstr "解除保持当前内核中 ..."
 msgid "Updates"
 msgstr "更新"
 
+msgid "Use EE"
+msgstr ""
+
+msgid "Use business edition. This version requires a license."
+msgstr ""
+
 msgid "Use legacy"
 msgstr "使用 legacy"
 
@@ -413,6 +455,9 @@ msgstr "dist-upgrade"
 
 msgid "n/a"
 msgstr "n/a"
+
+msgid "omv-extras"
+msgstr ""
 
 msgid "omv-update"
 msgstr "omv-update"

@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-22 07:34-0500\n"
-"PO-Revision-Date: 2021-12-14 13:57+0000\n"
-"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
+"POT-Creation-Date: 2022-02-08 16:42-0600\n"
+"PO-Revision-Date: 2022-02-08 22:43+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,6 +31,9 @@ msgstr "Přenesené z novějšího do staršího vydání (backports)"
 msgid "Cleaning Apt Files and Lists ..."
 msgstr "Čistění souborů a seznamů Apt…"
 
+msgid "Cleaning apt ..."
+msgstr ""
+
 msgid "Clonezilla"
 msgstr "Clonezilla"
 
@@ -39,6 +42,9 @@ msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
 msgstr "Webové rozhraní Cockpit se nachází na portu 9090."
+
+msgid "Containers"
+msgstr ""
 
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
@@ -59,6 +65,9 @@ msgstr "Docker"
 
 msgid "Docker Storage"
 msgstr "Docker úložiště"
+
+msgid "Docker storage"
+msgstr ""
 
 msgid "Done."
 msgstr "Hotovo."
@@ -109,6 +118,9 @@ msgstr "Pokud se port změní, klikněte znovu na Nainstalovat v nabídce Yacht"
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr "Neplatný popis umístění úložiště pro docker – není možné použít popisy umístění /sharedfolders"
+
+msgid "Image"
+msgstr ""
 
 msgid "Install"
 msgstr "Naistalovat"
@@ -178,11 +190,20 @@ msgstr "Nainstalovaná jádra operačního systému:"
 msgid "Installing"
 msgstr "Instaluje se"
 
+msgid "Installing Docker ..."
+msgstr ""
+
+msgid "Installing Portainer ..."
+msgstr ""
+
 msgid "Installing Proxmox kernel ..."
 msgstr "Instaluje se jádro z Proxmox…"
 
 msgid "Installing Proxmox test kernel ..."
 msgstr "Instaluje se testovací jádro z Proxmox…"
+
+msgid "Installing Yacht ..."
+msgstr ""
 
 msgid "Kernel"
 msgstr "Jádro"
@@ -192,6 +213,9 @@ msgstr "Jádra"
 
 msgid "More info"
 msgstr "Další informace"
+
+msgid "Name"
+msgstr ""
 
 msgid "Not installed"
 msgstr "Nenaistalováno"
@@ -273,11 +297,23 @@ msgstr "Odebrat jádra a hlavičkové soubory nepocházející z Proxmox"
 msgid "Removing"
 msgstr "Odebírá se"
 
+msgid "Removing Docker ..."
+msgstr ""
+
+msgid "Removing Portainer ..."
+msgstr ""
+
+msgid "Removing Yacht ..."
+msgstr ""
+
 msgid "Removing non-Proxmox kernels ..."
 msgstr "Odebírání jader nepocházejících z Proxmox…"
 
 msgid "Restart"
 msgstr "Restartovat"
+
+msgid "Restarting Docker ..."
+msgstr ""
 
 msgid "Restarting docker ..."
 msgstr "Restartování docker…"
@@ -372,6 +408,12 @@ msgstr "Ruší se podržení stávající verze jádra…"
 msgid "Updates"
 msgstr "Aktualizace"
 
+msgid "Use EE"
+msgstr ""
+
+msgid "Use business edition. This version requires a license."
+msgstr ""
+
 msgid "Use legacy"
 msgstr "Použít legacy"
 
@@ -413,6 +455,9 @@ msgstr "dist-upgrade"
 
 msgid "n/a"
 msgstr "n/a"
+
+msgid "omv-extras"
+msgstr ""
 
 msgid "omv-update"
 msgstr "omv-update"

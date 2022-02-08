@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-22 07:34-0500\n"
-"PO-Revision-Date: 2021-03-22 12:34+0000\n"
+"POT-Creation-Date: 2022-02-08 16:42-0600\n"
+"PO-Revision-Date: 2022-02-08 22:43+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -33,6 +33,9 @@ msgstr "Backports"
 msgid "Cleaning Apt Files and Lists ..."
 msgstr "Очистка Apt файлов и списков ..."
 
+msgid "Cleaning apt ..."
+msgstr ""
+
 msgid "Clonezilla"
 msgstr "Clonezilla"
 
@@ -41,6 +44,9 @@ msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
 msgstr "Cockpit прослушивает порт 9090 для веб-интерфейса."
+
+msgid "Containers"
+msgstr ""
 
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
@@ -61,6 +67,9 @@ msgstr "Докер"
 
 msgid "Docker Storage"
 msgstr "Докер Хранилище"
+
+msgid "Docker storage"
+msgstr ""
 
 msgid "Done."
 msgstr "Готово."
@@ -111,6 +120,9 @@ msgstr ""
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr "Неверный путь хранения докера - нельзя использовать пути /sharedfolders"
+
+msgid "Image"
+msgstr ""
 
 msgid "Install"
 msgstr "Установить"
@@ -180,10 +192,19 @@ msgstr "Установленные ядра"
 msgid "Installing"
 msgstr "Установка"
 
+msgid "Installing Docker ..."
+msgstr ""
+
+msgid "Installing Portainer ..."
+msgstr ""
+
 msgid "Installing Proxmox kernel ..."
 msgstr "Установка ядра Proxmox ..."
 
 msgid "Installing Proxmox test kernel ..."
+msgstr ""
+
+msgid "Installing Yacht ..."
 msgstr ""
 
 msgid "Kernel"
@@ -193,6 +214,9 @@ msgid "Kernels"
 msgstr "Ядра"
 
 msgid "More info"
+msgstr ""
+
+msgid "Name"
 msgstr ""
 
 msgid "Not installed"
@@ -275,11 +299,23 @@ msgstr "Удалить не Proxmox ядра и заголовки"
 msgid "Removing"
 msgstr "Удаление"
 
+msgid "Removing Docker ..."
+msgstr ""
+
+msgid "Removing Portainer ..."
+msgstr ""
+
+msgid "Removing Yacht ..."
+msgstr ""
+
 msgid "Removing non-Proxmox kernels ..."
 msgstr "Удаление не-Proxmox ядер ..."
 
 msgid "Restart"
 msgstr "Повторный запуск"
+
+msgid "Restarting Docker ..."
+msgstr ""
 
 msgid "Restarting docker ..."
 msgstr "Перезапускается docker ..."
@@ -374,6 +410,12 @@ msgstr "Прекращаем удерживать текущее ядро ..."
 msgid "Updates"
 msgstr "Обновления"
 
+msgid "Use EE"
+msgstr ""
+
+msgid "Use business edition. This version requires a license."
+msgstr ""
+
 msgid "Use legacy"
 msgstr ""
 
@@ -415,6 +457,9 @@ msgstr "dist-upgrade"
 
 msgid "n/a"
 msgstr "n/a"
+
+msgid "omv-extras"
+msgstr ""
 
 msgid "omv-update"
 msgstr "omv-update"

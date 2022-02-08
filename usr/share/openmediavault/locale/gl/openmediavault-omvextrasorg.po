@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-22 07:34-0500\n"
-"PO-Revision-Date: 2021-04-27 08:42+0000\n"
-"Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
+"POT-Creation-Date: 2022-02-08 16:42-0600\n"
+"PO-Revision-Date: 2022-02-08 22:43+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Galician (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,6 +30,9 @@ msgstr "Backports"
 msgid "Cleaning Apt Files and Lists ..."
 msgstr "Limpando os ficheiros de Apt e as listas…"
 
+msgid "Cleaning apt ..."
+msgstr ""
+
 msgid "Clonezilla"
 msgstr "Clonezilla"
 
@@ -38,6 +41,9 @@ msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
 msgstr "Cockpit escoita no porto 9000 a interface web."
+
+msgid "Containers"
+msgstr ""
 
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
@@ -58,6 +64,9 @@ msgstr "Docker"
 
 msgid "Docker Storage"
 msgstr " Almacenamiento de Docker"
+
+msgid "Docker storage"
+msgstr ""
 
 msgid "Done."
 msgstr "Feito"
@@ -108,6 +117,9 @@ msgstr "Se se cambia o porto, prema de novo en Instalar no menú Yacht."
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr "Ruta de almacenamento Docker incorrecta: non se poden usar rutas de /cartfoles_compartidos"
+
+msgid "Image"
+msgstr ""
 
 msgid "Install"
 msgstr "Instalar"
@@ -177,11 +189,20 @@ msgstr "Núcleos instalados"
 msgid "Installing"
 msgstr "Instalando"
 
+msgid "Installing Docker ..."
+msgstr ""
+
+msgid "Installing Portainer ..."
+msgstr ""
+
 msgid "Installing Proxmox kernel ..."
 msgstr "Instalando o núcleo Proxmox…"
 
 msgid "Installing Proxmox test kernel ..."
 msgstr "Instalando o núcleo de proba Proxmox…"
+
+msgid "Installing Yacht ..."
+msgstr ""
 
 msgid "Kernel"
 msgstr "Núcleo"
@@ -191,6 +212,9 @@ msgstr "Núcleos"
 
 msgid "More info"
 msgstr "Máis información"
+
+msgid "Name"
+msgstr ""
 
 msgid "Not installed"
 msgstr "Sen instalar"
@@ -272,11 +296,23 @@ msgstr "Retirar os núcleos e as cabeceiras non Proxmox"
 msgid "Removing"
 msgstr "Retirando"
 
+msgid "Removing Docker ..."
+msgstr ""
+
+msgid "Removing Portainer ..."
+msgstr ""
+
+msgid "Removing Yacht ..."
+msgstr ""
+
 msgid "Removing non-Proxmox kernels ..."
 msgstr "Retirando os núcleos non Proxmox…"
 
 msgid "Restart"
 msgstr "Reiniciar"
+
+msgid "Restarting Docker ..."
+msgstr ""
 
 msgid "Restarting docker ..."
 msgstr "Reiniciando o Docker…"
@@ -371,6 +407,12 @@ msgstr "Liberando o núcleo actual…"
 msgid "Updates"
 msgstr "Actualizacións"
 
+msgid "Use EE"
+msgstr ""
+
+msgid "Use business edition. This version requires a license."
+msgstr ""
+
 msgid "Use legacy"
 msgstr "Usar a versión legada"
 
@@ -412,6 +454,9 @@ msgstr "dist-upgrade"
 
 msgid "n/a"
 msgstr "n/d"
+
+msgid "omv-extras"
+msgstr ""
 
 msgid "omv-update"
 msgstr "omv-update"

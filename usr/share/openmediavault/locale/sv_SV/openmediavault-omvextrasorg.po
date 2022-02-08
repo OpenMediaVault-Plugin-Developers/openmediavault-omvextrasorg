@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-22 07:34-0500\n"
-"PO-Revision-Date: 2021-08-10 21:41+0000\n"
-"Last-Translator: Jonatan Nyberg <jonatan@autistici.org>\n"
+"POT-Creation-Date: 2022-02-08 16:42-0600\n"
+"PO-Revision-Date: 2022-02-08 22:43+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Swedish (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,6 +31,9 @@ msgstr "Backports"
 msgid "Cleaning Apt Files and Lists ..."
 msgstr "Rensar Apt-filer och listor ..."
 
+msgid "Cleaning apt ..."
+msgstr ""
+
 msgid "Clonezilla"
 msgstr "Clonezilla"
 
@@ -39,6 +42,9 @@ msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
 msgstr "Cockpit lyssnar på port 9090 för webbgränssnittet."
+
+msgid "Containers"
+msgstr ""
 
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
@@ -59,6 +65,9 @@ msgstr "Docker"
 
 msgid "Docker Storage"
 msgstr "Docker-lagring"
+
+msgid "Docker storage"
+msgstr ""
 
 msgid "Done."
 msgstr "Klart."
@@ -109,6 +118,9 @@ msgstr "Om porten ändras klickar du på Installera i Yacht-menyn igen."
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr "Olaglig docker-lagringssökväg - kan inte använda /sharedfolders-sökvägar"
+
+msgid "Image"
+msgstr ""
 
 msgid "Install"
 msgstr "Installera"
@@ -178,11 +190,20 @@ msgstr "Installerade kärnor"
 msgid "Installing"
 msgstr "Installerar"
 
+msgid "Installing Docker ..."
+msgstr ""
+
+msgid "Installing Portainer ..."
+msgstr ""
+
 msgid "Installing Proxmox kernel ..."
 msgstr "Installerar Proxmox-kärna ..."
 
 msgid "Installing Proxmox test kernel ..."
 msgstr "Installerar Proxmox-testkärna ..."
+
+msgid "Installing Yacht ..."
+msgstr ""
 
 msgid "Kernel"
 msgstr "Kärna"
@@ -192,6 +213,9 @@ msgstr "Kärnor"
 
 msgid "More info"
 msgstr "Mer info"
+
+msgid "Name"
+msgstr ""
 
 msgid "Not installed"
 msgstr "Inte installerad"
@@ -273,11 +297,23 @@ msgstr "Ta bort icke-Proxmox-kärnor och rubriker"
 msgid "Removing"
 msgstr "Tar bort"
 
+msgid "Removing Docker ..."
+msgstr ""
+
+msgid "Removing Portainer ..."
+msgstr ""
+
+msgid "Removing Yacht ..."
+msgstr ""
+
 msgid "Removing non-Proxmox kernels ..."
 msgstr "Tar bort icke-Proxmox-kärnor ..."
 
 msgid "Restart"
 msgstr "Starta om"
+
+msgid "Restarting Docker ..."
+msgstr ""
 
 msgid "Restarting docker ..."
 msgstr "Startar om docker ..."
@@ -372,6 +408,12 @@ msgstr ""
 msgid "Updates"
 msgstr "Uppdateringar"
 
+msgid "Use EE"
+msgstr ""
+
+msgid "Use business edition. This version requires a license."
+msgstr ""
+
 msgid "Use legacy"
 msgstr ""
 
@@ -412,6 +454,9 @@ msgid "dist-upgrade"
 msgstr "dist-upgrade"
 
 msgid "n/a"
+msgstr ""
+
+msgid "omv-extras"
 msgstr ""
 
 msgid "omv-update"

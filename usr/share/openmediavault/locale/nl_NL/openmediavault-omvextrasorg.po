@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-22 07:34-0500\n"
-"PO-Revision-Date: 2021-03-22 12:34+0000\n"
+"POT-Creation-Date: 2022-02-08 16:42-0600\n"
+"PO-Revision-Date: 2022-02-08 22:43+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -31,6 +31,9 @@ msgstr "Backports"
 msgid "Cleaning Apt Files and Lists ..."
 msgstr "Apt-bestanden en lijsten opschonen ..."
 
+msgid "Cleaning apt ..."
+msgstr ""
+
 msgid "Clonezilla"
 msgstr "Clonezilla"
 
@@ -39,6 +42,9 @@ msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
 msgstr "Cockpit luistert op poort 9090 voor de webinterface."
+
+msgid "Containers"
+msgstr ""
 
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
@@ -59,6 +65,9 @@ msgstr "Docker"
 
 msgid "Docker Storage"
 msgstr "Docker-opslag"
+
+msgid "Docker storage"
+msgstr ""
 
 msgid "Done."
 msgstr "Klaar."
@@ -109,6 +118,9 @@ msgstr "Als de poort is gewijzigd, klikt u nogmaals op Installeren in het Yacht-
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr "Ongeldig Docker-opslagpad - kan geen gebruik maken van /sharedfolders paden"
+
+msgid "Image"
+msgstr ""
 
 msgid "Install"
 msgstr "Installeren"
@@ -178,10 +190,19 @@ msgstr "Geïnstalleerde Kernels"
 msgid "Installing"
 msgstr "Installeren"
 
+msgid "Installing Docker ..."
+msgstr ""
+
+msgid "Installing Portainer ..."
+msgstr ""
+
 msgid "Installing Proxmox kernel ..."
 msgstr "Proxmox-kernel installeren ..."
 
 msgid "Installing Proxmox test kernel ..."
+msgstr ""
+
+msgid "Installing Yacht ..."
 msgstr ""
 
 msgid "Kernel"
@@ -192,6 +213,9 @@ msgstr "Kernels"
 
 msgid "More info"
 msgstr "Meer informatie"
+
+msgid "Name"
+msgstr ""
 
 msgid "Not installed"
 msgstr "Niet geïnstalleerd"
@@ -273,11 +297,23 @@ msgstr "Verwijder niet-Proxmox-kernels en headers"
 msgid "Removing"
 msgstr "Verwijderen"
 
+msgid "Removing Docker ..."
+msgstr ""
+
+msgid "Removing Portainer ..."
+msgstr ""
+
+msgid "Removing Yacht ..."
+msgstr ""
+
 msgid "Removing non-Proxmox kernels ..."
 msgstr "Niet-Proxmox-kernels verwijderen ..."
 
 msgid "Restart"
 msgstr "Herstarten"
+
+msgid "Restarting Docker ..."
+msgstr ""
 
 msgid "Restarting docker ..."
 msgstr "Docker opnieuw starten ..."
@@ -372,6 +408,12 @@ msgstr "Ongedaan maken van de huidige kernel ..."
 msgid "Updates"
 msgstr "Updates"
 
+msgid "Use EE"
+msgstr ""
+
+msgid "Use business edition. This version requires a license."
+msgstr ""
+
 msgid "Use legacy"
 msgstr "Gebruik legacy"
 
@@ -413,6 +455,9 @@ msgstr "dist-upgrade"
 
 msgid "n/a"
 msgstr "n.v.t."
+
+msgid "omv-extras"
+msgstr ""
 
 msgid "omv-update"
 msgstr "omv-update"

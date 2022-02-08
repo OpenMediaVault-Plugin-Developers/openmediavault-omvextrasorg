@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-22 07:34-0500\n"
-"PO-Revision-Date: 2021-03-22 12:34+0000\n"
+"POT-Creation-Date: 2022-02-08 16:42-0600\n"
+"PO-Revision-Date: 2022-02-08 22:43+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -32,6 +32,9 @@ msgstr "Visszaportolások"
 msgid "Cleaning Apt Files and Lists ..."
 msgstr "Apt fájlok és listák ürítése…"
 
+msgid "Cleaning apt ..."
+msgstr ""
+
 msgid "Clonezilla"
 msgstr "Clonezilla"
 
@@ -40,6 +43,9 @@ msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
 msgstr "A Cockpit webes felhasználói felülete a 9090-es porton hallgat."
+
+msgid "Containers"
+msgstr ""
 
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
@@ -60,6 +66,9 @@ msgstr "Docker"
 
 msgid "Docker Storage"
 msgstr "Docker tároló"
+
+msgid "Docker storage"
+msgstr ""
 
 msgid "Done."
 msgstr "Kész."
@@ -109,6 +118,9 @@ msgid "If port is changed, click Install in the Yacht menu again."
 msgstr ""
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
+msgstr ""
+
+msgid "Image"
 msgstr ""
 
 msgid "Install"
@@ -179,10 +191,19 @@ msgstr "Telepített kernelek"
 msgid "Installing"
 msgstr "Telepítés"
 
+msgid "Installing Docker ..."
+msgstr ""
+
+msgid "Installing Portainer ..."
+msgstr ""
+
 msgid "Installing Proxmox kernel ..."
 msgstr "Proxmox kernel telepítése…"
 
 msgid "Installing Proxmox test kernel ..."
+msgstr ""
+
+msgid "Installing Yacht ..."
 msgstr ""
 
 msgid "Kernel"
@@ -192,6 +213,9 @@ msgid "Kernels"
 msgstr "Kernelek"
 
 msgid "More info"
+msgstr ""
+
+msgid "Name"
 msgstr ""
 
 msgid "Not installed"
@@ -274,10 +298,22 @@ msgstr "Nem Proxmox kernelek és fejlécek eltávolítása"
 msgid "Removing"
 msgstr "Eltávolítás"
 
+msgid "Removing Docker ..."
+msgstr ""
+
+msgid "Removing Portainer ..."
+msgstr ""
+
+msgid "Removing Yacht ..."
+msgstr ""
+
 msgid "Removing non-Proxmox kernels ..."
 msgstr "Nem Proxmox kernelek eltávolítása…"
 
 msgid "Restart"
+msgstr ""
+
+msgid "Restarting Docker ..."
 msgstr ""
 
 msgid "Restarting docker ..."
@@ -373,6 +409,12 @@ msgstr "Jelenlegi kernel elengedése…"
 msgid "Updates"
 msgstr "Frissítések"
 
+msgid "Use EE"
+msgstr ""
+
+msgid "Use business edition. This version requires a license."
+msgstr ""
+
 msgid "Use legacy"
 msgstr ""
 
@@ -414,6 +456,9 @@ msgstr "dist-upgrade"
 
 msgid "n/a"
 msgstr "nem értelmezett"
+
+msgid "omv-extras"
+msgstr ""
 
 msgid "omv-update"
 msgstr "omv-update"

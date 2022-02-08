@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-22 07:34-0500\n"
-"PO-Revision-Date: 2021-03-25 00:29+0000\n"
-"Last-Translator: Toshihiro Kan <kansuke4649@gmail.com>\n"
+"POT-Creation-Date: 2022-02-08 16:42-0600\n"
+"PO-Revision-Date: 2022-02-08 22:43+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,6 +30,9 @@ msgstr "バックポート"
 msgid "Cleaning Apt Files and Lists ..."
 msgstr "Aptのファイルとリストをクリーニングしています ..."
 
+msgid "Cleaning apt ..."
+msgstr ""
+
 msgid "Clonezilla"
 msgstr "Clonezilla"
 
@@ -38,6 +41,9 @@ msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
 msgstr "Cockpit のWebインタフェースはポート9090で待ち受けます。"
+
+msgid "Containers"
+msgstr ""
 
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
@@ -58,6 +64,9 @@ msgstr "Docker"
 
 msgid "Docker Storage"
 msgstr "Docker ストレージ"
+
+msgid "Docker storage"
+msgstr ""
 
 msgid "Done."
 msgstr "完了."
@@ -108,6 +117,9 @@ msgstr "ポートが変更された場合は、Yachtメニューのインスト�
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr "不正なdockerストレージのパス - /sharedfolders パスは使えません"
+
+msgid "Image"
+msgstr ""
 
 msgid "Install"
 msgstr "インストール"
@@ -177,11 +189,20 @@ msgstr "インストールされているカーネル"
 msgid "Installing"
 msgstr "インストール中"
 
+msgid "Installing Docker ..."
+msgstr ""
+
+msgid "Installing Portainer ..."
+msgstr ""
+
 msgid "Installing Proxmox kernel ..."
 msgstr "Proxmox カーネルをインストールしています ..."
 
 msgid "Installing Proxmox test kernel ..."
 msgstr "Proxmox テストカーネルをインストールしています ..."
+
+msgid "Installing Yacht ..."
+msgstr ""
 
 msgid "Kernel"
 msgstr "カーネル"
@@ -191,6 +212,9 @@ msgstr "カーネル"
 
 msgid "More info"
 msgstr "追加の情報"
+
+msgid "Name"
+msgstr ""
 
 msgid "Not installed"
 msgstr "未インストール"
@@ -272,11 +296,23 @@ msgstr "non-Proxmoxカーネルとヘッダーを削除する"
 msgid "Removing"
 msgstr "削除中"
 
+msgid "Removing Docker ..."
+msgstr ""
+
+msgid "Removing Portainer ..."
+msgstr ""
+
+msgid "Removing Yacht ..."
+msgstr ""
+
 msgid "Removing non-Proxmox kernels ..."
 msgstr "non-Proxmox カーネルを削除しています ..."
 
 msgid "Restart"
 msgstr "再起動"
+
+msgid "Restarting Docker ..."
+msgstr ""
 
 msgid "Restarting docker ..."
 msgstr "dockerを再起動中 ..."
@@ -371,6 +407,12 @@ msgstr "現在のカーネルの保持を解除しています ..."
 msgid "Updates"
 msgstr "アップデート"
 
+msgid "Use EE"
+msgstr ""
+
+msgid "Use business edition. This version requires a license."
+msgstr ""
+
 msgid "Use legacy"
 msgstr "レガシーを利用"
 
@@ -412,6 +454,9 @@ msgstr "dist-upgrade"
 
 msgid "n/a"
 msgstr "n/a"
+
+msgid "omv-extras"
+msgstr ""
 
 msgid "omv-update"
 msgstr "omv-update"

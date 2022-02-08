@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-22 07:34-0500\n"
-"PO-Revision-Date: 2021-12-29 16:56+0000\n"
-"Last-Translator: zubr139\n"
+"POT-Creation-Date: 2022-02-08 16:42-0600\n"
+"PO-Revision-Date: 2022-02-08 22:43+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,6 +31,9 @@ msgstr "Задні порти"
 msgid "Cleaning Apt Files and Lists ..."
 msgstr ""
 
+msgid "Cleaning apt ..."
+msgstr ""
+
 msgid "Clonezilla"
 msgstr "Clonezilla"
 
@@ -39,6 +42,9 @@ msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
 msgstr "Cockpit слухає через порт 9090 веб-інтерфейс."
+
+msgid "Containers"
+msgstr ""
 
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
@@ -59,6 +65,9 @@ msgstr "Docker"
 
 msgid "Docker Storage"
 msgstr "Зберігання Docker"
+
+msgid "Docker storage"
+msgstr ""
 
 msgid "Done."
 msgstr "Готово."
@@ -108,6 +117,9 @@ msgid "If port is changed, click Install in the Yacht menu again."
 msgstr ""
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
+msgstr ""
+
+msgid "Image"
 msgstr ""
 
 msgid "Install"
@@ -178,10 +190,19 @@ msgstr "Встановлені ядра"
 msgid "Installing"
 msgstr "Встановлення"
 
+msgid "Installing Docker ..."
+msgstr ""
+
+msgid "Installing Portainer ..."
+msgstr ""
+
 msgid "Installing Proxmox kernel ..."
 msgstr ""
 
 msgid "Installing Proxmox test kernel ..."
+msgstr ""
+
+msgid "Installing Yacht ..."
 msgstr ""
 
 msgid "Kernel"
@@ -192,6 +213,9 @@ msgstr "Ядра"
 
 msgid "More info"
 msgstr "Більше інформації"
+
+msgid "Name"
+msgstr ""
 
 msgid "Not installed"
 msgstr "Не встановлено"
@@ -273,11 +297,23 @@ msgstr ""
 msgid "Removing"
 msgstr "Видалення"
 
+msgid "Removing Docker ..."
+msgstr ""
+
+msgid "Removing Portainer ..."
+msgstr ""
+
+msgid "Removing Yacht ..."
+msgstr ""
+
 msgid "Removing non-Proxmox kernels ..."
 msgstr ""
 
 msgid "Restart"
 msgstr "Перезапустити"
+
+msgid "Restarting Docker ..."
+msgstr ""
 
 msgid "Restarting docker ..."
 msgstr ""
@@ -372,6 +408,12 @@ msgstr ""
 msgid "Updates"
 msgstr "Оновлення"
 
+msgid "Use EE"
+msgstr ""
+
+msgid "Use business edition. This version requires a license."
+msgstr ""
+
 msgid "Use legacy"
 msgstr ""
 
@@ -412,6 +454,9 @@ msgid "dist-upgrade"
 msgstr ""
 
 msgid "n/a"
+msgstr ""
+
+msgid "omv-extras"
 msgstr ""
 
 msgid "omv-update"

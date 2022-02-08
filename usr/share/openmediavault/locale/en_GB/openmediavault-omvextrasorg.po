@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-22 07:34-0500\n"
-"PO-Revision-Date: 2021-04-01 22:18+0000\n"
-"Last-Translator: Andi Chandler <andi@gowling.com>\n"
+"POT-Creation-Date: 2022-02-08 16:42-0600\n"
+"PO-Revision-Date: 2022-02-08 22:43+0000\n"
+"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: English (United Kingdom) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/en_GB/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,6 +30,9 @@ msgstr "Backports"
 msgid "Cleaning Apt Files and Lists ..."
 msgstr "Cleaning Apt Files and Lists ..."
 
+msgid "Cleaning apt ..."
+msgstr ""
+
 msgid "Clonezilla"
 msgstr "Clonezilla"
 
@@ -38,6 +41,9 @@ msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
 msgstr "Cockpit listens on port 9090 for the web interface."
+
+msgid "Containers"
+msgstr ""
 
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
@@ -58,6 +64,9 @@ msgstr "Docker"
 
 msgid "Docker Storage"
 msgstr "Docker Storage"
+
+msgid "Docker storage"
+msgstr ""
 
 msgid "Done."
 msgstr "Done."
@@ -108,6 +117,9 @@ msgstr "If port is changed, click Install in the Yacht menu again."
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr "Illegal Docker storage path - cannot use /sharedfolders paths"
+
+msgid "Image"
+msgstr ""
 
 msgid "Install"
 msgstr "Install"
@@ -177,11 +189,20 @@ msgstr "Installed Kernels"
 msgid "Installing"
 msgstr "Installing"
 
+msgid "Installing Docker ..."
+msgstr ""
+
+msgid "Installing Portainer ..."
+msgstr ""
+
 msgid "Installing Proxmox kernel ..."
 msgstr "Installing Proxmox kernel ..."
 
 msgid "Installing Proxmox test kernel ..."
 msgstr "Installing Proxmox test kernel ..."
+
+msgid "Installing Yacht ..."
+msgstr ""
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -191,6 +212,9 @@ msgstr "Kernels"
 
 msgid "More info"
 msgstr "More info"
+
+msgid "Name"
+msgstr ""
 
 msgid "Not installed"
 msgstr "Not installed"
@@ -272,11 +296,23 @@ msgstr "Remove non-Proxmox kernels and headers"
 msgid "Removing"
 msgstr "Removing"
 
+msgid "Removing Docker ..."
+msgstr ""
+
+msgid "Removing Portainer ..."
+msgstr ""
+
+msgid "Removing Yacht ..."
+msgstr ""
+
 msgid "Removing non-Proxmox kernels ..."
 msgstr "Removing non-Proxmox kernels ..."
 
 msgid "Restart"
 msgstr "Restart"
+
+msgid "Restarting Docker ..."
+msgstr ""
 
 msgid "Restarting docker ..."
 msgstr "Restarting Docker ..."
@@ -371,6 +407,12 @@ msgstr "Unholding current kernel ..."
 msgid "Updates"
 msgstr "Updates"
 
+msgid "Use EE"
+msgstr ""
+
+msgid "Use business edition. This version requires a license."
+msgstr ""
+
 msgid "Use legacy"
 msgstr "Use legacy"
 
@@ -412,6 +454,9 @@ msgstr "dist-upgrade"
 
 msgid "n/a"
 msgstr "n/a"
+
+msgid "omv-extras"
+msgstr ""
 
 msgid "omv-update"
 msgstr "omv-update"

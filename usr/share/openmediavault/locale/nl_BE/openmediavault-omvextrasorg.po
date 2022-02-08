@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-22 07:34-0500\n"
-"PO-Revision-Date: 2021-03-22 12:34+0000\n"
+"POT-Creation-Date: 2022-02-08 16:42-0600\n"
+"PO-Revision-Date: 2022-02-08 22:43+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Dutch (Belgium) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/nl_BE/)\n"
 "MIME-Version: 1.0\n"
@@ -29,6 +29,9 @@ msgstr ""
 msgid "Cleaning Apt Files and Lists ..."
 msgstr ""
 
+msgid "Cleaning apt ..."
+msgstr ""
+
 msgid "Clonezilla"
 msgstr ""
 
@@ -36,6 +39,9 @@ msgid "Cockpit"
 msgstr ""
 
 msgid "Cockpit listens on port 9090 for the web interface."
+msgstr ""
+
+msgid "Containers"
 msgstr ""
 
 msgid ""
@@ -56,6 +62,9 @@ msgid "Docker"
 msgstr ""
 
 msgid "Docker Storage"
+msgstr ""
+
+msgid "Docker storage"
 msgstr ""
 
 msgid "Done."
@@ -106,6 +115,9 @@ msgid "If port is changed, click Install in the Yacht menu again."
 msgstr ""
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
+msgstr ""
+
+msgid "Image"
 msgstr ""
 
 msgid "Install"
@@ -176,10 +188,19 @@ msgstr ""
 msgid "Installing"
 msgstr ""
 
+msgid "Installing Docker ..."
+msgstr ""
+
+msgid "Installing Portainer ..."
+msgstr ""
+
 msgid "Installing Proxmox kernel ..."
 msgstr ""
 
 msgid "Installing Proxmox test kernel ..."
+msgstr ""
+
+msgid "Installing Yacht ..."
 msgstr ""
 
 msgid "Kernel"
@@ -189,6 +210,9 @@ msgid "Kernels"
 msgstr ""
 
 msgid "More info"
+msgstr ""
+
+msgid "Name"
 msgstr ""
 
 msgid "Not installed"
@@ -271,10 +295,22 @@ msgstr ""
 msgid "Removing"
 msgstr ""
 
+msgid "Removing Docker ..."
+msgstr ""
+
+msgid "Removing Portainer ..."
+msgstr ""
+
+msgid "Removing Yacht ..."
+msgstr ""
+
 msgid "Removing non-Proxmox kernels ..."
 msgstr ""
 
 msgid "Restart"
+msgstr ""
+
+msgid "Restarting Docker ..."
 msgstr ""
 
 msgid "Restarting docker ..."
@@ -370,6 +406,12 @@ msgstr ""
 msgid "Updates"
 msgstr ""
 
+msgid "Use EE"
+msgstr ""
+
+msgid "Use business edition. This version requires a license."
+msgstr ""
+
 msgid "Use legacy"
 msgstr ""
 
@@ -410,6 +452,9 @@ msgid "dist-upgrade"
 msgstr ""
 
 msgid "n/a"
+msgstr ""
+
+msgid "omv-extras"
 msgstr ""
 
 msgid "omv-update"

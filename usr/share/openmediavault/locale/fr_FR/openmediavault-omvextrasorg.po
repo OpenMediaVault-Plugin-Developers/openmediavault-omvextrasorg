@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-22 07:34-0500\n"
-"PO-Revision-Date: 2021-03-22 12:34+0000\n"
+"POT-Creation-Date: 2022-02-08 16:42-0600\n"
+"PO-Revision-Date: 2022-02-08 22:43+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -33,6 +33,9 @@ msgstr "Rétroportages"
 msgid "Cleaning Apt Files and Lists ..."
 msgstr "Nettoyage des fichiers et listes d'Apt..."
 
+msgid "Cleaning apt ..."
+msgstr ""
+
 msgid "Clonezilla"
 msgstr "Clonezilla"
 
@@ -41,6 +44,9 @@ msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
 msgstr "Cockpit écoute sur le port 9090 pour l'interface web."
+
+msgid "Containers"
+msgstr ""
 
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
@@ -61,6 +67,9 @@ msgstr "Docker"
 
 msgid "Docker Storage"
 msgstr "Stockage Docker"
+
+msgid "Docker storage"
+msgstr ""
 
 msgid "Done."
 msgstr "Fait."
@@ -111,6 +120,9 @@ msgstr "Si le port a changé, cliquez à nouveau Installer dans le menu Yacht."
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr "Chemin de stockage docker incorrect - impossible d'utiliser les chemins /sharedfolders"
+
+msgid "Image"
+msgstr ""
 
 msgid "Install"
 msgstr "Installer"
@@ -180,10 +192,19 @@ msgstr "Noyaux installés"
 msgid "Installing"
 msgstr "Installation en cours"
 
+msgid "Installing Docker ..."
+msgstr ""
+
+msgid "Installing Portainer ..."
+msgstr ""
+
 msgid "Installing Proxmox kernel ..."
 msgstr "Installation de Proxmox kernel en cours..."
 
 msgid "Installing Proxmox test kernel ..."
+msgstr ""
+
+msgid "Installing Yacht ..."
 msgstr ""
 
 msgid "Kernel"
@@ -194,6 +215,9 @@ msgstr "Noyaux"
 
 msgid "More info"
 msgstr "Plus d'info"
+
+msgid "Name"
+msgstr ""
 
 msgid "Not installed"
 msgstr "Non installé"
@@ -275,11 +299,23 @@ msgstr "Supprimer les noyaux et les en-têtes non-Proxmox"
 msgid "Removing"
 msgstr "Suppression en cours"
 
+msgid "Removing Docker ..."
+msgstr ""
+
+msgid "Removing Portainer ..."
+msgstr ""
+
+msgid "Removing Yacht ..."
+msgstr ""
+
 msgid "Removing non-Proxmox kernels ..."
 msgstr "Suppression des non-Proxmox kernels en cours..."
 
 msgid "Restart"
 msgstr "Redémarrer"
+
+msgid "Restarting Docker ..."
+msgstr ""
 
 msgid "Restarting docker ..."
 msgstr "Redémarrage de docker..."
@@ -374,6 +410,12 @@ msgstr "Libération du noyau actuel ..."
 msgid "Updates"
 msgstr "Mises à jour"
 
+msgid "Use EE"
+msgstr ""
+
+msgid "Use business edition. This version requires a license."
+msgstr ""
+
 msgid "Use legacy"
 msgstr "Utiliser la version legacy"
 
@@ -415,6 +457,9 @@ msgstr "dist-upgrade"
 
 msgid "n/a"
 msgstr "n/a"
+
+msgid "omv-extras"
+msgstr ""
 
 msgid "omv-update"
 msgstr "omv-update"
