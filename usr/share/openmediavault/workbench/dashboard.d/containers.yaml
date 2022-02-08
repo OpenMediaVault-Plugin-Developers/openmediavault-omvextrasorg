@@ -1,0 +1,28 @@
+version: "1.0"
+type: dashboard-widget
+data:
+  id: 33ebe908-8878-11ec-991b-f356096873ad
+  title: _("Containers")
+  type: datatable
+  permissions:
+    role:
+    - admin
+  datatable:
+    columns:
+    - name: _("Name")
+      prop: name
+      flexGrow: 1
+      sortable: true
+    - name: _("Image")
+      prop: image
+      sortable: true
+      flexGrow: 2
+    - name: _("Status")
+      prop: status
+      flexGrow: 1
+      sortable: true
+    store:
+      proxy:
+        service: OmvExtras
+        get:
+          method: getContainers
