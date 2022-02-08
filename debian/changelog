@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (6.0.7) stable; urgency=low
+
+  * Add container status widget
+  * Add docker status to service status widget
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 08 Feb 2022 16:42:13 -0600
+
 openmediavault-omvextrasorg (6.0.6) stable; urgency=low
 
   * Rewrite omvextras.list on every salt run
