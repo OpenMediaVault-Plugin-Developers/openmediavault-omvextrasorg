@@ -105,6 +105,8 @@ setConfig()
     echo "Agent port:: ${agentport}"
     webport=$(omv_config_get "${xpath}/webport")
     echo "Web port:: ${webport}"
+    enabletls=$(omv_config_get "${xpath}/enabletls")
+    echo "Enable TLS:: ${enabletls}"
     yachtport=$(omv_config_get "${xpath}/yachtport")
     echo "Yacht port:: ${yachtport}"
     ee=$(omv_config_get "${xpath}/ee")
@@ -415,9 +417,44 @@ installPortainer()
     docker volume create "${portainerVolume}"
   fi
 
+  # Extra configuration
+  declare -a opts=()
+  declare -a args=()
+  local omvtlsenabled certuuid
+
+  omvtlsenabled="$(omv_config_get "/config/webadmin/enablessl")"
+
+  if (( enabletls )) && (( omvtlsenabled )); then
+    certuuid="$(omv_config_get "/config/webadmin/sslcertificateref")"
+
+    # https://docs.portainer.io/v/ce-2.11/advanced/ssl#docker-standalone
+    args+=(
+      --sslcert /certs/openmediavault.crt
+      --sslkey /certs/openmediavault.key
+    )
+    opts+=(
+      -p "$webport":9443
+      -v /etc/ssl/certs/openmediavault-"$certuuid".crt:/certs/openmediavault.crt:ro
+      -v /etc/ssl/private/openmediavault-"$certuuid".key:/certs/openmediavault.key:ro
+    )
+  else
+    if (( enabletls )); then
+      echo "Cannot enable TLS for portainer as it is not enabled for OMV."
+    fi
+    opts+=(-p "$webport":9000)
+  fi
+
   # pull and start portainer
   echo "Pulling and starting ${portainerImage} ..."
-  docker run -d --name "${portainerName}" -p ${webport}:9000 -p ${agentport}:8000 --restart=unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v ${portainerVolume}:/data ${portainerImage}
+
+  docker run -d --name "$portainerName" \
+    --restart=unless-stopped \
+    -p "$agentport":8000 \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v "$portainerVolume":/data \
+    "${opts[@]}" \
+    "$portainerImage" "${args[@]}"
+
   if [ $? -gt 0 ]; then
     echo "Something went wrong trying to pull and start portainer ..."
   fi

@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
-# 
+#
 # Translators:
 # Axel Cantenys, 2017-2018,2021
 # Etienne V, 2020
@@ -415,6 +415,9 @@ msgstr ""
 
 msgid "Use business edition. This version requires a license."
 msgstr ""
+
+msgid "Use OMV's TLS configuration for Portainer's admin interface."
+msgstr "Utiliser la configuration TLS de OMV pour l'interface d'adminitration de Portainer."
 
 msgid "Use legacy"
 msgstr "Utiliser la version legacy"

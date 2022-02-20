@@ -25,7 +25,12 @@ data:
           min: 1
           max: 65535
           patternType: port
-          required: true 
+          required: true
+      - type: checkbox
+        name: enabletls
+        label: _("Enable TLS")
+        hint: _("Use OMV's TLS configuration")
+        value: true
       - type: numberInput
         name: agentport
         label: _("Agent port")
@@ -34,7 +39,7 @@ data:
           min: 1
           max: 65535
           patternType: port
-          required: true 
+          required: true
       - type: checkbox
         name: ee
         label: _("Use EE")
