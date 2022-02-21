@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-08 16:42-0600\n"
-"PO-Revision-Date: 2022-02-08 22:43+0000\n"
+"POT-Creation-Date: 2022-02-21 07:55-0600\n"
+"PO-Revision-Date: 2022-02-21 13:55+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Swedish (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/sv/)\n"
 "MIME-Version: 1.0\n"
@@ -86,6 +86,9 @@ msgid ""
 "Downloads SystemRescue ISO and configures grub bootloader to allow booting "
 "from ISO."
 msgstr "Hämtar SystemRescue ISO och konfigurerar grub bootloader för att möjliggöra start från ISO."
+
+msgid "Enable TLS"
+msgstr ""
 
 msgid "Extras repo"
 msgstr ""
@@ -409,6 +412,12 @@ msgid "Updates"
 msgstr "Uppdateringar"
 
 msgid "Use EE"
+msgstr ""
+
+msgid "Use OMV's TLS configuration"
+msgstr ""
+
+msgid "Use OMV's TLS configuration for Portainer's admin interface."
 msgstr ""
 
 msgid "Use business edition. This version requires a license."

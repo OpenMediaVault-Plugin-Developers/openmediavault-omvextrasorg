@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# Raul Fernandez Garcia <raulfg3@gmail.com>, 2014-2021
+# Raul Fernandez Garcia <raulfg3@gmail.com>, 2014-2022
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-08 16:42-0600\n"
-"PO-Revision-Date: 2022-02-08 22:43+0000\n"
+"POT-Creation-Date: 2022-02-21 07:55-0600\n"
+"PO-Revision-Date: 2022-02-21 13:55+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,7 @@ msgid "Cleaning Apt Files and Lists ..."
 msgstr "Limpiando listas y Archivos Apt ..."
 
 msgid "Cleaning apt ..."
-msgstr ""
+msgstr "Limpiando apt ..."
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
@@ -43,7 +43,7 @@ msgid "Cockpit listens on port 9090 for the web interface."
 msgstr "Cockpit está a la escucha en el puerto 9000 para mostrar su interfaz."
 
 msgid "Containers"
-msgstr ""
+msgstr "Contenedores"
 
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
@@ -66,7 +66,7 @@ msgid "Docker Storage"
 msgstr "Almacenamiento de Dockers"
 
 msgid "Docker storage"
-msgstr ""
+msgstr "Almacén de dockers"
 
 msgid "Done."
 msgstr "Hecho."
@@ -85,6 +85,9 @@ msgid ""
 "Downloads SystemRescue ISO and configures grub bootloader to allow booting "
 "from ISO."
 msgstr "Descargar SystemRescue ISO y configurar el cargador grub para permitir el arranque desde la ISO."
+
+msgid "Enable TLS"
+msgstr ""
 
 msgid "Extras repo"
 msgstr "Repositorio de Extras"
@@ -119,7 +122,7 @@ msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr "Ruta ilegal - No usar la carpeta sharedfolders"
 
 msgid "Image"
-msgstr ""
+msgstr "Imagen"
 
 msgid "Install"
 msgstr "Instalar"
@@ -190,10 +193,10 @@ msgid "Installing"
 msgstr "Instalando"
 
 msgid "Installing Docker ..."
-msgstr ""
+msgstr "Instalando docker ..."
 
 msgid "Installing Portainer ..."
-msgstr ""
+msgstr "Instalando Portainer ..."
 
 msgid "Installing Proxmox kernel ..."
 msgstr "Instalado Kernel Proxmox ..."
@@ -202,7 +205,7 @@ msgid "Installing Proxmox test kernel ..."
 msgstr "Instalando Test kernel Proxmox"
 
 msgid "Installing Yacht ..."
-msgstr ""
+msgstr "Instalando Yacht ..."
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -214,7 +217,7 @@ msgid "More info"
 msgstr "Más información"
 
 msgid "Name"
-msgstr ""
+msgstr "Nombre"
 
 msgid "Not installed"
 msgstr "No Instalado"
@@ -297,13 +300,13 @@ msgid "Removing"
 msgstr "Eliminando"
 
 msgid "Removing Docker ..."
-msgstr ""
+msgstr "Eliminando Docker ..."
 
 msgid "Removing Portainer ..."
-msgstr ""
+msgstr "Eliminando Portainer ..."
 
 msgid "Removing Yacht ..."
-msgstr ""
+msgstr "Eliminando Yacht ..."
 
 msgid "Removing non-Proxmox kernels ..."
 msgstr "Eliminando kernels no-proxmox"
@@ -312,7 +315,7 @@ msgid "Restart"
 msgstr "Reiniciar"
 
 msgid "Restarting Docker ..."
-msgstr ""
+msgstr "Reiniciando Docker ..."
 
 msgid "Restarting docker ..."
 msgstr "Reiniciando Docker ..."
@@ -408,10 +411,16 @@ msgid "Updates"
 msgstr "Actualizaciones"
 
 msgid "Use EE"
+msgstr "Usar EE"
+
+msgid "Use OMV's TLS configuration"
+msgstr ""
+
+msgid "Use OMV's TLS configuration for Portainer's admin interface."
 msgstr ""
 
 msgid "Use business edition. This version requires a license."
-msgstr ""
+msgstr "Usar Edición Empresa (EE) es necesario una licencia."
 
 msgid "Use legacy"
 msgstr "Usar Heredado"
@@ -456,7 +465,7 @@ msgid "n/a"
 msgstr "n/d"
 
 msgid "omv-extras"
-msgstr ""
+msgstr "omv-extras"
 
 msgid "omv-update"
 msgstr "omv-update"

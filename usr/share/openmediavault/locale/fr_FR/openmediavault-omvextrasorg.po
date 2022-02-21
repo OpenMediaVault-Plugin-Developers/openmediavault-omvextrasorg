@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
-#
+# 
 # Translators:
 # Axel Cantenys, 2017-2018,2021
 # Etienne V, 2020
@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-08 16:42-0600\n"
-"PO-Revision-Date: 2022-02-08 22:43+0000\n"
+"POT-Creation-Date: 2022-02-21 07:55-0600\n"
+"PO-Revision-Date: 2022-02-21 13:55+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -88,6 +88,9 @@ msgid ""
 "Downloads SystemRescue ISO and configures grub bootloader to allow booting "
 "from ISO."
 msgstr "Télécharge l'ISO de SystemRescue et configure le gestionnaire de démarrage GRUB pour permettre le démarrage à partir de l'ISO."
+
+msgid "Enable TLS"
+msgstr ""
 
 msgid "Extras repo"
 msgstr "Dépôt des extras"
@@ -413,11 +416,14 @@ msgstr "Mises à jour"
 msgid "Use EE"
 msgstr ""
 
-msgid "Use business edition. This version requires a license."
+msgid "Use OMV's TLS configuration"
 msgstr ""
 
 msgid "Use OMV's TLS configuration for Portainer's admin interface."
-msgstr "Utiliser la configuration TLS de OMV pour l'interface d'adminitration de Portainer."
+msgstr ""
+
+msgid "Use business edition. This version requires a license."
+msgstr ""
 
 msgid "Use legacy"
 msgstr "Utiliser la version legacy"

@@ -5,7 +5,7 @@
 # Translators:
 # Dampflok_HD, 2021
 # David Hönel <davidh1990@gmx.de>, 2013-2015
-# Ettore Atalan <atalanttore@googlemail.com>, 2014-2016,2019-2020
+# Ettore Atalan <atalanttore@googlemail.com>, 2014-2016,2019-2020,2022
 # Raiko, 2016
 # René P. <phortexx@gmx.net>, 2014
 # WastlJ, 2014-2015
@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-08 16:42-0600\n"
-"PO-Revision-Date: 2022-02-08 22:43+0000\n"
+"POT-Creation-Date: 2022-02-21 07:55-0600\n"
+"PO-Revision-Date: 2022-02-21 13:55+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -49,7 +49,7 @@ msgid "Cockpit listens on port 9090 for the web interface."
 msgstr "Cockpit lauscht auf Port 9090 nach der Web-Schnittstelle."
 
 msgid "Containers"
-msgstr ""
+msgstr "Container"
 
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
@@ -72,7 +72,7 @@ msgid "Docker Storage"
 msgstr "Docker-Speicher"
 
 msgid "Docker storage"
-msgstr ""
+msgstr "Docker-Speicher"
 
 msgid "Done."
 msgstr "Fertig."
@@ -91,6 +91,9 @@ msgid ""
 "Downloads SystemRescue ISO and configures grub bootloader to allow booting "
 "from ISO."
 msgstr "SystemRescuecd ISO herunterladen und konfiguriert den Grub-Bootloader diese ISO beim starten zu laden."
+
+msgid "Enable TLS"
+msgstr ""
 
 msgid "Extras repo"
 msgstr ""
@@ -125,7 +128,7 @@ msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr ""
 
 msgid "Image"
-msgstr ""
+msgstr "Abbild"
 
 msgid "Install"
 msgstr "Installieren"
@@ -196,10 +199,10 @@ msgid "Installing"
 msgstr "Wird installiert"
 
 msgid "Installing Docker ..."
-msgstr ""
+msgstr "Docker wird installiert ..."
 
 msgid "Installing Portainer ..."
-msgstr ""
+msgstr "Portainer wird installiert ..."
 
 msgid "Installing Proxmox kernel ..."
 msgstr "Proxmox-Kernel wird installiert ..."
@@ -208,7 +211,7 @@ msgid "Installing Proxmox test kernel ..."
 msgstr "Proxmox-Test-Kernel wird installiert ..."
 
 msgid "Installing Yacht ..."
-msgstr ""
+msgstr "Yacht wird installiert ..."
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -220,7 +223,7 @@ msgid "More info"
 msgstr "Weitere Informationen"
 
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 msgid "Not installed"
 msgstr "Nicht installiert"
@@ -303,13 +306,13 @@ msgid "Removing"
 msgstr "Wird entfernt"
 
 msgid "Removing Docker ..."
-msgstr ""
+msgstr "Docker wird entfernt ..."
 
 msgid "Removing Portainer ..."
-msgstr ""
+msgstr "Portainer wird entfernt ..."
 
 msgid "Removing Yacht ..."
-msgstr ""
+msgstr "Yacht wird entfernt ..."
 
 msgid "Removing non-Proxmox kernels ..."
 msgstr "Nicht-Proxmox-Kernel werden entfernt ..."
@@ -318,7 +321,7 @@ msgid "Restart"
 msgstr "Neustart"
 
 msgid "Restarting Docker ..."
-msgstr ""
+msgstr "Docker wird neu gestartet ..."
 
 msgid "Restarting docker ..."
 msgstr "Docker wird neu gestartet ..."
@@ -414,6 +417,12 @@ msgid "Updates"
 msgstr "Aktualisierungen"
 
 msgid "Use EE"
+msgstr ""
+
+msgid "Use OMV's TLS configuration"
+msgstr ""
+
+msgid "Use OMV's TLS configuration for Portainer's admin interface."
 msgstr ""
 
 msgid "Use business edition. This version requires a license."

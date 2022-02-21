@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-08 16:42-0600\n"
+"POT-Creation-Date: 2022-02-21 07:55-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -374,10 +374,13 @@ msgstr ""
 msgid "Use EE"
 msgstr ""
 
-msgid "Use business edition. This version requires a license."
+msgid "Use OMV's TLS configuration"
 msgstr ""
 
 msgid "Use OMV's TLS configuration for Portainer's admin interface."
+msgstr ""
+
+msgid "Use business edition. This version requires a license."
 msgstr ""
 
 msgid "Use legacy"
