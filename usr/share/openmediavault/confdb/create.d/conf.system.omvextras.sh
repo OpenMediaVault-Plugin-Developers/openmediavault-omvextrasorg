@@ -36,7 +36,7 @@ if ! omv_config_exists "/config/system/omvextras/webport"; then
     omv_config_add_key "/config/system/omvextras" "webport" "9000"
 fi
 if ! omv_config_exists "/config/system/omvextras/enabletls"; then
-    omv_config_add_key "/config/system/omvextras" "enabletls" "1"
+    omv_config_add_key "/config/system/omvextras" "enabletls" "0"
 fi
 if ! omv_config_exists "/config/system/omvextras/agentport"; then
     omv_config_add_key "/config/system/omvextras" "agentport" "8000"
