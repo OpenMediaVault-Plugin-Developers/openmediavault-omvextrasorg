@@ -44,13 +44,17 @@
 				"maximum": 65535,
 				"required": true
 			},
+			"ee": {
+				"type": "boolean",
+				"required": false
+			},
 			"enabletls": {
 				"type": "boolean",
 				"required": false
 			},
-			"ee": {
-				"type": "boolean",
-				"required": false
+			"tlscertificateref": {
+				"type": "string",
+				"required": true
 			}
 		}
 	}

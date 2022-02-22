@@ -26,11 +26,6 @@ data:
           max: 65535
           patternType: port
           required: true
-      - type: checkbox
-        name: enabletls
-        label: _("Enable TLS")
-        hint: _("Use OMV's TLS configuration")
-        value: true
       - type: numberInput
         name: agentport
         label: _("Agent port")
@@ -45,6 +40,20 @@ data:
         label: _("Use EE")
         hint: _("Use business edition. This version requires a license.")
         value: false
+      - type: checkbox
+        name: enabletls
+        label: _("SSL/TLS enabled")
+        value: false
+      - type: sslCertSelect
+        name: tlscertificateref
+        label: _("Certificate")
+        hasEmptyOption: true
+        value: ''
+        modifiers:
+          - type: enabled
+            constraint: { operator: 'truthy', arg0: { prop: 'enabletls' } }
+        validators:
+          requiredIf: { operator: 'truthy', arg0: { prop: 'enabletls' } }
     buttons:
       - template: submit
       - template: cancel

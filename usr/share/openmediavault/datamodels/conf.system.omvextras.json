@@ -27,10 +27,6 @@
 			"maximum": 65535,
 			"default": 8000
 		},
-		"enabletls": {
-			"type": "boolean",
-			"default": true
-		},
 		"yachtport": {
 			"type": "integer",
 			"minimum": 1000,
@@ -40,6 +36,20 @@
 		"ee": {
 			"type": "boolean",
 			"default": false
+		},
+		"enabletls": {
+			"type": "boolean",
+			"default": false
+		},
+		"tlscertificateref": {
+			"type": "string",
+			"oneOf": [{
+				"type": "string",
+				"format": "uuidv4"
+			},{
+				"type": "string",
+				"maxLength": 0
+			}]
 		}
 	}
 }

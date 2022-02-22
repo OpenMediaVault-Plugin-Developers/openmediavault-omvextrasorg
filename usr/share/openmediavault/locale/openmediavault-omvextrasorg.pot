@@ -77,9 +77,6 @@ msgstr ""
 msgid "Downloads SystemRescue ISO and configures grub bootloader to allow booting from ISO."
 msgstr ""
 
-msgid "Enable TLS"
-msgstr ""
-
 msgid "Extras repo"
 msgstr ""
 
@@ -372,12 +369,6 @@ msgid "Updates"
 msgstr ""
 
 msgid "Use EE"
-msgstr ""
-
-msgid "Use OMV's TLS configuration"
-msgstr ""
-
-msgid "Use OMV's TLS configuration for Portainer's admin interface."
 msgstr ""
 
 msgid "Use business edition. This version requires a license."
