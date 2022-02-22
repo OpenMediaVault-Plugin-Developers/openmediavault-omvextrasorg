@@ -189,8 +189,9 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         }
         $object->set('agentport',$params['agentport']);
         $object->set('webport',$params['webport']);
-        $object->set('enabletls',$params['enabletls']);
         $object->set('ee',$params['ee']);
+        $object->set('enabletls',$params['enabletls']);
+        $object->set('tlscertificateref',$params['tlscertificateref']);
         $db->set($object);
         // Return the configuration object.
         return $object->getAssoc();

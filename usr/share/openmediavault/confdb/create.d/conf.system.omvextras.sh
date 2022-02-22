@@ -35,9 +35,6 @@ fi
 if ! omv_config_exists "/config/system/omvextras/webport"; then
     omv_config_add_key "/config/system/omvextras" "webport" "9000"
 fi
-if ! omv_config_exists "/config/system/omvextras/enabletls"; then
-    omv_config_add_key "/config/system/omvextras" "enabletls" "0"
-fi
 if ! omv_config_exists "/config/system/omvextras/agentport"; then
     omv_config_add_key "/config/system/omvextras" "agentport" "8000"
 fi
@@ -46,6 +43,12 @@ if ! omv_config_exists "/config/system/omvextras/yachtport"; then
 fi
 if ! omv_config_exists "/config/system/omvextras/ee"; then
     omv_config_add_key "/config/system/omvextras" "ee" "0"
+fi
+if ! omv_config_exists "/config/system/omvextras/enabletls"; then
+    omv_config_add_key "/config/system/omvextras" "enabletls" "0"
+fi
+if ! omv_config_exists "/config/system/omvextras/tlscertificateref"; then
+    omv_config_add_key "/config/system/omvextras" "tlscertificateref" ""
 fi
 
 # remove backports from sources.list

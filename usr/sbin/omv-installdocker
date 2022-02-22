@@ -105,8 +105,6 @@ setConfig()
     echo "Agent port:: ${agentport}"
     webport=$(omv_config_get "${xpath}/webport")
     echo "Web port:: ${webport}"
-    enabletls=$(omv_config_get "${xpath}/enabletls")
-    echo "Enable TLS:: ${enabletls}"
     yachtport=$(omv_config_get "${xpath}/yachtport")
     echo "Yacht port:: ${yachtport}"
     ee=$(omv_config_get "${xpath}/ee")
@@ -115,6 +113,21 @@ setConfig()
       portainerImage="${portainerImage/ce/ee}"
     fi
     echo "image:: ${portainerImage}"
+
+    enabletls=$(omv_config_get "${xpath}/enabletls")
+    echo "Enable TLS:: ${enabletls}"
+    if (( enabletls )); then
+      local tlscert_uuid tlscert_name missing_crt missing_key
+      tlscert_uuid=$(omv_config_get "${xpath}/tlscertificateref")
+      tlscert_name="$(omv_config_get "//system/certificates/sslcertificate[uuid = '${tlscert_uuid}']/comment")"
+      tlscert_crt="${OMV_SSL_CERTIFICATE_DIR}/certs/${OMV_SSL_CERTIFICATE_PREFIX:-openmediavault-}${tlscert_uuid}.crt"
+      tlscert_key="${OMV_SSL_CERTIFICATE_DIR}/private/${OMV_SSL_CERTIFICATE_PREFIX:-openmediavault-}${tlscert_uuid}.key"
+      if [ ! -f "$tlscert_crt" ]; then missing_crt=1; fi
+      if [ ! -f "$tlscert_key" ]; then missing_key=1; fi
+      echo "TLS certificate:: ${tlscert_name}"
+      echo "  crt: ${missing_crt:+(NOT FOUND) }${tlscert_crt}"
+      echo "  key: ${missing_key:+(NOT FOUND) }${tlscert_key}"
+    fi
   fi
 }
 
@@ -418,15 +431,9 @@ installPortainer()
   fi
 
   # Extra configuration
-  declare -a opts=()
-  declare -a args=()
-  local omvtlsenabled certuuid
+  local opts args
 
-  omvtlsenabled="$(omv_config_get "/config/webadmin/enablessl")"
-
-  if (( enabletls )) && (( omvtlsenabled )); then
-    certuuid="$(omv_config_get "/config/webadmin/sslcertificateref")"
-
+  if (( enabletls )) && [ -f "$tlscert_crt" ] && [ -f "$tlscert_key" ]; then
     # https://docs.portainer.io/v/ce-2.11/advanced/ssl#docker-standalone
     args+=(
       --sslcert /certs/openmediavault.crt
@@ -434,13 +441,13 @@ installPortainer()
     )
     opts+=(
       -p "$webport":9443
-      -v /etc/ssl/certs/openmediavault-"$certuuid".crt:/certs/openmediavault.crt:ro
-      -v /etc/ssl/private/openmediavault-"$certuuid".key:/certs/openmediavault.key:ro
+      -v "$tlscert_crt":/certs/openmediavault.crt:ro
+      -v "$tlscert_key":/certs/openmediavault.key:ro
     )
+  elif (( enabletls )); then
+    echo "The selected certificate cannot be used."
+    opts+=(-p "$webport":9443)
   else
-    if (( enabletls )); then
-      echo "Cannot enable TLS for portainer as it is not enabled for OMV."
-    fi
     opts+=(-p "$webport":9000)
   fi
 
