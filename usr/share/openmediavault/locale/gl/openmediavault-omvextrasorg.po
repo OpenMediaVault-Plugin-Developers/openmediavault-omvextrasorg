@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-21 07:55-0600\n"
-"PO-Revision-Date: 2022-02-21 13:55+0000\n"
+"POT-Creation-Date: 2022-02-22 12:02-0600\n"
+"PO-Revision-Date: 2022-02-22 18:02+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Galician (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -26,6 +26,9 @@ msgstr "Porto do axente"
 
 msgid "Backports"
 msgstr "Backports"
+
+msgid "Certificate"
+msgstr ""
 
 msgid "Cleaning Apt Files and Lists ..."
 msgstr "Limpando os ficheiros de Apt e as listas…"
@@ -85,9 +88,6 @@ msgid ""
 "Downloads SystemRescue ISO and configures grub bootloader to allow booting "
 "from ISO."
 msgstr "Descargar a ISO de SystemRescue e configurar o cargador de arrinque grub para permitir o arrinque dende a ISO."
-
-msgid "Enable TLS"
-msgstr ""
 
 msgid "Extras repo"
 msgstr "Repositorio de extras"
@@ -345,6 +345,9 @@ msgid ""
 "password: <b>live</b>"
 msgstr "O servidor SSH está activado de xeito predeterminado. Inicie sesión co nome de usuario: <b>user</b> e o contrasinal: <b>live</b>"
 
+msgid "SSL/TLS enabled"
+msgstr ""
+
 msgid ""
 "Save will rewrite daemon.json and restart docker if Docker Storage path has "
 "changed."
@@ -411,12 +414,6 @@ msgid "Updates"
 msgstr "Actualizacións"
 
 msgid "Use EE"
-msgstr ""
-
-msgid "Use OMV's TLS configuration"
-msgstr ""
-
-msgid "Use OMV's TLS configuration for Portainer's admin interface."
 msgstr ""
 
 msgid "Use business edition. This version requires a license."

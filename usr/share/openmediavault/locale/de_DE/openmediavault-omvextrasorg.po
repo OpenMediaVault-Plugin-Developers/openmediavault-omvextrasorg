@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-21 07:55-0600\n"
-"PO-Revision-Date: 2022-02-21 13:55+0000\n"
+"POT-Creation-Date: 2022-02-22 12:02-0600\n"
+"PO-Revision-Date: 2022-02-22 18:02+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -33,11 +33,14 @@ msgstr ""
 msgid "Backports"
 msgstr "Rückportierungen"
 
+msgid "Certificate"
+msgstr ""
+
 msgid "Cleaning Apt Files and Lists ..."
 msgstr "Apt-Dateien und -Listen werden bereinigt ..."
 
 msgid "Cleaning apt ..."
-msgstr ""
+msgstr "apt wird bereinigt ..."
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
@@ -91,9 +94,6 @@ msgid ""
 "Downloads SystemRescue ISO and configures grub bootloader to allow booting "
 "from ISO."
 msgstr "SystemRescuecd ISO herunterladen und konfiguriert den Grub-Bootloader diese ISO beim starten zu laden."
-
-msgid "Enable TLS"
-msgstr ""
 
 msgid "Extras repo"
 msgstr ""
@@ -351,6 +351,9 @@ msgid ""
 "password: <b>live</b>"
 msgstr "SSH-Server ist standardmäßig aktiviert. Anmeldung mit Benutzername: <b>user</b> und Passwort: <b>live</b>"
 
+msgid "SSL/TLS enabled"
+msgstr ""
+
 msgid ""
 "Save will rewrite daemon.json and restart docker if Docker Storage path has "
 "changed."
@@ -417,13 +420,7 @@ msgid "Updates"
 msgstr "Aktualisierungen"
 
 msgid "Use EE"
-msgstr ""
-
-msgid "Use OMV's TLS configuration"
-msgstr ""
-
-msgid "Use OMV's TLS configuration for Portainer's admin interface."
-msgstr ""
+msgstr "EE verwenden"
 
 msgid "Use business edition. This version requires a license."
 msgstr ""

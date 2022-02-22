@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# kochin <kochinc@outlook.com>, 2014-2021
+# kochin <kochinc@outlook.com>, 2014-2022
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-21 07:55-0600\n"
-"PO-Revision-Date: 2022-02-21 13:55+0000\n"
+"POT-Creation-Date: 2022-02-22 12:02-0600\n"
+"PO-Revision-Date: 2022-02-22 18:02+0000\n"
 "Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -27,11 +27,14 @@ msgstr "代理服務連接埠"
 msgid "Backports"
 msgstr "向後移植"
 
+msgid "Certificate"
+msgstr ""
+
 msgid "Cleaning Apt Files and Lists ..."
 msgstr "清理 Apt 檔案及清單中 …"
 
 msgid "Cleaning apt ..."
-msgstr ""
+msgstr "清理 apt ..."
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
@@ -43,7 +46,7 @@ msgid "Cockpit listens on port 9090 for the web interface."
 msgstr "Cockpit 在連接埠 9090 監聽網站介面。"
 
 msgid "Containers"
-msgstr ""
+msgstr "容器"
 
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
@@ -66,7 +69,7 @@ msgid "Docker Storage"
 msgstr "Docker 儲存位置"
 
 msgid "Docker storage"
-msgstr ""
+msgstr "Docker 儲存空間"
 
 msgid "Done."
 msgstr "完成。"
@@ -85,9 +88,6 @@ msgid ""
 "Downloads SystemRescue ISO and configures grub bootloader to allow booting "
 "from ISO."
 msgstr "下載 SystemRescue ISO，並將 grub 啟動載入器設置成允許從 ISO 啟動。"
-
-msgid "Enable TLS"
-msgstr ""
 
 msgid "Extras repo"
 msgstr "Extras 套件庫"
@@ -122,7 +122,7 @@ msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr "非法的 docker 儲存路徑 - 不能使用 /sharedfolders 路徑"
 
 msgid "Image"
-msgstr ""
+msgstr "影像"
 
 msgid "Install"
 msgstr "安裝"
@@ -193,10 +193,10 @@ msgid "Installing"
 msgstr "安裝中"
 
 msgid "Installing Docker ..."
-msgstr ""
+msgstr "安裝 Docker 中 ..."
 
 msgid "Installing Portainer ..."
-msgstr ""
+msgstr "安裝 Portainer 中 ..."
 
 msgid "Installing Proxmox kernel ..."
 msgstr "安裝 Proxmox 核心中 ..."
@@ -205,7 +205,7 @@ msgid "Installing Proxmox test kernel ..."
 msgstr "安裝 Proxmox 測試核心 ..."
 
 msgid "Installing Yacht ..."
-msgstr ""
+msgstr "安裝 Yacht 中 ..."
 
 msgid "Kernel"
 msgstr "系統核心"
@@ -217,7 +217,7 @@ msgid "More info"
 msgstr "更多資訊"
 
 msgid "Name"
-msgstr ""
+msgstr "名稱"
 
 msgid "Not installed"
 msgstr "未安裝"
@@ -300,13 +300,13 @@ msgid "Removing"
 msgstr "移除中"
 
 msgid "Removing Docker ..."
-msgstr ""
+msgstr "移除 Docker 中 ..."
 
 msgid "Removing Portainer ..."
-msgstr ""
+msgstr "移除 Portainer 中 ..."
 
 msgid "Removing Yacht ..."
-msgstr ""
+msgstr "移除 Yacht 中 ..."
 
 msgid "Removing non-Proxmox kernels ..."
 msgstr "移除 非Proxmox 系統核心中 ..."
@@ -315,7 +315,7 @@ msgid "Restart"
 msgstr "重新啟動"
 
 msgid "Restarting Docker ..."
-msgstr ""
+msgstr "重新啟動 Docker 中 ..."
 
 msgid "Restarting docker ..."
 msgstr "重新啟動 docker 中 ..."
@@ -344,6 +344,9 @@ msgid ""
 "SSH server is enabled by default.  Login with username: <b>user</b> and "
 "password: <b>live</b>"
 msgstr "SSH 伺服器被預設為啟用。請以用戶名稱：<b>user</b> 和密碼：<b>live</b> 來登入"
+
+msgid "SSL/TLS enabled"
+msgstr ""
 
 msgid ""
 "Save will rewrite daemon.json and restart docker if Docker Storage path has "
@@ -411,16 +414,10 @@ msgid "Updates"
 msgstr "更新"
 
 msgid "Use EE"
-msgstr ""
-
-msgid "Use OMV's TLS configuration"
-msgstr ""
-
-msgid "Use OMV's TLS configuration for Portainer's admin interface."
-msgstr ""
+msgstr "使用 EE"
 
 msgid "Use business edition. This version requires a license."
-msgstr ""
+msgstr "使用商業版本。該版本須要有許可證。"
 
 msgid "Use legacy"
 msgstr "使用舊版"
@@ -465,7 +462,7 @@ msgid "n/a"
 msgstr "不適用"
 
 msgid "omv-extras"
-msgstr ""
+msgstr "omv-extras"
 
 msgid "omv-update"
 msgstr "omv-update"

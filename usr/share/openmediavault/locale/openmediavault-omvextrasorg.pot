@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-21 07:55-0600\n"
+"POT-Creation-Date: 2022-02-22 12:02-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,6 +24,9 @@ msgid "Agent port"
 msgstr ""
 
 msgid "Backports"
+msgstr ""
+
+msgid "Certificate"
 msgstr ""
 
 msgid "Cleaning Apt Files and Lists ..."
@@ -306,6 +309,9 @@ msgid "SSH server is enabled by default.  Login with username: <b>root</b> and p
 msgstr ""
 
 msgid "SSH server is enabled by default.  Login with username: <b>user</b> and password: <b>live</b>"
+msgstr ""
+
+msgid "SSL/TLS enabled"
 msgstr ""
 
 msgid "Save will rewrite daemon.json and restart docker if Docker Storage path has changed."
