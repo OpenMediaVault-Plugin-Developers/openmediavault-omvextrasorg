@@ -433,7 +433,7 @@ installPortainer()
   # Extra configuration
   local opts args
 
-  if (( enabletls )) && [ -f "$tlscert_crt" ] && [ -f "$tlscert_key" ]; then
+  if (( enabletls )) && [ -f "${tlscert_crt}" ] && [ -f "${tlscert_key}" ]; then
     # https://docs.portainer.io/v/ce-2.11/advanced/ssl#docker-standalone
     args+=(
       --sslcert /certs/openmediavault.crt
@@ -446,21 +446,23 @@ installPortainer()
     )
   elif (( enabletls )); then
     echo "The selected certificate cannot be used."
-    opts+=(-p "$webport":9443)
+    opts+=(-p "${webport}":9443)
   else
-    opts+=(-p "$webport":9000)
+    opts+=(-p "${webport}":9000)
   fi
 
   # pull and start portainer
-  echo "Pulling and starting ${portainerImage} ..."
+  echo "Pulling ${portainerImage} ..."
+  docker pull "${portainerImage}"
 
-  docker run -d --name "$portainerName" \
+  echo "Starting ${portainerImage} ..."
+  docker run -d --name "${portainerName}" \
     --restart=unless-stopped \
-    -p "$agentport":8000 \
+    -p "${agentport}":8000 \
     -v /var/run/docker.sock:/var/run/docker.sock \
-    -v "$portainerVolume":/data \
+    -v "${portainerVolume}":/data \
     "${opts[@]}" \
-    "$portainerImage" "${args[@]}"
+    "${portainerImage}" "${args[@]}"
 
   if [ $? -gt 0 ]; then
     echo "Something went wrong trying to pull and start portainer ..."

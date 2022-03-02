@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (6.0.9) UNRELEASED; urgency=medium
+
+  * Improve portainer install error output
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 02 Mar 2022 11:45:08 -0600
+
 openmediavault-omvextrasorg (6.0.8) stable; urgency=low
 
   * Add TLS support for portainer's admin UI
