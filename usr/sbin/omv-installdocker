@@ -349,6 +349,7 @@ configOverride()
 [Unit]
 After=local-fs.target $(systemctl list-units --type=mount | grep /srv | awk '{ print $1 }' | tr '\n' ' ')
 EOF
+  chmod -v 644 ${dockerOverrideFile}
   echo "Reload systemd daemon ..."
   systemctl daemon-reload
 }
