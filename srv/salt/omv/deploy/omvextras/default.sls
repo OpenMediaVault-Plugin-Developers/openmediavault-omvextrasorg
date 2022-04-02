@@ -23,7 +23,7 @@
 {% set dist = pillar['productinfo']['distribution'] %}
 {% set repo_url = salt['pillar.get']('default:OMV_EXTRAS_APT_REPOSITORY_URL', 'https://openmediavault-plugin-developers.github.io/packages/debian') -%}
 {% set docker_url = salt['pillar.get']('default:OMV_DOCKER_APT_REPOSITORY_URL', 'https://download.docker.com/linux/debian') -%}
-{% set docker_key = salt['pillar.get']('default:OMV_DOCKER_KEY_URL', 'https://download.docker.com/linux/ubuntu/gpg') -%}
+{% set docker_key = salt['pillar.get']('default:OMV_DOCKER_KEY_URL', 'https://download.docker.com/linux/debian/gpg') -%}
 {% set list = '/etc/apt/sources.list.d/omvextras.list' %}
 {% set pref = '/etc/apt/preferences.d/omvextras.pref' %}
 
