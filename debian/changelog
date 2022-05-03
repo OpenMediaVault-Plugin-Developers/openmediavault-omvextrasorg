@@ -1,8 +1,8 @@
-openmediavault-omvextrasorg (6.0.9) UNRELEASED; urgency=medium
+openmediavault-omvextrasorg (6.0.9) stable; urgency=low
 
   * Improve portainer install error output
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 02 Mar 2022 11:45:08 -0600
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 03 May 2022 05:43:39 -0500
 
 openmediavault-omvextrasorg (6.0.8) stable; urgency=low
 

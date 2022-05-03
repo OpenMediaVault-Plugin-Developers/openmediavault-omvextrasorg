@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# Andi Chandler <andi@gowling.com>, 2015-2017,2019-2021
+# Andi Chandler <andi@gowling.com>, 2015-2017,2019-2022
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-22 12:02-0600\n"
-"PO-Revision-Date: 2022-02-22 18:02+0000\n"
-"Last-Translator: Aaron Murray <aaronmurray27@gmail.com>\n"
+"POT-Creation-Date: 2022-05-03 05:43-0500\n"
+"PO-Revision-Date: 2013-10-28 11:35+0000\n"
+"Last-Translator: Andi Chandler <andi@gowling.com>, 2015-2017,2019-2022\n"
 "Language-Team: English (United Kingdom) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/en_GB/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,13 +28,13 @@ msgid "Backports"
 msgstr "Backports"
 
 msgid "Certificate"
-msgstr ""
+msgstr "Certificate"
 
 msgid "Cleaning Apt Files and Lists ..."
 msgstr "Cleaning Apt Files and Lists ..."
 
 msgid "Cleaning apt ..."
-msgstr ""
+msgstr "Cleaning apt ..."
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
@@ -46,7 +46,7 @@ msgid "Cockpit listens on port 9090 for the web interface."
 msgstr "Cockpit listens on port 9090 for the web interface."
 
 msgid "Containers"
-msgstr ""
+msgstr "Containers"
 
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
@@ -69,7 +69,7 @@ msgid "Docker Storage"
 msgstr "Docker Storage"
 
 msgid "Docker storage"
-msgstr ""
+msgstr "Docker storage"
 
 msgid "Done."
 msgstr "Done."
@@ -122,7 +122,7 @@ msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr "Illegal Docker storage path - cannot use /sharedfolders paths"
 
 msgid "Image"
-msgstr ""
+msgstr "Image"
 
 msgid "Install"
 msgstr "Install"
@@ -193,10 +193,10 @@ msgid "Installing"
 msgstr "Installing"
 
 msgid "Installing Docker ..."
-msgstr ""
+msgstr "Installing Docker ..."
 
 msgid "Installing Portainer ..."
-msgstr ""
+msgstr "Installing Portainer ..."
 
 msgid "Installing Proxmox kernel ..."
 msgstr "Installing Proxmox kernel ..."
@@ -205,7 +205,7 @@ msgid "Installing Proxmox test kernel ..."
 msgstr "Installing Proxmox test kernel ..."
 
 msgid "Installing Yacht ..."
-msgstr ""
+msgstr "Installing Yacht ..."
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -217,7 +217,7 @@ msgid "More info"
 msgstr "More info"
 
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 msgid "Not installed"
 msgstr "Not installed"
@@ -300,13 +300,13 @@ msgid "Removing"
 msgstr "Removing"
 
 msgid "Removing Docker ..."
-msgstr ""
+msgstr "Removing Docker ..."
 
 msgid "Removing Portainer ..."
-msgstr ""
+msgstr "Removing Portainer ..."
 
 msgid "Removing Yacht ..."
-msgstr ""
+msgstr "Removing Yacht ..."
 
 msgid "Removing non-Proxmox kernels ..."
 msgstr "Removing non-Proxmox kernels ..."
@@ -315,7 +315,7 @@ msgid "Restart"
 msgstr "Restart"
 
 msgid "Restarting Docker ..."
-msgstr ""
+msgstr "Restarting Docker ..."
 
 msgid "Restarting docker ..."
 msgstr "Restarting Docker ..."
@@ -346,7 +346,7 @@ msgid ""
 msgstr "SSH server is enabled by default.  Login with username: <b>user</b> and password: <b>live</b>"
 
 msgid "SSL/TLS enabled"
-msgstr ""
+msgstr "SSL/TLS enabled"
 
 msgid ""
 "Save will rewrite daemon.json and restart docker if Docker Storage path has "
@@ -414,10 +414,10 @@ msgid "Updates"
 msgstr "Updates"
 
 msgid "Use EE"
-msgstr ""
+msgstr "Use EE"
 
 msgid "Use business edition. This version requires a license."
-msgstr ""
+msgstr "Use business edition. This version requires a licence."
 
 msgid "Use legacy"
 msgstr "Use legacy"
@@ -462,7 +462,7 @@ msgid "n/a"
 msgstr "n/a"
 
 msgid "omv-extras"
-msgstr ""
+msgstr "omv-extras"
 
 msgid "omv-update"
 msgstr "omv-update"
