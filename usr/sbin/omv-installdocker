@@ -73,7 +73,7 @@ setCockpitPackages()
 
 setDockerPackages()
 {
-  if [[ "${arch}" == "i386" ]] || ! grep -q 'download.docker.com' ${omvextrasList}; then
+  if [[ "${arch}" == "i386" ]] || ! grep -q 'docker' ${omvextrasList}; then
     # there is no i386 docker-ce package in the docker repos
     # if docker repos are disabled, use debian repos as well
     # use docker.io from Debian repo
