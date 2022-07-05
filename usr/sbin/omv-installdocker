@@ -386,7 +386,7 @@ installDocker()
       rm -fv "${dockerCompose}"
     fi
     # create new symlink
-    ln -s "${dockerComposeDeb}" "${dockerCompose}"
+    ln -sv "${dockerComposeDeb}" "${dockerCompose}"
   fi
 }
 

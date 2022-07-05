@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (6.1) UNRELEASED; urgency=medium
+
+  * Install docker-compose v2 using docker-compose-plugin package in docker repo
+  * Fix issue #74 - detect docker repo when using docker apt repo variable
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 05 Jul 2022 15:55:58 -0500
+
 openmediavault-omvextrasorg (6.0.9) stable; urgency=low
 
   * Improve portainer install error output
