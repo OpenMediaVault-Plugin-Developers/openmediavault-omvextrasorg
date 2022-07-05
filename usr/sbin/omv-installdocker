@@ -12,21 +12,13 @@ declare -l arch=""
 # cockpit
 declare cockpitPackages=""
 
-# docker environment variables
-OMV_DOCKER_COMPOSE_URL=${OMV_DOCKER_COMPOSE_URL:-"https://github.com/docker/compose/releases/download"}
-OMV_DOCKER_COMPOSE_LS_URL=${OMV_DOCKER_COMPOSE_LS_URL:-"https://github.com/linuxserver/docker-docker-compose/releases/download"}
-
 # docker
 declare dockerPackages=""
 declare dockerStorage=""
-declare -i download=0
 daemonJson="/etc/docker/daemon.json"
 dockerBin="/usr/bin/docker"
 dockerCompose="/usr/local/bin/docker-compose"
-dockerComposeVersion="1.28.4"
-dockerComposeBuild="ls31"
-dockerComposeUrl="${OMV_DOCKER_COMPOSE_URL}/${dockerComposeVersion}/docker-compose-Linux-x86_64"
-dockerComposeUrlLs="${OMV_DOCKER_COMPOSE_LS_URL}/${dockerComposeVersion}-${dockerComposeBuild}/docker-compose-"
+dockerComposeDeb="/usr/libexec/docker/cli-plugins/docker-compose"
 dockerOverrideDir="/etc/systemd/system/docker.service.d"
 dockerOverrideFile="${dockerOverrideDir}/waitAllMounts.conf"
 omvextrasList="/etc/apt/sources.list.d/omvextras.list"
@@ -77,9 +69,9 @@ setDockerPackages()
     # there is no i386 docker-ce package in the docker repos
     # if docker repos are disabled, use debian repos as well
     # use docker.io from Debian repo
-    dockerPackages="docker.io docker-compose ${dockerPackages}"
+    dockerPackages="docker.io docker-compose"
   else
-    dockerPackages="docker-ce ${dockerPackages}"
+    dockerPackages="docker-ce docker-compose-plugin"
   fi
 }
 
@@ -201,7 +193,6 @@ removeDocker()
   fi
   if [ -f "${dockerCompose}" ]; then
     rm "${dockerCompose}"
-    echo "local docker-compose removed."
   fi
 }
 
@@ -356,8 +347,6 @@ EOF
 
 installDocker()
 {
-  local url=""
-
   setExports
   setDockerPackages
   configOverride
@@ -390,29 +379,14 @@ installDocker()
   # Write daemon.json file
   configDocker
 
-  if [[ "${arch}" == "amd64" ]] || [[ "${arch}" == "armhf" ]] || [[ "${arch}" == "arm64" ]]; then
-    # download docker-compose and place in /usr/local/bin/ if current version is older
-    if [ -f "${dockerCompose}" ]; then
-      curVers="$(${dockerCompose} --version | cut -d',' -f1 | awk '{ print $3 }')"
-      if [ ! "${curVers}" = "${dockerComposeVersion}" ]; then
-        download=1
-      fi
-    else
-      download=1
+  # Create docker-compose symlink
+  if [ -f "${dockerComposeDeb}" ]; then
+    if [ -e "${dockerCompose}" ]; then
+      echo "Removing old ${dockerCompose} file..."
+      rm -fv "${dockerCompose}"
     fi
-    if [ ${download} -eq 1 ]; then
-      echo "Installing local docker-compose ${dockerComposeVersion}..."
-      case ${arch} in
-        amd64)
-          url="${dockerComposeUrl}"
-          ;;
-        arm*)
-          url="${dockerComposeUrlLs}${arch}"
-          ;;
-      esac
-      wget --tries=3 --output-document="${dockerCompose}" "${url}"
-      chmod +x "${dockerCompose}"
-    fi
+    # create new symlink
+    ln -s "${dockerComposeDeb}" "${dockerCompose}"
   fi
 }
 
