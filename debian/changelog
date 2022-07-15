@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (6.2) UNRELEASED; urgency=medium
+
+  * Add button to remove portainer volume (data)
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 15 Jul 2022 09:42:45 -0500
+
 openmediavault-omvextrasorg (6.1) stable; urgency=low
 
   * Install docker-compose v2 using docker-compose-plugin package in docker repo

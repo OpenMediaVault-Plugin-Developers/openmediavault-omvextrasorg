@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-03 05:43-0500\n"
+"POT-Creation-Date: 2022-07-15 09:42-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -263,6 +263,9 @@ msgstr ""
 msgid "Remove Yacht will remove the Yacht image and container but the volume will not be removed."
 msgstr ""
 
+msgid "Remove data"
+msgstr ""
+
 msgid "Remove non-Proxmox kernels and headers"
 msgstr ""
 
@@ -273,6 +276,9 @@ msgid "Removing Docker ..."
 msgstr ""
 
 msgid "Removing Portainer ..."
+msgstr ""
+
+msgid "Removing Portainer and data..."
 msgstr ""
 
 msgid "Removing Yacht ..."
@@ -357,6 +363,9 @@ msgid "This will install the latest 5.11 kernel."
 msgstr ""
 
 msgid "This will install the latest 5.4 kernel."
+msgstr ""
+
+msgid "This will remove Portainer and all of its data.  Are you sure you want to do this?"
 msgstr ""
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
