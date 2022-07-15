@@ -92,6 +92,25 @@ data:
                 stop:
                   hidden: true
             successUrl: /system/omvextras
+      - text: _("Remove data")
+        confirmationDialogConfig:
+          template: confirmation-critical
+          message: _("This will remove Portainer and all of its data.  Are you sure you want to do this?")
+        execute:
+          type: taskDialog
+          taskDialog:
+            config:
+              title: _("Removing Portainer and data...")
+              startOnInit: true
+              request:
+                service: OmvExtras
+                method: doCommand
+                params:
+                  command: "portainer_removedata"
+              buttons:
+                stop:
+                  hidden: true
+            successUrl: /system/omvextras
       - text: _("Open web")
         execute:
           type: request

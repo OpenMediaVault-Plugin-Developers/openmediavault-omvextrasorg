@@ -279,6 +279,7 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
                     case 'docker_remove':
                     case 'portainer_install':
                     case 'portainer_remove':
+                    case 'portainer_removedata':
                     case 'yacht_install':
                     case 'yacht_remove':
                         $cmdBin = 'omv-installdocker';

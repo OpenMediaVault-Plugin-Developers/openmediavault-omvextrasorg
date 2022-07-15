@@ -233,6 +233,27 @@ removePortainer()
   fi
 }
 
+removePortainerData()
+{
+  status=0
+
+  if [ ! -f "${dockerBin}" ]; then
+    echo "Docker is not installed."
+    exit 0
+  fi
+
+  # remove existing portainer volume
+  for vol in $(docker volume ls --format "{{.Name}}" | grep --ignore-case "${portainerVolume}"); do
+    echo "Removing ${vol} ..."
+    docker volume rm "${vol}"
+    status=1
+  done
+
+  if [ ${status} -ne 1 ]; then
+    echo "No portainer volumes to remove."
+  fi
+}
+
 removeYacht()
 {
   status=0
@@ -495,11 +516,17 @@ case ${option} in
       echo "portainer is not compatible with i386 systems."
       exit 0
     fi
-    if [[ "${state}" == "remove" ]]; then
-      removePortainer
-    else
-      installPortainer
-    fi
+    case ${state} in
+      remove)
+        removePortainer
+        ;;
+      removedata)
+        removePortainer
+        removePortainerData
+        ;;
+      *)
+        installPortainer
+    esac
     ;;
   yacht)
     if [[ "${state}" == "remove" ]]; then
