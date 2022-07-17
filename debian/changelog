@@ -1,8 +1,8 @@
-openmediavault-omvextrasorg (6.2) UNRELEASED; urgency=medium
+openmediavault-omvextrasorg (6.1.1) stable; urgency=low
 
   * Add button to remove portainer volume (data)
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 15 Jul 2022 09:42:45 -0500
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 17 Jul 2022 13:55:50 -0500
 
 openmediavault-omvextrasorg (6.1) stable; urgency=low
 

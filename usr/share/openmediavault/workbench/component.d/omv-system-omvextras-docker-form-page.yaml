@@ -33,8 +33,7 @@ data:
         execute:
           type: url
           url: "/system/omvextras"
-      - template: submit
-        text: _("Install")
+      - text: _("Install")
         execute:
           type: taskDialog
           taskDialog:
