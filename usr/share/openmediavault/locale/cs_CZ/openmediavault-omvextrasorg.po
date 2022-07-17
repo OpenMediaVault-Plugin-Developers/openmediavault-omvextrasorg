@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-03 05:43-0500\n"
+"POT-Creation-Date: 2022-07-15 09:42-0500\n"
 "PO-Revision-Date: 2013-10-28 11:35+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>, 2015-2021\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/cs_CZ/)\n"
@@ -294,6 +294,9 @@ msgid ""
 "not be removed."
 msgstr "Odebrat Yacht odebere obraz Yacht a kontejner, ale svazek odebrán nebude."
 
+msgid "Remove data"
+msgstr ""
+
 msgid "Remove non-Proxmox kernels and headers"
 msgstr "Odebrat jádra a hlavičkové soubory nepocházející z Proxmox"
 
@@ -304,6 +307,9 @@ msgid "Removing Docker ..."
 msgstr ""
 
 msgid "Removing Portainer ..."
+msgstr ""
+
+msgid "Removing Portainer and data..."
 msgstr ""
 
 msgid "Removing Yacht ..."
@@ -398,6 +404,11 @@ msgstr "Toto nainstaluje nejnovější jádro řady 5.11"
 
 msgid "This will install the latest 5.4 kernel."
 msgstr "Toto nainstaluje nejnovější jádro řady 5.4."
+
+msgid ""
+"This will remove Portainer and all of its data.  Are you sure you want to do"
+" this?"
+msgstr ""
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "Toto odebere všechny balíčky s hlavičkovými soubory s předponou linux-headers-."

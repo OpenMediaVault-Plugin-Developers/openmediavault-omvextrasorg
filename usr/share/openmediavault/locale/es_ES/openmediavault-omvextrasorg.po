@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-03 05:43-0500\n"
+"POT-Creation-Date: 2022-07-15 09:42-0500\n"
 "PO-Revision-Date: 2013-10-28 11:35+0000\n"
 "Last-Translator: Raul Fernandez Garcia <raulfg3@gmail.com>, 2014-2022\n"
 "Language-Team: Spanish (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/es/)\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 msgid "Advanced"
 msgstr "Avanzado"
@@ -293,6 +293,9 @@ msgid ""
 "not be removed."
 msgstr "Eliminar Yacht, borra la imagen y el container, pero no el volumen y su configuración."
 
+msgid "Remove data"
+msgstr ""
+
 msgid "Remove non-Proxmox kernels and headers"
 msgstr "Borrar kernel No-Proxmox y sus cabeceras"
 
@@ -304,6 +307,9 @@ msgstr "Eliminando Docker ..."
 
 msgid "Removing Portainer ..."
 msgstr "Eliminando Portainer ..."
+
+msgid "Removing Portainer and data..."
+msgstr ""
 
 msgid "Removing Yacht ..."
 msgstr "Eliminando Yacht ..."
@@ -397,6 +403,11 @@ msgstr "Esto instalará el ultimo kernel 5.11"
 
 msgid "This will install the latest 5.4 kernel."
 msgstr "Instalar el último kernel 5.4"
+
+msgid ""
+"This will remove Portainer and all of its data.  Are you sure you want to do"
+" this?"
+msgstr ""
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "Esto eliminará todas las cabeceras que contengan el prefijo linux-headers-."

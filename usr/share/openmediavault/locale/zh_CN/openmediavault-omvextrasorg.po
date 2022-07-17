@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-03 05:43-0500\n"
+"POT-Creation-Date: 2022-07-15 09:42-0500\n"
 "PO-Revision-Date: 2013-10-28 11:35+0000\n"
 "Last-Translator: songming <by@songming.me>, 2013-2016,2018-2020,2022\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_CN/)\n"
@@ -294,6 +294,9 @@ msgid ""
 "not be removed."
 msgstr "删除 Yacht 将会删除 Yacht 镜像和容器，但是不会删除卷。"
 
+msgid "Remove data"
+msgstr ""
+
 msgid "Remove non-Proxmox kernels and headers"
 msgstr "删除 non-Proxmox 内核和头文件"
 
@@ -305,6 +308,9 @@ msgstr "移除 Docker ..."
 
 msgid "Removing Portainer ..."
 msgstr "移除 Portainer ..."
+
+msgid "Removing Portainer and data..."
+msgstr ""
 
 msgid "Removing Yacht ..."
 msgstr "移除 Yacht ..."
@@ -398,6 +404,11 @@ msgstr "这将安装最新的 5.11 版内核。"
 
 msgid "This will install the latest 5.4 kernel."
 msgstr "这将安装最新的 5.4 版内核。"
+
+msgid ""
+"This will remove Portainer and all of its data.  Are you sure you want to do"
+" this?"
+msgstr ""
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "这将删除前缀为 linux-headers- 的所有软件包。"

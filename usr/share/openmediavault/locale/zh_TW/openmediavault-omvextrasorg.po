@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-03 05:43-0500\n"
+"POT-Creation-Date: 2022-07-15 09:42-0500\n"
 "PO-Revision-Date: 2013-10-28 11:35+0000\n"
 "Last-Translator: kochin <kochinc@outlook.com>, 2014-2022\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_TW/)\n"
@@ -293,6 +293,9 @@ msgid ""
 "not be removed."
 msgstr "移除 Yacht 將會移除 Yacht 的影像和容器，但資料卷將不會被移除。"
 
+msgid "Remove data"
+msgstr "移除資料"
+
 msgid "Remove non-Proxmox kernels and headers"
 msgstr "移除 非Proxmox 系統核心與標頭檔案"
 
@@ -304,6 +307,9 @@ msgstr "移除 Docker 中 ..."
 
 msgid "Removing Portainer ..."
 msgstr "移除 Portainer 中 ..."
+
+msgid "Removing Portainer and data..."
+msgstr "移除 Portainer 以及資料中 ..."
 
 msgid "Removing Yacht ..."
 msgstr "移除 Yacht 中 ..."
@@ -397,6 +403,11 @@ msgstr "這將安裝最新的 5.11 核心。"
 
 msgid "This will install the latest 5.4 kernel."
 msgstr "這將會安裝最新的 5.4 系統核心。"
+
+msgid ""
+"This will remove Portainer and all of its data.  Are you sure you want to do"
+" this?"
+msgstr "這將移除 Portainer 以及它的全部資料。您確定要執行嗎？"
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "這將會移除所有前綴詞是 linux-headers- 的標題檔案套件。"

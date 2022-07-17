@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-03 05:43-0500\n"
+"POT-Creation-Date: 2022-07-15 09:42-0500\n"
 "PO-Revision-Date: 2013-10-28 11:35+0000\n"
 "Last-Translator: Toshihiro Kan <kansuke4649@gmail.com>, 2014-2022\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ja_JP/)\n"
@@ -293,6 +293,9 @@ msgid ""
 "not be removed."
 msgstr "Yachtの削除は、Yachtイメージとコンテナーを削除しますが、ボリュームは削除されません。"
 
+msgid "Remove data"
+msgstr ""
+
 msgid "Remove non-Proxmox kernels and headers"
 msgstr "non-Proxmoxカーネルとヘッダーを削除する"
 
@@ -304,6 +307,9 @@ msgstr "Dockerを削除しています ..."
 
 msgid "Removing Portainer ..."
 msgstr "Portainerを削除しています ..."
+
+msgid "Removing Portainer and data..."
+msgstr ""
 
 msgid "Removing Yacht ..."
 msgstr "Yachtを削除しています ..."
@@ -397,6 +403,11 @@ msgstr "最新の5.11カーネルがインストールされます。"
 
 msgid "This will install the latest 5.4 kernel."
 msgstr "最新の5.4カーネルがインストールされます。"
+
+msgid ""
+"This will remove Portainer and all of its data.  Are you sure you want to do"
+" this?"
+msgstr ""
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "linux-headers-で始まる、すべてのヘッダパッケージが削除されます。"
