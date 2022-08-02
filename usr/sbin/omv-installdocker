@@ -397,6 +397,9 @@ installDocker()
     fi
   fi
 
+  # mark packages manual
+  apt-mark manual ${dockerPackages}
+
   # Write daemon.json file
   configDocker
 

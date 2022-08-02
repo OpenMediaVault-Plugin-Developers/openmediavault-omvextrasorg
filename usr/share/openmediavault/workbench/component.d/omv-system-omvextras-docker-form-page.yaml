@@ -34,6 +34,7 @@ data:
           type: url
           url: "/system/omvextras"
       - text: _("Install")
+        submit: true
         execute:
           type: taskDialog
           taskDialog:

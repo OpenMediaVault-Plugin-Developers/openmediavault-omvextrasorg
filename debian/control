@@ -11,7 +11,7 @@ Package: openmediavault-omvextrasorg
 Architecture: all
 Depends: dirmngr,
          gnupg,
-         openmediavault (>= 6.0),
+         openmediavault (>= 6.0.33),
          ${misc:Depends}
 Breaks: openmediavault (<< 6.0)
 Description: OMV-Extras.org Package Repositories for OpenMediaVault
