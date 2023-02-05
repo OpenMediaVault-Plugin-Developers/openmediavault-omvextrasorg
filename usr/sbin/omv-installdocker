@@ -321,6 +321,16 @@ configDocker()
 {
   setExports
 
+  # make sure the Docker directory exists
+  if [ ! -d /etc/docker ]; then
+    mkdir /etc/docker
+  fi
+
+  # make sure the Docker daemon configuration file exists
+  if [ ! -f /etc/docker/daemon.json ]; then
+    touch /etc/docker/daemon.json
+  fi
+
   # if path specified, write config file
   if [ -n "${dockerStorage}" ]; then
     daemonJsonTemp="$(mktemp)"
