@@ -321,41 +321,42 @@ configDocker()
 {
   setExports
 
+  local dockerDir="/etc/docker"
+  local configFile="${dockerDir}/daemon.json"
+  local newDataRoot="${dockerStorage}"
+  local oldDataRoot=""
+
+  # if path is not specified, do nothing
+  if [ -z "${newDataRoot}" ]; then
+    return
+  fi
+
   # make sure the Docker directory exists
-  if [ ! -d /etc/docker ]; then
-    mkdir /etc/docker
+  if [ ! -d "${dockerDir}" ]; then
+    mkdir "${dockerDir}"
   fi
 
   # make sure the Docker daemon configuration file exists
-  if [ ! -f /etc/docker/daemon.json ]; then
-    touch /etc/docker/daemon.json
-  fi
-
-  # if path specified, write config file
-  if [ -n "${dockerStorage}" ]; then
-    daemonJsonTemp="$(mktemp)"
-    cat <<EOF > ${daemonJsonTemp}
-{
-  "data-root": "${dockerStorage}"
-}
-EOF
-
-    if ! diff --brief "${daemonJsonTemp}" "${daemonJson}"; then
-      echo "Docker storage path has changed."
-      cp "${daemonJsonTemp}" "${daemonJson}"
-      status=1
-    fi
-    rm -f "${daemonJsonTemp}"
-  fi
-
-
-  # enable and restart docker service
-  if [ ${status} -eq 1 ]; then
-    systemctl enable docker.service
-    systemctl restart docker.service
+  if [ ! -f "${configFile}" ]; then
+    touch "${configFile}"
   else
-    echo "Skipping docker restart."
+    oldDataRoot=$(jq -r '.["data-root"]' "${configFile}")
   fi
+
+  # if the path is the same, do nothing
+  if [ "${newDataRoot}" == "${oldDataRoot}" ]; then
+    return
+  fi
+
+  # store the path in configuration file
+  local tempFile="$(mktemp)"
+  jq -s -r --arg DATAROOT "${newDataRoot}" '(.[] // {}) + {"data-root": $DATAROOT}' "${configFile}" > "${tempFile}"
+  cat "${tempFile}" > "${configFile}"
+  rm -f "${tempFile}"
+
+  # enable and restart Docker service
+  systemctl enable docker.service
+  systemctl restart docker.service
 }
 
 configOverride()
