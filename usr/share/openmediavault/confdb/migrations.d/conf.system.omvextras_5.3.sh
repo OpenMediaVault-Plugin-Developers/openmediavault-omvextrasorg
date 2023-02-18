@@ -4,7 +4,7 @@
 # @author    Volker Theile <volker.theile@openmediavault.org>
 # @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
 # @copyright Copyright (c) 2009-2013 Volker Theile
-# @copyright Copyright (c) 2013-2022 OpenMediaVault Plugin Developers
+# @copyright Copyright (c) 2013-2023 OpenMediaVault Plugin Developers
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -27,7 +27,7 @@ SERVICE_XPATH_NAME="omvextras"
 SERVICE_XPATH="/config/system/${SERVICE_XPATH_NAME}"
 
 if ! omv_config_exists "${SERVICE_XPATH}/webport"; then
-    omv_config_add_key "${SERVICE_XPATH}" "webport" "9000"
+    omv_config_add_key "${SERVICE_XPATH}" "webport" "9443"
     omv_config_add_key "${SERVICE_XPATH}" "agentport" "8000"
 fi
 

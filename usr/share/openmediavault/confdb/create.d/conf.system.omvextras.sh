@@ -4,7 +4,7 @@
 # @author    Volker Theile <volker.theile@openmediavault.org>
 # @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
 # @copyright Copyright (c) 2009-2013 Volker Theile
-# @copyright Copyright (c) 2013-2022 OpenMediaVault Plugin Developers
+# @copyright Copyright (c) 2013-2023 OpenMediaVault Plugin Developers
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -33,7 +33,7 @@ if ! omv_config_exists "/config/system/omvextras/dockerStorage"; then
     omv_config_add_key "/config/system/omvextras" "dockerStorage" "/var/lib/docker"
 fi
 if ! omv_config_exists "/config/system/omvextras/webport"; then
-    omv_config_add_key "/config/system/omvextras" "webport" "9000"
+    omv_config_add_key "/config/system/omvextras" "webport" "9443"
 fi
 if ! omv_config_exists "/config/system/omvextras/agentport"; then
     omv_config_add_key "/config/system/omvextras" "agentport" "8000"
