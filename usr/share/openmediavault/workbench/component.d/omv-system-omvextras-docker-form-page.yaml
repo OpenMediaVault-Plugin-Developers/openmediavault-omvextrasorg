@@ -11,6 +11,10 @@ data:
       post:
         method: setDocker
     fields:
+      - type: checkbox
+        name: docker
+        label: _("Enable")
+        value: false
       - type: textInput
         name: dockerStorage
         label: _("Docker storage")
@@ -33,39 +37,6 @@ data:
         execute:
           type: url
           url: "/system/omvextras"
-      - text: _("Install")
-        submit: true
-        execute:
-          type: taskDialog
-          taskDialog:
-            config:
-              title: _("Installing Docker ...")
-              startOnInit: true
-              request:
-                service: OmvExtras
-                method: doCommand
-                params:
-                  command: "docker_install"
-              buttons:
-                stop:
-                  hidden: true
-            successUrl: /system/omvextras
-      - text: _("Remove")
-        execute:
-          type: taskDialog
-          taskDialog:
-            config:
-              title: _("Removing Docker ...")
-              startOnInit: true
-              request:
-                service: OmvExtras
-                method: doCommand
-                params:
-                  command: "docker_remove"
-              buttons:
-                stop:
-                  hidden: true
-            successUrl: /system/omvextras
       - text: _("Restart")
         execute:
           type: request

@@ -11,6 +11,10 @@ data:
       post:
         method: setYacht
     fields:
+      - type: checkbox
+        name: yacht
+        label: _("Enable")
+        value: false
       - type: textInput
         name: yachtStatus
         label: _("Status")
@@ -32,38 +36,6 @@ data:
         execute:
           type: url
           url: "/system/omvextras"
-      - text: _("Install")
-        execute:
-          type: taskDialog
-          taskDialog:
-            config:
-              title: _("Installing Yacht ...")
-              startOnInit: true
-              request:
-                service: OmvExtras
-                method: doCommand
-                params:
-                  command: "yacht_install"
-              buttons:
-                stop:
-                  hidden: true
-            successUrl: /system/omvextras
-      - text: _("Remove")
-        execute:
-          type: taskDialog
-          taskDialog:
-            config:
-              title: _("Removing Yacht ...")
-              startOnInit: true
-              request:
-                service: OmvExtras
-                method: doCommand
-                params:
-                  command: "yacht_remove"
-              buttons:
-                stop:
-                  hidden: true
-            successUrl: /system/omvextras
       - text: _("Open web")
         execute:
           type: request

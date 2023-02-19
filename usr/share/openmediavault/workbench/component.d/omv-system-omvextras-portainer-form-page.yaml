@@ -11,6 +11,10 @@ data:
       post:
         method: setPortainer
     fields:
+      - type: checkbox
+        name: portainer
+        label: _("Enable")
+        value: false
       - type: textInput
         name: portainerStatus
         label: _("Status")
@@ -20,7 +24,7 @@ data:
       - type: numberInput
         name: webport
         label: _("Web port")
-        value: 9000
+        value: 9443
         validators:
           min: 1
           max: 65535
@@ -60,38 +64,6 @@ data:
         execute:
           type: url
           url: "/system/omvextras"
-      - text: _("Install")
-        execute:
-          type: taskDialog
-          taskDialog:
-            config:
-              title: _("Installing Portainer ...")
-              startOnInit: true
-              request:
-                service: OmvExtras
-                method: doCommand
-                params:
-                  command: "portainer_install"
-              buttons:
-                stop:
-                  hidden: true
-            successUrl: /system/omvextras
-      - text: _("Remove")
-        execute:
-          type: taskDialog
-          taskDialog:
-            config:
-              title: _("Removing Portainer ...")
-              startOnInit: true
-              request:
-                service: OmvExtras
-                method: doCommand
-                params:
-                  command: "portainer_remove"
-              buttons:
-                stop:
-                  hidden: true
-            successUrl: /system/omvextras
       - text: _("Remove data")
         confirmationDialogConfig:
           template: confirmation-critical

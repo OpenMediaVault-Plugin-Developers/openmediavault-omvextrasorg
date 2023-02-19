@@ -1,4 +1,3 @@
-etc/apt/trusted.gpg.d/*     etc/apt/trusted.gpg.d
 usr/sbin/*                  usr/sbin
 usr/share/keyrings/*        usr/share/keyrings
 usr/share/openmediavault/*  usr/share/openmediavault

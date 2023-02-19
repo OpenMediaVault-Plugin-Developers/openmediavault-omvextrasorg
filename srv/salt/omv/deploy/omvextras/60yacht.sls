@@ -1,10 +1,5 @@
-#!/bin/sh
-#
 # @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
-# @author    Volker Theile <volker.theile@openmediavault.org>
-# @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
-# @copyright Copyright (c) 2009-2013 Volker Theile
-# @copyright Copyright (c) 2013-2023 OpenMediaVault Plugin Developers
+# @copyright Copyright (c) 2019-2023 OpenMediaVault Plugin Developers
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -19,15 +14,26 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-set -e
+{% set config = salt['omv_conf.get']('conf.system.omvextras') %}
 
-. /usr/share/openmediavault/scripts/helper-functions
+{% if config.docker | to_bool %}
+{% if config.yacht | to_bool %}
 
-SERVICE_XPATH_NAME="omvextras"
-SERVICE_XPATH="/config/system/${SERVICE_XPATH_NAME}"
+yacht:
+  docker_container.running:
+    - image: selfhostedpro/yacht:latest
+    - restart_policy: unless-stopped
+    - port_bindings:
+      - {{ config.yachtport }}:8000
+    - binds:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - yacht_data:/data
 
-if omv_config_exists "${SERVICE_XPATH}/optout"; then
-    omv_config_delete "${SERVICE_XPATH}/optout"
-fi
+{% else %}
 
-exit 0
+yacht:
+  docker_container.absent:
+  - force: True
+
+{% endif %}
+{% endif %}

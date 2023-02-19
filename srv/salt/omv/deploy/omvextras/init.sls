@@ -1,6 +1,6 @@
 # @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
 # @author    Volker Theile <volker.theile@openmediavault.org>
-# @copyright Copyright (c) 2019-2022 OpenMediaVault Plugin Developers
+# @copyright Copyright (c) 2019-2023 OpenMediaVault Plugin Developers
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -16,4 +16,4 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 include:
-  - .{{ salt['pillar.get']('deploy_apt', 'default') }}
+  - .{{ salt['pillar.get']('deploy_omvextras', 'default') }}

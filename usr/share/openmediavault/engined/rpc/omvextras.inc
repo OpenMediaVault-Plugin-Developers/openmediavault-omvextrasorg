@@ -4,7 +4,7 @@
  * @author    Volker Theile <volker.theile@openmediavault.org>
  * @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
  * @copyright Copyright (c) 2009-2013 Volker Theile
- * @copyright Copyright (c) 2013-2022 OpenMediaVault Plugin Developers
+ * @copyright Copyright (c) 2013-2023 OpenMediaVault Plugin Developers
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -127,19 +127,9 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         if ( preg_match('#^/sharedfolders/#', $params['dockerStorage']) === 1 ) {
             throw new \OMV\Exception(gettext("Illegal docker storage path - cannot use /sharedfolders paths"));
         }
+        $object->set('docker',$params['docker']);
         $object->set('dockerStorage',$params['dockerStorage']);
         $db->set($object);
-        // Apply the changes immediatelly (no user interaction is wanted).
-        \OMV\Rpc\Rpc::call('Config', 'applyChanges', [
-            'modules' => [ 'omvextras' ],
-            'force' => TRUE
-        ], $context);
-        // Rewrite daemon.json and restart if necessary
-        $cmdLine = 'omv-installdocker docker config';
-        $cmd = new \OMV\System\Process($cmdLine);
-        $cmd->setQuiet(true);
-        $output = [];
-        $cmd->execute($output, $exitStatus);
         // Return the configuration object.
         return $object->getAssoc();
     }
@@ -187,6 +177,7 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         if ( $params['webport'] == $params['agentport'] ) {
             throw new \OMV\Exception(gettext("Web port and agent port cannot be the same."));
         }
+        $object->set('portainer',$params['portainer']);
         $object->set('agentport',$params['agentport']);
         $object->set('webport',$params['webport']);
         $object->set('ee',$params['ee']);
@@ -235,6 +226,7 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
         // Get the existing configuration object.
         $db = \OMV\Config\Database::getInstance();
         $object = $db->get('conf.system.omvextras');
+        $object->set('yacht',$params['yacht']);
         $object->set('yachtport',$params['yachtport']);
         $db->set($object);
         // Return the configuration object.
@@ -275,16 +267,8 @@ class OMVRpcServiceOmvExtras extends \OMV\Rpc\ServiceAbstract
                 switch ($params['command']) {
                     case 'docker_restart':
                         $cmdBin = 'echo "Restarting docker ..." && systemctl restart docker.service';  break;
-                    case 'docker_install':
-                    case 'docker_remove':
-                    case 'portainer_install':
-                    case 'portainer_remove':
                     case 'portainer_removedata':
-                    case 'yacht_install':
-                    case 'yacht_remove':
-                        $cmdBin = 'omv-installdocker';
-                        $cmdParams = str_replace('_',' ',$params['command']);
-                        break;
+                        $cmdBin = 'docker volume rm portainer_data';  break;
                     case 'iptables_legacy':
                         $cmdBin = 'update-alternatives --set iptables /usr/sbin/iptables-legacy';  break;
                     case 'iptables_nft':

@@ -1,112 +1,128 @@
-[{
-	"type": "rpc",
-	"id": "rpc.omvextras.set",
-	"params": {
-		"type": "object",
-		"properties": {
-			"testing": {
-				"type": "boolean",
-				"required": true
-			},
-			"backportsStatus": {
-				"type": "boolean",
-				"required": false
-			}
-		}
-	}
-},{
-	"type": "rpc",
-	"id": "rpc.omvextras.setdocker",
-	"params": {
-		"type": "object",
-		"properties": {
-			"dockerStorage": {
-				"type": "string",
-				"required": false
-			}
-		}
-	}
-},{
-	"type": "rpc",
-	"id": "rpc.omvextras.setportainer",
-	"params": {
-		"type": "object",
-		"properties": {
-			"webport": {
-				"type": "integer",
-				"minimum": 1000,
-				"maximum": 65535,
-				"required": true
-			},
-			"agentport": {
-				"type": "integer",
-				"minimum": 1000,
-				"maximum": 65535,
-				"required": true
-			},
-			"ee": {
-				"type": "boolean",
-				"required": false
-			},
-			"enabletls": {
-				"type": "boolean",
-				"required": false
-			},
-			"tlscertificateref": {
-				"type": "string",
-				"required": true
-			}
-		}
-	}
-},{
-	"type": "rpc",
-	"id": "rpc.omvextras.setyacht",
-	"params": {
-		"type": "object",
-		"properties": {
-			"yachtport": {
-				"type": "integer",
-				"minimum": 1000,
-				"maximum": 65535,
-				"required": true
-			}
-		}
-	}
-},{
-	"type": "rpc",
-	"id": "rpc.omvextras.docommand",
-	"params": {
-		"type": "object",
-		"properties": {
-			"command": {
-				"type": "string",
-				"enum": [
-					"docker_install",
-					"docker_remove",
-					"docker_restart",
-					"iptables_legacy",
-					"iptables_nft",
-					"portainer_install",
-					"portainer_remove",
-					"portainer_removedata",
-					"yacht_install",
-					"yacht_remove"
-				],
-				"required": true
-			}
-		}
-	}
-},{
-	"type": "rpc",
-	"id": "rpc.omvextras.dobackports",
-	"params": {
-		"type": "object",
-		"properties": {
-			"command": {
-				"type": "string",
-				"enum": [ "NO", "YES" ],
-				"required": true
-			}
-		}
-	}
-}]
+[
+  {
+    "type": "rpc",
+    "id": "rpc.omvextras.set",
+    "params": {
+      "type": "object",
+      "properties": {
+        "testing": {
+          "type": "boolean",
+          "required": true
+        },
+        "backportsStatus": {
+          "type": "boolean",
+          "required": false
+        }
+      }
+    }
+  },
+  {
+    "type": "rpc",
+    "id": "rpc.omvextras.setdocker",
+    "params": {
+      "type": "object",
+      "properties": {
+        "docker": {
+          "type": "boolean",
+          "required": false
+        },
+        "dockerStorage": {
+          "type": "string",
+          "required": false
+        }
+      }
+    }
+  },
+  {
+    "type": "rpc",
+    "id": "rpc.omvextras.setportainer",
+    "params": {
+      "type": "object",
+      "properties": {
+        "portainer": {
+          "type": "boolean",
+          "required": false
+        },
+        "webport": {
+          "type": "integer",
+          "minimum": 1000,
+          "maximum": 65535,
+          "required": true
+        },
+        "agentport": {
+          "type": "integer",
+          "minimum": 1000,
+          "maximum": 65535,
+          "required": true
+        },
+        "ee": {
+          "type": "boolean",
+          "required": false
+        },
+        "enabletls": {
+          "type": "boolean",
+          "required": false
+        },
+        "tlscertificateref": {
+          "type": "string",
+          "required": true
+        }
+      }
+    }
+  },
+  {
+    "type": "rpc",
+    "id": "rpc.omvextras.setyacht",
+    "params": {
+      "type": "object",
+      "properties": {
+        "yacht": {
+          "type": "boolean",
+          "required": false
+        },
+        "yachtport": {
+          "type": "integer",
+          "minimum": 1000,
+          "maximum": 65535,
+          "required": true
+        }
+      }
+    }
+  },
+  {
+    "type": "rpc",
+    "id": "rpc.omvextras.docommand",
+    "params": {
+      "type": "object",
+      "properties": {
+        "command": {
+          "type": "string",
+          "enum": [
+            "docker_restart",
+            "iptables_legacy",
+            "iptables_nft",
+            "portainer_removedata"
+          ],
+          "required": true
+        }
+      }
+    }
+  },
+  {
+    "type": "rpc",
+    "id": "rpc.omvextras.dobackports",
+    "params": {
+      "type": "object",
+      "properties": {
+        "command": {
+          "type": "string",
+          "enum": [
+            "NO",
+            "YES"
+          ],
+          "required": true
+        }
+      }
+    }
+  }
+]

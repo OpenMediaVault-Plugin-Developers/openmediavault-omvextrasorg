@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (6.2) UNRELEASED; urgency=medium
+
+  * Move docker, portainer, and yacht installation to saltstack
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 18 Feb 2023 13:25:52 -0600
+
 openmediavault-omvextrasorg (6.1.1) stable; urgency=low
 
   * Add button to remove portainer volume (data)
