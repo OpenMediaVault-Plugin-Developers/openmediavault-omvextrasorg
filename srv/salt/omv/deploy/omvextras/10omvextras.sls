@@ -17,11 +17,9 @@
 {% set config = salt['omv_conf.get']('conf.system.omvextras') %}
 {% set use_kernel_backports = salt['pillar.get']('default:OMV_APT_USE_KERNEL_BACKPORTS', True) -%}
 {% set arch = grains['osarch'] %}
-{% set oscodename = grains['oscodename'] %}
 {% set dist = pillar['productinfo']['distribution'] %}
 {% set repo_url = salt['pillar.get']('default:OMV_EXTRAS_APT_REPOSITORY_URL', 'https://openmediavault-plugin-developers.github.io/packages/debian') -%}
-{% set key_dir = '/usr/share/keyrings' %}
-{% set omvextras_key = key_dir ~ '/omvextras2026.asc' %}
+{% set key_url = salt['pillar.get']('default:OMV_EXTRAS_KEY_URL', 'https://openmediavault-plugin-developers.github.io') -%}
 {% set list = '/etc/apt/sources.list.d/omvextras.list' %}
 {% set pref = '/etc/apt/preferences.d/omvextras.pref' %}
 
@@ -29,18 +27,10 @@ remove_apt_list_omvextras:
   file.absent:
     - name: "{{ list }}"
 
-download_omvextras_key:
-  file.managed:
-    - name: "{{ omvextras_key }}"
-    - source: {{ repo_url }}/omvextras2026.asc
-    - source_hash: 108ce460d5ebf0377dbe4f8067e9b990
-
-deb [signed-by={{ omvextras_key }} arch={{ arch }}] {{ repo_url }} {{ dist }} main:
+deb [arch={{ arch }}] {{ repo_url }} {{ dist }} main:
   pkgrepo.managed:
     - file: "{{ list }}"
-    - keyserver: keyserver.ubuntu.com
-    - keyid: 326A835E697B890A
-    - aptkey: False
+    - key_url: "{{ repo_url }}/omvextras2026.asc"
 
 {%- if config.testing | to_bool %}
 
