@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (6.2.1) stable; urgency=low
+
+  * Mark omvextras module dirty but don't apply changes
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 07 Apr 2023 07:43:43 -0500
+
 openmediavault-omvextrasorg (6.2) stable; urgency=low
 
   * Move docker, portainer, and yacht installation to saltstack
