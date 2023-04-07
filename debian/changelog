@@ -1,8 +1,9 @@
-openmediavault-omvextrasorg (6.2) UNRELEASED; urgency=medium
+openmediavault-omvextrasorg (6.2) stable; urgency=low
 
   * Move docker, portainer, and yacht installation to saltstack
+  * Fix zfs install error when backports enable
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 18 Feb 2023 13:25:52 -0600
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 06 Apr 2023 19:11:49 -0500
 
 openmediavault-omvextrasorg (6.1.1) stable; urgency=low
 
