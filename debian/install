@@ -1,4 +1,2 @@
 usr/sbin/*                  usr/sbin
-usr/share/keyrings/*        usr/share/keyrings
 usr/share/openmediavault/*  usr/share/openmediavault
-srv/*                       srv

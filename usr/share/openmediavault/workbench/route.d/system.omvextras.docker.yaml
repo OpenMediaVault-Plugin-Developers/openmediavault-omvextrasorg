@@ -1,7 +1,0 @@
-version: "1.0"
-type: route
-data:
-  url: "/system/omvextras/docker"
-  title: "Docker"
-  editing: true
-  component: omv-system-omvextras-docker-form-page

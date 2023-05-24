@@ -3,4 +3,6 @@ type: route
 data:
   url: "/system/omvextras"
   title: _("omv-extras")
-  component: omv-system-omvextras-navigation-page
+  editing: true
+  notificationTitle: _("Updated omv-extras settings.")
+  component: omv-system-omvextras-form-page

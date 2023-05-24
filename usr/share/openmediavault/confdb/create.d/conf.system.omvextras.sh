@@ -23,61 +23,21 @@ set -e
 
 . /usr/share/openmediavault/scripts/helper-functions
 
-if ! omv_config_exists "/config/system/omvextras"; then
-    omv_config_add_node "/config/system" "omvextras"
-fi
-if ! omv_config_exists "/config/system/omvextras/testing"; then
-    omv_config_add_key "/config/system/omvextras" "testing" "0"
-fi
-if ! omv_config_exists "/config/system/omvextras/docker"; then
-    if dpkg -l | grep -qE "docker-ce|docker.io"; then
-        docker="1"
-    else
-        docker="0"
-    fi
-    omv_config_add_key "/config/system/omvextras" "docker" "${docker}"
-fi
-if ! omv_config_exists "/config/system/omvextras/dockerStorage"; then
-    omv_config_add_key "/config/system/omvextras" "dockerStorage" "/var/lib/docker"
-fi
-if ! omv_config_exists "/config/system/omvextras/portainer"; then
-    portainer="0"
-    if [ "${docker}" = "1" ]; then
-        if docker container ls --format "{{.Names}},{{.Image}}" | grep -wq --ignore-case "portainer"; then
-            portainer="1"
-        fi
-    fi
-    omv_config_add_key "/config/system/omvextras" "portainer" "${portainer}"
-fi
-if ! omv_config_exists "/config/system/omvextras/webport"; then
-    omv_config_add_key "/config/system/omvextras" "webport" "9443"
-fi
-if ! omv_config_exists "/config/system/omvextras/agentport"; then
-    omv_config_add_key "/config/system/omvextras" "agentport" "8000"
-fi
-if ! omv_config_exists "/config/system/omvextras/yacht"; then
-    yacht="0"
-    if [ "${docker}" = "1" ]; then
-        if docker container ls --format "{{.Names}},{{.Image}}" | grep -wq --ignore-case "yacht"; then
-            yacht="1"
-        fi
-    fi
-    omv_config_add_key "/config/system/omvextras" "yacht" "${yacht}"
-fi
-if ! omv_config_exists "/config/system/omvextras/yachtport"; then
-    omv_config_add_key "/config/system/omvextras" "yachtport" "8001"
-fi
-if ! omv_config_exists "/config/system/omvextras/ee"; then
-    omv_config_add_key "/config/system/omvextras" "ee" "0"
-fi
-if ! omv_config_exists "/config/system/omvextras/enabletls"; then
-    omv_config_add_key "/config/system/omvextras" "enabletls" "0"
-fi
-if ! omv_config_exists "/config/system/omvextras/tlscertificateref"; then
-    omv_config_add_key "/config/system/omvextras" "tlscertificateref" ""
+if omv_config_exists "/config/system/omvextras"; then
+  omv_config_delete "/config/system/omvextras"
 fi
 
-# remove backports from sources.list
-sed -i "/$(lsb_release -sc)-backports/d" /etc/apt/sources.list
+if ! omv_config_exists "/config/system/omvextras"; then
+
+  omv_config_add_node "/config/system" "omvextras"
+
+  # docker
+  docker=$(grep -l docker /etc/apt/sources.list.d/* | wc -l)
+  if [ ${docker} -gt 0 ]; then
+    docker=1
+  fi
+  omv_config_add_key "/config/system/omvextras" "docker" "${docker}"
+
+fi
 
 exit 0

@@ -22,7 +22,8 @@ set -e
 . /usr/share/openmediavault/scripts/helper-functions
 
 remove_action() {
-    find /etc/apt/ -type f -name "omvextras*" -delete
+    find /etc/apt/ -type f \( -name "omvextras*" -o -name "omvdocker*" \) -print -delete
+    find /usr/share/keyrings/ -type f \( -name omvextras.gpg -o -name docker.gpg \) -print -delete
     dpkg-trigger update-workbench
 }
 

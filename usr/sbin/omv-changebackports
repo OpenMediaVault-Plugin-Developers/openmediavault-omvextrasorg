@@ -5,14 +5,19 @@
 
 status=$1
 
-if [ ! "${status}" = "NO" ] && [ ! "${status}" = "YES" ]; then
-  status="YES"
+# remove backports from sources.list if found
+sed -i "/$(lsb_release -sc)-backports/d" /etc/apt/sources.list
+
+if omv_checkyesno ${status}; then
+  echo "Enabling backports..."
+  bp="YES"
+else
+  echo "Disabling backports..."
+  bp="NO"
 fi
-
-omv_set_default "OMV_APT_USE_KERNEL_BACKPORTS" "${status}" true
-
+omv_set_default "OMV_APT_USE_KERNEL_BACKPORTS" "${bp}" true
 omv-salt stage run --quiet prepare
-omv-salt deploy run --quiet apt
-omv-aptclean
+omv-salt deploy run apt
+omv-aptclean repos
 
 exit 0

@@ -1,0 +1,69 @@
+version: "1.0"
+type: component
+data:
+  name: omv-system-omvextras-form-page
+  type: formPage
+  config:
+    request:
+      service: OmvExtras
+      get:
+        method: get
+      post:
+        method: set
+    fields:
+      - type: checkbox
+        name: docker
+        label: _("Docker repo")
+        value: false
+    buttons:
+      - template: submit
+      - template: cancel
+        execute:
+          type: url
+          url: "/system/omvextras"
+      - text: _("apt clean")
+        execute:
+          type: taskDialog
+          taskDialog:
+            config:
+              title: _("Cleaning apt ...")
+              startOnInit: true
+              request:
+                service: OmvExtras
+                method: clean
+              buttons:
+                stop:
+                  hidden: true
+            successUrl: /system/omvextras
+      - text: _("Enable backports")
+        execute:
+          type: taskDialog
+          taskDialog:
+            config:
+              title: _("Enabling backports ...")
+              startOnInit: true
+              request:
+                service: OmvExtras
+                method: backports
+                params:
+                  backports: "YES"
+              buttons:
+                stop:
+                  hidden: true
+            successUrl: /system/omvextras
+      - text: _("Disable backports")
+        execute:
+          type: taskDialog
+          taskDialog:
+            config:
+              title: _("Disabling backports ...")
+              startOnInit: true
+              request:
+                service: OmvExtras
+                method: backports
+                params:
+                  backports: "NO"
+              buttons:
+                stop:
+                  hidden: true
+            successUrl: /system/omvextras

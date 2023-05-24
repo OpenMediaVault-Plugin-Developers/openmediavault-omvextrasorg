@@ -7,64 +7,9 @@
     "iterable": false
   },
   "properties": {
-    "testing": {
-      "type": "boolean",
-      "default": false
-    },
     "docker": {
       "type": "boolean",
       "default": false
-    },
-    "dockerStorage": {
-      "type": "string",
-      "default": "/var/lib/docker"
-    },
-    "portainer": {
-      "type": "boolean",
-      "default": false
-    },
-    "webport": {
-      "type": "integer",
-      "minimum": 1000,
-      "maximum": 65535,
-      "default": 9443
-    },
-    "agentport": {
-      "type": "integer",
-      "minimum": 1000,
-      "maximum": 65535,
-      "default": 8000
-    },
-    "yacht": {
-      "type": "boolean",
-      "default": false
-    },
-    "yachtport": {
-      "type": "integer",
-      "minimum": 1000,
-      "maximum": 65535,
-      "default": 8001
-    },
-    "ee": {
-      "type": "boolean",
-      "default": false
-    },
-    "enabletls": {
-      "type": "boolean",
-      "default": false
-    },
-    "tlscertificateref": {
-      "type": "string",
-      "oneOf": [
-        {
-          "type": "string",
-          "format": "uuidv4"
-        },
-        {
-          "type": "string",
-          "maxLength": 0
-        }
-      ]
     }
   }
 }

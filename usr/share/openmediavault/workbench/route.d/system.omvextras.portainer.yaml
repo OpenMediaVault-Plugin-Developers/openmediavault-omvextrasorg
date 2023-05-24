@@ -1,7 +1,0 @@
-version: "1.0"
-type: route
-data:
-  url: "/system/omvextras/portainer"
-  title: "Portainer"
-  editing: true
-  component: omv-system-omvextras-portainer-form-page

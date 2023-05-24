@@ -1,8 +1,0 @@
-version: "1.0"
-type: navigation-item
-data:
-  path: "system.omvextras.docker"
-  text: "Docker"
-  position: 20
-  icon: "mdi:docker"
-  url: "/system/omvextras/docker"

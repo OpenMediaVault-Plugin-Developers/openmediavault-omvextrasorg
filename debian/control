@@ -4,21 +4,16 @@ XB-Plugin-Section: utilities
 Priority: optional
 Maintainer: OpenMediaVault Plugin Developers <plugins@omv-extras.org>
 Build-Depends: debhelper (>= 12 )
-Standards-Version: 3.9.6
+Standards-Version: 4.3.0
 Homepage: http://omv-extras.org/
 
 Package: openmediavault-omvextrasorg
 Architecture: all
-Depends: dirmngr,
+Depends: openmediavault (>= 6.3.12),
          gnupg,
-         openmediavault (>= 6.0.33),
          ${misc:Depends}
 Breaks: openmediavault (<< 6.0)
 Description: OMV-Extras.org Package Repositories for OpenMediaVault
- Allows enabling of multiple repositories hosted by omv-extras.org.
- .
- The plugin allows installation of the backports kernel for increased
- compatibility with newer hardware.
  .
  An apt cleaning function is also available for fixing repository cache
  problems and saving hard drive space in some instances.

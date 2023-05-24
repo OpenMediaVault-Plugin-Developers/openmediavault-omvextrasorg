@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # @license   http://www.gnu.org/licenses/gpl.html GPL Version 3
 # @author    Volker Theile <volker.theile@openmediavault.org>
@@ -18,35 +18,98 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-set -e
-
 . /etc/default/openmediavault
 . /usr/share/openmediavault/scripts/helper-functions
+. /usr/share/openmediavault/sysinfo/functions
+
+declare -i i=0
 
 export LANG=C
 
-echo "1. Cleaning apt cache files..."
+((i++))
+echo "${i}. Cleaning apt cache files..."
 /usr/bin/apt-get clean
 
-echo "\n2. Clearing available dpkg packages..."
+((i++))
+echo -e "\n${i}. Clearing available dpkg packages..."
 /usr/bin/dpkg --clear-avail
 
-echo "\n3. Removing apt lists..."
+((i++))
+echo -e "\n${i}. Removing apt lists..."
 rm -rfv /var/lib/apt/lists/*
 
-echo "\n4. Removing OpenMediaVault cache packages..."
+((i++))
+echo -e "\n${i}. Removing OpenMediaVault cache packages..."
 rm -fv /var/cache/openmediavault/archives/*
 
-echo "\n5. Creating new OpenMediaVault packages file..."
+((i++))
+echo -e "\n${i}. Creating new OpenMediaVault packages file..."
 touch /var/cache/openmediavault/archives/Packages
 
-echo "\n6. Updating apt..."
+# add repos
+if [ "${1}" = "repos" ]; then
+  
+  arch="$(dpkg --print-architecture)"
+  backports="${OMV_APT_USE_KERNEL_BACKPORTS:-'YES'}"
+  docker=$(omv_config_get "/config/system/omvextras/docker")
+  dist="$(lsb_release --codename --short)"
+  omv_codename=$(omv_product_info "versionname")
+
+  repo_url=${OMV_EXTRAS_APT_REPOSITORY_URL:-"https://openmediavault-plugin-developers.github.io/packages/debian"}
+  key_url=${OMV_EXTRAS_KEY_URL:-"https://openmediavault-plugin-developers.github.io/packages/debian/omvextras2026.gpg"}
+  docker_url=${OMV_DOCKER_APT_REPOSITORY_URL:-"https://download.docker.com/linux/debian"}
+  docker_key_url=${OMV_DOCKER_KEY_URL:-"https://download.docker.com/linux/debian/gpg"}
+
+  key="/usr/share/keyrings/omvextras.gpg"
+  docker_key="/usr/share/keyrings/docker.gpg"
+  list="/etc/apt/sources.list.d/omvextras.list"
+  docker_list="/etc/apt/sources.list.d/omvdocker.list"
+  pref="/etc/apt/preferences.d/omvextras.pref"
+  
+  ((i++))
+  echo -e "\n${i}. Remove old omv-extras apt list files..."
+  grep -l 'openmediavault-plugin-developers' /etc/apt/sources.list.d/* | sudo xargs -r rm -fv
+
+  ((i++))
+  echo -e "\n${i}. Adding omv-extras repo and key..."
+  mkdir -pv "$(dirname ${key})"
+  echo "deb [signed-by=${key} arch=${arch}] ${repo_url} ${omv_codename,,} main" > ${list}
+  wget --quiet --output-document=- "${key_url}" | gpg --dearmor > "${key}"
+
+  # backports pinning
+  rm -f ${pref}
+  if omv_checkyesno ${backports}; then
+    ((i++))
+    echo -e "\n${i}. Adding backports pinning..."
+    pkgs=("zfs*" "spl" "spl-dkms" "libnvpair3linux" "libzfs4linux" "libzpool5linux" "libuutil3linux" "libfdt1" "borgbackup" "libvirt*" "qemu*")
+    for ((j=0; j<${#pkgs[@]}; j++)); do
+      echo -e "Package: ${pkgs[j]}\nPin: release a=${dist}-backports\nPin-Priority: 500\n" >> ${pref}
+    done
+  fi
+
+  # docker repo
+  grep -l 'docker' /etc/apt/sources.list.d/* | sudo xargs -r rm -fv
+  if omv_checkyesno ${docker}; then
+    ((i++))
+    echo -e "\n${i}. Adding docker repo and key..."
+    echo "deb [signed-by=${docker_key} arch=${arch}] ${docker_url} ${dist,,} stable" > ${docker_list}
+    wget --quiet --output-document=- "${docker_key_url}" | gpg --dearmor > "${docker_key}"
+  fi
+
+fi
+
+((i++))
+echo -e "\n${i}. Updating apt..."
 /usr/bin/apt-get update
 
-echo "\n7. Saving current package list..."
-/usr/bin/dpkg -l | grep ^ii | awk '{print $2 "=" $3 " \\"}' > /var/cache/openmediavault/currently_installed_packages.list
+((i++))
+echo -e "\n${i}. Saving current package list..."
+packages="/var/cache/openmediavault/currently_installed_packages.list"
+/usr/bin/dpkg -l | awk '$1 == "ii" { print $2 "=" $3 " \\"}' > ${packages}
 
-echo "\n8. Updating plugin index..."
+((i++))
+echo -e "\n${i}. Updating plugin index..."
 /usr/sbin/omv-mkaptidx
+
 
 exit 0

@@ -1,5 +1,0 @@
-version: "1.0"
-type: component
-data:
-  name: omv-system-omvextras-navigation-page
-  type: navigationPage
