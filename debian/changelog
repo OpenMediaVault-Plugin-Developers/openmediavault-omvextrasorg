@@ -1,8 +1,8 @@
-openmediavault-omvextrasorg (6.3) UNRELEASED; urgency=medium
+openmediavault-omvextrasorg (6.3) stable; urgency=low
 
   * Move docker install, portainer, and yacht to compose plugin
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 17 May 2023 19:04:34 -0500
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 25 May 2023 07:36:01 -0500
 
 openmediavault-omvextrasorg (6.2.1) stable; urgency=low
 
