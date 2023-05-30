@@ -15,6 +15,7 @@ data:
         name: docker
         label: _("Docker repo")
         value: false
+        hint: _("Please install the openmediavault-compose to provide docker functionality within the OMV web interface.")
     buttons:
       - template: submit
       - template: cancel
@@ -67,3 +68,7 @@ data:
                 stop:
                   hidden: true
             successUrl: /system/omvextras
+      - text: _("Wiki")
+        execute:
+          type: url
+          url: '/externalRedirect/https%3A%2F%2Fwiki.omv-extras.org%2Fdoku.php%3Fid%3Domv6%3Aomv6_plugins%3Aomv-extras'
