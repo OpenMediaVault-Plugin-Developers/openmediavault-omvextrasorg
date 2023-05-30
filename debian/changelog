@@ -1,3 +1,11 @@
+openmediavault-omvextrasorg (6.3.1) stable; urgency=low
+
+  * Add button to open omv-extras.org wiki
+  * Add hint about using openmediavault-compose for docker functionality
+    within the OMV web interface
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 30 May 2023 17:44:09 -0500
+
 openmediavault-omvextrasorg (6.3) stable; urgency=low
 
   * Move docker install, portainer, and yacht to compose plugin
