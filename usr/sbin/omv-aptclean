@@ -71,6 +71,7 @@ if [ "${1}" = "repos" ]; then
   ((i++))
   echo -e "\n${i}. Remove old omv-extras apt list files..."
   grep -l 'openmediavault-plugin-developers' /etc/apt/sources.list.d/* | sudo xargs -r rm -fv
+  rm -fv /etc/apt/keyrings/docker.gpg
 
   ((i++))
   echo -e "\n${i}. Adding omv-extras repo and key..."
