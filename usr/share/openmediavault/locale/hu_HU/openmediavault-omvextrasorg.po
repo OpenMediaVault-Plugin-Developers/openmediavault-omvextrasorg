@@ -5,6 +5,7 @@
 # Translators:
 # Gyuris Gellért <jobel@ujevangelizacio.hu>, 2018-2019
 # Gyuris Gellért <jobel@ujevangelizacio.hu>, 2017
+# Gyuris Gellért <jobel@ujevangelizacio.hu>, 2023
 # Grawens <szabolcs.szanyi@gmail.com>, 2014-2016,2018
 msgid ""
 msgstr ""
@@ -12,8 +13,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-15 09:42-0500\n"
 "PO-Revision-Date: 2013-10-28 11:35+0000\n"
-"Last-Translator: Gyuris Gellért <jobel@ujevangelizacio.hu>, 2018-2019\n"
-"Language-Team: Hungarian (Hungary) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/hu_HU/)\n"
+"Last-Translator: Gyuris Gellért <jobel@ujevangelizacio.hu>, 2023\n"
+"Language-Team: Hungarian (Hungary) (http://app.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,22 +22,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Advanced"
-msgstr ""
+msgstr "Haladó"
 
 msgid "Agent port"
-msgstr ""
+msgstr "Ügynök port"
 
 msgid "Backports"
 msgstr "Visszaportolások"
 
 msgid "Certificate"
-msgstr ""
+msgstr "Tanúsítvány"
 
 msgid "Cleaning Apt Files and Lists ..."
 msgstr "Apt fájlok és listák ürítése…"
 
 msgid "Cleaning apt ..."
-msgstr ""
+msgstr "Apt ürítése…"
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
@@ -48,18 +49,18 @@ msgid "Cockpit listens on port 9090 for the web interface."
 msgstr "A Cockpit webes felhasználói felülete a 9090-es porton hallgat."
 
 msgid "Containers"
-msgstr ""
+msgstr "Konténerek"
 
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
 "legacy. Use iptables menu to change. "
-msgstr ""
+msgstr "A Debian 10/OMV 5.x alapértelmezetten az iptables-nft-t alkalmazza, de a Dockernek az iptables-legacy-ra van szüksége. Az iptables menüben lehet változtatni."
 
 msgid "Default password: "
-msgstr ""
+msgstr "Alapértelmezett jelszó:"
 
 msgid "Default username: "
-msgstr ""
+msgstr "Alapértelmezett felhasználónév:"
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
 msgstr "Alapértelmezett felhasználónév: <b>felhasználó</b> és jelszó: <b>élő</b>"
@@ -71,7 +72,7 @@ msgid "Docker Storage"
 msgstr "Docker tároló"
 
 msgid "Docker storage"
-msgstr ""
+msgstr "Docker tároló"
 
 msgid "Done."
 msgstr "Kész."
@@ -89,7 +90,7 @@ msgstr "GParted Live ISO letöltése és a GRUB rendszerbetöltő konfigurálás
 msgid ""
 "Downloads SystemRescue ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr ""
+msgstr "SystemRescue ISO letöltése és a GRUB rendszerbetöltő konfigurálása, hogy lehessen rendszert indítani az ISO-ról."
 
 msgid "Extras repo"
 msgstr "Extrák tároló"
@@ -115,19 +116,19 @@ msgid ""
 msgstr "Az IP címet a DHCP fogja kiosztani. Statikus DHCP alkalmazása periféria nélküli kiszolgálóknál javasolt. "
 
 msgid "If port is changed, click Install in the Portainer menu again."
-msgstr ""
+msgstr "Ha a port módosul, szükséges ismételten a Portainer menüben a Telepítés gombra kattintani."
 
 msgid "If port is changed, click Install in the Yacht menu again."
-msgstr ""
+msgstr "Ha a port módosul, szükséges ismételten a Yacht menüben a Telepítés gombra kattintani."
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
-msgstr ""
+msgstr "Tiltott docker tárolási útvonal. A /sharedfolders útvonal nem használható."
 
 msgid "Image"
-msgstr ""
+msgstr "Kép"
 
 msgid "Install"
-msgstr ""
+msgstr "Telepítés"
 
 msgid "Install Clonezilla"
 msgstr "Clonezilla telepítése"
@@ -138,12 +139,12 @@ msgstr "Clonezilla ISO telepítése…"
 msgid ""
 "Install Docker will download and place a newer docker-compose in "
 "/usr/local/bin/ on 64 bit x86 systems only."
-msgstr ""
+msgstr "A Docker telepítése letölt egy frissebb docker-compose-t és a /usr/local/bin/-be helyezi, de csak 64 bites x86-os rendszereken."
 
 msgid ""
 "Install Docker will install the docker-compose package. Location: /usr/bin/ "
 "on all systems."
-msgstr ""
+msgstr "A Docker fel fogja telepíteni a docker-compose csomagot, melynek helye minden rendszeren a /usr/bin."
 
 msgid "Install Docker will restart the docker service if daemon.json changes."
 msgstr "A Docker telepítése újraindítja a docker szolgáltatást ha a daemon.json megváltozik."
@@ -168,22 +169,22 @@ msgid "Install Proxmox kernel"
 msgstr "Proxmox kernel telepítése"
 
 msgid "Install Proxmox test kernel"
-msgstr ""
+msgstr "Proxmox teszt kernel telepítése"
 
 msgid "Install SystemRescue"
-msgstr ""
+msgstr "SystemRescue telepítése"
 
 msgid "Install SystemRescue ISO ..."
-msgstr ""
+msgstr "SystemRescue ISO telepítése…"
 
 msgid ""
 "Install Yacht will install the docker-ce package if not already installed."
-msgstr ""
+msgstr "A Yacht telepítése telepíteni fogja a docker-ce csomagot, ha az még nincs telepítve."
 
 msgid ""
 "Install Yacht will update Yacht to the latest image if the image already "
 "exists."
-msgstr ""
+msgstr "A Yacht telepítése frissíteni fogja a Yacht-ot a legfrissebb képre, ha az már létezik."
 
 msgid "Installed"
 msgstr "Telepítve"
@@ -195,19 +196,19 @@ msgid "Installing"
 msgstr "Telepítés"
 
 msgid "Installing Docker ..."
-msgstr ""
+msgstr "Docker telepítése…"
 
 msgid "Installing Portainer ..."
-msgstr ""
+msgstr "Portainer telepítése…"
 
 msgid "Installing Proxmox kernel ..."
 msgstr "Proxmox kernel telepítése…"
 
 msgid "Installing Proxmox test kernel ..."
-msgstr ""
+msgstr "Proxmox teszt kernel telepítése…"
 
 msgid "Installing Yacht ..."
-msgstr ""
+msgstr "Yacht telepítése…"
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -216,10 +217,10 @@ msgid "Kernels"
 msgstr "Kernelek"
 
 msgid "More info"
-msgstr ""
+msgstr "További információ"
 
 msgid "Name"
-msgstr ""
+msgstr "Név"
 
 msgid "Not installed"
 msgstr "Nincs telepítve"
@@ -231,13 +232,13 @@ msgid "OMV-Extras"
 msgstr "OMV-Extrák"
 
 msgid "Open Portainer"
-msgstr ""
+msgstr "Portainer megnyitása"
 
 msgid "Open Yacht"
-msgstr ""
+msgstr "Yacht megnyitása"
 
 msgid "Open web"
-msgstr ""
+msgstr "Web megnyitása"
 
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
@@ -250,7 +251,7 @@ msgstr "Portainer"
 msgid ""
 "Portainer will listen on port 9000 for the web interface and 8000 for the "
 "agent unless changed."
-msgstr ""
+msgstr "A Portainer webes felhasználói felülete a 9000-es porton hallgat, az ügynök pedig a 8000-en, ha nem lettek módosítva."
 
 msgid "Proxmox"
 msgstr "Proxmox"
@@ -268,22 +269,22 @@ msgid "Reboot to GParted Live Once"
 msgstr "Újraindítás egyszer a GParted Live-val"
 
 msgid "Reboot to SystemRescue ..."
-msgstr ""
+msgstr "Újraindítás a SystemRescue-val…"
 
 msgid "Reboot to SystemRescue Once"
-msgstr ""
+msgstr "Újraindítás egyszer a SystemRescue-val"
 
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
 msgstr "Újraindítás Proxmox kernellel a nem Proxmox kernelek eltávolítása előtt."
 
 msgid "Remove"
-msgstr ""
+msgstr "Eltávolítás"
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
 msgstr "A Docker eltávolítása törölni fogja a docker-compose-t a /usr/local/bin/-ből."
 
 msgid "Remove Docker will remove the docker-compose package."
-msgstr ""
+msgstr "A Docker törlése el fogja távoltani a docker-compose csomagot."
 
 msgid ""
 "Remove Portainer will remove the Portainer image and container but the "
@@ -293,10 +294,10 @@ msgstr "A Portainer eltávolítása el fogja távolítani a Portainer képet és
 msgid ""
 "Remove Yacht will remove the Yacht image and container but the volume will "
 "not be removed."
-msgstr ""
+msgstr "A Yacht eltávolítása el fogja távolítani a Yacht képet és a tárolót, de a kötet nem lesz eltávolítva."
 
 msgid "Remove data"
-msgstr ""
+msgstr "Adatok eltávolítása"
 
 msgid "Remove non-Proxmox kernels and headers"
 msgstr "Nem Proxmox kernelek és fejlécek eltávolítása"
@@ -305,28 +306,28 @@ msgid "Removing"
 msgstr "Eltávolítás"
 
 msgid "Removing Docker ..."
-msgstr ""
+msgstr "Docker eltávolítása…"
 
 msgid "Removing Portainer ..."
-msgstr ""
+msgstr "Portainer eltávolítása…"
 
 msgid "Removing Portainer and data..."
-msgstr ""
+msgstr "Portainer és adatainak eltávolítása…"
 
 msgid "Removing Yacht ..."
-msgstr ""
+msgstr "Yacht eltávolítása…"
 
 msgid "Removing non-Proxmox kernels ..."
 msgstr "Nem Proxmox kernelek eltávolítása…"
 
 msgid "Restart"
-msgstr ""
+msgstr "Újraindítás"
 
 msgid "Restarting Docker ..."
-msgstr ""
+msgstr "Docker újraindítása…"
 
 msgid "Restarting docker ..."
-msgstr ""
+msgstr "Docker újraindítása…"
 
 msgid "Running apt-get dist-upgrade ..."
 msgstr "apt-get dist-upgrade futtatása ..."
@@ -354,12 +355,12 @@ msgid ""
 msgstr "Az SSH szerver alapértelmezett engedélyezve van. Felhasználói név a belépéshez: <b>user</b>, valamint a jelszó: <b>live</b>"
 
 msgid "SSL/TLS enabled"
-msgstr ""
+msgstr "SSL/TLS engedélyezve"
 
 msgid ""
 "Save will rewrite daemon.json and restart docker if Docker Storage path has "
 "changed."
-msgstr ""
+msgstr "A mentés felül fogja írni a daemon.json fájlt és újraindítja a docker-t, ha a Docker tárolási útvonala megváltozott."
 
 msgid "Set as default boot kernel"
 msgstr "Alap rendszerindító kernel beállítása"
@@ -371,7 +372,7 @@ msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
 msgstr "Beállítja a GRUB rendszerbetöltőt, hogy a GParted Live ISO-ról induljon a rendszer <b>EGY</b> alkalommal."
 
 msgid "Sets grub bootloader to boot from SystemRescue ISO <b>ONE</b> time."
-msgstr ""
+msgstr "Beállítja a GRUB rendszerbetöltőt, hogy a SystemRescue ISO-ról induljon a rendszer <b>EGY</b> alkalommal."
 
 msgid "Setting boot kernel ..."
 msgstr "Rendszerindító kernel beállítása…"
@@ -386,7 +387,7 @@ msgid "Settings"
 msgstr "Beállítások"
 
 msgid "Spaced used by ISO in /boot directory on OS drive"
-msgstr ""
+msgstr "Az ISO által használt hely az operációs rendszer meghajtójának /boot könyvtárában "
 
 msgid "Status"
 msgstr "Állapot"
@@ -401,15 +402,15 @@ msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "Meg fog hiúsulni a linux-image-* kernel eltávolítása, ha még aktív."
 
 msgid "This will install the latest 5.11 kernel."
-msgstr ""
+msgstr "A legutolsó 5.11-es kernel telepítése."
 
 msgid "This will install the latest 5.4 kernel."
-msgstr ""
+msgstr "A legutolsó 5.4-es kernel telepítése."
 
 msgid ""
 "This will remove Portainer and all of its data.  Are you sure you want to do"
 " this?"
-msgstr ""
+msgstr "Ez el fogja távolítani a Portainert minden adatával együtt. Valóban ezt szeretné tenni?"
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "A linux-headers- előtagra illeszkedő összes fejléc csomag eltávolítása."
@@ -427,25 +428,25 @@ msgid "Updates"
 msgstr "Frissítések"
 
 msgid "Use EE"
-msgstr ""
+msgstr "EE alkalmazása"
 
 msgid "Use business edition. This version requires a license."
-msgstr ""
+msgstr "Üzleti verzió alkalmazása. Ez a verzió licencet igényel."
 
 msgid "Use legacy"
-msgstr ""
+msgstr "Örökölt alkalmazása"
 
 msgid "Use nft"
-msgstr ""
+msgstr "nft alkalmazása"
 
 msgid "Version"
 msgstr "Verzió"
 
 msgid "Web port"
-msgstr ""
+msgstr "Webes port"
 
 msgid "Web port and agent port cannot be the same."
-msgstr ""
+msgstr "A webes és az ügynök port nem lehet ugyanaz."
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
@@ -457,7 +458,7 @@ msgid ""
 msgstr "Távoli belépés esetén a Clonezilla így indítható: <b>sudo clonezilla</b>"
 
 msgid "Yacht will listen on port 8001 for the web interface unless changed."
-msgstr ""
+msgstr "A Yacht webes felhasználói felülete a 8001-es porton hallgat, ha nem lett módosítva."
 
 msgid "and not running"
 msgstr "és nem fut"
@@ -475,7 +476,7 @@ msgid "n/a"
 msgstr "nem értelmezett"
 
 msgid "omv-extras"
-msgstr ""
+msgstr "omv-extras"
 
 msgid "omv-update"
 msgstr "omv-update"

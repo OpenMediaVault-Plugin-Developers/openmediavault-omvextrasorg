@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# Axel Cantenys, 2017-2018,2021
+# Axel Cantenys, 2017-2018,2021,2023
 # Etienne V, 2020
 # RC, 2020
 # Zacharie ARNAISE <spacebrain.damage@gmail.com>, 2013,2015
@@ -13,8 +13,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-15 09:42-0500\n"
 "PO-Revision-Date: 2013-10-28 11:35+0000\n"
-"Last-Translator: Axel Cantenys, 2017-2018,2021\n"
-"Language-Team: French (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/fr/)\n"
+"Last-Translator: Axel Cantenys, 2017-2018,2021,2023\n"
+"Language-Team: French (http://app.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,19 +25,19 @@ msgid "Advanced"
 msgstr "Avancé"
 
 msgid "Agent port"
-msgstr "Port agent"
+msgstr "Port de l'agent"
 
 msgid "Backports"
 msgstr "Rétroportages"
 
 msgid "Certificate"
-msgstr ""
+msgstr "Certificat"
 
 msgid "Cleaning Apt Files and Lists ..."
-msgstr "Nettoyage des fichiers et listes d'Apt..."
+msgstr "Nettoyage des fichiers et listes d'Apt ..."
 
 msgid "Cleaning apt ..."
-msgstr ""
+msgstr "Nettoyage d'APT ..."
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
@@ -49,7 +49,7 @@ msgid "Cockpit listens on port 9090 for the web interface."
 msgstr "Cockpit écoute sur le port 9090 pour l'interface web."
 
 msgid "Containers"
-msgstr ""
+msgstr "Conteneurs"
 
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
@@ -72,7 +72,7 @@ msgid "Docker Storage"
 msgstr "Stockage Docker"
 
 msgid "Docker storage"
-msgstr ""
+msgstr "Stockage Docker"
 
 msgid "Done."
 msgstr "Fait."
@@ -122,10 +122,10 @@ msgid "If port is changed, click Install in the Yacht menu again."
 msgstr "Si le port a changé, cliquez à nouveau Installer dans le menu Yacht."
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
-msgstr "Chemin de stockage docker incorrect - impossible d'utiliser les chemins /sharedfolders"
+msgstr "Chemin de stockage de docker incorrect - impossible d'utiliser les chemins /sharedfolders"
 
 msgid "Image"
-msgstr ""
+msgstr "Image"
 
 msgid "Install"
 msgstr "Installer"
@@ -166,10 +166,10 @@ msgid ""
 msgstr "Installer Portainer va mettre à jour Portainer vers la dernière image si l'image existe déjà."
 
 msgid "Install Proxmox kernel"
-msgstr "Installer le noyau Proxmox"
+msgstr "Installer le noyau de Proxmox"
 
 msgid "Install Proxmox test kernel"
-msgstr ""
+msgstr "Installer le noyau de test de Proxmox"
 
 msgid "Install SystemRescue"
 msgstr "Installer SystemRescue"
@@ -196,19 +196,19 @@ msgid "Installing"
 msgstr "Installation en cours"
 
 msgid "Installing Docker ..."
-msgstr ""
+msgstr "Installation de Docker ..."
 
 msgid "Installing Portainer ..."
-msgstr ""
+msgstr "Installation de Portainer ..."
 
 msgid "Installing Proxmox kernel ..."
-msgstr "Installation de Proxmox kernel en cours..."
+msgstr "Installation du noyau de Proxmox en cours..."
 
 msgid "Installing Proxmox test kernel ..."
-msgstr ""
+msgstr "Installation du noyau de test de Proxmox ..."
 
 msgid "Installing Yacht ..."
-msgstr ""
+msgstr "Installation de Yacht ..."
 
 msgid "Kernel"
 msgstr "Noyau"
@@ -220,7 +220,7 @@ msgid "More info"
 msgstr "Plus d'info"
 
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 msgid "Not installed"
 msgstr "Non installé"
@@ -297,7 +297,7 @@ msgid ""
 msgstr "La suppression de Yacht suprimera l'image Yacht ainsi que le conteneur mais le volume ne sera pas supprimé."
 
 msgid "Remove data"
-msgstr ""
+msgstr "Supprimer les données"
 
 msgid "Remove non-Proxmox kernels and headers"
 msgstr "Supprimer les noyaux et les en-têtes non-Proxmox"
@@ -306,43 +306,43 @@ msgid "Removing"
 msgstr "Suppression en cours"
 
 msgid "Removing Docker ..."
-msgstr ""
+msgstr "Suppression de Docker ..."
 
 msgid "Removing Portainer ..."
-msgstr ""
+msgstr "Suppression de Portainer ..."
 
 msgid "Removing Portainer and data..."
-msgstr ""
+msgstr "Suppression de Portainer et des données..."
 
 msgid "Removing Yacht ..."
-msgstr ""
+msgstr "Suppression de Yacht ..."
 
 msgid "Removing non-Proxmox kernels ..."
-msgstr "Suppression des non-Proxmox kernels en cours..."
+msgstr "Suppression des noyaux non-Proxmox ..."
 
 msgid "Restart"
 msgstr "Redémarrer"
 
 msgid "Restarting Docker ..."
-msgstr ""
+msgstr "Redémarrage de Docker ..."
 
 msgid "Restarting docker ..."
 msgstr "Redémarrage de docker..."
 
 msgid "Running apt-get dist-upgrade ..."
-msgstr "Exécution de apt-get dist-upgrade..."
+msgstr "Exécution de apt-get dist-upgrade ..."
 
 msgid "Running apt-get update ..."
-msgstr "Exécution de apt-get update..."
+msgstr "Exécution de apt-get update ..."
 
 msgid "Running apt-get upgrade ..."
-msgstr "Exécution de apt-get upgrade..."
+msgstr "Exécution de apt-get upgrade ..."
 
 msgid "Running omv-aptclean ..."
-msgstr "Exécution de omv-aptclean..."
+msgstr "Exécution de omv-aptclean ..."
 
 msgid "Running omv-update ..."
-msgstr "Exécution de omv-update..."
+msgstr "Exécution de omv-update ..."
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
@@ -355,7 +355,7 @@ msgid ""
 msgstr "Le serveur SSH est activé par défaut. Connectez-vous avec le nom d'utilisateur : «<b>user</b>», et le mot de passe : «<b>live</b>»."
 
 msgid "SSL/TLS enabled"
-msgstr ""
+msgstr "Activer SSL/TLS"
 
 msgid ""
 "Save will rewrite daemon.json and restart docker if Docker Storage path has "
@@ -396,13 +396,13 @@ msgid "Testing repo"
 msgstr "Dépôt de test"
 
 msgid "This will enable the Proxmox 6.x repo."
-msgstr "Cela va activer le dépôt Proxmox 6.x."
+msgstr "Cela va activer le dépôt de Proxmox 6.x."
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
 msgstr "Ceci échouera à supprimer un noyau linux-image- * s'il est toujours actif."
 
 msgid "This will install the latest 5.11 kernel."
-msgstr ""
+msgstr "Cela va installer le dernier noyau 5.11."
 
 msgid "This will install the latest 5.4 kernel."
 msgstr "Cela va installer le dernier noyau 5.4."
@@ -410,7 +410,7 @@ msgstr "Cela va installer le dernier noyau 5.4."
 msgid ""
 "This will remove Portainer and all of its data.  Are you sure you want to do"
 " this?"
-msgstr ""
+msgstr "Cela supprimera Portainer et toutes ses données. Êtes-vous sûr de vouloir faire ça ?"
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "Cela supprimera tous les paquets d'en-têtes avec le préfixe linux-headers-."
@@ -428,10 +428,10 @@ msgid "Updates"
 msgstr "Mises à jour"
 
 msgid "Use EE"
-msgstr ""
+msgstr "Utiliser l'EE"
 
 msgid "Use business edition. This version requires a license."
-msgstr ""
+msgstr "Utiliser l'édition business. Cette version nécessite une licence."
 
 msgid "Use legacy"
 msgstr "Utiliser la version legacy"
@@ -467,22 +467,22 @@ msgid "and running"
 msgstr "et en cours d'exécution"
 
 msgid "apt clean"
-msgstr "apt clean"
+msgstr "Nettoyer APT"
 
 msgid "dist-upgrade"
 msgstr "dist-upgrade"
 
 msgid "n/a"
-msgstr "n/a"
+msgstr "N/A"
 
 msgid "omv-extras"
-msgstr ""
+msgstr "omv-extras"
 
 msgid "omv-update"
 msgstr "omv-update"
 
 msgid "update"
-msgstr "update"
+msgstr "mise à jour"
 
 msgid "upgrade"
-msgstr "upgrade"
+msgstr "mise à niveau"

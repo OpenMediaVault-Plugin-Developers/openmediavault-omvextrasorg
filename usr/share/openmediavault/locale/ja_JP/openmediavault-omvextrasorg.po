@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# Toshihiro Kan <kansuke4649@gmail.com>, 2014-2022
+# Toshihiro Kan <kansuke4649@gmail.com>, 2014-2023
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-15 09:42-0500\n"
 "PO-Revision-Date: 2013-10-28 11:35+0000\n"
-"Last-Translator: Toshihiro Kan <kansuke4649@gmail.com>, 2014-2022\n"
-"Language-Team: Japanese (Japan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ja_JP/)\n"
+"Last-Translator: Toshihiro Kan <kansuke4649@gmail.com>, 2014-2023\n"
+"Language-Team: Japanese (Japan) (http://app.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,7 +28,7 @@ msgid "Backports"
 msgstr "バックポート"
 
 msgid "Certificate"
-msgstr ""
+msgstr "証明書"
 
 msgid "Cleaning Apt Files and Lists ..."
 msgstr "Aptのファイルとリストをクリーニングしています ..."
@@ -294,7 +294,7 @@ msgid ""
 msgstr "Yachtの削除は、Yachtイメージとコンテナーを削除しますが、ボリュームは削除されません。"
 
 msgid "Remove data"
-msgstr ""
+msgstr "データの削除"
 
 msgid "Remove non-Proxmox kernels and headers"
 msgstr "non-Proxmoxカーネルとヘッダーを削除する"
@@ -309,7 +309,7 @@ msgid "Removing Portainer ..."
 msgstr "Portainerを削除しています ..."
 
 msgid "Removing Portainer and data..."
-msgstr ""
+msgstr "Portainerとデータを削除しています..."
 
 msgid "Removing Yacht ..."
 msgstr "Yachtを削除しています ..."
@@ -352,7 +352,7 @@ msgid ""
 msgstr "SSHサーバはデフォルトで有効になっています。ログイン用ユーザー名:<b>user</b>、パスワード: <b>live</b>"
 
 msgid "SSL/TLS enabled"
-msgstr ""
+msgstr "SSL/TLS有効"
 
 msgid ""
 "Save will rewrite daemon.json and restart docker if Docker Storage path has "
@@ -407,7 +407,7 @@ msgstr "最新の5.4カーネルがインストールされます。"
 msgid ""
 "This will remove Portainer and all of its data.  Are you sure you want to do"
 " this?"
-msgstr ""
+msgstr "Portainerとそのデータは全て削除されます。 本当によろしいですか？"
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
 msgstr "linux-headers-で始まる、すべてのヘッダパッケージが削除されます。"

@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# kochin <kochinc@outlook.com>, 2014-2022
+# kochin <kochinc@outlook.com>, 2014-2023
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-15 09:42-0500\n"
 "PO-Revision-Date: 2013-10-28 11:35+0000\n"
-"Last-Translator: kochin <kochinc@outlook.com>, 2014-2022\n"
-"Language-Team: Chinese (Taiwan) (http://www.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_TW/)\n"
+"Last-Translator: kochin <kochinc@outlook.com>, 2014-2023\n"
+"Language-Team: Chinese (Taiwan) (http://app.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,7 +25,7 @@ msgid "Agent port"
 msgstr "代理服務連接埠"
 
 msgid "Backports"
-msgstr "向後移植"
+msgstr "向後移植套件庫"
 
 msgid "Certificate"
 msgstr "憑證"
