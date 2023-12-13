@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (6.3.4) stable; urgency=low
+
+  * make executable again
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 13 Dec 2023 17:57:13 -0600
+
 openmediavault-omvextrasorg (6.3.3) stable; urgency=low
 
   * make release-upgrade script executable
