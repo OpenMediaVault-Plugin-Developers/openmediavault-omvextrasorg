@@ -33,8 +33,8 @@ if [ -f "${pref}" ]; then
 fi
 
 if [ -f "${pve}" ]; then
-  echo "Fixing Proxmox repo ..."
-  sed -i "s/bullseye/bookworm/g" ${pve}
+  echo "Removing Proxmox repo ..."
+  rm -f ${pve}
 fi
 
 exit 0
