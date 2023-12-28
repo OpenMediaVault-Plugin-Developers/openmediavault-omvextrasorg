@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (6.3.6) stable; urgency=low
+
+  * Add raspi.list to release-upgrade pre script
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 28 Dec 2023 09:26:37 -0600
+
 openmediavault-omvextrasorg (6.3.5) stable; urgency=low
 
   * improve release upgrade script
