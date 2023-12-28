@@ -8,6 +8,7 @@ docker="/etc/apt/sources.list.d/omvdocker.list"
 list="/etc/apt/sources.list.d/omvextras.list"
 pref="/etc/apt/preferences.d/omvextras.pref"
 pve="/etc/apt/sources.list.d/pvekernel.list"
+raspi="/etc/apt/sources.list.d/raspi.list"
 
 if [ -f "${armbian}" ]; then
   echo "Fixing Armbian repo ..."
@@ -35,6 +36,11 @@ fi
 if [ -f "${pve}" ]; then
   echo "Removing Proxmox repo ..."
   rm -f ${pve}
+fi
+
+if [ -f "${raspi}" ]; then
+  echo "Fixing Raspberry Pi repo ..."
+  sed -i "s/bullseye/bookworm/g" ${raspi}
 fi
 
 exit 0
