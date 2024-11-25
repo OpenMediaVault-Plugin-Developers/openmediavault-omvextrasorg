@@ -25,7 +25,7 @@
 
 declare -i i=0
 
-export LANG=C
+export LC_ALL=C
 
 ((i++))
 echo "${i}. Cleaning apt cache files..."
