@@ -18,10 +18,6 @@ data:
         hint: _("Please install the openmediavault-compose to provide docker functionality within the OMV web interface.")
     buttons:
       - template: submit
-      - template: cancel
-        execute:
-          type: url
-          url: "/system/omvextras"
       - text: _("apt clean")
         execute:
           type: taskDialog
@@ -32,6 +28,24 @@ data:
               request:
                 service: OmvExtras
                 method: clean
+                params:
+                  repos: false
+              buttons:
+                stop:
+                  hidden: true
+            successUrl: /system/omvextras
+      - text: _("apt clean repos")
+        execute:
+          type: taskDialog
+          taskDialog:
+            config:
+              title: _("Cleaning apt and resetting repos ...")
+              startOnInit: true
+              request:
+                service: OmvExtras
+                method: clean
+                params:
+                  repos: true
               buttons:
                 stop:
                   hidden: true
