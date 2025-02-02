@@ -25,6 +25,8 @@
 
 declare -i i=0
 
+OMV_APT_KERNEL_BACKPORTS_PINPRIORITY=${OMV_APT_KERNEL_BACKPORTS_PINPRIORITY:-500}
+
 export LC_ALL=C
 
 ((i++))
@@ -84,9 +86,9 @@ if [ "${1}" = "repos" ]; then
   if omv_checkyesno ${backports}; then
     ((i++))
     echo -e "\n${i}. Adding backports pinning..."
-    pkgs=("zfs*" "spl" "spl-dkms" "libnvpair3linux" "libzfs4linux" "libzpool5linux" "libuutil3linux" "libfdt1" "borgbackup" "libvirt*" "qemu*")
+    pkgs=("zfs*" "libnvpair3linux" "libzfs4linux" "libzpool5linux" "libuutil3linux" "libfdt1" "borgbackup" "libvirt*" "qemu*")
     for ((j=0; j<${#pkgs[@]}; j++)); do
-      echo -e "Package: ${pkgs[j]}\nPin: release a=${dist}-backports\nPin-Priority: 500\n" >> ${pref}
+      echo -e "Package: ${pkgs[j]}\nPin: release n=${dist}-backports\nPin-Priority: ${OMV_APT_KERNEL_BACKPORTS_PINPRIORITY}\n" >> ${pref}
     done
     chmod 644 ${pref}
   fi
@@ -100,7 +102,6 @@ if [ "${1}" = "repos" ]; then
     wget --quiet --output-document=- "${docker_key_url}" | gpg --dearmor > "${docker_key}"
     chmod 644 ${docker_list} ${docker_key}
   fi
-
 fi
 
 ((i++))
