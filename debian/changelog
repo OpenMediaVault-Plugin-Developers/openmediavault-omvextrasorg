@@ -1,8 +1,9 @@
-openmediavault-omvextrasorg (7.0.1) UNRELEASED; urgency=medium
+openmediavault-omvextrasorg (7.0.1) stable; urgency=low
 
   * Add apt clean repos button for resetting repos
+  * Use 'n' instead of 'a' in pinning file
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 04 Mar 2024 11:28:19 -0600
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 02 Feb 2025 08:29:25 -0600
 
 openmediavault-omvextrasorg (7.0) stable; urgency=low
 
