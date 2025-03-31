@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (7.0.2) stable; urgency=low
+
+  * Improve backports status when no omv environment variable
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 31 Mar 2025 18:58:08 -0500
+
 openmediavault-omvextrasorg (7.0.1) stable; urgency=low
 
   * Add apt clean repos button for resetting repos
