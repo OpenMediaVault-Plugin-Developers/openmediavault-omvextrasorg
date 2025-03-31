@@ -53,7 +53,7 @@ touch /var/cache/openmediavault/archives/Packages
 if [ "${1}" = "repos" ]; then
   
   arch="$(dpkg --print-architecture)"
-  backports="${OMV_APT_USE_KERNEL_BACKPORTS:-'YES'}"
+  backports=${OMV_APT_USE_KERNEL_BACKPORTS:-"yes"}
   docker=$(omv_config_get "/config/system/omvextras/docker")
   dist="$(lsb_release --codename --short)"
   omv_codename=$(omv_product_info "versionname")
