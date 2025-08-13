@@ -65,8 +65,8 @@ if [ "${1}" = "repos" ]; then
 
   key="/usr/share/keyrings/omvextras.gpg"
   docker_key="/usr/share/keyrings/docker.gpg"
-  list="/etc/apt/sources.list.d/omvextras.list"
-  docker_list="/etc/apt/sources.list.d/omvdocker.list"
+  list="/etc/apt/sources.list.d/omvextras.sources"
+  docker_list="/etc/apt/sources.list.d/omvdocker.sources"
   pref="/etc/apt/preferences.d/omvextras.pref"
   
   ((i++))
@@ -77,7 +77,7 @@ if [ "${1}" = "repos" ]; then
   ((i++))
   echo -e "\n${i}. Adding omv-extras repo and key..."
   mkdir -pv "$(dirname ${key})"
-  echo "deb [signed-by=${key} arch=${arch}] ${repo_url} ${omv_codename,,} main" > ${list}
+  echo -e "Types: deb\nURIs: ${repo_url}\nSuites: ${omv_codename,,}\nComponents: main\nSigned-By: ${key}" > ${list}
   wget --quiet --output-document=- "${key_url}" | gpg --dearmor > "${key}"
   chmod 644 ${list} ${key}
 
@@ -98,7 +98,7 @@ if [ "${1}" = "repos" ]; then
   if omv_checkyesno ${docker}; then
     ((i++))
     echo -e "\n${i}. Adding docker repo and key..."
-    echo "deb [signed-by=${docker_key} arch=${arch}] ${docker_url} ${dist,,} stable" > ${docker_list}
+    echo -e "Types: deb\nURIs: ${docker_url}\nSuites: ${dist,,}\nComponents: stable\nSigned-By: ${docker_key}" > ${docker_list}
     wget --quiet --output-document=- "${docker_key_url}" | gpg --dearmor > "${docker_key}"
     chmod 644 ${docker_list} ${docker_key}
   fi
