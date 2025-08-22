@@ -86,7 +86,7 @@ if [ "${1}" = "repos" ]; then
   if omv_checkyesno ${backports}; then
     ((i++))
     echo -e "\n${i}. Adding backports pinning..."
-    pkgs=("zfs*" "libnvpair3linux" "libzfs4linux" "libzpool5linux" "libuutil3linux" "libfdt1" "borgbackup" "libvirt*" "qemu*" "seabios")
+    pkgs=("zfs*" "libnvpair*linux" "libzfs*linux" "libzpool*linux" "libuutil*linux" "libfdt1" "borgbackup" "libvirt*" "qemu*" "seabios")
     for ((j=0; j<${#pkgs[@]}; j++)); do
       echo -e "Package: ${pkgs[j]}\nPin: release n=${dist}-backports\nPin-Priority: ${OMV_APT_KERNEL_BACKPORTS_PINPRIORITY}\n" >> ${pref}
     done
