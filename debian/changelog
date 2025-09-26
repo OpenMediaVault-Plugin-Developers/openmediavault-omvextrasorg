@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (8.0) stable; urgency=low
+
+  * Update for OMV 8.x
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 26 Sep 2025 13:12:36 -0500
+
 openmediavault-omvextrasorg (7.0.2) stable; urgency=low
 
   * Improve backports status when no omv environment variable

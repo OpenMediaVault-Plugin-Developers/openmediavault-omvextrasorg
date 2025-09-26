@@ -3,16 +3,16 @@ Section: net
 XB-Plugin-Section: utilities
 Priority: optional
 Maintainer: OpenMediaVault Plugin Developers <plugins@omv-extras.org>
-Build-Depends: debhelper (>= 13 )
-Standards-Version: 4.3.0
+Build-Depends: debhelper-compat (= 14), dh-sequence-single-binary
+Standards-Version: 4.7.2
 Homepage: http://omv-extras.org/
 
 Package: openmediavault-omvextrasorg
 Architecture: all
-Depends: openmediavault (>= 7),
+Depends: openmediavault (>= 8),
          gnupg,
          ${misc:Depends}
-Breaks: openmediavault (<< 7.0)
+Breaks: openmediavault (<< 8.0)
 Description: OMV-Extras.org Package Repositories for OpenMediaVault
  .
  An apt cleaning function is also available for fixing repository cache
