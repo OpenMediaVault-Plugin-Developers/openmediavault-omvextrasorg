@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (7.0.3) stable; urgency=low
+
+  * Add omv-release-upgrade script
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 30 Sep 2025 16:53:44 -0500
+
 openmediavault-omvextrasorg (7.0.2) stable; urgency=low
 
   * Improve backports status when no omv environment variable
