@@ -1,0 +1,44 @@
+#!/bin/sh
+
+export LANG=C
+export LC_ALL=C
+
+armbian="/etc/apt/sources.list.d/armbian.list"
+docker="/etc/apt/sources.list.d/omvdocker.list"
+list="/etc/apt/sources.list.d/omvextras.list"
+pref="/etc/apt/preferences.d/omvextras.pref"
+pve="/etc/apt/sources.list.d/pvekernel.list"
+raspi="/etc/apt/sources.list.d/raspi.list"
+
+if [ -f "${armbian}" ]; then
+  echo "Fixing Armbian repo ..."
+  sed -i "s/bookworm/trixie/g" ${armbian}
+fi
+
+if [ -f "${docker}" ]; then
+  echo "Fixing Docker repo ..."
+  sed -i "s/bookworm/trixie/g" ${docker}
+fi
+
+if [ -f "${list}" ]; then
+  echo "Fixing omv-extras repos ..."
+  sed -i "s/bookworm/trixie/g" ${list}
+  sed -i "s/sandworm/synchrony/g" ${list}
+fi
+
+if [ -f "${pref}" ]; then
+  echo "Fixing omv-extras pinnings ..."
+  sed -i "s/bookworm/trixie/g" ${pref}
+fi
+
+if [ -f "${pve}" ]; then
+  echo "Removing Proxmox repo ..."
+  rm -f ${pve}
+fi
+
+if [ -f "${raspi}" ]; then
+  echo "Fixing Raspberry Pi repo ..."
+  sed -i "s/bookworm/trixie/g" ${raspi}
+fi
+
+exit 0
