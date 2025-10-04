@@ -59,7 +59,7 @@ if [ "${1}" = "repos" ]; then
   omv_codename=$(omv_product_info "versionname")
 
   repo_url=${OMV_EXTRAS_APT_REPOSITORY_URL:-"https://openmediavault-plugin-developers.github.io/packages/debian"}
-  key_url=${OMV_EXTRAS_KEY_URL:-"https://openmediavault-plugin-developers.github.io/packages/debian/omvextras2026.gpg"}
+  key_url=${OMV_EXTRAS_KEY_URL:-"https://openmediavault-plugin-developers.github.io/packages/debian/omvextras2030.gpg"}
   docker_url=${OMV_DOCKER_APT_REPOSITORY_URL:-"https://download.docker.com/linux/debian"}
   docker_key_url=${OMV_DOCKER_KEY_URL:-"https://download.docker.com/linux/debian/gpg"}
 
