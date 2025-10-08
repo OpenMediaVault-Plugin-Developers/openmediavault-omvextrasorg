@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (8.0.1) stable; urgency=low
+
+  * Use new signing key
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 04 Oct 2025 20:18:10 +0000
+
 openmediavault-omvextrasorg (8.0) stable; urgency=low
 
   * Update for OMV 8.x
