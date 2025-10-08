@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
+# Marek Pavelka, 2025
 # Matěj Mihal <mejatysek@gmail.com>, 2014
 # Pavel Borecki <pavel.borecki@gmail.com>, 2015-2021
 msgid ""
@@ -11,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-15 09:42-0500\n"
 "PO-Revision-Date: 2013-10-28 11:35+0000\n"
-"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>, 2015-2021\n"
+"Last-Translator: Marek Pavelka, 2025\n"
 "Language-Team: Czech (Czech Republic) (http://app.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,13 +30,13 @@ msgid "Backports"
 msgstr "Přenesené z novějšího do staršího vydání (backports)"
 
 msgid "Certificate"
-msgstr ""
+msgstr "Certifikát"
 
 msgid "Cleaning Apt Files and Lists ..."
 msgstr "Čistění souborů a seznamů Apt…"
 
 msgid "Cleaning apt ..."
-msgstr ""
+msgstr "Čištění apt"
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
@@ -44,15 +45,15 @@ msgid "Cockpit"
 msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
-msgstr "Webové rozhraní Cockpit se nachází na portu 9090."
+msgstr "Cockpit naslouchá pro webové rozhraní na portu 9090."
 
 msgid "Containers"
-msgstr ""
+msgstr "Kontejnery"
 
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
 "legacy. Use iptables menu to change. "
-msgstr "Debian 10/OMV 5.x ve výchozím stavu používá iptables-nft a Docker potřebuje iptables-legacy. Pro změnu použijte nabídku iptables "
+msgstr "Debian 10/OMV 5.x používá ve výchozím nastavení iptables-nft a Docker potřebuje iptables-legacy. Pro změnu použijte nabídku iptables."
 
 msgid "Default password: "
 msgstr "Výchozí heslo:"
@@ -114,19 +115,19 @@ msgid ""
 msgstr "IP adresa bude nastavena automaticky protokolem DHCP. Pro stroje bez připojeného monitoru je dobré nastavit statickou zápůjčku na DHCP serveru."
 
 msgid "If port is changed, click Install in the Portainer menu again."
-msgstr "Pokud se port změní, klikněte znovu na Nainstalovat v nabídce Portainer"
+msgstr "Pokud se port změní, klikněte znovu na Instalovat v nabídce Portaineru."
 
 msgid "If port is changed, click Install in the Yacht menu again."
-msgstr "Pokud se port změní, klikněte znovu na Nainstalovat v nabídce Yacht"
+msgstr "Pokud se port změní, klikněte znovu na Instalovat v nabídce Yachtu."
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
-msgstr "Neplatný popis umístění úložiště pro docker – není možné použít popisy umístění /sharedfolders"
+msgstr "Nepovolená cesta k úložiště dockeru – nelze použít cesty /sdílenésložky"
 
 msgid "Image"
-msgstr ""
+msgstr "Obraz"
 
 msgid "Install"
-msgstr "Naistalovat"
+msgstr "Instalovat"
 
 msgid "Install Clonezilla"
 msgstr "Připravit systém Clonezilla"
@@ -191,22 +192,22 @@ msgid "Installed Kernels"
 msgstr "Nainstalovaná jádra operačního systému:"
 
 msgid "Installing"
-msgstr "Instaluje se"
+msgstr "Instalace"
 
 msgid "Installing Docker ..."
-msgstr ""
+msgstr "Instalace Dockeru…"
 
 msgid "Installing Portainer ..."
-msgstr ""
+msgstr "Instalace Portaineru…"
 
 msgid "Installing Proxmox kernel ..."
-msgstr "Instaluje se jádro z Proxmox…"
+msgstr "Instalace jádra z Proxmoxu…"
 
 msgid "Installing Proxmox test kernel ..."
-msgstr "Instaluje se testovací jádro z Proxmox…"
+msgstr "Instalace testovacího jádra z Proxmoxu…"
 
 msgid "Installing Yacht ..."
-msgstr ""
+msgstr "Instalace Yachtu…"
 
 msgid "Kernel"
 msgstr "Jádro"
@@ -215,10 +216,10 @@ msgid "Kernels"
 msgstr "Jádra"
 
 msgid "More info"
-msgstr "Další informace"
+msgstr "Více informací"
 
 msgid "Name"
-msgstr ""
+msgstr "Název"
 
 msgid "Not installed"
 msgstr "Nenaistalováno"
@@ -241,7 +242,7 @@ msgstr "Otevřít web"
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
 "/etc/docker/daemon.json."
-msgstr "Popis umístění úložiště Docker obrazů a kontejnerů. Pro použití výchozího /etc/docker/daemon.json ponechte nevyplněné."
+msgstr "Cesta k úložištím obrazů a kontejnerů Dockeru. Pro použití vlastního souboru /etc/docker/daemon.json ponechte prázdné."
 
 msgid "Portainer"
 msgstr "Portainer"
@@ -249,7 +250,7 @@ msgstr "Portainer"
 msgid ""
 "Portainer will listen on port 9000 for the web interface and 8000 for the "
 "agent unless changed."
-msgstr "Webové rozhraní Portainer bude na portu 9000 a rozhraní pro agenty na portu 8000 (pokud nebude změněno)."
+msgstr "Pokud nedojde ke změně, bude Portainer naslouchat na portu 9000 pro webové rozhraní a 8000 pro agenta."
 
 msgid "Proxmox"
 msgstr "Proxmox"
@@ -267,13 +268,13 @@ msgid "Reboot to GParted Live Once"
 msgstr "Jednorázově restartovat do systému Clonezilla"
 
 msgid "Reboot to SystemRescue ..."
-msgstr "Restartovat do systému SystemRescue…"
+msgstr "Restartovat do SystemRescue…"
 
 msgid "Reboot to SystemRescue Once"
-msgstr "Jednorázově restartovat do systému SystemRescue"
+msgstr "Jednorázově restartovat do SystemRescue"
 
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
-msgstr "Před odebráním jader jiných, než z Proxmox restartujte s Proxmox jádrem."
+msgstr "Před odebráním jiných jader než z Proxmoxu restartujte s jádrem Proxmoxu."
 
 msgid "Remove"
 msgstr "Odebrat"
@@ -295,7 +296,7 @@ msgid ""
 msgstr "Odebrat Yacht odebere obraz Yacht a kontejner, ale svazek odebrán nebude."
 
 msgid "Remove data"
-msgstr ""
+msgstr "Odebrat data"
 
 msgid "Remove non-Proxmox kernels and headers"
 msgstr "Odebrat jádra a hlavičkové soubory nepocházející z Proxmox"
@@ -474,7 +475,7 @@ msgid "n/a"
 msgstr "n/a"
 
 msgid "omv-extras"
-msgstr ""
+msgstr "OMV-Extras"
 
 msgid "omv-update"
 msgstr "omv-update"

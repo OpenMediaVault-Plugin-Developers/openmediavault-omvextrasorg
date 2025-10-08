@@ -4,7 +4,7 @@
 # 
 # Translators:
 # Axel Cantenys, 2017-2018,2021,2023
-# Etienne V, 2020
+# ba445a6451a8788fc2cde279bf16c086_ad8d9e9, 2020
 # RC, 2020
 # Zacharie ARNAISE <spacebrain.damage@gmail.com>, 2013,2015
 msgid ""

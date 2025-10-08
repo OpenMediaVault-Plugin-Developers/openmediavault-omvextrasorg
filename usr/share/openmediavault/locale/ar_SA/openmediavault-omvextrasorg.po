@@ -3,48 +3,46 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# Jonatan Nyberg, 2021
-# Jonatan Nyberg, 2021
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-15 09:42-0500\n"
 "PO-Revision-Date: 2013-10-28 11:35+0000\n"
-"Last-Translator: Jonatan Nyberg, 2021\n"
-"Language-Team: Swedish (http://app.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/sv/)\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Arabic (Saudi Arabia) (http://app.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ar_SA/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: sv\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ar_SA\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 
 msgid "Advanced"
-msgstr "Avancerat"
+msgstr ""
 
 msgid "Agent port"
-msgstr "Agentport"
+msgstr ""
 
 msgid "Backports"
-msgstr "Backports"
+msgstr ""
 
 msgid "Certificate"
 msgstr ""
 
 msgid "Cleaning Apt Files and Lists ..."
-msgstr "Rensar Apt-filer och listor ..."
+msgstr ""
 
 msgid "Cleaning apt ..."
 msgstr ""
 
 msgid "Clonezilla"
-msgstr "Clonezilla"
+msgstr ""
 
 msgid "Cockpit"
-msgstr "Cockpit"
+msgstr ""
 
 msgid "Cockpit listens on port 9090 for the web interface."
-msgstr "Cockpit lyssnar på port 9090 för webbgränssnittet."
+msgstr ""
 
 msgid "Containers"
 msgstr ""
@@ -52,146 +50,146 @@ msgstr ""
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
 "legacy. Use iptables menu to change. "
-msgstr "Debian 10/OMV 5.x använder iptables-nft som standard och Docker behöver iptables-legacy. Använd iptables-menyn för att ändra."
+msgstr ""
 
 msgid "Default password: "
-msgstr "Standardlösenord: "
+msgstr ""
 
 msgid "Default username: "
-msgstr "Standard användarnamn: "
+msgstr ""
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
-msgstr "Standard användarnamn: <b>user</b> och lösenord: <b>live</b>"
+msgstr ""
 
 msgid "Docker"
-msgstr "Docker"
+msgstr ""
 
 msgid "Docker Storage"
-msgstr "Docker-lagring"
+msgstr ""
 
 msgid "Docker storage"
 msgstr ""
 
 msgid "Done."
-msgstr "Klart."
+msgstr ""
 
 msgid ""
 "Downloads Clonezilla ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr "Hämtar Clonezilla ISO och konfigurerar grub bootloader för att möjliggöra start från ISO."
+msgstr ""
 
 msgid ""
 "Downloads GParted Live ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr "Hämtar GParted Live ISO och konfigurerar grub bootloader för att möjliggöra start från ISO."
+msgstr ""
 
 msgid ""
 "Downloads SystemRescue ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr "Hämtar SystemRescue ISO och konfigurerar grub bootloader för att möjliggöra start från ISO."
+msgstr ""
 
 msgid "Extras repo"
 msgstr ""
 
 msgid "GParted Live"
-msgstr "GParted Live"
+msgstr ""
 
 msgid "General settings"
-msgstr "Allmänna Inställningar"
+msgstr ""
 
 msgid "Hold Current Kernel"
-msgstr "Behåll nuvarande kärna"
+msgstr ""
 
 msgid "Holding current kernel ..."
-msgstr "Behåller nuvarande kärna ..."
+msgstr ""
 
 msgid "IP Address will be set by DHCP."
-msgstr "IP-adressen kommer att ställas in av DHCP."
+msgstr ""
 
 msgid ""
 "IP Address will be set by DHCP.  Using static DHCP is recommended for "
 "headless servers."
-msgstr "IP-adressen kommer att ställas in av DHCP.  Använda statisk DHCP rekommenderas för huvudlösa servrar."
+msgstr ""
 
 msgid "If port is changed, click Install in the Portainer menu again."
-msgstr "Om porten ändras klickar du på Installera i Portainers-menyn igen."
+msgstr ""
 
 msgid "If port is changed, click Install in the Yacht menu again."
-msgstr "Om porten ändras klickar du på Installera i Yacht-menyn igen."
+msgstr ""
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
-msgstr "Olaglig docker-lagringssökväg - kan inte använda /sharedfolders-sökvägar"
+msgstr ""
 
 msgid "Image"
 msgstr ""
 
 msgid "Install"
-msgstr "Installera"
+msgstr ""
 
 msgid "Install Clonezilla"
-msgstr "Installera Clonezilla"
+msgstr ""
 
 msgid "Install Clonezilla ISO ..."
-msgstr "Installera Clonezilla ISO ..."
+msgstr ""
 
 msgid ""
 "Install Docker will download and place a newer docker-compose in "
 "/usr/local/bin/ on 64 bit x86 systems only."
-msgstr "Installering av Docker hämtar och placerar en nyare docker-compose i /usr/local/bin/ endast på 64-bitars x86-system."
+msgstr ""
 
 msgid ""
 "Install Docker will install the docker-compose package. Location: /usr/bin/ "
 "on all systems."
-msgstr "Installering av Docker installerar paketet docker-compose. Plats: /usr/bin/ på alla system."
+msgstr ""
 
 msgid "Install Docker will restart the docker service if daemon.json changes."
-msgstr "Installering av Docker startar om docker-tjänsten om daemon.json ändras."
+msgstr ""
 
 msgid "Install GParted Live"
-msgstr "Installera GParted Live"
+msgstr ""
 
 msgid "Install GParted Live ISO ..."
-msgstr "Installera GParted Live ISO ..."
+msgstr ""
 
 msgid ""
 "Install Portainer will install the docker-ce package if not already "
 "installed."
-msgstr "Installering av Portainer installerar docker-ce-paketet om det inte redan är installerat."
+msgstr ""
 
 msgid ""
 "Install Portainer will update Portainer to the latest image if the image "
 "already exists."
-msgstr "Installering av Portainer uppdaterar Portainer till den senaste bilden om bilden redan finns."
+msgstr ""
 
 msgid "Install Proxmox kernel"
-msgstr "Installera Proxmox-kärna"
+msgstr ""
 
 msgid "Install Proxmox test kernel"
-msgstr "Installera Proxmox-testkärna"
+msgstr ""
 
 msgid "Install SystemRescue"
-msgstr "Installera SystemRescue"
+msgstr ""
 
 msgid "Install SystemRescue ISO ..."
-msgstr "Installera SystemRescue ISO ..."
+msgstr ""
 
 msgid ""
 "Install Yacht will install the docker-ce package if not already installed."
-msgstr "Installera Yacht installerar docker-ce-paketet om det inte redan är installerat."
+msgstr ""
 
 msgid ""
 "Install Yacht will update Yacht to the latest image if the image already "
 "exists."
-msgstr "Installera Yacht kommer att uppdatera Yacht till den senaste bilden om bilden redan finns."
+msgstr ""
 
 msgid "Installed"
-msgstr "Installerad"
+msgstr ""
 
 msgid "Installed Kernels"
-msgstr "Installerade kärnor"
+msgstr ""
 
 msgid "Installing"
-msgstr "Installerar"
+msgstr ""
 
 msgid "Installing Docker ..."
 msgstr ""
@@ -200,108 +198,108 @@ msgid "Installing Portainer ..."
 msgstr ""
 
 msgid "Installing Proxmox kernel ..."
-msgstr "Installerar Proxmox-kärna ..."
+msgstr ""
 
 msgid "Installing Proxmox test kernel ..."
-msgstr "Installerar Proxmox-testkärna ..."
+msgstr ""
 
 msgid "Installing Yacht ..."
 msgstr ""
 
 msgid "Kernel"
-msgstr "Kärna"
+msgstr ""
 
 msgid "Kernels"
-msgstr "Kärnor"
+msgstr ""
 
 msgid "More info"
-msgstr "Mer info"
+msgstr ""
 
 msgid "Name"
 msgstr ""
 
 msgid "Not installed"
-msgstr "Inte installerad"
+msgstr ""
 
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
-msgstr "Rekommenderas inte för huvudlösa servrar.  SSH är inte aktiverat som standard."
+msgstr ""
 
 msgid "OMV-Extras"
-msgstr "OMV-Extras"
+msgstr ""
 
 msgid "Open Portainer"
-msgstr "Öppna Portainer"
+msgstr ""
 
 msgid "Open Yacht"
-msgstr "Öppna Yacht"
+msgstr ""
 
 msgid "Open web"
-msgstr "Öppna webb"
+msgstr ""
 
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
 "/etc/docker/daemon.json."
-msgstr "Sökvägen till Docker-bilder och container-lagring. Lämna tomt för att använda anpassade /etc/docker/daemon.json."
+msgstr ""
 
 msgid "Portainer"
-msgstr "Portainer"
+msgstr ""
 
 msgid ""
 "Portainer will listen on port 9000 for the web interface and 8000 for the "
 "agent unless changed."
-msgstr "Portainer lyssnar på port 9000 för webbgränssnittet och 8000 för agenten om de inte ändras."
+msgstr ""
 
 msgid "Proxmox"
-msgstr "Proxmox"
+msgstr ""
 
 msgid "Reboot to Clonezilla ..."
-msgstr "Starta om till Clonezilla ..."
+msgstr ""
 
 msgid "Reboot to Clonezilla Once"
-msgstr "Starta om till Clonezilla Once"
+msgstr ""
 
 msgid "Reboot to GParted Live ..."
-msgstr "Starta om till GParted Live ..."
+msgstr ""
 
 msgid "Reboot to GParted Live Once"
-msgstr "Starta om till GParted Live Once"
+msgstr ""
 
 msgid "Reboot to SystemRescue ..."
-msgstr "Starta om till SystemRescue ..."
+msgstr ""
 
 msgid "Reboot to SystemRescue Once"
-msgstr "Starta om till SystemRescue Once"
+msgstr ""
 
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
-msgstr "Starta om med Proxmox-kärnan innan du tar bort icke-Proxmox-kärnor."
+msgstr ""
 
 msgid "Remove"
-msgstr "Ta bort"
+msgstr ""
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
-msgstr "Ta bort Docker kommer att ta bort docker-compose från /usr/local/bin/."
+msgstr ""
 
 msgid "Remove Docker will remove the docker-compose package."
-msgstr "Ta bort Docker tar bort paketet docker-compose."
+msgstr ""
 
 msgid ""
 "Remove Portainer will remove the Portainer image and container but the "
 "volume will not be removed."
-msgstr "Ta bort Portainer tar bort Portainer-bilden och containern men volymen kommer inte att tas bort."
+msgstr ""
 
 msgid ""
 "Remove Yacht will remove the Yacht image and container but the volume will "
 "not be removed."
-msgstr "Ta bort Yacht tar bort Yacht-bilden och containern men volymen kommer inte att tas bort."
+msgstr ""
 
 msgid "Remove data"
 msgstr ""
 
 msgid "Remove non-Proxmox kernels and headers"
-msgstr "Ta bort icke-Proxmox-kärnor och rubriker"
+msgstr ""
 
 msgid "Removing"
-msgstr "Tar bort"
+msgstr ""
 
 msgid "Removing Docker ..."
 msgstr ""
@@ -316,31 +314,31 @@ msgid "Removing Yacht ..."
 msgstr ""
 
 msgid "Removing non-Proxmox kernels ..."
-msgstr "Tar bort icke-Proxmox-kärnor ..."
+msgstr ""
 
 msgid "Restart"
-msgstr "Starta om"
+msgstr ""
 
 msgid "Restarting Docker ..."
 msgstr ""
 
 msgid "Restarting docker ..."
-msgstr "Startar om docker ..."
+msgstr ""
 
 msgid "Running apt-get dist-upgrade ..."
-msgstr "Kör apt-get dist-upgrade ..."
+msgstr ""
 
 msgid "Running apt-get update ..."
-msgstr "Kör apt-get update ..."
+msgstr ""
 
 msgid "Running apt-get upgrade ..."
-msgstr "Kör apt-get upgrade ..."
+msgstr ""
 
 msgid "Running omv-aptclean ..."
-msgstr "Kör omv-aptclean ..."
+msgstr ""
 
 msgid "Running omv-update ..."
-msgstr "Kör omv-update ..."
+msgstr ""
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
@@ -361,7 +359,7 @@ msgid ""
 msgstr ""
 
 msgid "Set as default boot kernel"
-msgstr "Ange som standard startkärna"
+msgstr ""
 
 msgid "Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time."
 msgstr ""
@@ -373,7 +371,7 @@ msgid "Sets grub bootloader to boot from SystemRescue ISO <b>ONE</b> time."
 msgstr ""
 
 msgid "Setting boot kernel ..."
-msgstr "Ställer in startkärnan ..."
+msgstr ""
 
 msgid ""
 "Setting the wrong default boot kernel may cause the system to be "
@@ -382,13 +380,13 @@ msgid ""
 msgstr ""
 
 msgid "Settings"
-msgstr "Inställningar"
+msgstr ""
 
 msgid "Spaced used by ISO in /boot directory on OS drive"
 msgstr ""
 
 msgid "Status"
-msgstr "Status"
+msgstr ""
 
 msgid "Testing repo"
 msgstr ""
@@ -423,7 +421,7 @@ msgid "Unholding current kernel ..."
 msgstr ""
 
 msgid "Updates"
-msgstr "Uppdateringar"
+msgstr ""
 
 msgid "Use EE"
 msgstr ""
@@ -435,40 +433,40 @@ msgid "Use legacy"
 msgstr ""
 
 msgid "Use nft"
-msgstr "Använd nft"
+msgstr ""
 
 msgid "Version"
-msgstr "Version"
+msgstr ""
 
 msgid "Web port"
-msgstr "Webbport"
+msgstr ""
 
 msgid "Web port and agent port cannot be the same."
-msgstr "Webbport och agentport kan inte vara densamma."
+msgstr ""
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
 "OpenMediaVault ssh key and need to be updated on the client system."
-msgstr "Vid anslutning via ssh kommer ssh-nyckeln att vara annorlunda än OpenMediaVault-ssh-nyckeln och måste uppdateras på klientsystemet."
+msgstr ""
 
 msgid ""
 "When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
-msgstr "Vid inloggning på distans startar Clonezilla med:  <b>sudo clonezilla</b>"
+msgstr ""
 
 msgid "Yacht will listen on port 8001 for the web interface unless changed."
-msgstr "Yacht kommer att lyssna på port 8001 för webbgränssnittet om det inte ändras."
+msgstr ""
 
 msgid "and not running"
-msgstr "och kör inte"
+msgstr ""
 
 msgid "and running"
-msgstr "och kör"
+msgstr ""
 
 msgid "apt clean"
-msgstr "apt clean"
+msgstr ""
 
 msgid "dist-upgrade"
-msgstr "dist-upgrade"
+msgstr ""
 
 msgid "n/a"
 msgstr ""
@@ -477,10 +475,10 @@ msgid "omv-extras"
 msgstr ""
 
 msgid "omv-update"
-msgstr "omv-update"
+msgstr ""
 
 msgid "update"
-msgstr "update"
+msgstr ""
 
 msgid "upgrade"
-msgstr "upgrade"
+msgstr ""

@@ -3,29 +3,27 @@
 # This file is distributed under the same license as the openmediavault-omvextrasorg package.
 # 
 # Translators:
-# Alexander Savchenko, 2013
-# Alexander Savchenko, 2014-2015
-# Artur Mudrykh <arturmon82@gmail.com>, 2013,2015-2016
-# Artur Mudrykh <arturmon82@gmail.com>, 2017,2019-2020
+# Daniel, 2021
+# Daniel, 2021
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-15 09:42-0500\n"
 "PO-Revision-Date: 2013-10-28 11:35+0000\n"
-"Last-Translator: Artur Mudrykh <arturmon82@gmail.com>, 2017,2019-2020\n"
-"Language-Team: Russian (http://app.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ru/)\n"
+"Last-Translator: Daniel, 2021\n"
+"Language-Team: Swedish (http://app.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Advanced"
-msgstr ""
+msgstr "Avancerat"
 
 msgid "Agent port"
-msgstr ""
+msgstr "Agentport"
 
 msgid "Backports"
 msgstr "Backports"
@@ -34,7 +32,7 @@ msgid "Certificate"
 msgstr ""
 
 msgid "Cleaning Apt Files and Lists ..."
-msgstr "Очистка Apt файлов и списков ..."
+msgstr "Rensar Apt-filer och listor ..."
 
 msgid "Cleaning apt ..."
 msgstr ""
@@ -46,7 +44,7 @@ msgid "Cockpit"
 msgstr "Cockpit"
 
 msgid "Cockpit listens on port 9090 for the web interface."
-msgstr "Cockpit прослушивает порт 9090 для веб-интерфейса."
+msgstr "Cockpit lyssnar på port 9090 för webbgränssnittet."
 
 msgid "Containers"
 msgstr ""
@@ -54,146 +52,146 @@ msgstr ""
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
 "legacy. Use iptables menu to change. "
-msgstr ""
+msgstr "Debian 10/OMV 5.x använder iptables-nft som standard och Docker behöver iptables-legacy. Använd iptables-menyn för att ändra."
 
 msgid "Default password: "
-msgstr ""
+msgstr "Standardlösenord: "
 
 msgid "Default username: "
-msgstr ""
+msgstr "Standard användarnamn: "
 
 msgid "Default username: <b>user</b> and password: <b>live</b>"
-msgstr "По умолчанию имя пользователя: <b>user</b> и пароль: <b>live</b>"
+msgstr "Standard användarnamn: <b>user</b> och lösenord: <b>live</b>"
 
 msgid "Docker"
-msgstr "Докер"
+msgstr "Docker"
 
 msgid "Docker Storage"
-msgstr "Докер Хранилище"
+msgstr "Docker-lagring"
 
 msgid "Docker storage"
 msgstr ""
 
 msgid "Done."
-msgstr "Готово."
+msgstr "Klart."
 
 msgid ""
 "Downloads Clonezilla ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr "Загружает Clonezilla ISO и настраивает загрузчик grub, чтобы разрешить загрузку с ISO."
+msgstr "Hämtar Clonezilla ISO och konfigurerar grub bootloader för att möjliggöra start från ISO."
 
 msgid ""
 "Downloads GParted Live ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr "Загружает GParted Live ISO и настраивает загрузчик grub, чтобы разрешить загрузку с ISO."
+msgstr "Hämtar GParted Live ISO och konfigurerar grub bootloader för att möjliggöra start från ISO."
 
 msgid ""
 "Downloads SystemRescue ISO and configures grub bootloader to allow booting "
 "from ISO."
-msgstr ""
+msgstr "Hämtar SystemRescue ISO och konfigurerar grub bootloader för att möjliggöra start från ISO."
 
 msgid "Extras repo"
-msgstr "Extras repo"
+msgstr ""
 
 msgid "GParted Live"
 msgstr "GParted Live"
 
 msgid "General settings"
-msgstr "Общие настройки"
+msgstr "Allmänna Inställningar"
 
 msgid "Hold Current Kernel"
-msgstr "Использовать текущее ядро"
+msgstr "Behåll nuvarande kärna"
 
 msgid "Holding current kernel ..."
-msgstr "Удерживаем текущее ядро ..."
+msgstr "Behåller nuvarande kärna ..."
 
 msgid "IP Address will be set by DHCP."
-msgstr "IP-адрес будет установлен DHCP."
+msgstr "IP-adressen kommer att ställas in av DHCP."
 
 msgid ""
 "IP Address will be set by DHCP.  Using static DHCP is recommended for "
 "headless servers."
-msgstr "IP-адрес будет получен по DHCP. Использование статического DHCP рекомендуется для серверов без основы."
+msgstr "IP-adressen kommer att ställas in av DHCP.  Använda statisk DHCP rekommenderas för huvudlösa servrar."
 
 msgid "If port is changed, click Install in the Portainer menu again."
-msgstr ""
+msgstr "Om porten ändras klickar du på Installera i Portainers-menyn igen."
 
 msgid "If port is changed, click Install in the Yacht menu again."
-msgstr ""
+msgstr "Om porten ändras klickar du på Installera i Yacht-menyn igen."
 
 msgid "Illegal docker storage path - cannot use /sharedfolders paths"
-msgstr "Неверный путь хранения докера - нельзя использовать пути /sharedfolders"
+msgstr "Olaglig docker-lagringssökväg - kan inte använda /sharedfolders-sökvägar"
 
 msgid "Image"
 msgstr ""
 
 msgid "Install"
-msgstr "Установить"
+msgstr "Installera"
 
 msgid "Install Clonezilla"
-msgstr "Установить Clonezilla"
+msgstr "Installera Clonezilla"
 
 msgid "Install Clonezilla ISO ..."
-msgstr "Установка Clonezilla ISO ..."
+msgstr "Installera Clonezilla ISO ..."
 
 msgid ""
 "Install Docker will download and place a newer docker-compose in "
 "/usr/local/bin/ on 64 bit x86 systems only."
-msgstr "Установка Docker загрузит и поместит новую версию docker-compose в /usr/local/bin/ только для 64-x86 битных систем."
+msgstr "Installering av Docker hämtar och placerar en nyare docker-compose i /usr/local/bin/ endast på 64-bitars x86-system."
 
 msgid ""
 "Install Docker will install the docker-compose package. Location: /usr/bin/ "
 "on all systems."
-msgstr "Установщик Docker установит пакет docker-compose. Расположение: /usr/bin/ на всех системах."
+msgstr "Installering av Docker installerar paketet docker-compose. Plats: /usr/bin/ på alla system."
 
 msgid "Install Docker will restart the docker service if daemon.json changes."
-msgstr "Установка Докер перезапустит службу Докер, если изменится daemon.json."
+msgstr "Installering av Docker startar om docker-tjänsten om daemon.json ändras."
 
 msgid "Install GParted Live"
-msgstr "Установить GParted Live"
+msgstr "Installera GParted Live"
 
 msgid "Install GParted Live ISO ..."
-msgstr "Установка GParted Live ISO ..."
+msgstr "Installera GParted Live ISO ..."
 
 msgid ""
 "Install Portainer will install the docker-ce package if not already "
 "installed."
-msgstr "Установка Portainer установит пакет docker-ce, если он еще не установлен."
+msgstr "Installering av Portainer installerar docker-ce-paketet om det inte redan är installerat."
 
 msgid ""
 "Install Portainer will update Portainer to the latest image if the image "
 "already exists."
-msgstr "Установка Portainer обновит Portainer до последней версии, если он уже существует."
+msgstr "Installering av Portainer uppdaterar Portainer till den senaste bilden om bilden redan finns."
 
 msgid "Install Proxmox kernel"
-msgstr "Установить ядро Proxmox"
+msgstr "Installera Proxmox-kärna"
 
 msgid "Install Proxmox test kernel"
-msgstr ""
+msgstr "Installera Proxmox-testkärna"
 
 msgid "Install SystemRescue"
-msgstr ""
+msgstr "Installera SystemRescue"
 
 msgid "Install SystemRescue ISO ..."
-msgstr ""
+msgstr "Installera SystemRescue ISO ..."
 
 msgid ""
 "Install Yacht will install the docker-ce package if not already installed."
-msgstr ""
+msgstr "Installera Yacht installerar docker-ce-paketet om det inte redan är installerat."
 
 msgid ""
 "Install Yacht will update Yacht to the latest image if the image already "
 "exists."
-msgstr ""
+msgstr "Installera Yacht kommer att uppdatera Yacht till den senaste bilden om bilden redan finns."
 
 msgid "Installed"
-msgstr "Установлен"
+msgstr "Installerad"
 
 msgid "Installed Kernels"
-msgstr "Установленные ядра"
+msgstr "Installerade kärnor"
 
 msgid "Installing"
-msgstr "Установка"
+msgstr "Installerar"
 
 msgid "Installing Docker ..."
 msgstr ""
@@ -202,48 +200,48 @@ msgid "Installing Portainer ..."
 msgstr ""
 
 msgid "Installing Proxmox kernel ..."
-msgstr "Установка ядра Proxmox ..."
+msgstr "Installerar Proxmox-kärna ..."
 
 msgid "Installing Proxmox test kernel ..."
-msgstr ""
+msgstr "Installerar Proxmox-testkärna ..."
 
 msgid "Installing Yacht ..."
 msgstr ""
 
 msgid "Kernel"
-msgstr "Ядро"
+msgstr "Kärna"
 
 msgid "Kernels"
-msgstr "Ядра"
+msgstr "Kärnor"
 
 msgid "More info"
-msgstr ""
+msgstr "Mer info"
 
 msgid "Name"
 msgstr ""
 
 msgid "Not installed"
-msgstr "Не установлен"
+msgstr "Inte installerad"
 
 msgid "Not recommended for headless servers.  SSH is not enabled by default."
-msgstr "Не рекомендуется для серверов без головы. По умолчанию SSH не включен."
+msgstr "Rekommenderas inte för huvudlösa servrar.  SSH är inte aktiverat som standard."
 
 msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
 msgid "Open Portainer"
-msgstr ""
+msgstr "Öppna Portainer"
 
 msgid "Open Yacht"
-msgstr ""
+msgstr "Öppna Yacht"
 
 msgid "Open web"
-msgstr "Открыть web"
+msgstr "Öppna webb"
 
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
 "/etc/docker/daemon.json."
-msgstr "Путь к хранилищу образов и контейнеров Докер. Оставьте пустым, чтобы использовать пользовательский /etc/docker/daemon.json."
+msgstr "Sökvägen till Docker-bilder och container-lagring. Lämna tomt för att använda anpassade /etc/docker/daemon.json."
 
 msgid "Portainer"
 msgstr "Portainer"
@@ -251,59 +249,59 @@ msgstr "Portainer"
 msgid ""
 "Portainer will listen on port 9000 for the web interface and 8000 for the "
 "agent unless changed."
-msgstr ""
+msgstr "Portainer lyssnar på port 9000 för webbgränssnittet och 8000 för agenten om de inte ändras."
 
 msgid "Proxmox"
 msgstr "Proxmox"
 
 msgid "Reboot to Clonezilla ..."
-msgstr "Перезагрузиться в Clonezilla ..."
+msgstr "Starta om till Clonezilla ..."
 
 msgid "Reboot to Clonezilla Once"
-msgstr "Перезагрузиться в Clonezilla Once"
+msgstr "Starta om till Clonezilla Once"
 
 msgid "Reboot to GParted Live ..."
-msgstr "Перезагрузиться в GParted Live ..."
+msgstr "Starta om till GParted Live ..."
 
 msgid "Reboot to GParted Live Once"
-msgstr "Перезагрузиться в GParted Live Once"
+msgstr "Starta om till GParted Live Once"
 
 msgid "Reboot to SystemRescue ..."
-msgstr ""
+msgstr "Starta om till SystemRescue ..."
 
 msgid "Reboot to SystemRescue Once"
-msgstr ""
+msgstr "Starta om till SystemRescue Once"
 
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
-msgstr "Перезагрузите ядро Proxmox перед удалением не-Proxmox ядер."
+msgstr "Starta om med Proxmox-kärnan innan du tar bort icke-Proxmox-kärnor."
 
 msgid "Remove"
-msgstr "Удалить"
+msgstr "Ta bort"
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
-msgstr "Удаление Докер, удалит docker-compose из /usr/local/bin/."
+msgstr "Ta bort Docker kommer att ta bort docker-compose från /usr/local/bin/."
 
 msgid "Remove Docker will remove the docker-compose package."
-msgstr "Удаление Docker удалит пакет docker-compose."
+msgstr "Ta bort Docker tar bort paketet docker-compose."
 
 msgid ""
 "Remove Portainer will remove the Portainer image and container but the "
 "volume will not be removed."
-msgstr "Удаление Portainer, удалит образ Portainer и контейнер, но том не будет удален."
+msgstr "Ta bort Portainer tar bort Portainer-bilden och containern men volymen kommer inte att tas bort."
 
 msgid ""
 "Remove Yacht will remove the Yacht image and container but the volume will "
 "not be removed."
-msgstr ""
+msgstr "Ta bort Yacht tar bort Yacht-bilden och containern men volymen kommer inte att tas bort."
 
 msgid "Remove data"
 msgstr ""
 
 msgid "Remove non-Proxmox kernels and headers"
-msgstr "Удалить не Proxmox ядра и заголовки"
+msgstr "Ta bort icke-Proxmox-kärnor och rubriker"
 
 msgid "Removing"
-msgstr "Удаление"
+msgstr "Tar bort"
 
 msgid "Removing Docker ..."
 msgstr ""
@@ -318,41 +316,41 @@ msgid "Removing Yacht ..."
 msgstr ""
 
 msgid "Removing non-Proxmox kernels ..."
-msgstr "Удаление не-Proxmox ядер ..."
+msgstr "Tar bort icke-Proxmox-kärnor ..."
 
 msgid "Restart"
-msgstr "Повторный запуск"
+msgstr "Starta om"
 
 msgid "Restarting Docker ..."
 msgstr ""
 
 msgid "Restarting docker ..."
-msgstr "Перезапускается docker ..."
+msgstr "Startar om docker ..."
 
 msgid "Running apt-get dist-upgrade ..."
-msgstr "Запуск apt-get dist-upgrade ..."
+msgstr "Kör apt-get dist-upgrade ..."
 
 msgid "Running apt-get update ..."
-msgstr "Запуск apt-get update ..."
+msgstr "Kör apt-get update ..."
 
 msgid "Running apt-get upgrade ..."
-msgstr "Запуск apt-get upgrade ..."
+msgstr "Kör apt-get upgrade ..."
 
 msgid "Running omv-aptclean ..."
-msgstr "Запуск omv-aptclean ..."
+msgstr "Kör omv-aptclean ..."
 
 msgid "Running omv-update ..."
-msgstr "Запуск omv-update ..."
+msgstr "Kör omv-update ..."
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
 "password: <b>openmediavault</b>"
-msgstr "Сервер SSH включен по умолчанию. Войти с именем пользователя: <b>root</ b> и пароль: <b>openmediavault</ b>"
+msgstr ""
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>user</b> and "
 "password: <b>live</b>"
-msgstr "Сервер SSH включен по умолчанию. Войти с логином: <b>пользователь</ b> и пароль: <b>live</ b>"
+msgstr ""
 
 msgid "SSL/TLS enabled"
 msgstr ""
@@ -360,46 +358,46 @@ msgstr ""
 msgid ""
 "Save will rewrite daemon.json and restart docker if Docker Storage path has "
 "changed."
-msgstr "Сохранение перезапишет daemon.json и перезапустит Docker, если путь к хранилищу Docker был изменен."
+msgstr ""
 
 msgid "Set as default boot kernel"
-msgstr "Установить как ядро загрузки по умолчанию"
+msgstr "Ange som standard startkärna"
 
 msgid "Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time."
-msgstr "Устанавливает загрузчик grub для загрузки из Clonezilla ISO <b>ONE</ b>."
+msgstr ""
 
 msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
-msgstr "Устанавливает загрузчик grub для загрузки GParted Live ISO <b>ONE</ b>."
+msgstr ""
 
 msgid "Sets grub bootloader to boot from SystemRescue ISO <b>ONE</b> time."
 msgstr ""
 
 msgid "Setting boot kernel ..."
-msgstr "Выбор загружаемого ядра ..."
+msgstr "Ställer in startkärnan ..."
 
 msgid ""
 "Setting the wrong default boot kernel may cause the system to be "
 "inaccessible.  The boot menu will still be available to select a different "
 "kernel."
-msgstr "Выбор неправильного ядра загрузки по умолчанию может привести к недоступности системы. Меню загрузки все еще будут доступно для выбора другого ядра."
+msgstr ""
 
 msgid "Settings"
-msgstr "Настройки"
+msgstr "Inställningar"
 
 msgid "Spaced used by ISO in /boot directory on OS drive"
-msgstr "Используемый ISO размещен в каталоге /boot на диске ОС"
+msgstr ""
 
 msgid "Status"
-msgstr "Статус"
+msgstr "Status"
 
 msgid "Testing repo"
-msgstr "Тестовое репо"
+msgstr ""
 
 msgid "This will enable the Proxmox 6.x repo."
-msgstr "Включит репо Proxmox 6.x."
+msgstr ""
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
-msgstr "Не удалит ядро linux-image- *, если оно все еще активно."
+msgstr ""
 
 msgid "This will install the latest 5.11 kernel."
 msgstr ""
@@ -413,19 +411,19 @@ msgid ""
 msgstr ""
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
-msgstr "Удалит все пакеты заголовков с префиксом linux-headers-."
+msgstr ""
 
 msgid "This will remove all kernel packages with the prefix linux-image-."
-msgstr "Удалит все пакеты ядра с префиксом linux-image-."
+msgstr ""
 
 msgid "Unhold Current Kernel"
-msgstr "Не использовать текущее ядро"
+msgstr ""
 
 msgid "Unholding current kernel ..."
-msgstr "Прекращаем удерживать текущее ядро ..."
+msgstr ""
 
 msgid "Updates"
-msgstr "Обновления"
+msgstr "Uppdateringar"
 
 msgid "Use EE"
 msgstr ""
@@ -437,34 +435,34 @@ msgid "Use legacy"
 msgstr ""
 
 msgid "Use nft"
-msgstr ""
+msgstr "Använd nft"
 
 msgid "Version"
-msgstr "Версия"
+msgstr "Version"
 
 msgid "Web port"
-msgstr ""
+msgstr "Webbport"
 
 msgid "Web port and agent port cannot be the same."
-msgstr ""
+msgstr "Webbport och agentport kan inte vara densamma."
 
 msgid ""
 "When connecting via ssh, the ssh key will be different than the "
 "OpenMediaVault ssh key and need to be updated on the client system."
-msgstr "При подключении через SSH, ключ SSH будет отличаться от ключа SSH OpenMediaVault и должны быть обновлены на клиентской системе."
+msgstr "Vid anslutning via ssh kommer ssh-nyckeln att vara annorlunda än OpenMediaVault-ssh-nyckeln och måste uppdateras på klientsystemet."
 
 msgid ""
 "When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
-msgstr "При удаленном входе в систему запустите clonezilla с помощью: <b>sudo clonezilla</ b>"
+msgstr "Vid inloggning på distans startar Clonezilla med:  <b>sudo clonezilla</b>"
 
 msgid "Yacht will listen on port 8001 for the web interface unless changed."
-msgstr ""
+msgstr "Yacht kommer att lyssna på port 8001 för webbgränssnittet om det inte ändras."
 
 msgid "and not running"
-msgstr "и не работает"
+msgstr "och kör inte"
 
 msgid "and running"
-msgstr "и работает"
+msgstr "och kör"
 
 msgid "apt clean"
 msgstr "apt clean"
@@ -473,7 +471,7 @@ msgid "dist-upgrade"
 msgstr "dist-upgrade"
 
 msgid "n/a"
-msgstr "n/a"
+msgstr ""
 
 msgid "omv-extras"
 msgstr ""
