@@ -1,3 +1,9 @@
+openmediavault-omvextrasorg (8.0.2) stable; urgency=low
+
+  * Hide error output since it is harmless
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 08 Nov 2025 19:19:04 +0000
+
 openmediavault-omvextrasorg (8.0.1) stable; urgency=low
 
   * Use new signing key
