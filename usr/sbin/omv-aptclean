@@ -35,7 +35,7 @@ echo "${i}. Cleaning apt cache files..."
 
 ((i++))
 echo -e "\n${i}. Clearing available dpkg packages..."
-/usr/bin/dpkg --clear-avail
+/usr/bin/dpkg --clear-avail 2>/dev/null
 
 ((i++))
 echo -e "\n${i}. Removing apt lists..."
@@ -51,7 +51,7 @@ touch /var/cache/openmediavault/archives/Packages
 
 # add repos
 if [ "${1}" = "repos" ]; then
-  
+
   arch="$(dpkg --print-architecture)"
   backports=${OMV_APT_USE_KERNEL_BACKPORTS:-"yes"}
   docker=$(omv_config_get "/config/system/omvextras/docker")
@@ -68,7 +68,7 @@ if [ "${1}" = "repos" ]; then
   list="/etc/apt/sources.list.d/omvextras.sources"
   docker_list="/etc/apt/sources.list.d/omvdocker.sources"
   pref="/etc/apt/preferences.d/omvextras.pref"
-  
+
   ((i++))
   echo -e "\n${i}. Remove old omv-extras apt list files..."
   grep -l 'openmediavault-plugin-developers' /etc/apt/sources.list.d/* | sudo xargs -r rm -fv
