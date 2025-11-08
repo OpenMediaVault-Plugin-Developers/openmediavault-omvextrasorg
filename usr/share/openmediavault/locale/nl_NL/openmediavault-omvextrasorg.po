@@ -5,13 +5,14 @@
 # Translators:
 # okpail <okpail@gmail.com>, 2014-2015
 # Varkentjes, 2020
+# Stephan Paternotte <stephan@paternottes.net>, 2025
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-15 09:42-0500\n"
 "PO-Revision-Date: 2013-10-28 11:35+0000\n"
-"Last-Translator: Varkentjes, 2020\n"
+"Last-Translator: Stephan Paternotte <stephan@paternottes.net>, 2025\n"
 "Language-Team: Dutch (http://app.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,13 +30,13 @@ msgid "Backports"
 msgstr "Backports"
 
 msgid "Certificate"
-msgstr ""
+msgstr "Certificaat"
 
 msgid "Cleaning Apt Files and Lists ..."
-msgstr "Apt-bestanden en lijsten opschonen ..."
+msgstr "Apt-bestanden en -lijsten opschonen…"
 
 msgid "Cleaning apt ..."
-msgstr ""
+msgstr "Apt opschonen…"
 
 msgid "Clonezilla"
 msgstr "Clonezilla"
@@ -47,7 +48,7 @@ msgid "Cockpit listens on port 9090 for the web interface."
 msgstr "Cockpit luistert op poort 9090 voor de webinterface."
 
 msgid "Containers"
-msgstr ""
+msgstr "Containers"
 
 msgid ""
 "Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
@@ -70,7 +71,7 @@ msgid "Docker Storage"
 msgstr "Docker-opslag"
 
 msgid "Docker storage"
-msgstr ""
+msgstr "Docker-opslag"
 
 msgid "Done."
 msgstr "Klaar."
@@ -123,16 +124,16 @@ msgid "Illegal docker storage path - cannot use /sharedfolders paths"
 msgstr "Ongeldig Docker-opslagpad - kan geen gebruik maken van /sharedfolders paden"
 
 msgid "Image"
-msgstr ""
+msgstr "Image"
 
 msgid "Install"
 msgstr "Installeren"
 
 msgid "Install Clonezilla"
-msgstr "Installeer Clonezilla"
+msgstr "Clonezilla installeren"
 
 msgid "Install Clonezilla ISO ..."
-msgstr "Installeer Clonezilla ISO ..."
+msgstr "Clonezilla ISO installeren…"
 
 msgid ""
 "Install Docker will download and place a newer docker-compose in "
@@ -148,10 +149,10 @@ msgid "Install Docker will restart the docker service if daemon.json changes."
 msgstr "Install Docker zal de docker-service opnieuw starten als daemon.json verandert."
 
 msgid "Install GParted Live"
-msgstr "Installeer GParted Live"
+msgstr "GParted Live installeren"
 
 msgid "Install GParted Live ISO ..."
-msgstr "Installeer GParted Live ISO ..."
+msgstr "GParted Live ISO installeren…"
 
 msgid ""
 "Install Portainer will install the docker-ce package if not already "
@@ -164,16 +165,16 @@ msgid ""
 msgstr "Install Portainer zal Portainer updaten naar de laatste image als de image al bestaat."
 
 msgid "Install Proxmox kernel"
-msgstr "Installeer de Proxmox-kernel"
+msgstr "Proxmox-kernel installeren"
 
 msgid "Install Proxmox test kernel"
-msgstr ""
+msgstr "Proxmox test-kernel installeren"
 
 msgid "Install SystemRescue"
-msgstr "Installeer SystemRescue"
+msgstr "SystemRescue installeren"
 
 msgid "Install SystemRescue ISO ..."
-msgstr "Installeer SystemRescue ISO ..."
+msgstr "SystemRescue ISO installeren…"
 
 msgid ""
 "Install Yacht will install the docker-ce package if not already installed."
@@ -194,19 +195,19 @@ msgid "Installing"
 msgstr "Installeren"
 
 msgid "Installing Docker ..."
-msgstr ""
+msgstr "Docker installeren…"
 
 msgid "Installing Portainer ..."
-msgstr ""
+msgstr "Portainer installeren…"
 
 msgid "Installing Proxmox kernel ..."
 msgstr "Proxmox-kernel installeren ..."
 
 msgid "Installing Proxmox test kernel ..."
-msgstr ""
+msgstr "Proxmox test-kernel installeren…"
 
 msgid "Installing Yacht ..."
-msgstr ""
+msgstr "Yacht installeren…"
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -218,7 +219,7 @@ msgid "More info"
 msgstr "Meer informatie"
 
 msgid "Name"
-msgstr ""
+msgstr "Naam"
 
 msgid "Not installed"
 msgstr "Niet geïnstalleerd"
@@ -230,13 +231,13 @@ msgid "OMV-Extras"
 msgstr "OMV-Extras"
 
 msgid "Open Portainer"
-msgstr "Open Portainer"
+msgstr "Portainer openen"
 
 msgid "Open Yacht"
-msgstr "Open Yacht"
+msgstr "Yacht openen"
 
 msgid "Open web"
-msgstr "Open web"
+msgstr "Web openen"
 
 msgid ""
 "Path to Docker images and containers storage. Leave blank to use custom "
@@ -255,92 +256,92 @@ msgid "Proxmox"
 msgstr "Proxmox"
 
 msgid "Reboot to Clonezilla ..."
-msgstr "Herstart naar Clonezilla ..."
+msgstr "Opnieuw starten naar Clonezilla…"
 
 msgid "Reboot to Clonezilla Once"
-msgstr "Herstart eenmalig naar Clonezilla"
+msgstr "Eenmalig opnieuw starten naar Clonezilla"
 
 msgid "Reboot to GParted Live ..."
-msgstr "Herstart naar GParted ..."
+msgstr "Opnieuw starten naar GParted…"
 
 msgid "Reboot to GParted Live Once"
-msgstr "Herstart eenmalig naar GParted"
+msgstr "Eenmalig opnieuw starten naar GParted"
 
 msgid "Reboot to SystemRescue ..."
-msgstr "Herstart naar SystemRescue ..."
+msgstr "Opnieuw starten naar SystemRescue…"
 
 msgid "Reboot to SystemRescue Once"
-msgstr "Herstart eenmalig naar SystemRescue ..."
+msgstr "Eenmalig opnieuw starten naar SystemRescue"
 
 msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
-msgstr "Herstart met de Proxmox-kernel alvorens de niet-Proxmox-kernels te verwijderen."
+msgstr "Opnieuw starten met de Proxmox-kernel alvorens de niet-Proxmox-kernels te verwijderen."
 
 msgid "Remove"
 msgstr "Verwijderen"
 
 msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
-msgstr "Docker verwijderen verwijdert docker-compose uit /usr/local/bin/."
+msgstr "Verwijdering van Docker verwijdert docker-compose uit /usr/local/bin/."
 
 msgid "Remove Docker will remove the docker-compose package."
-msgstr "Docker Verwijderen verwijdert het docker-compose-pakket."
+msgstr "Verwijdering van Docker verwijdert het docker-compose-pakket."
 
 msgid ""
 "Remove Portainer will remove the Portainer image and container but the "
 "volume will not be removed."
-msgstr "Met Portainer Verwijderen worden de Portainer image en de container verwijderd, maar het volume zal niet worden verwijderd."
+msgstr "Met het verwijderen van Portainer worden de Portainer image en de container verwijderd, maar het volume zal niet worden verwijderd."
 
 msgid ""
 "Remove Yacht will remove the Yacht image and container but the volume will "
 "not be removed."
-msgstr "Met Yacht Verwijderen worden de Yacht image en de container verwijderd, maar het volume zal niet worden verwijderd."
+msgstr "Met het verwijderen van Yacht worden de Yacht image en de container verwijderd, maar het volume zal niet worden verwijderd."
 
 msgid "Remove data"
-msgstr ""
+msgstr "Gegevens verwijderen"
 
 msgid "Remove non-Proxmox kernels and headers"
-msgstr "Verwijder niet-Proxmox-kernels en headers"
+msgstr "Niet-Proxmox-kernels en headers verwijderen"
 
 msgid "Removing"
 msgstr "Verwijderen"
 
 msgid "Removing Docker ..."
-msgstr ""
+msgstr "Docker verwijderen…"
 
 msgid "Removing Portainer ..."
-msgstr ""
+msgstr "Portainer verwijderen…"
 
 msgid "Removing Portainer and data..."
-msgstr ""
+msgstr "Portainer en gegevens verwijderen…"
 
 msgid "Removing Yacht ..."
-msgstr ""
+msgstr "Yacht verwijderen…"
 
 msgid "Removing non-Proxmox kernels ..."
-msgstr "Niet-Proxmox-kernels verwijderen ..."
+msgstr "Niet-Proxmox-kernels verwijderen…"
 
 msgid "Restart"
-msgstr "Herstarten"
+msgstr "Opnieuw starten"
 
 msgid "Restarting Docker ..."
-msgstr ""
+msgstr "Docker opnieuw starten…"
 
 msgid "Restarting docker ..."
-msgstr "Docker opnieuw starten ..."
+msgstr "Docker opnieuw starten…"
 
 msgid "Running apt-get dist-upgrade ..."
-msgstr "Het uitvoeren van apt-get dist-upgrade ..."
+msgstr "Apt-get dist-upgrade uitvoeren…"
 
 msgid "Running apt-get update ..."
-msgstr "Het uitvoeren van apt-get update ..."
+msgstr "Apt-get update uitvoeren…"
 
 msgid "Running apt-get upgrade ..."
-msgstr "Het uitvoeren van apt-get upgrade ..."
+msgstr "Apt-get upgrade uitvoeren…"
 
 msgid "Running omv-aptclean ..."
-msgstr "Het uitvoeren van omv-aptclean ..."
+msgstr "Omv-aptclean uitvoeren…"
 
 msgid "Running omv-update ..."
-msgstr "Het uitvoeren van omv-update ..."
+msgstr "Omv-update uitvoeren…"
 
 msgid ""
 "SSH server is enabled by default.  Login with username: <b>root</b> and "
@@ -353,7 +354,7 @@ msgid ""
 msgstr "SSH-server is standaard ingeschakeld. Login met gebruikersnaam: <b>user</b> en wachtwoord: <b>live</b>"
 
 msgid "SSL/TLS enabled"
-msgstr ""
+msgstr "SSL/TLS ingeschakeld"
 
 msgid ""
 "Save will rewrite daemon.json and restart docker if Docker Storage path has "
@@ -361,7 +362,7 @@ msgid ""
 msgstr "Opslaan zal daemon.json herschrijven en Docker opnieuw opstarten als het Docker-opslagpad is veranderd."
 
 msgid "Set as default boot kernel"
-msgstr "Stel in als standaard boot-kernel"
+msgstr "Instellen als standaard boot-kernel"
 
 msgid "Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time."
 msgstr "Stelt grub bootloader in om <b>EENMALIG</b> op te starten vanaf Clonezilla ISO"
@@ -391,51 +392,51 @@ msgid "Status"
 msgstr "Status"
 
 msgid "Testing repo"
-msgstr "Het testen van repo"
+msgstr "Repo testen"
 
 msgid "This will enable the Proxmox 6.x repo."
-msgstr "Dit zal de Proxmox 6.x repo inschakelen."
+msgstr "Hiermee wordt de Proxmox 6.x repo ingeschakeld."
 
 msgid "This will fail to remove a linux-image-* kernel if it is still active."
-msgstr "Dit zal een linux-image-* kernel niet verwijderen als deze nog actief is."
+msgstr "Hiermee wordt een linux-image-* kernel niet verwijderd als deze nog actief is."
 
 msgid "This will install the latest 5.11 kernel."
-msgstr ""
+msgstr "Hiermee wordt de nieuwste 5.11-kernel geïnstalleerd."
 
 msgid "This will install the latest 5.4 kernel."
-msgstr "Dit zal de nieuwste 5.4 kernel installeren. "
+msgstr "Hiermee wordt de nieuwste 5.4-kernel geïnstalleerd."
 
 msgid ""
 "This will remove Portainer and all of its data.  Are you sure you want to do"
 " this?"
-msgstr ""
+msgstr "Hiermee worden Portainer en al zijn gegevens verwijderd. Weet u zeker dat u dit wilt doen?"
 
 msgid "This will remove all headers packages with the prefix linux-headers-."
-msgstr "Dit verwijdert alle headers-pakketten met het voorvoegsel linux-headers-."
+msgstr "Hiermee worden alle headers-pakketten met het voorvoegsel linux-headers- verwijderd."
 
 msgid "This will remove all kernel packages with the prefix linux-image-."
-msgstr "Dit zal alle kernelpakketten met het voorvoegsel linux-image- verwijderen."
+msgstr "Hiermee worden alle kernelpakketten met het voorvoegsel linux-image- verwijderd."
 
 msgid "Unhold Current Kernel"
 msgstr "Huidige Kernel ongedaan maken"
 
 msgid "Unholding current kernel ..."
-msgstr "Ongedaan maken van de huidige kernel ..."
+msgstr "Huidige Kernel ongedaan maken…"
 
 msgid "Updates"
 msgstr "Updates"
 
 msgid "Use EE"
-msgstr ""
+msgstr "EE gebruiken"
 
 msgid "Use business edition. This version requires a license."
-msgstr ""
+msgstr "Zakelijke editie gebruiken. Voor deze versie is een licentie vereist."
 
 msgid "Use legacy"
-msgstr "Gebruik legacy"
+msgstr "Verouderd gebruiken"
 
 msgid "Use nft"
-msgstr "Gebruik nft"
+msgstr "Nft gebruiken"
 
 msgid "Version"
 msgstr "Versie"
@@ -474,7 +475,7 @@ msgid "n/a"
 msgstr "n.v.t."
 
 msgid "omv-extras"
-msgstr ""
+msgstr "omv-extras"
 
 msgid "omv-update"
 msgstr "omv-update"
