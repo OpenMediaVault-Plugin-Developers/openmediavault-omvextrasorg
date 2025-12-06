@@ -4,10 +4,9 @@ export LANG=C
 export LC_ALL=C
 
 armbian="/etc/apt/sources.list.d/armbian.list"
-docker="/etc/apt/sources.list.d/omvdocker.list"
-list="/etc/apt/sources.list.d/omvextras.list"
+docker="/etc/apt/sources.list.d/omvdocker.sources"
+list="/etc/apt/sources.list.d/omvextras.sources"
 pref="/etc/apt/preferences.d/omvextras.pref"
-pve="/etc/apt/sources.list.d/pvekernel.list"
 raspi="/etc/apt/sources.list.d/raspi.list"
 
 if [ -f "${armbian}" ]; then
@@ -31,10 +30,8 @@ if [ -f "${pref}" ]; then
   sed -i "s/bookworm/trixie/g" ${pref}
 fi
 
-if [ -f "${pve}" ]; then
-  echo "Removing Proxmox repo ..."
-  rm -f ${pve}
-fi
+echo "Removing Proxmox repo ..."
+rm -f /etc/apt/sources.list.d/pvekernel.*
 
 if [ -f "${raspi}" ]; then
   echo "Fixing Raspberry Pi repo ..."
