@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (7.0.5) stable; urgency=low
+
+  * Improve migration from flashmemory to writecache when upgrading to
+    OMV 8
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 14 Dec 2025 11:18:08 -0600
+
 openmediavault-omvextrasorg (7.0.4) stable; urgency=low
 
   * Update release-upgrade script
