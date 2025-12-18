@@ -45,10 +45,6 @@ rm -rfv /var/lib/apt/lists/*
 echo -e "\n${i}. Removing OpenMediaVault cache packages..."
 rm -fv /var/cache/openmediavault/archives/*
 
-((i++))
-echo -e "\n${i}. Creating new OpenMediaVault packages file..."
-touch /var/cache/openmediavault/archives/Packages
-
 # add repos
 if [ "${1}" = "repos" ]; then
   
