@@ -1,3 +1,10 @@
+openmediavault-omvextrasorg (7.0.6) stable; urgency=low
+
+  * Improve release-upgrade
+  * Stop recreating /var/cache/openmediavault/archives/Packages
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 18 Dec 2025 09:50:38 -0600
+
 openmediavault-omvextrasorg (7.0.5) stable; urgency=low
 
   * Improve migration from flashmemory to writecache when upgrading to
