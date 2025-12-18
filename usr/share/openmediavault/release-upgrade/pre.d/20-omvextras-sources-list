@@ -8,6 +8,7 @@ docker="/etc/apt/sources.list.d/omvdocker.sources"
 list="/etc/apt/sources.list.d/omvextras.sources"
 pref="/etc/apt/preferences.d/omvextras.pref"
 raspi="/etc/apt/sources.list.d/raspi.list"
+pve="/etc/apt/sources.list.d/pvekernel.list"
 
 if [ -f "${armbian}" ]; then
   echo "Fixing Armbian repo ..."
@@ -30,8 +31,31 @@ if [ -f "${pref}" ]; then
   sed -i "s/bookworm/trixie/g" ${pref}
 fi
 
-echo "Removing Proxmox repo ..."
-rm -f /etc/apt/sources.list.d/pvekernel.*
+if [ -f "${pve}" ]; then
+  distro="trixie"
+  pvekey="/usr/share/keyrings/proxmox-archive-keyring.gpg"
+  pverepo="/etc/apt/sources.list.d/pvekernel.sources"
+  repourl=${OMV_PROXMOX_APT_REPOSITORY_URL:-"http://download.proxmox.com/debian/pve"}
+  keyurl=${OMV_PROXMOX_KEY_REPOSITORY_URL:-"https://enterprise.proxmox.com/debian/proxmox-archive-keyring-${distro}.gpg"}
+  repo="pve-no-subscription"
+  
+  # delete old .list file
+  rm -fv "${pve}"
+  
+  # add repo sources file
+  echo "Add new proxmox sources file ..."
+  cat > "${pverepo}" << EOF
+Types: deb
+URIs: ${repourl}
+Suites: ${distro}
+Components: ${repo}
+Signed-By: ${pvekey}
+EOF
+  
+  echo "Download new proxmox key ..."
+  wget --quiet --output-document=- "${keyurl}" | gpg --dearmor > "${pvekey}"
+  chmod 644 ${pverepo} ${pvekey}
+fi
 
 if [ -f "${raspi}" ]; then
   echo "Fixing Raspberry Pi repo ..."
