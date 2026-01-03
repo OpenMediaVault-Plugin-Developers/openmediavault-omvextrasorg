@@ -15,7 +15,9 @@ data:
         name: docker
         label: _("Docker repo")
         value: false
-        hint: _("Please install the openmediavault-compose to provide docker functionality within the OMV web interface.")
+        hint: _("Go to the Docker Wiki link below for more info")
+      - type: hint
+        text: '<a href="https://wiki.omv-extras.org/doku.php?id=omv8:docker_in_omv#install_and_configure_docker" target="_blank">link</a>'
     buttons:
       - template: submit
       - text: _("apt clean")
@@ -85,4 +87,8 @@ data:
       - text: _("Wiki")
         execute:
           type: url
-          url: '/externalRedirect/https%3A%2F%2Fwiki.omv-extras.org%2Fdoku.php%3Fid%3Domv6%3Aomv6_plugins%3Aomv-extras'
+          url: '/externalRedirect/https%3A%2F%2Fwiki.omv-extras.org%2Fdoku.php%3Fid%3Domv8%3Aomv8_plugins%3Aomv-extras'
+      - text: _("Docker Wiki")
+        execute:
+          type: url
+          url: '/externalRedirect/https%3A%2F%2Fwiki.omv-extras.org%2Fdoku.php%3Fid%3Domv8%3Adocker_in_omv%23install_and_configure_docker'
