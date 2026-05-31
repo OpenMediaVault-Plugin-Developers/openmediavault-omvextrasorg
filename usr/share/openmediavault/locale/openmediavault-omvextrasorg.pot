@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextrasorg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-08 22:26+0000\n"
+"POT-Creation-Date: 2026-05-31 01:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,6 +29,9 @@ msgstr ""
 msgid "Disabling backports ..."
 msgstr ""
 
+msgid "Docker Wiki"
+msgstr ""
+
 msgid "Docker repo"
 msgstr ""
 
@@ -38,7 +41,7 @@ msgstr ""
 msgid "Enabling backports ..."
 msgstr ""
 
-msgid "Please install the openmediavault-compose to provide docker functionality within the OMV web interface."
+msgid "Go to the Docker Wiki link below for more info"
 msgstr ""
 
 msgid "Updated omv-extras settings."

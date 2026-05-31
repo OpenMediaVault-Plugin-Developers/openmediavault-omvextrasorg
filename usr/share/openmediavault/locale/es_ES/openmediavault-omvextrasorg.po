@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-15 09:42-0500\n"
+"POT-Creation-Date: 2026-05-31 01:24+0000\n"
 "PO-Revision-Date: 2013-10-28 11:35+0000\n"
 "Last-Translator: Raul Fernandez Garcia <raulfg3@gmail.com>, 2014-2018,2020-2021\n"
 "Language-Team: Spanish (Spain) (http://app.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/es_ES/)\n"
@@ -18,468 +18,44 @@ msgstr ""
 "Language: es_ES\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-msgid "Advanced"
-msgstr "Avanzado"
-
-msgid "Agent port"
-msgstr "Puerto para el agente"
-
-msgid "Backports"
-msgstr "Backports"
-
-msgid "Certificate"
-msgstr "Certificado"
-
-msgid "Cleaning Apt Files and Lists ..."
-msgstr "Limpiando listas y Archivos Apt ..."
-
 msgid "Cleaning apt ..."
 msgstr "Limpiando apt ..."
 
-msgid "Clonezilla"
-msgstr "Clonezilla"
+msgid "Cleaning apt and resetting repos ..."
+msgstr ""
 
-msgid "Cockpit"
-msgstr "Cockpit"
+msgid "Disable backports"
+msgstr ""
 
-msgid "Cockpit listens on port 9090 for the web interface."
-msgstr "Cockpit está a la escucha en el puerto 9000 para mostrar su interfaz."
+msgid "Disabling backports ..."
+msgstr ""
 
-msgid "Containers"
-msgstr "Contenedores"
+msgid "Docker Wiki"
+msgstr ""
 
-msgid ""
-"Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
-"legacy. Use iptables menu to change. "
-msgstr "Debian 10/OMV 5.x usa iptables-nft por defecto, pero Docker necesita iptables-legacy. Usa el menu iptables para elegir cual quieres usar."
+msgid "Docker repo"
+msgstr ""
 
-msgid "Default password: "
-msgstr "Contraseña por defecto:"
+msgid "Enable backports"
+msgstr ""
 
-msgid "Default username: "
-msgstr "Nombre de usuario por defecto:"
+msgid "Enabling backports ..."
+msgstr ""
 
-msgid "Default username: <b>user</b> and password: <b>live</b>"
-msgstr "Usuario por defecto: <b>user</b> Contraseña: <b>live</b>"
+msgid "Go to the Docker Wiki link below for more info"
+msgstr ""
 
-msgid "Docker"
-msgstr "Docker"
+msgid "Updated omv-extras settings."
+msgstr ""
 
-msgid "Docker Storage"
-msgstr "Almacenamiento de Dockers"
-
-msgid "Docker storage"
-msgstr "Almacén de dockers"
-
-msgid "Done."
-msgstr "Hecho."
-
-msgid ""
-"Downloads Clonezilla ISO and configures grub bootloader to allow booting "
-"from ISO."
-msgstr "Descarga la ISO de Clonezilla y configura el cargador de arranque grub para permitir arrancar con esa ISO"
-
-msgid ""
-"Downloads GParted Live ISO and configures grub bootloader to allow booting "
-"from ISO."
-msgstr "Descarga la ISO de GParted Live y configura el cargador de arranque grub para permitir arrancar con esa ISO."
-
-msgid ""
-"Downloads SystemRescue ISO and configures grub bootloader to allow booting "
-"from ISO."
-msgstr "Descargar SystemRescue ISO y configurar el cargador grub para permitir el arranque desde la ISO."
-
-msgid "Extras repo"
-msgstr "Repositorio de Extras"
-
-msgid "GParted Live"
-msgstr "GParted Live"
-
-msgid "General settings"
-msgstr "Opciones"
-
-msgid "Hold Current Kernel"
-msgstr "Mantener el Kernel actual"
-
-msgid "Holding current kernel ..."
-msgstr "Manteniendo el kernel actual ..."
-
-msgid "IP Address will be set by DHCP."
-msgstr "La IP debe ser forzosamente por DHCP."
-
-msgid ""
-"IP Address will be set by DHCP.  Using static DHCP is recommended for "
-"headless servers."
-msgstr "La IP debe ser por DHCP. Solo se recomienda IP estatica para servidores sin monitor."
-
-msgid "If port is changed, click Install in the Portainer menu again."
-msgstr "Si se cambia el puerto, se debe pulsar en el menú la opción Instalar."
-
-msgid "If port is changed, click Install in the Yacht menu again."
-msgstr "Si cambia el puerto, debe volver a pulsar instalar en el menú de Yacht."
-
-msgid "Illegal docker storage path - cannot use /sharedfolders paths"
-msgstr "Ruta ilegal - No usar la carpeta sharedfolders"
-
-msgid "Image"
-msgstr "Imagen"
-
-msgid "Install"
-msgstr "Instalar"
-
-msgid "Install Clonezilla"
-msgstr "Instalar Clonezilla"
-
-msgid "Install Clonezilla ISO ..."
-msgstr "Instalando ISO de Clonezilla ..."
-
-msgid ""
-"Install Docker will download and place a newer docker-compose in "
-"/usr/local/bin/ on 64 bit x86 systems only."
-msgstr "Instalar Docker iniciará la descarga e instalación via docker-compose de la imagen en  /usr/local/bin/ en sistemas de 64 bit y  x86 exclusivamente."
-
-msgid ""
-"Install Docker will install the docker-compose package. Location: /usr/bin/ "
-"on all systems."
-msgstr "Instalar Docker instalará también docker-compose. Ubicación: /us¡r/bin en todos los sistemas"
-
-msgid "Install Docker will restart the docker service if daemon.json changes."
-msgstr "Instalar Docker, reiniciara el servicio si el demonio daemon.json ha cambiado."
-
-msgid "Install GParted Live"
-msgstr "Instalar GParted Live"
-
-msgid "Install GParted Live ISO ..."
-msgstr "Instalando la ISO de GParted Live ..."
-
-msgid ""
-"Install Portainer will install the docker-ce package if not already "
-"installed."
-msgstr "Instalar Portainer, instalará el paquete docker-ce si no existe en el sistema"
-
-msgid ""
-"Install Portainer will update Portainer to the latest image if the image "
-"already exists."
-msgstr "Instalar Portainer, actualizará portainer a su ultima versión si la imagen ya existe."
-
-msgid "Install Proxmox kernel"
-msgstr "Instalar Kernel Proxmox"
-
-msgid "Install Proxmox test kernel"
-msgstr "Instalar Test kernel Proxmox"
-
-msgid "Install SystemRescue"
-msgstr "Instalar SystemRescue"
-
-msgid "Install SystemRescue ISO ..."
-msgstr "Instalando SystemRescue ISO ..."
-
-msgid ""
-"Install Yacht will install the docker-ce package if not already installed."
-msgstr "Instalar Yacht , también instala docker-ce si no está previamente instalado."
-
-msgid ""
-"Install Yacht will update Yacht to the latest image if the image already "
-"exists."
-msgstr "Instalar Yacht, lo actualiza a la ultima imagen, si ya lo tuvieses instalado."
-
-msgid "Installed"
-msgstr "Instalado"
-
-msgid "Installed Kernels"
-msgstr "Kelnel Instalados"
-
-msgid "Installing"
-msgstr "Instalando"
-
-msgid "Installing Docker ..."
-msgstr "Instalando docker ..."
-
-msgid "Installing Portainer ..."
-msgstr "Instalando Portainer ..."
-
-msgid "Installing Proxmox kernel ..."
-msgstr "Instalado Kernel Proxmox ..."
-
-msgid "Installing Proxmox test kernel ..."
-msgstr "Instalando Test kernel Proxmox"
-
-msgid "Installing Yacht ..."
-msgstr "Instalando Yacht ..."
-
-msgid "Kernel"
-msgstr "Kernel"
-
-msgid "Kernels"
-msgstr "Kernels"
-
-msgid "More info"
-msgstr "Más información"
-
-msgid "Name"
-msgstr "Nombre"
-
-msgid "Not installed"
-msgstr "No Instalado"
-
-msgid "Not recommended for headless servers.  SSH is not enabled by default."
-msgstr "No se recomienda para servidores sin monitor. No se habilita SSH por defecto."
-
-msgid "OMV-Extras"
-msgstr "OMV-Extras"
-
-msgid "Open Portainer"
-msgstr "Abrir Portainer"
-
-msgid "Open Yacht"
-msgstr "Abrir Yacht"
-
-msgid "Open web"
-msgstr "Abrir web"
-
-msgid ""
-"Path to Docker images and containers storage. Leave blank to use custom "
-"/etc/docker/daemon.json."
-msgstr "Ruta a donde se desea descargar las imágenes, dejar en blanco para la ruta por defecto:  /etc/docker/daemon.json."
-
-msgid "Portainer"
-msgstr "Portainer"
-
-msgid ""
-"Portainer will listen on port 9000 for the web interface and 8000 for the "
-"agent unless changed."
-msgstr "Portainer usa el puerto 9000 para su WebGUI y el puerto 8000 para su agente a menos que se cambie. "
-
-msgid "Proxmox"
-msgstr "Proxmox"
-
-msgid "Reboot to Clonezilla ..."
-msgstr "Reiniciar para arrancar Clonezilla ..."
-
-msgid "Reboot to Clonezilla Once"
-msgstr "Reiniciar para arrancar una vez"
-
-msgid "Reboot to GParted Live ..."
-msgstr "Reiniciar para arrancar GParted Live ..."
-
-msgid "Reboot to GParted Live Once"
-msgstr "Reiniciar para arrancar GParted Live una vez"
-
-msgid "Reboot to SystemRescue ..."
-msgstr "Reiniciando usando SystemRescue ..."
-
-msgid "Reboot to SystemRescue Once"
-msgstr "Reiniciar una vez con SystemRescue"
-
-msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
-msgstr "Reiniciar con el kernel proxmox, antes de borrar otros kernel No-Proxmox."
-
-msgid "Remove"
-msgstr "Eliminar"
-
-msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
-msgstr "Eliminar Docker, también elimina docker-compose de /usr/local/bin/."
-
-msgid "Remove Docker will remove the docker-compose package."
-msgstr "Eliminar Docker, también elimina el paquete docker-compose "
-
-msgid ""
-"Remove Portainer will remove the Portainer image and container but the "
-"volume will not be removed."
-msgstr "Eliminar Portainer borra la imagen de portainer del sistema, pero mantiene el volumen."
-
-msgid ""
-"Remove Yacht will remove the Yacht image and container but the volume will "
-"not be removed."
-msgstr "Eliminar Yacht, borra la imagen y el container, pero no el volumen y su configuración."
-
-msgid "Remove data"
-msgstr "Eliminar Datos"
-
-msgid "Remove non-Proxmox kernels and headers"
-msgstr "Borrar kernel No-Proxmox y sus cabeceras"
-
-msgid "Removing"
-msgstr "Eliminando"
-
-msgid "Removing Docker ..."
-msgstr "Eliminando Docker ..."
-
-msgid "Removing Portainer ..."
-msgstr "Eliminando Portainer ..."
-
-msgid "Removing Portainer and data..."
-msgstr "Eliminar Portainer y Datos..."
-
-msgid "Removing Yacht ..."
-msgstr "Eliminando Yacht ..."
-
-msgid "Removing non-Proxmox kernels ..."
-msgstr "Eliminando kernels no-proxmox"
-
-msgid "Restart"
-msgstr "Reiniciar"
-
-msgid "Restarting Docker ..."
-msgstr "Reiniciando Docker ..."
-
-msgid "Restarting docker ..."
-msgstr "Reiniciando Docker ..."
-
-msgid "Running apt-get dist-upgrade ..."
-msgstr "Ejecutando apt-get dist-upgrade ..."
-
-msgid "Running apt-get update ..."
-msgstr "Ejecutando apt-get update ..."
-
-msgid "Running apt-get upgrade ..."
-msgstr "Ejecutando apt-get upgrade ..."
-
-msgid "Running omv-aptclean ..."
-msgstr "Ejecutando omv-aptclean ..."
-
-msgid "Running omv-update ..."
-msgstr "Ejecutando omv-update ..."
-
-msgid ""
-"SSH server is enabled by default.  Login with username: <b>root</b> and "
-"password: <b>openmediavault</b>"
-msgstr "El servidor SSH , está activado por defecto. Utilizar como usuario: <b>root</b> y como contraseña: <b>openmediavault</b>"
-
-msgid ""
-"SSH server is enabled by default.  Login with username: <b>user</b> and "
-"password: <b>live</b>"
-msgstr "El servidor SSH , está activado por defecto. Utilizar como usuario: <b>user</b> y como contraseña: <b>live</b>"
-
-msgid "SSL/TLS enabled"
-msgstr "SSL/TLS Habilitado"
-
-msgid ""
-"Save will rewrite daemon.json and restart docker if Docker Storage path has "
-"changed."
-msgstr "Salvar, rescribirá el demonio.json y reiniciará los dockers si la ruta de almacenamiento ha cambiado."
-
-msgid "Set as default boot kernel"
-msgstr "Marcar como el kernel por defecto"
-
-msgid "Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time."
-msgstr "Indica al cargador Grub que inicie desde la ISO de Clonezilla <b>SOLO UNA VEZ</b>. "
-
-msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
-msgstr "Indica al cargador Grub que inicie desde la ISO de GParted Live <b>SOLO UNA VEZ</b>. "
-
-msgid "Sets grub bootloader to boot from SystemRescue ISO <b>ONE</b> time."
-msgstr "Hace que grub arranque de la imagen ISO de SystemRescue  <b>UNA</b> vez."
-
-msgid "Setting boot kernel ..."
-msgstr "Estableciendo el kernel por defecto ..."
-
-msgid ""
-"Setting the wrong default boot kernel may cause the system to be "
-"inaccessible.  The boot menu will still be available to select a different "
-"kernel."
-msgstr "Activar un kernel erroneo, puede hacer inaccesible el sistema. En el menú de arranque siempre podrá seleccionar otro kernel diferente."
-
-msgid "Settings"
-msgstr "Opciones"
-
-msgid "Spaced used by ISO in /boot directory on OS drive"
-msgstr "espacio usado por la ISO en el directorio /boot del disco de arranque."
-
-msgid "Status"
-msgstr "Estado"
-
-msgid "Testing repo"
-msgstr "Repositorio de Test"
-
-msgid "This will enable the Proxmox 6.x repo."
-msgstr "Eso habilita el repositorio 6.x de proxmox."
-
-msgid "This will fail to remove a linux-image-* kernel if it is still active."
-msgstr "Fallará al eliminar el kernel si aún está activo."
-
-msgid "This will install the latest 5.11 kernel."
-msgstr "Esto instalará el ultimo kernel 5.11"
-
-msgid "This will install the latest 5.4 kernel."
-msgstr "Instalar el último kernel 5.4"
-
-msgid ""
-"This will remove Portainer and all of its data.  Are you sure you want to do"
-" this?"
-msgstr "Esto eliminará Portainer y todos los datos.\n¿Está seguro de que desea esto?"
-
-msgid "This will remove all headers packages with the prefix linux-headers-."
-msgstr "Esto eliminará todas las cabeceras que contengan el prefijo linux-headers-."
-
-msgid "This will remove all kernel packages with the prefix linux-image-."
-msgstr "Esto eliminará todos los archivos de kernel con el prefijo linux-image-."
-
-msgid "Unhold Current Kernel"
-msgstr "Dejar el kernel actual"
-
-msgid "Unholding current kernel ..."
-msgstr "Dejando el kewrnel actual ..."
-
-msgid "Updates"
-msgstr "Actualizaciones"
-
-msgid "Use EE"
-msgstr "Usar EE"
-
-msgid "Use business edition. This version requires a license."
-msgstr "Usar Edición Empresa (EE) es necesario una licencia."
-
-msgid "Use legacy"
-msgstr "Usar Heredado"
-
-msgid "Use nft"
-msgstr "Usar nft"
-
-msgid "Version"
-msgstr "Versión"
-
-msgid "Web port"
-msgstr "Puerto WebGUI"
-
-msgid "Web port and agent port cannot be the same."
-msgstr "el Puerto WebGUI y el puerto para el agente, No pueden ser el mismo."
-
-msgid ""
-"When connecting via ssh, the ssh key will be different than the "
-"OpenMediaVault ssh key and need to be updated on the client system."
-msgstr "Cuando conecte por SSH, las claves SSH serán diferentes a las claves usadas por OpenMediaVault y necesitará actualizarlas en el lado cliente."
-
-msgid ""
-"When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
-msgstr "Cuand se conecte remotamente, inicie Clonezilla con:  <b>sudo clonezilla</b>"
-
-msgid "Yacht will listen on port 8001 for the web interface unless changed."
-msgstr "Yacht escucha el puerto 8001 para su WebGUI a menos que se lo cambie."
-
-msgid "and not running"
-msgstr "Corriendo"
-
-msgid "and running"
-msgstr "No corriendo"
+msgid "Wiki"
+msgstr ""
 
 msgid "apt clean"
 msgstr "apt clean"
 
-msgid "dist-upgrade"
-msgstr "dist-upgrade"
-
-msgid "n/a"
-msgstr "n/d"
+msgid "apt clean repos"
+msgstr ""
 
 msgid "omv-extras"
 msgstr "omv-extras"
-
-msgid "omv-update"
-msgstr "omv-update"
-
-msgid "update"
-msgstr "update"
-
-msgid "upgrade"
-msgstr "upgrade"

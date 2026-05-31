@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-15 09:42-0500\n"
+"POT-Creation-Date: 2026-05-31 01:24+0000\n"
 "PO-Revision-Date: 2013-10-28 11:35+0000\n"
 "Last-Translator: Artur Mudrykh <arturmon82@gmail.com>, 2017,2019-2020\n"
 "Language-Team: Russian (http://app.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ru/)\n"
@@ -21,468 +21,44 @@ msgstr ""
 "Language: ru\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-msgid "Advanced"
-msgstr ""
-
-msgid "Agent port"
-msgstr ""
-
-msgid "Backports"
-msgstr "Backports"
-
-msgid "Certificate"
-msgstr ""
-
-msgid "Cleaning Apt Files and Lists ..."
-msgstr "Очистка Apt файлов и списков ..."
-
 msgid "Cleaning apt ..."
 msgstr ""
 
-msgid "Clonezilla"
-msgstr "Clonezilla"
-
-msgid "Cockpit"
-msgstr "Cockpit"
-
-msgid "Cockpit listens on port 9090 for the web interface."
-msgstr "Cockpit прослушивает порт 9090 для веб-интерфейса."
-
-msgid "Containers"
+msgid "Cleaning apt and resetting repos ..."
 msgstr ""
 
-msgid ""
-"Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
-"legacy. Use iptables menu to change. "
+msgid "Disable backports"
 msgstr ""
 
-msgid "Default password: "
+msgid "Disabling backports ..."
 msgstr ""
 
-msgid "Default username: "
+msgid "Docker Wiki"
 msgstr ""
 
-msgid "Default username: <b>user</b> and password: <b>live</b>"
-msgstr "По умолчанию имя пользователя: <b>user</b> и пароль: <b>live</b>"
-
-msgid "Docker"
-msgstr "Докер"
-
-msgid "Docker Storage"
-msgstr "Докер Хранилище"
-
-msgid "Docker storage"
+msgid "Docker repo"
 msgstr ""
 
-msgid "Done."
-msgstr "Готово."
-
-msgid ""
-"Downloads Clonezilla ISO and configures grub bootloader to allow booting "
-"from ISO."
-msgstr "Загружает Clonezilla ISO и настраивает загрузчик grub, чтобы разрешить загрузку с ISO."
-
-msgid ""
-"Downloads GParted Live ISO and configures grub bootloader to allow booting "
-"from ISO."
-msgstr "Загружает GParted Live ISO и настраивает загрузчик grub, чтобы разрешить загрузку с ISO."
-
-msgid ""
-"Downloads SystemRescue ISO and configures grub bootloader to allow booting "
-"from ISO."
+msgid "Enable backports"
 msgstr ""
 
-msgid "Extras repo"
-msgstr "Extras repo"
-
-msgid "GParted Live"
-msgstr "GParted Live"
-
-msgid "General settings"
-msgstr "Общие настройки"
-
-msgid "Hold Current Kernel"
-msgstr "Использовать текущее ядро"
-
-msgid "Holding current kernel ..."
-msgstr "Удерживаем текущее ядро ..."
-
-msgid "IP Address will be set by DHCP."
-msgstr "IP-адрес будет установлен DHCP."
-
-msgid ""
-"IP Address will be set by DHCP.  Using static DHCP is recommended for "
-"headless servers."
-msgstr "IP-адрес будет получен по DHCP. Использование статического DHCP рекомендуется для серверов без основы."
-
-msgid "If port is changed, click Install in the Portainer menu again."
+msgid "Enabling backports ..."
 msgstr ""
 
-msgid "If port is changed, click Install in the Yacht menu again."
+msgid "Go to the Docker Wiki link below for more info"
 msgstr ""
 
-msgid "Illegal docker storage path - cannot use /sharedfolders paths"
-msgstr "Неверный путь хранения докера - нельзя использовать пути /sharedfolders"
-
-msgid "Image"
+msgid "Updated omv-extras settings."
 msgstr ""
 
-msgid "Install"
-msgstr "Установить"
-
-msgid "Install Clonezilla"
-msgstr "Установить Clonezilla"
-
-msgid "Install Clonezilla ISO ..."
-msgstr "Установка Clonezilla ISO ..."
-
-msgid ""
-"Install Docker will download and place a newer docker-compose in "
-"/usr/local/bin/ on 64 bit x86 systems only."
-msgstr "Установка Docker загрузит и поместит новую версию docker-compose в /usr/local/bin/ только для 64-x86 битных систем."
-
-msgid ""
-"Install Docker will install the docker-compose package. Location: /usr/bin/ "
-"on all systems."
-msgstr "Установщик Docker установит пакет docker-compose. Расположение: /usr/bin/ на всех системах."
-
-msgid "Install Docker will restart the docker service if daemon.json changes."
-msgstr "Установка Докер перезапустит службу Докер, если изменится daemon.json."
-
-msgid "Install GParted Live"
-msgstr "Установить GParted Live"
-
-msgid "Install GParted Live ISO ..."
-msgstr "Установка GParted Live ISO ..."
-
-msgid ""
-"Install Portainer will install the docker-ce package if not already "
-"installed."
-msgstr "Установка Portainer установит пакет docker-ce, если он еще не установлен."
-
-msgid ""
-"Install Portainer will update Portainer to the latest image if the image "
-"already exists."
-msgstr "Установка Portainer обновит Portainer до последней версии, если он уже существует."
-
-msgid "Install Proxmox kernel"
-msgstr "Установить ядро Proxmox"
-
-msgid "Install Proxmox test kernel"
+msgid "Wiki"
 msgstr ""
-
-msgid "Install SystemRescue"
-msgstr ""
-
-msgid "Install SystemRescue ISO ..."
-msgstr ""
-
-msgid ""
-"Install Yacht will install the docker-ce package if not already installed."
-msgstr ""
-
-msgid ""
-"Install Yacht will update Yacht to the latest image if the image already "
-"exists."
-msgstr ""
-
-msgid "Installed"
-msgstr "Установлен"
-
-msgid "Installed Kernels"
-msgstr "Установленные ядра"
-
-msgid "Installing"
-msgstr "Установка"
-
-msgid "Installing Docker ..."
-msgstr ""
-
-msgid "Installing Portainer ..."
-msgstr ""
-
-msgid "Installing Proxmox kernel ..."
-msgstr "Установка ядра Proxmox ..."
-
-msgid "Installing Proxmox test kernel ..."
-msgstr ""
-
-msgid "Installing Yacht ..."
-msgstr ""
-
-msgid "Kernel"
-msgstr "Ядро"
-
-msgid "Kernels"
-msgstr "Ядра"
-
-msgid "More info"
-msgstr ""
-
-msgid "Name"
-msgstr ""
-
-msgid "Not installed"
-msgstr "Не установлен"
-
-msgid "Not recommended for headless servers.  SSH is not enabled by default."
-msgstr "Не рекомендуется для серверов без головы. По умолчанию SSH не включен."
-
-msgid "OMV-Extras"
-msgstr "OMV-Extras"
-
-msgid "Open Portainer"
-msgstr ""
-
-msgid "Open Yacht"
-msgstr ""
-
-msgid "Open web"
-msgstr "Открыть web"
-
-msgid ""
-"Path to Docker images and containers storage. Leave blank to use custom "
-"/etc/docker/daemon.json."
-msgstr "Путь к хранилищу образов и контейнеров Докер. Оставьте пустым, чтобы использовать пользовательский /etc/docker/daemon.json."
-
-msgid "Portainer"
-msgstr "Portainer"
-
-msgid ""
-"Portainer will listen on port 9000 for the web interface and 8000 for the "
-"agent unless changed."
-msgstr ""
-
-msgid "Proxmox"
-msgstr "Proxmox"
-
-msgid "Reboot to Clonezilla ..."
-msgstr "Перезагрузиться в Clonezilla ..."
-
-msgid "Reboot to Clonezilla Once"
-msgstr "Перезагрузиться в Clonezilla Once"
-
-msgid "Reboot to GParted Live ..."
-msgstr "Перезагрузиться в GParted Live ..."
-
-msgid "Reboot to GParted Live Once"
-msgstr "Перезагрузиться в GParted Live Once"
-
-msgid "Reboot to SystemRescue ..."
-msgstr ""
-
-msgid "Reboot to SystemRescue Once"
-msgstr ""
-
-msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
-msgstr "Перезагрузите ядро Proxmox перед удалением не-Proxmox ядер."
-
-msgid "Remove"
-msgstr "Удалить"
-
-msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
-msgstr "Удаление Докер, удалит docker-compose из /usr/local/bin/."
-
-msgid "Remove Docker will remove the docker-compose package."
-msgstr "Удаление Docker удалит пакет docker-compose."
-
-msgid ""
-"Remove Portainer will remove the Portainer image and container but the "
-"volume will not be removed."
-msgstr "Удаление Portainer, удалит образ Portainer и контейнер, но том не будет удален."
-
-msgid ""
-"Remove Yacht will remove the Yacht image and container but the volume will "
-"not be removed."
-msgstr ""
-
-msgid "Remove data"
-msgstr ""
-
-msgid "Remove non-Proxmox kernels and headers"
-msgstr "Удалить не Proxmox ядра и заголовки"
-
-msgid "Removing"
-msgstr "Удаление"
-
-msgid "Removing Docker ..."
-msgstr ""
-
-msgid "Removing Portainer ..."
-msgstr ""
-
-msgid "Removing Portainer and data..."
-msgstr ""
-
-msgid "Removing Yacht ..."
-msgstr ""
-
-msgid "Removing non-Proxmox kernels ..."
-msgstr "Удаление не-Proxmox ядер ..."
-
-msgid "Restart"
-msgstr "Повторный запуск"
-
-msgid "Restarting Docker ..."
-msgstr ""
-
-msgid "Restarting docker ..."
-msgstr "Перезапускается docker ..."
-
-msgid "Running apt-get dist-upgrade ..."
-msgstr "Запуск apt-get dist-upgrade ..."
-
-msgid "Running apt-get update ..."
-msgstr "Запуск apt-get update ..."
-
-msgid "Running apt-get upgrade ..."
-msgstr "Запуск apt-get upgrade ..."
-
-msgid "Running omv-aptclean ..."
-msgstr "Запуск omv-aptclean ..."
-
-msgid "Running omv-update ..."
-msgstr "Запуск omv-update ..."
-
-msgid ""
-"SSH server is enabled by default.  Login with username: <b>root</b> and "
-"password: <b>openmediavault</b>"
-msgstr "Сервер SSH включен по умолчанию. Войти с именем пользователя: <b>root</ b> и пароль: <b>openmediavault</ b>"
-
-msgid ""
-"SSH server is enabled by default.  Login with username: <b>user</b> and "
-"password: <b>live</b>"
-msgstr "Сервер SSH включен по умолчанию. Войти с логином: <b>пользователь</ b> и пароль: <b>live</ b>"
-
-msgid "SSL/TLS enabled"
-msgstr ""
-
-msgid ""
-"Save will rewrite daemon.json and restart docker if Docker Storage path has "
-"changed."
-msgstr "Сохранение перезапишет daemon.json и перезапустит Docker, если путь к хранилищу Docker был изменен."
-
-msgid "Set as default boot kernel"
-msgstr "Установить как ядро загрузки по умолчанию"
-
-msgid "Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time."
-msgstr "Устанавливает загрузчик grub для загрузки из Clonezilla ISO <b>ONE</ b>."
-
-msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
-msgstr "Устанавливает загрузчик grub для загрузки GParted Live ISO <b>ONE</ b>."
-
-msgid "Sets grub bootloader to boot from SystemRescue ISO <b>ONE</b> time."
-msgstr ""
-
-msgid "Setting boot kernel ..."
-msgstr "Выбор загружаемого ядра ..."
-
-msgid ""
-"Setting the wrong default boot kernel may cause the system to be "
-"inaccessible.  The boot menu will still be available to select a different "
-"kernel."
-msgstr "Выбор неправильного ядра загрузки по умолчанию может привести к недоступности системы. Меню загрузки все еще будут доступно для выбора другого ядра."
-
-msgid "Settings"
-msgstr "Настройки"
-
-msgid "Spaced used by ISO in /boot directory on OS drive"
-msgstr "Используемый ISO размещен в каталоге /boot на диске ОС"
-
-msgid "Status"
-msgstr "Статус"
-
-msgid "Testing repo"
-msgstr "Тестовое репо"
-
-msgid "This will enable the Proxmox 6.x repo."
-msgstr "Включит репо Proxmox 6.x."
-
-msgid "This will fail to remove a linux-image-* kernel if it is still active."
-msgstr "Не удалит ядро linux-image- *, если оно все еще активно."
-
-msgid "This will install the latest 5.11 kernel."
-msgstr ""
-
-msgid "This will install the latest 5.4 kernel."
-msgstr ""
-
-msgid ""
-"This will remove Portainer and all of its data.  Are you sure you want to do"
-" this?"
-msgstr ""
-
-msgid "This will remove all headers packages with the prefix linux-headers-."
-msgstr "Удалит все пакеты заголовков с префиксом linux-headers-."
-
-msgid "This will remove all kernel packages with the prefix linux-image-."
-msgstr "Удалит все пакеты ядра с префиксом linux-image-."
-
-msgid "Unhold Current Kernel"
-msgstr "Не использовать текущее ядро"
-
-msgid "Unholding current kernel ..."
-msgstr "Прекращаем удерживать текущее ядро ..."
-
-msgid "Updates"
-msgstr "Обновления"
-
-msgid "Use EE"
-msgstr ""
-
-msgid "Use business edition. This version requires a license."
-msgstr ""
-
-msgid "Use legacy"
-msgstr ""
-
-msgid "Use nft"
-msgstr ""
-
-msgid "Version"
-msgstr "Версия"
-
-msgid "Web port"
-msgstr ""
-
-msgid "Web port and agent port cannot be the same."
-msgstr ""
-
-msgid ""
-"When connecting via ssh, the ssh key will be different than the "
-"OpenMediaVault ssh key and need to be updated on the client system."
-msgstr "При подключении через SSH, ключ SSH будет отличаться от ключа SSH OpenMediaVault и должны быть обновлены на клиентской системе."
-
-msgid ""
-"When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
-msgstr "При удаленном входе в систему запустите clonezilla с помощью: <b>sudo clonezilla</ b>"
-
-msgid "Yacht will listen on port 8001 for the web interface unless changed."
-msgstr ""
-
-msgid "and not running"
-msgstr "и не работает"
-
-msgid "and running"
-msgstr "и работает"
 
 msgid "apt clean"
 msgstr "apt clean"
 
-msgid "dist-upgrade"
-msgstr "dist-upgrade"
-
-msgid "n/a"
-msgstr "n/a"
+msgid "apt clean repos"
+msgstr ""
 
 msgid "omv-extras"
 msgstr ""
-
-msgid "omv-update"
-msgstr "omv-update"
-
-msgid "update"
-msgstr "update"
-
-msgid "upgrade"
-msgstr "upgrade"

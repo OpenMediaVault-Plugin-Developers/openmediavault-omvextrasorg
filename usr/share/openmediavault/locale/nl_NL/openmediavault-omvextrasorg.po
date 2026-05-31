@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-15 09:42-0500\n"
+"POT-Creation-Date: 2026-05-31 01:24+0000\n"
 "PO-Revision-Date: 2013-10-28 11:35+0000\n"
 "Last-Translator: Stephan Paternotte <stephan@paternottes.net>, 2025\n"
 "Language-Team: Dutch (http://app.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/nl/)\n"
@@ -20,468 +20,44 @@ msgstr ""
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Advanced"
-msgstr "Geavanceerd"
-
-msgid "Agent port"
-msgstr "Agent poort"
-
-msgid "Backports"
-msgstr "Backports"
-
-msgid "Certificate"
-msgstr "Certificaat"
-
-msgid "Cleaning Apt Files and Lists ..."
-msgstr "Apt-bestanden en -lijsten opschonen…"
-
 msgid "Cleaning apt ..."
 msgstr "Apt opschonen…"
 
-msgid "Clonezilla"
-msgstr "Clonezilla"
+msgid "Cleaning apt and resetting repos ..."
+msgstr ""
 
-msgid "Cockpit"
-msgstr "Cockpit"
+msgid "Disable backports"
+msgstr ""
 
-msgid "Cockpit listens on port 9090 for the web interface."
-msgstr "Cockpit luistert op poort 9090 voor de webinterface."
+msgid "Disabling backports ..."
+msgstr ""
 
-msgid "Containers"
-msgstr "Containers"
+msgid "Docker Wiki"
+msgstr ""
 
-msgid ""
-"Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
-"legacy. Use iptables menu to change. "
-msgstr "Debian 10/OMV 5.x gebruikt standaard iptables-nft en Docker heeft iptables-legacy nodig. Gebruik het iptables-menu om te wijzigen."
+msgid "Docker repo"
+msgstr ""
 
-msgid "Default password: "
-msgstr "Standaard wachtwoord:"
+msgid "Enable backports"
+msgstr ""
 
-msgid "Default username: "
-msgstr "Standaard gebruikersnaam:"
+msgid "Enabling backports ..."
+msgstr ""
 
-msgid "Default username: <b>user</b> and password: <b>live</b>"
-msgstr "Standaard gebruikersnaam: <b>user</b> en wachtwoord: <b>live</b>"
+msgid "Go to the Docker Wiki link below for more info"
+msgstr ""
 
-msgid "Docker"
-msgstr "Docker"
+msgid "Updated omv-extras settings."
+msgstr ""
 
-msgid "Docker Storage"
-msgstr "Docker-opslag"
-
-msgid "Docker storage"
-msgstr "Docker-opslag"
-
-msgid "Done."
-msgstr "Klaar."
-
-msgid ""
-"Downloads Clonezilla ISO and configures grub bootloader to allow booting "
-"from ISO."
-msgstr "Download Clonezilla ISO en configureert grub bootloader om opstarten vanaf ISO mogelijk te maken."
-
-msgid ""
-"Downloads GParted Live ISO and configures grub bootloader to allow booting "
-"from ISO."
-msgstr "Download GParted Live ISO en configureert grub bootloader om opstarten vanaf ISO mogelijk te maken."
-
-msgid ""
-"Downloads SystemRescue ISO and configures grub bootloader to allow booting "
-"from ISO."
-msgstr "Download SystemRescue ISO en configureert grub bootloader om opstarten vanaf ISO mogelijk te maken."
-
-msgid "Extras repo"
-msgstr "Extra gegevensbank"
-
-msgid "GParted Live"
-msgstr "GParted Live"
-
-msgid "General settings"
-msgstr "Algemene instellingen"
-
-msgid "Hold Current Kernel"
-msgstr "Houd huidige kernel vast"
-
-msgid "Holding current kernel ..."
-msgstr "Huidige kernel vasthouden ..."
-
-msgid "IP Address will be set by DHCP."
-msgstr "Het IP-adres wordt door DHCP ingesteld."
-
-msgid ""
-"IP Address will be set by DHCP.  Using static DHCP is recommended for "
-"headless servers."
-msgstr "Het IP-adres wordt door DHCP ingesteld. Het gebruik van statische DHCP wordt aanbevolen voor headless servers."
-
-msgid "If port is changed, click Install in the Portainer menu again."
-msgstr "Als de poort is gewijzigd, klikt u nogmaals op Installeren in het Portainer-menu."
-
-msgid "If port is changed, click Install in the Yacht menu again."
-msgstr "Als de poort is gewijzigd, klikt u nogmaals op Installeren in het Yacht-menu."
-
-msgid "Illegal docker storage path - cannot use /sharedfolders paths"
-msgstr "Ongeldig Docker-opslagpad - kan geen gebruik maken van /sharedfolders paden"
-
-msgid "Image"
-msgstr "Image"
-
-msgid "Install"
-msgstr "Installeren"
-
-msgid "Install Clonezilla"
-msgstr "Clonezilla installeren"
-
-msgid "Install Clonezilla ISO ..."
-msgstr "Clonezilla ISO installeren…"
-
-msgid ""
-"Install Docker will download and place a newer docker-compose in "
-"/usr/local/bin/ on 64 bit x86 systems only."
-msgstr "Install Docker zal alleen op 64 bits x86-systemen een nieuwere docker-compose downloaden en plaatsen in /usr/local/bin/.\n "
-
-msgid ""
-"Install Docker will install the docker-compose package. Location: /usr/bin/ "
-"on all systems."
-msgstr "Install Docker installeert het docker-compose-pakket. Locatie: /usr/bin/ op alle systemen."
-
-msgid "Install Docker will restart the docker service if daemon.json changes."
-msgstr "Install Docker zal de docker-service opnieuw starten als daemon.json verandert."
-
-msgid "Install GParted Live"
-msgstr "GParted Live installeren"
-
-msgid "Install GParted Live ISO ..."
-msgstr "GParted Live ISO installeren…"
-
-msgid ""
-"Install Portainer will install the docker-ce package if not already "
-"installed."
-msgstr "Install Portainer zal het docker-ce-pakket installeren als dit nog niet is geïnstalleerd."
-
-msgid ""
-"Install Portainer will update Portainer to the latest image if the image "
-"already exists."
-msgstr "Install Portainer zal Portainer updaten naar de laatste image als de image al bestaat."
-
-msgid "Install Proxmox kernel"
-msgstr "Proxmox-kernel installeren"
-
-msgid "Install Proxmox test kernel"
-msgstr "Proxmox test-kernel installeren"
-
-msgid "Install SystemRescue"
-msgstr "SystemRescue installeren"
-
-msgid "Install SystemRescue ISO ..."
-msgstr "SystemRescue ISO installeren…"
-
-msgid ""
-"Install Yacht will install the docker-ce package if not already installed."
-msgstr "Install Yacht zal het docker-ce-pakket installeren als dit nog niet is geïnstalleerd."
-
-msgid ""
-"Install Yacht will update Yacht to the latest image if the image already "
-"exists."
-msgstr "Install Yacht zal Yacht updaten naar de laatste image als de image al bestaat."
-
-msgid "Installed"
-msgstr "Geïnstalleerd"
-
-msgid "Installed Kernels"
-msgstr "Geïnstalleerde Kernels"
-
-msgid "Installing"
-msgstr "Installeren"
-
-msgid "Installing Docker ..."
-msgstr "Docker installeren…"
-
-msgid "Installing Portainer ..."
-msgstr "Portainer installeren…"
-
-msgid "Installing Proxmox kernel ..."
-msgstr "Proxmox-kernel installeren ..."
-
-msgid "Installing Proxmox test kernel ..."
-msgstr "Proxmox test-kernel installeren…"
-
-msgid "Installing Yacht ..."
-msgstr "Yacht installeren…"
-
-msgid "Kernel"
-msgstr "Kernel"
-
-msgid "Kernels"
-msgstr "Kernels"
-
-msgid "More info"
-msgstr "Meer informatie"
-
-msgid "Name"
-msgstr "Naam"
-
-msgid "Not installed"
-msgstr "Niet geïnstalleerd"
-
-msgid "Not recommended for headless servers.  SSH is not enabled by default."
-msgstr "Niet aanbevolen voor headless servers. SSH is niet standaard ingeschakeld."
-
-msgid "OMV-Extras"
-msgstr "OMV-Extras"
-
-msgid "Open Portainer"
-msgstr "Portainer openen"
-
-msgid "Open Yacht"
-msgstr "Yacht openen"
-
-msgid "Open web"
-msgstr "Web openen"
-
-msgid ""
-"Path to Docker images and containers storage. Leave blank to use custom "
-"/etc/docker/daemon.json."
-msgstr "Pad naar Docker images en opslag van containers. Laat leeg om aangepaste /etc/docker/daemon.json te gebruiken."
-
-msgid "Portainer"
-msgstr "Portainer"
-
-msgid ""
-"Portainer will listen on port 9000 for the web interface and 8000 for the "
-"agent unless changed."
-msgstr "Portainer zal luisteren op poort 9000 voor de webinterface en 8000 voor de agent, tenzij gewijzigd."
-
-msgid "Proxmox"
-msgstr "Proxmox"
-
-msgid "Reboot to Clonezilla ..."
-msgstr "Opnieuw starten naar Clonezilla…"
-
-msgid "Reboot to Clonezilla Once"
-msgstr "Eenmalig opnieuw starten naar Clonezilla"
-
-msgid "Reboot to GParted Live ..."
-msgstr "Opnieuw starten naar GParted…"
-
-msgid "Reboot to GParted Live Once"
-msgstr "Eenmalig opnieuw starten naar GParted"
-
-msgid "Reboot to SystemRescue ..."
-msgstr "Opnieuw starten naar SystemRescue…"
-
-msgid "Reboot to SystemRescue Once"
-msgstr "Eenmalig opnieuw starten naar SystemRescue"
-
-msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
-msgstr "Opnieuw starten met de Proxmox-kernel alvorens de niet-Proxmox-kernels te verwijderen."
-
-msgid "Remove"
-msgstr "Verwijderen"
-
-msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
-msgstr "Verwijdering van Docker verwijdert docker-compose uit /usr/local/bin/."
-
-msgid "Remove Docker will remove the docker-compose package."
-msgstr "Verwijdering van Docker verwijdert het docker-compose-pakket."
-
-msgid ""
-"Remove Portainer will remove the Portainer image and container but the "
-"volume will not be removed."
-msgstr "Met het verwijderen van Portainer worden de Portainer image en de container verwijderd, maar het volume zal niet worden verwijderd."
-
-msgid ""
-"Remove Yacht will remove the Yacht image and container but the volume will "
-"not be removed."
-msgstr "Met het verwijderen van Yacht worden de Yacht image en de container verwijderd, maar het volume zal niet worden verwijderd."
-
-msgid "Remove data"
-msgstr "Gegevens verwijderen"
-
-msgid "Remove non-Proxmox kernels and headers"
-msgstr "Niet-Proxmox-kernels en headers verwijderen"
-
-msgid "Removing"
-msgstr "Verwijderen"
-
-msgid "Removing Docker ..."
-msgstr "Docker verwijderen…"
-
-msgid "Removing Portainer ..."
-msgstr "Portainer verwijderen…"
-
-msgid "Removing Portainer and data..."
-msgstr "Portainer en gegevens verwijderen…"
-
-msgid "Removing Yacht ..."
-msgstr "Yacht verwijderen…"
-
-msgid "Removing non-Proxmox kernels ..."
-msgstr "Niet-Proxmox-kernels verwijderen…"
-
-msgid "Restart"
-msgstr "Opnieuw starten"
-
-msgid "Restarting Docker ..."
-msgstr "Docker opnieuw starten…"
-
-msgid "Restarting docker ..."
-msgstr "Docker opnieuw starten…"
-
-msgid "Running apt-get dist-upgrade ..."
-msgstr "Apt-get dist-upgrade uitvoeren…"
-
-msgid "Running apt-get update ..."
-msgstr "Apt-get update uitvoeren…"
-
-msgid "Running apt-get upgrade ..."
-msgstr "Apt-get upgrade uitvoeren…"
-
-msgid "Running omv-aptclean ..."
-msgstr "Omv-aptclean uitvoeren…"
-
-msgid "Running omv-update ..."
-msgstr "Omv-update uitvoeren…"
-
-msgid ""
-"SSH server is enabled by default.  Login with username: <b>root</b> and "
-"password: <b>openmediavault</b>"
-msgstr "SSH-server is standaard ingeschakeld. Login met gebruikersnaam: <b>root</b> en wachtwoord: <b>openmediavault</b>"
-
-msgid ""
-"SSH server is enabled by default.  Login with username: <b>user</b> and "
-"password: <b>live</b>"
-msgstr "SSH-server is standaard ingeschakeld. Login met gebruikersnaam: <b>user</b> en wachtwoord: <b>live</b>"
-
-msgid "SSL/TLS enabled"
-msgstr "SSL/TLS ingeschakeld"
-
-msgid ""
-"Save will rewrite daemon.json and restart docker if Docker Storage path has "
-"changed."
-msgstr "Opslaan zal daemon.json herschrijven en Docker opnieuw opstarten als het Docker-opslagpad is veranderd."
-
-msgid "Set as default boot kernel"
-msgstr "Instellen als standaard boot-kernel"
-
-msgid "Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time."
-msgstr "Stelt grub bootloader in om <b>EENMALIG</b> op te starten vanaf Clonezilla ISO"
-
-msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
-msgstr "Stelt grub bootloader in om <b>EENMALIG</b> op te starten vanaf GParted Live ISO"
-
-msgid "Sets grub bootloader to boot from SystemRescue ISO <b>ONE</b> time."
-msgstr "Stelt grub bootloader in om <b>EENMALIG</b> op te starten vanaf SystemRescue ISO"
-
-msgid "Setting boot kernel ..."
-msgstr "Boot-kernel instellen ..."
-
-msgid ""
-"Setting the wrong default boot kernel may cause the system to be "
-"inaccessible.  The boot menu will still be available to select a different "
-"kernel."
-msgstr "Het instellen van de verkeerde standaard boot-kernel kan ervoor zorgen dat het systeem ontoegankelijk raakt. Het opstartmenu is nog steeds beschikbaar om een andere kernel te selecteren."
-
-msgid "Settings"
-msgstr "Instellingen"
-
-msgid "Spaced used by ISO in /boot directory on OS drive"
-msgstr "Ruimte gebruikt door ISO in /boot directory op OS drive"
-
-msgid "Status"
-msgstr "Status"
-
-msgid "Testing repo"
-msgstr "Repo testen"
-
-msgid "This will enable the Proxmox 6.x repo."
-msgstr "Hiermee wordt de Proxmox 6.x repo ingeschakeld."
-
-msgid "This will fail to remove a linux-image-* kernel if it is still active."
-msgstr "Hiermee wordt een linux-image-* kernel niet verwijderd als deze nog actief is."
-
-msgid "This will install the latest 5.11 kernel."
-msgstr "Hiermee wordt de nieuwste 5.11-kernel geïnstalleerd."
-
-msgid "This will install the latest 5.4 kernel."
-msgstr "Hiermee wordt de nieuwste 5.4-kernel geïnstalleerd."
-
-msgid ""
-"This will remove Portainer and all of its data.  Are you sure you want to do"
-" this?"
-msgstr "Hiermee worden Portainer en al zijn gegevens verwijderd. Weet u zeker dat u dit wilt doen?"
-
-msgid "This will remove all headers packages with the prefix linux-headers-."
-msgstr "Hiermee worden alle headers-pakketten met het voorvoegsel linux-headers- verwijderd."
-
-msgid "This will remove all kernel packages with the prefix linux-image-."
-msgstr "Hiermee worden alle kernelpakketten met het voorvoegsel linux-image- verwijderd."
-
-msgid "Unhold Current Kernel"
-msgstr "Huidige Kernel ongedaan maken"
-
-msgid "Unholding current kernel ..."
-msgstr "Huidige Kernel ongedaan maken…"
-
-msgid "Updates"
-msgstr "Updates"
-
-msgid "Use EE"
-msgstr "EE gebruiken"
-
-msgid "Use business edition. This version requires a license."
-msgstr "Zakelijke editie gebruiken. Voor deze versie is een licentie vereist."
-
-msgid "Use legacy"
-msgstr "Verouderd gebruiken"
-
-msgid "Use nft"
-msgstr "Nft gebruiken"
-
-msgid "Version"
-msgstr "Versie"
-
-msgid "Web port"
-msgstr "Web-poort"
-
-msgid "Web port and agent port cannot be the same."
-msgstr "Web-poort en agent-poort kunnen niet hetzelfde zijn."
-
-msgid ""
-"When connecting via ssh, the ssh key will be different than the "
-"OpenMediaVault ssh key and need to be updated on the client system."
-msgstr "Bij het verbinden via ssh zal de ssh-sleutel anders zijn dan de OpenMediaVault ssh-sleutel en moet deze op het cliëntsysteem worden bijgewerkt."
-
-msgid ""
-"When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
-msgstr "Bij het inloggen op afstand, start Clonezilla met: <b>sudo clonezilla</b>"
-
-msgid "Yacht will listen on port 8001 for the web interface unless changed."
-msgstr "Yacht luistert op poort 8001 voor de webinterface, tenzij gewijzigd. "
-
-msgid "and not running"
-msgstr "en draait niet"
-
-msgid "and running"
-msgstr "en draait"
+msgid "Wiki"
+msgstr ""
 
 msgid "apt clean"
 msgstr "apt clean"
 
-msgid "dist-upgrade"
-msgstr "dist-upgrade"
-
-msgid "n/a"
-msgstr "n.v.t."
+msgid "apt clean repos"
+msgstr ""
 
 msgid "omv-extras"
 msgstr "omv-extras"
-
-msgid "omv-update"
-msgstr "omv-update"
-
-msgid "update"
-msgstr "update"
-
-msgid "upgrade"
-msgstr "upgrade"

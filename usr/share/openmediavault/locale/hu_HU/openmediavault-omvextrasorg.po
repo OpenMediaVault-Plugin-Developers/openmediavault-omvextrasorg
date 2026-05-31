@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-15 09:42-0500\n"
+"POT-Creation-Date: 2026-05-31 01:24+0000\n"
 "PO-Revision-Date: 2013-10-28 11:35+0000\n"
 "Last-Translator: Gyuris Gellért <jobel@ujevangelizacio.hu>, 2023\n"
 "Language-Team: Hungarian (Hungary) (http://app.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/hu_HU/)\n"
@@ -21,468 +21,44 @@ msgstr ""
 "Language: hu_HU\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Advanced"
-msgstr "Haladó"
-
-msgid "Agent port"
-msgstr "Ügynök port"
-
-msgid "Backports"
-msgstr "Visszaportolások"
-
-msgid "Certificate"
-msgstr "Tanúsítvány"
-
-msgid "Cleaning Apt Files and Lists ..."
-msgstr "Apt fájlok és listák ürítése…"
-
 msgid "Cleaning apt ..."
 msgstr "Apt ürítése…"
 
-msgid "Clonezilla"
-msgstr "Clonezilla"
+msgid "Cleaning apt and resetting repos ..."
+msgstr ""
 
-msgid "Cockpit"
-msgstr "Cockpit"
+msgid "Disable backports"
+msgstr ""
 
-msgid "Cockpit listens on port 9090 for the web interface."
-msgstr "A Cockpit webes felhasználói felülete a 9090-es porton hallgat."
+msgid "Disabling backports ..."
+msgstr ""
 
-msgid "Containers"
-msgstr "Konténerek"
+msgid "Docker Wiki"
+msgstr ""
 
-msgid ""
-"Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
-"legacy. Use iptables menu to change. "
-msgstr "A Debian 10/OMV 5.x alapértelmezetten az iptables-nft-t alkalmazza, de a Dockernek az iptables-legacy-ra van szüksége. Az iptables menüben lehet változtatni."
+msgid "Docker repo"
+msgstr ""
 
-msgid "Default password: "
-msgstr "Alapértelmezett jelszó:"
+msgid "Enable backports"
+msgstr ""
 
-msgid "Default username: "
-msgstr "Alapértelmezett felhasználónév:"
+msgid "Enabling backports ..."
+msgstr ""
 
-msgid "Default username: <b>user</b> and password: <b>live</b>"
-msgstr "Alapértelmezett felhasználónév: <b>felhasználó</b> és jelszó: <b>élő</b>"
+msgid "Go to the Docker Wiki link below for more info"
+msgstr ""
 
-msgid "Docker"
-msgstr "Docker"
+msgid "Updated omv-extras settings."
+msgstr ""
 
-msgid "Docker Storage"
-msgstr "Docker tároló"
-
-msgid "Docker storage"
-msgstr "Docker tároló"
-
-msgid "Done."
-msgstr "Kész."
-
-msgid ""
-"Downloads Clonezilla ISO and configures grub bootloader to allow booting "
-"from ISO."
-msgstr "Clonezilla ISO letöltése és a GRUB rendszerbetöltő konfigurálása, hogy lehessen rendszert indítani az ISO-ról."
-
-msgid ""
-"Downloads GParted Live ISO and configures grub bootloader to allow booting "
-"from ISO."
-msgstr "GParted Live ISO letöltése és a GRUB rendszerbetöltő konfigurálása, hogy lehessen rendszert indítani az ISO-ról."
-
-msgid ""
-"Downloads SystemRescue ISO and configures grub bootloader to allow booting "
-"from ISO."
-msgstr "SystemRescue ISO letöltése és a GRUB rendszerbetöltő konfigurálása, hogy lehessen rendszert indítani az ISO-ról."
-
-msgid "Extras repo"
-msgstr "Extrák tároló"
-
-msgid "GParted Live"
-msgstr "GParted Live"
-
-msgid "General settings"
-msgstr "Általános beállítások"
-
-msgid "Hold Current Kernel"
-msgstr "Jelenlegi kernel tartása"
-
-msgid "Holding current kernel ..."
-msgstr "Jelenlegi kernel tartása…"
-
-msgid "IP Address will be set by DHCP."
-msgstr "Az IP címet a DHCP fogja kiosztani."
-
-msgid ""
-"IP Address will be set by DHCP.  Using static DHCP is recommended for "
-"headless servers."
-msgstr "Az IP címet a DHCP fogja kiosztani. Statikus DHCP alkalmazása periféria nélküli kiszolgálóknál javasolt. "
-
-msgid "If port is changed, click Install in the Portainer menu again."
-msgstr "Ha a port módosul, szükséges ismételten a Portainer menüben a Telepítés gombra kattintani."
-
-msgid "If port is changed, click Install in the Yacht menu again."
-msgstr "Ha a port módosul, szükséges ismételten a Yacht menüben a Telepítés gombra kattintani."
-
-msgid "Illegal docker storage path - cannot use /sharedfolders paths"
-msgstr "Tiltott docker tárolási útvonal. A /sharedfolders útvonal nem használható."
-
-msgid "Image"
-msgstr "Kép"
-
-msgid "Install"
-msgstr "Telepítés"
-
-msgid "Install Clonezilla"
-msgstr "Clonezilla telepítése"
-
-msgid "Install Clonezilla ISO ..."
-msgstr "Clonezilla ISO telepítése…"
-
-msgid ""
-"Install Docker will download and place a newer docker-compose in "
-"/usr/local/bin/ on 64 bit x86 systems only."
-msgstr "A Docker telepítése letölt egy frissebb docker-compose-t és a /usr/local/bin/-be helyezi, de csak 64 bites x86-os rendszereken."
-
-msgid ""
-"Install Docker will install the docker-compose package. Location: /usr/bin/ "
-"on all systems."
-msgstr "A Docker fel fogja telepíteni a docker-compose csomagot, melynek helye minden rendszeren a /usr/bin."
-
-msgid "Install Docker will restart the docker service if daemon.json changes."
-msgstr "A Docker telepítése újraindítja a docker szolgáltatást ha a daemon.json megváltozik."
-
-msgid "Install GParted Live"
-msgstr "GParted Live telepítése"
-
-msgid "Install GParted Live ISO ..."
-msgstr "GParted Live ISO telepítése…"
-
-msgid ""
-"Install Portainer will install the docker-ce package if not already "
-"installed."
-msgstr "A Portainer telepítése telepíteni fogja a docker-ce csomagot, ha az még nincs telepítve."
-
-msgid ""
-"Install Portainer will update Portainer to the latest image if the image "
-"already exists."
-msgstr "A Portainer telepítése frissíteni fogja a Portainer-t a legfrissebb képre, ha az már létezik."
-
-msgid "Install Proxmox kernel"
-msgstr "Proxmox kernel telepítése"
-
-msgid "Install Proxmox test kernel"
-msgstr "Proxmox teszt kernel telepítése"
-
-msgid "Install SystemRescue"
-msgstr "SystemRescue telepítése"
-
-msgid "Install SystemRescue ISO ..."
-msgstr "SystemRescue ISO telepítése…"
-
-msgid ""
-"Install Yacht will install the docker-ce package if not already installed."
-msgstr "A Yacht telepítése telepíteni fogja a docker-ce csomagot, ha az még nincs telepítve."
-
-msgid ""
-"Install Yacht will update Yacht to the latest image if the image already "
-"exists."
-msgstr "A Yacht telepítése frissíteni fogja a Yacht-ot a legfrissebb képre, ha az már létezik."
-
-msgid "Installed"
-msgstr "Telepítve"
-
-msgid "Installed Kernels"
-msgstr "Telepített kernelek"
-
-msgid "Installing"
-msgstr "Telepítés"
-
-msgid "Installing Docker ..."
-msgstr "Docker telepítése…"
-
-msgid "Installing Portainer ..."
-msgstr "Portainer telepítése…"
-
-msgid "Installing Proxmox kernel ..."
-msgstr "Proxmox kernel telepítése…"
-
-msgid "Installing Proxmox test kernel ..."
-msgstr "Proxmox teszt kernel telepítése…"
-
-msgid "Installing Yacht ..."
-msgstr "Yacht telepítése…"
-
-msgid "Kernel"
-msgstr "Kernel"
-
-msgid "Kernels"
-msgstr "Kernelek"
-
-msgid "More info"
-msgstr "További információ"
-
-msgid "Name"
-msgstr "Név"
-
-msgid "Not installed"
-msgstr "Nincs telepítve"
-
-msgid "Not recommended for headless servers.  SSH is not enabled by default."
-msgstr "Nem tanácsolt periféria nélküli kiszolgálókra. Az SSH nincs engedélyezve alapértelmezetten."
-
-msgid "OMV-Extras"
-msgstr "OMV-Extrák"
-
-msgid "Open Portainer"
-msgstr "Portainer megnyitása"
-
-msgid "Open Yacht"
-msgstr "Yacht megnyitása"
-
-msgid "Open web"
-msgstr "Web megnyitása"
-
-msgid ""
-"Path to Docker images and containers storage. Leave blank to use custom "
-"/etc/docker/daemon.json."
-msgstr "A Docker képek és a konténer tárolók útvonala. Üresen hagyva egyéni /etc/docker/daemon.json lesz alkalmazva."
-
-msgid "Portainer"
-msgstr "Portainer"
-
-msgid ""
-"Portainer will listen on port 9000 for the web interface and 8000 for the "
-"agent unless changed."
-msgstr "A Portainer webes felhasználói felülete a 9000-es porton hallgat, az ügynök pedig a 8000-en, ha nem lettek módosítva."
-
-msgid "Proxmox"
-msgstr "Proxmox"
-
-msgid "Reboot to Clonezilla ..."
-msgstr "Újraindítás a Clonezillával…"
-
-msgid "Reboot to Clonezilla Once"
-msgstr "Újraindítás egyszer a Clonezillával"
-
-msgid "Reboot to GParted Live ..."
-msgstr "Újraindítás a GParted Live-val…"
-
-msgid "Reboot to GParted Live Once"
-msgstr "Újraindítás egyszer a GParted Live-val"
-
-msgid "Reboot to SystemRescue ..."
-msgstr "Újraindítás a SystemRescue-val…"
-
-msgid "Reboot to SystemRescue Once"
-msgstr "Újraindítás egyszer a SystemRescue-val"
-
-msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
-msgstr "Újraindítás Proxmox kernellel a nem Proxmox kernelek eltávolítása előtt."
-
-msgid "Remove"
-msgstr "Eltávolítás"
-
-msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
-msgstr "A Docker eltávolítása törölni fogja a docker-compose-t a /usr/local/bin/-ből."
-
-msgid "Remove Docker will remove the docker-compose package."
-msgstr "A Docker törlése el fogja távoltani a docker-compose csomagot."
-
-msgid ""
-"Remove Portainer will remove the Portainer image and container but the "
-"volume will not be removed."
-msgstr "A Portainer eltávolítása el fogja távolítani a Portainer képet és a tárolót, de a kötet nem lesz eltávolítva."
-
-msgid ""
-"Remove Yacht will remove the Yacht image and container but the volume will "
-"not be removed."
-msgstr "A Yacht eltávolítása el fogja távolítani a Yacht képet és a tárolót, de a kötet nem lesz eltávolítva."
-
-msgid "Remove data"
-msgstr "Adatok eltávolítása"
-
-msgid "Remove non-Proxmox kernels and headers"
-msgstr "Nem Proxmox kernelek és fejlécek eltávolítása"
-
-msgid "Removing"
-msgstr "Eltávolítás"
-
-msgid "Removing Docker ..."
-msgstr "Docker eltávolítása…"
-
-msgid "Removing Portainer ..."
-msgstr "Portainer eltávolítása…"
-
-msgid "Removing Portainer and data..."
-msgstr "Portainer és adatainak eltávolítása…"
-
-msgid "Removing Yacht ..."
-msgstr "Yacht eltávolítása…"
-
-msgid "Removing non-Proxmox kernels ..."
-msgstr "Nem Proxmox kernelek eltávolítása…"
-
-msgid "Restart"
-msgstr "Újraindítás"
-
-msgid "Restarting Docker ..."
-msgstr "Docker újraindítása…"
-
-msgid "Restarting docker ..."
-msgstr "Docker újraindítása…"
-
-msgid "Running apt-get dist-upgrade ..."
-msgstr "apt-get dist-upgrade futtatása ..."
-
-msgid "Running apt-get update ..."
-msgstr "apt-get update futtatása ..."
-
-msgid "Running apt-get upgrade ..."
-msgstr "apt-get upgrade futtatása ..."
-
-msgid "Running omv-aptclean ..."
-msgstr "omv-aptclean futtatása ..."
-
-msgid "Running omv-update ..."
-msgstr "omv-update futtatása ..."
-
-msgid ""
-"SSH server is enabled by default.  Login with username: <b>root</b> and "
-"password: <b>openmediavault</b>"
-msgstr "Az SSH szerver alapértelmezett engedélyezve van. Felhasználói név a belépéshez: <b>root</b>, valamint a jelszó: <b>openmediavault</b>"
-
-msgid ""
-"SSH server is enabled by default.  Login with username: <b>user</b> and "
-"password: <b>live</b>"
-msgstr "Az SSH szerver alapértelmezett engedélyezve van. Felhasználói név a belépéshez: <b>user</b>, valamint a jelszó: <b>live</b>"
-
-msgid "SSL/TLS enabled"
-msgstr "SSL/TLS engedélyezve"
-
-msgid ""
-"Save will rewrite daemon.json and restart docker if Docker Storage path has "
-"changed."
-msgstr "A mentés felül fogja írni a daemon.json fájlt és újraindítja a docker-t, ha a Docker tárolási útvonala megváltozott."
-
-msgid "Set as default boot kernel"
-msgstr "Alap rendszerindító kernel beállítása"
-
-msgid "Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time."
-msgstr "Beállítja a GRUB rendszerbetöltőt, hogy a Clonezilla ISO-ról induljon a rendszer <b>EGY</b> alkalommal."
-
-msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
-msgstr "Beállítja a GRUB rendszerbetöltőt, hogy a GParted Live ISO-ról induljon a rendszer <b>EGY</b> alkalommal."
-
-msgid "Sets grub bootloader to boot from SystemRescue ISO <b>ONE</b> time."
-msgstr "Beállítja a GRUB rendszerbetöltőt, hogy a SystemRescue ISO-ról induljon a rendszer <b>EGY</b> alkalommal."
-
-msgid "Setting boot kernel ..."
-msgstr "Rendszerindító kernel beállítása…"
-
-msgid ""
-"Setting the wrong default boot kernel may cause the system to be "
-"inaccessible.  The boot menu will still be available to select a different "
-"kernel."
-msgstr "A rosszul alapértelmezettként beállított kernel miatt a rendszer elérhetetlenné válhat. A boot menüben továbbra is kiválasztható lesz egy másik kernel. "
-
-msgid "Settings"
-msgstr "Beállítások"
-
-msgid "Spaced used by ISO in /boot directory on OS drive"
-msgstr "Az ISO által használt hely az operációs rendszer meghajtójának /boot könyvtárában "
-
-msgid "Status"
-msgstr "Állapot"
-
-msgid "Testing repo"
-msgstr "Teszt tároló"
-
-msgid "This will enable the Proxmox 6.x repo."
-msgstr "A Proxmox 6.x tároló engedélyezése."
-
-msgid "This will fail to remove a linux-image-* kernel if it is still active."
-msgstr "Meg fog hiúsulni a linux-image-* kernel eltávolítása, ha még aktív."
-
-msgid "This will install the latest 5.11 kernel."
-msgstr "A legutolsó 5.11-es kernel telepítése."
-
-msgid "This will install the latest 5.4 kernel."
-msgstr "A legutolsó 5.4-es kernel telepítése."
-
-msgid ""
-"This will remove Portainer and all of its data.  Are you sure you want to do"
-" this?"
-msgstr "Ez el fogja távolítani a Portainert minden adatával együtt. Valóban ezt szeretné tenni?"
-
-msgid "This will remove all headers packages with the prefix linux-headers-."
-msgstr "A linux-headers- előtagra illeszkedő összes fejléc csomag eltávolítása."
-
-msgid "This will remove all kernel packages with the prefix linux-image-."
-msgstr "A linux-image- előtagra illeszkedő összes kernel csomag eltávolítása."
-
-msgid "Unhold Current Kernel"
-msgstr "Jelenlegi kernel elengedése"
-
-msgid "Unholding current kernel ..."
-msgstr "Jelenlegi kernel elengedése…"
-
-msgid "Updates"
-msgstr "Frissítések"
-
-msgid "Use EE"
-msgstr "EE alkalmazása"
-
-msgid "Use business edition. This version requires a license."
-msgstr "Üzleti verzió alkalmazása. Ez a verzió licencet igényel."
-
-msgid "Use legacy"
-msgstr "Örökölt alkalmazása"
-
-msgid "Use nft"
-msgstr "nft alkalmazása"
-
-msgid "Version"
-msgstr "Verzió"
-
-msgid "Web port"
-msgstr "Webes port"
-
-msgid "Web port and agent port cannot be the same."
-msgstr "A webes és az ügynök port nem lehet ugyanaz."
-
-msgid ""
-"When connecting via ssh, the ssh key will be different than the "
-"OpenMediaVault ssh key and need to be updated on the client system."
-msgstr "SSH kapcsolódás esetén az SSH-kulcs eltérő lesz a OpenMediaVault SSH-kulcsától és frissíteni kell a kliens rendszeren."
-
-msgid ""
-"When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
-msgstr "Távoli belépés esetén a Clonezilla így indítható: <b>sudo clonezilla</b>"
-
-msgid "Yacht will listen on port 8001 for the web interface unless changed."
-msgstr "A Yacht webes felhasználói felülete a 8001-es porton hallgat, ha nem lett módosítva."
-
-msgid "and not running"
-msgstr "és nem fut"
-
-msgid "and running"
-msgstr "és fut"
+msgid "Wiki"
+msgstr ""
 
 msgid "apt clean"
 msgstr "apt clean"
 
-msgid "dist-upgrade"
-msgstr "dist-upgrade"
-
-msgid "n/a"
-msgstr "nem értelmezett"
+msgid "apt clean repos"
+msgstr ""
 
 msgid "omv-extras"
 msgstr "omv-extras"
-
-msgid "omv-update"
-msgstr "omv-update"
-
-msgid "update"
-msgstr "update"
-
-msgid "upgrade"
-msgstr "upgrade"

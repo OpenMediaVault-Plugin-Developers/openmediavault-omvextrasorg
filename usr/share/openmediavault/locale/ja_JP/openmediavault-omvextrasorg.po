@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-15 09:42-0500\n"
+"POT-Creation-Date: 2026-05-31 01:24+0000\n"
 "PO-Revision-Date: 2013-10-28 11:35+0000\n"
 "Last-Translator: Toshihiro Kan <kansuke4649@gmail.com>, 2014-2023\n"
 "Language-Team: Japanese (Japan) (http://app.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/ja_JP/)\n"
@@ -18,468 +18,44 @@ msgstr ""
 "Language: ja_JP\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-msgid "Advanced"
-msgstr "アドバンスド"
-
-msgid "Agent port"
-msgstr "エージェントポート"
-
-msgid "Backports"
-msgstr "バックポート"
-
-msgid "Certificate"
-msgstr "証明書"
-
-msgid "Cleaning Apt Files and Lists ..."
-msgstr "Aptのファイルとリストをクリーニングしています ..."
-
 msgid "Cleaning apt ..."
 msgstr "aptをクリーニングしています ..."
 
-msgid "Clonezilla"
-msgstr "Clonezilla"
+msgid "Cleaning apt and resetting repos ..."
+msgstr ""
 
-msgid "Cockpit"
-msgstr "Cockpit"
+msgid "Disable backports"
+msgstr ""
 
-msgid "Cockpit listens on port 9090 for the web interface."
-msgstr "Cockpit のWebインタフェースはポート9090で待ち受けます。"
+msgid "Disabling backports ..."
+msgstr ""
 
-msgid "Containers"
-msgstr "コンテナ"
+msgid "Docker Wiki"
+msgstr ""
 
-msgid ""
-"Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
-"legacy. Use iptables menu to change. "
-msgstr "Debian 10 / OMV 5.xはデフォルトでiptables-nftを使用し、Dockerはiptables-legacyを必要とします。 変更するにはiptablesメニューを使用します。"
+msgid "Docker repo"
+msgstr ""
 
-msgid "Default password: "
-msgstr "デフォルトパスワード: "
+msgid "Enable backports"
+msgstr ""
 
-msgid "Default username: "
-msgstr "デフォルトユーサー名: "
+msgid "Enabling backports ..."
+msgstr ""
 
-msgid "Default username: <b>user</b> and password: <b>live</b>"
-msgstr "デフォルトのユーザー名: <b>user</b>、パスワード:<b>live</b>"
+msgid "Go to the Docker Wiki link below for more info"
+msgstr ""
 
-msgid "Docker"
-msgstr "Docker"
+msgid "Updated omv-extras settings."
+msgstr ""
 
-msgid "Docker Storage"
-msgstr "Docker ストレージ"
-
-msgid "Docker storage"
-msgstr "Dockerストレージ"
-
-msgid "Done."
-msgstr "完了."
-
-msgid ""
-"Downloads Clonezilla ISO and configures grub bootloader to allow booting "
-"from ISO."
-msgstr "ClonezillaのISOをダウンロードし、ISOからの起動を可能にするためにgrubブートローダを設定します。"
-
-msgid ""
-"Downloads GParted Live ISO and configures grub bootloader to allow booting "
-"from ISO."
-msgstr "GParted LiveのISOをダウンロードし、ISOからのブートを可能にするためにgrubブートローダを設定します。"
-
-msgid ""
-"Downloads SystemRescue ISO and configures grub bootloader to allow booting "
-"from ISO."
-msgstr "SystemRescue ISOをダウンロードし、ISOからの起動を許可するようにgrubブートローダーを構成します。"
-
-msgid "Extras repo"
-msgstr "その他のリポジトリ"
-
-msgid "GParted Live"
-msgstr "GParted Live"
-
-msgid "General settings"
-msgstr "一般設定"
-
-msgid "Hold Current Kernel"
-msgstr "現在のカーネルを保持する"
-
-msgid "Holding current kernel ..."
-msgstr "現在のカーネルを保持しています ..."
-
-msgid "IP Address will be set by DHCP."
-msgstr "IPアドレスはDHCPによって設定されます。"
-
-msgid ""
-"IP Address will be set by DHCP.  Using static DHCP is recommended for "
-"headless servers."
-msgstr "IPアドレスはDHCPによって設定されます。スタティックDHCPはヘッドレスサーバに推奨されています。"
-
-msgid "If port is changed, click Install in the Portainer menu again."
-msgstr "ポートが変更されている場合は、Portainerメニューのインストールをもう一度クリックします。"
-
-msgid "If port is changed, click Install in the Yacht menu again."
-msgstr "ポートが変更された場合は、Yachtメニューのインストールをもう一度クリックします。"
-
-msgid "Illegal docker storage path - cannot use /sharedfolders paths"
-msgstr "不正なdockerストレージのパス - /sharedfolders パスは使えません"
-
-msgid "Image"
-msgstr "イメージ"
-
-msgid "Install"
-msgstr "インストール"
-
-msgid "Install Clonezilla"
-msgstr "Clonezillaのインストール"
-
-msgid "Install Clonezilla ISO ..."
-msgstr "Clonezilla ISOをインストール中 ..."
-
-msgid ""
-"Install Docker will download and place a newer docker-compose in "
-"/usr/local/bin/ on 64 bit x86 systems only."
-msgstr "Dockerをインストールすると、64ビットx86システムのみで 新しい docker-composeがダウンロードされ、 /usr/local/bin/に配置されます。"
-
-msgid ""
-"Install Docker will install the docker-compose package. Location: /usr/bin/ "
-"on all systems."
-msgstr "Dockerをインストールすると、 docker-composeがインストールされます。設置場所:/usr/local/bin/、すべてのシステムで。"
-
-msgid "Install Docker will restart the docker service if daemon.json changes."
-msgstr "Dockerのインストールはdaemon.jsonが変更された場合、dockerサービスを再起動します。"
-
-msgid "Install GParted Live"
-msgstr "GParted Liveのインストール"
-
-msgid "Install GParted Live ISO ..."
-msgstr "GParted Live ISOをインストール中 ..."
-
-msgid ""
-"Install Portainer will install the docker-ce package if not already "
-"installed."
-msgstr "Portainerのインストールはdocker-ceパッケージが未インストールの場合、インストールを行います。"
-
-msgid ""
-"Install Portainer will update Portainer to the latest image if the image "
-"already exists."
-msgstr "Portainerのインストールはイメージが既に存在する場合、Portainerを最新のイメージに更新します。"
-
-msgid "Install Proxmox kernel"
-msgstr "Proxmox カーネルをインストール"
-
-msgid "Install Proxmox test kernel"
-msgstr "Proxmox テストカーネルをインストール"
-
-msgid "Install SystemRescue"
-msgstr "SystemRescueのインストール"
-
-msgid "Install SystemRescue ISO ..."
-msgstr "SystemRescue ISOをインストール中 ..."
-
-msgid ""
-"Install Yacht will install the docker-ce package if not already installed."
-msgstr "Yachtのインストールは、まだインストールされていない場合にdocker-ceパッケージをインストールします。"
-
-msgid ""
-"Install Yacht will update Yacht to the latest image if the image already "
-"exists."
-msgstr "Yachtのインストールはイメージがすでに存在する場合、Yachtを最新のイメージに更新します。"
-
-msgid "Installed"
-msgstr "インストール済み"
-
-msgid "Installed Kernels"
-msgstr "インストールされているカーネル"
-
-msgid "Installing"
-msgstr "インストール中"
-
-msgid "Installing Docker ..."
-msgstr "Dockerをインストールしています ..."
-
-msgid "Installing Portainer ..."
-msgstr "Portainerをインストールしています ..."
-
-msgid "Installing Proxmox kernel ..."
-msgstr "Proxmox カーネルをインストールしています ..."
-
-msgid "Installing Proxmox test kernel ..."
-msgstr "Proxmox テストカーネルをインストールしています ..."
-
-msgid "Installing Yacht ..."
-msgstr "Yachtをインストールしています ..."
-
-msgid "Kernel"
-msgstr "カーネル"
-
-msgid "Kernels"
-msgstr "カーネル"
-
-msgid "More info"
-msgstr "追加の情報"
-
-msgid "Name"
-msgstr "名前"
-
-msgid "Not installed"
-msgstr "未インストール"
-
-msgid "Not recommended for headless servers.  SSH is not enabled by default."
-msgstr "ヘッドレスサーバーにはお勧めしません。 SSHはデフォルトで無効です。"
-
-msgid "OMV-Extras"
-msgstr "OMV-Extras"
-
-msgid "Open Portainer"
-msgstr "Portainerを開く"
-
-msgid "Open Yacht"
-msgstr "Yachtを開く"
-
-msgid "Open web"
-msgstr "Webを開く"
-
-msgid ""
-"Path to Docker images and containers storage. Leave blank to use custom "
-"/etc/docker/daemon.json."
-msgstr "Dockerイメージとコンテナ ストレージへのパス。 カスタムの/etc/docker/daemon.jsonを使用するには空白のままにします。"
-
-msgid "Portainer"
-msgstr "Portainer"
-
-msgid ""
-"Portainer will listen on port 9000 for the web interface and 8000 for the "
-"agent unless changed."
-msgstr "Portainerは変更されない限り、ポート9000でWebインターフェイスを待受け、8000でエージェントを待受けます。"
-
-msgid "Proxmox"
-msgstr "Proxmox"
-
-msgid "Reboot to Clonezilla ..."
-msgstr "Clonezillaで再起動 ..."
-
-msgid "Reboot to Clonezilla Once"
-msgstr "一回だけClonezillaで再起動"
-
-msgid "Reboot to GParted Live ..."
-msgstr "GParted Liveで再起動 ..."
-
-msgid "Reboot to GParted Live Once"
-msgstr "一度だけGParted Liveで再起動"
-
-msgid "Reboot to SystemRescue ..."
-msgstr "SystemRescueで再起動 ..."
-
-msgid "Reboot to SystemRescue Once"
-msgstr "一度だけSystemRescueで再起動"
-
-msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
-msgstr "non-Proxmoxカーネルを削除する前に、Proxmoxカーネルで再起動してください。"
-
-msgid "Remove"
-msgstr "削除"
-
-msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
-msgstr "Dockerの削除は、/usr/local/bin/からdocker-composeを削除します。"
-
-msgid "Remove Docker will remove the docker-compose package."
-msgstr "Dockerの削除は、docker-composeパッケージを削除します。"
-
-msgid ""
-"Remove Portainer will remove the Portainer image and container but the "
-"volume will not be removed."
-msgstr "Portainerの削除は、Portainerのイメージとコンテナーを削除しますが、ボリュームは削除されません。"
-
-msgid ""
-"Remove Yacht will remove the Yacht image and container but the volume will "
-"not be removed."
-msgstr "Yachtの削除は、Yachtイメージとコンテナーを削除しますが、ボリュームは削除されません。"
-
-msgid "Remove data"
-msgstr "データの削除"
-
-msgid "Remove non-Proxmox kernels and headers"
-msgstr "non-Proxmoxカーネルとヘッダーを削除する"
-
-msgid "Removing"
-msgstr "削除中"
-
-msgid "Removing Docker ..."
-msgstr "Dockerを削除しています ..."
-
-msgid "Removing Portainer ..."
-msgstr "Portainerを削除しています ..."
-
-msgid "Removing Portainer and data..."
-msgstr "Portainerとデータを削除しています..."
-
-msgid "Removing Yacht ..."
-msgstr "Yachtを削除しています ..."
-
-msgid "Removing non-Proxmox kernels ..."
-msgstr "non-Proxmox カーネルを削除しています ..."
-
-msgid "Restart"
-msgstr "再起動"
-
-msgid "Restarting Docker ..."
-msgstr "Dockerを再起動しています ..."
-
-msgid "Restarting docker ..."
-msgstr "dockerを再起動中 ..."
-
-msgid "Running apt-get dist-upgrade ..."
-msgstr "apt-get dist-upgrade を実行しています..."
-
-msgid "Running apt-get update ..."
-msgstr "apt-get update を実行しています..."
-
-msgid "Running apt-get upgrade ..."
-msgstr "apt-get upgrade を実行しています..."
-
-msgid "Running omv-aptclean ..."
-msgstr "omv-aptclean を実行しています..."
-
-msgid "Running omv-update ..."
-msgstr "omv-update を実行しています..."
-
-msgid ""
-"SSH server is enabled by default.  Login with username: <b>root</b> and "
-"password: <b>openmediavault</b>"
-msgstr "SSHサーバはデフォルトで有効になっています。ログイン用ユーザー名:<b>root</b>、パスワード: <b>openmediavault</b>"
-
-msgid ""
-"SSH server is enabled by default.  Login with username: <b>user</b> and "
-"password: <b>live</b>"
-msgstr "SSHサーバはデフォルトで有効になっています。ログイン用ユーザー名:<b>user</b>、パスワード: <b>live</b>"
-
-msgid "SSL/TLS enabled"
-msgstr "SSL/TLS有効"
-
-msgid ""
-"Save will rewrite daemon.json and restart docker if Docker Storage path has "
-"changed."
-msgstr "Dockerストレージパスが変更された場合、保存するとdaemon.jsonを書き換えてdockerを再起動します。"
-
-msgid "Set as default boot kernel"
-msgstr "デフォルトの起動カーネルをセット"
-
-msgid "Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time."
-msgstr "1度だけClonezilla ISOから起動するためにgrubブートローダを設定します。"
-
-msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
-msgstr "1度だけGParted Live ISOから起動するためにgrubブートローダを設定します。"
-
-msgid "Sets grub bootloader to boot from SystemRescue ISO <b>ONE</b> time."
-msgstr "SystemRescueISOから<b>1回だけ</b>起動するようにgrubブートローダーを設定します。"
-
-msgid "Setting boot kernel ..."
-msgstr "起動カーネルを設定しています ..."
-
-msgid ""
-"Setting the wrong default boot kernel may cause the system to be "
-"inaccessible.  The boot menu will still be available to select a different "
-"kernel."
-msgstr "間違ったデフォルトの起動カーネルを設定すると、システムにアクセスできなくなることがあります。　別のカーネルを選択するためにブートメニューが利用可能となります。"
-
-msgid "Settings"
-msgstr "設定"
-
-msgid "Spaced used by ISO in /boot directory on OS drive"
-msgstr "OSドライブの/ bootディレクトリでISOによって使用される容量"
-
-msgid "Status"
-msgstr "状態"
-
-msgid "Testing repo"
-msgstr "テストリポジトリ"
-
-msgid "This will enable the Proxmox 6.x repo."
-msgstr "Proxmox 6.x のリポジトリが有効になります。"
-
-msgid "This will fail to remove a linux-image-* kernel if it is still active."
-msgstr "linux-image- * カーネルがまだアクティブであれば削除することはできません。"
-
-msgid "This will install the latest 5.11 kernel."
-msgstr "最新の5.11カーネルがインストールされます。"
-
-msgid "This will install the latest 5.4 kernel."
-msgstr "最新の5.4カーネルがインストールされます。"
-
-msgid ""
-"This will remove Portainer and all of its data.  Are you sure you want to do"
-" this?"
-msgstr "Portainerとそのデータは全て削除されます。 本当によろしいですか？"
-
-msgid "This will remove all headers packages with the prefix linux-headers-."
-msgstr "linux-headers-で始まる、すべてのヘッダパッケージが削除されます。"
-
-msgid "This will remove all kernel packages with the prefix linux-image-."
-msgstr "linux-image-で始まる、すべてのカーネルパッケージが削除されます。"
-
-msgid "Unhold Current Kernel"
-msgstr "現在のカーネルの保持を解除する"
-
-msgid "Unholding current kernel ..."
-msgstr "現在のカーネルの保持を解除しています ..."
-
-msgid "Updates"
-msgstr "アップデート"
-
-msgid "Use EE"
-msgstr "EEを使用"
-
-msgid "Use business edition. This version requires a license."
-msgstr "ビジネスエディションを使用します。 このバージョンにはライセンスが必要です。"
-
-msgid "Use legacy"
-msgstr "レガシーを利用"
-
-msgid "Use nft"
-msgstr "nft を利用"
-
-msgid "Version"
-msgstr "バージョン"
-
-msgid "Web port"
-msgstr "ウェブポート"
-
-msgid "Web port and agent port cannot be the same."
-msgstr "ウェブポートとエージェントポートは同じにはできません。"
-
-msgid ""
-"When connecting via ssh, the ssh key will be different than the "
-"OpenMediaVault ssh key and need to be updated on the client system."
-msgstr "sshを使用して接続する場合、ssh keyがOpenMediaVaultと異なるため、クライアントシステムをアップデートする必要があります。"
-
-msgid ""
-"When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
-msgstr "リモートからログインする場合、 <b>sudo clonezilla</b>コマンドでclonezilla を起動します。"
-
-msgid "Yacht will listen on port 8001 for the web interface unless changed."
-msgstr "Yachtは変更されない限り、ポート8001でWebインターフェイスを待ち受けます。"
-
-msgid "and not running"
-msgstr "未実行"
-
-msgid "and running"
-msgstr "実行中"
+msgid "Wiki"
+msgstr ""
 
 msgid "apt clean"
 msgstr "apt clean"
 
-msgid "dist-upgrade"
-msgstr "dist-upgrade"
-
-msgid "n/a"
-msgstr "n/a"
+msgid "apt clean repos"
+msgstr ""
 
 msgid "omv-extras"
 msgstr "omv-extras"
-
-msgid "omv-update"
-msgstr "omv-update"
-
-msgid "update"
-msgstr "アップデート"
-
-msgid "upgrade"
-msgstr "アップグレード"

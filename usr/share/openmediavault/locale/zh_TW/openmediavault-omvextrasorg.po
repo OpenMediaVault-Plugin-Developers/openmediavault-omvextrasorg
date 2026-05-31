@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-omvextras.org\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-15 09:42-0500\n"
+"POT-Creation-Date: 2026-05-31 01:24+0000\n"
 "PO-Revision-Date: 2013-10-28 11:35+0000\n"
 "Last-Translator: kochin <kochinc@outlook.com>, 2014-2023\n"
 "Language-Team: Chinese (Taiwan) (http://app.transifex.com/openmediavault-plugin-developers/openmediavault-omvextrasorg/language/zh_TW/)\n"
@@ -18,468 +18,44 @@ msgstr ""
 "Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-msgid "Advanced"
-msgstr "進階"
-
-msgid "Agent port"
-msgstr "代理服務連接埠"
-
-msgid "Backports"
-msgstr "向後移植套件庫"
-
-msgid "Certificate"
-msgstr "憑證"
-
-msgid "Cleaning Apt Files and Lists ..."
-msgstr "清理 Apt 檔案及清單中 …"
-
 msgid "Cleaning apt ..."
 msgstr "清理 apt ..."
 
-msgid "Clonezilla"
-msgstr "Clonezilla"
+msgid "Cleaning apt and resetting repos ..."
+msgstr ""
 
-msgid "Cockpit"
-msgstr "Cockpit"
+msgid "Disable backports"
+msgstr ""
 
-msgid "Cockpit listens on port 9090 for the web interface."
-msgstr "Cockpit 在連接埠 9090 監聽網站介面。"
+msgid "Disabling backports ..."
+msgstr ""
 
-msgid "Containers"
-msgstr "容器"
+msgid "Docker Wiki"
+msgstr ""
 
-msgid ""
-"Debian 10/OMV 5.x uses iptables-nft by default and Docker needs iptables-"
-"legacy. Use iptables menu to change. "
-msgstr "Debian 10/OMV 5.x 預設使用 iptables-nft，而 Docker 需要 iptables-legacy。請用 iptables 選單來改變。"
+msgid "Docker repo"
+msgstr ""
 
-msgid "Default password: "
-msgstr "預設密碼："
+msgid "Enable backports"
+msgstr ""
 
-msgid "Default username: "
-msgstr "預設用戶名稱："
+msgid "Enabling backports ..."
+msgstr ""
 
-msgid "Default username: <b>user</b> and password: <b>live</b>"
-msgstr "預設 用戶名稱：<b>user</b> 與 密碼：<b>live</b>"
+msgid "Go to the Docker Wiki link below for more info"
+msgstr ""
 
-msgid "Docker"
-msgstr "Docker"
+msgid "Updated omv-extras settings."
+msgstr ""
 
-msgid "Docker Storage"
-msgstr "Docker 儲存位置"
-
-msgid "Docker storage"
-msgstr "Docker 儲存空間"
-
-msgid "Done."
-msgstr "完成。"
-
-msgid ""
-"Downloads Clonezilla ISO and configures grub bootloader to allow booting "
-"from ISO."
-msgstr "下載 Clonezilla ISO，並將 grub 啟動載入器設置成允許從 ISO 啟動。"
-
-msgid ""
-"Downloads GParted Live ISO and configures grub bootloader to allow booting "
-"from ISO."
-msgstr "下載 GParted Live ISO，並將 grub 啟動載入器設置成允許從 ISO 啟動。"
-
-msgid ""
-"Downloads SystemRescue ISO and configures grub bootloader to allow booting "
-"from ISO."
-msgstr "下載 SystemRescue ISO，並將 grub 啟動載入器設置成允許從 ISO 啟動。"
-
-msgid "Extras repo"
-msgstr "Extras 套件庫"
-
-msgid "GParted Live"
-msgstr "GParted Live"
-
-msgid "General settings"
-msgstr "一般設定"
-
-msgid "Hold Current Kernel"
-msgstr "維持在目前系統核心"
-
-msgid "Holding current kernel ..."
-msgstr "設定維持目前系統核心中 ..."
-
-msgid "IP Address will be set by DHCP."
-msgstr "IP 地址將由 DHCP 設定。"
-
-msgid ""
-"IP Address will be set by DHCP.  Using static DHCP is recommended for "
-"headless servers."
-msgstr "IP 地址將由 DHCP 設定。建議在無頭伺服器上使用靜態 DHCP。"
-
-msgid "If port is changed, click Install in the Portainer menu again."
-msgstr "若連接埠被改變，請於 Portainer 選單中再點按「安裝」一次。"
-
-msgid "If port is changed, click Install in the Yacht menu again."
-msgstr "若連接埠被改變，請再次點擊 Yacht 選單中的「安裝」。"
-
-msgid "Illegal docker storage path - cannot use /sharedfolders paths"
-msgstr "非法的 docker 儲存路徑 - 不能使用 /sharedfolders 路徑"
-
-msgid "Image"
-msgstr "影像"
-
-msgid "Install"
-msgstr "安裝"
-
-msgid "Install Clonezilla"
-msgstr "安裝 Clonezilla"
-
-msgid "Install Clonezilla ISO ..."
-msgstr "安裝 Clonezilla ISO ..."
-
-msgid ""
-"Install Docker will download and place a newer docker-compose in "
-"/usr/local/bin/ on 64 bit x86 systems only."
-msgstr "安裝 Docker 將會下載並放置新的 docker-compose 於 /usr/local/bin/ 內，這只針對 64 位元的 x86 系統。"
-
-msgid ""
-"Install Docker will install the docker-compose package. Location: /usr/bin/ "
-"on all systems."
-msgstr "安裝 Docker 將會安裝 docker-compose 套件。位置：/usr/bin/ 在所有系統上。"
-
-msgid "Install Docker will restart the docker service if daemon.json changes."
-msgstr "安裝 Docker 後，如果 daemon.json 有改變，則將重新啟動 docker 服務程式。"
-
-msgid "Install GParted Live"
-msgstr "安裝 GParted Live"
-
-msgid "Install GParted Live ISO ..."
-msgstr "安裝 GParted Live ISO ..."
-
-msgid ""
-"Install Portainer will install the docker-ce package if not already "
-"installed."
-msgstr "安裝 Portainer 也會安裝 docker-ce 套件，如果它之前沒被安裝。"
-
-msgid ""
-"Install Portainer will update Portainer to the latest image if the image "
-"already exists."
-msgstr "安裝 Portainer 時將更新 Portainer 到最新的影像，如果它的影像已經存在。"
-
-msgid "Install Proxmox kernel"
-msgstr "安裝 Proxmox 系統核心"
-
-msgid "Install Proxmox test kernel"
-msgstr "安裝 Proxmox 測試核心"
-
-msgid "Install SystemRescue"
-msgstr "安裝 SystemRescue"
-
-msgid "Install SystemRescue ISO ..."
-msgstr "安裝 SystemRescue ISO ..."
-
-msgid ""
-"Install Yacht will install the docker-ce package if not already installed."
-msgstr "安裝 Yacht 將也會安裝 docker-ce 套件，若它還未被安裝。"
-
-msgid ""
-"Install Yacht will update Yacht to the latest image if the image already "
-"exists."
-msgstr "安裝 Yacht 時將更新 Yacht 到最新的影像，如果它的影像已經存在。"
-
-msgid "Installed"
-msgstr "已安裝"
-
-msgid "Installed Kernels"
-msgstr "已安裝的系統核心"
-
-msgid "Installing"
-msgstr "安裝中"
-
-msgid "Installing Docker ..."
-msgstr "安裝 Docker 中 ..."
-
-msgid "Installing Portainer ..."
-msgstr "安裝 Portainer 中 ..."
-
-msgid "Installing Proxmox kernel ..."
-msgstr "安裝 Proxmox 核心中 ..."
-
-msgid "Installing Proxmox test kernel ..."
-msgstr "安裝 Proxmox 測試核心 ..."
-
-msgid "Installing Yacht ..."
-msgstr "安裝 Yacht 中 ..."
-
-msgid "Kernel"
-msgstr "系統核心"
-
-msgid "Kernels"
-msgstr "系統核心"
-
-msgid "More info"
-msgstr "更多資訊"
-
-msgid "Name"
-msgstr "名稱"
-
-msgid "Not installed"
-msgstr "未安裝"
-
-msgid "Not recommended for headless servers.  SSH is not enabled by default."
-msgstr "不建議在無頭伺服器上使用。SSH 並非預設為啟動。"
-
-msgid "OMV-Extras"
-msgstr "OMV-Extras"
-
-msgid "Open Portainer"
-msgstr "開啓 Portainer"
-
-msgid "Open Yacht"
-msgstr "開啓 Yacht"
-
-msgid "Open web"
-msgstr "打開網頁"
-
-msgid ""
-"Path to Docker images and containers storage. Leave blank to use custom "
-"/etc/docker/daemon.json."
-msgstr "指向儲存 Docker 影像和容器的路徑。若留空白則會使用客製的 /etc/docker/daemon.json。"
-
-msgid "Portainer"
-msgstr "Portainer"
-
-msgid ""
-"Portainer will listen on port 9000 for the web interface and 8000 for the "
-"agent unless changed."
-msgstr "Portainer 將在連接埠 9000 監聽網站介面，在連接埠 8000 上監聽代理服務，除非被改變。"
-
-msgid "Proxmox"
-msgstr "Proxmox"
-
-msgid "Reboot to Clonezilla ..."
-msgstr "重新啟動進入 Clonezilla ..."
-
-msgid "Reboot to Clonezilla Once"
-msgstr "重新啟動進入 Clonezilla 一次"
-
-msgid "Reboot to GParted Live ..."
-msgstr "重新啟動進入 GParted Live ..."
-
-msgid "Reboot to GParted Live Once"
-msgstr "重新啟動進入 GParted Live 一次"
-
-msgid "Reboot to SystemRescue ..."
-msgstr "重新啟動進入 SystemRescue ..."
-
-msgid "Reboot to SystemRescue Once"
-msgstr "重新啟動進入 SystemRescue 一次"
-
-msgid "Reboot with the Proxmox kernel before removing non-Proxmox kernels."
-msgstr "在移除 非Proxmox 系統核心之前，請先以 Promxmox 系統核心重新啟動。"
-
-msgid "Remove"
-msgstr "移除"
-
-msgid "Remove Docker will delete docker-compose from /usr/local/bin/."
-msgstr "移除 Docker 將會把 docker-compose 從 /usr/local/bin/ 裡刪除掉。"
-
-msgid "Remove Docker will remove the docker-compose package."
-msgstr "移除 Docker 將會把 docker-compose 套件移除。"
-
-msgid ""
-"Remove Portainer will remove the Portainer image and container but the "
-"volume will not be removed."
-msgstr "移除 Portainer 將會移除 Portainer 的影像和容器，但資料卷將不會被移除。"
-
-msgid ""
-"Remove Yacht will remove the Yacht image and container but the volume will "
-"not be removed."
-msgstr "移除 Yacht 將會移除 Yacht 的影像和容器，但資料卷將不會被移除。"
-
-msgid "Remove data"
-msgstr "移除資料"
-
-msgid "Remove non-Proxmox kernels and headers"
-msgstr "移除 非Proxmox 系統核心與標頭檔案"
-
-msgid "Removing"
-msgstr "移除中"
-
-msgid "Removing Docker ..."
-msgstr "移除 Docker 中 ..."
-
-msgid "Removing Portainer ..."
-msgstr "移除 Portainer 中 ..."
-
-msgid "Removing Portainer and data..."
-msgstr "移除 Portainer 以及資料中 ..."
-
-msgid "Removing Yacht ..."
-msgstr "移除 Yacht 中 ..."
-
-msgid "Removing non-Proxmox kernels ..."
-msgstr "移除 非Proxmox 系統核心中 ..."
-
-msgid "Restart"
-msgstr "重新啟動"
-
-msgid "Restarting Docker ..."
-msgstr "重新啟動 Docker 中 ..."
-
-msgid "Restarting docker ..."
-msgstr "重新啟動 docker 中 ..."
-
-msgid "Running apt-get dist-upgrade ..."
-msgstr "執行 apt-get dist-upgrade 中 ..."
-
-msgid "Running apt-get update ..."
-msgstr "執行 apt-get update 中 ..."
-
-msgid "Running apt-get upgrade ..."
-msgstr "執行 apt-get upgrade 中 ..."
-
-msgid "Running omv-aptclean ..."
-msgstr "執行 omv-aptclean 中 ..."
-
-msgid "Running omv-update ..."
-msgstr "執行 omv-update 中 ..."
-
-msgid ""
-"SSH server is enabled by default.  Login with username: <b>root</b> and "
-"password: <b>openmediavault</b>"
-msgstr "SSH 伺服器被預設為啟用。請以用戶名稱：<b>root</b> 和密碼：<b>openmediavault</b> 來登入"
-
-msgid ""
-"SSH server is enabled by default.  Login with username: <b>user</b> and "
-"password: <b>live</b>"
-msgstr "SSH 伺服器被預設為啟用。請以用戶名稱：<b>user</b> 和密碼：<b>live</b> 來登入"
-
-msgid "SSL/TLS enabled"
-msgstr "SSL/TLS 已啟用"
-
-msgid ""
-"Save will rewrite daemon.json and restart docker if Docker Storage path has "
-"changed."
-msgstr "存入將會蓋寫過 daemon.json，如果 Docker 的儲存路徑有改變，則也重新啟動 docker。"
-
-msgid "Set as default boot kernel"
-msgstr "設定為預設的啟動系統核心"
-
-msgid "Sets grub bootloader to boot from Clonezilla ISO <b>ONE</b> time."
-msgstr "設定 grub 啟動載入器從 Clonezilla ISO 啟動<b>一次</b>。"
-
-msgid "Sets grub bootloader to boot from GParted Live ISO <b>ONE</b> time."
-msgstr "設定 grub 啟動載入器從 GParted Live ISO 啟動<b>一次</b>。"
-
-msgid "Sets grub bootloader to boot from SystemRescue ISO <b>ONE</b> time."
-msgstr "設定 grub 啟動載入器從 SystenRescue ISO 啟動<b>一次</b>。"
-
-msgid "Setting boot kernel ..."
-msgstr "設定啟動系統核心中 ..."
-
-msgid ""
-"Setting the wrong default boot kernel may cause the system to be "
-"inaccessible.  The boot menu will still be available to select a different "
-"kernel."
-msgstr "設定錯誤的啟動系統核心可能造成無法進入系統。啟動選單仍將可用來選用不同的系統核心。"
-
-msgid "Settings"
-msgstr "設定"
-
-msgid "Spaced used by ISO in /boot directory on OS drive"
-msgstr "在作業系統硬碟上的 /root 檔案目錄內，被 ISO 所佔用的空間。 "
-
-msgid "Status"
-msgstr "狀態"
-
-msgid "Testing repo"
-msgstr "測試套件庫"
-
-msgid "This will enable the Proxmox 6.x repo."
-msgstr "這將啟用 Proxmox 6.x 套件庫。"
-
-msgid "This will fail to remove a linux-image-* kernel if it is still active."
-msgstr "移除 linux-image-* kernel 可能會失敗，如果它仍在操作中。"
-
-msgid "This will install the latest 5.11 kernel."
-msgstr "這將安裝最新的 5.11 核心。"
-
-msgid "This will install the latest 5.4 kernel."
-msgstr "這將會安裝最新的 5.4 系統核心。"
-
-msgid ""
-"This will remove Portainer and all of its data.  Are you sure you want to do"
-" this?"
-msgstr "這將移除 Portainer 以及它的全部資料。您確定要執行嗎？"
-
-msgid "This will remove all headers packages with the prefix linux-headers-."
-msgstr "這將會移除所有前綴詞是 linux-headers- 的標題檔案套件。"
-
-msgid "This will remove all kernel packages with the prefix linux-image-."
-msgstr "這將會移除所有前綴詞是 linux-image- 的系統核心套件。"
-
-msgid "Unhold Current Kernel"
-msgstr "取消維持在目前系統核心"
-
-msgid "Unholding current kernel ..."
-msgstr "取消維持目前系統核心中 ..."
-
-msgid "Updates"
-msgstr "更新"
-
-msgid "Use EE"
-msgstr "使用 EE"
-
-msgid "Use business edition. This version requires a license."
-msgstr "使用商業版本。該版本須要有許可證。"
-
-msgid "Use legacy"
-msgstr "使用舊版"
-
-msgid "Use nft"
-msgstr "使用 nft"
-
-msgid "Version"
-msgstr "版本"
-
-msgid "Web port"
-msgstr "網頁連接埠"
-
-msgid "Web port and agent port cannot be the same."
-msgstr "網頁連接埠與代理服務連接埠不可相同。"
-
-msgid ""
-"When connecting via ssh, the ssh key will be different than the "
-"OpenMediaVault ssh key and need to be updated on the client system."
-msgstr "當經由 ssh 連接時，所用的 ssh 密鑰將會與 OpenMediaVault 的 ssh 密鑰不同，必須在客戶系統上把它更新過。"
-
-msgid ""
-"When logging in remotely, start clonezilla with:  <b>sudo clonezilla</b>"
-msgstr "當從遠端登入時，以此指令啟動 clonezilla：<b>sudo clonezilla</b>"
-
-msgid "Yacht will listen on port 8001 for the web interface unless changed."
-msgstr "Yacht 將在連接埠 8001 監聽網站介面，除非被改變。"
-
-msgid "and not running"
-msgstr "並且不在執行中"
-
-msgid "and running"
-msgstr "並且正在執行中"
+msgid "Wiki"
+msgstr ""
 
 msgid "apt clean"
 msgstr "apt clean"
 
-msgid "dist-upgrade"
-msgstr "dist-upgrade"
-
-msgid "n/a"
-msgstr "不適用"
+msgid "apt clean repos"
+msgstr ""
 
 msgid "omv-extras"
 msgstr "omv-extras"
-
-msgid "omv-update"
-msgstr "omv-update"
-
-msgid "update"
-msgstr "update"
-
-msgid "upgrade"
-msgstr "upgrade"
